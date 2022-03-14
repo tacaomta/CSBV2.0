@@ -209,6 +209,11 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="css\" />
+    <Folder Include="images\" />
+    <Folder Include="Models\" />
+    <Folder Include="reports\" />
+    <Folder Include="template\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
