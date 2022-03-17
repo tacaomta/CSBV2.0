@@ -5,9 +5,9 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace CSB
+namespace CSB.Master
 {
-    public partial class home : System.Web.UI.MasterPage
+    public partial class TrangChu : System.Web.UI.MasterPage
     {
         protected void Page_Load(object sender, EventArgs e)
         {

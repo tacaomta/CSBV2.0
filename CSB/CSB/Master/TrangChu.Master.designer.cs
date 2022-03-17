@@ -7,11 +7,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace CSB
+namespace CSB.Master
 {
 
 
-    public partial class home
+    public partial class TrangChu
     {
 
         /// <summary>

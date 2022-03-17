@@ -8,7 +8,7 @@
 //------------------------------------------------------------------------------
 
 
-namespace CSB
+namespace CSB.Page_Master
 {
     public partial class TrangChu
     {
