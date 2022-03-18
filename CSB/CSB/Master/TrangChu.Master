@@ -1,21 +1,159 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="TrangChu.master.cs" Inherits="CSB.Master.TrangChu" %>
 
 <!DOCTYPE html>
-
 <html>
 <head runat="server">
     <title></title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
-    <link href="../Content/bootstrap.min.css" rel="stylesheet" />
-    <link href="../css/master.css" rel="stylesheet" />
+    <%--    <link href="../Content/bootstrap.min.css" rel="stylesheet" />--%>
+    <%--  <link href="../css/master.css" rel="stylesheet" />--%>
     <script src="../Scripts/jquery-3.4.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
 </head>
+
 <body>
+    <style>
+        * {
+            font: normal 14px;
+            font-family: Arial Tahoma 'Times New Roman';
+            color: black;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+        }
+
+        #wraper {
+            padding-left: 5px;
+            padding-right: 5px;
+            width: 100%;
+            height: 100%;
+            margin: auto auto;
+        }
+
+        #header #banner {
+            height: 150px;
+            overflow: hidden;
+        }
+
+        #masterContent {
+            min-height: 890px;
+            overflow: hidden;
+        }
+
+        .mainMenu {
+            margin: 0;
+            padding: 0;
+            height: 100px;
+            line-height: 100px;
+            background: linear-gradient(to top,#c2bcb5,#ffffff);
+        }
+
+            .mainMenu ul {
+                list-style: none;
+            }
+
+                .mainMenu ul li {
+                    display: inline-block;
+                    height: 100px;
+                    line-height: 100px;
+                }
+
+                    .mainMenu ul li a {
+                        display: block;
+                        text-decoration: none;
+                        text-align: center;
+                        color: #1200a3;
+                        font-weight: bold;
+                        padding: 0 22px;
+                    }
+
+                        .mainMenu ul li a:hover {
+                            background-color: beige;
+                        }
+
+        .leftContent {
+            float: left;
+            width: 18%;
+            color: black;
+            min-height: 890px;
+            border-radius: 5px;
+        }
+
+        .rightContent {
+            float: right;
+            width: 82%;
+            color: black;
+            min-height: 890px;
+            border-radius: 5px;
+        }
+
+        #footer {
+            height: 150px;
+            line-height: 60px;
+            width: 100%;
+            background: linear-gradient(to top,#c2bcb5,#ffffff);
+            text-shadow: 0.1em 0.1em #333;
+            color: #fff;
+            text-align: center;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+
+        #phuhieu {
+            height: 220px;
+            text-align: center;
+        }
+
+            #phuhieu img {
+                width: 100%;
+                padding: 0 50px;
+                height: 100%
+            }
+
+        #banner img {
+            width: 100%;
+            height: 100%
+        }
+
+        #card #card-body {
+            padding: 0px 0px;
+        }
+
+        .btn-group-vertical {
+            width: 100%;
+        }
+
+        .card .card-header a {
+            color: #1200a3;
+            font-weight: bold;
+        }
+
+        .card_body .btn-group-vertical .btn-primary {
+            font-size: 15px;
+            text-align: left;
+            border-radius: unset;
+            border: unset;
+        }
+
+        .btn-primary {
+            background-color: #1081ba;
+        }
+
+        #accordion {
+            font-size: 20px;
+        }
+
+        .rightContent .navbar {
+            justify-content: flex-end;
+            background-color: #ffffff !important;
+        }
+    </style>
     <div id="wraper">
         <div id="header">
             <div id="banner">
-                <img src="../Image/header.jpg" alt="Italian Trulli"/>
+                <img src="../Image/header.jpg" alt="Italian Trulli" />
             </div>
         </div>
 
@@ -129,15 +267,23 @@
                         <li><a href="#">GIỚI THIỆU VỀ PHÒNG QLKT TÀU</a></li>
                         <li><a href="#">BIỂU ĐỒ THỐNG KÊ, PHÂN TÍCH DỮ LIỆU</a></li>
                         <li><a href="#">ĐỀ XUẤT MỚI</a></li>
+                        <li>
+                            <div class="dropdown">
+                                <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                                    Dương Văn Tuyên
+                                </button>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="#">Link 1</a>
+                                    <a class="dropdown-item" href="#">Link 2</a>
+                                </div>
+                            </div>
+                        </li>
                     </ul>
                 </div>
-                <nav class="navbar navbar-light bg-light">
-                    <form class="form-inline">
-                        <input class="form-control mr-sm-2" type="search" placeholder="Tìm kiếm trang bị, tài liệu" aria-label="Search">
-                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Tìm kiếm</button>
-                    </form>
-                </nav>
-                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
+                <div class="mainContent">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
+                </div>
+
             </div>
         </div>
         <div id="footer">
