@@ -1,0 +1,160 @@
+﻿
+body {
+    background: #0DB8DE;
+    background-image: url('../Image/bg-bien.jpg');
+    background-size: cover;
+    font-family: 'Roboto', sans-serif;
+}
+
+.login-box {
+    margin-top: 75px;
+    height: auto;
+    background: #ECF0F5;
+    text-align: center;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.ship-key {
+    margin-top: 25px;
+    height: 65px;
+    font-size: 80px;
+    line-height: 100px;
+    background: -webkit-linear-gradient(#27EF9F, #0DB8DE);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.login-title {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 26px;
+    letter-spacing: 2px;
+    margin-top: 15px;
+    font-weight: bold;
+    color: #333;
+}
+
+.login-form {
+    margin-top: 5px;
+    text-align: left;
+}
+
+input[type=text] {
+    background-color: #ECF0F5;
+    border-left: none;
+    border-right: none;
+    box-shadow: none;
+    border-top: 0px;
+    border-radius: 0px;
+    font-weight: normal;
+    outline: 0;
+    margin-bottom: 10px;
+    color: #333;
+    padding-left: 30px;
+}
+
+input[type=password] {
+    background-color: #ECF0F5;
+    box-shadow: none;
+    border-left: none;
+    border-right: none;
+    border-top: 0px;
+    border-radius: 0px;
+    font-weight: normal;
+    outline: 0;
+    margin-bottom: 10px;
+    color: #333;
+    padding-left: 30px;
+}
+
+input:focus {
+    font-weight: bold;
+}
+
+.form-group {
+    height: 4rem;
+    padding-top: 1rem;
+    position: relative;
+    display: block;
+    color: rgba(13, 184, 222, 0.7);
+}
+
+.form-control {
+    border-bottom: 2px solid rgba(13, 184, 222, 0.5);
+}
+
+    .form-control:focus {
+        border-color: inherit;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        outline: 0;
+        border-bottom: 2px solid rgba(13, 184, 222, 1);
+    }
+
+input:focus {
+    outline: none;
+    box-shadow: 0 0 0;
+}
+
+label {
+    margin-bottom: 0px;
+}
+
+.form-control-label {
+    font-size: 15px;
+    color: #0DB8DE;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.icon-name {
+    position: absolute;
+    display: inline-block;
+    top: 17px;
+    left: 8px;
+}
+
+.btn-outline-primary {
+    border-color: #0DB8DE;
+    color: rgba(255, 255, 255, 0.86);
+    border-radius: 0px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    background-color: #0DB8DE;
+    width: 100%
+}
+
+    .btn-outline-primary:hover {
+        background-color: #0da5c7;
+        color: rgba(255, 255, 255, 0.86);
+        right: 0px;
+    }
+
+.login-btm {
+    float: left;
+    padding-left: 0px;
+}
+
+.login-button {
+    padding-right: 0px;
+    margin-bottom: 15px;
+}
+
+.login-text {
+    text-align: left;
+    padding-left: 0px;
+    color: #ff0000;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.loginbttm {
+    padding: 0px;
+}
+
+.forgot-password {
+    text-align: center;
+    padding-bottom: 15px;
+    padding-top: 10px;
+}
