@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="dbDHSLModelTripAndTypeTrip.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Trip">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="nvarchar" MaxLength="20" />
+    <Property Name="timestart" Type="nvarchar" MaxLength="20" />
+    <Property Name="type" Type="int" />
+    <Property Name="startpoint" Type="nvarchar" MaxLength="30" />
+  </EntityType>
+  <EntityType Name="TypeTrip">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="nvarchar" MaxLength="30" />
+  </EntityType>
+  <Association Name="FK_Type">
+    <End Role="TypeTrip" Type="Self.TypeTrip" Multiplicity="0..1" />
+    <End Role="Trip" Type="Self.Trip" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TypeTrip">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Trip">
+        <PropertyRef Name="type" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="dbDHSLModelTripAndTypeTripStoreContainer">
+    <EntitySet Name="Trip" EntityType="Self.Trip" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TypeTrip" EntityType="Self.TypeTrip" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Type" Association="Self.FK_Type">
+      <End Role="TypeTrip" EntitySet="TypeTrip" />
+      <End Role="Trip" EntitySet="Trip" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

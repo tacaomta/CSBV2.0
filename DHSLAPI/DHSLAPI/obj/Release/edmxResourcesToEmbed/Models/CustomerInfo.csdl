@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="dbDHSLModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="tbCustomer">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="customer_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="customer_phonenumber" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="customer_address" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="customer_gender" Type="Boolean" />
+    <Property Name="profess_id" Type="Int32" />
+    <NavigationProperty Name="tbProfession" Relationship="Self.FK_PRO" FromRole="tbCustomer" ToRole="tbProfession" />
+  </EntityType>
+  <EntityType Name="tbProfession">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="profess_name" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="tbCustomers" Relationship="Self.FK_PRO" FromRole="tbProfession" ToRole="tbCustomer" />
+  </EntityType>
+  <Association Name="FK_PRO">
+    <End Role="tbProfession" Type="Self.tbProfession" Multiplicity="0..1" />
+    <End Role="tbCustomer" Type="Self.tbCustomer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbProfession">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="tbCustomer">
+        <PropertyRef Name="profess_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="dbDHSLEntities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="tbCustomers" EntityType="Self.tbCustomer" />
+    <EntitySet Name="tbProfessions" EntityType="Self.tbProfession" />
+    <AssociationSet Name="FK_PRO" Association="Self.FK_PRO">
+      <End Role="tbProfession" EntitySet="tbProfessions" />
+      <End Role="tbCustomer" EntitySet="tbCustomers" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
