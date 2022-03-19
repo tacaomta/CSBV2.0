@@ -112,6 +112,8 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
+    <Content Include="css\Login.css" />
+    <Content Include="css\master.css" />
     <Content Include="css\StyleSheet1.css" />
     <Content Include="Default.aspx" />
     <Content Include="favicon.ico" />
@@ -125,9 +127,17 @@
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="Image\bg-bien.jpg" />
+    <Content Include="Image\footer.png" />
+    <Content Include="Image\header.jpg" />
+    <Content Include="Image\login.jpg" />
+    <Content Include="Image\ic-login.png" />
+    <Content Include="Image\phuhieu.jpg" />
+    <Content Include="Page_Master\Login.aspx" />
+    <Content Include="Page_Master\TrangChu.aspx" />
     <Content Include="reports\report.docx" />
+    <Content Include="Master\TrangChu.Master" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
-    <Content Include="images\StyleSheet1.css" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
@@ -189,7 +199,28 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Master\TrangChu.Master.cs">
+      <DependentUpon>TrangChu.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Master\TrangChu.Master.designer.cs">
+      <DependentUpon>TrangChu.Master</DependentUpon>
+    </Compile>
     <Compile Include="Models\myclass.cs" />
+    <Compile Include="Page_Master\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page_Master\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Page_Master\TrangChu.aspx.cs">
+      <DependentUpon>TrangChu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page_Master\TrangChu.aspx.designer.cs">
+      <DependentUpon>TrangChu.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
