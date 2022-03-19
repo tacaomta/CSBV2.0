@@ -99,3 +99,5 @@ D:\individual\Projects\CSBV2.0\DHSLAPI\DHSLAPI\obj\Release\CSBAPI.csproj.CoreCom
 D:\individual\Projects\CSBV2.0\DHSLAPI\DHSLAPI\obj\Release\CSBAPI.csproj.CopyComplete
 D:\individual\Projects\CSBV2.0\DHSLAPI\DHSLAPI\obj\Release\DHSLAPI.dll
 D:\individual\Projects\CSBV2.0\DHSLAPI\DHSLAPI\obj\Release\DHSLAPI.pdb
+D:\individual\Projects\CSBV2.0\DHSLAPI\DHSLAPI\bin\DocumentFormat.OpenXml.dll
+D:\individual\Projects\CSBV2.0\DHSLAPI\DHSLAPI\bin\GemBox.Document.dll

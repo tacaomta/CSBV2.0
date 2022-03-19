@@ -13,7 +13,7 @@ namespace CSBAPI.Controllers
         [Route("api/Users")]
         public List<User> GetAll()
         {
-            return null;
+            return new List<User>();
         }
     }
 }
