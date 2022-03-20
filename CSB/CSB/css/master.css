@@ -10,30 +10,31 @@ body {
 }
 
 #wraper {
-    padding-left: 5px;
-    padding-right: 5px;
     width: 100%;
     height: 100%;
     margin: auto auto;
 }
 
-#header #banner {
-    height: 150px;
-    overflow: hidden;
-    box-shadow: 0 0px 2px 0 #365899;
+#header {
+    min-width: 1200px;
+    margin: auto;
 }
 
+    #header #banner {
+        overflow: hidden;
+    }
+
 #masterContent {
+    min-width: 1200px;
     min-height: 890px;
     overflow: hidden;
-    box-shadow: 0 2px 2px 0 #365899;
+    margin: auto;
 }
 
 .mainMenu {
     margin: 0;
     padding: 0;
-    height: 100px;
-    line-height: 100px;
+    width: 100%;
     background: linear-gradient(to top,#c2bcb5,#ffffff);
 }
 
@@ -43,26 +44,25 @@ body {
 
         .mainMenu ul li {
             display: inline-block;
-            height: 100px;
-            line-height: 100px;
+            line-height: 65px;
         }
 
-            .mainMenu ul li a {
-                display: block;
-                text-decoration: none;
-                text-align: center;
-                color: black;
-                font-weight: bold;
-                padding: 0 22px;
-            }
+    .mainMenu .a_menu {
+        display: block;
+        text-decoration: none;
+        text-align: center;
+        color: #1200a3;
+        font-weight: bold;
+        padding: 0 22px;
+    }
 
-                .mainMenu ul li a:hover {
-                    background-color: beige;
-                }
+        .mainMenu .a_menu:hover {
+            background-color: beige;
+        }
 
 .leftContent {
     float: left;
-    width: 392px;
+    width: 20%;
     color: black;
     min-height: 890px;
     border-radius: 5px;
@@ -70,16 +70,15 @@ body {
 
 .rightContent {
     float: right;
-    width: 1328px;
+    width: 80%;
     color: black;
     min-height: 890px;
     border-radius: 5px;
 }
 
 #footer {
-    height: 150px;
-    line-height: 60px;
-    width: 100%;
+    min-width: 1200px;
+    margin: auto;
     background: linear-gradient(to top,#c2bcb5,#ffffff);
     text-shadow: 0.1em 0.1em #333;
     color: #fff;
@@ -89,14 +88,13 @@ body {
 }
 
 #phuhieu {
-    height: 220px;
     text-align: center;
-    border-bottom: 1px solid #46aef5;
 }
 
     #phuhieu img {
-        width: 70%;
-        height: 100%
+        width: 90%;
+        padding: 5% 10%;
+        height: 90%;
     }
 
 #banner img {
@@ -112,16 +110,61 @@ body {
     width: 100%;
 }
 
+.card .card-header a {
+    color: #1200a3;
+    font-weight: bold;
+}
+
 .card_body .btn-group-vertical .btn-primary {
-    font-size: 13px;
+    font-size: 12px;
     text-align: left;
+    border-radius: unset;
+    border: unset;
+}
+
+.btn-primary {
+    background-color: #1081ba;
 }
 
 #accordion {
-    font-size: 20px;
+    font-size: 14px;
 }
 
 .rightContent .navbar {
     justify-content: flex-end;
     background-color: #ffffff !important;
+}
+
+#btn_Infor_Login {
+    background-color: transparent;
+    border: unset;
+    border-color: unset;
+    width: 100%;
+    color: #1200a3;
+    vertical-align: unset;
+}
+
+#li_infor_login {
+    float: right;
+    margin-right: 10px;
+}
+
+#menu_infor_login {
+    width: 100%;
+}
+
+    #menu_infor_login a {
+        line-height: 50px;
+    }
+
+.icon_account {
+    font-size: 23px;
+    color: #1200a3;
+    font-style: inherit;
+}
+
+.icon_menu_account {
+    font-size: 20px;
+    color: #1200a3;
+    font-style: inherit;
 }
