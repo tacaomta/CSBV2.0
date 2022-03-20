@@ -15,8 +15,7 @@
         <div>
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-4 col-md-2"></div>
-                    <div class="col-lg-4 col-md-6 login-box">
+                    <div class="col-md-4 login-box col-md-offset-4">
                         <div class="col-lg-12 login-key">
                             <img class="ship-key" src="../Image/ic-login.png" />
                         </div>
@@ -35,14 +34,14 @@
                                     <input type="password" pattern=".{6,}" title="Mật khẩu tối thiểu 6 kí tự" class="form-control" name="matkhau" placeholder="Mật khẩu"/>
                                 </div>
 
-                                <div class="col-lg-12 loginbttm">
-                                    <div class="col-lg-12 login-btm login-text">
+                                <div class="col-md-12 loginbttm">
+                                    <div class="col-md-12 login-btm login-text">
                                         <p>Mật khẩu không chính xác</p>
                                     </div>
-                                    <div class="col-lg-12 login-btm login-button">
+                                    <div class="col-md-12 login-btm login-button">
                                         <button type="submit" class="btn btn-outline-primary">Đăng nhập</button>
                                     </div>
-                                    <div class="col-lg-12 login-button forgot-password">
+                                    <div class="col-md-12 login-button forgot-password">
                                         <a>Quên mật khẩu?</a>
                                     </div>
                                 </div>
