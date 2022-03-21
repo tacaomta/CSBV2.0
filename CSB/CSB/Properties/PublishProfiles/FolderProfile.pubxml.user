@@ -5,7 +5,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <_PublishTargetUrl>D:\individual\Projects\CSBV2.0\public</_PublishTargetUrl>
-    <History>True|2022-03-18T05:57:05.8843237Z;True|2022-03-18T12:54:08.6371857+07:00;</History>
+    <History>True|2022-03-20T16:23:11.5632242Z;True|2022-03-18T12:57:05.8843237+07:00;True|2022-03-18T12:54:08.6371857+07:00;</History>
   </PropertyGroup>
   <ItemGroup>
     <File Include="About.aspx">
@@ -24,10 +24,10 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>05/16/2019 12:33:30</publishTime>
     </File>
     <File Include="bin/CSB.dll">
-      <publishTime>03/18/2022 12:57:04</publishTime>
+      <publishTime>03/20/2022 23:23:00</publishTime>
     </File>
     <File Include="bin/CSB.pdb">
-      <publishTime>03/18/2022 12:57:04</publishTime>
+      <publishTime>03/20/2022 23:23:00</publishTime>
     </File>
     <File Include="bin/Microsoft.AspNet.FriendlyUrls.dll">
       <publishTime>07/30/2013 16:57:30</publishTime>
@@ -236,11 +236,17 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
     <File Include="Content/Site.css">
       <publishTime>03/14/2022 17:13:49</publishTime>
     </File>
+    <File Include="css/Login.css">
+      <publishTime>03/19/2022 16:13:33</publishTime>
+    </File>
+    <File Include="css/master.css">
+      <publishTime>03/20/2022 23:18:26</publishTime>
+    </File>
     <File Include="css/StyleSheet1.css">
       <publishTime>03/14/2022 19:12:59</publishTime>
     </File>
     <File Include="Default.aspx">
-      <publishTime>03/14/2022 17:13:49</publishTime>
+      <publishTime>03/20/2022 12:43:09</publishTime>
     </File>
     <File Include="favicon.ico">
       <publishTime>03/14/2022 17:13:49</publishTime>
@@ -263,8 +269,35 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
     <File Include="Global.asax">
       <publishTime>03/14/2022 17:13:49</publishTime>
     </File>
+    <File Include="Image/bg-bien.jpg">
+      <publishTime>03/19/2022 16:13:33</publishTime>
+    </File>
+    <File Include="Image/footer.png">
+      <publishTime>03/19/2022 16:13:33</publishTime>
+    </File>
+    <File Include="Image/header.jpg">
+      <publishTime>03/19/2022 16:13:33</publishTime>
+    </File>
+    <File Include="Image/ic-login.png">
+      <publishTime>03/19/2022 16:13:33</publishTime>
+    </File>
+    <File Include="Image/login.jpg">
+      <publishTime>03/19/2022 16:13:33</publishTime>
+    </File>
+    <File Include="Image/phuhieu.jpg">
+      <publishTime>03/19/2022 16:13:33</publishTime>
+    </File>
     <File Include="images/StyleSheet1.css">
       <publishTime>03/14/2022 19:13:26</publishTime>
+    </File>
+    <File Include="Master/TrangChu.Master">
+      <publishTime>03/20/2022 23:21:06</publishTime>
+    </File>
+    <File Include="Page_Master/Login.aspx">
+      <publishTime>03/19/2022 16:13:33</publishTime>
+    </File>
+    <File Include="Page_Master/TrangChu.aspx">
+      <publishTime>03/20/2022 12:38:12</publishTime>
     </File>
     <File Include="reports/report.docx">
       <publishTime>03/14/2022 19:14:57</publishTime>
@@ -372,7 +405,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>03/14/2022 17:14:00</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>03/18/2022 12:57:04</publishTime>
+      <publishTime>03/20/2022 23:23:01</publishTime>
     </File>
   </ItemGroup>
 </Project>

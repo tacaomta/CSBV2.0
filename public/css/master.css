@@ -1,0 +1,170 @@
+﻿* {
+    font: normal 14px;
+    font-family: Arial Tahoma 'Times New Roman';
+    color: black;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+}
+
+#wraper {
+    width: 100%;
+    height: 100%;
+    margin: auto auto;
+}
+
+#header {
+    min-width: 1200px;
+    margin: auto;
+}
+
+    #header #banner {
+        overflow: hidden;
+    }
+
+#masterContent {
+    min-width: 1200px;
+    min-height: 890px;
+    overflow: hidden;
+    margin: auto;
+}
+
+.mainMenu {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background: linear-gradient(to top,#c2bcb5,#ffffff);
+}
+
+    .mainMenu ul {
+        list-style: none;
+    }
+
+        .mainMenu ul li {
+            display: inline-block;
+            line-height: 65px;
+        }
+
+    .mainMenu .a_menu {
+        display: block;
+        text-decoration: none;
+        text-align: center;
+        color: #1200a3;
+        font-weight: bold;
+        padding: 0 22px;
+    }
+
+        .mainMenu .a_menu:hover {
+            background-color: beige;
+        }
+
+.leftContent {
+    float: left;
+    width: 20%;
+    color: black;
+    min-height: 890px;
+    border-radius: 5px;
+}
+
+.rightContent {
+    float: right;
+    width: 80%;
+    color: black;
+    min-height: 890px;
+    border-radius: 5px;
+}
+
+#footer {
+    min-width: 1200px;
+    margin: auto;
+    background: linear-gradient(to top,#c2bcb5,#ffffff);
+    text-shadow: 0.1em 0.1em #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+#phuhieu {
+    text-align: center;
+}
+
+    #phuhieu img {
+        width: 90%;
+        padding: 5% 10%;
+        height: 90%;
+    }
+
+#banner img {
+    width: 100%;
+    height: 100%
+}
+
+#card #card-body {
+    padding: 0px 0px;
+}
+
+.btn-group-vertical {
+    width: 100%;
+}
+
+.card .card-header a {
+    color: #1200a3;
+    font-weight: bold;
+}
+
+.card_body .btn-group-vertical .btn-primary {
+    font-size: 14px;
+    text-align: left;
+    border-radius: unset;
+    border: unset;
+}
+
+.btn-primary {
+    background-color: #1081ba;
+}
+
+#accordion {
+    font-size: 16px;
+}
+
+.rightContent .navbar {
+    justify-content: flex-end;
+    background-color: #ffffff !important;
+}
+
+#btn_Infor_Login {
+    background-color: transparent;
+    border: unset;
+    border-color: unset;
+    width: 100%;
+    color: #1200a3;
+    vertical-align: unset;
+}
+
+#li_infor_login {
+    float: right;
+    margin-right: 10px;
+}
+
+#menu_infor_login {
+    width: 100%;
+}
+
+    #menu_infor_login a {
+        line-height: 50px;
+    }
+
+.icon_account {
+    font-size: 20px;
+    color: #1200a3;
+    font-style: inherit;
+}
+
+.icon_menu_account {
+    font-size: 20px;
+    color: #1200a3;
+    font-style: inherit;
+}
