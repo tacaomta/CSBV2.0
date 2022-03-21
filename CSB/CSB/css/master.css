@@ -10,8 +10,7 @@ body {
 }
 
 #wraper {
-    width: 100%;
-    height: 100%;
+    padding:0px 5px;
     margin: auto auto;
 }
 
@@ -20,13 +19,13 @@ body {
     margin: auto;
 }
 
-    #header #banner {
-        overflow: hidden;
-    }
+#header #banner {
+    overflow: hidden;
+}
 
 #masterContent {
     min-width: 1200px;
-    min-height: 890px;
+    min-height: 900px;
     overflow: hidden;
     margin: auto;
 }
@@ -38,41 +37,40 @@ body {
     background: linear-gradient(to top,#c2bcb5,#ffffff);
 }
 
-    .mainMenu ul {
-        list-style: none;
-    }
+.mainMenu ul {
+    list-style: none;
+}
 
-        .mainMenu ul li {
-            display: inline-block;
-            line-height: 65px;
-        }
+.mainMenu ul li {
+    font-size:15px;
+    display: inline-block;
+    line-height: 55px;
+}
 
-    .mainMenu .a_menu {
-        display: block;
-        text-decoration: none;
-        text-align: center;
-        color: #1200a3;
-        font-weight: bold;
-        padding: 0 22px;
-    }
+.mainMenu .a_menu {
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    color: #00b1fb;
+    font-weight: bold;
+    padding: 0 22px;
+}
 
-        .mainMenu .a_menu:hover {
-            background-color: beige;
-        }
+.mainMenu .a_menu:hover {
+    background-color: beige;
+}
 
 .leftContent {
     float: left;
-    width: 20%;
+    width: 16%;
     color: black;
-    min-height: 890px;
-    border-radius: 5px;
+    border-radius: 5px
 }
 
 .rightContent {
     float: right;
-    width: 80%;
+    width: 84%;
     color: black;
-    min-height: 890px;
     border-radius: 5px;
 }
 
@@ -91,11 +89,11 @@ body {
     text-align: center;
 }
 
-    #phuhieu img {
-        width: 90%;
-        padding: 5% 10%;
-        height: 90%;
-    }
+#phuhieu img {
+    width: 90%;
+    padding: 5% 10%;
+    height: 90%;
+}
 
 #banner img {
     width: 100%;
@@ -111,12 +109,12 @@ body {
 }
 
 .card .card-header a {
-    color: #1200a3;
+    color: #00b1fb;
     font-weight: bold;
 }
 
 .card_body .btn-group-vertical .btn-primary {
-    font-size: 14px;
+    font-size: 13px;
     text-align: left;
     border-radius: unset;
     border: unset;
@@ -127,7 +125,7 @@ body {
 }
 
 #accordion {
-    font-size: 16px;
+    font-size: 15px;
 }
 
 .rightContent .navbar {
@@ -140,7 +138,7 @@ body {
     border: unset;
     border-color: unset;
     width: 100%;
-    color: #1200a3;
+    color: #00b1fb;
     vertical-align: unset;
 }
 
@@ -153,18 +151,20 @@ body {
     width: 100%;
 }
 
-    #menu_infor_login a {
-        line-height: 50px;
-    }
-
+#menu_infor_login a {
+    line-height: 30px;
+}
+#menu_infor_login .dropdown-item{
+    padding: 0.25rem 1rem;
+}
 .icon_account {
     font-size: 20px;
-    color: #1200a3;
+    color: #00b1fb;
     font-style: inherit;
 }
 
 .icon_menu_account {
     font-size: 20px;
-    color: #1200a3;
+    color: #00b1fb;
     font-style: inherit;
 }
