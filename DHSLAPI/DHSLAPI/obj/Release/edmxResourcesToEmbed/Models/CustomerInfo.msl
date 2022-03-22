@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="dbDHSLModelStoreContainer" CdmEntityContainer="dbDHSLEntities1">
+    <EntitySetMapping Name="tbCustomers">
+      <EntityTypeMapping TypeName="dbDHSLModel.tbCustomer">
+        <MappingFragment StoreEntitySet="tbCustomer">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="customer_name" ColumnName="customer_name" />
+          <ScalarProperty Name="customer_phonenumber" ColumnName="customer_phonenumber" />
+          <ScalarProperty Name="customer_address" ColumnName="customer_address" />
+          <ScalarProperty Name="customer_gender" ColumnName="customer_gender" />
+          <ScalarProperty Name="profess_id" ColumnName="profess_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbProfessions">
+      <EntityTypeMapping TypeName="dbDHSLModel.tbProfession">
+        <MappingFragment StoreEntitySet="tbProfession">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="profess_name" ColumnName="profess_name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

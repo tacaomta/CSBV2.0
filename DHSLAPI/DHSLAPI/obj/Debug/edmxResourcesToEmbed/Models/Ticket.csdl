@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="dbDHSLModel1" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="Entities" annotation:LazyLoadingEnabled="true">
+    <FunctionImport Name="ViewTicket" ReturnType="Collection(dbDHSLModel1.ViewTicket_Result)">
+      <Parameter Name="schedule" Mode="In" Type="DateTime" />
+      <Parameter Name="trip" Mode="In" Type="Int32" />
+    </FunctionImport>
+  </EntityContainer>
+  <ComplexType Name="ViewTicket_Result">
+    <Property Type="Int32" Name="id" Nullable="false" />
+    <Property Type="Int32" Name="customer_id" Nullable="false" />
+    <Property Type="Int32" Name="trip_id" Nullable="false" />
+    <Property Type="DateTime" Name="schedule" Nullable="false" Precision="23" />
+    <Property Type="String" Name="ticket" Nullable="false" MaxLength="10" />
+    <Property Type="String" Name="pointAcception" Nullable="false" MaxLength="50" />
+    <Property Type="Int32" Name="pointOut" Nullable="false" />
+    <Property Type="String" Name="detailOut" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="name" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="Expr1" Nullable="true" MaxLength="20" />
+    <Property Type="Int32" Name="price" Nullable="true" />
+    <Property Type="String" Name="Expr2" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="customer_name" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="customer_phonenumber" Nullable="true" MaxLength="15" />
+    <Property Type="String" Name="customer_address" Nullable="true" MaxLength="50" />
+    <Property Type="Boolean" Name="customer_gender" Nullable="true" />
+    <Property Type="String" Name="profess_name" Nullable="true" MaxLength="30" />
+  </ComplexType>
+</Schema>

@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="dbDHSLModelTripAndTypeTripStoreContainer" CdmEntityContainer="dbDHSLEntities2">
+    <EntitySetMapping Name="Trips">
+      <EntityTypeMapping TypeName="dbDHSLModelTripAndTypeTrip.Trip">
+        <MappingFragment StoreEntitySet="Trip">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="timestart" ColumnName="timestart" />
+          <ScalarProperty Name="type" ColumnName="type" />
+          <ScalarProperty Name="startpoint" ColumnName="startpoint" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TypeTrips">
+      <EntityTypeMapping TypeName="dbDHSLModelTripAndTypeTrip.TypeTrip">
+        <MappingFragment StoreEntitySet="TypeTrip">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

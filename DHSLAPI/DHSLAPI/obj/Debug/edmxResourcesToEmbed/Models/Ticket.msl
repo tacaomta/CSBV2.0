@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="dbDHSLModel1StoreContainer" CdmEntityContainer="Entities">
+    <FunctionImportMapping FunctionImportName="ViewTicket" FunctionName="dbDHSLModel1.Store.ViewTicket">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="dbDHSLModel1.ViewTicket_Result">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="customer_id" ColumnName="customer_id" />
+          <ScalarProperty Name="trip_id" ColumnName="trip_id" />
+          <ScalarProperty Name="schedule" ColumnName="schedule" />
+          <ScalarProperty Name="ticket" ColumnName="ticket" />
+          <ScalarProperty Name="pointAcception" ColumnName="pointAcception" />
+          <ScalarProperty Name="pointOut" ColumnName="pointOut" />
+          <ScalarProperty Name="detailOut" ColumnName="detailOut" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="Expr1" ColumnName="Expr1" />
+          <ScalarProperty Name="price" ColumnName="price" />
+          <ScalarProperty Name="Expr2" ColumnName="Expr2" />
+          <ScalarProperty Name="customer_name" ColumnName="customer_name" />
+          <ScalarProperty Name="customer_phonenumber" ColumnName="customer_phonenumber" />
+          <ScalarProperty Name="customer_address" ColumnName="customer_address" />
+          <ScalarProperty Name="customer_gender" ColumnName="customer_gender" />
+          <ScalarProperty Name="profess_name" ColumnName="profess_name" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="dbDHSLModelTripAndTypeTrip" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Trip">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="timestart" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="type" Type="Int32" />
+    <Property Name="startpoint" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="TypeTrip" Relationship="Self.FK_Type" FromRole="Trip" ToRole="TypeTrip" />
+  </EntityType>
+  <EntityType Name="TypeTrip">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Trips" Relationship="Self.FK_Type" FromRole="TypeTrip" ToRole="Trip" />
+  </EntityType>
+  <Association Name="FK_Type">
+    <End Role="TypeTrip" Type="Self.TypeTrip" Multiplicity="0..1" />
+    <End Role="Trip" Type="Self.Trip" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TypeTrip">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Trip">
+        <PropertyRef Name="type" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="dbDHSLEntities2" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Trips" EntityType="Self.Trip" />
+    <EntitySet Name="TypeTrips" EntityType="Self.TypeTrip" />
+    <AssociationSet Name="FK_Type" Association="Self.FK_Type">
+      <End Role="TypeTrip" EntitySet="TypeTrips" />
+      <End Role="Trip" EntitySet="Trips" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

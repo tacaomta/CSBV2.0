@@ -293,3 +293,28 @@ C:\Users\Linh\Documents\GitHub\CSBV2.0\CSB\CSB\obj\Debug\CSB.csproj.AssemblyRefe
 C:\Users\Linh\Documents\GitHub\CSBV2.0\CSB\CSB\obj\Debug\CSB.csproj.CoreCompileInputs.cache
 C:\Users\Linh\Documents\GitHub\CSBV2.0\CSB\CSB\obj\Debug\CSB.dll
 C:\Users\Linh\Documents\GitHub\CSBV2.0\CSB\CSB\obj\Debug\CSB.pdb
+D:\Code Visual 2019\CSB_NEW\CSB\CSB\bin\CSB.dll.config
+D:\Code Visual 2019\CSB_NEW\CSB\CSB\bin\CSB.dll
+D:\Code Visual 2019\CSB_NEW\CSB\CSB\bin\CSB.pdb
+D:\Code Visual 2019\CSB_NEW\CSB\CSB\bin\Antlr3.Runtime.dll
+D:\Code Visual 2019\CSB_NEW\CSB\CSB\bin\AspNet.ScriptManager.bootstrap.dll
+D:\Code Visual 2019\CSB_NEW\CSB\CSB\bin\AspNet.ScriptManager.jQuery.dll
+D:\Code Visual 2019\CSB_NEW\CSB\CSB\bin\Microsoft.AspNet.FriendlyUrls.dll
+D:\Code Visual 2019\CSB_NEW\CSB\CSB\bin\Microsoft.AspNet.Web.Optimization.WebForms.dll
+D:\Code Visual 2019\CSB_NEW\CSB\CSB\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Code Visual 2019\CSB_NEW\CSB\CSB\bin\Microsoft.ScriptManager.MSAjax.dll
+D:\Code Visual 2019\CSB_NEW\CSB\CSB\bin\Microsoft.ScriptManager.WebForms.dll
+D:\Code Visual 2019\CSB_NEW\CSB\CSB\bin\Microsoft.Web.Infrastructure.dll
+D:\Code Visual 2019\CSB_NEW\CSB\CSB\bin\Newtonsoft.Json.dll
+D:\Code Visual 2019\CSB_NEW\CSB\CSB\bin\System.Web.Optimization.dll
+D:\Code Visual 2019\CSB_NEW\CSB\CSB\bin\WebGrease.dll
+D:\Code Visual 2019\CSB_NEW\CSB\CSB\bin\System.Web.Optimization.xml
+D:\Code Visual 2019\CSB_NEW\CSB\CSB\bin\Newtonsoft.Json.xml
+D:\Code Visual 2019\CSB_NEW\CSB\CSB\bin\Antlr3.Runtime.pdb
+D:\Code Visual 2019\CSB_NEW\CSB\CSB\bin\Microsoft.AspNet.FriendlyUrls.xml
+D:\Code Visual 2019\CSB_NEW\CSB\CSB\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Code Visual 2019\CSB_NEW\CSB\CSB\obj\Debug\CSB.csprojAssemblyReference.cache
+D:\Code Visual 2019\CSB_NEW\CSB\CSB\obj\Debug\CSB.csproj.CoreCompileInputs.cache
+D:\Code Visual 2019\CSB_NEW\CSB\CSB\obj\Debug\CSB.csproj.CopyComplete
+D:\Code Visual 2019\CSB_NEW\CSB\CSB\obj\Debug\CSB.dll
+D:\Code Visual 2019\CSB_NEW\CSB\CSB\obj\Debug\CSB.pdb

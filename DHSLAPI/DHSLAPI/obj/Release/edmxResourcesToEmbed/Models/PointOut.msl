@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="dbDHSLModel1StoreContainer" CdmEntityContainer="Entities">
+    <EntitySetMapping Name="PointOuts">
+      <EntityTypeMapping TypeName="dbDHSLModel1.PointOut">
+        <MappingFragment StoreEntitySet="PointOut">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="price" ColumnName="price" />
+          <ScalarProperty Name="typetripid" ColumnName="typetripid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
