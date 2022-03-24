@@ -2,11 +2,17 @@
 <asp:Content ID="Manage_User" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="section-header">
         <div class="container">
-            
-            <div class="row" style="margin-top: 0">
-
-                <div class="col-12">
-                    <table id="example2" class="table table-bordered table-striped table-md" style="width:100%">
+            <div class="section">
+                <div class="section-header" style="margin-bottom:2%">
+                    <h4 style="color:black; margin:0">QUẢN LÝ NGƯỜI DÙNG</h4>
+                    <div class="section-header-breadcrumb">
+                        <div class="breadcrumb-item active"><a href="TrangChu.aspx" style="color:#01b5f9">Trang chủ</a></div>
+                        <div class="breadcrumb-item active"><a href="#" style="color:#01b5f9">Quản lý người dùng</a></div>
+                    </div>
+                </div>
+                <div class="section-header">
+                        <div class="col-12">
+                    <table id="tableuser" class="table table-bordered table-striped table-md" style="width:100%">
                         <thead>
                             <tr>
                                 <th>STT</th>
@@ -219,6 +225,7 @@
                             
                         </tbody>
                     </table>
+                </div>
                 </div>
             </div>
         </div>

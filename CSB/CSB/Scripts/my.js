@@ -1,7 +1,5 @@
 ﻿$(document).ready(function () {
-    var d = new Date();
-
-    $('table[id=example2]').each(function () {
+    $('table[id=tableuser]').each(function () {
         var table1 = $(this).DataTable({
             lengthChange: false,
             "language": {
@@ -21,6 +19,7 @@
                     "sLast": "Cuối"
                 }
             },
+            buttons: ['copy', 'excel', 'csv', 'pdf']
         });
         table1.buttons().container()
             .appendTo('this_wrapper .col-md-6:eq(0)');
