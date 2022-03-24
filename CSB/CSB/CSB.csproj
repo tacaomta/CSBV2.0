@@ -116,7 +116,7 @@
     <Content Include="Content\Site.css" />
     <Content Include="css\Login.css" />
     <Content Include="css\master.css" />
-    <Content Include="css\StyleSheet1.css" />
+    <Content Include="css\Manager_user.css" />
     <Content Include="Default.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />

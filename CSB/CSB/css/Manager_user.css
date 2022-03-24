@@ -98,3 +98,10 @@ div.dataTables_wrapper div.dataTables_processing {
     margin: 0 !important;
     opacity: 1 !important;
 }
+
+.icon_action {
+    color: rgb(102 ,102, 102);
+    cursor: pointer;
+    padding: 5px;
+    font-size: 20px;
+}
