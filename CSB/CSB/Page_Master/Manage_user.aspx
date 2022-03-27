@@ -1,5 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Master/TrangChu.Master" AutoEventWireup="true" CodeBehind="Manage_user.aspx.cs" Inherits="CSB.Page_Master.Manage_user" %>
-<asp:Content ID="Manage_User" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+<asp:Content ID="Manage_User" ContentPlaceHolderID="MainContent" runat="server">
     <form id="form1" runat="server">
     <div class="section-header">
         <div class="col-12">

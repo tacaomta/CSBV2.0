@@ -3,7 +3,7 @@
     $.ajax({
         type: "GET",
         url: "https://csb_api.com/api/list_users",
-        dataType: "json",
+        dataType: "jsonp",
         beforeSend: function () { // Before we send the request, remove the .hidden class from the spinner and default to inline-block.
             $('#loader').removeClass('hidden');
         },

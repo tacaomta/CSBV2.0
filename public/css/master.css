@@ -1,12 +1,13 @@
 ﻿* {
-    font: normal 14px;
     color: black;
-    margin: 0;
     padding: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
-body {
-}
+
+
 
 #wraper {
     padding: 0px 5px;
@@ -166,4 +167,3 @@ body {
     color: #01b5f9;
     font-style: inherit;
 }
-
