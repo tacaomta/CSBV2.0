@@ -392,3 +392,36 @@ D:\Code Visual 2019\CSB\CSBV2.0\CSB\CSB\obj\Debug\CSB.csproj.CoreCompileInputs.c
 D:\Code Visual 2019\CSB\CSBV2.0\CSB\CSB\obj\Debug\CSB.csproj.CopyComplete
 D:\Code Visual 2019\CSB\CSBV2.0\CSB\CSB\obj\Debug\CSB.dll
 D:\Code Visual 2019\CSB\CSBV2.0\CSB\CSB\obj\Debug\CSB.pdb
+C:\Users\Linh\Documents\GitHub\CSBV2.0\CSB\CSB\bin\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\Linh\Documents\GitHub\CSBV2.0\CSB\CSB\bin\System.Buffers.dll
+C:\Users\Linh\Documents\GitHub\CSBV2.0\CSB\CSB\bin\System.Memory.dll
+C:\Users\Linh\Documents\GitHub\CSBV2.0\CSB\CSB\bin\System.Numerics.Vectors.dll
+C:\Users\Linh\Documents\GitHub\CSBV2.0\CSB\CSB\bin\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Linh\Documents\GitHub\CSBV2.0\CSB\CSB\bin\System.Text.Encodings.Web.dll
+C:\Users\Linh\Documents\GitHub\CSBV2.0\CSB\CSB\bin\System.Text.Json.dll
+C:\Users\Linh\Documents\GitHub\CSBV2.0\CSB\CSB\bin\System.Threading.Tasks.Extensions.dll
+C:\Users\Linh\Documents\GitHub\CSBV2.0\CSB\CSB\bin\System.ValueTuple.dll
+C:\Users\Linh\Documents\GitHub\CSBV2.0\CSB\CSB\bin\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\Linh\Documents\GitHub\CSBV2.0\CSB\CSB\bin\System.Buffers.xml
+C:\Users\Linh\Documents\GitHub\CSBV2.0\CSB\CSB\bin\System.Memory.xml
+C:\Users\Linh\Documents\GitHub\CSBV2.0\CSB\CSB\bin\System.Numerics.Vectors.xml
+C:\Users\Linh\Documents\GitHub\CSBV2.0\CSB\CSB\bin\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\Linh\Documents\GitHub\CSBV2.0\CSB\CSB\bin\System.Text.Encodings.Web.xml
+C:\Users\Linh\Documents\GitHub\CSBV2.0\CSB\CSB\bin\System.Text.Json.xml
+C:\Users\Linh\Documents\GitHub\CSBV2.0\CSB\CSB\bin\System.Threading.Tasks.Extensions.xml
+C:\Users\Linh\Documents\GitHub\CSBV2.0\CSB\CSB\bin\System.ValueTuple.xml
+C:\Users\Linh\Documents\GitHub\CSBV2.0\CSB\CSB\bin\Azure.Core.dll
+C:\Users\Linh\Documents\GitHub\CSBV2.0\CSB\CSB\bin\Azure.Identity.dll
+C:\Users\Linh\Documents\GitHub\CSBV2.0\CSB\CSB\bin\Azure.Security.KeyVault.Certificates.dll
+C:\Users\Linh\Documents\GitHub\CSBV2.0\CSB\CSB\bin\Azure.Security.KeyVault.Secrets.dll
+C:\Users\Linh\Documents\GitHub\CSBV2.0\CSB\CSB\bin\Microsoft.Identity.Client.dll
+C:\Users\Linh\Documents\GitHub\CSBV2.0\CSB\CSB\bin\Microsoft.Identity.Client.Extensions.Msal.dll
+C:\Users\Linh\Documents\GitHub\CSBV2.0\CSB\CSB\bin\System.Diagnostics.DiagnosticSource.dll
+C:\Users\Linh\Documents\GitHub\CSBV2.0\CSB\CSB\bin\System.Security.Cryptography.ProtectedData.dll
+C:\Users\Linh\Documents\GitHub\CSBV2.0\CSB\CSB\bin\Azure.Core.xml
+C:\Users\Linh\Documents\GitHub\CSBV2.0\CSB\CSB\bin\Azure.Identity.xml
+C:\Users\Linh\Documents\GitHub\CSBV2.0\CSB\CSB\bin\Azure.Security.KeyVault.Certificates.xml
+C:\Users\Linh\Documents\GitHub\CSBV2.0\CSB\CSB\bin\Azure.Security.KeyVault.Secrets.xml
+C:\Users\Linh\Documents\GitHub\CSBV2.0\CSB\CSB\bin\Microsoft.Identity.Client.xml
+C:\Users\Linh\Documents\GitHub\CSBV2.0\CSB\CSB\bin\Microsoft.Identity.Client.Extensions.Msal.xml
+C:\Users\Linh\Documents\GitHub\CSBV2.0\CSB\CSB\bin\System.Diagnostics.DiagnosticSource.xml
