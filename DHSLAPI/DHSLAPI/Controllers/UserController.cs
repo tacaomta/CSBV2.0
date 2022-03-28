@@ -14,7 +14,7 @@ namespace CSBAPI.Controllers
         private readonly Connection con = new Connection();
 
         [HttpGet]
-        [Route("api/user_login")]
+        [Route("api/user_login")]       
         public User Login([FromBody] User user)
         {
             return con.Login(new User()

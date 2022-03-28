@@ -758,7 +758,7 @@ namespace ShipyardInfo.classes
             return isSuccess;
         }
 
-        public List<OverviewInfo> GetAll(string filter, int region)
+        public List<OverviewInfo> GetAll(int region, string filter="")
         {
             List<OverviewInfo> oi = null;
             if (IsConnect())
