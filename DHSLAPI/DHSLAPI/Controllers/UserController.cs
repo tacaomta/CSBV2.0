@@ -13,6 +13,16 @@ namespace CSBAPI.Controllers
     {
         private readonly Connection con = new Connection();
 
+        [HttpGet]
+        [Route("api/user_login")]
+        public User Login([FromBody] User user)
+        {
+            return con.Login(new User()
+            {
+                UserName=user.UserName,
+                Password=Helper.EnCode(user.Password)
+            });
+        }
 
         [HttpGet]
         [Route("api/list_users")]
@@ -37,7 +47,7 @@ namespace CSBAPI.Controllers
 
         [HttpDelete]
         [Route("api/delete_user")]
-        public HttpResponseMessage DeleteUser(string id)
+        public HttpResponseMessage DeleteUser([FromUri] string id)
         {
             return con.DeleteUser(id) ? Request.CreateResponse(HttpStatusCode.OK, id) : Request.CreateResponse(HttpStatusCode.NotFound);
         }
