@@ -5,10 +5,10 @@ using System.Text;
 
 namespace ShipyardInfo.classes
 {
-    public enum Role
+    public class Role
     {
-        Admin,
-        User
+        public string RoleId { get; set; }
+        public string RoleName { get; set; }
     }
     public class User
     {

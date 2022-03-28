@@ -252,3 +252,36 @@ D:\Code Visual 2019\CanhSatBien\CSB\CSB\CSB\obj\Release\CSB.csproj.CoreCompileIn
 D:\Code Visual 2019\CanhSatBien\CSB\CSB\CSB\obj\Release\CSB.csproj.CopyComplete
 D:\Code Visual 2019\CanhSatBien\CSB\CSB\CSB\obj\Release\CSB.dll
 D:\Code Visual 2019\CanhSatBien\CSB\CSB\CSB\obj\Release\CSB.pdb
+D:\individual\Projects\CSBV2.0\CSB\CSB\bin\Azure.Core.dll
+D:\individual\Projects\CSBV2.0\CSB\CSB\bin\Azure.Identity.dll
+D:\individual\Projects\CSBV2.0\CSB\CSB\bin\Azure.Security.KeyVault.Certificates.dll
+D:\individual\Projects\CSBV2.0\CSB\CSB\bin\Azure.Security.KeyVault.Secrets.dll
+D:\individual\Projects\CSBV2.0\CSB\CSB\bin\Microsoft.Bcl.AsyncInterfaces.dll
+D:\individual\Projects\CSBV2.0\CSB\CSB\bin\Microsoft.Identity.Client.dll
+D:\individual\Projects\CSBV2.0\CSB\CSB\bin\Microsoft.Identity.Client.Extensions.Msal.dll
+D:\individual\Projects\CSBV2.0\CSB\CSB\bin\System.Buffers.dll
+D:\individual\Projects\CSBV2.0\CSB\CSB\bin\System.Diagnostics.DiagnosticSource.dll
+D:\individual\Projects\CSBV2.0\CSB\CSB\bin\System.Memory.dll
+D:\individual\Projects\CSBV2.0\CSB\CSB\bin\System.Numerics.Vectors.dll
+D:\individual\Projects\CSBV2.0\CSB\CSB\bin\System.Runtime.CompilerServices.Unsafe.dll
+D:\individual\Projects\CSBV2.0\CSB\CSB\bin\System.Security.Cryptography.ProtectedData.dll
+D:\individual\Projects\CSBV2.0\CSB\CSB\bin\System.Text.Encodings.Web.dll
+D:\individual\Projects\CSBV2.0\CSB\CSB\bin\System.Text.Json.dll
+D:\individual\Projects\CSBV2.0\CSB\CSB\bin\System.Threading.Tasks.Extensions.dll
+D:\individual\Projects\CSBV2.0\CSB\CSB\bin\System.ValueTuple.dll
+D:\individual\Projects\CSBV2.0\CSB\CSB\bin\Azure.Core.xml
+D:\individual\Projects\CSBV2.0\CSB\CSB\bin\Azure.Identity.xml
+D:\individual\Projects\CSBV2.0\CSB\CSB\bin\Azure.Security.KeyVault.Certificates.xml
+D:\individual\Projects\CSBV2.0\CSB\CSB\bin\Azure.Security.KeyVault.Secrets.xml
+D:\individual\Projects\CSBV2.0\CSB\CSB\bin\Microsoft.Bcl.AsyncInterfaces.xml
+D:\individual\Projects\CSBV2.0\CSB\CSB\bin\Microsoft.Identity.Client.xml
+D:\individual\Projects\CSBV2.0\CSB\CSB\bin\Microsoft.Identity.Client.Extensions.Msal.xml
+D:\individual\Projects\CSBV2.0\CSB\CSB\bin\System.Buffers.xml
+D:\individual\Projects\CSBV2.0\CSB\CSB\bin\System.Diagnostics.DiagnosticSource.xml
+D:\individual\Projects\CSBV2.0\CSB\CSB\bin\System.Memory.xml
+D:\individual\Projects\CSBV2.0\CSB\CSB\bin\System.Numerics.Vectors.xml
+D:\individual\Projects\CSBV2.0\CSB\CSB\bin\System.Runtime.CompilerServices.Unsafe.xml
+D:\individual\Projects\CSBV2.0\CSB\CSB\bin\System.Text.Encodings.Web.xml
+D:\individual\Projects\CSBV2.0\CSB\CSB\bin\System.Text.Json.xml
+D:\individual\Projects\CSBV2.0\CSB\CSB\bin\System.Threading.Tasks.Extensions.xml
+D:\individual\Projects\CSBV2.0\CSB\CSB\bin\System.ValueTuple.xml

@@ -100,3 +100,4 @@ D:\individual\Projects\CSBV2.0\DHSLAPI\DHSLAPI\obj\Debug\CSBAPI.csproj.CoreCompi
 D:\individual\Projects\CSBV2.0\DHSLAPI\DHSLAPI\obj\Debug\CSBAPI.csproj.CopyComplete
 D:\individual\Projects\CSBV2.0\DHSLAPI\DHSLAPI\obj\Debug\DHSLAPI.dll
 D:\individual\Projects\CSBV2.0\DHSLAPI\DHSLAPI\obj\Debug\DHSLAPI.pdb
+D:\individual\Projects\CSBV2.0\DHSLAPI\DHSLAPI\obj\Debug\CSBAPI.csproj.AssemblyReference.cache

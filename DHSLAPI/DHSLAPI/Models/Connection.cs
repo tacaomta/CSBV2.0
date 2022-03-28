@@ -133,7 +133,11 @@ namespace ShipyardInfo.classes
                             Password = ds.Tables[0].Rows[i]["user_password"].ToString(),
                             Fullname = ds.Tables[0].Rows[i]["user_fullname"].ToString(),
                             LastUpdate = ds.Tables[0].Rows[i]["user_lastupdate"].ToString(),
-                            Role = ds.Tables[0].Rows[i]["role_name"].ToString() == "Admin" ? Role.Admin : Role.User,
+                            Role = new Role()
+                            {
+                                RoleId = ds.Tables[0].Rows[i]["role_id"].ToString(),
+                                RoleName = ds.Tables[0].Rows[i]["role_name"].ToString()
+                            },
                             ID = ds.Tables[0].Rows[i]["user_id"].ToString()
                         });
                     }                    
@@ -166,7 +170,7 @@ namespace ShipyardInfo.classes
                 SqlCommand command = new SqlCommand("UpdateUser");
                 command.Parameters.AddWithValue("@user_id", user.ID);
                 command.Parameters.AddWithValue("@user_fullname", user.Fullname);
-                command.Parameters.AddWithValue("@user_role", user.Role == Role.Admin ? "AD" : "US");
+                command.Parameters.AddWithValue("@user_role", user.Role.RoleId);
                 command.Parameters.AddWithValue("@user_lastupdate", user.LastUpdate);
                 command.Parameters.AddWithValue("@user_password", user.Password);
                 command.Parameters.AddWithValue("@isLocked", user.LOCKED);
@@ -186,7 +190,7 @@ namespace ShipyardInfo.classes
                 command.Parameters.AddWithValue("@user_id", user.ID);
                 command.Parameters.AddWithValue("@user_name", user.UserName);
                 command.Parameters.AddWithValue("@user_fullname", user.Fullname);
-                command.Parameters.AddWithValue("@user_role", user.Role == Role.Admin ? "AD" : "US");
+                command.Parameters.AddWithValue("@user_role", user.Role.RoleId);
                 command.Parameters.AddWithValue("@user_created", user.Created);
                 command.Parameters.AddWithValue("@user_lastupdate", user.LastUpdate);
                 command.Parameters.AddWithValue("@user_password", user.Password);
@@ -518,7 +522,11 @@ namespace ShipyardInfo.classes
                     UserName = ds.Tables[0].Rows[0]["user_name"].ToString(),
                     Password = ds.Tables[0].Rows[0]["user_password"].ToString(),
                     Fullname = ds.Tables[0].Rows[0]["user_fullname"].ToString(),
-                    Role = ds.Tables[0].Rows[0]["role_name"].ToString().ToUpper().Equals("ADMIN") ? Role.Admin : Role.User
+                    Role = new Role()
+                    {
+                        RoleId = ds.Tables[0].Rows[0]["role_id"].ToString(),
+                        RoleName = ds.Tables[0].Rows[0]["role_name"].ToString()
+                    }
                 };
             }
             return user;
