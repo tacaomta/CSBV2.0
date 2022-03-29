@@ -1,4 +1,4 @@
-namespace CSBAPI.Areas.HelpPage.ModelDescriptions
+namespace DHSLAPI.Areas.HelpPage.ModelDescriptions
 {
     public class SimpleTypeModelDescription : ModelDescription
     {

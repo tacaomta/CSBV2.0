@@ -3,7 +3,7 @@ using System.Globalization;
 using System.Linq;
 using System.Reflection;
 
-namespace CSBAPI.Areas.HelpPage.ModelDescriptions
+namespace DHSLAPI.Areas.HelpPage.ModelDescriptions
 {
     internal static class ModelNameHelper
     {

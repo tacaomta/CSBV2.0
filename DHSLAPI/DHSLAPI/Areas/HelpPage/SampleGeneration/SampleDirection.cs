@@ -1,4 +1,4 @@
-namespace CSBAPI.Areas.HelpPage
+namespace DHSLAPI.Areas.HelpPage
 {
     /// <summary>
     /// Indicates whether the sample is used for request or response
