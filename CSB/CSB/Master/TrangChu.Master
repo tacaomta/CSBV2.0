@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap4.min.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.5.2/css/buttons.bootstrap4.min.css">
-	<link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.2.3/css/responsive.bootstrap4.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.2.3/css/responsive.bootstrap4.min.css">
     <link href="../css/manage_user.css" rel="stylesheet" />
 </head>
 
@@ -133,23 +133,23 @@
                         <li><a class="a_menu" href="#">VÙNG 4</a></li>
                         <li><a class="a_menu" href="#">CÁC ĐƠN VỊ TRỰC THUỘC</a></li>
                         <li id="li_infor_login">
-                            <div class="dropdown" >
-                                
+                            <div class="dropdown">
+
                                 <button type="button" id="btn_Infor_Login" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
-                                     <i class="bi bi-person-circle icon_account"> Dương Văn Tuyên</i>
+                                    <i class="bi bi-person-circle icon_account">Dương Văn Tuyên</i>
                                 </button>
-                               
+
                                 <div class="dropdown-menu" id="menu_infor_login">
-                                    <a class="dropdown-item" href="#"><i class="bi bi-info-circle icon_menu_account"> Thông tin tài khoản</i></a>
-                                    <a class="dropdown-item" href="#"><i class="bi bi-unlock-fill icon_menu_account"> Đổi mật khẩu</i> </a>
-                                    <a class="dropdown-item" href="#"><i class="bi bi-box-arrow-in-left icon_menu_account"> Đăng xuất</i> </a>
+                                    <a class="dropdown-item" href="#"><i class="bi bi-info-circle icon_menu_account">Thông tin tài khoản</i></a>
+                                    <a class="dropdown-item" href="#"><i class="bi bi-unlock-fill icon_menu_account">Đổi mật khẩu</i> </a>
+                                    <a class="dropdown-item" href="#"><i class="bi bi-box-arrow-in-left icon_menu_account">Đăng xuất</i> </a>
                                 </div>
                             </div>
                         </li>
                     </ul>
                 </div>
                 <div class="mainContent">
-                
+
                     <asp:ContentPlaceHolder ID="MainContent" runat="server"></asp:ContentPlaceHolder>
                 </div>
 
@@ -159,7 +159,7 @@
             <img src="../Image/footer.png" alt="Italian Trulli" />
         </div>
     </div>
-    
+
     <script src="../Scripts/jquery-3.4.1.slim.min.js"></script>
     <script src="../Scripts/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
@@ -191,7 +191,11 @@
                     var i = 1;
                     $.each(data, function (key, item) {
                         console.log(item.UserName);
+<<<<<<< HEAD
+                        tabletext += "<tr><td>" + i + "</td><td>" + item.Fullname + "</td><td>" + item.UserName + "</td><td>" + item.Password + "</td><td>" + item.Role.RoleName + "</td><td>" + item.LastUpdate + "</td><td>" + item.LOCKED + '</td><td><a href="#"> <i class="fas fa-edit icon_action" title="Sửa thông tin"></i></a><a href="#"><i class="fas fa-trash-alt icon_action" title="Xoá thông tin"></i></a></td></tr>';
+=======
                         tabletext += "<tr><td>" + i + "</td><td>" + item.Fullname + "</td><td>" + item.UserName + "</td><td>" + item.Password + "</td><td>" + item.Role + "</td><td>" + item.LastUpdate + "</td><td>" + item.LOCKED + '</td><td><a href="#"> <i class="fas fa-edit icon_action" title="Sửa thông tin"></i></a><a href="#"><i class="fas fa-trash-alt icon_action" title="Xoá thông tin"></i></a></td></tr>';
+>>>>>>> parent of f7fb853 (update_user)
                         i = i + 1;
                     });
                     tabletext += "</tbody>";
@@ -206,6 +210,48 @@
                 },
             });
         });
+<<<<<<< HEAD
+        function Them_User() {
+            var user = {
+                "UserName": $("#TenND").val(),
+                "Password": $("#MatKhau").val(),
+                "Fullname": $("#TenDayDu").val(),
+                "Role": {
+                    "RoleId": "US",
+                    "RoleName": "User"
+                },
+                "LastUpdate": "05/09/2019 03:15:09",
+                "Created": "05/09/2019 03:15:09",
+                "LOCKED": false,
+                "ID": "77777"
+            };
+           
+            debugger;
+
+            $.ajax({
+                type: "POST",
+                url: "http://localhost:8081/api/insert_user",
+                dataType: "json",
+                data: JSON.stringify(user),
+                contentType: "application/json",
+
+                beforeSend: function () { // Before we send the request, remove the .hidden class from the spinner and default to inline-block.
+                    $('#loader').removeClass('hidden');
+                },
+                success: function (data) {
+                   
+                }, error: function (ret) {
+                    debugger;
+                    console.log(user);
+                },
+                complete: function () { // Set our complete callback, adding the .hidden class and hiding the spinner.
+                    $('#loader').addClass('hidden');
+                  
+                },
+            });
+        }
+=======
+>>>>>>> parent of f7fb853 (update_user)
 
         function loadTableUser() {
             $('table[id=tableuser]').each(function () {
@@ -236,6 +282,6 @@
             });
         };
     </script>
-   <%-- <script src="../Scripts/my1.js"></script>--%>
+    <%-- <script src="../Scripts/my1.js"></script>--%>
 </body>
 </html>

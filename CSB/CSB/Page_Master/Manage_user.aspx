@@ -722,7 +722,7 @@
                     </div>
                     <div class="section-header">
                         <div class="col-12">
-                            <button class="btn btn-info btn-lg col-6" data-toggle="modal" data-target="#model-add-user">Thêm người dùng</button>
+                            <button  class="btn btn-info btn-lg col-6" data-toggle="modal" data-target="#model-add-user">Thêm người dùng</button>
                             <table id="tableuser" class="table table-bordered table-striped table-md" style="width: 100%">
                                 <thead>
                                     <tr>
@@ -769,13 +769,22 @@
                         <h6 class="title-modal-banve font-weight-bold" id="largeModalLabel">Thêm người dùng mới</h6>
                     </div>
                     <div class="modal-body">
+
                         <div class="row clearfix " style="border: 3px solid #36aee5">
-                            <input hidden id="TenDN" name="id[0]" value="">
+                            
+                            <div style="width: 100%; float: left; padding: 10px">
+                                <div class="form-group">
+                                    <label class="col-5 control-label"><strong>Tên đầy đủ     : </strong></label>
+                                    <div class="col-7">
+                                        <input type="text" class="form-control" id="TenDayDu" name="TenDayDu" placeholder="Nhập tên đầy đủ" value="">
+                                    </div>
+                                </div>
+                            </div>
                             <div style="width: 100%; float: left; padding: 10px">
                                 <div class="form-group">
                                     <label class="col-5 control-label"><strong>Tên đăng nhập     : </strong></label>
                                     <div class="col-7">
-                                        <input type="text" class="form-control" name="TenND" placeholder="Nhập tên người dùng" value="">
+                                        <input type="text" class="form-control" id="TenND" name="TenND" placeholder="Nhập tên người dùng" value="">
                                     </div>
                                 </div>
                             </div>
@@ -783,7 +792,7 @@
                                 <div class="form-group">
                                     <label class="col-5 control-label"><strong>Mật khẩu     : </strong></label>
                                     <div class="col-7">
-                                        <input type="text" class="form-control" name="TenND" placeholder="Nhập tên người dùng" value="">
+                                        <input type="text" class="form-control" id="MatKhau" name="MatKhau" placeholder="Nhập mật khẩu" value="">
                                     </div>
                                 </div>
                             </div>
@@ -791,22 +800,15 @@
                                 <div class="form-group">
                                     <label class="col-5 control-label"><strong>Xác nhận mật khẩu     : </strong></label>
                                     <div class="col-7">
-                                        <input type="text" class="form-control" name="TenND" placeholder="Nhập tên người dùng" value="">
+                                        <input type="text" class="form-control" id="XacNhanMatKhau" name="XacNhanMatKhau" placeholder="Xác nhận mật khẩu" value="">
                                     </div>
                                 </div>
                             </div>
-                            <div style="width: 100%; float: left; padding: 10px">
-                                <div class="form-group">
-                                    <label class="col-5 control-label"><strong>Tên đầy đủ     : </strong></label>
-                                    <div class="col-7">
-                                        <input type="text" class="form-control" name="TenND" placeholder="Nhập tên người dùng" value="">
-                                    </div>
-                                </div>
-                            </div>
+                            
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <button type="submit" class="btn btn-info">Cập nhật</button>
+                        <button onclick="Them_User()" type="submit" class="btn btn-info">Cập nhật</button>
                         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                     </div>
                 </div>
