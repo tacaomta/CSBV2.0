@@ -178,39 +178,43 @@
     <script src="https://cdn.datatables.net/responsive/2.2.3/js/responsive.bootstrap4.min.js"></script>
     <script>
         $(document).ready(function () {
+            loadDataListUsers();
+        });
 
+        function loadDataListUsers() {
             $.ajax({
                 type: "GET",
-                url: "http://localhost:8081/api/list_users",
+                url: "http://localhost:8082/api/list_users",
                 dataType: "json",
-                beforeSend: function() { // Before we send the request, remove the .hidden class from the spinner and default to inline-block.
+                beforeSend: function () { // Before we send the request, remove the .hidden class from the spinner and default to inline-block.
                     $('#loader').removeClass('hidden');
                 },
                 success: function (data) {
                     var tabletext = "<thead><tr><th>STT</th><th>Họ tên</th><th>Tên DN</th><th>Mật khẩu</th><th>Quyền</th><th>Cập nhật gần đây</th><th>Khóa</th><th>Tác vụ</th></tr></thead><tbody>";
                     var i = 1;
                     $.each(data, function (key, item) {
-                        console.log(item.UserName);
-                        tabletext += "<tr><td>" + i + "</td><td>" + item.Fullname + "</td><td>" + item.UserName + "</td><td>" + item.Password + "</td><td>" + item.Role + "</td><td>" + item.LastUpdate + "</td><td>" + item.LOCKED + '</td><td><a href="#"> <i class="fas fa-edit icon_action" title="Sửa thông tin"></i></a><a href="#"><i class="fas fa-trash-alt icon_action" title="Xoá thông tin"></i></a></td></tr>';
+                        tabletext += "<tr><td>" + i + "</td><td>" + item.Fullname + "</td><td>" + item.UserName + "</td><td>" + item.Password + "</td><td>" + item.Role.RoleName + "</td><td>" + item.LastUpdate + "</td><td>" + item.LOCKED + '</td><td><button class="btn btn-info" data-toggle="modal" data-target="#model-edit-user" onclick="edituser(`' + item.Fullname + '`,`' + item.UserName + '`,`' + item.Password + '`,`' + item.Role.RoleId + '`,`' + item.Role.RoleName + '`,`' + item.Created + '`,`' + item.LOCKED + '`,`' + item.ID + '`)" style="padding: 0;"> <i class="fas fa-edit icon_action" title="Sửa thông tin"></i></button><button class="btn btn-info" style="padding: 0;"><i class="fas fa-trash-alt icon_action" title="Xoá thông tin"></i></button></td></tr>';
                         i = i + 1;
                     });
                     tabletext += "</tbody>";
                     $('#tableuser').html(tabletext);
-                    console.log("ok1");
+                    console.log("okGET");
                     loadTableUser();
                 }, error: function (ret) {
-                    console.log('error');
+                    console.log('errorGET');
                 },
                 complete: function () { // Set our complete callback, adding the .hidden class and hiding the spinner.
                     $('#loader').addClass('hidden');
+                    $('#model-edit-user').addClass('hidden');
                 },
             });
-        });
+        };
 
         function loadTableUser() {
             $('table[id=tableuser]').each(function () {
 
                 var table1 = $(this).DataTable({
+                    'destroy': true,
                     lengthChange: false,
                     "language": {
                         "sProcessing": "Đang xử lý...",
@@ -235,6 +239,109 @@
                     .appendTo('this_wrapper .col-md-6:eq(0)');
             });
         };
+
+        function edituser(_FullName, _UserName, _Password, _RoleId, _RoleName, _Created, _LOCKED, _ID) {
+            $('#edFullName').val(_FullName);
+            $('#edUserName').val(_UserName);
+            $('#edRole').val(_RoleId);
+            $('#edCreated').val(_Created);
+            $('#edPasswordCu').val(_Password);
+            $('#edPassword').val('');
+            $('#edPasswordNew').val('');
+            $('#edPasswordNew2').val('');
+            $('#edPassword,#edPasswordNew,#edPasswordNew2').attr('disabled', '');
+            $('#changepass').prop('checked', false);
+            $('#Error').text("");
+            $('input[name=edLOCK]').each(function () {
+                $(this).prop('checked', false);
+            });
+            $('input[name=edLOCK]').each(function () {
+                if ($(this).val() == 'true') {
+                    if (_LOCKED == 'true') {
+                        $(this).prop('checked', true);
+                        return false;
+                    }
+                }
+                else {
+                    if (_LOCKED == 'false') {
+                        console.log(false);
+                        $(this).prop('checked', true);
+                        return false;
+                    }
+                }
+            });
+            $('#edID').val(_ID);
+
+        };
+
+        function ChangePass(obj) {
+            if ($(obj).is(":checked")) {
+                $('#edPassword,#edPasswordNew,#edPasswordNew2').removeAttr('disabled');
+            }
+            else {
+                $('#edPassword,#edPasswordNew,#edPasswordNew2').attr('disabled', '');
+            }
+        };
+
+        function updateUser() {
+            if ($('#changepass').is(":checked")) {
+                if ($('#edPasswordCu').val() != $('#edPassword').val()) {
+                    console.log($('#edPasswordCu').val());
+                    console.log($('#edPassword').val());
+                    $('#Error').text("Nhập mật khẩu không chính xác");
+                    $('#model-edit-user').show();
+                    return false;
+                }
+            }
+
+            var date = new Date();
+            var strDate = '' + date.getDate() + '/' + date.getMonth() + '/' + date.getFullYear() + ' ' + date.getHours() + ':' + date.getMinutes() + ':' + date.getSeconds();
+
+            var khoa = false;
+            $('input[name=edLOCK]').each(function () {
+                if ($(this).val() == 'true' && $(this).attr("checked") == 'checked') {
+                    khoa = true;
+                }
+            });
+
+            var _rolename = "Admin";
+            if ($('#edRole').val() == "US") _rolename = "User";
+            var user = {
+                UserName: $('#edUserName').val(),
+                Password: $('#edPasswordNew').val(),
+                Fullname: $('#edFullName').val(),
+                Role: {
+                    RoleId: $('#edRole').val(),
+                    RoleName: _rolename,
+                },
+                LastUpdate: strDate,
+                Created: $('#edCreated').val(),
+                LOCKED: khoa,
+                ID: $('#edID').val()
+            }
+            console.log(user);
+
+            $.ajax({
+                type: "PUT",
+                url: "http://localhost:8082/api/update_user",
+                dataType: "json",
+                data: JSON.stringify(user),
+                contentType: "application/json",
+                beforeSend: function () { // Before we send the request, remove the .hidden class from the spinner and default to inline-block.
+                    $('#loader').removeClass('hidden');
+                },
+                success: function (data) {
+                    console.log("okPUT");
+                }, error: function (ret) {
+                    console.log('errorPUT');
+                },
+                complete: function () { // Set our complete callback, adding the .hidden class and hiding the spinner.
+                    $('#loader').addClass('hidden');
+                    loadDataListUsers();
+                },
+            });
+        };
+
     </script>
    <%-- <script src="../Scripts/my1.js"></script>--%>
 </body>

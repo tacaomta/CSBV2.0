@@ -813,6 +813,106 @@
             </div>
         </div>
     </div>
+    
+    <div class="modal fade" id="model-edit-user" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="card auth_form" method="post" action="/Account/UpdateItem">
+                    <div class="modal-header">
+                        <h6 class="title-modal-banve font-weight-bold">Sửa thông tin người dùng</h6>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row clearfix " style="border: 3px solid #01b5f9">
+                            <input hidden id="edID" value="">
+                            <input hidden id="edPasswordCu" value="">
+                            <input hidden id="edCreated" value="">
+                            <div style="width:100% ;float:left;padding-top:10px">
+                                <div class="form-group">
+                                    <label class="col-5 control-label"><strong>Tên đầy đủ     : </strong></label>
+                                    <div class="col-7">
+                                        <input type="text" class="form-control" id="edFullName" placeholder="Nhập tên người dùng" value="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="width:100% ;float:left;padding-top:10px">
+                                <div class="form-group">
+                                    <label class="col-5 control-label"><strong>Tên đăng nhập     : </strong></label>
+                                    <div class="col-7">
+                                        <input type="text" class="form-control" id="edUserName" placeholder="" value="" disabled>
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="width:100% ;float:left;padding-top:10px">
+                                <div class="form-group">
+                                    <label class="col-5 control-label"><strong>Đổi mật khẩu     : </strong></label>
+                                    <div class="col-7">
+                                        <input type="checkbox" id="changepass" name="changepass" value="" onchange="ChangePass(this)" /> Đổi mật khẩu
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div style="width:100% ;float:left;padding-top:10px">
+                                <div class="form-group">
+                                    <label class="col-5 control-label"><strong>Mật khẩu cũ     : </strong></label>
+                                    <div class="col-7">
+                                        <input type="password" class="form-control" id="edPassword" placeholder="" value="" disabled>
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="width:100% ;float:left;padding-top:10px">
+                                <div class="form-group">
+                                    <label class="col-5 control-label"><strong>Mật khẩu mới     : </strong></label>
+                                    <div class="col-7">
+                                        <input type="password" class="form-control" id="edPasswordNew" placeholder="" value="" disabled>
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="width:100% ;float:left;padding-top:10px">
+                                <div class="form-group">
+                                    <label class="col-5 control-label"><strong>Xác nhận mật khẩu     : </strong></label>
+                                    <div class="col-7">
+                                        <input type="password" class="form-control" id="edPasswordNew2" placeholder="" value="" disabled>
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="width:100% ;float:left;padding-top:10px">
+                                <div class="form-group">
+                                    <label class="col-5 control-label"><strong>Quyền     : </strong></label>
+                                    <div class="col-7">
+                                        <select  class="form-control" id="edRole">
+                                            <option selected value="AD">Admin</option>
+                                            <option value="US">User</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="width:100% ;float:left;padding-top:10px">
+                                <div class="form-group">
+                                    <label class="col-5 control-label"><strong>Khóa tài khoản     : </strong></label>
+                                    <div class="col-7">
+                                        <div class="radio" style="display: flex; padding-top: 10px;">
+                                            <label class="col-md-6">
+                                                <input type="radio" name="edLOCK" value="true" checked> Khóa
+                                            </label>
+                                            <label class="col-md-6">
+                                                <input type="radio" name="edLOCK" value="false" /> Bỏ khóa
+                                            </label>
+                                                
+                                        </div>
+                                    </div>
+                                </div>
+                                <p id="Error" class="textER"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-info" data-dismiss="modal" onclick="updateUser()">Lưu thay đổi</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Đóng</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
 </asp:Content>
 
