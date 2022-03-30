@@ -13,6 +13,66 @@
     <link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.5.2/css/buttons.bootstrap4.min.css">
 	<link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.2.3/css/responsive.bootstrap4.min.css">
     <link href="../css/manage_user.css" rel="stylesheet" />
+    <style>
+        .toastSuccess {
+            background-color: rgb(17 165 42);
+            box-shadow: 0 2px 6px #2e933a;
+            color: white;
+            padding: 6px 10px;
+            border: none;
+            cursor: pointer;
+            position: fixed;
+            bottom: 10px;
+            right: 28px;
+            width: 280px;
+            z-index:100;
+        }
+        .toastSuccess-header {
+            background-color: rgb(17 165 42);
+        }
+        .close {
+            color: #fff;
+            opacity: 0.8;
+        }
+        .toastSuccess-header-text { 
+            color: white;
+            font-weight: bold;
+            font-size: 16px;
+            margin-top: 5px;
+        }
+        .toastSuccess-body {
+            background-color: rgb(17 165 42);
+            color: white;
+            font-size: 14px;
+        }
+        .toastError {
+            background-color: rgb(183 22 22);
+            box-shadow: 0 2px 6px #c95e5e;
+            color: white;
+            padding: 6px 10px;
+            border: none;
+            cursor: pointer;
+            position: fixed;
+            bottom: 23px;
+            right: 28px;
+            width: 280px;
+            z-index:100;
+        }
+        .toastError-header {
+            background-color: rgb(183 22 22);
+        }
+        .toastError-header-text { 
+            color: white;
+            font-weight: bold;
+            font-size: 16px;
+            margin-top: 5px;
+        }
+        .toastError-body {
+            background-color: rgb(183 22 22);
+            color: white;
+            font-size: 14px;
+        }
+    </style>
 </head>
 
 <body>
@@ -152,7 +212,24 @@
                 
                     <asp:ContentPlaceHolder ID="MainContent" runat="server"></asp:ContentPlaceHolder>
                 </div>
-
+                <div class="toast toastSuccess mt-3">
+                    <div class="toast-header toastSuccess-header" >
+                        <p id="toastSuccess-header" class="mr-auto toastSuccess-header-text">Toast Header</p>
+                        <button type="button" class="ml-2 mb-3 close" data-dismiss="toast">×</button>
+                    </div>
+                    <div class="toast-body toastSuccess-body" id="toastSuccess-body">
+                        Some text inside the toast body
+                    </div>
+                </div>
+                <div class="toast toastError mt-3">
+                    <div class="toast-header toastError-header" >
+                        <p id="toastError-header" class="mr-auto toastError-header-text">Toast Header</p>
+                        <button type="button" class="ml-2 mb-3 close" data-dismiss="toast">×</button>
+                    </div>
+                    <div class="toast-body toastError-body" id="toastError-body">
+                        Some text inside the toast body
+                    </div>
+                </div>
             </div>
         </div>
         <div id="footer">
@@ -162,6 +239,8 @@
     
     <script src="../Scripts/jquery-3.4.1.slim.min.js"></script>
     <script src="../Scripts/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
@@ -186,7 +265,7 @@
             $.ajax({
                 
                 type: "GET",
-                url: "http://localhost:8081/api/list_users",
+                url: "http://localhost:8082/api/list_users",
                 dataType: "json",
                 beforeSend: function () { // Before we send the request, remove the .hidden class from the spinner and default to inline-block.
                     $('#loader').removeClass('hidden');
@@ -284,7 +363,7 @@
                     };
                     $.ajax({
                         type: "POST",
-                        url: "http://localhost:8081/api/insert_user",
+                        url: "http://localhost:8082/api/insert_user",
                         dataType: "json",
                         data: JSON.stringify(user),
                         contentType: "application/json",
@@ -293,7 +372,7 @@
                             $('#loader').removeClass('hidden');
                         },
                         success: function (data) {
-
+                            toastSuccess("Thành công", "Thêm người dùng mới thành công.");
                         }, error: function (ret) {
                             console.log(user);
                         },
@@ -355,14 +434,14 @@
             let text = "Bạn có chắc muốn xóa người dùng này?";
             if (confirm(text) == true) {
                 $.ajax({
-                    url: "http://localhost:8081/api/delete_user/" + user_id,
+                    url: "http://localhost:8082/api/delete_user/" + user_id,
                     type: "DELETE",
 
                 }).done(function (res) {
                     loadDataListUsers();
 
                 }).fail(function (res) {
-
+                    toastError("Lỗi", "Xóa người dùng không thành công");
                 })
             } else {
                 
@@ -376,7 +455,21 @@
                 $('#edPassword,#edPasswordNew,#edPasswordNew2').attr('disabled', '');
             }
         };
-        
+
+        function toastSuccess(_header, _body) {
+            $('#toastSuccess-header').text(_header);
+            $('#toastSuccess-body').text(_body);
+            $('.toastSuccess').toast({ delay: 2500 });
+            $('.toastSuccess').toast('show');
+        }
+
+        function toastError(_header, _body) {
+            $('#toastError-header').text(_header);
+            $('#toastError-body').text(_body);
+            $('.toastError').toast({ delay: 2500 });
+            $('.toastError').toast('show');
+        }
+
         function updateUser() {
             if ($('#changepass').is(":checked")) {
                 if ($('#edPasswordCu').val() != $('#edPassword').val()) {
@@ -387,9 +480,6 @@
                     return false;
                 }
             }
-
-           
-
             var khoa = false;
             $('input[name=edLOCK]').each(function () {
                 if ($(this).val() == 'true' && $(this).attr("checked") == 'checked') {
@@ -416,7 +506,7 @@
 
             $.ajax({
                 type: "PUT",
-                url: "http://localhost:8081/api/update_user",
+                url: "http://localhost:8082/api/update_user",
                 dataType: "json",
                 data: JSON.stringify(user),
                 contentType: "application/json",
@@ -425,6 +515,7 @@
                 },
                 success: function (data) {
                     console.log("okPUT");
+                    toastSuccess("Thành công", "Cập nhật thông tin người dùng thành công.");
                 }, error: function (ret) {
                     console.log('errorPUT');
                 },

@@ -226,7 +226,7 @@
 
         /* 3.10 Pagination */
         .page-item .page-link {
-            color: #1ba822;
+            color: #00b2e7;
             border-radius: 3px;
             margin: 0 3px;
         }
@@ -245,12 +245,12 @@
 
         .page-link {
             border-color: transparent;
-            background-color: #f9fafe;
+            background-color: #efffff;
             font-weight: 600;
         }
 
             .page-link:hover {
-                background-color: #219112;
+                background-color: #01b5f9;
                 color: #fff;
                 border-color: transparent;
             }
@@ -925,7 +925,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <p id="Error_Edituser" class="textER"></p>
+                                <p id="Error_Edituser" class="textER" style="color: red;font-weight: bold;margin-bottom: 0px;margin-top: 15px;">Nhập mật khẩu không chính xác</p>
                             </div>
                         </div>
                     </div>
