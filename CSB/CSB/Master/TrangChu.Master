@@ -180,11 +180,13 @@
         $(document).ready(function () {
             loadDataListUsers();
         });
-
+        var date = new Date();
+        var strDate = '' + date.getDate() + '/' + (Number(date.getMonth())+1) + '/' + date.getFullYear() + ' ' + date.getHours() + ':' + date.getMinutes() + ':' + date.getSeconds();
         function loadDataListUsers() {
             $.ajax({
+                
                 type: "GET",
-                url: "http://localhost:8082/api/list_users",
+                url: "http://localhost:8081/api/list_users",
                 dataType: "json",
                 beforeSend: function () { // Before we send the request, remove the .hidden class from the spinner and default to inline-block.
                     $('#loader').removeClass('hidden');
@@ -193,7 +195,7 @@
                     var tabletext = "<thead><tr><th>STT</th><th>Họ tên</th><th>Tên DN</th><th>Mật khẩu</th><th>Quyền</th><th>Cập nhật gần đây</th><th>Khóa</th><th>Tác vụ</th></tr></thead><tbody>";
                     var i = 1;
                     $.each(data, function (key, item) {
-                        tabletext += "<tr><td>" + i + "</td><td>" + item.Fullname + "</td><td>" + item.UserName + "</td><td>" + item.Password + "</td><td>" + item.Role.RoleName + "</td><td>" + item.LastUpdate + "</td><td>" + item.LOCKED + '</td><td><button class="btn btn-info" data-toggle="modal" data-target="#model-edit-user" onclick="edituser(`' + item.Fullname + '`,`' + item.UserName + '`,`' + item.Password + '`,`' + item.Role.RoleId + '`,`' + item.Role.RoleName + '`,`' + item.Created + '`,`' + item.LOCKED + '`,`' + item.ID + '`)" style="padding: 0;"> <i class="fas fa-edit icon_action" title="Sửa thông tin"></i></button><button class="btn btn-info" style="padding: 0;"><i class="fas fa-trash-alt icon_action" title="Xoá thông tin"></i></button></td></tr>';
+                        tabletext += "<tr><td>" + i + "</td><td>" + item.Fullname + "</td><td>" + item.UserName + "</td><td>" + item.Password + "</td><td>" + item.Role.RoleName + "</td><td>" + item.LastUpdate + "</td><td>" + item.LOCKED + '</td><td><button class="btn btn-info" data-toggle="modal" data-target="#model-edit-user" onclick="edituser(`' + item.Fullname + '`,`' + item.UserName + '`,`' + item.Password + '`,`' + item.Role.RoleId + '`,`' + item.Role.RoleName + '`,`' + item.Created + '`,`' + item.LOCKED + '`,`' + item.ID + '`)" style="padding: 0;"> <i class="fas fa-edit icon_action" title="Sửa thông tin" ></i></button><button class="btn btn-info" onclick="delete_user(`' + item.ID + '`)" style="padding: 0;"><i class="fas fa-trash-alt icon_action" title="Xoá thông tin"></i></button></td></tr>';
                         i = i + 1;
                     });
                     tabletext += "</tbody>";
@@ -237,7 +239,82 @@
                 });
                 table1.buttons().container()
                     .appendTo('this_wrapper .col-md-6:eq(0)');
+                $('.col-sm-12').first().html('<button id="btn_adduser" onclick="btn_adduser()" class="btn btn-info btn-lg col-6" data-toggle="modal" data-target="#model-add-user" style="height: 35px; padding - top: 4px;margin - top: -4px;">Thêm người dùng</button>');
+
             });
+        };
+        function Add_User() {
+            var _rolename = "User";
+            if ($('#Quyen_adduser').val()=='AD') {
+                var _rolename ="Admin"
+            }
+            if ($('#TenDayDu_adduser').val() == "") {
+                $('#Error_Adduser').text("Chưa nhập tên đầy đủ!");
+                $("#Error_Adduser").css("display", "block");
+            }
+            else if ($('#TenND_adduser').val() == "") {
+                $('#Error_Adduser').text("Chưa nhập tên người dùng!");
+                $("#Error_Adduser").css("display", "block");
+            }
+            else if ($('#MatKhau_adduser').val() == "") {
+                $('#Error_Adduser').text("Chưa nhập mật khẩu!");
+                $("#Error_Adduser").css("display", "block");
+            }
+            else if ($('#XacNhanMatKhau_adduser').val() == "") {
+                $('#Error_Adduser').text("Chưa nhập mật khẩu xác nhận!");
+                $("#Error_Adduser").css("display", "block");
+            }
+            else {
+                if ($("#MatKhau_adduser").val() != $("#XacNhanMatKhau_adduser").val()) {
+                    $('#Error_Adduser').text("Mật khẩu xác nhận không khớp!");
+                    $("#Error_Adduser").css("display", "block");
+                }
+                else {
+                    var user = {
+                        UserName: $("#TenND_adduser").val(),
+                        Password: $("#MatKhau_adduser").val(),
+                        Fullname: $("#TenDayDu_adduser").val(),
+                        Role: {
+                            RoleId: $('#Quyen_adduser').val(),
+                            RoleName: _rolename,
+                        },
+                        LastUpdate: strDate,
+                        Created: strDate,
+                        LOCKED: false,
+                    };
+                    $.ajax({
+                        type: "POST",
+                        url: "http://localhost:8081/api/insert_user",
+                        dataType: "json",
+                        data: JSON.stringify(user),
+                        contentType: "application/json",
+
+                        beforeSend: function () { // Before we send the request, remove the .hidden class from the spinner and default to inline-block.
+                            $('#loader').removeClass('hidden');
+                        },
+                        success: function (data) {
+
+                        }, error: function (ret) {
+                            console.log(user);
+                        },
+                        complete: function () { // Set our complete callback, adding the .hidden class and hiding the spinner.
+                            $('#loader').addClass('hidden');
+                            $('#model-add-user').modal("hide");
+                            loadDataListUsers();
+                        },
+                    });
+                }
+            }
+
+
+        }
+
+        function btn_adduser () {
+            $("#TenND_adduser").val('');
+            $("#MatKhau_adduser").val('');
+            $("#XacNhanMatKhau_adduser").val('');
+            $("#TenDayDu_adduser").val('');
+            $("#Error_Adduser").css("display", "none");
         };
 
         function edituser(_FullName, _UserName, _Password, _RoleId, _RoleName, _Created, _LOCKED, _ID) {
@@ -251,7 +328,7 @@
             $('#edPasswordNew2').val('');
             $('#edPassword,#edPasswordNew,#edPasswordNew2').attr('disabled', '');
             $('#changepass').prop('checked', false);
-            $('#Error').text("");
+            $('#Error_Edituser').text("");
             $('input[name=edLOCK]').each(function () {
                 $(this).prop('checked', false);
             });
@@ -273,7 +350,24 @@
             $('#edID').val(_ID);
 
         };
+        function delete_user(user_id) {
+            debugger;
+            let text = "Bạn có chắc muốn xóa người dùng này?";
+            if (confirm(text) == true) {
+                $.ajax({
+                    url: "http://localhost:8081/api/delete_user/" + user_id,
+                    type: "DELETE",
 
+                }).done(function (res) {
+                    loadDataListUsers();
+
+                }).fail(function (res) {
+
+                })
+            } else {
+                
+            }
+        }
         function ChangePass(obj) {
             if ($(obj).is(":checked")) {
                 $('#edPassword,#edPasswordNew,#edPasswordNew2').removeAttr('disabled');
@@ -282,20 +376,19 @@
                 $('#edPassword,#edPasswordNew,#edPasswordNew2').attr('disabled', '');
             }
         };
-
+        
         function updateUser() {
             if ($('#changepass').is(":checked")) {
                 if ($('#edPasswordCu').val() != $('#edPassword').val()) {
                     console.log($('#edPasswordCu').val());
                     console.log($('#edPassword').val());
-                    $('#Error').text("Nhập mật khẩu không chính xác");
+                    $('#Error_Edituser').text("Nhập mật khẩu không chính xác");
                     $('#model-edit-user').show();
                     return false;
                 }
             }
 
-            var date = new Date();
-            var strDate = '' + date.getDate() + '/' + date.getMonth() + '/' + date.getFullYear() + ' ' + date.getHours() + ':' + date.getMinutes() + ':' + date.getSeconds();
+           
 
             var khoa = false;
             $('input[name=edLOCK]').each(function () {
@@ -323,7 +416,7 @@
 
             $.ajax({
                 type: "PUT",
-                url: "http://localhost:8082/api/update_user",
+                url: "http://localhost:8081/api/update_user",
                 dataType: "json",
                 data: JSON.stringify(user),
                 contentType: "application/json",
@@ -337,6 +430,7 @@
                 },
                 complete: function () { // Set our complete callback, adding the .hidden class and hiding the spinner.
                     $('#loader').addClass('hidden');
+                    $('#model-edit-user').modal("hide");
                     loadDataListUsers();
                 },
             });

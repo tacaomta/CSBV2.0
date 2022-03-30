@@ -708,6 +708,15 @@
         .control-label {
             padding-top: 8px;
         }
+        /*==============TUYEN===================*/
+        #Error_Adduser{
+            padding-left: 23px;
+            color:red;
+        }
+        #Error_Edituser{
+            padding-left: 13px;
+            color: red;
+        }
     </style>
     <div id="form1">
         <div class="section-header">
@@ -722,7 +731,6 @@
                     </div>
                     <div class="section-header">
                         <div class="col-12">
-                            <button  class="btn btn-info btn-lg col-6" data-toggle="modal" data-target="#model-add-user">Thêm người dùng</button>
                             <table id="tableuser" class="table table-bordered table-striped table-md" style="width: 100%">
                                 <thead>
                                     <tr>
@@ -771,12 +779,11 @@
                     <div class="modal-body">
 
                         <div class="row clearfix " style="border: 3px solid #36aee5">
-                            
                             <div style="width: 100%; float: left; padding: 10px">
                                 <div class="form-group">
                                     <label class="col-5 control-label"><strong>Tên đầy đủ     : </strong></label>
                                     <div class="col-7">
-                                        <input type="text" class="form-control" id="TenDayDu" name="TenDayDu" placeholder="Nhập tên đầy đủ" value="">
+                                        <input type="text" class="form-control" id="TenDayDu_adduser" name="TenDayDu" placeholder="Nhập tên đầy đủ" required value="">
                                     </div>
                                 </div>
                             </div>
@@ -784,15 +791,16 @@
                                 <div class="form-group">
                                     <label class="col-5 control-label"><strong>Tên đăng nhập     : </strong></label>
                                     <div class="col-7">
-                                        <input type="text" class="form-control" id="TenND" name="TenND" placeholder="Nhập tên người dùng" value="">
+                                        <input type="text" class="form-control" id="TenND_adduser" name="TenND" placeholder="Nhập tên người dùng" required value="">
                                     </div>
                                 </div>
                             </div>
+                            
                             <div style="width: 100%; float: left; padding: 10px">
                                 <div class="form-group">
                                     <label class="col-5 control-label"><strong>Mật khẩu     : </strong></label>
                                     <div class="col-7">
-                                        <input type="text" class="form-control" id="MatKhau" name="MatKhau" placeholder="Nhập mật khẩu" value="">
+                                        <input type="password" class="form-control" id="MatKhau_adduser" name="MatKhau" placeholder="Nhập mật khẩu" required value="">
                                     </div>
                                 </div>
                             </div>
@@ -800,26 +808,37 @@
                                 <div class="form-group">
                                     <label class="col-5 control-label"><strong>Xác nhận mật khẩu     : </strong></label>
                                     <div class="col-7">
-                                        <input type="text" class="form-control" id="XacNhanMatKhau" name="XacNhanMatKhau" placeholder="Xác nhận mật khẩu" value="">
+                                        <input type="password" class="form-control" id="XacNhanMatKhau_adduser" name="XacNhanMatKhau" placeholder="Xác nhận mật khẩu" required value="">
                                     </div>
                                 </div>
                             </div>
-                            
+                           <div style="width: 100%; float: left; padding: 10px">
+                                <div class="form-group">
+                                    <label class="col-5 control-label"><strong>Quyền     : </strong></label>
+                                    <div class="col-7">
+                                        <select class="form-control" id="Quyen_adduser">
+                                            <option  value="AD">Admin</option>
+                                            <option selected value="US">User</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                             <p id="Error_Adduser" class="textER">Lỗi</p>
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <button onclick="Them_User()" type="submit" class="btn btn-info">Cập nhật</button>
+                        <button onclick="Add_User()" type="submit" class="btn btn-info">Cập nhật</button>
                         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    
+
     <div class="modal fade" id="model-edit-user" tabindex="-1" role="dialog">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
-                <div class="card auth_form" method="post" action="/Account/UpdateItem">
+                <div class="card auth_form">
                     <div class="modal-header">
                         <h6 class="title-modal-banve font-weight-bold">Sửa thông tin người dùng</h6>
                     </div>
@@ -828,7 +847,7 @@
                             <input hidden id="edID" value="">
                             <input hidden id="edPasswordCu" value="">
                             <input hidden id="edCreated" value="">
-                            <div style="width:100% ;float:left;padding-top:10px">
+                            <div style="width: 100%; float: left; padding-top: 10px">
                                 <div class="form-group">
                                     <label class="col-5 control-label"><strong>Tên đầy đủ     : </strong></label>
                                     <div class="col-7">
@@ -836,7 +855,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div style="width:100% ;float:left;padding-top:10px">
+                            <div style="width: 100%; float: left; padding-top: 10px">
                                 <div class="form-group">
                                     <label class="col-5 control-label"><strong>Tên đăng nhập     : </strong></label>
                                     <div class="col-7">
@@ -844,16 +863,17 @@
                                     </div>
                                 </div>
                             </div>
-                            <div style="width:100% ;float:left;padding-top:10px">
+                            <div style="width: 100%; float: left; padding-top: 10px">
                                 <div class="form-group">
                                     <label class="col-5 control-label"><strong>Đổi mật khẩu     : </strong></label>
                                     <div class="col-7">
-                                        <input type="checkbox" id="changepass" name="changepass" value="" onchange="ChangePass(this)" /> Đổi mật khẩu
+                                        <input type="checkbox" id="changepass" name="changepass" value="" onchange="ChangePass(this)" />
+                                        Đổi mật khẩu
                                     </div>
                                 </div>
                             </div>
 
-                            <div style="width:100% ;float:left;padding-top:10px">
+                            <div style="width: 100%; float: left; padding-top: 10px">
                                 <div class="form-group">
                                     <label class="col-5 control-label"><strong>Mật khẩu cũ     : </strong></label>
                                     <div class="col-7">
@@ -861,7 +881,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div style="width:100% ;float:left;padding-top:10px">
+                            <div style="width: 100%; float: left; padding-top: 10px">
                                 <div class="form-group">
                                     <label class="col-5 control-label"><strong>Mật khẩu mới     : </strong></label>
                                     <div class="col-7">
@@ -869,7 +889,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div style="width:100% ;float:left;padding-top:10px">
+                            <div style="width: 100%; float: left; padding-top: 10px">
                                 <div class="form-group">
                                     <label class="col-5 control-label"><strong>Xác nhận mật khẩu     : </strong></label>
                                     <div class="col-7">
@@ -877,38 +897,40 @@
                                     </div>
                                 </div>
                             </div>
-                            <div style="width:100% ;float:left;padding-top:10px">
+                            <div style="width: 100%; float: left; padding-top: 10px">
                                 <div class="form-group">
                                     <label class="col-5 control-label"><strong>Quyền     : </strong></label>
                                     <div class="col-7">
-                                        <select  class="form-control" id="edRole">
+                                        <select class="form-control" id="edRole">
                                             <option selected value="AD">Admin</option>
                                             <option value="US">User</option>
                                         </select>
                                     </div>
                                 </div>
                             </div>
-                            <div style="width:100% ;float:left;padding-top:10px">
+                            <div style="width: 100%; float: left; padding-top: 10px">
                                 <div class="form-group">
                                     <label class="col-5 control-label"><strong>Khóa tài khoản     : </strong></label>
                                     <div class="col-7">
                                         <div class="radio" style="display: flex; padding-top: 10px;">
                                             <label class="col-md-6">
-                                                <input type="radio" name="edLOCK" value="true" checked> Khóa
+                                                <input type="radio" name="edLOCK" value="true" checked>
+                                                Khóa
                                             </label>
                                             <label class="col-md-6">
-                                                <input type="radio" name="edLOCK" value="false" /> Bỏ khóa
+                                                <input type="radio" name="edLOCK" value="false" />
+                                                Bỏ khóa
                                             </label>
-                                                
+
                                         </div>
                                     </div>
                                 </div>
-                                <p id="Error" class="textER"></p>
+                                <p id="Error_Edituser" class="textER"></p>
                             </div>
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <button type="submit" class="btn btn-info" data-dismiss="modal" onclick="updateUser()">Lưu thay đổi</button>
+                        <button type="submit" class="btn btn-info"  onclick="updateUser()">Lưu thay đổi</button>
                         <button type="button" class="btn btn-default" data-dismiss="modal">Đóng</button>
                     </div>
                 </div>
