@@ -6,7 +6,7 @@ var strDate = '' + date.getDate() + '/' + (Number(date.getMonth()) + 1) + '/' + 
 function loadDataListUsers() {
     $.ajax({
         type: "GET",
-        url: "http://localhost:8082/api/list_users",
+        url: linkapi + "list_users",
         dataType: "json",
         beforeSend: function () { // Before we send the request, remove the .hidden class from the spinner and default to inline-block.
             $('#loader').removeClass('hidden');
@@ -108,7 +108,7 @@ function Add_User() {
             };
             $.ajax({
                 type: "POST",
-                url: "http://localhost:8082/api/insert_user",
+                url: linkapi + "insert_user",
                 dataType: "json",
                 data: JSON.stringify(user),
                 contentType: "application/json",
@@ -177,7 +177,7 @@ function delete_user(user_id) {
     let text = "Bạn có chắc muốn xóa người dùng này?";
     if (confirm(text) == true) {
         $.ajax({
-            url: "http://localhost:8082/api/delete_user/?id=" + user_id,
+            url: linkapi + "delete_user/?id=" + user_id,
             type: "DELETE",
 
         }).done(function (res) {
@@ -232,11 +232,10 @@ function updateUser() {
         LOCKED: khoa,
         ID: $('#edID').val()
     }
-    console.log(user);
-
+    console.log(linkapi);
     $.ajax({
         type: "PUT",
-        url: "http://localhost:8082/api/update_user",
+        url: linkapi + "update_user",
         dataType: "json",
         data: JSON.stringify(user),
         contentType: "application/json",
