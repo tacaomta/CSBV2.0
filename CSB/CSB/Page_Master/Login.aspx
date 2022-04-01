@@ -5,13 +5,14 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>Đăng nhập</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/Content/bootstrap.min.css" />
-    <link href="../css/Login.css" rel="stylesheet" />
-    
+    <link href="../css/login.css" rel="stylesheet" />
+
 </head>
 <body>
-    <form id="form1" runat="server">
+
+    <div id="form1">
         <div>
             <div class="container">
                 <div class="row">
@@ -27,11 +28,11 @@
                             <div class="col-lg-12 login-form">
                                 <div class="form-group">
                                     <i class="glyphicon glyphicon-lock icon-name"></i>
-                                    <input type="text" class="form-control" name="tentaikhoan" placeholder="Tài khoản"/>
+                                    <input type="text" class="form-control" name="tentaikhoan" placeholder="Tài khoản" />
                                 </div>
                                 <div class="form-group">
                                     <i class="glyphicon glyphicon-user icon-name"></i>
-                                    <input type="password" pattern=".{6,}" title="Mật khẩu tối thiểu 6 kí tự" class="form-control" name="matkhau" placeholder="Mật khẩu"/>
+                                    <input type="password" pattern=".{6,}" title="Mật khẩu tối thiểu 6 kí tự" class="form-control" name="matkhau" placeholder="Mật khẩu" />
                                 </div>
 
                                 <div class="col-md-12 loginbttm">
@@ -52,6 +53,13 @@
                 </div>
             </div>
         </div>
-    </form>
+    </div>
+    <div id="loader" class="lds-dual-ring overlay"></div>
+
+    <script src="../Scripts/jquery-3.4.1.slim.min.js"></script>
+    <script src="../Scripts/jquery-3.4.1.min.js"></script>
+    <script src="../Scripts/js/Login.js"></script>
 </body>
 </html>
+
+
