@@ -4,82 +4,15 @@
 <html>
 <head runat="server">
     <title></title>
+    <link href="../css/master.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
-    <link href="../css/Master.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap4.min.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.5.2/css/buttons.bootstrap4.min.css">
 	<link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.2.3/css/responsive.bootstrap4.min.css">
-    <link href="../css/manage_user.css" rel="stylesheet" />
-    <style>
-        .toastSuccess {
-            background-color: rgb(17,165,42);
-            box-shadow: 0 2px 6px #2e933a;
-            color: white;
-            padding: 6px 10px;
-            border: none;
-            cursor: pointer;
-            position: fixed;
-            bottom: 10px;
-            right: 28px;
-            width: 280px;
-            z-index:100;
-        }
-        .toastSuccess-header {
-            background-color: rgb(17,165,42);
-        }
-        .close {
-            color: #fff;
-            opacity: 0.8;
-        }
-        .toastSuccess-header-text { 
-            color: white;
-            font-weight: bold;
-            font-size: 16px;
-            margin-top: 5px;
-        }
-        .toastSuccess-body {
-            background-color: rgb(17,165,42);
-            color: white;
-            font-size: 14px;
-        }
-        .toastError {
-            background-color: rgb(183,22,22);
-            box-shadow: 0 2px 6px #c95e5e;
-            color: white;
-            padding: 6px 10px;
-            border: none;
-            cursor: pointer;
-            position: fixed;
-            bottom: 23px;
-            right: 28px;
-            width: 280px;
-            z-index:100;
-        }
-        .toastError-header {
-            background-color: rgb(183,22,22);
-        }
-        .toastError-header-text { 
-            color: white;
-            font-weight: bold;
-            font-size: 16px;
-            margin-top: 5px;
-        }
-        .toastError-body {
-            background-color: rgb(183,22,22);
-            color: white;
-            font-size: 14px;
-        }
-
-        .btn_XoaUser{
-            margin-left: 5px;
-        }
-        .btn_SuaUser{
-          margin-left: 10px;
-        }
-    </style>
+    
 </head>
 
 <body>
@@ -219,7 +152,8 @@
                 
                     <asp:ContentPlaceHolder ID="MainContent" runat="server"></asp:ContentPlaceHolder>
                 </div>
-                <div class="toast toastSuccess mt-3">
+                <%--Xóa--%>
+               <%-- <div class="toast toastSuccess mt-3">
                     <div class="toast-header toastSuccess-header" >
                         <p id="toastSuccess-header" class="mr-auto toastSuccess-header-text">Toast Header</p>
                         <button type="button" class="ml-2 mb-3 close" data-dismiss="toast">×</button>
@@ -236,6 +170,16 @@
                     <div class="toast-body toastError-body" id="toastError-body">
                         Some text inside the toast body
                     </div>
+                </div>--%>
+
+                <div class="toast mt-3">
+                    <div class="toast-header" >
+                        <p id="toast-header" class="mr-auto toast-header-text">Toast Header</p>
+                        <button type="button" class="ml-2 mb-3 close" data-dismiss="toast">×</button>
+                    </div>
+                    <div class="toast-body toast-body" id="toast-body">
+                        Some text inside the toast body
+                    </div>
                 </div>
             </div>
         </div>
@@ -243,7 +187,7 @@
             <img src="../Image/footer.png" alt="Italian Trulli" />
         </div>
     </div>
-    
+    <div id="loader" class="lds-dual-ring overlay"></div>
     <script src="../Scripts/jquery-3.4.1.slim.min.js"></script>
     <script src="../Scripts/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
@@ -262,281 +206,7 @@
     <script src="https://cdn.datatables.net/buttons/2.0.1/js/buttons.colVis.min.js"></script>
     <script src="https://cdn.datatables.net/responsive/2.2.3/js/dataTables.responsive.min.js"></script>
     <script src="https://cdn.datatables.net/responsive/2.2.3/js/responsive.bootstrap4.min.js"></script>
-    <script>
-        $(document).ready(function () {
-            loadDataListUsers();
-        });
-        var date = new Date();
-        var strDate = '' + date.getDate() + '/' + (Number(date.getMonth())+1) + '/' + date.getFullYear() + ' ' + date.getHours() + ':' + date.getMinutes() + ':' + date.getSeconds();
-        function loadDataListUsers() {
-            $.ajax({
-                
-                type: "GET",
-                url: "http://localhost:8081/api/list_users",
-                dataType: "json",
-                beforeSend: function () { // Before we send the request, remove the .hidden class from the spinner and default to inline-block.
-                    $('#loader').removeClass('hidden');
-                },
-                success: function (data) {
-                    var tabletext = "<thead><tr><th>STT</th><th>Họ tên</th><th>Tên DN</th><th>Mật khẩu</th><th>Quyền</th><th>Cập nhật gần đây</th><th>Khóa</th><th>Tác vụ</th></tr></thead><tbody>";
-                    var i = 1;
-                    $.each(data, function (key, item) {
-                        tabletext += "<tr><td>" + i + "</td><td>" + item.Fullname + "</td><td>" + item.UserName + "</td><td>" + item.Password + "</td><td>" + item.Role.RoleName + "</td><td>" + item.LastUpdate + "</td><td>" + item.LOCKED + '</td><td><button class="btn btn-info btn_SuaUser" data-toggle="modal" data-target="#model-edit-user" onclick="edituser(`' + item.Fullname + '`,`' + item.UserName + '`,`' + item.Password + '`,`' + item.Role.RoleId + '`,`' + item.Role.RoleName + '`,`' + item.Created + '`,`' + item.LOCKED + '`,`' + item.ID + '`)" style="padding: 0;"> <i class="fas fa-edit icon_action" title="Sửa thông tin" ></i></button><button class="btn btn-info btn_XoaUser" onclick="delete_user(`' + item.ID + '`)" style="padding: 0;"><i class="fas fa-trash-alt icon_action" title="Xoá thông tin"></i></button></td></tr>';
-                        i = i + 1;
-                    });
-                    tabletext += "</tbody>";
-                    $('#tableuser').html(tabletext);
-                    console.log("okGET");
-                    loadTableUser();
-                }, error: function (ret) {
-                    console.log('errorGET');
-                },
-                complete: function () { // Set our complete callback, adding the .hidden class and hiding the spinner.
-                    $('#loader').addClass('hidden');
-                    $('#model-edit-user').addClass('hidden');
-                },
-            });
-        };
-
-        function loadTableUser() {
-            $('table[id=tableuser]').each(function () {
-
-                var table1 = $(this).DataTable({
-                    'destroy': true,
-                    lengthChange: false,
-                    "language": {
-                        "sProcessing": "Đang xử lý...",
-                        "sLengthMenu": "Xem _MENU_ mục",
-                        "sZeroRecords": "Không tìm thấy thông tin phù hợp",
-                        "sInfo": "Đang xem _START_ đến _END_ trong tổng số _TOTAL_ mục",
-                        "sInfoEmpty": "Đang xem 0 đến 0 trong tổng số 0 mục",
-                        "sInfoFiltered": "(được lọc từ _MAX_ mục)",
-                        "sInfoPostFix": "",
-                        "sSearch": "Tìm kiếm: ",
-                        "sUrl": "",
-                        "oPaginate": {
-                            "sFirst": "Đầu",
-                            "sPrevious": "Trước",
-                            "sNext": "Tiếp",
-                            "sLast": "Cuối"
-                        }
-                    },
-                    buttons: ['copy', 'excel', 'csv', 'pdf']
-                });
-                table1.buttons().container()
-                    .appendTo('this_wrapper .col-md-6:eq(0)');
-                $('.col-sm-12').first().html('<button id="btn_adduser" onclick="btn_adduser()" class="btn btn-info btn-lg col-6" data-toggle="modal" data-target="#model-add-user" style="height: 35px; padding - top: 4px;margin - top: -4px;">Thêm người dùng</button>');
-
-            });
-        };
-        function Add_User() {
-            var _rolename = "User";
-            if ($('#Quyen_adduser').val()=='AD') {
-                var _rolename ="Admin"
-            }
-            if ($('#TenDayDu_adduser').val() == "") {
-                $('#Error_Adduser').text("Chưa nhập tên đầy đủ!");
-                $("#Error_Adduser").css("display", "block");
-            }
-            else if ($('#TenND_adduser').val() == "") {
-                $('#Error_Adduser').text("Chưa nhập tên người dùng!");
-                $("#Error_Adduser").css("display", "block");
-            }
-            else if ($('#MatKhau_adduser').val() == "") {
-                $('#Error_Adduser').text("Chưa nhập mật khẩu!");
-                $("#Error_Adduser").css("display", "block");
-            }
-            else if ($('#XacNhanMatKhau_adduser').val() == "") {
-                $('#Error_Adduser').text("Chưa nhập mật khẩu xác nhận!");
-                $("#Error_Adduser").css("display", "block");
-            }
-            else {
-                if ($("#MatKhau_adduser").val() != $("#XacNhanMatKhau_adduser").val()) {
-                    $('#Error_Adduser').text("Mật khẩu xác nhận không khớp!");
-                    $("#Error_Adduser").css("display", "block");
-                }
-                else {
-                    var user = {
-                        UserName: $("#TenND_adduser").val(),
-                        Password: $("#MatKhau_adduser").val(),
-                        Fullname: $("#TenDayDu_adduser").val(),
-                        Role: {
-                            RoleId: $('#Quyen_adduser').val(),
-                            RoleName: _rolename,
-                        },
-                        LastUpdate: strDate,
-                        Created: strDate,
-                        LOCKED: false,
-                    };
-                    $.ajax({
-                        type: "POST",
-                        url: "http://localhost:8081/api/insert_user",
-                        dataType: "json",
-                        data: JSON.stringify(user),
-                        contentType: "application/json",
-
-                        beforeSend: function () { // Before we send the request, remove the .hidden class from the spinner and default to inline-block.
-                            $('#loader').removeClass('hidden');
-                        },
-                        success: function (data) {
-                            toastSuccess("Thành công", "Thêm người dùng mới thành công.");
-                        }, error: function (ret) {
-                            console.log(user);
-                        },
-                        complete: function () { // Set our complete callback, adding the .hidden class and hiding the spinner.
-                            $('#loader').addClass('hidden');
-                            $('#model-add-user').modal("hide");
-                            loadDataListUsers();
-                        },
-                    });
-                }
-            }
-
-
-        }
-
-        function btn_adduser () {
-            $("#TenND_adduser").val('');
-            $("#MatKhau_adduser").val('');
-            $("#XacNhanMatKhau_adduser").val('');
-            $("#TenDayDu_adduser").val('');
-            $("#Error_Adduser").css("display", "none");
-        };
-
-        function edituser(_FullName, _UserName, _Password, _RoleId, _RoleName, _Created, _LOCKED, _ID) {
-            $('#edFullName').val(_FullName);
-            $('#edUserName').val(_UserName);
-            $('#edRole').val(_RoleId);
-            $('#edCreated').val(_Created);
-            $('#edPasswordCu').val(_Password);
-            $('#edPassword').val('');
-            $('#edPasswordNew').val('');
-            $('#edPasswordNew2').val('');
-            $('#edPassword,#edPasswordNew,#edPasswordNew2').attr('disabled', '');
-            $('#changepass').prop('checked', false);
-            $('#Error_Edituser').text("");
-            $('input[name=edLOCK]').each(function () {
-                $(this).prop('checked', false);
-            });
-            $('input[name=edLOCK]').each(function () {
-                if ($(this).val() == 'true') {
-                    if (_LOCKED == 'true') {
-                        $(this).prop('checked', true);
-                        return false;
-                    }
-                }
-                else {
-                    if (_LOCKED == 'false') {
-                        console.log(false);
-                        $(this).prop('checked', true);
-                        return false;
-                    }
-                }
-            });
-            $('#edID').val(_ID);
-
-        };
-        function delete_user(user_id) {
-            debugger;
-            let text = "Bạn có chắc muốn xóa người dùng này?";
-            if (confirm(text) == true) {
-                $.ajax({
-                    url: "http://localhost:8081/api/delete_user/?id=" + user_id,
-                    type: "DELETE",
-
-                }).done(function (res) {
-                    loadDataListUsers();
-                    toastSuccess("Thành công", "Xóa người dùng thành công.");
-
-                }).fail(function (res) {
-                    debugger;
-                    toastError("Lỗi", "Xóa người dùng không thành công");
-                })
-            } else {
-                
-            }
-        }
-        function ChangePass(obj) {
-            if ($(obj).is(":checked")) {
-                $('#edPassword,#edPasswordNew,#edPasswordNew2').removeAttr('disabled');
-            }
-            else {
-                $('#edPassword,#edPasswordNew,#edPasswordNew2').attr('disabled', '');
-            }
-        };
-
-        function toastSuccess(_header, _body) {
-            $('#toastSuccess-header').text(_header);
-            $('#toastSuccess-body').text(_body);
-            $('.toastSuccess').toast({ delay: 2500 });
-            $('.toastSuccess').toast('show');
-        }
-
-        function toastError(_header, _body) {
-            $('#toastError-header').text(_header);
-            $('#toastError-body').text(_body);
-            $('.toastError').toast({ delay: 2500 });
-            $('.toastError').toast('show');
-        }
-
-        function updateUser() {
-            if ($('#changepass').is(":checked")) {
-                if ($('#edPasswordCu').val() != $('#edPassword').val()) {
-                    console.log($('#edPasswordCu').val());
-                    console.log($('#edPassword').val());
-                    $('#Error_Edituser').text("Nhập mật khẩu không chính xác");
-                    $('#model-edit-user').show();
-                    return false;
-                }
-            }
-            var khoa = false;
-            $('input[name=edLOCK]').each(function () {
-                if ($(this).val() == 'true' && $(this).attr("checked") == 'checked') {
-                    khoa = true;
-                }
-            });
-
-            var _rolename = "Admin";
-            if ($('#edRole').val() == "US") _rolename = "User";
-            var user = {
-                UserName: $('#edUserName').val(),
-                Password: $('#edPasswordNew').val(),
-                Fullname: $('#edFullName').val(),
-                Role: {
-                    RoleId: $('#edRole').val(),
-                    RoleName: _rolename,
-                },
-                LastUpdate: strDate,
-                Created: $('#edCreated').val(),
-                LOCKED: khoa,
-                ID: $('#edID').val()
-            }
-            console.log(user);
-
-            $.ajax({
-                type: "PUT",
-                url: "http://localhost:8081/api/update_user",
-                dataType: "json",
-                data: JSON.stringify(user),
-                contentType: "application/json",
-                beforeSend: function () { // Before we send the request, remove the .hidden class from the spinner and default to inline-block.
-                    $('#loader').removeClass('hidden');
-                },
-                success: function (data) {
-                    console.log("okPUT");
-                    toastSuccess("Thành công", "Cập nhật thông tin người dùng thành công.");
-                }, error: function (ret) {
-                    console.log('errorPUT');
-                },
-                complete: function () { // Set our complete callback, adding the .hidden class and hiding the spinner.
-                    $('#loader').addClass('hidden');
-                    $('#model-edit-user').modal("hide");
-                    loadDataListUsers();
-                },
-            });
-        };
-
-    </script>
-   <%-- <script src="../Scripts/my1.js"></script>--%>
+    <script src="../Scripts/js/Master.js"></script>
+    <script src="../Scripts/js/Manage_User.js"></script>
 </body>
 </html>

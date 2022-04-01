@@ -205,9 +205,9 @@
     <Content Include="Content\cdn.datatables.net_1.11.3_css_dataTables.bootstrap4.min.css" />
     <Content Include="Content\cdn.datatables.net_buttons_2.0.1_css_buttons.bootstrap4.min.css" />
     <Content Include="Content\Site.css" />
-    <Content Include="css\Login.css" />
-    <Content Include="css\manage_user.css" />
-    <Content Include="css\Master.css" />
+    <Content Include="css\login.css" />
+    <Content Include="css\manager_user.css" />
+    <Content Include="css\master.css" />
     <Content Include="Default.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -238,8 +238,10 @@
     <Content Include="Scripts\jquery-3.4.1.min.js" />
     <Content Include="Scripts\jquery-3.4.1.slim.js" />
     <Content Include="Scripts\jquery-3.4.1.slim.min.js" />
+    <Content Include="Scripts\js\Login.js" />
+    <Content Include="Scripts\js\Manage_User.js" />
+    <Content Include="Scripts\js\Master.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
-    <Content Include="Scripts\my1.js" />
     <Content Include="Scripts\WebForms\DetailsView.js" />
     <Content Include="Scripts\WebForms\Focus.js" />
     <Content Include="Scripts\WebForms\GridView.js" />

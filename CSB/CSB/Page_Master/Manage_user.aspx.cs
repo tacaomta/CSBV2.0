@@ -16,7 +16,7 @@ namespace CSB.Page_Master
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            var c = 2;
+            
         }
 
     }
