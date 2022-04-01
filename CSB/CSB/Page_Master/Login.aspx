@@ -28,19 +28,19 @@
                             <div class="col-lg-12 login-form">
                                 <div class="form-group">
                                     <i class="glyphicon glyphicon-lock icon-name"></i>
-                                    <input type="text" class="form-control" name="tentaikhoan" placeholder="Tài khoản" />
+                                    <input type="text" class="form-control" name="username" placeholder="Tài khoản" />
                                 </div>
                                 <div class="form-group">
                                     <i class="glyphicon glyphicon-user icon-name"></i>
-                                    <input type="password" pattern=".{6,}" title="Mật khẩu tối thiểu 6 kí tự" class="form-control" name="matkhau" placeholder="Mật khẩu" />
+                                    <input type="password" pattern=".{6,}" title="Mật khẩu tối thiểu 6 kí tự" class="form-control" name="password" placeholder="Mật khẩu" />
                                 </div>
 
                                 <div class="col-md-12 loginbttm">
                                     <div class="col-md-12 login-btm login-text">
-                                        <p>Mật khẩu không chính xác</p>
+                                        <p hidden="hidden" id="error-login-text">Mật khẩu không chính xác</p>
                                     </div>
                                     <div class="col-md-12 login-btm login-button">
-                                        <button type="submit" class="btn btn-outline-primary">Đăng nhập</button>
+                                        <button type="submit" class="btn btn-outline-primary" onclick="Login()">Đăng nhập</button>
                                     </div>
                                     <div class="col-md-12 login-button forgot-password">
                                         <a>Quên mật khẩu?</a>
@@ -59,6 +59,47 @@
     <script src="../Scripts/jquery-3.4.1.slim.min.js"></script>
     <script src="../Scripts/jquery-3.4.1.min.js"></script>
     <script src="../Scripts/js/Login.js"></script>
+    <script>
+
+        function Login() {
+            $('#error-login-text').attr('hidden', '');
+            if ($('#username').val() == '') {
+                $('#error-login-text').text('Tài khoản không được để trống');
+                $('#error-login-text').removeAttr('hidden');
+                return;
+            }
+            if ($('#password').val() == '') {
+                $('#error-login-text').text('Mật khẩu không được để trống');
+                $('#error-login-text').removeAttr('hidden');
+                return;
+            }
+            var user = {
+                UserName: $("#username").val(),
+                Password: $("#password").val()
+            };
+            console.log(user);
+            $.ajax({
+                type: "GET",
+                url: "http://localhost:8082/api/user_login",
+                dataType: "json",
+                data: JSON.stringify(user),
+                contentType: "application/json",
+                beforeSend: function () { // Before we send the request, remove the .hidden class from the spinner and default to inline-block.
+                    $('#loader').removeClass('hidden');
+                },
+                success: function (data) {
+                    toastSuccess("Thành công", "Đăng nhập thành công.");
+                }, error: function (ret) {
+                    console.log(ret);
+                    $('#error-login-text').text('Tài khoản hoặc mật khẩu không đúng');
+                    $('#error-login-text').removeAttr('hidden');
+                },
+                complete: function () { // Set our complete callback, adding the .hidden class and hiding the spinner.
+                    $('#loader').addClass('hidden');
+                },
+            });
+        }
+    </script>
 </body>
 </html>
 
