@@ -345,7 +345,7 @@
             }
 
             .btn.btn-lg {
-                padding: .55rem 1.5rem;
+                padding: -0.45rem 1.5rem;
                 font-size: 12px;
             }
 
