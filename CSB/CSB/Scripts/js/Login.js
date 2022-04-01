@@ -19,7 +19,7 @@ function Login() {
     console.log(user);
     $.ajax({
         type: "GET",
-        url: "http://localhost:8081/api/user_login($body)",
+        url: "http://localhost:8082/api/user_login($body)",
         dataType: "json",
         data: JSON.stringify(user),
         contentType: "application/json",

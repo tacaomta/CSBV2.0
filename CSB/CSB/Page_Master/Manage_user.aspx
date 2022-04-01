@@ -130,7 +130,6 @@
                     <div class="modal-body">
                         <div class="row clearfix " style="border: 3px solid #01b5f9">
                             <input hidden id="edID" value="">
-                            <input hidden id="edPasswordCu" value="">
                             <input hidden id="edCreated" value="">
                             <div style="width: 100%; float: left; padding-top: 10px">
                                 <div class="form-group">
@@ -154,15 +153,6 @@
                                     <div class="col-7">
                                         <input type="checkbox" id="changepass" name="changepass" value="" onchange="ChangePass(this)" />
                                         Đổi mật khẩu
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div style="width: 100%; float: left; padding-top: 10px">
-                                <div class="form-group">
-                                    <label class="col-5 control-label"><strong>Mật khẩu cũ     : </strong></label>
-                                    <div class="col-7">
-                                        <input type="password" class="form-control" id="edPassword" placeholder="" value="" disabled>
                                     </div>
                                 </div>
                             </div>

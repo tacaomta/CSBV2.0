@@ -6,7 +6,7 @@ var strDate = '' + date.getDate() + '/' + (Number(date.getMonth()) + 1) + '/' + 
 function loadDataListUsers() {
     $.ajax({
         type: "GET",
-        url: "http://localhost:8081/api/list_users",
+        url: "http://localhost:8082/api/list_users",
         dataType: "json",
         beforeSend: function () { // Before we send the request, remove the .hidden class from the spinner and default to inline-block.
             $('#loader').removeClass('hidden');
@@ -108,7 +108,7 @@ function Add_User() {
             };
             $.ajax({
                 type: "POST",
-                url: "http://localhost:8081/api/insert_user",
+                url: "http://localhost:8082/api/insert_user",
                 dataType: "json",
                 data: JSON.stringify(user),
                 contentType: "application/json",
@@ -119,8 +119,8 @@ function Add_User() {
                 success: function (data) {
                     toastSuccess("Thành công", "Thêm người dùng mới thành công.");
                 }, error: function (ret) {
-                    console.log(ret);
-                    toastError("Thất bại", "Tên đăng nhập đã tồn tại!");
+                    console.log(ret.responseJSON.Message);
+                    toastError("Thất bại", ret.responseJSON.Message);
                 },
                 complete: function () { // Set our complete callback, adding the .hidden class and hiding the spinner.
                     $('#loader').addClass('hidden');
@@ -145,11 +145,9 @@ function edituser(_FullName, _UserName, _Password, _RoleId, _RoleName, _Created,
     $('#edUserName').val(_UserName);
     $('#edRole').val(_RoleId);
     $('#edCreated').val(_Created);
-    $('#edPasswordCu').val(_Password);
-    $('#edPassword').val('');
     $('#edPasswordNew').val('');
     $('#edPasswordNew2').val('');
-    $('#edPassword,#edPasswordNew,#edPasswordNew2').attr('disabled', '');
+    $('#edPasswordNew,#edPasswordNew2').attr('disabled', '');
     $('#changepass').prop('checked', false);
     $('#Error_Edituser').text("");
     $('input[name=edLOCK]').each(function () {
@@ -179,7 +177,7 @@ function delete_user(user_id) {
     let text = "Bạn có chắc muốn xóa người dùng này?";
     if (confirm(text) == true) {
         $.ajax({
-            url: "http://localhost:8081/api/delete_user/?id=" + user_id,
+            url: "http://localhost:8082/api/delete_user/?id=" + user_id,
             type: "DELETE",
 
         }).done(function (res) {
@@ -194,10 +192,10 @@ function delete_user(user_id) {
 }
 function ChangePass(obj) {
     if ($(obj).is(":checked")) {
-        $('#edPassword,#edPasswordNew,#edPasswordNew2').removeAttr('disabled');
+        $('#edPasswordNew,#edPasswordNew2').removeAttr('disabled');
     }
     else {
-        $('#edPassword,#edPasswordNew,#edPasswordNew2').attr('disabled', '');
+        $('#edPasswordNew,#edPasswordNew2').attr('disabled', '');
     }
 };
 
@@ -205,10 +203,8 @@ function ChangePass(obj) {
 
 function updateUser() {
     if ($('#changepass').is(":checked")) {
-        if ($('#edPasswordCu').val() != $('#edPassword').val()) {
-            console.log($('#edPasswordCu').val());
-            console.log($('#edPassword').val());
-            $('#Error_Edituser').text("Nhập mật khẩu không chính xác");
+        if ($('#edPasswordNew').val() != $('#edPasswordNew2').val()) {
+            $('#Error_Edituser').text("Xác nhận mật khẩu không chính xác");
             $('#model-edit-user').show();
             return false;
         }
@@ -240,7 +236,7 @@ function updateUser() {
 
     $.ajax({
         type: "PUT",
-        url: "http://localhost:8081/api/update_user",
+        url: "http://localhost:8082/api/update_user",
         dataType: "json",
         data: JSON.stringify(user),
         contentType: "application/json",
