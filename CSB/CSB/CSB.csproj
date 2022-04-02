@@ -207,6 +207,7 @@
     <Content Include="Content\Site.css" />
     <Content Include="css\login.css" />
     <Content Include="css\manager_user.css" />
+    <Content Include="css\manage_ship.css" />
     <Content Include="css\master.css" />
     <Content Include="Default.aspx" />
     <Content Include="favicon.ico" />
@@ -227,6 +228,7 @@
     <Content Include="Image\ic-login.png" />
     <Content Include="Image\phuhieu.jpg" />
     <Content Include="Page_Master\Login.aspx" />
+    <Content Include="Page_Master\Manage_ship.aspx" />
     <Content Include="Page_Master\Manage_user.aspx" />
     <Content Include="Page_Master\TrangChu.aspx" />
     <Content Include="reports\report.docx" />
@@ -239,6 +241,7 @@
     <Content Include="Scripts\jquery-3.4.1.slim.js" />
     <Content Include="Scripts\jquery-3.4.1.slim.min.js" />
     <Content Include="Scripts\js\Login.js" />
+    <Content Include="Scripts\js\Manage_ship.js" />
     <Content Include="Scripts\js\Manage_User.js" />
     <Content Include="Scripts\js\Master.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
@@ -311,6 +314,13 @@
     </Compile>
     <Compile Include="Page_Master\Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Page_Master\Manage_ship.aspx.cs">
+      <DependentUpon>Manage_ship.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page_Master\Manage_ship.aspx.designer.cs">
+      <DependentUpon>Manage_ship.aspx</DependentUpon>
     </Compile>
     <Compile Include="Page_Master\Manage_user.aspx.cs">
       <DependentUpon>Manage_user.aspx</DependentUpon>

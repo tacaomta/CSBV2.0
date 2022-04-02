@@ -80,7 +80,7 @@
             console.log(user);
             $.ajax({
                 type: "GET",
-                url: "http://localhost:8082/api/user_login",
+                url: "http://localhost:8081/api/user_login",
                 dataType: "json",
                 data: JSON.stringify(user),
                 contentType: "application/json",
