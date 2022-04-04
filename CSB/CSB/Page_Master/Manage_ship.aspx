@@ -188,7 +188,12 @@
     <script src="../Scripts/jquery-3.4.1.min.js"></script>
    <script>
        $(document).ready(function () {
-           loadDataListShips($('#vung').val());
+           var vung = sessionStorage.getItem("vung");
+           if (vung == null) { vung = "1";}
+           sessionStorage.removeItem("vung");
+           $('#Vung' + vung).css('background-color', 'beige');
+           $('#title').text('QUẢN LÝ TÀU - VÙNG ' + vung);
+           loadDataListShips(vung);
        });
        function loadDataListShips(vung) {
            
@@ -208,7 +213,6 @@
                    });
                    tabletext += "</tbody>";
                    $('#tableship').html(tabletext);
-                   $('#title').text('QUẢN LÝ TÀU - VÙNG ' + vung);
                    console.log(linkapi + "ships?region=" + vung);
                    loadTableShip();
                }, error: function (ret) {
