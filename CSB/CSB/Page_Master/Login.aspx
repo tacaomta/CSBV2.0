@@ -28,11 +28,11 @@
                             <div class="col-lg-12 login-form">
                                 <div class="form-group">
                                     <i class="glyphicon glyphicon-lock icon-name"></i>
-                                    <input type="text" class="form-control" name="username" placeholder="Tài khoản" />
+                                    <input type="text" class="form-control" id="username" placeholder="Tài khoản" />
                                 </div>
                                 <div class="form-group">
                                     <i class="glyphicon glyphicon-user icon-name"></i>
-                                    <input type="password" pattern=".{6,}" title="Mật khẩu tối thiểu 6 kí tự" class="form-control" name="password" placeholder="Mật khẩu" />
+                                    <input type="password" pattern=".{6,}" title="Mật khẩu tối thiểu 6 kí tự" class="form-control" id="password" placeholder="Mật khẩu" />
                                 </div>
 
                                 <div class="col-md-12 loginbttm">
@@ -59,6 +59,7 @@
     <script src="../Scripts/jquery-3.4.1.slim.min.js"></script>
     <script src="../Scripts/jquery-3.4.1.min.js"></script>
     <script src="../Scripts/js/Login.js"></script>
+    <script src = "../Scripts/js/Master.js"></script>
     <script>
 
         function Login() {
@@ -79,8 +80,8 @@
             };
             console.log(user);
             $.ajax({
-                type: "GET",
-                url: "http://localhost:8081/api/user_login",
+                type: "POST",
+                url: "http://localhost:8082/api/user_login",
                 dataType: "json",
                 data: JSON.stringify(user),
                 contentType: "application/json",
@@ -88,7 +89,12 @@
                     $('#loader').removeClass('hidden');
                 },
                 success: function (data) {
-                    toastSuccess("Thành công", "Đăng nhập thành công.");
+                    /*toastSuccess("Thành công", "Đăng nhập thành công.");*/
+                    console.log(data);
+                    sessionStorage.setItem("userLoginUsername", data.UserName);
+                    sessionStorage.setItem("userLoginFullname", data.Fullname);
+                    sessionStorage.setItem("userLoginID", data.ID);
+                    window.location = "http://localhost:44347/Page_Master/Manage_user";
                 }, error: function (ret) {
                     console.log(ret);
                     $('#error-login-text').text('Tài khoản hoặc mật khẩu không đúng');

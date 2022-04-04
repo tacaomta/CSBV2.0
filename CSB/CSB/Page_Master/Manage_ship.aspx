@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Master/TrangChu.Master" AutoEventWireup="true" CodeBehind="Manage_ship.aspx.cs" Inherits="CSB.Page_Master.Manage_ship" %>
+﻿<%@ Page Title="Quản lý tàu" Language="C#" MasterPageFile="~/Master/TrangChu.Master" AutoEventWireup="true" CodeBehind="Manage_ship.aspx.cs" Inherits="CSB.Page_Master.Manage_ship" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <link href="../css/manage_ship.css" rel="stylesheet" />
@@ -7,7 +7,7 @@
             <div class="col-12">
                 <div class="section">
                     <div class="section-header" style="margin-bottom: 2%">
-                        <h4 style="color: black; margin: 0">QUẢN LÝ TÀU</h4>
+                        <h4 id="title" style="color: black; margin: 0">QUẢN LÝ TÀU - VÙNG 1</h4>
                         <div class="section-header-breadcrumb">
                             <div class="breadcrumb-item active"><a href="TrangChu.aspx" style="color: #01b5f9">Trang chủ</a></div>
                             <div class="breadcrumb-item active"><a href="#" style="color: #01b5f9">Quản lý tàu</a></div>
@@ -25,7 +25,7 @@
                                         <th>NĂM HẠ THỦY</th>
                                         <th>TRỌNG TẢI</th>
                                         <th>TỐC ĐỘ</th>
-                                        <th>TG HÀNH TRÌNH TỐI ĐA</th>
+                                        <th title="Thời gian hành trình tối đa">TG HÀNH TRÌNH TỐI ĐA</th>
                                         <th>TÁC VỤ</th>
                                     </tr>
                                 </thead>
@@ -184,5 +184,73 @@
             </div>
         </div>
     </div>
-   
+    <script src="../Scripts/jquery-3.4.1.slim.min.js"></script>
+    <script src="../Scripts/jquery-3.4.1.min.js"></script>
+   <script>
+       $(document).ready(function () {
+           loadDataListShips($('#vung').val());
+       });
+       function loadDataListShips(vung) {
+           
+           $.ajax({
+               type: "GET",
+               url: linkapi + "ships?region=" + vung,
+               dataType: "json",
+               beforeSend: function () { // Before we send the request, remove the .hidden class from the spinner and default to inline-block.
+                   $('#loader').removeClass('hidden');
+               },
+               success: function (data) {
+                   var tabletext = "<thead><tr><th>STT</th><th>TÊN TÀU</th><th>SỐ HIỆU</th><th>SỐ THUYỀN VIÊN</th><th>NĂM HẠ THỦY</th><th>TRỌNG TẢI</th><th>TỐC ĐỘ</th><th title='Thời gian hành trình tối đa'>TG HT TỐI ĐA</th><th  title='Xem thiết bị trên tàu'>XEM THIẾT BỊ</th><th>TÁC VỤ</th></tr></thead><tbody>";
+                   var i = 1;
+                   $.each(data, function (key, item) {
+                       tabletext += "<tr><td>" + i + "</td><td>" + item.Ship.Name + "</td><td>" + item.Ship.RegistrationNumber + "</td><td>" + item.Ship.Personel + "</td><td>" + item.Ship.LaunchYear + "</td><td>" + item.Ship.Weight + "</td><td>" + item.Ship.Speed + "</td><td>" + item.Ship.Time + '</td>' + '<td><button class="btn btn-info btn_ViewInforShip" style="padding: 0;"><i class="fas fa-eye icon_action" title="Xem thiết bị trên tàu"></i></button> </td>'+ '<td><button class="btn btn-info btn_ViewInforShip" onclick="ViewInforShip(`' + item.Ship.Name + '`,`' + item.Ship.RegistrationNumber + '`,`' + item.Ship.RegistrationPlace + '`,`' + item.Ship.RegistrationDate + '`,`' + item.Ship.LaunchYear + '`,`' + item.Ship.Weight + '`,`' + item.Ship.Fuel + '`,`' + item.Ship.Water + '`,`' + item.Ship.Personel + '`,`' + item.Ship.Captain + '`,`' + item.Ship.Speed + '`,`' + item.Ship.Time + '`,`' + item.Ship.Created + '`)" data-toggle="modal" data-target="#model-infordetail-ship"  style="padding: 0;"> <i class="fas fa-edit icon_action" title="Xem thông tin chi tiết" ></i></button><button class="btn btn-info btn_ViewEquipment" style="padding: 0;"><i class="fas fa-trash-alt icon_action" title="Xoá thông tin"></i></button></td></tr>';
+                       i = i + 1;
+                   });
+                   tabletext += "</tbody>";
+                   $('#tableship').html(tabletext);
+                   $('#title').text('QUẢN LÝ TÀU - VÙNG ' + vung);
+                   console.log(linkapi + "ships?region=" + vung);
+                   loadTableShip();
+               }, error: function (ret) {
+                   console.log('errorGET');
+               },
+               complete: function () { // Set our complete callback, adding the .hidden class and hiding the spinner.
+                  
+                   $('#loader').addClass('hidden');
+                   $('#model-edit-user').addClass('hidden');
+               },
+           });
+       };
+       function ViewInforShip(Name, RegistrationNumber, RegistrationPlace, RegistrationDate, LaunchYear, Weight, Fuel, Water, Personel, Captain, Speed, Time, Created) {
+           debugger;
+           $("#TenTau").val(Name);
+       }
+       function loadTableShip() {
+           $('table[id=tableship]').each(function () {
+               var table1 = $(this).DataTable({
+                   'destroy': true,
+                   lengthChange: false,
+                   "language": {
+                       "sProcessing": "Đang xử lý...",
+                       "sLengthMenu": "Xem _MENU_ mục",
+                       "sZeroRecords": "Không tìm thấy thông tin phù hợp",
+                       "sInfo": "Đang xem _START_ đến _END_ trong tổng số _TOTAL_ mục",
+                       "sInfoEmpty": "Đang xem 0 đến 0 trong tổng số 0 mục",
+                       "sInfoFiltered": "(được lọc từ _MAX_ mục)",
+                       "sInfoPostFix": "",
+                       "sSearch": "Tìm kiếm: ",
+                       "sUrl": "",
+                       "oPaginate": {
+                           "sFirst": "Đầu",
+                           "sPrevious": "Trước",
+                           "sNext": "Tiếp",
+                           "sLast": "Cuối"
+                       }
+                   }
+               });
+               table1.buttons().container()
+                   .appendTo('this_wrapper .col-md-6:eq(0)');
+           });
+       };
+   </script>
 </asp:Content>
