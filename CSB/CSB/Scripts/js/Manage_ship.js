@@ -13,7 +13,7 @@ function loadDataListShips() {
             var tabletext = "<thead><tr><th>STT</th><th>TÊN TÀU</th><th>SỐ HIỆU</th><th>SỐ THUYỀN VIÊN</th><th>NĂM HẠ THỦY</th><th>TRỌNG TẢI</th><th>TỐC ĐỘ</th><th>TG HÀNH TRÌNH TỐI ĐA</th><th>TÁC VỤ</th></tr></thead><tbody>";
             var i = 1;
             $.each(data, function (key, item) {
-                tabletext += "<tr><td>" + i + "</td><td>" + item.Name + "</td><td>" + item.RegistrationNumber + "</td><td>" + item.Personel + "</td><td>" + item.LaunchYear + "</td><td>" + item.Weight + "</td><td>" + item.Speed + "</td><td>" + item.Time + '</td><td><button class="btn btn-info btn_ViewInforShip" data-toggle="modal" data-target="#model-infordetail-ship"  style="padding: 0;"> <i class="fas fa-edit icon_action" title="Xem thông tin chi tiết" ></i></button><button class="btn btn-info btn_ViewEquipment" style="padding: 0;"><i class="fas fa-trash-alt icon_action" title="Xoá thông tin"></i></button></td></tr>';
+                tabletext += "<tr><td>" + i + "</td><td>" + item.Name + "</td><td>" + item.RegistrationNumber + "</td><td>" + item.Personel + "</td><td>" + item.LaunchYear + "</td><td>" + item.Weight + "</td><td>" + item.Speed + "</td><td>" + item.Time + '</td><td><button class="btn btn-info btn_ViewInforShip" onclick="ViewInforShip(`' + item.Name + '`,`' + item.RegistrationNumber + '`,`' + item.RegistrationPlace + '`,`' + item.RegistrationDate + '`,`' + item.LaunchYear + '`,`' + item.Weight + '`,`' + item.Fuel + '`,`' + item.Water + '`,`' + item.Personel + '`,`' + item.Captain + '`,`' + item.Speed + '`,`' + item.Time + '`,`' + item.Created + '`)" data-toggle="modal" data-target="#model-infordetail-ship"  style="padding: 0;"> <i class="fas fa-edit icon_action" title="Xem thông tin chi tiết" ></i></button><button class="btn btn-info btn_ViewEquipment" style="padding: 0;"><i class="fas fa-trash-alt icon_action" title="Xoá thông tin"></i></button></td></tr>';
                 i = i + 1;
             });
             tabletext += "</tbody>";
@@ -29,7 +29,9 @@ function loadDataListShips() {
         },
     });
 };
-
+function ViewInforShip(Name, RegistrationNumber, RegistrationPlace, RegistrationDate, LaunchYear, Weight, Fuel, Water, Personel, Captain, Speed, Time, Created) {
+    $("TenTau").val(name);
+}
 function loadTableShip() {
     $('table[id=tableship]').each(function () {
         var table1 = $(this).DataTable({
