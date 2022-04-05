@@ -2,6 +2,40 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <link href="../css/manage_ship.css" rel="stylesheet" />
+    <style>
+        .panel{
+            margin-bottom: 20px;
+            background-color: #fff;
+        }
+
+        .panel-success{
+            border-radius: 4px;
+            border: 1px solid #ced4da;
+        }
+        .panel-heading{
+            padding: 5px 15px;
+
+        }
+        .panel-title {
+            margin-top: 0;
+            margin-bottom: 0;
+            font-size: 16px;
+            color: inherit;
+        }
+        .pull-left {
+            float: left!important;
+        }
+        .panel-success>.panel-heading {
+            color: #3c4676;
+            background-color: #d8e8f0;
+            border-color: #c6e2e9;
+        }
+        .wrap-layout {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap-reverse;
+        }
+    </style>
     <div id="form1">
         <div class="section-header">
             <div class="col-12">
@@ -56,7 +90,7 @@
     </div>
 
     <div class="modal fade" id="model-infordetail-ship" tabindex="-1" role="dialog">
-        <div class="modal-dialog" role="document">
+        <div class="modal-dialog" role="document" style="max-width: 70%;">
             <div class="modal-content">
                 <div class="card auth_form">
                     <div class="modal-header">
@@ -64,121 +98,141 @@
                     </div>
                     <div class="modal-body">
 
-                        <div class="row clearfix " style="border: 3px solid #36aee5">
-                            <div style="width: 100%; float: left; padding: 10px">
-                                <div class="form-group">
-                                    <label class="col-5 control-label"><strong>Tên tàu     : </strong></label>
-                                    <div class="col-7">
-                                        <input type="text" class="form-control" id="TenTau" name="TenTau" required value="">
+                        <div class="clearfix ">
+                            <div style="display:flex;">
+                                <div class="imageupload panel panel-success col-md-6" style="min-height: 300px; padding:0;">
+                                    <div class="panel-heading clearfix">
+                                        <h3 class="panel-title pull-left">Hình ảnh</h3>
+                                    </div>
+                                    <div class="file-tab panel-body">
+                                        <img class="img-responsive" id="upload_imageproduct" name="Anh"  src="../Image/Ships/Tau1.jpg" style="margin: 8% 2%; height: 200px; max-width: 300px;" />
+                                        <label class="btn btn-default btn-file">
+                                            <span>Tải lên</span>
+                                            <input type="file" name="Anh" id="Anh" onchange="PreviewImage()">
+                                        </label>
+                                        <%--<button type="button" class="btn btn-dejfault" id="delete" onclick="Xoa()">Xóa</button>--%>
                                     </div>
                                 </div>
-                            </div>
-                            <div style="width: 100%; float: left; padding: 10px">
-                                <div class="form-group">
-                                    <label class="col-5 control-label"><strong>Số hiệu     : </strong></label>
-                                    <div class="col-7">
-                                        <input type="text" class="form-control" id="SoHieu" name="SoHieu" required value="">
+                                <div class="col-md-6" style="padding:0;">
+                                    <div style="float: left; padding: 5px" class="col-md-12">
+                                        <div class="form-group">
+                                            <label class="col-md-4 control-label" style="text-align:right"><strong>Tên tàu     <span style="color:red;">(*)</span>: </strong></label>
+                                            <div class="col-md-8">
+                                                <input type="text" class="form-control" id="TenTau" name="TenTau" required value="">
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                            </div>
+                                    <div style="float: left; padding: 5px" class="col-md-12">
+                                        <div class="form-group">
+                                            <label class="col-md-4 control-label" style="text-align:right"><strong>Số hiệu     <span style="color:red;">(*)</span>: </strong></label>
+                                            <div class="col-md-8">
+                                                <input type="text" class="form-control" id="SoHieu" name="SoHieu" required value="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div style="float: left; padding: 5px" class="col-md-12">
+                                        <div class="form-group">
+                                            <label class="col-md-4 control-label" style="text-align:right"><strong>Nơi cấp   : </strong></label>
+                                            <div class="col-md-8">
+                                                <input type="text" class="form-control" id="NoiCap" name="NoiCap" required value="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div style="float: left; padding: 5px" class="col-md-12">
+                                        <div class="form-group">
+                                            <label class="col-md-4 control-label" style="text-align:right"><strong>Ngày Cấp    : </strong></label>
+                                            <div class="col-md-8">
+                                                <input type="date" class="form-control" id="NgayCap" name="NgayCap" required value="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div style="float: left; padding: 5px" class="col-md-12">
+                                        <div class="form-group">
+                                            <label class="col-md-4 control-label" style="text-align:right"><strong>Năm hạ thủy    : </strong></label>
+                                            <div class="col-md-8">
+                                                <input type="text" class="form-control" id="NamHaThuy" name="NamHaThuy" required value="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div style="float: left; padding: 5px" class="col-md-12">
+                                        <div class="form-group">
+                                            <label class="col-md-4 control-label" style="text-align:right"><strong>Trọng tải    : </strong></label>
+                                            <div class="col-md-8">
+                                                <input type="text" class="form-control" id="TrongTai" name="TrongTai" required value=""> 
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div style="float: left; padding: 5px" class="col-md-12">
+                                        <div class="form-group">
+                                            <label class="col-md-4 control-label" style="text-align:right"><strong>Số thuyền viên   : </strong></label>
+                                            <div class="col-md-8">
+                                                <input type="text" class="form-control" id="SoThuyenVien" name="SoThuyenVien" required value="">
+                                            </div>
+                                        </div>
+                                    </div>
 
-                            <div style="width: 100%; float: left; padding: 10px">
-                                <div class="form-group">
-                                    <label class="col-5 control-label"><strong>Nơi cấp   : </strong></label>
-                                    <div class="col-7">
-                                        <input type="text" class="form-control" id="NoiCap" name="NoiCap" required value="">
-                                    </div>
                                 </div>
                             </div>
-                            <div style="width: 100%; float: left; padding: 10px">
+                            <div style="width: 100%; float: left; padding: 5px">
                                 <div class="form-group">
-                                    <label class="col-5 control-label"><strong>Ngày Cấp    : </strong></label>
-                                    <div class="col-7">
-                                        <input type="time" class="form-control" id="NgayCap" name="NgayCap" required value="">
-                                    </div>
-                                </div>
-                            </div>
-                            <div style="width: 100%; float: left; padding: 10px">
-                                <div class="form-group">
-                                    <label class="col-5 control-label"><strong>Năm hạ thủy    : </strong></label>
-                                    <div class="col-7">
-                                        <input type="text" class="form-control" id="NamHaThuy" name="NamHaThuy" required value="">
-                                    </div>
-                                </div>
-                            </div>
-                            <div style="width: 100%; float: left; padding: 10px">
-                                <div class="form-group">
-                                    <label class="col-5 control-label"><strong>Trọng tải    : </strong></label>
-                                    <div class="col-7">
-                                        <input type="text" class="form-control" id="TrongTai" name="TrongTai" required value=""> 
-                                    </div>
-                                </div>
-                            </div>
-                            <div style="width: 100%; float: left; padding: 10px">
-                                <div class="form-group">
-                                    <label class="col-5 control-label"><strong>Lượng nhiên liệu tối đa   : </strong></label>
-                                    <div class="col-7">
-                                        <input type="text" class="form-control" id="NhienLieuToiDa" name="NhienLieuToiDa" required value="">
-                                    </div>
-                                </div>
-                            </div>
-                            <div style="width: 100%; float: left; padding: 10px">
-                                <div class="form-group">
-                                    <label class="col-5 control-label"><strong>Lượng nước ngọt tối đa   : </strong></label>
-                                    <div class="col-7">
-                                        <input type="text" class="form-control" id="NuocNgotToiDa" name="NuocNgotToiDa" required value="">
-                                    </div>
-                                </div>
-                            </div>
-                            <div style="width: 100%; float: left; padding: 10px">
-                                <div class="form-group">
-                                    <label class="col-5 control-label"><strong>Số thuyền viên   : </strong></label>
-                                    <div class="col-7">
-                                        <input type="text" class="form-control" id="SoThuyenVien" name="SoThuyenVien" required value="">
-                                    </div>
-                                </div>
-                            </div>
-                            <div style="width: 100%; float: left; padding: 10px">
-                                <div class="form-group">
-                                    <label class="col-5 control-label"><strong>Thuyền trưởng   : </strong></label>
-                                    <div class="col-7">
+                                    <label class="col-md-4 control-label" style="text-align:right"><strong>Thuyền trưởng   : </strong></label>
+                                    <div class="col-md-6">
                                         <select class="form-control" id="ThuyenTruong">
                                             <option value="AD">Admin</option>
                                             <option selected value="US">User</option>
                                         </select>
                                     </div>
-                                    <button id="btn_SeeCaptain"><i class="bi bi-eye-fill"></i> </button>
-                                    <button id="btn_AddCaptai"><i class="bi bi-plus-circle"></i> </button>
+                                    <div class="wrap-layout col-md-2" style="padding-left:0px;">
+                                        <button id="btn_SeeCaptain" class="btn btn-secondary" style="padding:3px;border: 0px;"><i class="fas fa-edit icon_action" title="Xem thông tin thuyền trưởng"></i> </button>
+                                        <button id="btn_AddCaptai" class="btn btn-secondary" style="padding:3px;border: 0px;"><i class="fas fa-edit icon_action" title="Thêm thuyền trưởng"></i> </button>
+                                    </div>
+                                    
                                 </div>
                             </div>
-                             <div style="width: 100%; float: left; padding: 10px">
+                            <div style="width: 100%; float: left; padding: 5px">
                                 <div class="form-group">
-                                    <label class="col-5 control-label"><strong>Tốc độ(hải lý/giờ)   : </strong></label>
-                                    <div class="col-7">
+                                    <label class="col-md-4 control-label" style="text-align:right"><strong>Lượng nhiên liệu tối đa   : </strong></label>
+                                    <div class="col-md-8">
+                                        <input type="text" class="form-control" id="NhienLieuToiDa" name="NhienLieuToiDa" required value="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="width: 100%; float: left; padding: 5px">
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label" style="text-align:right"><strong>Lượng nước ngọt tối đa   : </strong></label>
+                                    <div class="col-md-8">
+                                        <input type="text" class="form-control" id="NuocNgotToiDa" name="NuocNgotToiDa" required value="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="width: 100%; float: left; padding: 5px">
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label" style="text-align:right"><strong>Tốc độ(hải lý/giờ)   : </strong></label>
+                                    <div class="col-md-8">
                                         <input type="text" class="form-control" id="TocDo" name="TocDo" required value="">
                                     </div>
                                 </div>
                             </div>
-                            <div style="width: 100%; float: left; padding: 10px">
+                            <div style="width: 100%; float: left; padding: 5px">
                                 <div class="form-group">
-                                    <label class="col-5 control-label"><strong>Thời gian hành trình tối đa   : </strong></label>
-                                    <div class="col-7">
+                                    <label class="col-md-4 control-label" style="text-align:right"><strong>Thời gian hành trình tối đa   : </strong></label>
+                                    <div class="col-md-8">
                                         <input type="text" class="form-control" id="TG_HanhTrinhToiDa" name="TG_HanhTrinhToiDa" required value="">
                                     </div>
                                 </div>
                             </div>
-                            <div style="width: 100%; float: left; padding: 10px">
+                            <div style="width: 100%; float: left; padding: 5px">
                                 <div class="form-group">
-                                    <label class="col-5 control-label"><strong>Ngày tạo   : </strong></label>
-                                    <div class="col-7">
-                                        <input type="time" class="form-control" id="NgayTao" name="NgayTao"  value="">
+                                    <label class="col-md-4 control-label" style="text-align:right"><strong>Ngày tạo   : </strong></label>
+                                    <div class="col-md-8">
+                                        <input type="date" class="form-control" id="NgayTao" name="NgayTao"  value="">
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-info" data-dismiss="modal">Close</button>
                     </div>
                 </div>
             </div>
@@ -256,5 +310,18 @@
                    .appendTo('this_wrapper .col-md-6:eq(0)');
            });
        };
+       function PreviewImage() {
+           var oFReader = new FileReader();
+           if (document.getElementById("Anh").files[0] == null) alert("1");
+           oFReader.readAsDataURL(document.getElementById("Anh").files[0]);
+           
+           oFReader.onload = function (oFREvent) {
+               document.getElementById("upload_imageproduct").src = oFREvent.target.result;
+           };
+       };
+       function Xoa() {
+           $('#Anh').attr('disabled', '');
+           document.getElementById("upload_imageproduct").src = ""
+       }
    </script>
 </asp:Content>
