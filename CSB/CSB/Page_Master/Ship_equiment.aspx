@@ -55,7 +55,7 @@
                                                             <tr>
                                                                 <th>STT</th>
                                                                 <th>TÊN MÁY</th>
-                                                                <th>NAM SẢN XUẤT</th>
+                                                                <th>NĂM SẢN XUẤT</th>
                                                                 <th>XUÁT XỨ</th>
                                                                 <th>MÃ LỰC</th>
                                                                 <th>WASTE</th>
@@ -104,7 +104,43 @@
                                     </h2>
                                     <div id="collScrew" class="accordion-collapse collapse" data-bs-parent="#accorShipEquiment">
                                         <div class="card-body">
-                                            <p>HTML stands for HyperText Markup Language. HTML is the standard markup language for describing the structure of web pages. <a href="https://www.tutorialrepublic.com/html-tutorial/" target="_blank">Learn more.</a></p>
+                                            <div class="section-header">
+                                                <div class="col-12">
+                                                    <table id="table_chanvit" class="table table-bordered table-striped table-md" style="width: 100%">
+                                                        <thead>
+                                                            <tr>
+                                                                <th>STT</th>
+                                                                <th>TÊN</th>
+                                                                <th>CHIỀU RỘNG</th>
+                                                                <th>ĐK CƠ BẢN</th>
+                                                                <th>ĐK SAU</th>
+                                                                <th>ĐK GIỮA</th>
+                                                                <th>ĐK TRƯỚC</th>
+                                                                <th>ĐƯỜNG KÍNH</th>
+                                                                <th>TÁC VỤ</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>1</td>
+                                                                <td>Tiger Nixon</td>
+                                                                <td>System Architect</td>
+                                                                <td>Edinburgh</td>
+                                                                <td>61</td>
+                                                                <td>2011/04/25</td>
+                                                                <td>$320,800</td>
+                                                                <td>System Architect</td>
+                                                                <td>
+                                                                    <a href="#"><i class="fas fa-edit icon_action" title="Sửa thông tin"></i></a>
+                                                                    <a href="#"><i class="fas fa-trash-alt icon_action" title="Xoá thông tin"></i></a>
+                                                                </td>
+                                                            </tr>
+
+                                                        </tbody>
+
+                                                    </table>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -182,6 +218,7 @@
             var Ship_ID = getParameterByName('Ship_ID');
             loadInforShip(Ship_ID);
             loadDataList_Main_Engine(Ship_ID);
+            loadDataList_Screw_System(Ship_ID);
            
         });
         function loadInforShip(Ship_ID) {
@@ -258,6 +295,65 @@
                     $('#table_maychinh').html(tabletext);
                     console.log(linkapi + "main_engine?imo=" + Ship_ID);
                     loadTableMain_Engine();
+                }, error: function (ret) {
+                    console.log('errorGET');
+                },
+                complete: function () { // Set our complete callback, adding the .hidden class and hiding the spinner.
+
+                    $('#loader').addClass('hidden');
+                    $('#model-edit-user').addClass('hidden');
+                },
+            });
+        };
+         // ===================================== ScrewSystem ========================================
+        function loadTableScrew_System() {
+            $('table[id=table_chanvit]').each(function () {
+                var table1 = $(this).DataTable({
+                    'destroy': true,
+                    lengthChange: false,
+                    "language": {
+                        "sProcessing": "Đang xử lý...",
+                        "sLengthMenu": "Xem _MENU_ mục",
+                        "sZeroRecords": "Không tìm thấy thông tin phù hợp",
+                        "sInfo": "Đang xem _START_ đến _END_ trong tổng số _TOTAL_ mục",
+                        "sInfoEmpty": "Đang xem 0 đến 0 trong tổng số 0 mục",
+                        "sInfoFiltered": "(được lọc từ _MAX_ mục)",
+                        "sInfoPostFix": "",
+                        "sSearch": "Tìm kiếm: ",
+                        "sUrl": "",
+                        "oPaginate": {
+                            "sFirst": "Đầu",
+                            "sPrevious": "Trước",
+                            "sNext": "Tiếp",
+                            "sLast": "Cuối"
+                        }
+                    }
+                });
+                table1.buttons().container()
+                    .appendTo('this_wrapper .col-md-6:eq(0)');
+            });
+        };
+
+        function loadDataList_Screw_System(Ship_ID) {
+
+            $.ajax({
+                type: "GET",
+                url: linkapi + "screw_system?imo=" + Ship_ID,
+                dataType: "json",
+                beforeSend: function () { // Before we send the request, remove the .hidden class from the spinner and default to inline-block.
+                    $('#loader').removeClass('hidden');
+                },
+                success: function (data) {
+                    var tabletext = "<thead><tr><th>STT</th><th>TÊN</th><th>CHIỀU RỘNG</th><th>ĐK CƠ BẢN</th><th>ĐK SAU</th><th>ĐK GIỮA</th><th>ĐK TRƯỚC</th><th>ĐƯỜNG KÍNH</th><th>TÁC VỤ</th></tr></thead><tbody>";
+                    var i = 1;
+                    $.each(data, function (key, item) {
+                        tabletext += "<tr><td>" + i + "</td><td>" + item.Name + "</td><td>" + item.Width + "</td><td>" + item.BasicDiameter + "</td><td>" + item.BehindDiameter + "</td><td>" + item.MiddleDiameter + "</td><td>" + item.FrontDiameter + "</td><td>" + item.Diameter + '</td>' + '<td><button class="btn btn-info btn_Edit_main_engine" data-toggle="modal" data-target="#model-infordetail-ship"  style="padding: 0;"> <i class="fas fa-edit icon_action" title="Sửa thông tin" ></i></button><button class="btn btn-info btn_Delete_main_engine" style="padding: 0;"><i class="fas fa-trash-alt icon_action" title="Xoá thông tin"></i></button></td></tr>';
+                        i = i + 1;
+                    });
+                    tabletext += "</tbody>";
+                    $('#table_chanvit').html(tabletext);
+                    console.log(linkapi + "screw_system?imo=" + Ship_ID);
+                    loadTableScrew_System();
                 }, error: function (ret) {
                     console.log('errorGET');
                 },
