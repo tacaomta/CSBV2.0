@@ -242,10 +242,9 @@
     <script src="../Scripts/jquery-3.4.1.min.js"></script>
    <script>
        $(document).ready(function () {
-           var vung = getParameterByName('vung');
-           if (vung == null) {
-               vung = 1;
-           }
+           var vung = sessionStorage.getItem("vung");
+           if (vung == null) { vung = "1";}
+           sessionStorage.removeItem("vung");
            $('#Vung' + vung).css('background-color', 'beige');
            $('#title').text('QUẢN LÝ TÀU - VÙNG ' + vung);
            loadDataListShips(vung);
@@ -263,7 +262,7 @@
                    var tabletext = "<thead><tr><th>STT</th><th>TÊN TÀU</th><th>SỐ HIỆU</th><th>SỐ THUYỀN VIÊN</th><th>NĂM HẠ THỦY</th><th>TRỌNG TẢI</th><th>TỐC ĐỘ</th><th title='Thời gian hành trình tối đa'>TG HT TỐI ĐA</th><th  title='Xem thiết bị trên tàu'>XEM THIẾT BỊ</th><th>TÁC VỤ</th></tr></thead><tbody>";
                    var i = 1;
                    $.each(data, function (key, item) {
-                       tabletext += "<tr><td>" + i + "</td><td>" + item.Ship.Name + "</td><td>" + item.Ship.RegistrationNumber + "</td><td>" + item.Ship.Personel + "</td><td>" + item.Ship.LaunchYear + "</td><td>" + item.Ship.Weight + "</td><td>" + item.Ship.Speed + "</td><td>" + item.Ship.Time + '</td>' + '<td><button class="btn btn-info btn_View_EquimentShip" onclick="View_EquimentShip(`' + item.Ship.ID+'`)" style="padding: 0;"><i class="fas fa-eye icon_action" title="Xem thiết bị trên tàu"></i></button> </td>'+ '<td><button class="btn btn-info btn_ViewInforShip" onclick="ViewInforShip(`' + item.Ship.Name + '`,`' + item.Ship.RegistrationNumber + '`,`' + item.Ship.RegistrationPlace + '`,`' + item.Ship.RegistrationDate + '`,`' + item.Ship.LaunchYear + '`,`' + item.Ship.Weight + '`,`' + item.Ship.Fuel + '`,`' + item.Ship.Water + '`,`' + item.Ship.Personel + '`,`' + item.Ship.Captain + '`,`' + item.Ship.Speed + '`,`' + item.Ship.Time + '`,`' + item.Ship.Created + '`)" data-toggle="modal" data-target="#model-infordetail-ship"  style="padding: 0;"> <i class="fas fa-edit icon_action" title="Xem thông tin chi tiết" ></i></button><button class="btn btn-info btn_ViewEquipment" style="padding: 0;"><i class="fas fa-trash-alt icon_action" title="Xoá thông tin"></i></button></td></tr>';
+                       tabletext += "<tr><td>" + i + "</td><td>" + item.Ship.Name + "</td><td>" + item.Ship.RegistrationNumber + "</td><td>" + item.Ship.Personel + "</td><td>" + item.Ship.LaunchYear + "</td><td>" + item.Ship.Weight + "</td><td>" + item.Ship.Speed + "</td><td>" + item.Ship.Time + '</td>' + '<td><button class="btn btn-info btn_ViewInforShip" style="padding: 0;"><i class="fas fa-eye icon_action" title="Xem thiết bị trên tàu"></i></button> </td>'+ '<td><button class="btn btn-info btn_ViewInforShip" onclick="ViewInforShip(`' + item.Ship.Name + '`,`' + item.Ship.RegistrationNumber + '`,`' + item.Ship.RegistrationPlace + '`,`' + item.Ship.RegistrationDate + '`,`' + item.Ship.LaunchYear + '`,`' + item.Ship.Weight + '`,`' + item.Ship.Fuel + '`,`' + item.Ship.Water + '`,`' + item.Ship.Personel + '`,`' + item.Ship.Captain + '`,`' + item.Ship.Speed + '`,`' + item.Ship.Time + '`,`' + item.Ship.Created + '`)" data-toggle="modal" data-target="#model-infordetail-ship"  style="padding: 0;"> <i class="fas fa-edit icon_action" title="Xem thông tin chi tiết" ></i></button><button class="btn btn-info btn_ViewEquipment" style="padding: 0;"><i class="fas fa-trash-alt icon_action" title="Xoá thông tin"></i></button></td></tr>';
                        i = i + 1;
                    });
                    tabletext += "</tbody>";
@@ -283,18 +282,6 @@
        function ViewInforShip(Name, RegistrationNumber, RegistrationPlace, RegistrationDate, LaunchYear, Weight, Fuel, Water, Personel, Captain, Speed, Time, Created) {
            debugger;
            $("#TenTau").val(Name);
-           $("#SoHieu").val(RegistrationNumber);
-           $("#NoiCap").val(RegistrationPlace);
-           $("#NgayCap").val(RegistrationDate);
-           $("#NamHaThuy").val(LaunchYear);
-           $("#TrongTai").val(Weight);
-           $("#NhienLieuToiDa").val(Fuel);
-           $("#NuocNgotToiDa").val(Water);
-           $("#SoThuyenVien").val(Personel);
-           $("#ThuyenTruong").val(Captain);
-           $("#TocDo").val(Speed);
-           $("#TG_HanhTrinhToiDa").val(Time);
-           $("#NgayTao").val(Created);
        }
        function loadTableShip() {
            $('table[id=tableship]').each(function () {
@@ -323,17 +310,6 @@
                    .appendTo('this_wrapper .col-md-6:eq(0)');
            });
        };
-       function View_EquimentShip(ID_Ship) {
-           window.location = "http://localhost:44347/Page_Master/Ship_equiment?Ship_ID=" + ID_Ship;
-       }
-       function getParameterByName(name, url = window.location.href) {
-           name = name.replace(/[\[\]]/g, '\\$&');
-           var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
-               results = regex.exec(url);
-           if (!results) return null;
-           if (!results[2]) return '';
-           return decodeURIComponent(results[2].replace(/\+/g, ' '));
-       }
        function PreviewImage() {
            var oFReader = new FileReader();
            if (document.getElementById("Anh").files[0] == null) alert("1");

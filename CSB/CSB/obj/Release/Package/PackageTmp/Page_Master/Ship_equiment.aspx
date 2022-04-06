@@ -135,20 +135,5 @@
             </div>
         </div>
     </div>
-    <script src="../Scripts/jquery-3.4.1.slim.min.js"></script>
-    <script src="../Scripts/jquery-3.4.1.min.js"></script>
-    <script>
-        $(document).ready(function () {
-            var Ship_ID = getParameterByName('Ship_ID');
-        });
-        function getParameterByName(name, url = window.location.href) {
-            name = name.replace(/[\[\]]/g, '\\$&');
-            var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
-                results = regex.exec(url);
-            if (!results) return null;
-            if (!results[2]) return '';
-            return decodeURIComponent(results[2].replace(/\+/g, ' '));
-        }
-    </script>
 </asp:Content>
 
