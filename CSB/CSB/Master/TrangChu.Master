@@ -12,6 +12,37 @@
     <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap4.min.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.5.2/css/buttons.bootstrap4.min.css">
 	<link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.2.3/css/responsive.bootstrap4.min.css">
+    
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+   <style>
+       table.table td a {
+    color: #a0a5b1;
+    display: inline-block;
+    margin: 0 5px;
+}
+
+table.table td a.edit {
+    color: #FFC107;
+}
+table.table td a.delete {
+    color: #E34724;
+}
+table.table td i {
+    font-size: 19px;
+}    
+table.table td a.lock {
+    color: #03A9F4;
+}
+table.table td a.view {
+    color: #03A9F4;
+}
+table.table td a.lock i {
+    font-size: 21px;
+}
+   </style>
     <style>
         
 body {
@@ -507,7 +538,6 @@ table tr:hover .table-links {
 }
 
 .btn-info, .btn-info.disabled {
-    box-shadow: 0 2px 6px #82d3f8;
     background-color: #01b5f9;
     border-color: #3abaf4;
     color: #fff;
@@ -923,7 +953,6 @@ table tr:hover .table-links {
     <script src="https://cdn.datatables.net/responsive/2.2.3/js/dataTables.responsive.min.js"></script>
     <script src="https://cdn.datatables.net/responsive/2.2.3/js/responsive.bootstrap4.min.js"></script>
     <script src="../Scripts/js/Master.js"></script>
-    <script src="../Scripts/js/Manage_User.js"></script>
 <%--    <script src="../Scripts/js/Manage_ship.js"></script>--%>
     <script>
         $(document).ready(function () {

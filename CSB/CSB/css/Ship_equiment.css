@@ -119,6 +119,7 @@ div.dataTables_wrapper div.dataTables_processing {
         color: #666;
         padding-top: 15px;
         padding-bottom: 15px;
+        vertical-align: middle;
     }
 
     .table.table-md th,
