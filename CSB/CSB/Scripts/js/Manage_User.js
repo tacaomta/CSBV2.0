@@ -6,7 +6,7 @@ var strDate = '' + date.getDate() + '/' + (Number(date.getMonth()) + 1) + '/' + 
 function loadDataListUsers() {
     $.ajax({
         type: "GET",
-        url: linkapi + "list_users",
+        url: linkapi + "users",
         dataType: "json",
         beforeSend: function () { // Before we send the request, remove the .hidden class from the spinner and default to inline-block.
             $('#loader').removeClass('hidden');
@@ -15,7 +15,7 @@ function loadDataListUsers() {
             var tabletext = "<thead><tr><th>STT</th><th>Họ tên</th><th>Tên DN</th><th>Quyền</th><th>Cập nhật gần đây</th><th>Khóa</th><th>Tác vụ</th></tr></thead><tbody>";
             var i = 1;
             $.each(data, function (key, item) {
-                
+
                 if (item.LOCKED == true) {
                     tabletext += "<tr><td>" + i + "</td><td>" + item.Fullname + "</td><td>" + item.UserName + "</td><td>" + item.Role.RoleName + "</td><td>" + item.LastUpdate + "</td><td>" + '<a href="#" class="lock" data-toggle="tooltip"><i class="material-icons">lock</i ></a>' + '</td><td><div style="width: max-content;"><a href="#" class="edit" title="Sửa" data-toggle="modal" data-target="#model-edit-user"  onclick="edituser(`' + item.Fullname + '`,`' + item.UserName + '`,`' + item.Password + '`,`' + item.Role.RoleId + '`,`' + item.Role.RoleName + '`,`' + item.Created + '`,`' + item.LOCKED + '`,`' + item.ID + '`)"><i class="material-icons">&#xE254;</i></a><a href="#" class="delete" title="Xóa" onclick="delete_user(`' + item.ID + '`)"><i class="material-icons">&#xE872;</i></a></div></td></tr>';
                 }
@@ -29,7 +29,7 @@ function loadDataListUsers() {
             console.log("okGET");
             loadTableUser();
         }, error: function (ret) {
-            console.log('errorGET');    
+            console.log('errorGET');
         },
         complete: function () { // Set our complete callback, adding the .hidden class and hiding the spinner.
             $('#loader').addClass('hidden');
