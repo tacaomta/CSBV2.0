@@ -21,7 +21,6 @@
                                         <th>STT</th>
                                         <th>Họ tên</th>
                                         <th>Tên DN</th>
-                                        <th>Mật khẩu</th>
                                         <th>Quyền</th>
                                         <th>Cập nhật gần đây</th>
                                         <th>Khóa</th>
@@ -63,7 +62,7 @@
                     </div>
                     <div class="modal-body">
 
-                        <div class="row clearfix " style="border: 3px solid #36aee5">
+                        <div class="row clearfix ">
                             <div style="width: 100%; float: left; padding: 10px">
                                 <div class="form-group">
                                     <label class="col-5 control-label"><strong>Tên đầy đủ     : </strong></label>
@@ -128,7 +127,7 @@
                         <h6 class="title-modal-banve font-weight-bold">Sửa thông tin người dùng</h6>
                     </div>
                     <div class="modal-body">
-                        <div class="row clearfix " style="border: 3px solid #01b5f9">
+                        <div class="row clearfix ">
                             <input hidden id="edID" value="">
                             <input hidden id="edCreated" value="">
                             <div style="width: 100%; float: left; padding-top: 10px">
@@ -212,5 +211,8 @@
             </div>
         </div>
     </div>
+    
+    <script src="../Scripts/jquery-3.4.1.slim.min.js"></script>
+    <script src="../Scripts/js/Manage_User.js"></script>
 </asp:Content>
 
