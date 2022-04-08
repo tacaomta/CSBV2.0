@@ -1391,7 +1391,7 @@
 
             $.ajax({
                 type: "GET",
-                url: linkapi + "screw_system?imo=" + Ship_ID,
+                url: linkapi + "screw_systems?imo=" + Ship_ID,
                 dataType: "json",
                 beforeSend: function () { // Before we send the request, remove the .hidden class from the spinner and default to inline-block.
                     $('#loader').removeClass('hidden');
@@ -1466,7 +1466,7 @@
         function loadDataList_Secondary_Engine(ship_ID) {
             $.ajax({
                 type: "GET",
-                url: linkapi + "secondary_engine?imo=" + ship_ID,
+                url: linkapi + "secondary_engines?imo=" + ship_ID,
                 dataType: "json",
                 success: function (data) {
                     var tabletext = "<thead><tr><th>STT</th><th>ĐỘNG CƠ DIESEL</th><th>NĂM SẢN XUẤT</th><th>XUẤT XỨ</th><th>CÔNG SUẤT (KW)</th><th>ĐỊNH MỨC TIÊU THỤ (I/h)</th><th>VÒNG QUAY LỚN NHẤT (V/P)</th><th>MÁY PHÁT ĐIỆN</th><th>NĂM SẢN XUẤT</th><th>XUẤT XỨ</th><th>TÁC VỤ</th></tr></thead><tbody>";
@@ -1636,7 +1636,7 @@
         function loadDataList_Other_Equipment(ship_ID) {
             $.ajax({
                 type: "GET",
-                url: linkapi + "other_equipment?imo=" + ship_ID,
+                url: linkapi + "other_equipments?imo=" + ship_ID,
                 dataType: "json",
                 success: function (data) {
                     var tabletext = "<thead><tr><th>STT</th><th>LOẠI TRANG BỊ</th><th>XUẤT XỨ</th><th>TÌNH TRẠNG</th><th>SỐ LƯỢNG</th><th>ĐƠN VỊ TÍNH</th><th>GHI CHÚ</th><th>TÁC VỤ</th></tr></thead><tbody>";
@@ -1770,7 +1770,7 @@
         function loadDataList_Supply(ship_ID) {
             $.ajax({
                 type: "GET",
-                url: linkapi + "supply?imo=" + ship_ID,
+                url: linkapi + "supplies?imo=" + ship_ID,
                 dataType: "json",
                 success: function (data) {
                     var tabletext = "<thead><tr><th>STT</th><th>MÃ VẬT TƯ</th><th>LOẠI TRANG BỊ</th><th>XUẤT XỨ</th><th>TÌNH TRẠNG</th><th>SỐ LƯỢNG</th><th>ĐƠN VỊ TÍNH</th><th>GHI CHÚ</th><th>TÁC VỤ</th></tr></thead><tbody>";
