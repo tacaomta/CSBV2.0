@@ -142,7 +142,7 @@
                                         <div class="form-group">
                                             <label class="col-md-4 control-label" style="text-align:right"><strong>Ngày Cấp    : </strong></label>
                                             <div class="col-md-8">
-                                                <input type="date" class="form-control" id="NgayCap" name="NgayCap" required value="">
+                                                <input type="text" class="form-control" id="NgayCap" name="NgayCap" required value="">
                                             </div>
                                         </div>
                                     </div>
@@ -225,7 +225,7 @@
                                 <div class="form-group">
                                     <label class="col-md-4 control-label" style="text-align:right"><strong>Ngày tạo   : </strong></label>
                                     <div class="col-md-8">
-                                        <input type="date" class="form-control" id="NgayTao" name="NgayTao"  value="">
+                                        <input type="text" class="form-control" id="NgayTao" name="NgayTao"  value="">
                                     </div>
                                 </div>
                             </div>
@@ -262,8 +262,9 @@
                    var tabletext = "<thead><tr><th>STT</th><th>TÊN TÀU</th><th>SỐ HIỆU</th><th>SỐ THUYỀN VIÊN</th><th>NĂM HẠ THỦY</th><th>TRỌNG TẢI</th><th>TỐC ĐỘ</th><th title='Thời gian hành trình tối đa'>TG HT TỐI ĐA</th><th  title='Xem thiết bị trên tàu'>XEM THIẾT BỊ</th><th>TÁC VỤ</th></tr></thead><tbody>";
                    var i = 1;
                    $.each(data, function (key, item) {
-                       tabletext += "<tr><td>" + i + "</td><td>" + item.Ship.Name + "</td><td>" + item.Ship.RegistrationNumber + "</td><td>" + item.Ship.Personel + "</td><td>" + item.Ship.LaunchYear + "</td><td>" + item.Ship.Weight + "</td><td>" + item.Ship.Speed + "</td><td>" + item.Ship.Time + '</td>' + '<td><a href="#" class="view" title="Xem trang bị tàu" onclick="View_EquimentShip(`' + item.Ship.ID + '`)"><i class="material-icons">&#xE417;</i></a></td>' + '<td><div style="width: max-content;"><a href="#" class="edit" title="Sửa" onclick="ViewInforShip(`' + item.Ship.Name + '`,`' + item.Ship.RegistrationNumber + '`,`' + item.Ship.RegistrationPlace + '`,`' + item.Ship.RegistrationDate + '`,`' + item.Ship.LaunchYear + '`,`' + item.Ship.Weight + '`,`' + item.Ship.Fuel + '`,`' + item.Ship.Water + '`,`' + item.Ship.Personel + '`,`' + item.Ship.Captain + '`,`' + item.Ship.Speed + '`,`' + item.Ship.Time + '`,`' + item.Ship.Created + '`)" data-toggle="modal" data-target="#model-infordetail-ship"><i class="material-icons">&#xE254;</i></a><a href="#" class="delete" title="Xóa" onclick="delete_ship(`' + item.Ship.ID + '`)"><i class="material-icons">&#xE872;</i></a></div></td></tr>';
                        i = i + 1;
+                       tabletext += "<tr><td>" + i + "</td><td>" + item.Ship.Name + "</td><td>" + item.Ship.RegistrationNumber + "</td><td>" + item.Ship.Personel + "</td><td>" + item.Ship.LaunchYear + "</td><td>" + item.Ship.Weight + "</td><td>" + item.Ship.Speed + "</td><td>" + item.Ship.Time + '</td>' + '<td><a href="#" class="view" title="Xem trang bị tàu" onclick="View_EquimentShip(`' + item.Ship.ID + '`)"><i class="material-icons">&#xE417;</i></a></td>' + '<td><div style="width: max-content;"><a href="#" class="edit" title="Sửa" onclick="ViewInforShip(`' + item.Ship.ID + '`)" data-toggle="modal" data-target="#model-infordetail-ship"><i class="material-icons">&#xE254;</i></a><a href="#" class="delete" title="Xóa" onclick="delete_ship(`' + item.Ship.ID + '`)"><i class="material-icons">&#xE872;</i></a></div></td></tr>';
+
                    });
                    tabletext += "</tbody>";
                    $('#tableship').html(tabletext);
@@ -279,21 +280,33 @@
                },
            });
        };
-       function ViewInforShip(Name, RegistrationNumber, RegistrationPlace, RegistrationDate, LaunchYear, Weight, Fuel, Water, Personel, Captain, Speed, Time, Created) {
+       function ViewInforShip(ID) {
            debugger;
-           $("#TenTau").val(Name);
-           $("#SoHieu").val(RegistrationNumber);
-           $("#NoiCap").val(RegistrationPlace);
-           $("#NgayCap").val(RegistrationDate);
-           $("#NamHaThuy").val(LaunchYear);
-           $("#TrongTai").val(Weight);
-           $("#NhienLieuToiDa").val(Fuel);
-           $("#NuocNgotToiDa").val(Water);
-           $("#SoThuyenVien").val(Personel);
-           $("#ThuyenTruong").val(Captain);
-           $("#TocDo").val(Speed);
-           $("#TG_HanhTrinhToiDa").val(Time);
-           $("#NgayTao").val(Created);
+           $.ajax({
+               type: "GET",
+               url: linkapi + "ship_overview?id=" + ID,
+               dataType: "json",
+               success: function (data) {
+                   $("#TenTau").val(data.Ship.Name);
+                   $("#SoHieu").val(data.Ship.RegistrationNumber);
+                   $("#NoiCap").val(data.Ship.RegistrationPlace);
+                   $("#NgayCap").val(data.Ship.RegistrationDate);
+                   $("#NamHaThuy").val(data.Ship.LaunchYear);
+                   $("#TrongTai").val(data.Ship.Weight);
+                   $("#NhienLieuToiDa").val(data.Ship.Fuel);
+                   $("#NuocNgotToiDa").val(data.Ship.Water);
+                   $("#SoThuyenVien").val(data.Ship.Personel);
+                   $("#ThuyenTruong").val(data.Ship.Captain.Fullname);
+                   $("#TocDo").val(data.Ship.Speed);
+                   $("#TG_HanhTrinhToiDa").val(data.Ship.Time);
+                   $("#NgayTao").val(data.Ship.Created);                 
+               }, error: function (ret) {
+                   console.log('errorGET');
+               },
+               complete: function () { // Set our complete callback, adding the .hidden class and hiding the spinner.
+               },
+           });
+          
        }
        function loadTableShip() {
            $('table[id=tableship]').each(function () {
