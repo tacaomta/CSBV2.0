@@ -91,6 +91,11 @@
                 success: function (data) {
                     /*toastSuccess("Thành công", "Đăng nhập thành công.");*/
                     console.log(data);
+                    if (data == null) {
+                        $('#error-login-text').text('Tài khoản hoặc mật khẩu không đúng');
+                        $('#error-login-text').removeAttr('hidden');
+                        return;
+                    }
                     sessionStorage.setItem("userLoginUsername", data.UserName);
                     sessionStorage.setItem("userLoginFullname", data.Fullname);
                     sessionStorage.setItem("userLoginID", data.ID);

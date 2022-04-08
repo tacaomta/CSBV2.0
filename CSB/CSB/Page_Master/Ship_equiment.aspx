@@ -229,6 +229,197 @@
             </div>
         </div>
     </div>
+
+    <div class="modal fade" id="model-add-ScrewSystem" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="card auth_form">
+                    <div class="modal-header">
+                        <h6 class="title-modal-banve font-weight-bold">Thêm hệ trục chân vịt</h6>
+                    </div>
+                    <div class="modal-body">
+
+                        <div class="row clearfix ">
+
+                            <div style="width: 100%; float: left; padding: 10px">
+                                <div class="form-group">
+                                    <label class="col-5 control-label"><strong>Tên trục     : </strong></label>
+                                    <div class="col-7">
+                                        <input type="text" class="form-control" id="aScrewSystemName" required value="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="width: 100%; float: left; padding: 10px">
+                                <div class="form-group">
+                                    <label class="col-5 control-label"><strong>Chiều dài hệ trục (mm)     : </strong></label>
+                                    <div class="col-7">
+                                        <input type="text" class="form-control" id="aScrewSystemWidth" value="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="width: 100%; float: left; padding: 10px">
+                                <div class="form-group">
+                                    <label class="col-5 control-label"><strong>Đường kính cơ bản (mm)     : </strong></label>
+                                    <div class="col-7">
+                                        <input type="text" class="form-control" id="aScrewSystemBasicDiameter" required value="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="width: 100%; float: left; padding: 10px">
+                                <div class="form-group">
+                                    <label class="col-5 control-label"><strong>Đường kính ổ đỡ sau (mm)     : </strong></label>
+                                    <div class="col-7">
+                                        <input type="text" class="form-control" id="aScrewSystemBehindDiameter" required value="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="width: 100%; float: left; padding: 10px">
+                                <div class="form-group">
+                                    <label class="col-5 control-label"><strong>Đường kính ổ đỡ giữa (mm)     : </strong></label>
+                                    <div class="col-7">
+                                        <input type="text" class="form-control" id="aScrewSystemMiddleDiameter" required value="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="width: 100%; float: left; padding: 10px">
+                                <div class="form-group">
+                                    <label class="col-5 control-label"><strong>Đường kính ổ đỡ trước (mm)    : </strong></label>
+                                    <div class="col-7">
+                                        <input type="text" class="form-control" id="aScrewSystemFrontDiameter" required value="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="width: 100%; float: left; padding: 10px">
+                                <div class="form-group">
+                                    <label class="col-5 control-label"><strong>Đường kính chân vịt     : </strong></label>
+                                    <div class="col-7">
+                                        <input type="text" class="form-control" id="aScrewSystemDiameter" required value="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="width: 100%; float: left; padding: 10px">
+                                <div class="form-group">
+                                    <label class="col-5 control-label"><strong>Số cánh chân vịt    : </strong></label>
+                                    <div class="col-7">
+                                        <input type="text" class="form-control" id="aScrewSystemWings" required value="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="width: 100%; float: left; padding: 10px">
+                                <div class="form-group">
+                                    <label class="col-5 control-label"><strong>Ghi chú     : </strong></label>
+                                    <div class="col-7">
+                                        <input type="text" class="form-control" id="aScrewSystemNote" required value="">
+                                    </div>
+                                </div>
+                            </div>
+                            <p id="Error_AddScrewSystem" class="textER" hidden="hidden">Lỗi</p>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button onclick="Add_ScrewSystem()" type="submit" class="btn btn-info">Thêm</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="model-update-ScrewSystem" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="card auth_form">
+                    <div class="modal-header">
+                        <h6 class="title-modal-banve font-weight-bold">Sửa thông tin máy phụ</h6>
+                    </div>
+                    <div class="modal-body">
+                        <input type="hidden" class="form-control" id="uScrewSystemID">
+                         <div class="row clearfix ">
+
+                            <div style="width: 100%; float: left; padding: 10px">
+                                <div class="form-group">
+                                    <label class="col-5 control-label"><strong>Tên trục     : </strong></label>
+                                    <div class="col-7">
+                                        <input type="text" class="form-control" id="uScrewSystemName" required value="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="width: 100%; float: left; padding: 10px">
+                                <div class="form-group">
+                                    <label class="col-5 control-label"><strong>Chiều dài hệ trục (mm)     : </strong></label>
+                                    <div class="col-7">
+                                        <input type="text" class="form-control" id="uScrewSystemWidth" value="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="width: 100%; float: left; padding: 10px">
+                                <div class="form-group">
+                                    <label class="col-5 control-label"><strong>Đường kính cơ bản (mm)     : </strong></label>
+                                    <div class="col-7">
+                                        <input type="text" class="form-control" id="uScrewSystemBasicDiameter" required value="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="width: 100%; float: left; padding: 10px">
+                                <div class="form-group">
+                                    <label class="col-5 control-label"><strong>Đường kính ổ đỡ sau (mm)     : </strong></label>
+                                    <div class="col-7">
+                                        <input type="text" class="form-control" id="uScrewSystemBehindDiameter" required value="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="width: 100%; float: left; padding: 10px">
+                                <div class="form-group">
+                                    <label class="col-5 control-label"><strong>Đường kính ổ đỡ giữa (mm)     : </strong></label>
+                                    <div class="col-7">
+                                        <input type="text" class="form-control" id="uScrewSystemMiddleDiameter" required value="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="width: 100%; float: left; padding: 10px">
+                                <div class="form-group">
+                                    <label class="col-5 control-label"><strong>Đường kính ổ đỡ trước (mm)    : </strong></label>
+                                    <div class="col-7">
+                                        <input type="text" class="form-control" id="uScrewSystemFrontDiameter" required value="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="width: 100%; float: left; padding: 10px">
+                                <div class="form-group">
+                                    <label class="col-5 control-label"><strong>Đường kính chân vịt     : </strong></label>
+                                    <div class="col-7">
+                                        <input type="text" class="form-control" id="uScrewSystemDiameter" required value="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="width: 100%; float: left; padding: 10px">
+                                <div class="form-group">
+                                    <label class="col-5 control-label"><strong>Số cánh chân vịt    : </strong></label>
+                                    <div class="col-7">
+                                        <input type="text" class="form-control" id="uScrewSystemWings" required value="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="width: 100%; float: left; padding: 10px">
+                                <div class="form-group">
+                                    <label class="col-5 control-label"><strong>Ghi chú     : </strong></label>
+                                    <div class="col-7">
+                                        <input type="text" class="form-control" id="uScrewSystemNote" required value="">
+                                    </div>
+                                </div>
+                            </div>
+                            <p id="Error_UpdateScrewSystem" class="textER" hidden="hidden">Lỗi</p>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button onclick="Update_ScrewSystem()" type="submit" class="btn btn-info">Lưu</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div class="modal fade" id="model-add-MainEngine" tabindex="-1" role="dialog">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -527,17 +718,25 @@
             <div class="modal-content">
                 <div class="card auth_form">
                     <div class="modal-header">
-                        <h6 class="title-modal-banve font-weight-bold">Sửa thông tin vật tư bảo đảm</h6>
+                        <h6 class="title-modal-banve font-weight-bold">Sửa thông tin máy phụ</h6>
                     </div>
                     <div class="modal-body">
                         <input type="hidden" class="form-control" id="uSecondaryEngineID">
-                        <div class="row clearfix ">
+                         <div class="row clearfix ">
 
                             <div style="width: 100%; float: left; padding: 10px">
                                 <div class="form-group">
-                                    <label class="col-5 control-label"><strong>Loại trang bị     : </strong></label>
+                                    <label class="col-5 control-label"><strong>Động cơ diesel     : </strong></label>
                                     <div class="col-7">
-                                        <input type="text" class="form-control" id="uSecondaryEngineType" name="TenDayDu" required value="">
+                                        <input type="text" class="form-control" id="uSecondaryEngineName" name="TenDayDu" required value="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="width: 100%; float: left; padding: 10px">
+                                <div class="form-group">
+                                    <label class="col-5 control-label"><strong>Năm sản xuất     : </strong></label>
+                                    <div class="col-7">
+                                        <input type="number" class="form-control" id="uSecondaryEngineProductionYear" name="TenDayDu" value="">
                                     </div>
                                 </div>
                             </div>
@@ -551,37 +750,61 @@
                             </div>
                             <div style="width: 100%; float: left; padding: 10px">
                                 <div class="form-group">
-                                    <label class="col-5 control-label"><strong>Tình trạng     : </strong></label>
+                                    <label class="col-5 control-label"><strong>Công suất (KW)     : </strong></label>
                                     <div class="col-7">
-                                        <input type="text" class="form-control" id="uSecondaryEngineState" name="TenDayDu" required value="">
+                                        <input type="text" class="form-control" id="uSecondaryEnginePower" name="TenDayDu" required value="">
                                     </div>
                                 </div>
                             </div>
                             <div style="width: 100%; float: left; padding: 10px">
                                 <div class="form-group">
-                                    <label class="col-5 control-label"><strong>Số lượng     : </strong></label>
+                                    <label class="col-5 control-label"><strong>Định mức tiêu thụ (I/h)     : </strong></label>
                                     <div class="col-7">
-                                        <input type="text" class="form-control" id="uSecondaryEngineQuantity" name="TenDayDu" required value="">
+                                        <input type="text" class="form-control" id="uSecondaryEngineWaste" name="TenDayDu" required value="">
                                     </div>
                                 </div>
                             </div>
                             <div style="width: 100%; float: left; padding: 10px">
                                 <div class="form-group">
-                                    <label class="col-5 control-label"><strong>Đơn vị tính     : </strong></label>
+                                    <label class="col-5 control-label"><strong>Vòng quay lớn nhất (V/P)    : </strong></label>
                                     <div class="col-7">
-                                        <input type="text" class="form-control" id="uSecondaryEngineUnit" name="TenDayDu" required value="">
+                                        <input type="text" class="form-control" id="uSecondaryEngineSpeed" name="TenDayDu" required value="">
                                     </div>
                                 </div>
                             </div>
                             <div style="width: 100%; float: left; padding: 10px">
                                 <div class="form-group">
-                                    <label class="col-5 control-label"><strong>Ghi chú     : </strong></label>
+                                    <label class="col-5 control-label"><strong>Máy phát điện     : </strong></label>
                                     <div class="col-7">
-                                        <input type="text" class="form-control" id="uSecondaryEngineNote" name="TenDayDu" required value="">
+                                        <input type="text" class="form-control" id="uSecondaryEngineMachine" name="TenDayDu" required value="">
                                     </div>
                                 </div>
                             </div>
-                            <p id="Error_UpdSecondaryEngine" class="textER" hidden="hidden">Lỗi</p>
+                            <div style="width: 100%; float: left; padding: 10px">
+                                <div class="form-group">
+                                    <label class="col-5 control-label"><strong>Năm sản xuất     : </strong></label>
+                                    <div class="col-7">
+                                        <input type="text" class="form-control" id="uSecondaryEngineYear" name="TenDayDu" required value="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="width: 100%; float: left; padding: 10px">
+                                <div class="form-group">
+                                    <label class="col-5 control-label"><strong>Xuất xứ     : </strong></label>
+                                    <div class="col-7">
+                                        <input type="text" class="form-control" id="uSecondaryEngineOrigin2" name="TenDayDu" required value="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="width: 100%; float: left; padding: 10px">
+                                <div class="form-group">
+                                    <label class="col-5 control-label"><strong>Công suất (KW)     : </strong></label>
+                                    <div class="col-7">
+                                        <input type="text" class="form-control" id="uSecondaryEnginePower2" name="TenDayDu" required value="">
+                                    </div>
+                                </div>
+                            </div>
+                            <p id="Error_UpdateSecondaryEngine" class="textER" hidden="hidden">Lỗi</p>
                         </div>
                     </div>
                     <div class="modal-footer">
@@ -904,6 +1127,7 @@
                 $('#loader').removeClass('hidden');
                 loadInforShip(Ship_ID);
                 loadDataList_Main_Engine(Ship_ID);
+                loadDataList_Secondary_Engine(Ship_ID)
                 loadDataList_Screw_System(Ship_ID);
                 loadDataList_Other_Equipment(Ship_ID);
                 loadDataList_Supply(Ship_ID);
@@ -1176,13 +1400,14 @@
                     var tabletext = "<thead><tr><th>STT</th><th>TÊN</th><th>CHIỀU RỘNG</th><th>ĐK CƠ BẢN</th><th>ĐK SAU</th><th>ĐK GIỮA</th><th>ĐK TRƯỚC</th><th>ĐƯỜNG KÍNH</th><th>TÁC VỤ</th></tr></thead><tbody>";
                     var i = 1;
                     $.each(data, function (key, item) {
-                        tabletext += "<tr><td>" + i + "</td><td>" + item.Name + "</td><td>" + item.Width + "</td><td>" + item.BasicDiameter + "</td><td>" + item.BehindDiameter + "</td><td>" + item.MiddleDiameter + "</td><td>" + item.FrontDiameter + "</td><td>" + item.Diameter + '</td>' + '<td><button class="btn btn-info " data-toggle="modal" data-target="#model-infordetail-ship"  style="padding: 0;"> <i class="fas fa-edit icon_action" title="Sửa thông tin" ></i></button><button class="btn btn-info btn_Delete_main_engine" style="padding: 0;"><i class="fas fa-trash-alt icon_action" title="Xoá thông tin"></i></button></td></tr>';
+                        tabletext += "<tr><td>" + i + "</td><td>" + item.Name + "</td><td>" + item.Width + "</td><td>" + item.BasicDiameter + "</td><td>" + item.BehindDiameter + "</td><td>" + item.MiddleDiameter + "</td><td>" + item.FrontDiameter + "</td><td>" + item.Diameter + '</td>' + '<td><div style="width: max-content;"><a href="#" class="edit" title="Sửa"><i class="material-icons">&#xE254;</i></a><a href="#" class="delete" title="Xóa"><i class="material-icons">&#xE872;</i></a></div></td></tr>';
                         i = i + 1;
                     });
                     tabletext += "</tbody>";
                     $('#table_chanvit').html(tabletext);
                     console.log(linkapi + "screw_system?imo=" + Ship_ID);
-                    loadTableScrew_System();
+                    loadTable('table_chanvit');
+                    $('#table_chanvit_wrapper .row .col-sm-12').first().html('<button id="btn_addScrewSystem" onclick="btn_addScrewSystem()" class="btn btn-info btn-lg col-6" data-toggle="modal" data-target="#model-add-ScrewSystem" style="height: 35px; padding - top: 4px;margin - top: -4px;">Thêm hệ trục chân vịt</button>');
                 }, error: function (ret) {
                     console.log('errorGET');
                 },
@@ -1193,6 +1418,219 @@
                 },
             });
         };
+
+        function Add_ScrewSystem() {
+
+            var ScrewSystem = {
+                Ship: {
+                    ID: getParameterByName('Ship_ID')
+                },
+                Name: $("#aScrewSystemName").val(),
+                Width: $("#aScrewSystemWidth").val(),
+                BasicDiameter: $("#aScrewSystemBasicDiameter").val(),
+                BehindDiameter: $("#aScrewSystemBehindDiameter").val(),
+                MiddleDiameter: $("#aScrewSystemMiddleDiameter").val(),
+                FrontDiameter: $("#aScrewSystemFrontDiameter").val(),
+                Diameter: $("#aScrewSystemDiameter").val(),
+                ID:"",
+                IMO: "",
+                Note: $("#aScrewSystemNote").val(),
+                Wings: $("#aScrewSystemWings").val()
+            };
+            console.log(ScrewSystem);
+            $.ajax({
+                type: "POST",
+                url: linkapi + "insert_screw",
+                dataType: "json",
+                data: JSON.stringify(ScrewSystem),
+                contentType: "application/json",
+
+                beforeSend: function () { // Before we send the request, remove the .hidden class from the spinner and default to inline-block.
+                    $('#loader').removeClass('hidden');
+                },
+                success: function (data) {
+                    toastSuccess("Thành công", "Thêm hệ trục chân vịt thành công.");
+                    loadDataList_Screw_System(getParameterByName('Ship_ID'));
+                    $('#model-add-ScrewSystem').modal("hide");
+                    loadInforShip(getParameterByName('Ship_ID'));
+                }, error: function (ret) {
+                    toastError("Thất bại", "Thêm không thành công.");
+                },
+                complete: function () { // Set our complete callback, adding the .hidden class and hiding the spinner.
+                    $('#loader').addClass('hidden');
+                },
+            });
+        }
+
+        // ===================================== SECONDARY_ENGINE ========================================
+        function loadDataList_Secondary_Engine(ship_ID) {
+            $.ajax({
+                type: "GET",
+                url: linkapi + "secondary_engine?imo=" + ship_ID,
+                dataType: "json",
+                success: function (data) {
+                    var tabletext = "<thead><tr><th>STT</th><th>ĐỘNG CƠ DIESEL</th><th>NĂM SẢN XUẤT</th><th>XUẤT XỨ</th><th>CÔNG SUẤT (KW)</th><th>ĐỊNH MỨC TIÊU THỤ (I/h)</th><th>VÒNG QUAY LỚN NHẤT (V/P)</th><th>MÁY PHÁT ĐIỆN</th><th>NĂM SẢN XUẤT</th><th>XUẤT XỨ</th><th>TÁC VỤ</th></tr></thead><tbody>";
+                    var i = 1;
+                    $.each(data, function (key, item) {
+                        tabletext += "<tr><td>" + i + "</td><td>" + item.Name + "</td><td>" + item.ProductionYear + "</td><td>" + item.Origin + "</td><td>" + item.Power + "</td><td>" + item.Waste + "</td><td>" + item.Speed + "</td><td>" + item.Machine + "</td><td>" + item.Year + "</td><td>" + item.Origin2 + '</td>' + '<td><div style="width: max-content;"><a href="#" class="edit" title="Sửa" onclick="btn_update_Secondary_Engine(`' + item.ID + '`,`' + item.Name + '`,`' + item.ProductionYear + '`,`' + item.Origin + '`,`' + item.Power + '`,`' + item.Waste + '`,`' + item.Speed + '`,`' + item.Machine + '`,`' + item.Year + '`,`' + item.Origin2 + '`,`' + item.Power2 + '`)" data-toggle="modal" data-target="#model-update-SecondaryEngine"><i class="material-icons">&#xE254;</i></a><a href="#" class="delete" title="Xóa"onclick="btn_delete_SecondaryEngine(`' + item.ID + '`)"><i class="material-icons">&#xE872;</i></a></div></td></tr>';
+                        i = i + 1;
+                    });
+                    tabletext += "</tbody>";
+                    $('#tableSecondaryEngine').html(tabletext);
+                    loadTable('tableSecondaryEngine');
+                    $('#tableSecondaryEngine_wrapper .row .col-sm-12').first().html('<button id="btn_addSecondaryEngine" onclick="btn_addSecondaryEngine()" class="btn btn-info btn-lg col-6" data-toggle="modal" data-target="#model-add-SecondaryEngine" style="height: 35px; padding - top: 4px;margin - top: -4px;">Thêm máy phụ</button>');
+                }, error: function (ret) {
+                    console.log('errorGET');
+                }
+            });
+        }
+
+        function Add_SecondaryEngine() {
+
+            var SecondaryEngine = {
+                Ship: {
+                    ID: getParameterByName('Ship_ID')
+                },
+                Name: $("#aSecondaryEngineName").val(),
+                ProductionYear: $("#aSecondaryEngineProductionYear").val(),
+                Origin: $("#aSecondaryEngineOrigin").val(),
+                Voltage: "",
+                Intensity: "",
+                Power: $("#aSecondaryEnginePower").val(),
+                Waste: $("#aSecondaryEngineWaste").val(),
+                Speed: $("#aSecondaryEngineSpeed").val(),
+                Machine: $("#aSecondaryEngineMachine").val(),
+                Year: $("#aSecondaryEngineYear").val(),
+                Origin2: $("#aSecondaryEngineOrigin2").val(),
+                Power2: $("#aSecondaryEnginePower2").val(),
+                Speed2: "",
+                Cosphi: "",
+                Note: "",
+                Time1: "",
+                State1: "",
+                Time2: "",
+                State2: ""
+            };
+            console.log(SecondaryEngine);
+            $.ajax({
+                type: "POST",
+                url: linkapi + "insert_secondary_engine",
+                dataType: "json",
+                data: JSON.stringify(SecondaryEngine),
+                contentType: "application/json",
+
+                beforeSend: function () { // Before we send the request, remove the .hidden class from the spinner and default to inline-block.
+                    $('#loader').removeClass('hidden');
+                },
+                success: function (data) {
+                    toastSuccess("Thành công", "Thêm máy phụ thành công.");
+                    loadDataList_Secondary_Engine(getParameterByName('Ship_ID'));
+                    $('#model-add-SecondaryEngine').modal("hide");
+                    loadInforShip(getParameterByName('Ship_ID'));
+                }, error: function (ret) {
+                    console.log(ret.responseJSON.Message);
+                    toastError("Thất bại", ret.responseJSON.Message);
+                },
+                complete: function () { // Set our complete callback, adding the .hidden class and hiding the spinner.
+                    $('#loader').addClass('hidden');
+                },
+            });
+        }
+
+        function btn_update_Secondary_Engine(ID,Name,ProductionYear,Origin,Power,Waste,Speed,Machine,Year,Origin2,Power2 ) {
+            $('#uSecondaryEngineID').val(ID);
+            $("#uSecondaryEngineName").val(Name);
+            $("#uSecondaryEngineProductionYear").val(ProductionYear);
+            $("#uSecondaryEngineOrigin").val(Origin);
+            $("#uSecondaryEnginePower").val(Power);
+            $("#uSecondaryEngineWaste").val(Waste);
+            $("#uSecondaryEngineSpeed").val(Speed);
+            $("#uSecondaryEngineMachine").val(Machine);
+            $("#uSecondaryEngineYear").val(Year);
+            $("#uSecondaryEngineOrigin2").val(Origin2);
+            $("#uSecondaryEnginePower2").val(Power2);
+        }
+
+        function btn_addSecondaryEngine() {
+            $("#aSecondaryEngineName").val();
+            $("#aSecondaryEngineProductionYear").val();
+            $("#aSecondaryEngineOrigin").val();
+            $("#aSecondaryEnginePower").val();
+            $("#aSecondaryEngineWaste").val();
+            $("#aSecondaryEngineSpeed").val();
+            $("#aSecondaryEngineMachine").val();
+            $("#aSecondaryEngineYear").val();
+            $("#aSecondaryEngineOrigin2").val();
+            $("#aSecondaryEnginePower2").val();
+        }
+
+        function Update_SecondaryEngine() {
+            var SecondaryEngine = {
+                Ship: {
+                    ID: getParameterByName('Ship_ID')
+                },
+                ID: $("#uSecondaryEngineID").val(),
+                Name: $("#uSecondaryEngineName").val(),
+                ProductionYear: $("#uSecondaryEngineProductionYear").val(),
+                Origin: $("#uSecondaryEngineOrigin").val(),
+                Power: $("#uSecondaryEnginePower").val(),
+                Waste: $("#uSecondaryEngineWaste").val(),
+                Speed: $("#uSecondaryEngineSpeed").val(),
+                Machine: $("#uSecondaryEngineMachine").val(),
+                Year: $("#uSecondaryEngineYear").val(),
+                Origin2: $("#uSecondaryEngineOrigin2").val(),
+                Power2: $("#uSecondaryEnginePower2").val(),
+                Voltage: "",
+                Intensity: "",
+                Speed2: "",
+                Cosphi: "",
+                Note: "",
+                Time1: "",
+                State1: "",
+                Time2: "",
+                State2: ""
+            };
+            $.ajax({
+                type: "PUT",
+                url: linkapi + "update_secondary_engine",
+                dataType: "json",
+                data: JSON.stringify(SecondaryEngine),
+                contentType: "application/json",
+                beforeSend: function () { // Before we send the request, remove the .hidden class from the spinner and default to inline-block.
+                    $('#loader').removeClass('hidden');
+                },
+                success: function (data) {
+                    console.log("okPUT");
+                    toastSuccess("Thành công", "Cập nhật thông tin máy phụ thành công.");
+                }, error: function (ret) {
+                    console.log('errorPUT');
+                },
+                complete: function () { // Set our complete callback, adding the .hidden class and hiding the spinner.
+                    $('#loader').addClass('hidden');
+                    $('#model-update-SecondaryEngine').modal("hide");
+                    loadDataList_Secondary_Engine(getParameterByName('Ship_ID'));
+                },
+            });
+        }
+
+        function btn_delete_SecondaryEngine(ID) {
+            let text = "Bạn có chắc muốn xóa máy phụ này?";
+            if (confirm(text) == true) {
+                $.ajax({
+                    url: linkapi + "delete_secondary_engine/?id=" + ID,
+                    type: "DELETE",
+
+                }).done(function (res) {
+                    loadDataList_Secondary_Engine(getParameterByName('Ship_ID'));
+                    toastSuccess("Thành công", "Xóa máy phụ thành công.");
+                    loadInforShip(getParameterByName('Ship_ID'));
+                }).fail(function (res) {
+                    toastError("Lỗi", "Xóa máy phụ không thành công");
+                })
+            } else {
+
+            }
+        }
 
         // ===================================== OtherEquipment ========================================
         function loadDataList_Other_Equipment(ship_ID) {
