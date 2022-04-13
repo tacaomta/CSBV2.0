@@ -45,7 +45,7 @@
                             <div class="accordion" id="accorShipEquiment">
                                 <div class="accordion-item">
                                     <h2 class="accordion-header" id="headMainEngine">
-                                        <button id="btn_MayChinh" type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collMainEngine">4 - Máy chính </button>
+                                        <button id="btn_MayChinh" type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collMainEngine">0 - Máy chính </button>
                                     </h2>
                                     <div id="collMainEngine" class="accordion-collapse collapse" data-bs-parent="#accorShipEquiment">
                                         <div class="card-body">
@@ -69,18 +69,7 @@
                                                         </thead>
                                                         <tbody>
                                                             <tr>
-                                                                <td>1</td>
-                                                                <td>Tiger Nixon</td>
-                                                                <td>System Architect</td>
-                                                                <td>Edinburgh</td>
-                                                                <td>61</td>
-                                                                <td>2011/04/25</td>
-                                                                <td>$320,800</td>
-                                                                <td>System Architect</td>
-                                                                <td>
-                                                                    <a href="#"><i class="fas fa-edit icon_action" title="Sửa thông tin"></i></a>
-                                                                    <a href="#"><i class="fas fa-trash-alt icon_action" title="Xoá thông tin"></i></a>
-                                                                </td>
+                                                                
                                                             </tr>
 
                                                         </tbody>
@@ -93,7 +82,7 @@
                                 </div>
                                 <div class="accordion-item">
                                     <h2 class="accordion-header" id="headSecondaryEngine">
-                                        <button type="button" id="btn_MayPhu" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collSecondaryEngine">2 - Máy phụ </button>
+                                        <button type="button" id="btn_MayPhu" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collSecondaryEngine">0 - Máy phụ </button>
                                     </h2>
                                     <div id="collSecondaryEngine" class="accordion-collapse collapse" data-bs-parent="#accorShipEquiment">
                                         <div class="card-body">
@@ -108,7 +97,7 @@
                                 </div>
                                 <div class="accordion-item">
                                     <h2 class="accordion-header" id="headScrew">
-                                        <button type="button" id="btn_ChanVit" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collScrew">2 - Hệ trục chân vịt </button>
+                                        <button type="button" id="btn_ChanVit" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collScrew">0 - Hệ trục chân vịt </button>
                                     </h2>
                                     <div id="collScrew" class="accordion-collapse collapse" data-bs-parent="#accorShipEquiment">
                                         <div class="card-body">
@@ -144,7 +133,7 @@
                                 </div>
                                 <div class="accordion-item">
                                     <h2 class="accordion-header" id="headWeapon">
-                                        <button type="button" id="btn_KhiTai" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collWeapon">1 - Khí tài, hàng hải </button>
+                                        <button type="button" id="btn_KhiTai" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collWeapon">0 - Khí tài, hàng hải </button>
                                     </h2>
                                     <div id="collWeapon" class="accordion-collapse collapse" data-bs-parent="#accorShipEquiment">
                                         <div class="card-body">
@@ -177,7 +166,7 @@
                                 </div>
                                 <div class="accordion-item">
                                     <h2 class="accordion-header" id="headMotoBoat">
-                                        <button type="button" id="btn_XuongCT" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collMotoBoat">1 - Xuồng công tác </button>
+                                        <button type="button" id="btn_XuongCT" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collMotoBoat">0 - Xuồng công tác </button>
                                     </h2>
                                     <div id="collMotoBoat" class="accordion-collapse collapse" data-bs-parent="#accorShipEquiment">
                                         <div class="card-body">
@@ -212,7 +201,7 @@
                                 </div>
                                 <div class="accordion-item">
                                     <h2 class="accordion-header" id="headAnchor">
-                                        <button type="button" id="btn_Neo" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collAnchor">4 - Neo, tời neo, xích neo </button>
+                                        <button type="button" id="btn_Neo" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collAnchor">0 - Neo, tời neo, xích neo </button>
                                     </h2>
                                     <div id="collAnchor" class="accordion-collapse collapse" data-bs-parent="#accorShipEquiment">
                                         <div class="card-body">
@@ -243,7 +232,7 @@
                                 </div>
                                 <div class="accordion-item">
                                     <h2 class="accordion-header" id="headLifeSaving">
-                                        <button type="button" id="btn_TBCuuSinh" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collLifeSaving">2 - Trang bị cứu sinh </button>
+                                        <button type="button" id="btn_TBCuuSinh" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collLifeSaving">0 - Trang bị cứu sinh </button>
                                     </h2>
                                     <div id="collLifeSaving" class="accordion-collapse collapse" data-bs-parent="#accorShipEquiment">
                                         <div class="card-body">
