@@ -118,30 +118,20 @@
                                                         <thead>
                                                             <tr>
                                                                 <th>STT</th>
-                                                                <th>TÊN</th>
-                                                                <th>CHIỀU RỘNG</th>
-                                                                <th>ĐK CƠ BẢN</th>
-                                                                <th>ĐK SAU</th>
-                                                                <th>ĐK GIỮA</th>
-                                                                <th>ĐK TRƯỚC</th>
-                                                                <th>ĐƯỜNG KÍNH</th>
+                                                                <th>TÊN TRỤC</th>
+                                                                <th>CHIỀU DÀI HỆ TRỤC</th>
+                                                                <th>ĐK CƠ BẢN (mm)</th>
+                                                                <th>ĐK Ổ ĐỠ SAU (mm)</th>
+                                                                <th>ĐK Ổ ĐỠ GIỮA(mm)</th>
+                                                                <th>ĐK Ổ ĐỠ TRƯỚC(mm)</th>
+                                                                <th>ĐƯỜNG KÍNH CHÂN VỊT (mm)</th>
+                                                                <th>SỐ CÁNH CHÂN VỊT</th>
+                                                                <th>GHI CHÚ</th>
                                                                 <th>TÁC VỤ</th>
                                                             </tr>
                                                         </thead>
                                                         <tbody>
                                                             <tr>
-                                                                <td>1</td>
-                                                                <td>Tiger Nixon</td>
-                                                                <td>System Architect</td>
-                                                                <td>Edinburgh</td>
-                                                                <td>61</td>
-                                                                <td>2011/04/25</td>
-                                                                <td>$320,800</td>
-                                                                <td>System Architect</td>
-                                                                <td>
-                                                                    <a href="#"><i class="fas fa-edit icon_action" title="Sửa thông tin"></i></a>
-                                                                    <a href="#"><i class="fas fa-trash-alt icon_action" title="Xoá thông tin"></i></a>
-                                                                </td>
                                                             </tr>
 
                                                         </tbody>
@@ -158,7 +148,30 @@
                                     </h2>
                                     <div id="collWeapon" class="accordion-collapse collapse" data-bs-parent="#accorShipEquiment">
                                         <div class="card-body">
-                                            <p>HTML stands for HyperText Markup Language. HTML is the standard markup language for describing the structure of web pages. <a href="https://www.tutorialrepublic.com/html-tutorial/" target="_blank">Learn more.</a></p>
+                                            <div class="section-header">
+                                                <div class="col-12">
+                                                    <table id="table_KhiTai" class="table table-bordered table-striped table-md" style="width: 100%">
+                                                        <thead>
+                                                            <tr>
+                                                                <th>STT</th>
+                                                                <th>LOẠI THIẾT BỊ</th>
+                                                                <th>KÍ MÃ HIỆU</th>
+                                                                <th>SỐ LƯỢNG</th>
+                                                                <th>XUẤT XỨ</th>
+                                                                <th>CÔNG XUẤT</th>
+                                                                <th>TÍNH NĂNG NGẮN GỌN</th>
+                                                                <th>TÁC VỤ</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                            </tr>
+
+                                                        </tbody>
+
+                                                    </table>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -168,7 +181,32 @@
                                     </h2>
                                     <div id="collMotoBoat" class="accordion-collapse collapse" data-bs-parent="#accorShipEquiment">
                                         <div class="card-body">
-                                            <p>HTML stands for HyperText Markup Language. HTML is the standard markup language for describing the structure of web pages. <a href="https://www.tutorialrepublic.com/html-tutorial/" target="_blank">Learn more.</a></p>
+                                               <div class="section-header">
+                                                <div class="col-12">
+                                                    <table id="tableMotoBoat" class="table table-bordered table-striped table-md" style="width: 100%">
+                                                        <thead>
+                                                            <tr>
+                                                                <th>STT</th>
+                                                                <th>TÊN</th>
+                                                                <th>SỐ THUYỀN VIÊN MAX</th>
+                                                                <th>DÀI (m)</th>
+                                                                <th>RỘNG (m)</th>
+                                                                <th>TỐC ĐỘ TỐI ĐA (m)</th>
+                                                                <th>TẢI TRỌNG (tấn)</th>
+                                                                <th>KIỂU CHÂN VỊT</th>
+                                                                <th>GHI CHÚ</th>
+                                                                <th>TÁC VỤ</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                            </tr>
+
+                                                        </tbody>
+
+                                                    </table>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -178,7 +216,28 @@
                                     </h2>
                                     <div id="collAnchor" class="accordion-collapse collapse" data-bs-parent="#accorShipEquiment">
                                         <div class="card-body">
-                                            <p>HTML stands for HyperText Markup Language. HTML is the standard markup language for describing the structure of web pages. <a href="https://www.tutorialrepublic.com/html-tutorial/" target="_blank">Learn more.</a></p>
+                                           <div class="section-header">
+                                                <div class="col-12">
+                                                    <table id="tableAnchor" class="table table-bordered table-striped table-md" style="width: 100%">
+                                                        <thead>
+                                                            <tr>
+                                                                <th>STT</th>
+                                                                <th>KIỂU TỜI NEO</th>
+                                                                <th>TRỌNG TẢI (tấn)</th>
+                                                                <th>SỐ LƯỢNG</th>
+                                                                <th>GHI CHÚ</th>
+                                                                <th>TÁC VỤ</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                            </tr>
+
+                                                        </tbody>
+
+                                                    </table>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -188,7 +247,32 @@
                                     </h2>
                                     <div id="collLifeSaving" class="accordion-collapse collapse" data-bs-parent="#accorShipEquiment">
                                         <div class="card-body">
-                                            <p>HTML stands for HyperText Markup Language. HTML is the standard markup language for describing the structure of web pages. <a href="https://www.tutorialrepublic.com/html-tutorial/" target="_blank">Learn more.</a></p>
+                                              <div class="card-body">
+                                            <div class="section-header">
+                                                <div class="col-12">
+                                                    <table id="tableLifeSaving" class="table table-bordered table-striped table-md" style="width: 100%">
+                                                        <thead>
+                                                            <tr>
+                                                                <th>STT</th>
+                                                                <th>LOẠI THIẾT BỊ</th>
+                                                                <th>XUẤT XỨ</th>
+                                                                <th>TÌNH TRẠNG</th>
+                                                                <th>SỐ LƯỢNG</th>
+                                                                <th>ĐƠN VỊ TÍNH</th>
+                                                                <th>GHI CHÚ</th>
+                                                                <th>TÁC VỤ</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                            </tr>
+
+                                                        </tbody>
+
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
                                         </div>
                                     </div>
                                 </div>
@@ -334,8 +418,7 @@
                     </div>
                     <div class="modal-body">
                         <input type="hidden" class="form-control" id="uScrewSystemID">
-                         <div class="row clearfix ">
-
+                        <div class="row clearfix ">
                             <div style="width: 100%; float: left; padding: 10px">
                                 <div class="form-group">
                                     <label class="col-5 control-label"><strong>Tên trục     : </strong></label>
@@ -722,7 +805,7 @@
                     </div>
                     <div class="modal-body">
                         <input type="hidden" class="form-control" id="uSecondaryEngineID">
-                         <div class="row clearfix ">
+                        <div class="row clearfix ">
 
                             <div style="width: 100%; float: left; padding: 10px">
                                 <div class="form-group">
@@ -815,7 +898,522 @@
             </div>
         </div>
     </div>
+    <div class="modal fade" id="model-add-WeaponMarine" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="card auth_form">
+                    <div class="modal-header">
+                        <h6 class="title-modal-banve font-weight-bold">Thêm khí tài, hàng hóa khác</h6>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row clearfix ">
+                            <div style="width: 100%; float: left; padding: 10px">
+                                <div class="form-group">
+                                    <label class="col-5 control-label"><strong>Loại thiết bị    : </strong></label>
+                                    <div class="col-7">
+                                        <input type="text" class="form-control" id="add_WeaponMarine_LoaiTB" name="LoaiThietBi" required value="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="width: 100%; float: left; padding: 10px">
+                                <div class="form-group">
+                                    <label class="col-5 control-label"><strong>Kí mã hiệu   : </strong></label>
+                                    <div class="col-7">
+                                        <input type="text" class="form-control" id="add_WeaponMarine_KiMaHieu" name="KiMaHieu" required value="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="width: 100%; float: left; padding: 10px">
+                                <div class="form-group">
+                                    <label class="col-5 control-label"><strong>Số lượng     : </strong></label>
+                                    <div class="col-7">
+                                        <input type="text" class="form-control" id="add_WeaponMarine_SoLuong" name="SoLuong" required value="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="width: 100%; float: left; padding: 10px">
+                                <div class="form-group">
+                                    <label class="col-5 control-label"><strong>Xuất xứ    : </strong></label>
+                                    <div class="col-7">
+                                        <input type="text" class="form-control" id="add_WeaponMarine_XuatXu" name="XuatXu" required value="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="width: 100%; float: left; padding: 10px">
+                                <div class="form-group">
+                                    <label class="col-5 control-label"><strong>Công Suất   : </strong></label>
+                                    <div class="col-7">
+                                        <input type="text" class="form-control" id="add_WeaponMarine_CongSuat" name="CongXuat" required value="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="width: 100%; float: left; padding: 10px">
+                                <div class="form-group">
+                                    <label class="col-5 control-label"><strong>Tính năng ngắn gọn   : </strong></label>
+                                    <div class="col-7">
+                                        <input type="text" class="form-control" id="add_WeaponMarine_TinhNang" name="TinhNang" required value="">
+                                    </div>
+                                </div>
+                            </div>
+                            <p id="Error_AddWeaponMarine" class="textER" hidden="hidden">Lỗi</p>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button onclick="Add_WeaponMarine()" type="submit" class="btn btn-info">Thêm</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+   
+      <div class="modal fade" id="model-update-WeaponMarine" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="card auth_form">
+                    <div class="modal-header">
+                        <h6 class="title-modal-banve font-weight-bold">Sửa thông tin khí tài, hàng hóa</h6>
+                    </div>
+                    <div class="modal-body">
+                        <input type="hidden" class="form-control" id="update_WeaponMarine_ID">
+                        <div class="row clearfix ">
 
+                            <div style="width: 100%; float: left; padding: 10px">
+                                <div class="form-group">
+                                    <label class="col-5 control-label"><strong>Loại thiết bị   : </strong></label>
+                                    <div class="col-7">
+                                        <input type="text" class="form-control" id="update_WeaponMarine_LoaiTB" name="LoaiThietBi" required value="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="width: 100%; float: left; padding: 10px">
+                                <div class="form-group">
+                                    <label class="col-5 control-label"><strong>Kí mã hiệu   : </strong></label>
+                                    <div class="col-7">
+                                        <input type="text" class="form-control" id="update_WeaponMarine_KiMaHieu" name="KiMaHieu" required value="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="width: 100%; float: left; padding: 10px">
+                                <div class="form-group">
+                                    <label class="col-5 control-label"><strong>Số lượng     : </strong></label>
+                                    <div class="col-7">
+                                        <input type="text" class="form-control" id="update_WeaponMarine_SoLuong" name="Soluong" required value="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="width: 100%; float: left; padding: 10px">
+                                <div class="form-group">
+                                    <label class="col-5 control-label"><strong>Xuất xứ     : </strong></label>
+                                    <div class="col-7">
+                                        <input type="text" class="form-control" id="update_WeaponMarine_XuatXu" name="XuatXu" required value="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="width: 100%; float: left; padding: 10px">
+                                <div class="form-group">
+                                    <label class="col-5 control-label"><strong>Công suất     : </strong></label>
+                                    <div class="col-7">
+                                        <input type="text" class="form-control" id="update_WeaponMarine_CongSuat" name="CongSuat" required value="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="width: 100%; float: left; padding: 10px">
+                                <div class="form-group">
+                                    <label class="col-5 control-label"><strong>Tính năng     : </strong></label>
+                                    <div class="col-7">
+                                        <input type="text" class="form-control" id="update_WeaponMarine_TinhNang" name="TinhNang" required value="">
+                                    </div>
+                                </div>
+                            </div>
+                            <p id="Error_UpdWeaponMarine" class="textER" hidden="hidden">Lỗi</p>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button onclick="Update_WeaponMarinet()" type="submit" class="btn btn-info">Lưu</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="model-add-MotoBoat" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="card auth_form">
+                    <div class="modal-header">
+                        <h6 class="title-modal-banve font-weight-bold">Thêm xuồng công tác</h6>
+                    </div>
+                    <div class="modal-body">
+
+                        <div class="row clearfix ">
+
+                            <div style="width: 100%; float: left; padding: 10px">
+                                <div class="form-group">
+                                    <label class="col-5 control-label"><strong>Tên    : </strong></label>
+                                    <div class="col-7">
+                                        <input type="text" class="form-control" id="add_MotoBoat_Ten" name="Ten" required value="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="width: 100%; float: left; padding: 10px">
+                                <div class="form-group">
+                                    <label class="col-5 control-label"><strong>Số thuyền viên max     : </strong></label>
+                                    <div class="col-7">
+                                        <input type="number" class="form-control" id="add_MotoBoat_SoTV" name="SoThuyenVienMax" value="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="width: 100%; float: left; padding: 10px">
+                                <div class="form-group">
+                                    <label class="col-5 control-label"><strong>Dài (m)   : </strong></label>
+                                    <div class="col-7">
+                                        <input type="text" class="form-control" id="add_MotoBoat_Dai" name="Dai" required value="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="width: 100%; float: left; padding: 10px">
+                                <div class="form-group">
+                                    <label class="col-5 control-label"><strong>Rộng (m)     : </strong></label>
+                                    <div class="col-7">
+                                        <input type="text" class="form-control" id="add_MotoBoat_Rong" name="Rong" required value="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="width: 100%; float: left; padding: 10px">
+                                <div class="form-group">
+                                    <label class="col-5 control-label"><strong>Mớn nước (m)     : </strong></label>
+                                    <div class="col-7">
+                                        <input type="text" class="form-control" id="add_MotoBoat_MonNuoc" name="MonNuoc" required value="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="width: 100%; float: left; padding: 10px">
+                                <div class="form-group">
+                                    <label class="col-5 control-label"><strong>Tốc độ tối đa (dặm/h)    : </strong></label>
+                                    <div class="col-7">
+                                        <input type="text" class="form-control" id="add_MotoBoat_TocDoMax" name="TocDoMax" required value="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="width: 100%; float: left; padding: 10px">
+                                <div class="form-group">
+                                    <label class="col-5 control-label"><strong>Tải trọng (tấn)    : </strong></label>
+                                    <div class="col-7">
+                                        <input type="text" class="form-control" id="add_MotoBoat_TaiTrong" name="TaiTrong" required value="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="width: 100%; float: left; padding: 10px">
+                                <div class="form-group">
+                                    <label class="col-5 control-label"><strong>Máy xuồng   : </strong></label>
+                                    <div class="col-7">
+                                        <input type="text" class="form-control" id="add_MotoBoat_MayXuong" name="MayXuong" required value="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="width: 100%; float: left; padding: 10px">
+                                <div class="form-group">
+                                    <label class="col-5 control-label"><strong>Số lượng máy xuồng    : </strong></label>
+                                    <div class="col-7">
+                                        <input type="text" class="form-control" id="add_MotoBoat_SLMayXuong" name="SoLuongMayXuong" required value="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="width: 100%; float: left; padding: 10px">
+                                <div class="form-group">
+                                    <label class="col-5 control-label"><strong>Kiểu chân vịt    : </strong></label>
+                                    <div class="col-7">
+                                        <input type="text" class="form-control" id="add_MotoBoat_KieuChanVit" name="KieuChanVit" required value="">
+                                    </div>
+                                </div>
+                            </div>
+                             <div style="width: 100%; float: left; padding: 10px">
+                                <div class="form-group">
+                                    <label class="col-5 control-label"><strong>Số trục chân vịt    : </strong></label>
+                                    <div class="col-7">
+                                        <input type="text" class="form-control" id="add_MotoBoat_SoTrucChanVit" name="SoTrucChanVit" required value="">
+                                    </div>
+                                </div>
+                            </div>
+                             <div style="width: 100%; float: left; padding: 10px">
+                                <div class="form-group">
+                                    <label class="col-5 control-label"><strong>Ghi chú    : </strong></label>
+                                    <div class="col-7">
+                                        <input type="text" class="form-control" id="add_MotoBoat_GhiChu" name="GhiChu" required value="">
+                                    </div>
+                                </div>
+                            </div>
+                            <p id="Error_AddMotoBoat" class="textER" hidden="hidden">Lỗi</p>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button onclick="Add_MotoBoat()" type="submit" class="btn btn-info">Thêm</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+     <div class="modal fade" id="model-update-MotoBoat" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="card auth_form">
+                    <div class="modal-header">
+                        <h6 class="title-modal-banve font-weight-bold">Sửa thông tin xuồng công tác</h6>
+                    </div>
+                    <div class="modal-body">
+                        <input type="hidden" class="form-control" id="update_MotoBoat_ID">
+                        <div class="row clearfix ">
+
+                            <div style="width: 100%; float: left; padding: 10px">
+                                <div class="form-group">
+                                    <label class="col-5 control-label"><strong>Tên : </strong></label>
+                                    <div class="col-7">
+                                        <input type="text" class="form-control" id="update_MotoBoat_Ten" name="Ten" required value="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="width: 100%; float: left; padding: 10px">
+                                <div class="form-group">
+                                    <label class="col-5 control-label"><strong>Số thuyền viên tối đa   : </strong></label>
+                                    <div class="col-7">
+                                        <input type="text" class="form-control" id="update_MotoBoat_SoTV" name="SoThanhVienMax" required value="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="width: 100%; float: left; padding: 10px">
+                                <div class="form-group">
+                                    <label class="col-5 control-label"><strong>Dài (m)   : </strong></label>
+                                    <div class="col-7">
+                                        <input type="text" class="form-control" id="update_MotoBoat_Dai" name="Dai" required value="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="width: 100%; float: left; padding: 10px">
+                                <div class="form-group">
+                                    <label class="col-5 control-label"><strong>Rộng (m)   : </strong></label>
+                                    <div class="col-7">
+                                        <input type="text" class="form-control" id="update_MotoBoat_Rong" name="Rong" required value="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="width: 100%; float: left; padding: 10px">
+                                <div class="form-group">
+                                    <label class="col-5 control-label"><strong>Mớn nước (m)   : </strong></label>
+                                    <div class="col-7">
+                                        <input type="text" class="form-control" id="update_MotoBoat_MonNuoc" name="MuonNuoc" required value="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="width: 100%; float: left; padding: 10px">
+                                <div class="form-group">
+                                    <label class="col-5 control-label"><strong>Tốc độ tối đa (dặm/h)    : </strong></label>
+                                    <div class="col-7">
+                                        <input type="text" class="form-control" id="update_MotoBoat_TocDoMax" name="TocDoMax" required value="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="width: 100%; float: left; padding: 10px">
+                                <div class="form-group">
+                                    <label class="col-5 control-label"><strong>Tải trọng (tấn)    : </strong></label>
+                                    <div class="col-7">
+                                        <input type="text" class="form-control" id="update_MotoBoat_TaiTrong" name="TaiTrong" required value="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="width: 100%; float: left; padding: 10px">
+                                <div class="form-group">
+                                    <label class="col-5 control-label"><strong>Máy xuồng    : </strong></label>
+                                    <div class="col-7">
+                                        <input type="text" class="form-control" id="update_MotoBoat_MayXuong" name="MayXuong" required value="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="width: 100%; float: left; padding: 10px">
+                                <div class="form-group">
+                                    <label class="col-5 control-label"><strong>Số lượng máy xuồng    : </strong></label>
+                                    <div class="col-7">
+                                        <input type="text" class="form-control" id="update_MotoBoat_SLMayXuong" name="SoLuongMayXuong" required value="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="width: 100%; float: left; padding: 10px">
+                                <div class="form-group">
+                                    <label class="col-5 control-label"><strong>Kiểu chân vịt   : </strong></label>
+                                    <div class="col-7">
+                                        <input type="text" class="form-control" id="update_MotoBoat_KieuChanVit" name="KieuChanVit" required value="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="width: 100%; float: left; padding: 10px">
+                                <div class="form-group">
+                                    <label class="col-5 control-label"><strong>Số trục chân vịt    : </strong></label>
+                                    <div class="col-7">
+                                        <input type="text" class="form-control" id="update_MotoBoat_SoTrucChanVit" name="SoTrucChanVit" required value="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="width: 100%; float: left; padding: 10px">
+                                <div class="form-group">
+                                    <label class="col-5 control-label"><strong>Ghi chú    : </strong></label>
+                                    <div class="col-7">
+                                        <input type="text" class="form-control" id="update_MotoBoat_GhiChu" name="GhiChu" required value="">
+                                    </div>
+                                </div>
+                            </div>
+                            <p id="Error_UpdMotoBoat" class="textER" hidden="hidden">Lỗi</p>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button onclick="Update_MotoBoat()" type="submit" class="btn btn-info">Lưu</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="model-add-LifeSaving" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="card auth_form">
+                    <div class="modal-header">
+                        <h6 class="title-modal-banve font-weight-bold">Thêm trang bị cứu sinh</h6>
+                    </div>
+                    <div class="modal-body">
+
+                        <div class="row clearfix ">
+
+                            <div style="width: 100%; float: left; padding: 10px">
+                                <div class="form-group">
+                                    <label class="col-5 control-label"><strong>Loại trang bị    : </strong></label>
+                                    <div class="col-7">
+                                        <input type="text" class="form-control" id="add_LifeSaving_LoaiTB" name="LoaiTrangBi" required value="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="width: 100%; float: left; padding: 10px">
+                                <div class="form-group">
+                                    <label class="col-5 control-label"><strong>Xuất xứ    : </strong></label>
+                                    <div class="col-7">
+                                        <input type="number" class="form-control" id="add_LifeSaving_XuatXu" name="XuatXu" value="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="width: 100%; float: left; padding: 10px">
+                                <div class="form-group">
+                                    <label class="col-5 control-label"><strong>Tình trạng   : </strong></label>
+                                    <div class="col-7">
+                                        <input type="text" class="form-control" id="add_LifeSaving_TinhTrang" name="TinhTrang" required value="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="width: 100%; float: left; padding: 10px">
+                                <div class="form-group">
+                                    <label class="col-5 control-label"><strong>Số lượng     : </strong></label>
+                                    <div class="col-7">
+                                        <input type="text" class="form-control" id="add_LifeSaving_SoLuong" name="SoLuong" required value="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="width: 100%; float: left; padding: 10px">
+                                <div class="form-group">
+                                    <label class="col-5 control-label"><strong>Đơn vị tính     : </strong></label>
+                                    <div class="col-7">
+                                        <input type="text" class="form-control" id="add_LifeSaving_DonViTinh" name="DonViTinh" required value="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="width: 100%; float: left; padding: 10px">
+                                <div class="form-group">
+                                    <label class="col-5 control-label"><strong>Ghi chú    : </strong></label>
+                                    <div class="col-7">
+                                        <input type="text" class="form-control" id="add_LifeSaving_GhiChu" name="GhiChu" required value="">
+                                    </div>
+                                </div>
+                            </div>
+                            <p id="Error_AddLifeSaving" class="textER" hidden="hidden">Lỗi</p>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button onclick="Add_LifeSaving()" type="submit" class="btn btn-info">Thêm</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <div class="modal fade" id="model-update-LifeSaving" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="card auth_form">
+                    <div class="modal-header">
+                        <h6 class="title-modal-banve font-weight-bold">Sửa thiết bị cứu sinh</h6>
+                    </div>
+                    <div class="modal-body">
+                        <input type="hidden" class="form-control" id="update_LifeSaving_ID">
+                        <div class="row clearfix ">
+
+                            <div style="width: 100%; float: left; padding: 10px">
+                                <div class="form-group">
+                                    <label class="col-5 control-label"><strong>Loại trang bị     : </strong></label>
+                                    <div class="col-7">
+                                        <input type="text" class="form-control" id="update_LifeSaving_LoaiTB" name="LoaiThietBi" required value="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="width: 100%; float: left; padding: 10px">
+                                <div class="form-group">
+                                    <label class="col-5 control-label"><strong>Xuất xứ     : </strong></label>
+                                    <div class="col-7">
+                                        <input type="text" class="form-control" id="update_LifeSaving_XuatXu" name="XuatXu" required value="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="width: 100%; float: left; padding: 10px">
+                                <div class="form-group">
+                                    <label class="col-5 control-label"><strong>Tình trạng     : </strong></label>
+                                    <div class="col-7">
+                                        <input type="text" class="form-control" id="update_LifeSaving_TinhTrang" name="TinhTrang" required value="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="width: 100%; float: left; padding: 10px">
+                                <div class="form-group">
+                                    <label class="col-5 control-label"><strong>Số lượng     : </strong></label>
+                                    <div class="col-7">
+                                        <input type="text" class="form-control" id="update_LifeSaving_SoLuong" name="SoLuong" required value="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="width: 100%; float: left; padding: 10px">
+                                <div class="form-group">
+                                    <label class="col-5 control-label"><strong>Đơn vị tính     : </strong></label>
+                                    <div class="col-7">
+                                        <input type="text" class="form-control" id="update_LifeSaving_DonViTinh" name="DonViTinh" required value="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="width: 100%; float: left; padding: 10px">
+                                <div class="form-group">
+                                    <label class="col-5 control-label"><strong>Ghi chú     : </strong></label>
+                                    <div class="col-7">
+                                        <input type="text" class="form-control" id="update_LifeSaving_GhiChu" name="GhiChu" required value="">
+                                    </div>
+                                </div>
+                            </div>
+                            <p id="Error_UpdLifeSaving" class="textER" hidden="hidden">Lỗi</p>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button onclick="Update_LifeSaving()" type="submit" class="btn btn-info">Lưu</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="modal fade" id="model-add-OtherEquipment" tabindex="-1" role="dialog">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -1124,19 +1722,26 @@
                 window.location = "http://localhost:44347/Page_Master/Manage_ship?vung=1";
             }
             else {
-                $('#loader').removeClass('hidden');
-                loadInforShip(Ship_ID);
-                loadDataList_Main_Engine(Ship_ID);
-                loadDataList_Secondary_Engine(Ship_ID)
-                loadDataList_Screw_System(Ship_ID);
-                loadDataList_Other_Equipment(Ship_ID);
-                loadDataList_Supply(Ship_ID);
-                $('#loader').addClass('hidden');
+                Load_Equiment();
             }
 
         });
+        function Load_Equiment() {
+            $('#loader').removeClass('hidden');
+            loadInforShip(Ship_ID);
+            loadDataList_Main_Engine(Ship_ID);
+            loadDataList_Secondary_Engine(Ship_ID)
+            loadDataList_Screw_System(Ship_ID);
+            loadDataList_WeaponMarine(Ship_ID);
+            loadDataList_Other_Equipment(Ship_ID);
+            loadDataList_Supply(Ship_ID);
+            loadDataList_MotoBoat(Ship_ID);
+            loadDataList_Anchor(Ship_ID);
+            loadDataList_LifeSaving(Ship_ID);
+            $('#loader').addClass('hidden');
+        }
         function loadInforShip(Ship_ID) {
-
+            debugger
             $.ajax({
                 type: "GET",
                 url: linkapi + "ship_overview?id=" + Ship_ID,
@@ -1174,33 +1779,7 @@
             return decodeURIComponent(results[2].replace(/\+/g, ' '));
         }
         // ===================================== MAIN_ENGINE========================================
-        function loadTableMain_Engine() {
-            $('table[id=table_maychinh]').each(function () {
-                var table1 = $(this).DataTable({
-                    'destroy': true,
-                    lengthChange: false,
-                    "language": {
-                        "sProcessing": "Đang xử lý...",
-                        "sLengthMenu": "Xem _MENU_ mục",
-                        "sZeroRecords": "Không tìm thấy thông tin phù hợp",
-                        "sInfo": "Đang xem _START_ đến _END_ trong tổng số _TOTAL_ mục",
-                        "sInfoEmpty": "Đang xem 0 đến 0 trong tổng số 0 mục",
-                        "sInfoFiltered": "(được lọc từ _MAX_ mục)",
-                        "sInfoPostFix": "",
-                        "sSearch": "Tìm kiếm: ",
-                        "sUrl": "",
-                        "oPaginate": {
-                            "sFirst": "Đầu",
-                            "sPrevious": "Trước",
-                            "sNext": "Tiếp",
-                            "sLast": "Cuối"
-                        }
-                    }
-                });
-                table1.buttons().container()
-                    .appendTo('this_wrapper .col-md-6:eq(0)');
-            });
-        };
+
 
         function loadDataList_Main_Engine(Ship_ID) {
 
@@ -1215,13 +1794,13 @@
                     var tabletext = "<thead><tr><th>STT</th><th>LOẠI MÁY</th><th>NĂM SẢN XUẤT</th><th>XUẤT XỨ</th><th>CÔNG XUẤT(CV)</th><th>ĐỊNH MỨC TIÊU THỤ(l/h)</th><th>VÒNG QUAY LỚN NHẤT (v/p)</th><th>SỐ XY LANH</th><th>ĐK XY LANH</th><th>GHI CHÚ</th><th>TÁC VỤ</th></tr></thead><tbody>";
                     var i = 1;
                     $.each(data, function (key, item) {
-                        tabletext += "<tr><td>" + i + "</td><td>" + item.Name + "</td><td>" + item.ProductionYear + "</td><td>" + item.Origin + "</td><td>" + item.Power + "</td><td>" + item.Waste + "</td><td>" + item.Speed + "</td><td>" + item.Pittong + "</td><td>" + item.Diameter + "</td><td>" + item.Note + '</td>' + '<td><div style="width: max-content;"><a href="#" class="edit" title="Sửa"onclick="btn_update_MainEngine(`' + item.ID + '`,`' + item.Name + '`,`' + item.ProductionYear + '`,`' + item.Origin + '`,`' + item.Power + '`,`' + item.Waste + '`,`' + item.Speed + '`,`' + item.Pittong + '`,`' + item.Diameter + '`,`' + item.Note + '`)" data-toggle="modal" data-target="#model-update-MainEngine" ><i class="material-icons">&#xE254;</i></a><a href="#" class="delete" title="Xóa" onclick="btn_delete_MainEngine(`' + item.ID + '`)"><i class="material-icons">&#xE872;</i></a></div></td></tr>';
+                        tabletext += "<tr><td>" + i + "</td><td>" + item.Name + "</td><td>" + item.ProductionYear + "</td><td>" + item.Origin + "</td><td>" + item.Power + "</td><td>" + item.Waste + "</td><td>" + item.Speed + "</td><td>" + item.Pittong + "</td><td>" + item.Diameter + "</td><td>" + item.Note + '</td>' + '<td><div style="width: max-content;"><a href="#" class="edit" title="Sửa" onclick="btn_update_MainEngine(`' + item.ID + '`,`' + item.Name + '`,`' + item.ProductionYear + '`,`' + item.Origin + '`,`' + item.Power + '`,`' + item.Waste + '`,`' + item.Speed + '`,`' + item.Pittong + '`,`' + item.Diameter + '`,`' + item.Note + '`)" data-toggle="modal" data-target="#model-update-MainEngine" ><i class="material-icons">&#xE254;</i></a><a href="#" class="delete" title="Xóa" onclick="btn_delete_MainEngine(`' + item.ID + '`)"><i class="material-icons">&#xE872;</i></a></div></td></tr>';
                         i = i + 1;
                     });
                     tabletext += "</tbody>";
                     $('#table_maychinh').html(tabletext);
                     console.log(linkapi + "main_engines?imo=" + Ship_ID);
-                    loadTableMain_Engine();
+                    loadTable("table_maychinh");
                     $('#table_maychinh_wrapper .row .col-sm-12').first().html('<button id="btn_addMayChinh" onclick="btn_addMayChinh()" class="btn btn-info btn-lg col-6" data-toggle="modal" data-target="#model-add-MainEngine" style="height: 35px; padding - top: 4px;margin - top: -4px;">Thêm máy chính</button>');
                 }, error: function (ret) {
                     console.log('errorGET');
@@ -1229,7 +1808,7 @@
                 complete: function () { // Set our complete callback, adding the .hidden class and hiding the spinner.
 
                     $('#loader').addClass('hidden');
-                    $('#model-edit-user').addClass('hidden');
+
                 },
             });
         };
@@ -1265,7 +1844,7 @@
                 },
                 success: function (data) {
                     toastSuccess("Thành công", "Thêm máy chính thành công.");
-                    loadDataList_Main_Engine(getParameterByName('Ship_ID'));
+                    Load_Equiment();
                     $('#model-add-MainEngine').modal("hide");
                 }, error: function (ret) {
                     console.log(ret.responseJSON.Message);
@@ -1330,7 +1909,7 @@
                 success: function (data) {
                     console.log("okPUT");
                     toastSuccess("Thành công", "Cập nhật thông tin máy chính thành công.");
-                    loadDataList_Main_Engine(Ship_ID);
+                    Load_Equiment();
                     $('#model-update-MainEngine').modal("hide");
                 }, error: function (ret) {
                     console.log('errorPUT');
@@ -1349,7 +1928,7 @@
                     type: "DELETE",
 
                 }).done(function (res) {
-                    loadDataList_Main_Engine(Ship_ID);
+                    Load_Equiment();
                     toastSuccess("Thành công", "Xóa máy chính thành công.");
                 }).fail(function (res) {
                     toastError("Lỗi", "Xóa máy chính không thành công");
@@ -1359,33 +1938,6 @@
             }
         }
         // ===================================== ScrewSystem ========================================
-        function loadTableScrew_System() {
-            $('table[id=table_chanvit]').each(function () {
-                var table1 = $(this).DataTable({
-                    'destroy': true,
-                    lengthChange: false,
-                    "language": {
-                        "sProcessing": "Đang xử lý...",
-                        "sLengthMenu": "Xem _MENU_ mục",
-                        "sZeroRecords": "Không tìm thấy thông tin phù hợp",
-                        "sInfo": "Đang xem _START_ đến _END_ trong tổng số _TOTAL_ mục",
-                        "sInfoEmpty": "Đang xem 0 đến 0 trong tổng số 0 mục",
-                        "sInfoFiltered": "(được lọc từ _MAX_ mục)",
-                        "sInfoPostFix": "",
-                        "sSearch": "Tìm kiếm: ",
-                        "sUrl": "",
-                        "oPaginate": {
-                            "sFirst": "Đầu",
-                            "sPrevious": "Trước",
-                            "sNext": "Tiếp",
-                            "sLast": "Cuối"
-                        }
-                    }
-                });
-                table1.buttons().container()
-                    .appendTo('this_wrapper .col-md-6:eq(0)');
-            });
-        };
 
         function loadDataList_Screw_System(Ship_ID) {
 
@@ -1397,10 +1949,10 @@
                     $('#loader').removeClass('hidden');
                 },
                 success: function (data) {
-                    var tabletext = "<thead><tr><th>STT</th><th>TÊN</th><th>CHIỀU RỘNG</th><th>ĐK CƠ BẢN</th><th>ĐK SAU</th><th>ĐK GIỮA</th><th>ĐK TRƯỚC</th><th>ĐƯỜNG KÍNH</th><th>TÁC VỤ</th></tr></thead><tbody>";
+                    var tabletext = "<thead><tr><th>STT</th><th>TÊN TRỤC</th><th>HIỀU DÀI HỆ TRỤC</th><th>ĐK CƠ BẢN (mm)</th><th>ĐK Ổ ĐỠ SAU (mm)</th><th>ĐK Ổ ĐỠ GIỮA(mm)</th><th>ĐK Ổ ĐỠ TRƯỚC(mm)</th><th>ĐƯỜNG KÍNH CHÂN VỊT (mm)</th><th>SỐ CÁNH CHÂN VỊT</th><th>GHI CHÚ</th><th>TÁC VỤ</th></tr></thead><tbody>";
                     var i = 1;
                     $.each(data, function (key, item) {
-                        tabletext += "<tr><td>" + i + "</td><td>" + item.Name + "</td><td>" + item.Width + "</td><td>" + item.BasicDiameter + "</td><td>" + item.BehindDiameter + "</td><td>" + item.MiddleDiameter + "</td><td>" + item.FrontDiameter + "</td><td>" + item.Diameter + '</td>' + '<td><div style="width: max-content;"><a href="#" class="edit" title="Sửa"><i class="material-icons">&#xE254;</i></a><a href="#" class="delete" title="Xóa"><i class="material-icons">&#xE872;</i></a></div></td></tr>';
+                        tabletext += "<tr><td>" + i + "</td><td>" + item.Name + "</td><td>" + item.Width + "</td><td>" + item.BasicDiameter + "</td><td>" + item.BehindDiameter + "</td><td>" + item.MiddleDiameter + "</td><td>" + item.FrontDiameter + "</td><td>" + item.Diameter + "</td><td>" + item.Wings + "</td><td>" + item.Note + '</td>' + '<td><div style="width: max-content;"><a href="#" class="edit" onclick="btn_update_ScrewSystem(`' + item.ID + '`,`' + item.Name + '`,`' + item.Width + '`,`' + item.BasicDiameter + '`,`' + item.BehindDiameter + '`,`' + item.MiddleDiameter + '`,`' + item.FrontDiameter + '`,`' + item.Diameter + '`,`' + item.Wings + '`,`' + item.Note + '`)"  title="Sửa" data-toggle="modal" data-target="#model-update-ScrewSystem"><i class="material-icons">&#xE254;</i></a><a href="#" class="delete" title="Xóa" onclick="btn_delete_ScrewSystem(`' + item.ID + '`)"><i class="material-icons">&#xE872;</i></a></div></td></tr>';
                         i = i + 1;
                     });
                     tabletext += "</tbody>";
@@ -1418,7 +1970,18 @@
                 },
             });
         };
-
+        function btn_addScrewSystem() {
+            $('#uScrewSystemID').val();
+            $("#uScrewSystemName").val();
+            $("#uScrewSystemWidth").val();
+            $("#uScrewSystemBasicDiameter").val();
+            $("#uScrewSystemBehindDiameter").val();
+            $("#uScrewSystemMiddleDiameter").val();
+            $("#uScrewSystemFrontDiameter").val();
+            $("#uScrewSystemDiameter").val();
+            $("#uScrewSystemWings").val();
+            $("#uScrewSystemNote").val();
+        }
         function Add_ScrewSystem() {
 
             var ScrewSystem = {
@@ -1432,7 +1995,7 @@
                 MiddleDiameter: $("#aScrewSystemMiddleDiameter").val(),
                 FrontDiameter: $("#aScrewSystemFrontDiameter").val(),
                 Diameter: $("#aScrewSystemDiameter").val(),
-                ID:"",
+                ID: "",
                 IMO: "",
                 Note: $("#aScrewSystemNote").val(),
                 Wings: $("#aScrewSystemWings").val()
@@ -1450,9 +2013,8 @@
                 },
                 success: function (data) {
                     toastSuccess("Thành công", "Thêm hệ trục chân vịt thành công.");
-                    loadDataList_Screw_System(getParameterByName('Ship_ID'));
                     $('#model-add-ScrewSystem').modal("hide");
-                    loadInforShip(getParameterByName('Ship_ID'));
+                    Load_Equiment();
                 }, error: function (ret) {
                     toastError("Thất bại", "Thêm không thành công.");
                 },
@@ -1462,6 +2024,76 @@
             });
         }
 
+        function btn_update_ScrewSystem(ID, Name, Width, BasicDiameter, BehindDiameter, MiddleDiameter, FrontDiameter, Diameter, Wings, Note) {
+            debugger
+            $('#uScrewSystemID').val(ID);
+            $("#uScrewSystemName").val(Name);
+            $("#uScrewSystemWidth").val(Width);
+            $("#uScrewSystemBasicDiameter").val(BasicDiameter);
+            $("#uScrewSystemBehindDiameter").val(BehindDiameter);
+            $("#uScrewSystemMiddleDiameter").val(MiddleDiameter);
+            $("#uScrewSystemFrontDiameter").val(FrontDiameter);
+            $("#uScrewSystemDiameter").val(Diameter);
+            $("#uScrewSystemWings").val(Wings);
+            $("#uScrewSystemNote").val(Note);
+        }
+
+        function Update_ScrewSystem() {
+            var New_ScrewSystem = {
+                ID: $('#uScrewSystemID').val(),
+                Name: $("#uScrewSystemName").val(),
+                Width: $("#uScrewSystemWidth").val(),
+                BasicDiameter: $("#uScrewSystemBasicDiameter").val(),
+                BehindDiameter: $("#uScrewSystemBehindDiameter").val(),
+                MiddleDiameter: $("#uScrewSystemMiddleDiameter").val(),
+                FrontDiameter: $("#uScrewSystemFrontDiameter").val(),
+                Diameter: $("#uScrewSystemDiameter").val(),
+                Wings: $("#uScrewSystemWings").val(),
+                Note: $("#uScrewSystemNote").val(),
+                Ship: {
+                    ID: Ship_ID,
+                },
+            };
+            debugger
+            $.ajax({
+                type: "PUT",
+                url: linkapi + "update_screw",
+                dataType: "json",
+                data: JSON.stringify(New_ScrewSystem),
+                contentType: "application/json",
+                beforeSend: function () { // Before we send the request, remove the .hidden class from the spinner and default to inline-block.
+                    $('#loader').removeClass('hidden');
+                },
+                success: function (data) {
+                    console.log("okPUT");
+                    toastSuccess("Thành công", "Cập nhật thông tin hệ thống chân vịt thành công.");
+                    $('#model-update-ScrewSystem').modal("hide");
+                    Load_Equiment();
+                }, error: function (ret) {
+                    console.log('errorPUT');
+                },
+                complete: function () { // Set our complete callback, adding the .hidden class and hiding the spinner.
+                    $('#loader').addClass('hidden');
+                },
+            });
+        }
+        function btn_delete_ScrewSystem(ID) {
+            let text = "Bạn có chắc muốn xóa hệ trục chân vịt này?";
+            if (confirm(text) == true) {
+                $.ajax({
+                    url: linkapi + "delete_screw?id=" + ID,
+                    type: "DELETE",
+
+                }).done(function (res) {
+                    Load_Equiment();
+                    toastSuccess("Thành công", "Xóa hệ trục chân vịt thành công.");
+                }).fail(function (res) {
+                    toastError("Lỗi", "Xóa hệ trục chân vịt không thành công");
+                })
+            } else {
+
+            }
+        }
         // ===================================== SECONDARY_ENGINE ========================================
         function loadDataList_Secondary_Engine(ship_ID) {
             $.ajax({
@@ -1524,9 +2156,8 @@
                 },
                 success: function (data) {
                     toastSuccess("Thành công", "Thêm máy phụ thành công.");
-                    loadDataList_Secondary_Engine(getParameterByName('Ship_ID'));
                     $('#model-add-SecondaryEngine').modal("hide");
-                    loadInforShip(getParameterByName('Ship_ID'));
+                    Load_Equiment();
                 }, error: function (ret) {
                     console.log(ret.responseJSON.Message);
                     toastError("Thất bại", ret.responseJSON.Message);
@@ -1537,7 +2168,7 @@
             });
         }
 
-        function btn_update_Secondary_Engine(ID,Name,ProductionYear,Origin,Power,Waste,Speed,Machine,Year,Origin2,Power2 ) {
+        function btn_update_Secondary_Engine(ID, Name, ProductionYear, Origin, Power, Waste, Speed, Machine, Year, Origin2, Power2) {
             $('#uSecondaryEngineID').val(ID);
             $("#uSecondaryEngineName").val(Name);
             $("#uSecondaryEngineProductionYear").val(ProductionYear);
@@ -1602,13 +2233,14 @@
                 success: function (data) {
                     console.log("okPUT");
                     toastSuccess("Thành công", "Cập nhật thông tin máy phụ thành công.");
+                    Load_Equiment();
                 }, error: function (ret) {
                     console.log('errorPUT');
                 },
                 complete: function () { // Set our complete callback, adding the .hidden class and hiding the spinner.
                     $('#loader').addClass('hidden');
                     $('#model-update-SecondaryEngine').modal("hide");
-                    loadDataList_Secondary_Engine(getParameterByName('Ship_ID'));
+
                 },
             });
         }
@@ -1621,9 +2253,8 @@
                     type: "DELETE",
 
                 }).done(function (res) {
-                    loadDataList_Secondary_Engine(getParameterByName('Ship_ID'));
+                    Load_Equiment();
                     toastSuccess("Thành công", "Xóa máy phụ thành công.");
-                    loadInforShip(getParameterByName('Ship_ID'));
                 }).fail(function (res) {
                     toastError("Lỗi", "Xóa máy phụ không thành công");
                 })
@@ -1631,7 +2262,441 @@
 
             }
         }
+        // ===================================== WeaponMarine========================================
+        function loadDataList_WeaponMarine(ship_ID) {
+            $.ajax({
+                type: "GET",
+                url: linkapi + "weapon_marines?imo=" + ship_ID,
+                dataType: "json",
+                success: function (data) {
+                    var tabletext = "<thead><tr><th>STT</th><th>LOẠI TRANG BỊ</th><th>KÍ MÃ HIỆU</th><th>SỐ LƯỢNG</th><th>XUẤT XỨ</th><th>CÔNG XUẤT</th><th>TÍNH NĂNG NGẮN GỌN</th><th>TÁC VỤ</th></tr></thead><tbody>";
+                    var i = 1;
+                    $.each(data, function (key, item) {
+                        tabletext += "<tr><td>" + i + "</td><td>" + item.Name + "</td><td>" + item.Type + "</td><td>" + item.Quantity + "</td><td>" + item.Origin + "</td><td>" + item.Power + "</td><td>" + item.Function + '</td>' + '<td><div style="width: max-content;"><a href="#" class="edit" title="Sửa" onclick="btn_update_WeaponMarine(`' + item.ID + '`,`' + item.Name + '`,`' + item.Type + '`,`' + item.Quantity + '`,`' + item.Origin + '`,`' + item.Power + '`,`' + item.Function + '`)" data-toggle="modal" data-target="#model-update-WeaponMarine"><i class="material-icons">&#xE254;</i></a><a href="#" class="delete" title="Xóa"onclick="btn_delete_WeaponMarine(`' + item.ID + '`)"><i class="material-icons">&#xE872;</i></a></div></td></tr>';
+                        i = i + 1;
+                    });
+                    tabletext += "</tbody>";
+                    $('#table_KhiTai').html(tabletext);
+                    loadTable('table_KhiTai');
+                    $('#table_KhiTai_wrapper .row .col-sm-12').first().html('<button id="btn_addWeaponMarine" onclick="btn_addWeaponMarine()" class="btn btn-info btn-lg col-6" data-toggle="modal" data-target="#model-add-WeaponMarine" style="height: 35px; padding - top: 4px;margin - top: -4px;">Thêm khí tài, hàng hóa</button>');
+                }, error: function (ret) {
+                    console.log('errorGET');
+                }
+            });
+        }
+        function btn_addWeaponMarine() {
+            $('#add_WeaponMarine_LoaiTB').val();
+            $('#add_WeaponMarine_KiMaHieu').val();
+            $('#add_WeaponMarine_SoLuong').val();
+            $('#add_WeaponMarine_XuatXu').val();
+            $('#add_WeaponMarine_CongXuat').val();
+            $('#add_WeaponMarine_TinhNang').val();
+        }
+        function Add_WeaponMarine() {
+            var New_WeaponMarine = {
+                Ship: {
+                    ID: Ship_ID
+                },
+                Name: $("#add_WeaponMarine_LoaiTB").val(),
+                Type: $("#add_WeaponMarine_KiMaHieu").val(),
+                Quantity: $("#add_WeaponMarine_SoLuong").val(),
+                Origin: $("#add_WeaponMarine_XuatXu").val(),
+                Power: $("#add_WeaponMarine_CongSuat").val(),
+                Function: $("#add_WeaponMarine_TinhNang").val(),
+            };
+            $.ajax({
+                type: "POST",
+                url: linkapi + "insert_weapon",
+                dataType: "json",
+                data: JSON.stringify(New_WeaponMarine),
+                contentType: "application/json",
+                beforeSend: function () { // Before we send the request, remove the .hidden class from the spinner and default to inline-block.
+                    $('#loader').removeClass('hidden');
+                },
+                success: function (data) {
+                    Load_Equiment();
+                    toastSuccess("Thành công", "Thêm khí tài, hàng hóa thành công.");
+                    $('#model-add-WeaponMarine').modal("hide");
+                }, error: function (ret) {
+                    console.log(ret.responseJSON.Message);
+                    toastError("Thất bại", ret.responseJSON.Message);
+                },
+                complete: function () { // Set our complete callback, adding the .hidden class and hiding the spinner.
+                    $('#loader').addClass('hidden');
+                },
+            });
+        }
 
+        function btn_update_WeaponMarine(ID, Name, Type, Quantity, Origin, Power, Function) {
+            $('#update_WeaponMarine_ID').val(ID);
+            $('#update_WeaponMarine_LoaiTB').val(Name);
+            $('#update_WeaponMarine_KiMaHieu').val(Type);
+            $('#update_WeaponMarine_SoLuong').val(Quantity);
+            $('#update_WeaponMarine_XuatXu').val(Origin);
+            $('#update_WeaponMarine_CongSuat').val(Power);
+            $('#update_WeaponMarine_TinhNang').val(Function);
+        }
+
+        function Update_WeaponMarinet() {
+            var New_WeaponMarinet = {
+                Ship: {
+                    ID: Ship_ID
+                },
+                ID: $("#update_WeaponMarine_ID").val(),
+                Name: $("#update_WeaponMarine_LoaiTB").val(),
+                Type: $("#update_WeaponMarine_KiMaHieu").val(),
+                Quantity: $("#update_WeaponMarine_SoLuong").val(),
+                Origin: $("#update_WeaponMarine_XuatXu").val(),
+                Power: $("#update_WeaponMarine_CongSuat").val(),
+                Function: $("#update_WeaponMarine_TinhNang").val(),
+            };
+            debugger
+            $.ajax({
+                type: "PUT",
+                url: linkapi + "update_weapon",
+                dataType: "json",
+                data: JSON.stringify(New_WeaponMarinet),
+                contentType: "application/json",
+                beforeSend: function () { // Before we send the request, remove the .hidden class from the spinner and default to inline-block.
+                    $('#loader').removeClass('hidden');
+                },
+                success: function (data) {
+                    console.log("okPUT");
+                    toastSuccess("Thành công", "Cập nhật khí tài, hàng hóa thành công.");
+                    Load_Equiment();
+                }, error: function (ret) {
+                    console.log('errorPUT');
+                },
+                complete: function () { // Set our complete callback, adding the .hidden class and hiding the spinner.
+                    $('#loader').addClass('hidden');
+                    $('#model-update-WeaponMarine').modal("hide");
+                },
+            });
+        }
+        function btn_delete_WeaponMarine(ID){
+            let text = "Bạn có chắc muốn xóa khí tài, hàng hóa này?";
+            if (confirm(text) == true) {
+                $.ajax({
+                    url: linkapi + "delete_weapon?id=" + ID,
+                    type: "DELETE",
+
+                }).done(function (res) {
+                    toastSuccess("Thành công", "Xóa khí tài, hàng hóa thành công.");
+                    Load_Equiment();
+                }).fail(function (res) {
+                    toastError("Lỗi", "Xóa khí tài, hàng hóa không thành công");
+                })
+            } else {
+
+            }
+        }
+
+        // =====================================MotoBoat ========================================
+        function loadDataList_MotoBoat(ship_ID) {
+            $.ajax({
+                type: "GET",
+                url: linkapi + "moto_boats?imo=" + ship_ID,
+                dataType: "json",
+                success: function (data) {
+                    var tabletext = "<thead><tr><th>STT</th><th>TÊN</th><th>SỐ THUYỀN VIÊN MAX</th><th>DÀI (m)</th><th>RỘNG (m)</th><th>TỐC ĐỘ TỐI ĐA (m)</th><th>TẢI TRỌNG (tấn)</th><th>KIỂU CHÂN VỊT</th><th>GHI CHÚ</th><th>TÁC VỤ</th></tr></thead><tbody>";
+                    var i = 1;
+                    $.each(data, function (key, item) {
+                        tabletext += "<tr><td>" + i + "</td><td>" + item.Name + "</td><td>" + item.Personel + "</td><td>" + item.Height + "</td><td>" + item.Width + "</td><td>" + item.Speed + "</td><td>" + item.Width + "</td><td>" + item.ScrewType + "</td><td>" + item.Note + '</td>' + '<td><div style="width: max-content;"><a href="#" class="edit" title="Sửa" onclick="btn_update_MotoBoat(`' + item.ID + '`,`' + item.Name + '`,`' + item.Personel + '`,`' + item.EngineType + '`,`' + item.EngineNumber + '`,`' + item.ScrewType + '`,`' + item.ScrewNumber + '`,`' + item.Note + '`,`' + item.Width + '`,`' + item.Height + '`,`' + item.Deep + '`,`' + item.Speed + '`,`' + item.Weight + '`)" data-toggle="modal" data-target="#model-update-MotoBoat"><i class="material-icons">&#xE254;</i></a><a href="#" class="delete" title="Xóa"onclick="btn_delete_MotoBoat(`' + item.ID + '`)"><i class="material-icons">&#xE872;</i></a></div></td></tr>';
+                        i = i + 1;
+                    });
+                    tabletext += "</tbody>";
+                    $('#tableMotoBoat').html(tabletext);
+                    loadTable('tableMotoBoat');
+                    $('#tableMotoBoat_wrapper .row .col-sm-12').first().html('<button id="btn_addMotoBoat" onclick="btn_addMotoBoat()" class="btn btn-info btn-lg col-6" data-toggle="modal" data-target="#model-add-MotoBoat" style="height: 35px; padding - top: 4px;margin - top: -4px;">Thêm xuồng công tác</button>');
+                }, error: function (ret) {
+                    console.log('errorGET');
+                }
+            });
+        }
+
+        function btn_addMotoBoat() {
+            $('#add_MotoBoat_Ten').val("");
+            $('#add_MotoBoat_SoTV').val("");
+            $('#add_MotoBoat_Dai').val("");
+            $('#add_MotoBoat_Rong').val("");
+            $('#add_MotoBoat_MonNuoc').val("");
+            $('#add_MotoBoat_TocDoMax').val("");
+            $('#add_MotoBoat_TaiTrong').val("");
+            $('#add_MotoBoat_MayXuong').val("");
+            $('#add_MotoBoat_SLMayXuong').val("");
+            $('#add_MotoBoat_KieuChanVit').val("");
+            $('#add_MotoBoat_SoTrucChanVit').val("");
+            $('#add_MotoBoat_GhiChu').val("");
+        }
+
+        function Add_MotoBoat() {
+            debugger
+            var New_MotoBoat = {
+                Ship: {
+                    ID: Ship_ID
+                },
+                Name: $('#add_MotoBoat_Ten').val(),
+                Personel: $('#add_MotoBoat_SoTV').val(),
+                EngineType: $('#add_MotoBoat_MayXuong').val(),
+                EngineNumber: $('#add_MotoBoat_SLMayXuong').val(),
+                ScrewType: $('#add_MotoBoat_KieuChanVit').val(),
+                ScrewNumber: $('#add_MotoBoat_SoTrucChanVit').val(),
+                Note: $('#add_MotoBoat_GhiChu').val(),
+                Width: $('#add_MotoBoat_Rong').val(),
+                Height: $('#add_MotoBoat_Dai').val(),
+                Deep: $('#add_MotoBoat_MonNuoc').val(),
+                Speed: $('#add_MotoBoat_TocDoMax').val(),
+                Weight: $('#add_MotoBoat_TaiTrong').val()
+            };
+            $.ajax({
+                type: "POST",
+                url: linkapi + "insert_moto_boat",
+                dataType: "json",
+                data: JSON.stringify(New_MotoBoat),
+                contentType: "application/json",
+                beforeSend: function () { // Before we send the request, remove the .hidden class from the spinner and default to inline-block.
+                    $('#loader').removeClass('hidden');
+                },
+                success: function (data) {
+                    Load_Equiment();
+                    toastSuccess("Thành công", "Thêm máy xuồng thành công.");
+                    $('#model-add-MotoBoat').modal("hide");
+                }, error: function (ret) {
+                    console.log(ret.responseJSON.Message);
+                    toastError("Thất bại", ret.responseJSON.Message);
+                },
+                complete: function () { // Set our complete callback, adding the .hidden class and hiding the spinner.
+                    $('#loader').addClass('hidden');
+                },
+            });
+        }
+        function btn_update_MotoBoat(ID, Name, Personel, EngineType, EngineNumber, ScrewType, ScrewNumber, Note, Width, Height, Deep, Speed, Weight) {
+            $('#update_MotoBoat_ID').val(ID);
+            $('#update_MotoBoat_Ten').val(Name);
+            $('#update_MotoBoat_SoTV').val(Personel);
+            $('#update_MotoBoat_Dai').val(Height);
+            $('#update_MotoBoat_Rong').val(Width);
+            $('#update_MotoBoat_MonNuoc').val(Deep);
+            $('#update_MotoBoat_TocDoMax').val(Speed);
+            $('#update_MotoBoat_TaiTrong').val(Weight);
+            $('#update_MotoBoat_MayXuong').val(EngineType);
+            $('#update_MotoBoat_SLMayXuong').val(EngineNumber);
+            $('#update_MotoBoat_KieuChanVit').val(ScrewType);
+            $('#update_MotoBoat_SoTrucChanVit').val(ScrewNumber);
+            $('#update_MotoBoat_GhiChu').val(Note);
+        }
+
+        function Update_MotoBoat() {
+            debugger
+            var New_MotoBoat = {
+                Ship: {
+                    ID: Ship_ID
+                },
+                ID: $('#update_MotoBoat_ID').val(),
+                Name: $('#update_MotoBoat_Ten').val(),
+                Personel: $('#update_MotoBoat_SoTV').val(),
+                EngineType: $('#update_MotoBoat_MayXuong').val(),
+                EngineNumber: $('#update_MotoBoat_SLMayXuong').val(),
+                ScrewType: $('#update_MotoBoat_KieuChanVit').val(),
+                ScrewNumber: $('#update_MotoBoat_SoTrucChanVit').val(),
+                Note: $('#update_MotoBoat_GhiChu').val(),
+                Width: $('#update_MotoBoat_Rong').val(),
+                Height: $('#update_MotoBoat_Dai').val(),
+                Deep: $('#update_MotoBoat_MonNuoc').val(),
+                Speed: $('#update_MotoBoat_TocDoMax').val(),
+                Weight: $('#update_MotoBoat_TaiTrong').val()
+            };
+            $.ajax({
+                type: "PUT",
+                url: linkapi + "update_moto_boat",
+                dataType: "json",
+                data: JSON.stringify(New_MotoBoat),
+                contentType: "application/json",
+                beforeSend: function () { // Before we send the request, remove the .hidden class from the spinner and default to inline-block.
+                    $('#loader').removeClass('hidden');
+                },
+                success: function (data) {
+                    console.log("okPUT");
+                    toastSuccess("Thành công", "Cập nhật xuồng công tác thành công.");
+                    Load_Equiment();
+                }, error: function (ret) {
+                    console.log('errorPUT');
+                },
+                complete: function () { // Set our complete callback, adding the .hidden class and hiding the spinner.
+                    $('#loader').addClass('hidden');
+                    $('#model-update-MotoBoat').modal("hide");
+                },
+            });
+        }
+
+        function btn_delete_MotoBoat(ID) {
+            let text = "Bạn có chắc muốn xóa xuồng công tác này?";
+            if (confirm(text) == true) {
+                $.ajax({
+                    url: linkapi + "delete_moto_boat?id=" + ID,
+                    type: "DELETE",
+
+                }).done(function (res) {
+                    toastSuccess("Thành công", "Xóa xuồng công tác thành công.");
+                    Load_Equiment();
+                }).fail(function (res) {
+                    toastError("Lỗi", "Xóa xuồng công tác không thành công");
+                })
+            } else {
+
+            }
+        }
+        // ===================================== Anchor ============================================
+        function loadDataList_Anchor(ship_ID) {
+            $.ajax({
+                type: "GET",
+                url: linkapi + "anchor?imo=" + ship_ID,
+                dataType: "json",
+                success: function (data) {
+                    var tabletext = "<thead><tr><th>STT</th><th>KIỂU TỜI NEO</th><th>TRỌNG TẢI (tấn)</th><th>SỐ LƯỢNG</th><th>GHI CHÚ</th><th>TÁC VỤ</th></tr></thead><tbody>";
+                    var i = 1;
+                    $.each(data, function (key, item) {
+                        tabletext += "<tr><td>" + i + "</td><td>" + item.Type + "</td><td>" + item.Load + "</td><td>" + item.Quantity + "</td><td>" + item.Note + '</td>' + '<td><div style="width: max-content;"><a href="#" class="edit" title="Sửa" onclick="btn_update_Anchor(`' + item.ID + '`,`' + item.Type + '`,`' + item.Load + '`,`' + item.Quantity + '`,`' + item.Note + '`)" data-toggle="modal" data-target="#model-update-Anchor"><i class="material-icons">&#xE254;</i></a><a href="#" class="delete" title="Xóa"onclick="btn_delete_Anchor(`' + item.ID + '`)"><i class="material-icons">&#xE872;</i></a></div></td></tr>';
+                        i = i + 1;
+                    });
+                    tabletext += "</tbody>";
+                    $('#tableAnchor').html(tabletext);
+                    loadTable('tableAnchor');
+                    $('#tableAnchor_wrapper .row .col-sm-12').first().html('<button id="btn_addAnchor" onclick="btn_addAnchor()" class="btn btn-info btn-lg col-6" data-toggle="modal" data-target="#model-add-Anchor" style="height: 35px; padding - top: 4px;margin - top: -4px;">Thêm tời neo</button>');
+                }, error: function (ret) {
+                    console.log('errorGET');
+                }
+            });
+        }
+         // ===================================== LifeSaving ========================================
+
+
+        function loadDataList_LifeSaving(ship_ID) {
+            $.ajax({
+                type: "GET",
+                url: linkapi + "lifesavings?imo=" + ship_ID,
+                dataType: "json",
+                success: function (data) {
+                    var tabletext = "<thead><tr><th>STT</th><th>LOẠI TRANG BỊ</th><th>XUẤT XỨ</th><th>TÌNH TRẠNG</th><th>SỐ LƯỢNG</th><th>ĐƠN VỊ TÍNH</th><th>GHI CHÚ</th><th>TÁC VỤ</th></tr></thead><tbody>";
+                    var i = 1;
+                    $.each(data, function (key, item) {
+                        tabletext += "<tr><td>" + i + "</td><td>" + item.Type + "</td><td>" + item.Origin + "</td><td>" + item.State + "</td><td>" + item.Quantity + "</td><td>" + item.Unit + "</td><td>" + item.Note + '</td>' + '<td><div style="width: max-content;"><a href="#" class="edit" title="Sửa" onclick="btn_update_LifeSaving(`' + item.ID + '`,`' + item.Type + '`,`' + item.Origin + '`,`' + item.State + '`,`' + item.Quantity + '`,`' + item.Unit + '`,`' + item.Note + '`)" data-toggle="modal" data-target="#model-update-LifeSaving"><i class="material-icons">&#xE254;</i></a><a href="#" class="delete" title="Xóa"onclick="btn_delete_LifeSaving(`' + item.ID + '`)"><i class="material-icons">&#xE872;</i></a></div></td></tr>';
+                        i = i + 1;
+                    });
+                    tabletext += "</tbody>";
+                    $('#tableLifeSaving').html(tabletext);
+                    loadTable('tableLifeSaving');
+                    $('#tableLifeSaving_wrapper .row .col-sm-12').first().html('<button id="btn_addLifeSaving" onclick="btn_addLifeSaving()" class="btn btn-info btn-lg col-6" data-toggle="modal" data-target="#model-add-LifeSaving" style="height: 35px; padding - top: 4px;margin - top: -4px;">Thêm trang bị cứu sinh</button>');
+                }, error: function (ret) {
+                    console.log('errorGET');
+                }
+            });
+        }
+
+        function btn_addLifeSaving() {
+            $('#add_LifeSaving_LoaiTB').val('');
+            $('#add_LifeSaving_XuatXu').val('');
+            $('#add_LifeSaving_TinhTrang').val('');
+            $('#add_LifeSaving_SoLuong').val('');
+            $('#add_LifeSaving_DonViTinh').val('');
+            $('#add_LifeSaving_GhiChu').val('');
+        }
+        function Add_LifeSaving() {
+            var new_LifeSaving= {
+                Ship: {
+                    ID: Ship_ID
+                },
+                Type: $("#add_LifeSaving_LoaiTB").val(),
+                Origin: $("#add_LifeSaving_XuatXu").val(),
+                State: $("#add_LifeSaving_TinhTrang").val(),
+                Quantity: $("#add_LifeSaving_SoLuong").val(),
+                Unit: $("#add_LifeSaving_DonViTinh").val(),
+                Note: $("#add_LifeSaving_GhiChu").val(),
+            };
+            $.ajax({
+                type: "POST",
+                url: linkapi + "insert_lifesaving",
+                dataType: "json",
+                data: JSON.stringify(new_LifeSaving),
+                contentType: "application/json",
+                beforeSend: function () { // Before we send the request, remove the .hidden class from the spinner and default to inline-block.
+                    $('#loader').removeClass('hidden');
+                },
+                success: function (data) {
+                    Load_Equiment();
+                    toastSuccess("Thành công", "Thêm trang bị cứu sinh thành công.");
+                    $('#model-add-LifeSaving').modal("hide");
+                }, error: function (ret) {
+                    console.log(ret.responseJSON.Message);
+                    toastError("Thất bại", ret.responseJSON.Message);
+                },
+                complete: function () { // Set our complete callback, adding the .hidden class and hiding the spinner.
+                    $('#loader').addClass('hidden');
+                },
+            });
+        }
+        function btn_update_LifeSaving(ID, Type, Origin, State, Quantity, Unit, Note) {
+            $('#update_LifeSaving_ID').val(ID);
+            $('#update_LifeSaving_LoaiTB').val(Type);
+            $('#update_LifeSaving_XuatXu').val(Origin);
+            $('#update_LifeSaving_TinhTrang').val(State);
+            $('#update_LifeSaving_SoLuong').val(Quantity);
+            $('#update_LifeSaving_DonViTinh').val(Unit);
+            $('#update_LifeSaving_GhiChu').val(Note);
+        }
+        function Update_LifeSaving() {
+            var new_lifesaving = {
+                Ship: {
+                    ID: Ship_ID
+                },
+                Type: $("#update_LifeSaving_LoaiTB").val(),
+                Origin: $("#update_LifeSaving_XuatXu").val(),
+                State: $("#update_LifeSaving_TinhTrang").val(),
+                Quantity: $("#update_LifeSaving_SoLuong").val(),
+                Unit: $("#update_LifeSaving_DonViTinh").val(),
+                Note: $("#update_LifeSaving_GhiChu").val(),
+                ID: $("#update_LifeSaving_ID").val(),
+            };
+            $.ajax({
+                type: "PUT",
+                url: linkapi + "update_lifesaving",
+                dataType: "json",
+                data: JSON.stringify(new_lifesaving),
+                contentType: "application/json",
+                beforeSend: function () { // Before we send the request, remove the .hidden class from the spinner and default to inline-block.
+                    $('#loader').removeClass('hidden');
+                },
+                success: function (data) {
+                    console.log("okPUT");
+                    toastSuccess("Thành công", "Cập nhật thiết bị cứu sinh thành công.");
+                    Load_Equiment();
+                }, error: function (ret) {
+                    console.log('errorPUT');
+                },
+                complete: function () { // Set our complete callback, adding the .hidden class and hiding the spinner.
+                    $('#loader').addClass('hidden');
+                    $('#model-update-LifeSaving').modal("hide");
+                },
+            });
+        }
+
+        function btn_delete_LifeSaving(ID) {
+            let text = "Bạn có chắc muốn xóa thiết bị cứu sinh này?";
+            if (confirm(text) == true) {
+                $.ajax({
+                    url: linkapi + "delete_lifesaving?id=" + ID,
+                    type: "DELETE",
+
+                }).done(function (res) {
+                    toastSuccess("Thành công", "Xóa thiết bị cứu sinh thành công.");
+                    Load_Equiment();
+                }).fail(function (res) {
+                    toastError("Lỗi", "Xóa thiết bị cứu sinh không thành công");
+                })
+            } else {
+
+            }
+        }
         // ===================================== OtherEquipment ========================================
         function loadDataList_Other_Equipment(ship_ID) {
             $.ajax({
@@ -1673,15 +2738,13 @@
                 dataType: "json",
                 data: JSON.stringify(OtherEquipment),
                 contentType: "application/json",
-
                 beforeSend: function () { // Before we send the request, remove the .hidden class from the spinner and default to inline-block.
                     $('#loader').removeClass('hidden');
                 },
                 success: function (data) {
+                    Load_Equiment();
                     toastSuccess("Thành công", "Thêm trang bị thành công.");
-                    loadDataList_Other_Equipment(getParameterByName('Ship_ID'));
                     $('#model-add-OtherEquipment').modal("hide");
-                    loadInforShip(getParameterByName('Ship_ID'));
                 }, error: function (ret) {
                     console.log(ret.responseJSON.Message);
                     toastError("Thất bại", ret.responseJSON.Message);
@@ -1736,13 +2799,13 @@
                 success: function (data) {
                     console.log("okPUT");
                     toastSuccess("Thành công", "Cập nhật thông tin trang bị thành công.");
+                    Load_Equiment();
                 }, error: function (ret) {
                     console.log('errorPUT');
                 },
                 complete: function () { // Set our complete callback, adding the .hidden class and hiding the spinner.
                     $('#loader').addClass('hidden');
                     $('#model-update-OtherEquipment').modal("hide");
-                    loadDataList_Other_Equipment(getParameterByName('Ship_ID'));
                 },
             });
         }
@@ -1755,9 +2818,8 @@
                     type: "DELETE",
 
                 }).done(function (res) {
-                    loadDataList_Other_Equipment(getParameterByName('Ship_ID'));
                     toastSuccess("Thành công", "Xóa trang bị thành công.");
-                    loadInforShip(getParameterByName('Ship_ID'));
+                    Load_Equiment();
                 }).fail(function (res) {
                     toastError("Lỗi", "Xóa trang bị không thành công");
                 })
@@ -1814,9 +2876,8 @@
                 },
                 success: function (data) {
                     toastSuccess("Thành công", "Thêm vật tư bảo đảm thành công.");
-                    loadDataList_Supply(getParameterByName('Ship_ID'));
+                    Load_Equiment();
                     $('#model-add-supply').modal("hide");
-                    loadInforShip(getParameterByName('Ship_ID'));
                 }, error: function (ret) {
                     console.log(ret.responseJSON.Message);
                     toastError("Thất bại", ret.responseJSON.Message);
@@ -1874,14 +2935,14 @@
                 success: function (data) {
                     console.log("okPUT");
                     toastSuccess("Thành công", "Cập nhật thông tin vật tư bảo đảm thành công.");
-                    
+                    Load_Equiment();
+
                 }, error: function (ret) {
                     console.log('errorPUT');
                 },
                 complete: function () { // Set our complete callback, adding the .hidden class and hiding the spinner.
                     $('#loader').addClass('hidden');
                     $('#model-update-supply').modal("hide");
-                    loadDataList_Supply(getParameterByName('Ship_ID'));
                 },
             });
         }
@@ -1894,9 +2955,8 @@
                     type: "DELETE",
 
                 }).done(function (res) {
-                    loadDataList_Supply(getParameterByName('Ship_ID'));
                     toastSuccess("Thành công", "Xóa vật tư bảo đảm thành công.");
-                    loadInforShip(getParameterByName('Ship_ID'));
+                    Load_Equiment();
                 }).fail(function (res) {
                     toastError("Lỗi", "Xóa vật tư bảo đảm không thành công");
                 })
