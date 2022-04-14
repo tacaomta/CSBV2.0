@@ -1,7 +1,6 @@
-﻿<%@ Page Title="Quản lý tàu" Language="C#" MasterPageFile="~/Master/TrangChu.Master" AutoEventWireup="true" CodeBehind="Manage_ship.aspx.cs" Inherits="CSB.Page_Master.Manage_ship" %>
+﻿<%@ Page Title="Quản lý tàu" Language="C#" MasterPageFile="~/Master/LayoutAdmin.Master" AutoEventWireup="true" CodeBehind="Manage_ship.aspx.cs" Inherits="CSB.Page_Master.Manage_ship" %>
 
-<asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-    <link href="../css/manage_ship.css" rel="stylesheet" />
+<asp:Content ID="Content1" ContentPlaceHolderID="MainContentAdmin" runat="server">
     <style>
         .panel{
             margin-bottom: 20px;
@@ -38,9 +37,9 @@
     </style>
     <div id="form1">
         <div class="section-header">
-            <div class="col-12">
+            <div class="">
                 <div class="section">
-                    <div class="section-header" style="margin-bottom: 2%">
+                    <div class="section-header">
                         <h4 id="title" style="color: black; margin: 0">QUẢN LÝ TÀU - VÙNG 1</h4>
                         <div class="section-header-breadcrumb">
                             <div class="breadcrumb-item active"><a href="TrangChu.aspx" style="color: #01b5f9">Trang chủ</a></div>
@@ -246,7 +245,6 @@
            if (vung == null) {
                vung = 1;
            }
-           $('#Vung' + vung).css('background-color', 'beige');
            $('#title').text('QUẢN LÝ TÀU - VÙNG ' + vung);
            loadDataListShips(vung);
        });
