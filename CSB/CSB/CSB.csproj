@@ -198,12 +198,17 @@
   <ItemGroup>
     <Content Include="About.aspx" />
     <Content Include="Contact.aspx" />
+    <Content Include="Content\bootstrap-icons.css" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\boxicons.min.css" />
     <Content Include="Content\cdn.datatables.net_1.11.3_css_dataTables.bootstrap4.min.css" />
     <Content Include="Content\cdn.datatables.net_buttons_2.0.1_css_buttons.bootstrap4.min.css" />
+    <Content Include="Content\quill.bubble.css" />
+    <Content Include="Content\quill.snow.css" />
+    <Content Include="Content\remixicon.css" />
     <Content Include="Content\Site.css" />
     <Content Include="css\login.css" />
     <Content Include="css\manager_user.css" />
@@ -232,10 +237,12 @@
     <Content Include="Page_Master\Login.aspx" />
     <Content Include="Page_Master\Manage_ship.aspx" />
     <Content Include="Page_Master\Manage_user.aspx" />
+    <Content Include="Page_Master\Null.aspx" />
     <Content Include="Page_Master\Ship_equiment.aspx" />
     <Content Include="Page_Master\TrangChu.aspx" />
     <Content Include="reports\report.docx" />
     <Content Include="Master\TrangChu.Master" />
+    <Content Include="Master\LayoutAdmin.Master" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -249,6 +256,12 @@
     <Content Include="Scripts\js\Master.js" />
     <Content Include="Scripts\js\Ship_equiment.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Scripts\vendor\apexcharts.min.js" />
+    <Content Include="Scripts\vendor\bootstrap.bundle.min.js" />
+    <Content Include="Scripts\vendor\chart.min.js" />
+    <Content Include="Scripts\vendor\echarts.min.js" />
+    <Content Include="Scripts\vendor\quill.min.js" />
+    <Content Include="Scripts\vendor\tinymce.min.js" />
     <Content Include="Scripts\WebForms\DetailsView.js" />
     <Content Include="Scripts\WebForms\Focus.js" />
     <Content Include="Scripts\WebForms\GridView.js" />
@@ -303,6 +316,13 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Master\LayoutAdmin.Master.cs">
+      <DependentUpon>LayoutAdmin.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Master\LayoutAdmin.Master.designer.cs">
+      <DependentUpon>LayoutAdmin.Master</DependentUpon>
+    </Compile>
     <Compile Include="Master\TrangChu.Master.cs">
       <DependentUpon>TrangChu.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -332,6 +352,13 @@
     </Compile>
     <Compile Include="Page_Master\Manage_user.aspx.designer.cs">
       <DependentUpon>Manage_user.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Page_Master\Null.aspx.cs">
+      <DependentUpon>Null.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page_Master\Null.aspx.designer.cs">
+      <DependentUpon>Null.aspx</DependentUpon>
     </Compile>
     <Compile Include="Page_Master\Ship_equiment.aspx.cs">
       <DependentUpon>Ship_equiment.aspx</DependentUpon>

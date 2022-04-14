@@ -1,39 +1,15 @@
-﻿<%@ Page Title="Thiết bị trên tàu" Language="C#" MasterPageFile="~/Master/TrangChu.Master" AutoEventWireup="true" CodeBehind="Ship_equiment.aspx.cs" Inherits="CSB.Page_Master.Ship_equiment" %>
+﻿<%@ Page Title="Thiết bị trên tàu" Language="C#" MasterPageFile="~/Master/LayoutAdmin.Master" AutoEventWireup="true" CodeBehind="Ship_equiment.aspx.cs" Inherits="CSB.Page_Master.Ship_equiment" %>
 
-<asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="../css/Ship_equiment.css" rel="stylesheet" />
+<asp:Content ID="Content1" ContentPlaceHolderID="MainContentAdmin" runat="server">
     <style>
-        .accordion-item {
-            margin: 3px 0 0 0;
-            border-radius: 3px !important;
-            border: 1px solid rgb(4 39 94 / 13%)
-        }
-
-            .accordion-item:not(:first-of-type) {
-                border-top: 1px solid rgb(4 39 94 / 13%)
-            }
-
-        .accordion-button:not(.collapsed) {
-            color: #ffffff;
-            background-color: #63aff7;
-            border-color: #c6e2e9;
-            box-shadow: inset 0 -1px 0 rgb(4 3 98 / 13%);
-        }
-
-        .accordion-button {
-            background-color: #63aff717;
-            color: #3a4787;
-            font-weight: bold;
-            font-size: 16px;
-        }
+       
     </style>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
     <div id="form1">
         <div class="section-header">
-            <div class="col-12">
+            <div class="">
                 <div class="section">
-                    <div class="section-header" style="margin-bottom: 2%">
+                    <div class="section-header" >
                         <h4 id="title" style="color: black; margin: 0">THIẾT BỊ TRÊN TÀU - TÀU CỨU HỘ XH123</h4>
                         <div class="section-header-breadcrumb">
                             <div class="breadcrumb-item active"><a href="TrangChu.aspx" style="color: #01b5f9">Trang chủ</a></div>
@@ -1730,7 +1706,7 @@
             $('#loader').addClass('hidden');
         }
         function loadInforShip(Ship_ID) {
-            debugger
+            
             $.ajax({
                 type: "GET",
                 url: linkapi + "ship_overview?id=" + Ship_ID,
@@ -1741,15 +1717,15 @@
                 },
                 success: function (data) {
                     $("#title").html("THIẾT BỊ TRÊN TÀU - " + data.Ship.Name);
-                    $('#btn_MayChinh').html(data.MainEngine + " - Máy chính");
-                    $('#btn_MayPhu').html(data.SecondaryEngine + " - Máy phụ");
-                    $('#btn_ChanVit').html(data.Screw + " - Hệ trục chân vịt");
-                    $('#btn_KhiTai').html(data.Weapon + " - Khí tài, Hàng hải");
-                    $('#btn_XuongCT').html(data.MotoBoat + " - Xuồng công tác");
-                    $('#btn_Neo').html(data.Anchor + " - Neo, tời, xích neo");
-                    $('#btn_TBCuuSinh').html(data.LifeSaving + " - Trang bị cứu sinh");
-                    $('#btn_TBKhac').html(data.Other + " - Các trang bị khác");
-                    $('#btn_VatTu').html(data.Supplies + " - Vật tư bảo đảm");
+                    $('#btn_MayChinh').html("1. Máy chính - " + data.MainEngine );
+                    $('#btn_MayPhu').html("2. Máy phụ - " + data.SecondaryEngine);
+                    $('#btn_ChanVit').html("3. Hệ trục chân vịt - " + data.Screw );
+                    $('#btn_KhiTai').html("4. Khí tài, Hàng hải - " + data.Weapon );
+                    $('#btn_XuongCT').html("5. Xuồng công tác - " + data.MotoBoat );
+                    $('#btn_Neo').html("6. Neo, tời, xích neo - " + data.Anchor );
+                    $('#btn_TBCuuSinh').html("7. Trang bị cứu sinh - " + data.LifeSaving );
+                    $('#btn_TBKhac').html("8. Các trang bị khác - " + data.Other );
+                    $('#btn_VatTu').html("9. Vật tư bảo đảm - " + data.Supplies );
                 }, error: function (ret) {
                     console.log('errorGET');
                 }, complete: function () { // Set our complete callback, adding the .hidden class and hiding the spinner.
@@ -1791,6 +1767,7 @@
                     console.log(linkapi + "main_engines?imo=" + Ship_ID);
                     loadTable("table_maychinh");
                     $('#table_maychinh_wrapper .row .col-sm-12').first().html('<button id="btn_addMayChinh" onclick="btn_addMayChinh()" class="btn btn-info btn-lg col-6" data-toggle="modal" data-target="#model-add-MainEngine" style="height: 35px; padding - top: 4px;margin - top: -4px;">Thêm máy chính</button>');
+                    $('#table_maychinh_wrapper .row').first().next().children().css("overflow-x","auto");
                 }, error: function (ret) {
                     console.log('errorGET');
                 },
@@ -1949,6 +1926,7 @@
                     console.log(linkapi + "screw_system?imo=" + Ship_ID);
                     loadTable('table_chanvit');
                     $('#table_chanvit_wrapper .row .col-sm-12').first().html('<button id="btn_addScrewSystem" onclick="btn_addScrewSystem()" class="btn btn-info btn-lg col-6" data-toggle="modal" data-target="#model-add-ScrewSystem" style="height: 35px; padding - top: 4px;margin - top: -4px;">Thêm hệ trục chân vịt</button>');
+                    $('#table_chanvit_wrapper .row').first().next().children().css("overflow-x", "auto");
                 }, error: function (ret) {
                     console.log('errorGET');
                 },
@@ -2100,6 +2078,7 @@
                     $('#tableSecondaryEngine').html(tabletext);
                     loadTable('tableSecondaryEngine');
                     $('#tableSecondaryEngine_wrapper .row .col-sm-12').first().html('<button id="btn_addSecondaryEngine" onclick="btn_addSecondaryEngine()" class="btn btn-info btn-lg col-6" data-toggle="modal" data-target="#model-add-SecondaryEngine" style="height: 35px; padding - top: 4px;margin - top: -4px;">Thêm máy phụ</button>');
+                    $('#tableSecondaryEngine_wrapper .row').first().next().children().css("overflow-x", "auto");
                 }, error: function (ret) {
                     console.log('errorGET');
                 }
@@ -2268,6 +2247,7 @@
                     $('#table_KhiTai').html(tabletext);
                     loadTable('table_KhiTai');
                     $('#table_KhiTai_wrapper .row .col-sm-12').first().html('<button id="btn_addWeaponMarine" onclick="btn_addWeaponMarine()" class="btn btn-info btn-lg col-6" data-toggle="modal" data-target="#model-add-WeaponMarine" style="height: 35px; padding - top: 4px;margin - top: -4px;">Thêm khí tài, hàng hóa</button>');
+                    $('#table_KhiTai_wrapper .row').first().next().children().css("overflow-x", "auto");
                 }, error: function (ret) {
                     console.log('errorGET');
                 }
@@ -2397,6 +2377,7 @@
                     $('#tableMotoBoat').html(tabletext);
                     loadTable('tableMotoBoat');
                     $('#tableMotoBoat_wrapper .row .col-sm-12').first().html('<button id="btn_addMotoBoat" onclick="btn_addMotoBoat()" class="btn btn-info btn-lg col-6" data-toggle="modal" data-target="#model-add-MotoBoat" style="height: 35px; padding - top: 4px;margin - top: -4px;">Thêm xuồng công tác</button>');
+                    $('#tableMotoBoat_wrapper .row').first().next().children().css("overflow-x", "auto");
                 }, error: function (ret) {
                     console.log('errorGET');
                 }
@@ -2576,6 +2557,7 @@
                     $('#tableLifeSaving').html(tabletext);
                     loadTable('tableLifeSaving');
                     $('#tableLifeSaving_wrapper .row .col-sm-12').first().html('<button id="btn_addLifeSaving" onclick="btn_addLifeSaving()" class="btn btn-info btn-lg col-6" data-toggle="modal" data-target="#model-add-LifeSaving" style="height: 35px; padding - top: 4px;margin - top: -4px;">Thêm trang bị cứu sinh</button>');
+                    $('#tableLiftSaving_wrapper .row').first().next().children().css("overflow-x", "auto");
                 }, error: function (ret) {
                     console.log('errorGET');
                 }
@@ -2703,6 +2685,7 @@
                     $('#tableOtherEquipment').html(tabletext);
                     loadTable('tableOtherEquipment');
                     $('#tableOtherEquipment_wrapper .row .col-sm-12').first().html('<button id="btn_addOtherEquipment" onclick="btn_addOtherEquipment()" class="btn btn-info btn-lg col-6" data-toggle="modal" data-target="#model-add-OtherEquipment" style="height: 35px; padding - top: 4px;margin - top: -4px;">Thêm trang bị khác</button>');
+                    $('#tableOtherEquipment_wrapper .row').first().next().children().css("overflow-x", "auto");
                 }, error: function (ret) {
                     console.log('errorGET');
                 }
@@ -2834,6 +2817,7 @@
                     $('#tableSupplies').html(tabletext);
                     loadTable('tableSupplies');
                     $('#tableSupplies_wrapper .row .col-sm-12').first().html('<button id="btn_addsuply" onclick="btn_addsuply()" class="btn btn-info btn-lg col-6" data-toggle="modal" data-target="#model-add-supply" style="height: 35px; padding - top: 4px;margin - top: -4px;">Thêm vật tư bảo đảm</button>');
+                    $('#tableSupplies_wrapper .row').first().next().children().css("overflow-x", "auto");
                 }, error: function (ret) {
                     console.log('errorGET');
                 }

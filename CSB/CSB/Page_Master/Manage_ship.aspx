@@ -1,7 +1,6 @@
-﻿<%@ Page Title="Quản lý tàu" Language="C#" MasterPageFile="~/Master/TrangChu.Master" AutoEventWireup="true" CodeBehind="Manage_ship.aspx.cs" Inherits="CSB.Page_Master.Manage_ship" %>
+﻿<%@ Page Title="Quản lý tàu" Language="C#" MasterPageFile="~/Master/LayoutAdmin.Master" AutoEventWireup="true" CodeBehind="Manage_ship.aspx.cs" Inherits="CSB.Page_Master.Manage_ship" %>
 
-<asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-    <link href="../css/manage_ship.css" rel="stylesheet" />
+<asp:Content ID="Content1" ContentPlaceHolderID="MainContentAdmin" runat="server">
     <style>
         .panel{
             margin-bottom: 20px;
@@ -38,9 +37,9 @@
     </style>
     <div id="form1">
         <div class="section-header">
-            <div class="col-12">
+            <div class="">
                 <div class="section">
-                    <div class="section-header" style="margin-bottom: 2%">
+                    <div class="section-header">
                         <h4 id="title" style="color: black; margin: 0">QUẢN LÝ TÀU - VÙNG 1</h4>
                         <div class="section-header-breadcrumb">
                             <div class="breadcrumb-item active"><a href="TrangChu.aspx" style="color: #01b5f9">Trang chủ</a></div>
@@ -178,8 +177,7 @@
                                     <label class="col-md-4 control-label" style="text-align:right"><strong>Thuyền trưởng   : </strong></label>
                                     <div class="col-md-6">
                                         <select class="form-control" id="ThuyenTruong">
-                                            <option value="AD">Admin</option>
-                                            <option selected value="US">User</option>
+                                        
                                         </select>
                                     </div>
                                     <div class="wrap-layout col-md-2" style="padding-left:0px;">
@@ -232,6 +230,7 @@
                         </div>
                     </div>
                     <div class="modal-footer">
+                        <button onclick="Update_Ship()" type="button" class="btn btn-info" >Save</button>
                         <button type="button" class="btn btn-info" data-dismiss="modal">Close</button>
                     </div>
                 </div>
@@ -246,7 +245,6 @@
            if (vung == null) {
                vung = 1;
            }
-           $('#Vung' + vung).css('background-color', 'beige');
            $('#title').text('QUẢN LÝ TÀU - VÙNG ' + vung);
            loadDataListShips(vung);
        });
@@ -296,10 +294,50 @@
                    $("#NhienLieuToiDa").val(data.Ship.Fuel);
                    $("#NuocNgotToiDa").val(data.Ship.Water);
                    $("#SoThuyenVien").val(data.Ship.Personel);
-                   $("#ThuyenTruong").val(data.Ship.Captain.Fullname);
+                   list_captain(data.Ship.Captain.ID);
                    $("#TocDo").val(data.Ship.Speed);
                    $("#TG_HanhTrinhToiDa").val(data.Ship.Time);
                    $("#NgayTao").val(data.Ship.Created);                 
+               }, error: function (ret) {
+                   console.log('errorGET');
+               },
+               complete: function () { // Set our complete callback, adding the .hidden class and hiding the spinner.
+               },
+           });
+          
+       }
+
+       function list_captain(id_captain) {
+           $.ajax({
+               type: "GET",
+               url: linkapi + "captains",
+               dataType: "json",
+               success: function (data) {
+                   $('#ThuyenTruong').empty();
+                   $.each(data, function (key, item) {
+                       if (item.ID = id_captain) {
+                           $('#ThuyenTruong').append($('<option>', {
+                               selected: true,
+                               value: item.ID,
+                               text: item.Fullname
+                           }));
+                       }
+                       else {
+                           $('#ThuyenTruong').append($('<option>', {
+                               selected: false,
+                               value: item.ID,
+                               text: item.Fullname
+                           }));
+                       }
+                       
+                   });
+                   if (id_captain == '') {
+                       $('#ThuyenTruong').append($('<option>', {
+                           selected: true,
+                           value: 'Empty_Captain',
+                           text: 'Không có'
+                       }));
+                   }
                }, error: function (ret) {
                    console.log('errorGET');
                },
@@ -377,6 +415,48 @@
            } else {
 
            }
+       }
+
+       function Update_Ship() {
+           var New_MotoBoat = {
+               Ship: {
+                   ID: Ship_ID
+               },
+               ID: $('#update_MotoBoat_ID').val(),
+               Name: $('#update_MotoBoat_Ten').val(),
+               Personel: $('#update_MotoBoat_SoTV').val(),
+               EngineType: $('#update_MotoBoat_MayXuong').val(),
+               EngineNumber: $('#update_MotoBoat_SLMayXuong').val(),
+               ScrewType: $('#update_MotoBoat_KieuChanVit').val(),
+               ScrewNumber: $('#update_MotoBoat_SoTrucChanVit').val(),
+               Note: $('#update_MotoBoat_GhiChu').val(),
+               Width: $('#update_MotoBoat_Rong').val(),
+               Height: $('#update_MotoBoat_Dai').val(),
+               Deep: $('#update_MotoBoat_MonNuoc').val(),
+               Speed: $('#update_MotoBoat_TocDoMax').val(),
+               Weight: $('#update_MotoBoat_TaiTrong').val()
+           };
+           $.ajax({
+               type: "PUT",
+               url: linkapi + "update_moto_boat",
+               dataType: "json",
+               data: JSON.stringify(New_MotoBoat),
+               contentType: "application/json",
+               beforeSend: function () { // Before we send the request, remove the .hidden class from the spinner and default to inline-block.
+                   $('#loader').removeClass('hidden');
+               },
+               success: function (data) {
+                   console.log("okPUT");
+                   toastSuccess("Thành công", "Cập nhật xuồng công tác thành công.");
+                   Load_Equiment();
+               }, error: function (ret) {
+                   console.log('errorPUT');
+               },
+               complete: function () { // Set our complete callback, adding the .hidden class and hiding the spinner.
+                   $('#loader').addClass('hidden');
+                   $('#model-update-MotoBoat').modal("hide");
+               },
+           });
        }
    </script>
 </asp:Content>
