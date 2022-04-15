@@ -334,7 +334,7 @@
            });
        };
        function View_EquimentShip(ID_Ship) {
-           window.location = "http://localhost:44347/Page_Master/Ship_equiment?Ship_ID=" + ID_Ship;
+           window.location = baseaddress + "Page_Master/Ship_equiment?Ship_ID=" + ID_Ship;
        }
        function getParameterByName(name, url = window.location.href) {
            name = name.replace(/[\[\]]/g, '\\$&');

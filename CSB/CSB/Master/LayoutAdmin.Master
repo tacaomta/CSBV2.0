@@ -8,10 +8,10 @@
     <!-- Google Fonts -->
     <link href="https://fonts.gstatic.com" rel="preconnect">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
-
+    1
     <!-- Vendor CSS Files -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <link href="../css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../Content/bootstrap-icons.css" rel="stylesheet" />
     <link href="../Content/boxicons.min.css" rel="stylesheet" />
     <link href="../Content/quill.snow.css" rel="stylesheet" />
     <link href="../Content/quill.bubble.css" rel="stylesheet" />
@@ -20,18 +20,17 @@
     <!-- Datatables CSS -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css">
-    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap4.min.css">
-    <link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.5.2/css/buttons.bootstrap4.min.css">
-	<link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.2.3/css/responsive.bootstrap4.min.css">
+    <link href="../Content/dataTables.bootstrap4.min.css" rel="stylesheet" />
+    <link href="../Content/buttons.bootstrap4.min.css" rel="stylesheet" />
+    <link href="../Content/responsive.bootstrap4.min.css" rel="stylesheet" />
 
     <!-- Template Main CSS File -->
     <link href="../css/LayoutAdmin.css" rel="stylesheet" />
 
     <!-- fas fa icon CSS-->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link href="../Content/font-awesome.min.css" rel="stylesheet" />
 
     <!-- Table icon CSS -->
     <style>
@@ -5347,40 +5346,44 @@ table tr:hover .table-links {
         <div class="toast mt-3">
             <div class="toast-header" >
                 <p id="toast-header" class="mr-auto toast-header-text">Toast Header</p>
-                <button type="button" class="ml-2 mb-3 close" data-dismiss="toast">×</button>
+                <button type="button" class="ml-2 mb-3 close" onclick="closeToast()" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
             </div>
             <div class="toast-body toast-body" id="toast-body">
                 Some text inside the toast body
             </div>
         </div>
 
-        <div id="loader" class="lds-dual-ring hidden"></div>
+        <div id="loader" class="lds-dual-ring hidden overlay"></div>
     </div>
 
     <!-- ===== JS =====-->
-    <script src="../Scripts/jquery-3.4.1.slim.min.js"></script>
-    <script src="../Scripts/jquery-3.4.1.min.js"></script>
     <script>
         var linkapi = "http://localhost:8082/api/";
         var baseaddress = "http://localhost:44347/";
     </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
-    <script src="https://cdn.datatables.net/1.11.3/js/dataTables.bootstrap4.min.js"></script>
-    <script src="https://cdn.datatables.net/buttons/2.0.1/js/dataTables.buttons.min.js"></script>
-    <script src="https://cdn.datatables.net/buttons/2.0.1/js/buttons.bootstrap4.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
-    <script src="https://cdn.datatables.net/buttons/2.0.1/js/buttons.html5.min.js"></script>
-    <script src="https://cdn.datatables.net/buttons/2.0.1/js/buttons.print.min.js"></script>
-    <script src="https://cdn.datatables.net/buttons/2.0.1/js/buttons.colVis.min.js"></script>
-    <script src="https://cdn.datatables.net/responsive/2.2.3/js/dataTables.responsive.min.js"></script>
-    <script src="https://cdn.datatables.net/responsive/2.2.3/js/responsive.bootstrap4.min.js"></script>
+    <script src="../Scripts/jquery-3.4.1.slim.min.js"></script>
+    <script src="../Scripts/jquery-3.4.1.min.js"></script>
+    <script src="../Scripts/bootstrap-4.6.1/bootstrap.bundle.min.js"></script>
+    <script src="../Scripts/vendor/jquery.dataTables.min.js"></script>
+    <script src="../Scripts/vendor/dataTables.bootstrap4.min.js"></script>
+    <script src="../Scripts/vendor/popper.min.js"></script>
+    <script src="../Scripts/vendor/bootstrap.min.js"></script>
+    <script src="../Scripts/vendor/jquery.dataTables.min.js"></script>
+    <script src="../Scripts/vendor/dataTables.bootstrap4.min.js"></script>
+    <script src="../Scripts/vendor/dataTables.buttons.min.js"></script>
+    <script src="../Scripts/vendor/buttons.bootstrap4.min.js"></script>
+    <script src="../Scripts/vendor/jszip.min.js"></script>
+    <script src="../Scripts/vendor/pdfmake.min.js"></script>
+    <script src="../Scripts/vendor/vfs_fonts.js"></script>
+    <script src="../Scripts/vendor/buttons.html5.min.js"></script>
+    <script src="../Scripts/vendor/buttons.print.min.js"></script>
+    <script src="../Scripts/vendor/buttons.colVis.min.js"></script>
+    <script src="../Scripts/vendor/dataTables.responsive.min.js"></script>
+    <script src="../Scripts/vendor/responsive.bootstrap4.min.js"></script>
+    <script src="../Scripts/vendor/jquery.nicescroll.min.js"></script>
     <script src="../Scripts/js/Master.js"></script>
-<%--    <script src="../Scripts/js/Manage_ship.js"></script>--%>
     <script>
         $(document).ready(function () {
             if (sessionStorage.getItem("userLoginUsername") != null) {
@@ -5399,28 +5402,9 @@ table tr:hover .table-links {
                 sessionStorage.removeItem("userLoginFullname");
                 sessionStorage.removeItem("userLoginID");
             }
-            window.location = "http://localhost:44347/Page_Master/Login";
+            window.location = baseaddress+  "Page_Master/Login";
         }
-        //function click_vung(vung) {
-        //    sessionStorage.setItem("vung", vung);
-        //    window.location = "http://localhost:44347/Page_Master/Manage_ship";
-        //}
     </script>
-
-    <!-- Vendor JS Files -->
-    <script src="../Scripts/vendor/apexcharts.min.js"></script>
-    <script src="../Scripts/vendor/chart.min.js"></script>
-    <script src="../Scripts/vendor/echarts.min.js"></script>
-    <script src="../Scripts/vendor/quill.min.js"></script>
-    <script src="../Scripts/vendor/tinymce.min.js"></script>
-    
-
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.nicescroll/3.7.6/jquery.nicescroll.min.js"></script>
-    
-    <!-- Template Main JS File -->
-<%--    <script src="../Scripts/js/LayoutAdmin.js"></script>--%>
-    <%--<script src="../Scripts/script.js"></script>--%>
     <script>
         "use strict";
 
@@ -6030,6 +6014,5 @@ table tr:hover .table-links {
         });
 
     </script>
-   
 </body>
 </html>

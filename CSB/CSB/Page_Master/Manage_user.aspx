@@ -211,7 +211,6 @@
     </div>
     
     <script src="../Scripts/jquery-3.4.1.slim.min.js"></script>
-    <%--<script src="../Scripts/js/Manage_User.js"></script>--%>
     <script>
         $(document).ready(function () {
             loadDataListUsers();
@@ -425,15 +424,6 @@
                 }
             }
             var khoa = false;
-            
-            //document.getElementsByName("edLOCK").forEach(function () {
-            //    debugger;
-            //    if ($(this).val() == 'true' && $(this).attr("checked") == 'checked') {
-                    
-            //        khoa = true;
-            //    }
-
-
             var checkbox = document.getElementsByName("edLOCK");
             for (var i = 0; i < checkbox.length; i++) {
                 if (checkbox[i].checked === true) {

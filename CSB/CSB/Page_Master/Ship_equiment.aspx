@@ -1,10 +1,6 @@
 ﻿<%@ Page Title="Thiết bị trên tàu" Language="C#" MasterPageFile="~/Master/LayoutAdmin.Master" AutoEventWireup="true" CodeBehind="Ship_equiment.aspx.cs" Inherits="CSB.Page_Master.Ship_equiment" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContentAdmin" runat="server">
-    <style>
-       
-    </style>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
     <div id="form1">
         <div class="section-header">
             <div class="">
@@ -21,9 +17,9 @@
                             <div class="accordion" id="accorShipEquiment">
                                 <div class="accordion-item">
                                     <h2 class="accordion-header" id="headMainEngine">
-                                        <button id="btn_MayChinh" type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collMainEngine">0 - Máy chính </button>
+                                        <button id="btn_MayChinh" type="button" class="accordion-button collapsed" data-toggle="collapse" data-target="#collMainEngine">0 - Máy chính </button>
                                     </h2>
-                                    <div id="collMainEngine" class="accordion-collapse collapse" data-bs-parent="#accorShipEquiment">
+                                    <div id="collMainEngine" class="accordion-collapse collapse" data-parent="#accorShipEquiment">
                                         <div class="card-body">
                                             <div class="section-header">
                                                 <div class="col-12">
@@ -58,9 +54,9 @@
                                 </div>
                                 <div class="accordion-item">
                                     <h2 class="accordion-header" id="headSecondaryEngine">
-                                        <button type="button" id="btn_MayPhu" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collSecondaryEngine">0 - Máy phụ </button>
+                                        <button type="button" id="btn_MayPhu" class="accordion-button collapsed" data-toggle="collapse" data-target="#collSecondaryEngine">0 - Máy phụ </button>
                                     </h2>
-                                    <div id="collSecondaryEngine" class="accordion-collapse collapse" data-bs-parent="#accorShipEquiment">
+                                    <div id="collSecondaryEngine" class="accordion-collapse collapse" data-parent="#accorShipEquiment">
                                         <div class="card-body">
                                             <div class="section-header">
                                                 <div class="col-12">
@@ -73,9 +69,9 @@
                                 </div>
                                 <div class="accordion-item">
                                     <h2 class="accordion-header" id="headScrew">
-                                        <button type="button" id="btn_ChanVit" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collScrew">0 - Hệ trục chân vịt </button>
+                                        <button type="button" id="btn_ChanVit" class="accordion-button collapsed" data-toggle="collapse" data-target="#collScrew">0 - Hệ trục chân vịt </button>
                                     </h2>
-                                    <div id="collScrew" class="accordion-collapse collapse" data-bs-parent="#accorShipEquiment">
+                                    <div id="collScrew" class="accordion-collapse collapse" data-parent="#accorShipEquiment">
                                         <div class="card-body">
                                             <div class="section-header">
                                                 <div class="col-12">
@@ -109,9 +105,9 @@
                                 </div>
                                 <div class="accordion-item">
                                     <h2 class="accordion-header" id="headWeapon">
-                                        <button type="button" id="btn_KhiTai" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collWeapon">0 - Khí tài, hàng hải </button>
+                                        <button type="button" id="btn_KhiTai" class="accordion-button collapsed" data-toggle="collapse" data-target="#collWeapon">0 - Khí tài, hàng hải </button>
                                     </h2>
-                                    <div id="collWeapon" class="accordion-collapse collapse" data-bs-parent="#accorShipEquiment">
+                                    <div id="collWeapon" class="accordion-collapse collapse" data-parent="#accorShipEquiment">
                                         <div class="card-body">
                                             <div class="section-header">
                                                 <div class="col-12">
@@ -142,9 +138,9 @@
                                 </div>
                                 <div class="accordion-item">
                                     <h2 class="accordion-header" id="headMotoBoat">
-                                        <button type="button" id="btn_XuongCT" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collMotoBoat">0 - Xuồng công tác </button>
+                                        <button type="button" id="btn_XuongCT" class="accordion-button collapsed" data-toggle="collapse" data-target="#collMotoBoat">0 - Xuồng công tác </button>
                                     </h2>
-                                    <div id="collMotoBoat" class="accordion-collapse collapse" data-bs-parent="#accorShipEquiment">
+                                    <div id="collMotoBoat" class="accordion-collapse collapse" data-parent="#accorShipEquiment">
                                         <div class="card-body">
                                                <div class="section-header">
                                                 <div class="col-12">
@@ -177,9 +173,9 @@
                                 </div>
                                 <div class="accordion-item">
                                     <h2 class="accordion-header" id="headAnchor">
-                                        <button type="button" id="btn_Neo" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collAnchor">0 - Neo, tời neo, xích neo </button>
+                                        <button type="button" id="btn_Neo" class="accordion-button collapsed" data-toggle="collapse" data-target="#collAnchor">0 - Neo, tời neo, xích neo </button>
                                     </h2>
-                                    <div id="collAnchor" class="accordion-collapse collapse" data-bs-parent="#accorShipEquiment">
+                                    <div id="collAnchor" class="accordion-collapse collapse" data-parent="#accorShipEquiment">
                                         <div class="card-body">
                                            <div class="section-header">
                                                 <div class="col-12">
@@ -208,9 +204,9 @@
                                 </div>
                                 <div class="accordion-item">
                                     <h2 class="accordion-header" id="headLifeSaving">
-                                        <button type="button" id="btn_TBCuuSinh" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collLifeSaving">0 - Trang bị cứu sinh </button>
+                                        <button type="button" id="btn_TBCuuSinh" class="accordion-button collapsed" data-toggle="collapse" data-target="#collLifeSaving">0 - Trang bị cứu sinh </button>
                                     </h2>
-                                    <div id="collLifeSaving" class="accordion-collapse collapse" data-bs-parent="#accorShipEquiment">
+                                    <div id="collLifeSaving" class="accordion-collapse collapse" data-parent="#accorShipEquiment">
                                         <div class="card-body">
                                               <div class="card-body">
                                             <div class="section-header">
@@ -243,9 +239,9 @@
                                 </div>
                                 <div class="accordion-item">
                                     <h2 class="accordion-header" id="headOther">
-                                        <button type="button" id="btn_TBKhac" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collOther">0 - Các trang bị khác </button>
+                                        <button type="button" id="btn_TBKhac" class="accordion-button collapsed" data-toggle="collapse" data-target="#collOther">0 - Các trang bị khác </button>
                                     </h2>
-                                    <div id="collOther" class="accordion-collapse collapse" data-bs-parent="#accorShipEquiment">
+                                    <div id="collOther" class="accordion-collapse collapse" data-parent="#accorShipEquiment">
                                         <div class="card-body">
                                             <div class="section-header">
                                                 <div class="col-12">
@@ -258,9 +254,9 @@
                                 </div>
                                 <div class="accordion-item">
                                     <h2 class="accordion-header" id="headSupplies">
-                                        <button type="button" id="btn_VatTu" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collSupplies">0 - Vật tư bảo đảm </button>
+                                        <button type="button" id="btn_VatTu" class="accordion-button collapsed" data-toggle="collapse" data-target="#collSupplies">0 - Vật tư bảo đảm </button>
                                     </h2>
-                                    <div id="collSupplies" class="accordion-collapse collapse" data-bs-parent="#accorShipEquiment">
+                                    <div id="collSupplies" class="accordion-collapse collapse" data-parent="#accorShipEquiment">
                                         <div class="card-body">
                                             <div class="section-header">
                                                 <div class="col-12">
@@ -932,7 +928,7 @@
         </div>
     </div>
    
-      <div class="modal fade" id="model-update-WeaponMarine" tabindex="-1" role="dialog">
+    <div class="modal fade" id="model-update-WeaponMarine" tabindex="-1" role="dialog">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="card auth_form">
@@ -1120,7 +1116,7 @@
             </div>
         </div>
     </div>
-     <div class="modal fade" id="model-update-MotoBoat" tabindex="-1" role="dialog">
+    <div class="modal fade" id="model-update-MotoBoat" tabindex="-1" role="dialog">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="card auth_form">
@@ -1309,7 +1305,7 @@
         </div>
     </div>
 
-        <div class="modal fade" id="model-update-LifeSaving" tabindex="-1" role="dialog">
+    <div class="modal fade" id="model-update-LifeSaving" tabindex="-1" role="dialog">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="card auth_form">
@@ -1678,13 +1674,14 @@
     </div>
 
     <script src="../Scripts/jquery-3.4.1.slim.min.js"></script>
-    <script src="../Scripts/jquery-3.4.1.min.js"></script>
+    
+
     <script>
         var Ship_ID;
         $(document).ready(function () {
             Ship_ID = getParameterByName('Ship_ID');
             if (Ship_ID == null) {
-                window.location = "http://localhost:44347/Page_Master/Manage_ship?vung=1";
+                window.location = baseaddress + "Page_Master/Manage_ship?vung=1";
             }
             else {
                 Load_Equiment();
@@ -1797,7 +1794,6 @@
                 Time: null,
                 State: null
             };
-            debugger
             $.ajax({
                 type: "POST",
                 url: linkapi + "insert_main_engine",
@@ -1809,9 +1805,9 @@
                     $('#loader').removeClass('hidden');
                 },
                 success: function (data) {
+                    $('#model-add-MainEngine').modal("hide");
                     toastSuccess("Thành công", "Thêm máy chính thành công.");
                     Load_Equiment();
-                    $('#model-add-MainEngine').modal("hide");
                 }, error: function (ret) {
                     console.log(ret.responseJSON.Message);
                     toastError("Thất bại", ret.responseJSON.Message);
