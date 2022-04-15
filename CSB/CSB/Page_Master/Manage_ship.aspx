@@ -91,6 +91,217 @@
             </div>
         </div>
     </div>
+        <div class="modal fade" id="model-add-ship" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document" style="max-width: 70%;">
+            <div class="modal-content">
+                <div class="card auth_form">
+                    <div class="modal-header">
+                        <h6 class="title-modal-banve font-weight-bold">Thêm mới tàu</h6>
+                    </div>
+                    <div class="modal-body">
+                        <div class="clearfix ">
+                            <div style="display: flex;">
+                                <div class="imageupload panel panel-success col-md-6" style="min-height: 300px; padding: 0;">
+                                    <div class="panel-heading clearfix">
+                                        <h3 class="panel-title pull-left">Hình ảnh</h3>
+                                    </div>
+                                    <div class="file-tab panel-body">
+                                        <img class="img-responsive" id="add_imageproduct" src="../Image/Ships/Tau1.jpg" style="margin: 8% 2%; height: 200px; max-width: 300px;" />
+                                        <label class="btn btn-default btn-file">
+                                            <span>Tải lên</span>
+                                            <input type="file" name="Anh" id="add_Anh" onchange="PreviewImage()">
+                                        </label>
+                                        <%--<button type="button" class="btn btn-dejfault" id="delete" onclick="Xoa()">Xóa</button>--%>
+                                    </div>
+                                </div>
+                                <div class="col-md-6" style="padding: 0;">
+                                    <div style="float: left; padding: 5px" class="col-md-12">
+                                        <div class="form-group">
+                                            <label class="col-md-4 control-label" style="text-align: right"><strong>Tên tàu     <span style="color: red;">(*)</span>: </strong></label>
+                                            <div class="col-md-8">
+                                                <input type="text" class="form-control" id="add_TenTau" name="TenTau" required value="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div style="float: left; padding: 5px" class="col-md-12">
+                                        <div class="form-group">
+                                            <label class="col-md-4 control-label" style="text-align: right"><strong>Số hiệu     <span style="color: red;">(*)</span>: </strong></label>
+                                            <div class="col-md-8">
+                                                <input type="text" class="form-control" id="add_SoHieu" name="SoHieu" required value="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div style="float: left; padding: 5px" class="col-md-12">
+                                        <div class="form-group">
+                                            <label class="col-md-4 control-label" style="text-align: right"><strong>Nơi cấp   : </strong></label>
+                                            <div class="col-md-8">
+                                                <input type="text" class="form-control" id="add_NoiCap" name="NoiCap" required value="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div style="float: left; padding: 5px" class="col-md-12">
+                                        <div class="form-group">
+                                            <label class="col-md-4 control-label" style="text-align: right"><strong>Ngày Cấp    : </strong></label>
+                                            <div class="col-md-8">
+                                                <input type="text" class="form-control" id="add_NgayCap" name="NgayCap" required value="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                  
+                                    <div style="width: 100%; float: left; padding: 5px">
+                                        <div class="form-group">
+                                            <label class="col-md-4 control-label" style="text-align: right"><strong>Hải đội  : </strong></label>
+                                            <div class="col-md-6">
+                                                <select class="form-control" id="add_HaiDoi">
+                                                </select>
+                                            </div>
+                                            <div class="wrap-layout col-md-2" style="padding-left: 0px;">
+                                                <a href="#" class="view" title="Xem thông tin hải đội" onclick=""><i class="material-icons"></i></a>
+                                                <a href="#" class="add" title="Thêm hải đội" onclick=""><i class="material-icons">add_circle</i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div style="width: 100%; float: left; padding: 5px">
+                                        <div class="form-group">
+                                            <label class="col-md-4 control-label" style="text-align: right"><strong>Thuyền trưởng   : </strong></label>
+                                            <div class="col-md-6">
+                                                <select class="form-control" id="add_ThuyenTruong">
+                                                </select>
+                                            </div>
+                                            <div class="wrap-layout col-md-2" style="padding-left: 0px;">
+                                                <a href="#" class="view" title="Xem thông tin thuyền trưởng" onclick=""><i class="material-icons"></i></a>
+                                                <a href="#" class="add" title="Thêm thuyền trưởng" onclick=""><i class="material-icons">add_circle</i></a>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                    <div style="float: left; padding: 5px" class="col-md-12">
+                                        <div class="form-group">
+                                            <label class="col-md-4 control-label" style="text-align: right"><strong>Số thuyền viên   : </strong></label>
+                                            <div class="col-md-8">
+                                                <input type="text" class="form-control" id="add_SoThuyenVien" name="SoThuyenVien" required value="">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div style="display: flex; padding-top: 25px">
+                                <div class="col-md-6" style="padding: 0px;">
+
+                                    <div style="width: 100%; float: left; padding: 5px">
+                                        <div class="form-group">
+                                            <label class="col-md-5 control-label" style="text-align: right"><strong>Lượng nhiên liệu tối đa   : </strong></label>
+                                            <div class="col-md-7">
+                                                <input type="text" class="form-control" id="add_NhienLieuToiDa" name="NhienLieuToiDa" required value="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div style="width: 100%; float: left; padding: 5px">
+                                        <div class="form-group">
+                                            <label class="col-md-5 control-label" style="text-align: right"><strong>Lượng nước ngọt tối đa   : </strong></label>
+                                            <div class="col-md-7">
+                                                <input type="text" class="form-control" id="add_NuocNgotToiDa" name="NuocNgotToiDa" required value="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div style="width: 100%; float: left; padding: 5px">
+                                        <div class="form-group">
+                                            <label class="col-md-5 control-label" style="text-align: right"><strong>Tốc độ(hải lý/giờ)   : </strong></label>
+                                            <div class="col-md-7">
+                                                <input type="text" class="form-control" id="add_TocDo" name="TocDo" required value="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div style="width: 100%; float: left; padding: 5px">
+                                        <div class="form-group">
+                                            <label class="col-md-5 control-label" style="text-align: right"><strong>TG hành trình tối đa   : </strong></label>
+                                            <div class="col-md-7">
+                                                <input type="text" class="form-control" id="add_TG_HanhTrinhToiDa" name="TG_HanhTrinhToiDa" required value="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div style="width: 100%; float: left; padding: 5px">
+                                        <div class="form-group">
+                                            <label class="col-md-5 control-label" style="text-align: right"><strong>Ngày tạo   : </strong></label>
+                                            <div class="col-md-7">
+                                                <input type="text" class="form-control" id="add_NgayTao" name="NgayTao" value="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div style="width: 100%; float: left; padding: 5px">
+                                        <div class="form-group">
+                                            <label class="col-md-5 control-label" style="text-align: right"><strong>Ngày cập nhật  : </strong></label>
+                                            <div class="col-md-7">
+                                                <input type="text" class="form-control" id="add_NgayCapNhat" name="NgayCapNhat" value="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6" style="padding: 0px;">
+                                   
+                                    <div style="width: 100%; float: left; padding: 5px">
+                                        <div class="form-group">
+                                            <label class="col-md-5 control-label" style="text-align: right"><strong>Trọng tải    : </strong></label>
+                                            <div class="col-md-7">
+                                                <input type="text" class="form-control" id="add_TrongTai" name="TrongTai" required value="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div style="width: 100%; float: left; padding: 5px">
+                                        <div class="form-group">
+                                            <label class="col-md-5 control-label" style="text-align: right"><strong>Chiều rộng (m)  : </strong></label>
+                                            <div class="col-md-7">
+                                                <input type="text" class="form-control" id="add_ChieuRong" name="ChieuRong" required value="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div style="width: 100%; float: left; padding: 5px">
+                                        <div class="form-group">
+                                            <label class="col-md-5 control-label" style="text-align: right"><strong>Chiều dài (m)  : </strong></label>
+                                            <div class="col-md-7">
+                                                <input type="text" class="form-control" id="add_ChieuDai" name="ChieuDai" required value="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div style="width: 100%; float: left; padding: 5px">
+                                        <div class="form-group">
+                                            <label class="col-md-5 control-label" style="text-align: right"><strong>Vật liệu  : </strong></label>
+                                            <div class="col-md-7">
+                                                <input type="text" class="form-control" id="add_VatLieu" name="VatLieu" required value="">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div style="width: 100%; float: left; padding: 5px">
+                                        <div class="form-group">
+                                            <label class="col-md-5 control-label" style="text-align: right"><strong>Mướn nước (m)  : </strong></label>
+                                            <div class="col-md-7">
+                                                <input type="text" class="form-control" id="add_MonNuoc" name="MonNuoc" required value="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                      <div style="float: left; padding: 5px" class="col-md-12">
+                                        <div class="form-group">
+                                            <label class="col-md-5 control-label" style="text-align: right"><strong>Năm hạ thủy    : </strong></label>
+                                            <div class="col-md-7">
+                                                <input type="text" class="form-control" id="add_NamHaThuy" name="NamHaThuy" required value="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button onclick="Add_Ship()" type="button" class="btn btn-info">Save</button>
+                        <button type="button" class="btn btn-info" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <div class="modal fade" id="model-infordetail-ship" tabindex="-1" role="dialog">
         <div class="modal-dialog" role="document" style="max-width: 70%;">
@@ -157,11 +368,16 @@
                                             </div>
                                         </div>
                                     </div>
-                                     <div style="width: 100%; float: left; padding: 5px">
+                                    <div style="width: 100%; float: left; padding: 5px">
                                         <div class="form-group">
                                             <label class="col-md-4 control-label" style="text-align: right"><strong>Hải đội  : </strong></label>
-                                            <div class="col-md-8">
-                                                <input type="text" class="form-control" id="HaiDoi" name="HaiDoi" required value="">
+                                            <div class="col-md-6">
+                                                <select class="form-control" id="HaiDoi">
+                                                </select>
+                                            </div>
+                                            <div class="wrap-layout col-md-2" style="padding-left: 0px;">
+                                                <a href="#" class="view" title="Xem thông tin hải đội" onclick=""><i class="material-icons"></i></a>
+                                                <a href="#" class="add" title="Thêm hải đội" onclick=""><i class="material-icons">add_circle</i></a>
                                             </div>
                                         </div>
                                     </div>
@@ -180,21 +396,14 @@
                                         </div>
                                     </div>
 
-                                    <div style="float: left; padding: 5px" class="col-md-12">
-                                        <div class="form-group">
-                                            <label class="col-md-4 control-label" style="text-align: right"><strong>Số thuyền viên   : </strong></label>
-                                            <div class="col-md-8">
-                                                <input type="text" class="form-control" id="SoThuyenVien" name="SoThuyenVien" required value="">
-                                            </div>
-                                        </div>
-                                    </div>
+                                   
 
                                 </div>
                             </div>
-                            <div style="display: flex; padding-top:25px">
+                            <div style="display: flex; padding-top: 25px">
                                 <div class="col-md-6" style="padding: 0px;">
-                                   
-                                     <div style="width: 100%; float: left; padding: 5px">
+
+                                    <div style="width: 100%; float: left; padding: 5px">
                                         <div class="form-group">
                                             <label class="col-md-5 control-label" style="text-align: right"><strong>Lượng nhiên liệu tối đa   : </strong></label>
                                             <div class="col-md-7">
@@ -246,18 +455,17 @@
                                 <div class="col-md-6" style="padding: 0px;">
                                     <div style="float: left; padding: 5px" class="col-md-12">
                                         <div class="form-group">
-                                             <label class="col-md-5 control-label" style="text-align: right"><strong>Vùng  : </strong></label>
+                                            <label class="col-md-5 control-label" style="text-align: right"><strong>Số thuyền viên   : </strong></label>
                                             <div class="col-md-7">
-                                                <input type="text" class="form-control" id="Vung" name="Vung" required value="">
+                                                <input type="text" class="form-control" id="SoThuyenVien" name="SoThuyenVien" required value="">
                                             </div>
-                                           
                                         </div>
                                     </div>
                                     <div style="width: 100%; float: left; padding: 5px">
                                         <div class="form-group">
                                             <label class="col-md-5 control-label" style="text-align: right"><strong>Trọng tải    : </strong></label>
                                             <div class="col-md-7">
-                                            <input type="text" class="form-control" id="TrongTai" name="TrongTai" required value="">
+                                                <input type="text" class="form-control" id="TrongTai" name="TrongTai" required value="">
                                             </div>
                                         </div>
                                     </div>
@@ -285,7 +493,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                   
+
                                     <div style="width: 100%; float: left; padding: 5px">
                                         <div class="form-group">
                                             <label class="col-md-5 control-label" style="text-align: right"><strong>Mướn nước (m)  : </strong></label>
@@ -316,9 +524,9 @@
     <script>
         var date = new Date();
         var strDate = '' + date.getDate() + '/' + (Number(date.getMonth()) + 1) + '/' + date.getFullYear() + ' ' + date.getHours() + ':' + date.getMinutes() + ':' + date.getSeconds();
+        var vung = getParameterByName('vung');
+        var vung_id;
         $(document).ready(function () {
-            var vung = getParameterByName('vung');
-            var vung_id;
             if (vung == null | vung == 1) {
                 vung_id = '5AEBB23FF45F3C235AFD86B510BF9E8C';
             }
@@ -333,21 +541,34 @@
             }
             $('#title').text('QUẢN LÝ TÀU - VÙNG ' + vung);
             loadDataListShips(vung_id);
-           
-        });
-        var selectedVal;
-        $("#ThuyenTruong").change(function () {
-
-            // var selectedVal = $("#myselect option:selected").text();
-        
-            $("select option:selected").each(function () {
-                selectedVal = $(this).val();
-                debugger
-            });
-           
-           
 
         });
+        var selectedValue_Captain_ID;
+        var selectedValue_Flotilla_ID;
+        //$("#HaiDoi").change(function () {
+
+        //    // var selectedVal = $("#myselect option:selected").text();
+
+        //    $("select option:selected").each(function () {
+        //        selectedValue_Flotilla_ID = $(this).val();
+        //        debugger
+        //    });
+
+
+
+        //});
+        //$("#ThuyenTruong").change(function () {
+
+        //    // var selectedVal = $("#myselect option:selected").text();
+
+        //    $("select option:selected").each(function () {
+        //        selectedValue_Captain_ID = $(this).val();
+        //        debugger
+        //    });
+
+
+
+        //});
         function loadDataListShips(vung_id) {
             $.ajax({
                 type: "GET",
@@ -367,6 +588,7 @@
                     tabletext += "</tbody>";
                     $('#tableship').html(tabletext);
                     loadTableShip();
+                    $('#tableship_wrapper .row .col-sm-12').first().html('<button onclick="btn_addship()" class="btn btn-info btn-lg col-6" data-toggle="modal" data-target="#model-add-ship" style="height: 35px; padding - top: 4px;margin - top: -4px;">Thêm tàu</button>');
                 }, error: function (ret) {
                     console.log('errorGET');
                 },
@@ -377,6 +599,83 @@
                 },
             });
         };
+        function btn_addship(){
+            $('#add_Ship_ID').val('');
+            //$("#Anh").val(data.Name);
+            $("#add_TenTau").val('');
+            $("#add_SoHieu").val('');
+            $("#add_NoiCap").val('');
+            $("#add_NgayCap").val('');
+            $("#add_NamHaThuy").val('');
+            $("#add_TrongTai").val('');
+            $("#add_NhienLieuToiDa").val('');
+            $("#add_NuocNgotToiDa").val('');
+            $("#add_SoThuyenVien").val('');
+            list_captain('','add_ThuyenTruong');
+            $("#add_TocDo").val('');
+            $("#add_TG_HanhTrinhToiDa").val('');
+            $("#add_NgayTao").val('');
+            $("#add_NgayCapNhat").val('');
+            $("#add_ChieuDai").val('');
+            $("#add_ChieuRong").val('');
+            $("#add_VatLieu").val('');
+            list_flotilla('','add_HaiDoi');
+            $("#add_MonNuoc").val('');
+        }
+
+        function Add_Ship() {
+            var id_Flotilla = $('#add_HaiDoi').val();
+            var id_Captain = $('#add_ThuyenTruong').val();
+            var New_Ship = {
+                Image: 'imgs\\default.jpg',
+                Name: $('#add_TenTau').val(),
+                RegistrationNumber: $('#add_SoHieu').val(),
+                Weight: $('#add_TrongTai').val(),
+                Fuel: $('#add_NhienLieuToiDa').val(),
+                Water: $('#add_NuocNgotToiDa').val(),
+                Personel: $('#add_SoThuyenVien').val(),
+                Captain: {
+                    ID: id_Captain
+                },
+                Speed: $("#add_TocDo").val(),
+                Time: $("#add_TG_HanhTrinhToiDa").val(),
+                LaunchYear: $("#add_NamHaThuy").val(),
+                RegistrationDate: $("#add_NgayCap").val(),
+                RegistrationPlace: $("#add_NoiCap").val(),
+                Width: $("#add_ChieuDai").val(),
+                Wide: $("#add_ChieuRong").val(),
+                Draught: $("#add_MonNuoc").val(),
+                Material: $("#add_VatLieu").val(),
+                Created: $("#add_NgayTao").val(),
+                Updated: strDate,
+                Flotilla: {
+                    Id: id_Flotilla
+                }
+            };
+            console.log(New_Ship);
+            $.ajax({
+                type: "POST",
+                url: linkapi + "ship_insert",
+                dataType: "json",
+                data: JSON.stringify(New_Ship),
+                contentType: "application/json",
+
+                beforeSend: function () { // Before we send the request, remove the .hidden class from the spinner and default to inline-block.
+                    $('#loader').removeClass('hidden');
+                },
+                success: function (data) {
+                    toastSuccess("Thành công", "Thêm tàu thành công.");
+                    $('#model-add-ship').modal("hide");
+                }, error: function (ret) {
+                    console.log(ret.responseJSON.Message);
+                    toastError("Thất bại! Có thể số hiệu tàu này đã tồn tại", ret.responseJSON.Message);
+                    loadDataListShips(vung_id);
+                },
+                complete: function () { // Set our complete callback, adding the .hidden class and hiding the spinner.
+                    $('#loader').addClass('hidden');
+                },
+            });
+        }
         function ViewInforShip(ID) {
             debugger;
             $.ajax({
@@ -395,16 +694,15 @@
                     $("#NhienLieuToiDa").val(data.Fuel);
                     $("#NuocNgotToiDa").val(data.Water);
                     $("#SoThuyenVien").val(data.Personel);
-                    list_captain(data.Captain.ID);
+                    list_captain(data.Captain.ID,'ThuyenTruong');
                     $("#TocDo").val(data.Speed);
                     $("#TG_HanhTrinhToiDa").val(data.Time);
                     $("#NgayTao").val(data.Created);
                     $("#NgayCapNhat").val(data.Updated);
-                    $("#Vung").val(data.Region);
-                    $("#ChieuDai").val(data.Width); 
+                    $("#ChieuDai").val(data.Width);
                     $("#ChieuRong").val(data.Wide);
                     $("#VatLieu").val(data.Material);
-                    $("#HaiDoi").val(data.Flotilla.Name);
+                    list_flotilla(data.Flotilla.Id,'HaiDoi');
                     $("#MonNuoc").val(data.Draught);
                 }, error: function (ret) {
                     console.log('errorGET');
@@ -414,26 +712,66 @@
             });
 
         }
+        function list_flotilla(id_flotilla,string_HaiDoi) {
+            $.ajax({
+                type: "GET",
+                url: linkapi + "flotillas",
+                dataType: "json",
+                success: function (data) {
+                    console.log(data);
+                    $.each(data, function (key, item) {
 
-        function list_captain(id_captain) {
+                        if (item.Id == id_flotilla) {
+                            $('#' + string_HaiDoi).append($('<option>', {
+                                selected: true,
+                                value: item.Id,
+                                text: item.Name
+                            }));
+                        }
+                        else {
+                            $('#' + string_HaiDoi).append($('<option>', {
+                                selected: false,
+                                value: item.Id,
+                                text: item.Name
+                            }));
+                        }
+
+                    });
+                    debugger
+                    if (id_flotilla == '') {
+                        $('#' + string_HaiDoi).append($('<option>', {
+                            selected: true,
+                            value: data[0].Id,
+                            text: data[0].Name
+                        }));
+                    }
+                }, error: function (ret) {
+                    console.log('errorGET');
+                },
+                complete: function () { // Set our complete callback, adding the .hidden class and hiding the spinner.
+                },
+            });
+
+        }
+        function list_captain(id_captain,string_thuyentruong) {
             $.ajax({
                 type: "GET",
                 url: linkapi + "captains",
                 dataType: "json",
                 success: function (data) {
                     console.log(data);
-                    $('#ThuyenTruong').empty();
+                    $('#' + string_thuyentruong).empty();
                     $.each(data, function (key, item) {
-                       
-                        if (item.ID = id_captain) {
-                            $('#ThuyenTruong').append($('<option>', {
+
+                        if (item.ID == id_captain) {
+                            $('#' + string_thuyentruong).append($('<option>', {
                                 selected: true,
                                 value: item.ID,
                                 text: item.Fullname
                             }));
                         }
                         else {
-                            $('#ThuyenTruong').append($('<option>', {
+                            $('#' + string_thuyentruong).append($('<option>', {
                                 selected: false,
                                 value: item.ID,
                                 text: item.Fullname
@@ -442,17 +780,10 @@
 
                     });
                     if (id_captain == '') {
-                        $('#ThuyenTruong').append($('<option>', {
+                        $('#' + string_thuyentruong).append($('<option>', {
                             selected: true,
-                            value: 'Empty_Captain',
-                            text: 'Không có'
-                        }));
-                    }
-                    else {
-                        $('#ThuyenTruong').append($('<option>', {
-                            selected: false,
-                            value: 'Empty_Captain',
-                            text: 'Không có'
+                            value: data[0].ID,
+                            text: data[0].Fullname
                         }));
                     }
                 }, error: function (ret) {
@@ -535,54 +866,57 @@
         }
 
         function Update_Ship() {
-            //var New_Ship = {
-            //    ID: $('#Ship_ID').val(),
-            //    //Image: $('#Anh').val(),
-            //    Name: $('#TenTau').val(),
-            //    RegistrationNumber: $('#SoHieu').val(),
-            //    Weight: $('#TrongTai').val(),
-            //    Fuel: $('#NhienLieuToiDa').val(),
-            //    Water: $('#NuocNgotToiDa').val(),
-            //    Personel: $('#SoThuyenVien').val(),
-            //    Captain: {
-            //        ID: ""
-            //    },
-            //    Speed: $("#TocDo").val(),
-            //    Time: $("#TG_HanhTrinhToiDa").val(),
-            //    LaunchYear: $("#NamHaThuy").val(),
-            //    Region: $("#Vung").val(),
-            //    RegistrationDate: $("#NgayCap").val(),
-            //    RegistrationPlace: $("#NoiCap").val(),
-            //    Width: $("#ChieuDai").val(); 
-            //    Wide: $("#ChieuRong").val(),
-            //    Draught: $("#MonNuoc").val(),
-            //    Material: $("#VatLieu").val(),
-            //    Created: $("#NgayTao").val(),
-            //    Updated: strDate,
-            //    Flotilla: {
-            //        Id: ""
-            //    }
-            //};
-            //$.ajax({
-            //    type: "PUT",
-            //    url: linkapi + "ship_update",
-            //    dataType: "json",
-            //    data: JSON.stringify(New_Ship),
-            //    contentType: "application/json",
-            //    beforeSend: function () { // Before we send the request, remove the .hidden class from the spinner and default to inline-block.
-            //        $('#loader').removeClass('hidden');
-            //    },
-            //    success: function (data) {
-            //        console.log("okPUT");
-            //        toastSuccess("Thành công", "Cập tàu thành công.");
-            //    }, error: function (ret) {
-            //        console.log('errorPUT');
-            //    },
-            //    complete: function () { // Set our complete callback, adding the .hidden class and hiding the spinner.
-            //        $('#loader').addClass('hidden');
-            //        $('#model-infordetail-ship').modal("hide");
-            //    },
-            //});
+            var id_Flotilla = $('#HaiDoi').val();
+            var id_Captain = $('#ThuyenTruong').val();
+            var New_Ship = {
+                ID: $('#Ship_ID').val(),
+                Image: 'imgs\\default.jpg',
+                Name: $('#TenTau').val(),
+                RegistrationNumber: $('#SoHieu').val(),
+                Weight: $('#TrongTai').val(),
+                Fuel: $('#NhienLieuToiDa').val(),
+                Water: $('#NuocNgotToiDa').val(),
+                Personel: $('#SoThuyenVien').val(),
+                Captain: {
+                    ID: id_Captain
+                },
+                Speed: $("#TocDo").val(),
+                Time: $("#TG_HanhTrinhToiDa").val(),
+                LaunchYear: $("#NamHaThuy").val(),
+                RegistrationDate: $("#NgayCap").val(),
+                RegistrationPlace: $("#NoiCap").val(),
+                Width: $("#ChieuDai").val(),
+                Wide: $("#ChieuRong").val(),
+                Draught: $("#MonNuoc").val(),
+                Material: $("#VatLieu").val(),
+                Created: $("#NgayTao").val(),
+                Updated: strDate,
+                Flotilla: {
+                    Id: id_Flotilla
+                }
+            };
+            console.log(New_Ship);
+            $.ajax({
+                type: "PUT",
+                url: linkapi + "ship_update",
+                dataType: "json",
+                data: JSON.stringify(New_Ship),
+                contentType: "application/json",
+                beforeSend: function () { // Before we send the request, remove the .hidden class from the spinner and default to inline-block.
+                    $('#loader').removeClass('hidden');
+                },
+                success: function (data) {
+                    console.log("okPUT");
+                    toastSuccess("Thành công", "Cập tàu thành công.");
+                    loadDataListShips(vung_id);
+                }, error: function (ret) {
+                    console.log('errorPUT');
+                },
+                complete: function () { // Set our complete callback, adding the .hidden class and hiding the spinner.
+                    $('#loader').addClass('hidden');
+                    $('#model-infordetail-ship').modal("hide");
+                },
+            });
         }
     </script>
 </asp:Content>
