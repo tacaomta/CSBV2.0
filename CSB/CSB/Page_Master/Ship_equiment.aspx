@@ -669,7 +669,7 @@
                                 <div class="form-group">
                                     <label class="col-5 control-label"><strong>Động cơ diesel     : </strong></label>
                                     <div class="col-7">
-                                        <input type="text" class="form-control" id="aSecondaryEngineName" name="TenDayDu" required value="">
+                                        <input type="text" class="form-control" id="aSecondaryEngineName" name="DongCo" required value="">
                                     </div>
                                 </div>
                             </div>
@@ -677,7 +677,7 @@
                                 <div class="form-group">
                                     <label class="col-5 control-label"><strong>Năm sản xuất     : </strong></label>
                                     <div class="col-7">
-                                        <input type="number" class="form-control" id="aSecondaryEngineProductionYear" name="TenDayDu" value="">
+                                        <input type="text" class="form-control" id="aSecondaryEngineProductionYear" name="NamSanXuat" value="">
                                     </div>
                                 </div>
                             </div>
@@ -685,7 +685,7 @@
                                 <div class="form-group">
                                     <label class="col-5 control-label"><strong>Xuất xứ     : </strong></label>
                                     <div class="col-7">
-                                        <input type="text" class="form-control" id="aSecondaryEngineOrigin" name="TenDayDu" required value="">
+                                        <input type="text" class="form-control" id="aSecondaryEngineOrigin" name="XuatXu" required value="">
                                     </div>
                                 </div>
                             </div>
@@ -693,7 +693,7 @@
                                 <div class="form-group">
                                     <label class="col-5 control-label"><strong>Công suất (KW)     : </strong></label>
                                     <div class="col-7">
-                                        <input type="text" class="form-control" id="aSecondaryEnginePower" name="TenDayDu" required value="">
+                                        <input type="text" class="form-control" id="aSecondaryEnginePower" name="CongXuat" required value="">
                                     </div>
                                 </div>
                             </div>
@@ -701,7 +701,7 @@
                                 <div class="form-group">
                                     <label class="col-5 control-label"><strong>Định mức tiêu thụ (I/h)     : </strong></label>
                                     <div class="col-7">
-                                        <input type="text" class="form-control" id="aSecondaryEngineWaste" name="TenDayDu" required value="">
+                                        <input type="text" class="form-control" id="aSecondaryEngineWaste" name="DinhMuc" required value="">
                                     </div>
                                 </div>
                             </div>
@@ -709,7 +709,7 @@
                                 <div class="form-group">
                                     <label class="col-5 control-label"><strong>Vòng quay lớn nhất (V/P)    : </strong></label>
                                     <div class="col-7">
-                                        <input type="text" class="form-control" id="aSecondaryEngineSpeed" name="TenDayDu" required value="">
+                                        <input type="text" class="form-control" id="aSecondaryEngineSpeed" name="VongQuayMax" required value="">
                                     </div>
                                 </div>
                             </div>
@@ -717,7 +717,7 @@
                                 <div class="form-group">
                                     <label class="col-5 control-label"><strong>Máy phát điện     : </strong></label>
                                     <div class="col-7">
-                                        <input type="text" class="form-control" id="aSecondaryEngineMachine" name="TenDayDu" required value="">
+                                        <input type="text" class="form-control" id="aSecondaryEngineMachine" name="MayPhatDien" required value="">
                                     </div>
                                 </div>
                             </div>
@@ -725,7 +725,7 @@
                                 <div class="form-group">
                                     <label class="col-5 control-label"><strong>Năm sản xuất     : </strong></label>
                                     <div class="col-7">
-                                        <input type="text" class="form-control" id="aSecondaryEngineYear" name="TenDayDu" required value="">
+                                        <input type="text" class="form-control" id="aSecondaryEngineYear" name="NamSanXuat" required value="">
                                     </div>
                                 </div>
                             </div>
@@ -733,7 +733,7 @@
                                 <div class="form-group">
                                     <label class="col-5 control-label"><strong>Xuất xứ     : </strong></label>
                                     <div class="col-7">
-                                        <input type="text" class="form-control" id="aSecondaryEngineOrigin2" name="TenDayDu" required value="">
+                                        <input type="text" class="form-control" id="aSecondaryEngineOrigin2" name="XuatXu" required value="">
                                     </div>
                                 </div>
                             </div>
@@ -741,7 +741,7 @@
                                 <div class="form-group">
                                     <label class="col-5 control-label"><strong>Công suất (KW)     : </strong></label>
                                     <div class="col-7">
-                                        <input type="text" class="form-control" id="aSecondaryEnginePower2" name="TenDayDu" required value="">
+                                        <input type="text" class="form-control" id="aSecondaryEnginePower2" name="CongXuat" required value="">
                                     </div>
                                 </div>
                             </div>
@@ -780,7 +780,7 @@
                                 <div class="form-group">
                                     <label class="col-5 control-label"><strong>Năm sản xuất     : </strong></label>
                                     <div class="col-7">
-                                        <input type="number" class="form-control" id="uSecondaryEngineProductionYear" name="TenDayDu" value="">
+                                        <input type="text" class="form-control" id="uSecondaryEngineProductionYear" name="TenDayDu" value="">
                                     </div>
                                 </div>
                             </div>
@@ -1257,7 +1257,7 @@
                                 <div class="form-group">
                                     <label class="col-5 control-label"><strong>Xuất xứ    : </strong></label>
                                     <div class="col-7">
-                                        <input type="number" class="form-control" id="add_LifeSaving_XuatXu" name="XuatXu" value="">
+                                        <input type="text" class="form-control" id="add_LifeSaving_XuatXu" name="XuatXu" value="">
                                     </div>
                                 </div>
                             </div>

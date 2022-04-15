@@ -209,6 +209,7 @@
     <Content Include="Content\cdn.datatables.net_buttons_2.0.1_css_buttons.bootstrap4.min.css" />
     <Content Include="Content\dataTables.bootstrap4.min.css" />
     <Content Include="Content\font-awesome.min.css" />
+    <Content Include="Content\MaterialIcons.css" />
     <Content Include="Content\quill.bubble.css" />
     <Content Include="Content\quill.snow.css" />
     <Content Include="Content\remixicon.css" />
@@ -255,6 +256,7 @@
     <Content Include="Scripts\bootstrap-4.6.1\bootstrap.min.js.map" />
     <Content Include="Content\fonts\bootstrap-icons.woff" />
     <Content Include="Content\fonts\bootstrap-icons.woff2" />
+    <Content Include="Content\fonts\flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\bootstrap-4.6.1\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap-4.6.1\bootstrap.bundle.min.js" />
