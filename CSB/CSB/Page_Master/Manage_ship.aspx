@@ -339,7 +339,11 @@
         $("#ThuyenTruong").change(function () {
 
             // var selectedVal = $("#myselect option:selected").text();
-            selectedVal = $(this).children("option:selected").val();
+        
+            $("select option:selected").each(function () {
+                selectedVal = $(this).val();
+                debugger
+            });
            
            
 
@@ -417,8 +421,10 @@
                 url: linkapi + "captains",
                 dataType: "json",
                 success: function (data) {
+                    console.log(data);
                     $('#ThuyenTruong').empty();
                     $.each(data, function (key, item) {
+                       
                         if (item.ID = id_captain) {
                             $('#ThuyenTruong').append($('<option>', {
                                 selected: true,
@@ -529,7 +535,6 @@
         }
 
         function Update_Ship() {
-            alert(selectedVal);
             //var New_Ship = {
             //    ID: $('#Ship_ID').val(),
             //    //Image: $('#Anh').val(),
