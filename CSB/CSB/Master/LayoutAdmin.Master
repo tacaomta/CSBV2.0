@@ -25,7 +25,7 @@
     <link href="../Content/responsive.bootstrap4.min.css" rel="stylesheet" />
 
     <!-- Template Main CSS File -->
-    <link href="../css/LayoutAdmin.css" rel="stylesheet" />
+<%--    <link href="../css/LayoutAdmin.css" rel="stylesheet" />--%>
 
     <!-- fas fa icon CSS-->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
@@ -5360,7 +5360,7 @@ table tr:hover .table-links {
 
     <!-- ===== JS =====-->
     <script>
-        var linkapi = "http://localhost:8082/api/";
+        var linkapi = "http://localhost:8081/api/";
         var baseaddress = "http://localhost:44347/";
     </script>
     <script src="../Scripts/jquery-3.4.1.slim.min.js"></script>
