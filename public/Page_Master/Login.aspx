@@ -2,11 +2,12 @@
 
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
 <head runat="server">
     <title>Đăng nhập</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/Content/bootstrap.min.css" />
+<%--    <link rel="stylesheet" href="~/Content/bootstrap.min.css" />--%>
+    <link href="../css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../Content/MaterialIcons.css" rel="stylesheet" />
     <link href="../css/login.css" rel="stylesheet" />
 
 </head>
@@ -16,7 +17,7 @@
         <div>
             <div class="container">
                 <div class="row">
-                    <div class="col-md-4 login-box col-md-offset-4">
+                    <div class="col-md-4 login-box col-md-offset-4 offset-md-4">
                         <div class="col-lg-12 login-key">
                             <img class="ship-key" src="../Image/ic-login.png" />
                         </div>
@@ -27,11 +28,11 @@
                         <div class="col-lg-12 login-form">
                             <div class="col-lg-12 login-form">
                                 <div class="form-group">
-                                    <i class="glyphicon glyphicon-lock icon-name"></i>
+                                    <i class="material-icons icon-name">person</i >
                                     <input type="text" class="form-control" id="username" placeholder="Tài khoản" />
                                 </div>
                                 <div class="form-group">
-                                    <i class="glyphicon glyphicon-user icon-name"></i>
+                                    <i class="material-icons icon-name">lock</i >
                                     <input type="password" pattern=".{6,}" title="Mật khẩu tối thiểu 6 kí tự" class="form-control" id="password" placeholder="Mật khẩu" />
                                 </div>
 
@@ -42,7 +43,7 @@
                                     <div class="col-md-12 login-btm login-button">
                                         <button type="submit" class="btn btn-outline-primary" onclick="Login()">Đăng nhập</button>
                                     </div>
-                                    <div class="col-md-12 login-button forgot-password">
+                                    <div class="col-md-12 login-btm forgot-password">
                                         <a>Quên mật khẩu?</a>
                                     </div>
                                 </div>
@@ -96,10 +97,11 @@
                         $('#error-login-text').removeAttr('hidden');
                         return;
                     }
+                    debugger
                     sessionStorage.setItem("userLoginUsername", data.UserName);
                     sessionStorage.setItem("userLoginFullname", data.Fullname);
                     sessionStorage.setItem("userLoginID", data.ID);
-                    window.location = "http://localhost:44347/Page_Master/Manage_user";
+                    window.location = "http://localhost:44347/Page_Master/Manage_ship?vung=1";
                 }, error: function (ret) {
                     console.log(ret);
                     $('#error-login-text').text('Tài khoản hoặc mật khẩu không đúng');

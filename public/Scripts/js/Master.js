@@ -19,3 +19,6 @@ function toastError(_header, _body) {
     $('.toast').toast({ delay: 2500 });
     $('.toast').toast('show');
 }
+function closeToast() {
+    $('.toast').toast('hide');
+}

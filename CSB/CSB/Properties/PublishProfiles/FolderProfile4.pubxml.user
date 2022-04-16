@@ -5,7 +5,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <_PublishTargetUrl>C:\Users\Linh\Documents\GitHub\CSBV2.0\public</_PublishTargetUrl>
-    <History>True|2022-04-08T09:03:10.2855612Z;True|2022-04-08T16:02:36.9063881+07:00;</History>
+    <History>True|2022-04-16T00:22:20.9622783Z;True|2022-04-08T16:03:10.2855612+07:00;True|2022-04-08T16:02:36.9063881+07:00;</History>
   </PropertyGroup>
   <ItemGroup>
     <File Include="About.aspx">
@@ -36,10 +36,10 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>04/08/2022 08:01:24</publishTime>
     </File>
     <File Include="bin/CSB.dll">
-      <publishTime>04/08/2022 16:02:34</publishTime>
+      <publishTime>04/16/2022 06:21:33</publishTime>
     </File>
     <File Include="bin/CSB.pdb">
-      <publishTime>04/08/2022 16:02:34</publishTime>
+      <publishTime>04/16/2022 06:21:33</publishTime>
     </File>
     <File Include="bin/Microsoft.AspNet.FriendlyUrls.dll">
       <publishTime>04/08/2022 08:01:24</publishTime>
@@ -260,6 +260,9 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
     <File Include="Contact.aspx">
       <publishTime>04/08/2022 08:01:23</publishTime>
     </File>
+    <File Include="Content/bootstrap-icons.css">
+      <publishTime>04/14/2022 21:08:24</publishTime>
+    </File>
     <File Include="Content/bootstrap-theme.css">
       <publishTime>04/08/2022 08:01:23</publishTime>
     </File>
@@ -273,16 +276,22 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>04/08/2022 08:01:23</publishTime>
     </File>
     <File Include="Content/bootstrap.css">
-      <publishTime>04/08/2022 08:01:23</publishTime>
+      <publishTime>04/14/2022 23:40:10</publishTime>
     </File>
     <File Include="Content/bootstrap.css.map">
       <publishTime>04/08/2022 08:01:23</publishTime>
     </File>
     <File Include="Content/bootstrap.min.css">
-      <publishTime>04/08/2022 08:01:23</publishTime>
+      <publishTime>04/14/2022 23:43:25</publishTime>
     </File>
     <File Include="Content/bootstrap.min.css.map">
       <publishTime>04/08/2022 08:01:23</publishTime>
+    </File>
+    <File Include="Content/boxicons.min.css">
+      <publishTime>04/13/2022 22:36:03</publishTime>
+    </File>
+    <File Include="Content/buttons.bootstrap4.min.css">
+      <publishTime>04/14/2022 22:09:40</publishTime>
     </File>
     <File Include="Content/cdn.datatables.net_1.11.3_css_dataTables.bootstrap4.min.css">
       <publishTime>04/08/2022 08:01:23</publishTime>
@@ -290,11 +299,47 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
     <File Include="Content/cdn.datatables.net_buttons_2.0.1_css_buttons.bootstrap4.min.css">
       <publishTime>04/08/2022 08:01:23</publishTime>
     </File>
+    <File Include="Content/dataTables.bootstrap4.min.css">
+      <publishTime>04/14/2022 20:28:24</publishTime>
+    </File>
+    <File Include="Content/font-awesome.min.css">
+      <publishTime>04/14/2022 23:28:36</publishTime>
+    </File>
+    <File Include="Content/fonts/bootstrap-icons.woff">
+      <publishTime>04/14/2022 21:09:06</publishTime>
+    </File>
+    <File Include="Content/fonts/bootstrap-icons.woff2">
+      <publishTime>04/14/2022 21:09:06</publishTime>
+    </File>
+    <File Include="Content/fonts/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2">
+      <publishTime>04/16/2022 06:20:28</publishTime>
+    </File>
+    <File Include="Content/MaterialIcons.css">
+      <publishTime>04/16/2022 06:20:28</publishTime>
+    </File>
+    <File Include="Content/quill.bubble.css">
+      <publishTime>04/13/2022 22:36:03</publishTime>
+    </File>
+    <File Include="Content/quill.snow.css">
+      <publishTime>04/13/2022 22:36:03</publishTime>
+    </File>
+    <File Include="Content/remixicon.css">
+      <publishTime>04/13/2022 22:35:57</publishTime>
+    </File>
+    <File Include="Content/responsive.bootstrap4.min.css">
+      <publishTime>04/14/2022 22:10:23</publishTime>
+    </File>
     <File Include="Content/Site.css">
       <publishTime>04/08/2022 08:01:23</publishTime>
     </File>
+    <File Include="Content/use.fontawesome.com_releases_v5.7.2_css_all.css">
+      <publishTime>04/14/2022 23:36:36</publishTime>
+    </File>
+    <File Include="css/bootstrap.min.css">
+      <publishTime>04/16/2022 07:11:24</publishTime>
+    </File>
     <File Include="css/login.css">
-      <publishTime>04/08/2022 08:01:24</publishTime>
+      <publishTime>04/16/2022 07:19:33</publishTime>
     </File>
     <File Include="css/manager_user.css">
       <publishTime>04/08/2022 08:01:24</publishTime>
@@ -353,26 +398,56 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
     <File Include="Image/Ships/Tau1.jpg">
       <publishTime>04/08/2022 08:01:23</publishTime>
     </File>
+    <File Include="Master/LayoutAdmin.Master">
+      <publishTime>04/16/2022 06:20:28</publishTime>
+    </File>
     <File Include="Master/TrangChu.Master">
-      <publishTime>04/08/2022 15:53:58</publishTime>
+      <publishTime>04/13/2022 23:27:43</publishTime>
     </File>
     <File Include="Page_Master/Login.aspx">
-      <publishTime>04/08/2022 15:47:22</publishTime>
+      <publishTime>04/16/2022 07:20:26</publishTime>
     </File>
     <File Include="Page_Master/Manage_ship.aspx">
-      <publishTime>04/08/2022 15:37:33</publishTime>
+      <publishTime>04/16/2022 06:20:28</publishTime>
     </File>
     <File Include="Page_Master/Manage_user.aspx">
-      <publishTime>04/08/2022 15:51:12</publishTime>
+      <publishTime>04/16/2022 06:20:26</publishTime>
+    </File>
+    <File Include="Page_Master/Null.aspx">
+      <publishTime>04/14/2022 11:35:00</publishTime>
     </File>
     <File Include="Page_Master/Ship_equiment.aspx">
-      <publishTime>04/08/2022 15:43:04</publishTime>
+      <publishTime>04/16/2022 06:20:28</publishTime>
     </File>
     <File Include="Page_Master/TrangChu.aspx">
       <publishTime>04/08/2022 08:01:23</publishTime>
     </File>
     <File Include="reports/report.docx">
       <publishTime>04/08/2022 08:01:24</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-4.6.1/bootstrap.bundle.js">
+      <publishTime>04/14/2022 16:56:58</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-4.6.1/bootstrap.bundle.js.map">
+      <publishTime>04/14/2022 16:56:58</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-4.6.1/bootstrap.bundle.min.js">
+      <publishTime>04/14/2022 16:56:58</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-4.6.1/bootstrap.bundle.min.js.map">
+      <publishTime>04/14/2022 16:56:58</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-4.6.1/bootstrap.js">
+      <publishTime>04/14/2022 16:56:58</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-4.6.1/bootstrap.js.map">
+      <publishTime>04/14/2022 16:56:58</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-4.6.1/bootstrap.min.js">
+      <publishTime>04/14/2022 16:56:58</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-4.6.1/bootstrap.min.js.map">
+      <publishTime>04/14/2022 16:56:58</publishTime>
     </File>
     <File Include="Scripts/bootstrap.js">
       <publishTime>04/08/2022 08:01:23</publishTime>
@@ -405,16 +480,79 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>04/08/2022 08:01:23</publishTime>
     </File>
     <File Include="Scripts/js/Manage_User.js">
-      <publishTime>04/08/2022 15:37:33</publishTime>
+      <publishTime>04/14/2022 08:16:33</publishTime>
     </File>
     <File Include="Scripts/js/Master.js">
-      <publishTime>04/08/2022 08:01:23</publishTime>
+      <publishTime>04/14/2022 16:46:06</publishTime>
     </File>
     <File Include="Scripts/js/Ship_equiment.js">
       <publishTime>04/08/2022 08:01:23</publishTime>
     </File>
     <File Include="Scripts/modernizr-2.8.3.js">
       <publishTime>04/08/2022 08:01:23</publishTime>
+    </File>
+    <File Include="Scripts/vendor/apexcharts.min.js">
+      <publishTime>04/13/2022 22:36:45</publishTime>
+    </File>
+    <File Include="Scripts/vendor/bootstrap.bundle.min.js">
+      <publishTime>04/13/2022 22:36:45</publishTime>
+    </File>
+    <File Include="Scripts/vendor/bootstrap.min.js">
+      <publishTime>04/14/2022 23:23:51</publishTime>
+    </File>
+    <File Include="Scripts/vendor/buttons.bootstrap4.min.js">
+      <publishTime>04/14/2022 22:12:27</publishTime>
+    </File>
+    <File Include="Scripts/vendor/buttons.colVis.min.js">
+      <publishTime>04/14/2022 22:16:54</publishTime>
+    </File>
+    <File Include="Scripts/vendor/buttons.html5.min.js">
+      <publishTime>04/14/2022 22:13:31</publishTime>
+    </File>
+    <File Include="Scripts/vendor/buttons.print.min.js">
+      <publishTime>04/14/2022 22:15:47</publishTime>
+    </File>
+    <File Include="Scripts/vendor/chart.min.js">
+      <publishTime>04/13/2022 22:36:45</publishTime>
+    </File>
+    <File Include="Scripts/vendor/dataTables.bootstrap4.min.js">
+      <publishTime>04/14/2022 17:06:25</publishTime>
+    </File>
+    <File Include="Scripts/vendor/dataTables.buttons.min.js">
+      <publishTime>04/14/2022 22:11:38</publishTime>
+    </File>
+    <File Include="Scripts/vendor/dataTables.responsive.min.js">
+      <publishTime>04/14/2022 22:17:37</publishTime>
+    </File>
+    <File Include="Scripts/vendor/echarts.min.js">
+      <publishTime>04/13/2022 22:36:45</publishTime>
+    </File>
+    <File Include="Scripts/vendor/jquery.dataTables.min.js">
+      <publishTime>04/14/2022 17:05:37</publishTime>
+    </File>
+    <File Include="Scripts/vendor/jquery.nicescroll.min.js">
+      <publishTime>04/14/2022 16:52:27</publishTime>
+    </File>
+    <File Include="Scripts/vendor/jszip.min.js">
+      <publishTime>04/14/2022 23:25:22</publishTime>
+    </File>
+    <File Include="Scripts/vendor/pdfmake.min.js">
+      <publishTime>04/14/2022 23:47:54</publishTime>
+    </File>
+    <File Include="Scripts/vendor/popper.min.js">
+      <publishTime>04/14/2022 23:22:34</publishTime>
+    </File>
+    <File Include="Scripts/vendor/quill.min.js">
+      <publishTime>04/13/2022 22:36:45</publishTime>
+    </File>
+    <File Include="Scripts/vendor/responsive.bootstrap4.min.js">
+      <publishTime>04/14/2022 22:18:05</publishTime>
+    </File>
+    <File Include="Scripts/vendor/tinymce.min.js">
+      <publishTime>04/13/2022 22:36:45</publishTime>
+    </File>
+    <File Include="Scripts/vendor/vfs_fonts.js">
+      <publishTime>04/14/2022 23:48:53</publishTime>
     </File>
     <File Include="Scripts/WebForms/DetailsView.js">
       <publishTime>04/08/2022 08:01:23</publishTime>

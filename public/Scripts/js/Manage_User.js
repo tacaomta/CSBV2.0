@@ -216,6 +216,7 @@ function updateUser() {
             khoa = true;
         }
     });
+    console.log(WebForm_GetElementByTagName(edLOCK).val());
 
     var _rolename = "Admin";
     if ($('#edRole').val() == "US") _rolename = "User";

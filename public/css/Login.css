@@ -110,8 +110,9 @@ label {
 .icon-name {
     position: absolute;
     display: inline-block;
-    top: 17px;
-    left: 8px;
+    top: 22px;
+    left: 6px;
+    font-size: 19px;
 }
 
 .btn-outline-primary {
