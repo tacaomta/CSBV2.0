@@ -4,8 +4,8 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
 -->
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <_PublishTargetUrl>C:\Users\Linh\Documents\GitHub\CSBV2.0\public</_PublishTargetUrl>
-    <History>True|2022-04-16T02:41:15.2500406Z;True|2022-04-16T09:08:44.7379475+07:00;True|2022-04-16T08:42:23.9793821+07:00;True|2022-04-16T07:22:20.9622783+07:00;True|2022-04-08T16:03:10.2855612+07:00;True|2022-04-08T16:02:36.9063881+07:00;</History>
+    <_PublishTargetUrl>C:\Users\Linh\Documents\GitHub\CSBV2.0\public1</_PublishTargetUrl>
+    <History>True|2022-04-16T02:46:10.6166139Z;</History>
   </PropertyGroup>
   <ItemGroup>
     <File Include="About.aspx">
@@ -36,10 +36,10 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>04/08/2022 08:01:24</publishTime>
     </File>
     <File Include="bin/CSB.dll">
-      <publishTime>04/16/2022 06:21:33</publishTime>
+      <publishTime>04/16/2022 09:46:08</publishTime>
     </File>
     <File Include="bin/CSB.pdb">
-      <publishTime>04/16/2022 06:21:33</publishTime>
+      <publishTime>04/16/2022 09:46:08</publishTime>
     </File>
     <File Include="bin/Microsoft.AspNet.FriendlyUrls.dll">
       <publishTime>04/08/2022 08:01:24</publishTime>
@@ -630,7 +630,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>04/08/2022 08:01:23</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>04/08/2022 16:02:35</publishTime>
+      <publishTime>04/16/2022 09:46:09</publishTime>
     </File>
   </ItemGroup>
 </Project>
