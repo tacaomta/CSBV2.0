@@ -240,6 +240,7 @@
     <Content Include="Image\login.jpg" />
     <Content Include="Image\ic-login.png" />
     <Content Include="Image\phuhieu.jpg" />
+    <Content Include="Image\Ships\boat.jpg" />
     <Content Include="Image\Ships\Tau1.jpg" />
     <Content Include="Page_Master\Login.aspx" />
     <Content Include="Page_Master\Manage_ship.aspx" />

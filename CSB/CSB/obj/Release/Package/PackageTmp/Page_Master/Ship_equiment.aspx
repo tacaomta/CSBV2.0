@@ -13,7 +13,7 @@
                         </div>
                     </div>
                     <div class="section-header">
-                        <div class="col-12">
+                        <div class="col-md-12">
                             <div class="accordion" id="accorShipEquiment">
                                 <div class="accordion-item">
                                     <h2 class="accordion-header" id="headMainEngine">
@@ -22,7 +22,7 @@
                                     <div id="collMainEngine" class="accordion-collapse collapse" data-parent="#accorShipEquiment">
                                         <div class="card-body">
                                             <div class="section-header">
-                                                <div class="col-12">
+                                                <div class="col-md-12">
                                                     <table id="table_maychinh" class="table table-bordered table-striped table-md" style="width: 100%">
                                                         <thead>
                                                             <tr>
@@ -59,7 +59,7 @@
                                     <div id="collSecondaryEngine" class="accordion-collapse collapse" data-parent="#accorShipEquiment">
                                         <div class="card-body">
                                             <div class="section-header">
-                                                <div class="col-12">
+                                                <div class="col-md-12">
                                                     <table id="tableSecondaryEngine" class="table table-bordered table-striped table-md" style="width: 100%">
                                                     </table>
                                                 </div>
@@ -74,7 +74,7 @@
                                     <div id="collScrew" class="accordion-collapse collapse" data-parent="#accorShipEquiment">
                                         <div class="card-body">
                                             <div class="section-header">
-                                                <div class="col-12">
+                                                <div class="col-md-12">
                                                     <table id="table_chanvit" class="table table-bordered table-striped table-md" style="width: 100%">
                                                         <thead>
                                                             <tr>
@@ -110,7 +110,7 @@
                                     <div id="collWeapon" class="accordion-collapse collapse" data-parent="#accorShipEquiment">
                                         <div class="card-body">
                                             <div class="section-header">
-                                                <div class="col-12">
+                                                <div class="col-md-12">
                                                     <table id="table_KhiTai" class="table table-bordered table-striped table-md" style="width: 100%">
                                                         <thead>
                                                             <tr>
@@ -143,7 +143,7 @@
                                     <div id="collMotoBoat" class="accordion-collapse collapse" data-parent="#accorShipEquiment">
                                         <div class="card-body">
                                                <div class="section-header">
-                                                <div class="col-12">
+                                                <div class="col-md-12">
                                                     <table id="tableMotoBoat" class="table table-bordered table-striped table-md" style="width: 100%">
                                                         <thead>
                                                             <tr>
@@ -178,7 +178,7 @@
                                     <div id="collAnchor" class="accordion-collapse collapse" data-parent="#accorShipEquiment">
                                         <div class="card-body">
                                            <div class="section-header">
-                                                <div class="col-12">
+                                                <div class="col-md-12">
                                                     <table id="tableAnchor" class="table table-bordered table-striped table-md" style="width: 100%">
                                                         <thead>
                                                             <tr>
@@ -210,7 +210,7 @@
                                         <div class="card-body">
                                               <div class="card-body">
                                             <div class="section-header">
-                                                <div class="col-12">
+                                                <div class="col-md-12">
                                                     <table id="tableLifeSaving" class="table table-bordered table-striped table-md" style="width: 100%">
                                                         <thead>
                                                             <tr>
@@ -244,7 +244,7 @@
                                     <div id="collOther" class="accordion-collapse collapse" data-parent="#accorShipEquiment">
                                         <div class="card-body">
                                             <div class="section-header">
-                                                <div class="col-12">
+                                                <div class="col-md-12">
                                                     <table id="tableOtherEquipment" class="table table-bordered table-striped table-md" style="width: 100%">
                                                     </table>
                                                 </div>
@@ -259,7 +259,7 @@
                                     <div id="collSupplies" class="accordion-collapse collapse" data-parent="#accorShipEquiment">
                                         <div class="card-body">
                                             <div class="section-header">
-                                                <div class="col-12">
+                                                <div class="col-md-12">
                                                     <table id="tableSupplies" class="table table-bordered table-striped table-md" style="width: 100%">
                                                     </table>
                                                 </div>
@@ -288,72 +288,72 @@
 
                             <div style="width: 100%; float: left; padding: 10px">
                                 <div class="form-group">
-                                    <label class="col-5 control-label"><strong>Tên trục     : </strong></label>
-                                    <div class="col-7">
+                                    <label class="col-md-5 control-label"><strong>Tên trục     : </strong></label>
+                                    <div class="col-md-7">
                                         <input type="text" class="form-control" id="aScrewSystemName" required value="">
                                     </div>
                                 </div>
                             </div>
                             <div style="width: 100%; float: left; padding: 10px">
                                 <div class="form-group">
-                                    <label class="col-5 control-label"><strong>Chiều dài hệ trục (mm)     : </strong></label>
-                                    <div class="col-7">
+                                    <label class="col-md-5 control-label"><strong>Chiều dài hệ trục (mm)     : </strong></label>
+                                    <div class="col-md-7">
                                         <input type="text" class="form-control" id="aScrewSystemWidth" value="">
                                     </div>
                                 </div>
                             </div>
                             <div style="width: 100%; float: left; padding: 10px">
                                 <div class="form-group">
-                                    <label class="col-5 control-label"><strong>Đường kính cơ bản (mm)     : </strong></label>
-                                    <div class="col-7">
+                                    <label class="col-md-5 control-label"><strong>Đường kính cơ bản (mm)     : </strong></label>
+                                    <div class="col-md-7">
                                         <input type="text" class="form-control" id="aScrewSystemBasicDiameter" required value="">
                                     </div>
                                 </div>
                             </div>
                             <div style="width: 100%; float: left; padding: 10px">
                                 <div class="form-group">
-                                    <label class="col-5 control-label"><strong>Đường kính ổ đỡ sau (mm)     : </strong></label>
-                                    <div class="col-7">
+                                    <label class="col-md-5 control-label"><strong>Đường kính ổ đỡ sau (mm)     : </strong></label>
+                                    <div class="col-md-7">
                                         <input type="text" class="form-control" id="aScrewSystemBehindDiameter" required value="">
                                     </div>
                                 </div>
                             </div>
                             <div style="width: 100%; float: left; padding: 10px">
                                 <div class="form-group">
-                                    <label class="col-5 control-label"><strong>Đường kính ổ đỡ giữa (mm)     : </strong></label>
-                                    <div class="col-7">
+                                    <label class="col-md-5 control-label"><strong>Đường kính ổ đỡ giữa (mm)     : </strong></label>
+                                    <div class="col-md-7">
                                         <input type="text" class="form-control" id="aScrewSystemMiddleDiameter" required value="">
                                     </div>
                                 </div>
                             </div>
                             <div style="width: 100%; float: left; padding: 10px">
                                 <div class="form-group">
-                                    <label class="col-5 control-label"><strong>Đường kính ổ đỡ trước (mm)    : </strong></label>
-                                    <div class="col-7">
+                                    <label class="col-md-5 control-label"><strong>Đường kính ổ đỡ trước (mm)    : </strong></label>
+                                    <div class="col-md-7">
                                         <input type="text" class="form-control" id="aScrewSystemFrontDiameter" required value="">
                                     </div>
                                 </div>
                             </div>
                             <div style="width: 100%; float: left; padding: 10px">
                                 <div class="form-group">
-                                    <label class="col-5 control-label"><strong>Đường kính chân vịt     : </strong></label>
-                                    <div class="col-7">
+                                    <label class="col-md-5 control-label"><strong>Đường kính chân vịt     : </strong></label>
+                                    <div class="col-md-7">
                                         <input type="text" class="form-control" id="aScrewSystemDiameter" required value="">
                                     </div>
                                 </div>
                             </div>
                             <div style="width: 100%; float: left; padding: 10px">
                                 <div class="form-group">
-                                    <label class="col-5 control-label"><strong>Số cánh chân vịt    : </strong></label>
-                                    <div class="col-7">
+                                    <label class="col-md-5 control-label"><strong>Số cánh chân vịt    : </strong></label>
+                                    <div class="col-md-7">
                                         <input type="text" class="form-control" id="aScrewSystemWings" required value="">
                                     </div>
                                 </div>
                             </div>
                             <div style="width: 100%; float: left; padding: 10px">
                                 <div class="form-group">
-                                    <label class="col-5 control-label"><strong>Ghi chú     : </strong></label>
-                                    <div class="col-7">
+                                    <label class="col-md-5 control-label"><strong>Ghi chú     : </strong></label>
+                                    <div class="col-md-7">
                                         <input type="text" class="form-control" id="aScrewSystemNote" required value="">
                                     </div>
                                 </div>
@@ -382,72 +382,72 @@
                         <div class="row clearfix ">
                             <div style="width: 100%; float: left; padding: 10px">
                                 <div class="form-group">
-                                    <label class="col-5 control-label"><strong>Tên trục     : </strong></label>
-                                    <div class="col-7">
+                                    <label class="col-md-5 control-label"><strong>Tên trục     : </strong></label>
+                                    <div class="col-md-7">
                                         <input type="text" class="form-control" id="uScrewSystemName" required value="">
                                     </div>
                                 </div>
                             </div>
                             <div style="width: 100%; float: left; padding: 10px">
                                 <div class="form-group">
-                                    <label class="col-5 control-label"><strong>Chiều dài hệ trục (mm)     : </strong></label>
-                                    <div class="col-7">
+                                    <label class="col-md-5 control-label"><strong>Chiều dài hệ trục (mm)     : </strong></label>
+                                    <div class="col-md-7">
                                         <input type="text" class="form-control" id="uScrewSystemWidth" value="">
                                     </div>
                                 </div>
                             </div>
                             <div style="width: 100%; float: left; padding: 10px">
                                 <div class="form-group">
-                                    <label class="col-5 control-label"><strong>Đường kính cơ bản (mm)     : </strong></label>
-                                    <div class="col-7">
+                                    <label class="col-md-5 control-label"><strong>Đường kính cơ bản (mm)     : </strong></label>
+                                    <div class="col-md-7">
                                         <input type="text" class="form-control" id="uScrewSystemBasicDiameter" required value="">
                                     </div>
                                 </div>
                             </div>
                             <div style="width: 100%; float: left; padding: 10px">
                                 <div class="form-group">
-                                    <label class="col-5 control-label"><strong>Đường kính ổ đỡ sau (mm)     : </strong></label>
-                                    <div class="col-7">
+                                    <label class="col-md-5 control-label"><strong>Đường kính ổ đỡ sau (mm)     : </strong></label>
+                                    <div class="col-md-7">
                                         <input type="text" class="form-control" id="uScrewSystemBehindDiameter" required value="">
                                     </div>
                                 </div>
                             </div>
                             <div style="width: 100%; float: left; padding: 10px">
                                 <div class="form-group">
-                                    <label class="col-5 control-label"><strong>Đường kính ổ đỡ giữa (mm)     : </strong></label>
-                                    <div class="col-7">
+                                    <label class="col-md-5 control-label"><strong>Đường kính ổ đỡ giữa (mm)     : </strong></label>
+                                    <div class="col-md-7">
                                         <input type="text" class="form-control" id="uScrewSystemMiddleDiameter" required value="">
                                     </div>
                                 </div>
                             </div>
                             <div style="width: 100%; float: left; padding: 10px">
                                 <div class="form-group">
-                                    <label class="col-5 control-label"><strong>Đường kính ổ đỡ trước (mm)    : </strong></label>
-                                    <div class="col-7">
+                                    <label class="col-md-5 control-label"><strong>Đường kính ổ đỡ trước (mm)    : </strong></label>
+                                    <div class="col-md-7">
                                         <input type="text" class="form-control" id="uScrewSystemFrontDiameter" required value="">
                                     </div>
                                 </div>
                             </div>
                             <div style="width: 100%; float: left; padding: 10px">
                                 <div class="form-group">
-                                    <label class="col-5 control-label"><strong>Đường kính chân vịt     : </strong></label>
-                                    <div class="col-7">
+                                    <label class="col-md-5 control-label"><strong>Đường kính chân vịt     : </strong></label>
+                                    <div class="col-md-7">
                                         <input type="text" class="form-control" id="uScrewSystemDiameter" required value="">
                                     </div>
                                 </div>
                             </div>
                             <div style="width: 100%; float: left; padding: 10px">
                                 <div class="form-group">
-                                    <label class="col-5 control-label"><strong>Số cánh chân vịt    : </strong></label>
-                                    <div class="col-7">
+                                    <label class="col-md-5 control-label"><strong>Số cánh chân vịt    : </strong></label>
+                                    <div class="col-md-7">
                                         <input type="text" class="form-control" id="uScrewSystemWings" required value="">
                                     </div>
                                 </div>
                             </div>
                             <div style="width: 100%; float: left; padding: 10px">
                                 <div class="form-group">
-                                    <label class="col-5 control-label"><strong>Ghi chú     : </strong></label>
-                                    <div class="col-7">
+                                    <label class="col-md-5 control-label"><strong>Ghi chú     : </strong></label>
+                                    <div class="col-md-7">
                                         <input type="text" class="form-control" id="uScrewSystemNote" required value="">
                                     </div>
                                 </div>
@@ -477,72 +477,72 @@
 
                             <div style="width: 100%; float: left; padding: 10px">
                                 <div class="form-group">
-                                    <label class="col-5 control-label"><strong>Loại máy    : </strong></label>
-                                    <div class="col-7">
+                                    <label class="col-md-5 control-label"><strong>Loại máy    : </strong></label>
+                                    <div class="col-md-7">
                                         <input type="text" class="form-control" id="add_MainEngine_LoaiMay" name="TenDayDu" required value="">
                                     </div>
                                 </div>
                             </div>
                             <div style="width: 100%; float: left; padding: 10px">
                                 <div class="form-group">
-                                    <label class="col-5 control-label"><strong>Năm sản xuất    : </strong></label>
-                                    <div class="col-7">
+                                    <label class="col-md-5 control-label"><strong>Năm sản xuất    : </strong></label>
+                                    <div class="col-md-7">
                                         <input type="text" class="form-control" id="add_MainEngine_NSX" name="NamSanXuat" value="">
                                     </div>
                                 </div>
                             </div>
                             <div style="width: 100%; float: left; padding: 10px">
                                 <div class="form-group">
-                                    <label class="col-5 control-label"><strong>Xuất xứ     : </strong></label>
-                                    <div class="col-7">
+                                    <label class="col-md-5 control-label"><strong>Xuất xứ     : </strong></label>
+                                    <div class="col-md-7">
                                         <input type="text" class="form-control" id="add_MainEngine_XuatXu" name="XuatXu" required value="">
                                     </div>
                                 </div>
                             </div>
                             <div style="width: 100%; float: left; padding: 10px">
                                 <div class="form-group">
-                                    <label class="col-5 control-label"><strong>Công xuất (CV)    : </strong></label>
-                                    <div class="col-7">
+                                    <label class="col-md-5 control-label"><strong>Công xuất (CV)    : </strong></label>
+                                    <div class="col-md-7">
                                         <input type="text" class="form-control" id="add_MainEngine_CongXuat" name="CongXuat" required value="">
                                     </div>
                                 </div>
                             </div>
                             <div style="width: 100%; float: left; padding: 10px">
                                 <div class="form-group">
-                                    <label class="col-5 control-label"><strong>Định mức tiêu thụ (l/h)     : </strong></label>
-                                    <div class="col-7">
+                                    <label class="col-md-5 control-label"><strong>Định mức tiêu thụ (l/h)     : </strong></label>
+                                    <div class="col-md-7">
                                         <input type="text" class="form-control" id="add_MainEngine_DinhMucTT" name="DinhMucTieuThu" required value="">
                                     </div>
                                 </div>
                             </div>
                             <div style="width: 100%; float: left; padding: 10px">
                                 <div class="form-group">
-                                    <label class="col-5 control-label"><strong>Vòng quay max (v/p)    : </strong></label>
-                                    <div class="col-7">
+                                    <label class="col-md-5 control-label"><strong>Vòng quay max (v/p)    : </strong></label>
+                                    <div class="col-md-7">
                                         <input type="text" class="form-control" id="add_MainEngine_VongQuayMax" name="VongQuayMax" required value="">
                                     </div>
                                 </div>
                             </div>
                             <div style="width: 100%; float: left; padding: 10px">
                                 <div class="form-group">
-                                    <label class="col-5 control-label"><strong>Số xy lanh   : </strong></label>
-                                    <div class="col-7">
+                                    <label class="col-md-5 control-label"><strong>Số xy lanh   : </strong></label>
+                                    <div class="col-md-7">
                                         <input type="text" class="form-control" id="add_MainEngine_SoXyLanh" name="SoXyLanh" required value="">
                                     </div>
                                 </div>
                             </div>
                             <div style="width: 100%; float: left; padding: 10px">
                                 <div class="form-group">
-                                    <label class="col-5 control-label"><strong>Đk xy lanh   : </strong></label>
-                                    <div class="col-7">
+                                    <label class="col-md-5 control-label"><strong>Đk xy lanh   : </strong></label>
+                                    <div class="col-md-7">
                                         <input type="text" class="form-control" id="add_MainEngine_DkXyLanh" name="DuongKinhXyLanh" required value="">
                                     </div>
                                 </div>
                             </div>
                             <div style="width: 100%; float: left; padding: 10px">
                                 <div class="form-group">
-                                    <label class="col-5 control-label"><strong>Ghi chú    : </strong></label>
-                                    <div class="col-7">
+                                    <label class="col-md-5 control-label"><strong>Ghi chú    : </strong></label>
+                                    <div class="col-md-7">
                                         <input type="text" class="form-control" id="add_MainEngine_GhiChu" name="GhiChu" required value="">
                                     </div>
                                 </div>
@@ -572,72 +572,72 @@
 
                             <div style="width: 100%; float: left; padding: 10px">
                                 <div class="form-group">
-                                    <label class="col-5 control-label"><strong>Loại máy   : </strong></label>
-                                    <div class="col-7">
+                                    <label class="col-md-5 control-label"><strong>Loại máy   : </strong></label>
+                                    <div class="col-md-7">
                                         <input type="text" class="form-control" id="update_MainEngine_LoaiMay" required value="">
                                     </div>
                                 </div>
                             </div>
                             <div style="width: 100%; float: left; padding: 10px">
                                 <div class="form-group">
-                                    <label class="col-5 control-label"><strong>Năm sản xuất    : </strong></label>
-                                    <div class="col-7">
+                                    <label class="col-md-5 control-label"><strong>Năm sản xuất    : </strong></label>
+                                    <div class="col-md-7">
                                         <input type="text" class="form-control" id="update_MainEngine_NSX" required value="">
                                     </div>
                                 </div>
                             </div>
                             <div style="width: 100%; float: left; padding: 10px">
                                 <div class="form-group">
-                                    <label class="col-5 control-label"><strong>Xuất xứ    : </strong></label>
-                                    <div class="col-7">
+                                    <label class="col-md-5 control-label"><strong>Xuất xứ    : </strong></label>
+                                    <div class="col-md-7">
                                         <input type="text" class="form-control" id="update_MainEngine_XuatXu" required value="">
                                     </div>
                                 </div>
                             </div>
                             <div style="width: 100%; float: left; padding: 10px">
                                 <div class="form-group">
-                                    <label class="col-5 control-label"><strong>Công xuất    : </strong></label>
-                                    <div class="col-7">
+                                    <label class="col-md-5 control-label"><strong>Công xuất    : </strong></label>
+                                    <div class="col-md-7">
                                         <input type="text" class="form-control" id="update_MainEngine_CongXuat" required value="">
                                     </div>
                                 </div>
                             </div>
                             <div style="width: 100%; float: left; padding: 10px">
                                 <div class="form-group">
-                                    <label class="col-5 control-label"><strong>Định mức tiêu thụ    : </strong></label>
-                                    <div class="col-7">
+                                    <label class="col-md-5 control-label"><strong>Định mức tiêu thụ    : </strong></label>
+                                    <div class="col-md-7">
                                         <input type="text" class="form-control" id="update_MainEngine_DinhMucTT" required value="">
                                     </div>
                                 </div>
                             </div>
                             <div style="width: 100%; float: left; padding: 10px">
                                 <div class="form-group">
-                                    <label class="col-5 control-label"><strong>Vòng quay max    : </strong></label>
-                                    <div class="col-7">
+                                    <label class="col-md-5 control-label"><strong>Vòng quay max    : </strong></label>
+                                    <div class="col-md-7">
                                         <input type="text" class="form-control" id="update_MainEngine_VongQuayMax" required value="">
                                     </div>
                                 </div>
                             </div>
                             <div style="width: 100%; float: left; padding: 10px">
                                 <div class="form-group">
-                                    <label class="col-5 control-label"><strong>Số xy lanh   : </strong></label>
-                                    <div class="col-7">
+                                    <label class="col-md-5 control-label"><strong>Số xy lanh   : </strong></label>
+                                    <div class="col-md-7">
                                         <input type="text" class="form-control" id="update_MainEngine_SoXyLanh" required value="">
                                     </div>
                                 </div>
                             </div>
                             <div style="width: 100%; float: left; padding: 10px">
                                 <div class="form-group">
-                                    <label class="col-5 control-label"><strong>ĐK xy lanh   : </strong></label>
-                                    <div class="col-7">
+                                    <label class="col-md-5 control-label"><strong>ĐK xy lanh   : </strong></label>
+                                    <div class="col-md-7">
                                         <input type="text" class="form-control" id="update_MainEngine_DkXyLanh" required value="">
                                     </div>
                                 </div>
                             </div>
                             <div style="width: 100%; float: left; padding: 10px">
                                 <div class="form-group">
-                                    <label class="col-5 control-label"><strong>Ghi chú   : </strong></label>
-                                    <div class="col-7">
+                                    <label class="col-md-5 control-label"><strong>Ghi chú   : </strong></label>
+                                    <div class="col-md-7">
                                         <input type="text" class="form-control" id="update_MainEngine_GhiChu" required value="">
                                     </div>
                                 </div>
@@ -667,80 +667,80 @@
 
                             <div style="width: 100%; float: left; padding: 10px">
                                 <div class="form-group">
-                                    <label class="col-5 control-label"><strong>Động cơ diesel     : </strong></label>
-                                    <div class="col-7">
+                                    <label class="col-md-5 control-label"><strong>Động cơ diesel     : </strong></label>
+                                    <div class="col-md-7">
                                         <input type="text" class="form-control" id="aSecondaryEngineName" name="DongCo" required value="">
                                     </div>
                                 </div>
                             </div>
                             <div style="width: 100%; float: left; padding: 10px">
                                 <div class="form-group">
-                                    <label class="col-5 control-label"><strong>Năm sản xuất     : </strong></label>
-                                    <div class="col-7">
+                                    <label class="col-md-5 control-label"><strong>Năm sản xuất     : </strong></label>
+                                    <div class="col-md-7">
                                         <input type="text" class="form-control" id="aSecondaryEngineProductionYear" name="NamSanXuat" value="">
                                     </div>
                                 </div>
                             </div>
                             <div style="width: 100%; float: left; padding: 10px">
                                 <div class="form-group">
-                                    <label class="col-5 control-label"><strong>Xuất xứ     : </strong></label>
-                                    <div class="col-7">
+                                    <label class="col-md-5 control-label"><strong>Xuất xứ     : </strong></label>
+                                    <div class="col-md-7">
                                         <input type="text" class="form-control" id="aSecondaryEngineOrigin" name="XuatXu" required value="">
                                     </div>
                                 </div>
                             </div>
                             <div style="width: 100%; float: left; padding: 10px">
                                 <div class="form-group">
-                                    <label class="col-5 control-label"><strong>Công suất (KW)     : </strong></label>
-                                    <div class="col-7">
+                                    <label class="col-md-5 control-label"><strong>Công suất (KW)     : </strong></label>
+                                    <div class="col-md-7">
                                         <input type="text" class="form-control" id="aSecondaryEnginePower" name="CongXuat" required value="">
                                     </div>
                                 </div>
                             </div>
                             <div style="width: 100%; float: left; padding: 10px">
                                 <div class="form-group">
-                                    <label class="col-5 control-label"><strong>Định mức tiêu thụ (I/h)     : </strong></label>
-                                    <div class="col-7">
+                                    <label class="col-md-5 control-label"><strong>Định mức tiêu thụ (I/h)     : </strong></label>
+                                    <div class="col-md-7">
                                         <input type="text" class="form-control" id="aSecondaryEngineWaste" name="DinhMuc" required value="">
                                     </div>
                                 </div>
                             </div>
                             <div style="width: 100%; float: left; padding: 10px">
                                 <div class="form-group">
-                                    <label class="col-5 control-label"><strong>Vòng quay lớn nhất (V/P)    : </strong></label>
-                                    <div class="col-7">
+                                    <label class="col-md-5 control-label"><strong>Vòng quay lớn nhất (V/P)    : </strong></label>
+                                    <div class="col-md-7">
                                         <input type="text" class="form-control" id="aSecondaryEngineSpeed" name="VongQuayMax" required value="">
                                     </div>
                                 </div>
                             </div>
                             <div style="width: 100%; float: left; padding: 10px">
                                 <div class="form-group">
-                                    <label class="col-5 control-label"><strong>Máy phát điện     : </strong></label>
-                                    <div class="col-7">
+                                    <label class="col-md-5 control-label"><strong>Máy phát điện     : </strong></label>
+                                    <div class="col-md-7">
                                         <input type="text" class="form-control" id="aSecondaryEngineMachine" name="MayPhatDien" required value="">
                                     </div>
                                 </div>
                             </div>
                             <div style="width: 100%; float: left; padding: 10px">
                                 <div class="form-group">
-                                    <label class="col-5 control-label"><strong>Năm sản xuất     : </strong></label>
-                                    <div class="col-7">
+                                    <label class="col-md-5 control-label"><strong>Năm sản xuất     : </strong></label>
+                                    <div class="col-md-7">
                                         <input type="text" class="form-control" id="aSecondaryEngineYear" name="NamSanXuat" required value="">
                                     </div>
                                 </div>
                             </div>
                             <div style="width: 100%; float: left; padding: 10px">
                                 <div class="form-group">
-                                    <label class="col-5 control-label"><strong>Xuất xứ     : </strong></label>
-                                    <div class="col-7">
+                                    <label class="col-md-5 control-label"><strong>Xuất xứ     : </strong></label>
+                                    <div class="col-md-7">
                                         <input type="text" class="form-control" id="aSecondaryEngineOrigin2" name="XuatXu" required value="">
                                     </div>
                                 </div>
                             </div>
                             <div style="width: 100%; float: left; padding: 10px">
                                 <div class="form-group">
-                                    <label class="col-5 control-label"><strong>Công suất (KW)     : </strong></label>
-                                    <div class="col-7">
+                                    <label class="col-md-5 control-label"><strong>Công suất (KW)     : </strong></label>
+                                    <div class="col-md-7">
                                         <input type="text" class="form-control" id="aSecondaryEnginePower2" name="CongXuat" required value="">
                                     </div>
                                 </div>
@@ -770,80 +770,80 @@
 
                             <div style="width: 100%; float: left; padding: 10px">
                                 <div class="form-group">
-                                    <label class="col-5 control-label"><strong>Động cơ diesel     : </strong></label>
-                                    <div class="col-7">
+                                    <label class="col-md-5 control-label"><strong>Động cơ diesel     : </strong></label>
+                                    <div class="col-md-7">
                                         <input type="text" class="form-control" id="uSecondaryEngineName" name="TenDayDu" required value="">
                                     </div>
                                 </div>
                             </div>
                             <div style="width: 100%; float: left; padding: 10px">
                                 <div class="form-group">
-                                    <label class="col-5 control-label"><strong>Năm sản xuất     : </strong></label>
-                                    <div class="col-7">
+                                    <label class="col-md-5 control-label"><strong>Năm sản xuất     : </strong></label>
+                                    <div class="col-md-7">
                                         <input type="text" class="form-control" id="uSecondaryEngineProductionYear" name="TenDayDu" value="">
                                     </div>
                                 </div>
                             </div>
                             <div style="width: 100%; float: left; padding: 10px">
                                 <div class="form-group">
-                                    <label class="col-5 control-label"><strong>Xuất xứ     : </strong></label>
-                                    <div class="col-7">
+                                    <label class="col-md-5 control-label"><strong>Xuất xứ     : </strong></label>
+                                    <div class="col-md-7">
                                         <input type="text" class="form-control" id="uSecondaryEngineOrigin" name="TenDayDu" required value="">
                                     </div>
                                 </div>
                             </div>
                             <div style="width: 100%; float: left; padding: 10px">
                                 <div class="form-group">
-                                    <label class="col-5 control-label"><strong>Công suất (KW)     : </strong></label>
-                                    <div class="col-7">
+                                    <label class="col-md-5 control-label"><strong>Công suất (KW)     : </strong></label>
+                                    <div class="col-md-7">
                                         <input type="text" class="form-control" id="uSecondaryEnginePower" name="TenDayDu" required value="">
                                     </div>
                                 </div>
                             </div>
                             <div style="width: 100%; float: left; padding: 10px">
                                 <div class="form-group">
-                                    <label class="col-5 control-label"><strong>Định mức tiêu thụ (I/h)     : </strong></label>
-                                    <div class="col-7">
+                                    <label class="col-md-5 control-label"><strong>Định mức tiêu thụ (I/h)     : </strong></label>
+                                    <div class="col-md-7">
                                         <input type="text" class="form-control" id="uSecondaryEngineWaste" name="TenDayDu" required value="">
                                     </div>
                                 </div>
                             </div>
                             <div style="width: 100%; float: left; padding: 10px">
                                 <div class="form-group">
-                                    <label class="col-5 control-label"><strong>Vòng quay lớn nhất (V/P)    : </strong></label>
-                                    <div class="col-7">
+                                    <label class="col-md-5 control-label"><strong>Vòng quay lớn nhất (V/P)    : </strong></label>
+                                    <div class="col-md-7">
                                         <input type="text" class="form-control" id="uSecondaryEngineSpeed" name="TenDayDu" required value="">
                                     </div>
                                 </div>
                             </div>
                             <div style="width: 100%; float: left; padding: 10px">
                                 <div class="form-group">
-                                    <label class="col-5 control-label"><strong>Máy phát điện     : </strong></label>
-                                    <div class="col-7">
+                                    <label class="col-md-5 control-label"><strong>Máy phát điện     : </strong></label>
+                                    <div class="col-md-7">
                                         <input type="text" class="form-control" id="uSecondaryEngineMachine" name="TenDayDu" required value="">
                                     </div>
                                 </div>
                             </div>
                             <div style="width: 100%; float: left; padding: 10px">
                                 <div class="form-group">
-                                    <label class="col-5 control-label"><strong>Năm sản xuất     : </strong></label>
-                                    <div class="col-7">
+                                    <label class="col-md-5 control-label"><strong>Năm sản xuất     : </strong></label>
+                                    <div class="col-md-7">
                                         <input type="text" class="form-control" id="uSecondaryEngineYear" name="TenDayDu" required value="">
                                     </div>
                                 </div>
                             </div>
                             <div style="width: 100%; float: left; padding: 10px">
                                 <div class="form-group">
-                                    <label class="col-5 control-label"><strong>Xuất xứ     : </strong></label>
-                                    <div class="col-7">
+                                    <label class="col-md-5 control-label"><strong>Xuất xứ     : </strong></label>
+                                    <div class="col-md-7">
                                         <input type="text" class="form-control" id="uSecondaryEngineOrigin2" name="TenDayDu" required value="">
                                     </div>
                                 </div>
                             </div>
                             <div style="width: 100%; float: left; padding: 10px">
                                 <div class="form-group">
-                                    <label class="col-5 control-label"><strong>Công suất (KW)     : </strong></label>
-                                    <div class="col-7">
+                                    <label class="col-md-5 control-label"><strong>Công suất (KW)     : </strong></label>
+                                    <div class="col-md-7">
                                         <input type="text" class="form-control" id="uSecondaryEnginePower2" name="TenDayDu" required value="">
                                     </div>
                                 </div>
@@ -870,48 +870,48 @@
                         <div class="row clearfix ">
                             <div style="width: 100%; float: left; padding: 10px">
                                 <div class="form-group">
-                                    <label class="col-5 control-label"><strong>Loại thiết bị    : </strong></label>
-                                    <div class="col-7">
+                                    <label class="col-md-5 control-label"><strong>Loại thiết bị    : </strong></label>
+                                    <div class="col-md-7">
                                         <input type="text" class="form-control" id="add_WeaponMarine_LoaiTB" name="LoaiThietBi" required value="">
                                     </div>
                                 </div>
                             </div>
                             <div style="width: 100%; float: left; padding: 10px">
                                 <div class="form-group">
-                                    <label class="col-5 control-label"><strong>Kí mã hiệu   : </strong></label>
-                                    <div class="col-7">
+                                    <label class="col-md-5 control-label"><strong>Kí mã hiệu   : </strong></label>
+                                    <div class="col-md-7">
                                         <input type="text" class="form-control" id="add_WeaponMarine_KiMaHieu" name="KiMaHieu" required value="">
                                     </div>
                                 </div>
                             </div>
                             <div style="width: 100%; float: left; padding: 10px">
                                 <div class="form-group">
-                                    <label class="col-5 control-label"><strong>Số lượng     : </strong></label>
-                                    <div class="col-7">
+                                    <label class="col-md-5 control-label"><strong>Số lượng     : </strong></label>
+                                    <div class="col-md-7">
                                         <input type="text" class="form-control" id="add_WeaponMarine_SoLuong" name="SoLuong" required value="">
                                     </div>
                                 </div>
                             </div>
                             <div style="width: 100%; float: left; padding: 10px">
                                 <div class="form-group">
-                                    <label class="col-5 control-label"><strong>Xuất xứ    : </strong></label>
-                                    <div class="col-7">
+                                    <label class="col-md-5 control-label"><strong>Xuất xứ    : </strong></label>
+                                    <div class="col-md-7">
                                         <input type="text" class="form-control" id="add_WeaponMarine_XuatXu" name="XuatXu" required value="">
                                     </div>
                                 </div>
                             </div>
                             <div style="width: 100%; float: left; padding: 10px">
                                 <div class="form-group">
-                                    <label class="col-5 control-label"><strong>Công Suất   : </strong></label>
-                                    <div class="col-7">
+                                    <label class="col-md-5 control-label"><strong>Công Suất   : </strong></label>
+                                    <div class="col-md-7">
                                         <input type="text" class="form-control" id="add_WeaponMarine_CongSuat" name="CongXuat" required value="">
                                     </div>
                                 </div>
                             </div>
                             <div style="width: 100%; float: left; padding: 10px">
                                 <div class="form-group">
-                                    <label class="col-5 control-label"><strong>Tính năng ngắn gọn   : </strong></label>
-                                    <div class="col-7">
+                                    <label class="col-md-5 control-label"><strong>Tính năng ngắn gọn   : </strong></label>
+                                    <div class="col-md-7">
                                         <input type="text" class="form-control" id="add_WeaponMarine_TinhNang" name="TinhNang" required value="">
                                     </div>
                                 </div>
@@ -941,48 +941,48 @@
 
                             <div style="width: 100%; float: left; padding: 10px">
                                 <div class="form-group">
-                                    <label class="col-5 control-label"><strong>Loại thiết bị   : </strong></label>
-                                    <div class="col-7">
+                                    <label class="col-md-5 control-label"><strong>Loại thiết bị   : </strong></label>
+                                    <div class="col-md-7">
                                         <input type="text" class="form-control" id="update_WeaponMarine_LoaiTB" name="LoaiThietBi" required value="">
                                     </div>
                                 </div>
                             </div>
                             <div style="width: 100%; float: left; padding: 10px">
                                 <div class="form-group">
-                                    <label class="col-5 control-label"><strong>Kí mã hiệu   : </strong></label>
-                                    <div class="col-7">
+                                    <label class="col-md-5 control-label"><strong>Kí mã hiệu   : </strong></label>
+                                    <div class="col-md-7">
                                         <input type="text" class="form-control" id="update_WeaponMarine_KiMaHieu" name="KiMaHieu" required value="">
                                     </div>
                                 </div>
                             </div>
                             <div style="width: 100%; float: left; padding: 10px">
                                 <div class="form-group">
-                                    <label class="col-5 control-label"><strong>Số lượng     : </strong></label>
-                                    <div class="col-7">
+                                    <label class="col-md-5 control-label"><strong>Số lượng     : </strong></label>
+                                    <div class="col-md-7">
                                         <input type="text" class="form-control" id="update_WeaponMarine_SoLuong" name="Soluong" required value="">
                                     </div>
                                 </div>
                             </div>
                             <div style="width: 100%; float: left; padding: 10px">
                                 <div class="form-group">
-                                    <label class="col-5 control-label"><strong>Xuất xứ     : </strong></label>
-                                    <div class="col-7">
+                                    <label class="col-md-5 control-label"><strong>Xuất xứ     : </strong></label>
+                                    <div class="col-md-7">
                                         <input type="text" class="form-control" id="update_WeaponMarine_XuatXu" name="XuatXu" required value="">
                                     </div>
                                 </div>
                             </div>
                             <div style="width: 100%; float: left; padding: 10px">
                                 <div class="form-group">
-                                    <label class="col-5 control-label"><strong>Công suất     : </strong></label>
-                                    <div class="col-7">
+                                    <label class="col-md-5 control-label"><strong>Công suất     : </strong></label>
+                                    <div class="col-md-7">
                                         <input type="text" class="form-control" id="update_WeaponMarine_CongSuat" name="CongSuat" required value="">
                                     </div>
                                 </div>
                             </div>
                             <div style="width: 100%; float: left; padding: 10px">
                                 <div class="form-group">
-                                    <label class="col-5 control-label"><strong>Tính năng     : </strong></label>
-                                    <div class="col-7">
+                                    <label class="col-md-5 control-label"><strong>Tính năng     : </strong></label>
+                                    <div class="col-md-7">
                                         <input type="text" class="form-control" id="update_WeaponMarine_TinhNang" name="TinhNang" required value="">
                                     </div>
                                 </div>
@@ -1011,96 +1011,96 @@
 
                             <div style="width: 100%; float: left; padding: 10px">
                                 <div class="form-group">
-                                    <label class="col-5 control-label"><strong>Tên    : </strong></label>
-                                    <div class="col-7">
+                                    <label class="col-md-5 control-label"><strong>Tên    : </strong></label>
+                                    <div class="col-md-7">
                                         <input type="text" class="form-control" id="add_MotoBoat_Ten" name="Ten" required value="">
                                     </div>
                                 </div>
                             </div>
                             <div style="width: 100%; float: left; padding: 10px">
                                 <div class="form-group">
-                                    <label class="col-5 control-label"><strong>Số thuyền viên max     : </strong></label>
-                                    <div class="col-7">
+                                    <label class="col-md-5 control-label"><strong>Số thuyền viên max     : </strong></label>
+                                    <div class="col-md-7">
                                         <input type="number" class="form-control" id="add_MotoBoat_SoTV" name="SoThuyenVienMax" value="">
                                     </div>
                                 </div>
                             </div>
                             <div style="width: 100%; float: left; padding: 10px">
                                 <div class="form-group">
-                                    <label class="col-5 control-label"><strong>Dài (m)   : </strong></label>
-                                    <div class="col-7">
+                                    <label class="col-md-5 control-label"><strong>Dài (m)   : </strong></label>
+                                    <div class="col-md-7">
                                         <input type="text" class="form-control" id="add_MotoBoat_Dai" name="Dai" required value="">
                                     </div>
                                 </div>
                             </div>
                             <div style="width: 100%; float: left; padding: 10px">
                                 <div class="form-group">
-                                    <label class="col-5 control-label"><strong>Rộng (m)     : </strong></label>
-                                    <div class="col-7">
+                                    <label class="col-md-5 control-label"><strong>Rộng (m)     : </strong></label>
+                                    <div class="col-md-7">
                                         <input type="text" class="form-control" id="add_MotoBoat_Rong" name="Rong" required value="">
                                     </div>
                                 </div>
                             </div>
                             <div style="width: 100%; float: left; padding: 10px">
                                 <div class="form-group">
-                                    <label class="col-5 control-label"><strong>Mớn nước (m)     : </strong></label>
-                                    <div class="col-7">
+                                    <label class="col-md-5 control-label"><strong>Mớn nước (m)     : </strong></label>
+                                    <div class="col-md-7">
                                         <input type="text" class="form-control" id="add_MotoBoat_MonNuoc" name="MonNuoc" required value="">
                                     </div>
                                 </div>
                             </div>
                             <div style="width: 100%; float: left; padding: 10px">
                                 <div class="form-group">
-                                    <label class="col-5 control-label"><strong>Tốc độ tối đa (dặm/h)    : </strong></label>
-                                    <div class="col-7">
+                                    <label class="col-md-5 control-label"><strong>Tốc độ tối đa (dặm/h)    : </strong></label>
+                                    <div class="col-md-7">
                                         <input type="text" class="form-control" id="add_MotoBoat_TocDoMax" name="TocDoMax" required value="">
                                     </div>
                                 </div>
                             </div>
                             <div style="width: 100%; float: left; padding: 10px">
                                 <div class="form-group">
-                                    <label class="col-5 control-label"><strong>Tải trọng (tấn)    : </strong></label>
-                                    <div class="col-7">
+                                    <label class="col-md-5 control-label"><strong>Tải trọng (tấn)    : </strong></label>
+                                    <div class="col-md-7">
                                         <input type="text" class="form-control" id="add_MotoBoat_TaiTrong" name="TaiTrong" required value="">
                                     </div>
                                 </div>
                             </div>
                             <div style="width: 100%; float: left; padding: 10px">
                                 <div class="form-group">
-                                    <label class="col-5 control-label"><strong>Máy xuồng   : </strong></label>
-                                    <div class="col-7">
+                                    <label class="col-md-5 control-label"><strong>Máy xuồng   : </strong></label>
+                                    <div class="col-md-7">
                                         <input type="text" class="form-control" id="add_MotoBoat_MayXuong" name="MayXuong" required value="">
                                     </div>
                                 </div>
                             </div>
                             <div style="width: 100%; float: left; padding: 10px">
                                 <div class="form-group">
-                                    <label class="col-5 control-label"><strong>Số lượng máy xuồng    : </strong></label>
-                                    <div class="col-7">
+                                    <label class="col-md-5 control-label"><strong>Số lượng máy xuồng    : </strong></label>
+                                    <div class="col-md-7">
                                         <input type="text" class="form-control" id="add_MotoBoat_SLMayXuong" name="SoLuongMayXuong" required value="">
                                     </div>
                                 </div>
                             </div>
                             <div style="width: 100%; float: left; padding: 10px">
                                 <div class="form-group">
-                                    <label class="col-5 control-label"><strong>Kiểu chân vịt    : </strong></label>
-                                    <div class="col-7">
+                                    <label class="col-md-5 control-label"><strong>Kiểu chân vịt    : </strong></label>
+                                    <div class="col-md-7">
                                         <input type="text" class="form-control" id="add_MotoBoat_KieuChanVit" name="KieuChanVit" required value="">
                                     </div>
                                 </div>
                             </div>
                              <div style="width: 100%; float: left; padding: 10px">
                                 <div class="form-group">
-                                    <label class="col-5 control-label"><strong>Số trục chân vịt    : </strong></label>
-                                    <div class="col-7">
+                                    <label class="col-md-5 control-label"><strong>Số trục chân vịt    : </strong></label>
+                                    <div class="col-md-7">
                                         <input type="text" class="form-control" id="add_MotoBoat_SoTrucChanVit" name="SoTrucChanVit" required value="">
                                     </div>
                                 </div>
                             </div>
                              <div style="width: 100%; float: left; padding: 10px">
                                 <div class="form-group">
-                                    <label class="col-5 control-label"><strong>Ghi chú    : </strong></label>
-                                    <div class="col-7">
+                                    <label class="col-md-5 control-label"><strong>Ghi chú    : </strong></label>
+                                    <div class="col-md-7">
                                         <input type="text" class="form-control" id="add_MotoBoat_GhiChu" name="GhiChu" required value="">
                                     </div>
                                 </div>
@@ -1129,96 +1129,96 @@
 
                             <div style="width: 100%; float: left; padding: 10px">
                                 <div class="form-group">
-                                    <label class="col-5 control-label"><strong>Tên : </strong></label>
-                                    <div class="col-7">
+                                    <label class="col-md-5 control-label"><strong>Tên : </strong></label>
+                                    <div class="col-md-7">
                                         <input type="text" class="form-control" id="update_MotoBoat_Ten" name="Ten" required value="">
                                     </div>
                                 </div>
                             </div>
                             <div style="width: 100%; float: left; padding: 10px">
                                 <div class="form-group">
-                                    <label class="col-5 control-label"><strong>Số thuyền viên tối đa   : </strong></label>
-                                    <div class="col-7">
+                                    <label class="col-md-5 control-label"><strong>Số thuyền viên tối đa   : </strong></label>
+                                    <div class="col-md-7">
                                         <input type="text" class="form-control" id="update_MotoBoat_SoTV" name="SoThanhVienMax" required value="">
                                     </div>
                                 </div>
                             </div>
                             <div style="width: 100%; float: left; padding: 10px">
                                 <div class="form-group">
-                                    <label class="col-5 control-label"><strong>Dài (m)   : </strong></label>
-                                    <div class="col-7">
+                                    <label class="col-md-5 control-label"><strong>Dài (m)   : </strong></label>
+                                    <div class="col-md-7">
                                         <input type="text" class="form-control" id="update_MotoBoat_Dai" name="Dai" required value="">
                                     </div>
                                 </div>
                             </div>
                             <div style="width: 100%; float: left; padding: 10px">
                                 <div class="form-group">
-                                    <label class="col-5 control-label"><strong>Rộng (m)   : </strong></label>
-                                    <div class="col-7">
+                                    <label class="col-md-5 control-label"><strong>Rộng (m)   : </strong></label>
+                                    <div class="col-md-7">
                                         <input type="text" class="form-control" id="update_MotoBoat_Rong" name="Rong" required value="">
                                     </div>
                                 </div>
                             </div>
                             <div style="width: 100%; float: left; padding: 10px">
                                 <div class="form-group">
-                                    <label class="col-5 control-label"><strong>Mớn nước (m)   : </strong></label>
-                                    <div class="col-7">
+                                    <label class="col-md-5 control-label"><strong>Mớn nước (m)   : </strong></label>
+                                    <div class="col-md-7">
                                         <input type="text" class="form-control" id="update_MotoBoat_MonNuoc" name="MuonNuoc" required value="">
                                     </div>
                                 </div>
                             </div>
                             <div style="width: 100%; float: left; padding: 10px">
                                 <div class="form-group">
-                                    <label class="col-5 control-label"><strong>Tốc độ tối đa (dặm/h)    : </strong></label>
-                                    <div class="col-7">
+                                    <label class="col-md-5 control-label"><strong>Tốc độ tối đa (dặm/h)    : </strong></label>
+                                    <div class="col-md-7">
                                         <input type="text" class="form-control" id="update_MotoBoat_TocDoMax" name="TocDoMax" required value="">
                                     </div>
                                 </div>
                             </div>
                             <div style="width: 100%; float: left; padding: 10px">
                                 <div class="form-group">
-                                    <label class="col-5 control-label"><strong>Tải trọng (tấn)    : </strong></label>
-                                    <div class="col-7">
+                                    <label class="col-md-5 control-label"><strong>Tải trọng (tấn)    : </strong></label>
+                                    <div class="col-md-7">
                                         <input type="text" class="form-control" id="update_MotoBoat_TaiTrong" name="TaiTrong" required value="">
                                     </div>
                                 </div>
                             </div>
                             <div style="width: 100%; float: left; padding: 10px">
                                 <div class="form-group">
-                                    <label class="col-5 control-label"><strong>Máy xuồng    : </strong></label>
-                                    <div class="col-7">
+                                    <label class="col-md-5 control-label"><strong>Máy xuồng    : </strong></label>
+                                    <div class="col-md-7">
                                         <input type="text" class="form-control" id="update_MotoBoat_MayXuong" name="MayXuong" required value="">
                                     </div>
                                 </div>
                             </div>
                             <div style="width: 100%; float: left; padding: 10px">
                                 <div class="form-group">
-                                    <label class="col-5 control-label"><strong>Số lượng máy xuồng    : </strong></label>
-                                    <div class="col-7">
+                                    <label class="col-md-5 control-label"><strong>Số lượng máy xuồng    : </strong></label>
+                                    <div class="col-md-7">
                                         <input type="text" class="form-control" id="update_MotoBoat_SLMayXuong" name="SoLuongMayXuong" required value="">
                                     </div>
                                 </div>
                             </div>
                             <div style="width: 100%; float: left; padding: 10px">
                                 <div class="form-group">
-                                    <label class="col-5 control-label"><strong>Kiểu chân vịt   : </strong></label>
-                                    <div class="col-7">
+                                    <label class="col-md-5 control-label"><strong>Kiểu chân vịt   : </strong></label>
+                                    <div class="col-md-7">
                                         <input type="text" class="form-control" id="update_MotoBoat_KieuChanVit" name="KieuChanVit" required value="">
                                     </div>
                                 </div>
                             </div>
                             <div style="width: 100%; float: left; padding: 10px">
                                 <div class="form-group">
-                                    <label class="col-5 control-label"><strong>Số trục chân vịt    : </strong></label>
-                                    <div class="col-7">
+                                    <label class="col-md-5 control-label"><strong>Số trục chân vịt    : </strong></label>
+                                    <div class="col-md-7">
                                         <input type="text" class="form-control" id="update_MotoBoat_SoTrucChanVit" name="SoTrucChanVit" required value="">
                                     </div>
                                 </div>
                             </div>
                             <div style="width: 100%; float: left; padding: 10px">
                                 <div class="form-group">
-                                    <label class="col-5 control-label"><strong>Ghi chú    : </strong></label>
-                                    <div class="col-7">
+                                    <label class="col-md-5 control-label"><strong>Ghi chú    : </strong></label>
+                                    <div class="col-md-7">
                                         <input type="text" class="form-control" id="update_MotoBoat_GhiChu" name="GhiChu" required value="">
                                     </div>
                                 </div>
@@ -1247,48 +1247,48 @@
 
                             <div style="width: 100%; float: left; padding: 10px">
                                 <div class="form-group">
-                                    <label class="col-5 control-label"><strong>Loại trang bị    : </strong></label>
-                                    <div class="col-7">
+                                    <label class="col-md-5 control-label"><strong>Loại trang bị    : </strong></label>
+                                    <div class="col-md-7">
                                         <input type="text" class="form-control" id="add_LifeSaving_LoaiTB" name="LoaiTrangBi" required value="">
                                     </div>
                                 </div>
                             </div>
                             <div style="width: 100%; float: left; padding: 10px">
                                 <div class="form-group">
-                                    <label class="col-5 control-label"><strong>Xuất xứ    : </strong></label>
-                                    <div class="col-7">
+                                    <label class="col-md-5 control-label"><strong>Xuất xứ    : </strong></label>
+                                    <div class="col-md-7">
                                         <input type="text" class="form-control" id="add_LifeSaving_XuatXu" name="XuatXu" value="">
                                     </div>
                                 </div>
                             </div>
                             <div style="width: 100%; float: left; padding: 10px">
                                 <div class="form-group">
-                                    <label class="col-5 control-label"><strong>Tình trạng   : </strong></label>
-                                    <div class="col-7">
+                                    <label class="col-md-5 control-label"><strong>Tình trạng   : </strong></label>
+                                    <div class="col-md-7">
                                         <input type="text" class="form-control" id="add_LifeSaving_TinhTrang" name="TinhTrang" required value="">
                                     </div>
                                 </div>
                             </div>
                             <div style="width: 100%; float: left; padding: 10px">
                                 <div class="form-group">
-                                    <label class="col-5 control-label"><strong>Số lượng     : </strong></label>
-                                    <div class="col-7">
+                                    <label class="col-md-5 control-label"><strong>Số lượng     : </strong></label>
+                                    <div class="col-md-7">
                                         <input type="text" class="form-control" id="add_LifeSaving_SoLuong" name="SoLuong" required value="">
                                     </div>
                                 </div>
                             </div>
                             <div style="width: 100%; float: left; padding: 10px">
                                 <div class="form-group">
-                                    <label class="col-5 control-label"><strong>Đơn vị tính     : </strong></label>
-                                    <div class="col-7">
+                                    <label class="col-md-5 control-label"><strong>Đơn vị tính     : </strong></label>
+                                    <div class="col-md-7">
                                         <input type="text" class="form-control" id="add_LifeSaving_DonViTinh" name="DonViTinh" required value="">
                                     </div>
                                 </div>
                             </div>
                             <div style="width: 100%; float: left; padding: 10px">
                                 <div class="form-group">
-                                    <label class="col-5 control-label"><strong>Ghi chú    : </strong></label>
-                                    <div class="col-7">
+                                    <label class="col-md-5 control-label"><strong>Ghi chú    : </strong></label>
+                                    <div class="col-md-7">
                                         <input type="text" class="form-control" id="add_LifeSaving_GhiChu" name="GhiChu" required value="">
                                     </div>
                                 </div>
@@ -1318,48 +1318,48 @@
 
                             <div style="width: 100%; float: left; padding: 10px">
                                 <div class="form-group">
-                                    <label class="col-5 control-label"><strong>Loại trang bị     : </strong></label>
-                                    <div class="col-7">
+                                    <label class="col-md-5 control-label"><strong>Loại trang bị     : </strong></label>
+                                    <div class="col-md-7">
                                         <input type="text" class="form-control" id="update_LifeSaving_LoaiTB" name="LoaiThietBi" required value="">
                                     </div>
                                 </div>
                             </div>
                             <div style="width: 100%; float: left; padding: 10px">
                                 <div class="form-group">
-                                    <label class="col-5 control-label"><strong>Xuất xứ     : </strong></label>
-                                    <div class="col-7">
+                                    <label class="col-md-5 control-label"><strong>Xuất xứ     : </strong></label>
+                                    <div class="col-md-7">
                                         <input type="text" class="form-control" id="update_LifeSaving_XuatXu" name="XuatXu" required value="">
                                     </div>
                                 </div>
                             </div>
                             <div style="width: 100%; float: left; padding: 10px">
                                 <div class="form-group">
-                                    <label class="col-5 control-label"><strong>Tình trạng     : </strong></label>
-                                    <div class="col-7">
+                                    <label class="col-md-5 control-label"><strong>Tình trạng     : </strong></label>
+                                    <div class="col-md-7">
                                         <input type="text" class="form-control" id="update_LifeSaving_TinhTrang" name="TinhTrang" required value="">
                                     </div>
                                 </div>
                             </div>
                             <div style="width: 100%; float: left; padding: 10px">
                                 <div class="form-group">
-                                    <label class="col-5 control-label"><strong>Số lượng     : </strong></label>
-                                    <div class="col-7">
+                                    <label class="col-md-5 control-label"><strong>Số lượng     : </strong></label>
+                                    <div class="col-md-7">
                                         <input type="text" class="form-control" id="update_LifeSaving_SoLuong" name="SoLuong" required value="">
                                     </div>
                                 </div>
                             </div>
                             <div style="width: 100%; float: left; padding: 10px">
                                 <div class="form-group">
-                                    <label class="col-5 control-label"><strong>Đơn vị tính     : </strong></label>
-                                    <div class="col-7">
+                                    <label class="col-md-5 control-label"><strong>Đơn vị tính     : </strong></label>
+                                    <div class="col-md-7">
                                         <input type="text" class="form-control" id="update_LifeSaving_DonViTinh" name="DonViTinh" required value="">
                                     </div>
                                 </div>
                             </div>
                             <div style="width: 100%; float: left; padding: 10px">
                                 <div class="form-group">
-                                    <label class="col-5 control-label"><strong>Ghi chú     : </strong></label>
-                                    <div class="col-7">
+                                    <label class="col-md-5 control-label"><strong>Ghi chú     : </strong></label>
+                                    <div class="col-md-7">
                                         <input type="text" class="form-control" id="update_LifeSaving_GhiChu" name="GhiChu" required value="">
                                     </div>
                                 </div>
@@ -1388,48 +1388,48 @@
 
                             <div style="width: 100%; float: left; padding: 10px">
                                 <div class="form-group">
-                                    <label class="col-5 control-label"><strong>Loại trang bị     : </strong></label>
-                                    <div class="col-7">
+                                    <label class="col-md-5 control-label"><strong>Loại trang bị     : </strong></label>
+                                    <div class="col-md-7">
                                         <input type="text" class="form-control" id="aOtherEquipmentType" name="TenDayDu" required value="">
                                     </div>
                                 </div>
                             </div>
                             <div style="width: 100%; float: left; padding: 10px">
                                 <div class="form-group">
-                                    <label class="col-5 control-label"><strong>Xuất xứ     : </strong></label>
-                                    <div class="col-7">
+                                    <label class="col-md-5 control-label"><strong>Xuất xứ     : </strong></label>
+                                    <div class="col-md-7">
                                         <input type="text" class="form-control" id="aOtherEquipmentOrigin" name="TenDayDu" required value="">
                                     </div>
                                 </div>
                             </div>
                             <div style="width: 100%; float: left; padding: 10px">
                                 <div class="form-group">
-                                    <label class="col-5 control-label"><strong>Tình trạng     : </strong></label>
-                                    <div class="col-7">
+                                    <label class="col-md-5 control-label"><strong>Tình trạng     : </strong></label>
+                                    <div class="col-md-7">
                                         <input type="text" class="form-control" id="aOtherEquipmentState" name="TenDayDu" required value="">
                                     </div>
                                 </div>
                             </div>
                             <div style="width: 100%; float: left; padding: 10px">
                                 <div class="form-group">
-                                    <label class="col-5 control-label"><strong>Số lượng     : </strong></label>
-                                    <div class="col-7">
+                                    <label class="col-md-5 control-label"><strong>Số lượng     : </strong></label>
+                                    <div class="col-md-7">
                                         <input type="text" class="form-control" id="aOtherEquipmentQuantity" name="TenDayDu" required value="">
                                     </div>
                                 </div>
                             </div>
                             <div style="width: 100%; float: left; padding: 10px">
                                 <div class="form-group">
-                                    <label class="col-5 control-label"><strong>Đơn vị tính     : </strong></label>
-                                    <div class="col-7">
+                                    <label class="col-md-5 control-label"><strong>Đơn vị tính     : </strong></label>
+                                    <div class="col-md-7">
                                         <input type="text" class="form-control" id="aOtherEquipmentUnit" name="TenDayDu" required value="">
                                     </div>
                                 </div>
                             </div>
                             <div style="width: 100%; float: left; padding: 10px">
                                 <div class="form-group">
-                                    <label class="col-5 control-label"><strong>Ghi chú     : </strong></label>
-                                    <div class="col-7">
+                                    <label class="col-md-5 control-label"><strong>Ghi chú     : </strong></label>
+                                    <div class="col-md-7">
                                         <input type="text" class="form-control" id="aOtherEquipmentNote" name="TenDayDu" required value="">
                                     </div>
                                 </div>
@@ -1459,48 +1459,48 @@
 
                             <div style="width: 100%; float: left; padding: 10px">
                                 <div class="form-group">
-                                    <label class="col-5 control-label"><strong>Loại trang bị     : </strong></label>
-                                    <div class="col-7">
+                                    <label class="col-md-5 control-label"><strong>Loại trang bị     : </strong></label>
+                                    <div class="col-md-7">
                                         <input type="text" class="form-control" id="uOtherEquipmentType" name="TenDayDu" required value="">
                                     </div>
                                 </div>
                             </div>
                             <div style="width: 100%; float: left; padding: 10px">
                                 <div class="form-group">
-                                    <label class="col-5 control-label"><strong>Xuất xứ     : </strong></label>
-                                    <div class="col-7">
+                                    <label class="col-md-5 control-label"><strong>Xuất xứ     : </strong></label>
+                                    <div class="col-md-7">
                                         <input type="text" class="form-control" id="uOtherEquipmentOrigin" name="TenDayDu" required value="">
                                     </div>
                                 </div>
                             </div>
                             <div style="width: 100%; float: left; padding: 10px">
                                 <div class="form-group">
-                                    <label class="col-5 control-label"><strong>Tình trạng     : </strong></label>
-                                    <div class="col-7">
+                                    <label class="col-md-5 control-label"><strong>Tình trạng     : </strong></label>
+                                    <div class="col-md-7">
                                         <input type="text" class="form-control" id="uOtherEquipmentState" name="TenDayDu" required value="">
                                     </div>
                                 </div>
                             </div>
                             <div style="width: 100%; float: left; padding: 10px">
                                 <div class="form-group">
-                                    <label class="col-5 control-label"><strong>Số lượng     : </strong></label>
-                                    <div class="col-7">
+                                    <label class="col-md-5 control-label"><strong>Số lượng     : </strong></label>
+                                    <div class="col-md-7">
                                         <input type="text" class="form-control" id="uOtherEquipmentQuantity" name="TenDayDu" required value="">
                                     </div>
                                 </div>
                             </div>
                             <div style="width: 100%; float: left; padding: 10px">
                                 <div class="form-group">
-                                    <label class="col-5 control-label"><strong>Đơn vị tính     : </strong></label>
-                                    <div class="col-7">
+                                    <label class="col-md-5 control-label"><strong>Đơn vị tính     : </strong></label>
+                                    <div class="col-md-7">
                                         <input type="text" class="form-control" id="uOtherEquipmentUnit" name="TenDayDu" required value="">
                                     </div>
                                 </div>
                             </div>
                             <div style="width: 100%; float: left; padding: 10px">
                                 <div class="form-group">
-                                    <label class="col-5 control-label"><strong>Ghi chú     : </strong></label>
-                                    <div class="col-7">
+                                    <label class="col-md-5 control-label"><strong>Ghi chú     : </strong></label>
+                                    <div class="col-md-7">
                                         <input type="text" class="form-control" id="uOtherEquipmentNote" name="TenDayDu" required value="">
                                     </div>
                                 </div>
@@ -1529,56 +1529,56 @@
                         <div class="row clearfix ">
                             <div style="width: 100%; float: left; padding: 10px">
                                 <div class="form-group">
-                                    <label class="col-5 control-label"><strong>Mã vật tư     : </strong></label>
-                                    <div class="col-7">
+                                    <label class="col-md-5 control-label"><strong>Mã vật tư     : </strong></label>
+                                    <div class="col-md-7">
                                         <input type="text" class="form-control" id="asupplyCode" name="TenDayDu" placeholder="Nhập mã vật tư" required value="">
                                     </div>
                                 </div>
                             </div>
                             <div style="width: 100%; float: left; padding: 10px">
                                 <div class="form-group">
-                                    <label class="col-5 control-label"><strong>Loại trang bị     : </strong></label>
-                                    <div class="col-7">
+                                    <label class="col-md-5 control-label"><strong>Loại trang bị     : </strong></label>
+                                    <div class="col-md-7">
                                         <input type="text" class="form-control" id="asupplyType" name="TenDayDu" placeholder="Nhập loại trang bị" required value="">
                                     </div>
                                 </div>
                             </div>
                             <div style="width: 100%; float: left; padding: 10px">
                                 <div class="form-group">
-                                    <label class="col-5 control-label"><strong>Xuất xứ     : </strong></label>
-                                    <div class="col-7">
+                                    <label class="col-md-5 control-label"><strong>Xuất xứ     : </strong></label>
+                                    <div class="col-md-7">
                                         <input type="text" class="form-control" id="asupplyOrigin" name="TenDayDu" placeholder="Nhập xuất xứ" required value="">
                                     </div>
                                 </div>
                             </div>
                             <div style="width: 100%; float: left; padding: 10px">
                                 <div class="form-group">
-                                    <label class="col-5 control-label"><strong>Tình trạng     : </strong></label>
-                                    <div class="col-7">
+                                    <label class="col-md-5 control-label"><strong>Tình trạng     : </strong></label>
+                                    <div class="col-md-7">
                                         <input type="text" class="form-control" id="asupplyState" name="TenDayDu" placeholder="Nhập trình trạng" required value="">
                                     </div>
                                 </div>
                             </div>
                             <div style="width: 100%; float: left; padding: 10px">
                                 <div class="form-group">
-                                    <label class="col-5 control-label"><strong>Số lượng     : </strong></label>
-                                    <div class="col-7">
+                                    <label class="col-md-5 control-label"><strong>Số lượng     : </strong></label>
+                                    <div class="col-md-7">
                                         <input type="text" class="form-control" id="asupplyQuantity" name="TenDayDu" placeholder="Nhập số lượng" required value="">
                                     </div>
                                 </div>
                             </div>
                             <div style="width: 100%; float: left; padding: 10px">
                                 <div class="form-group">
-                                    <label class="col-5 control-label"><strong>Đơn vị tính     : </strong></label>
-                                    <div class="col-7">
+                                    <label class="col-md-5 control-label"><strong>Đơn vị tính     : </strong></label>
+                                    <div class="col-md-7">
                                         <input type="text" class="form-control" id="asupplyUnit" name="TenDayDu" placeholder="Nhập đơn vị tính" required value="">
                                     </div>
                                 </div>
                             </div>
                             <div style="width: 100%; float: left; padding: 10px">
                                 <div class="form-group">
-                                    <label class="col-5 control-label"><strong>Ghi chú     : </strong></label>
-                                    <div class="col-7">
+                                    <label class="col-md-5 control-label"><strong>Ghi chú     : </strong></label>
+                                    <div class="col-md-7">
                                         <input type="text" class="form-control" id="asupplyNote" name="TenDayDu" placeholder="Nhập ghi chú" required value="">
                                     </div>
                                 </div>
@@ -1607,56 +1607,56 @@
                         <div class="row clearfix ">
                             <div style="width: 100%; float: left; padding: 10px">
                                 <div class="form-group">
-                                    <label class="col-5 control-label"><strong>Mã vật tư     : </strong></label>
-                                    <div class="col-7">
+                                    <label class="col-md-5 control-label"><strong>Mã vật tư     : </strong></label>
+                                    <div class="col-md-7">
                                         <input type="text" class="form-control" id="usupplyCode" name="TenDayDu" placeholder="Nhập mã vật tư" required value="">
                                     </div>
                                 </div>
                             </div>
                             <div style="width: 100%; float: left; padding: 10px">
                                 <div class="form-group">
-                                    <label class="col-5 control-label"><strong>Loại trang bị     : </strong></label>
-                                    <div class="col-7">
+                                    <label class="col-md-5 control-label"><strong>Loại trang bị     : </strong></label>
+                                    <div class="col-md-7">
                                         <input type="text" class="form-control" id="usupplyType" name="TenDayDu" required value="">
                                     </div>
                                 </div>
                             </div>
                             <div style="width: 100%; float: left; padding: 10px">
                                 <div class="form-group">
-                                    <label class="col-5 control-label"><strong>Xuất xứ     : </strong></label>
-                                    <div class="col-7">
+                                    <label class="col-md-5 control-label"><strong>Xuất xứ     : </strong></label>
+                                    <div class="col-md-7">
                                         <input type="text" class="form-control" id="usupplyOrigin" name="TenDayDu" required value="">
                                     </div>
                                 </div>
                             </div>
                             <div style="width: 100%; float: left; padding: 10px">
                                 <div class="form-group">
-                                    <label class="col-5 control-label"><strong>Tình trạng     : </strong></label>
-                                    <div class="col-7">
+                                    <label class="col-md-5 control-label"><strong>Tình trạng     : </strong></label>
+                                    <div class="col-md-7">
                                         <input type="text" class="form-control" id="usupplyState" name="TenDayDu" required value="">
                                     </div>
                                 </div>
                             </div>
                             <div style="width: 100%; float: left; padding: 10px">
                                 <div class="form-group">
-                                    <label class="col-5 control-label"><strong>Số lượng     : </strong></label>
-                                    <div class="col-7">
+                                    <label class="col-md-5 control-label"><strong>Số lượng     : </strong></label>
+                                    <div class="col-md-7">
                                         <input type="text" class="form-control" id="usupplyQuantity" name="TenDayDu" required value="">
                                     </div>
                                 </div>
                             </div>
                             <div style="width: 100%; float: left; padding: 10px">
                                 <div class="form-group">
-                                    <label class="col-5 control-label"><strong>Đơn vị tính     : </strong></label>
-                                    <div class="col-7">
+                                    <label class="col-md-5 control-label"><strong>Đơn vị tính     : </strong></label>
+                                    <div class="col-md-7">
                                         <input type="text" class="form-control" id="usupplyUnit" name="TenDayDu" required value="">
                                     </div>
                                 </div>
                             </div>
                             <div style="width: 100%; float: left; padding: 10px">
                                 <div class="form-group">
-                                    <label class="col-5 control-label"><strong>Ghi chú     : </strong></label>
-                                    <div class="col-7">
+                                    <label class="col-md-5 control-label"><strong>Ghi chú     : </strong></label>
+                                    <div class="col-md-7">
                                         <input type="text" class="form-control" id="usupplyNote" name="TenDayDu" required value="">
                                     </div>
                                 </div>
@@ -1763,7 +1763,7 @@
                     $('#table_maychinh').html(tabletext);
                     console.log(linkapi + "main_engines?imo=" + Ship_ID);
                     loadTable("table_maychinh");
-                    $('#table_maychinh_wrapper .row .col-sm-12').first().html('<button id="btn_addMayChinh" onclick="btn_addMayChinh()" class="btn btn-info btn-lg col-6" data-toggle="modal" data-target="#model-add-MainEngine" style="height: 35px; padding - top: 4px;margin - top: -4px;">Thêm máy chính</button>');
+                    $('#table_maychinh_wrapper .row .col-sm-12').first().html('<button id="btn_addMayChinh" onclick="btn_addMayChinh()" class="btn btn-info btn-lg col-md-6" data-toggle="modal" data-target="#model-add-MainEngine" style="height: 35px; padding - top: 4px;margin - top: -4px;">Thêm máy chính</button>');
                     $('#table_maychinh_wrapper .row').first().next().children().css("overflow-x","auto");
                 }, error: function (ret) {
                     console.log('errorGET');
@@ -1921,7 +1921,7 @@
                     $('#table_chanvit').html(tabletext);
                     console.log(linkapi + "screw_system?imo=" + Ship_ID);
                     loadTable('table_chanvit');
-                    $('#table_chanvit_wrapper .row .col-sm-12').first().html('<button id="btn_addScrewSystem" onclick="btn_addScrewSystem()" class="btn btn-info btn-lg col-6" data-toggle="modal" data-target="#model-add-ScrewSystem" style="height: 35px; padding - top: 4px;margin - top: -4px;">Thêm hệ trục chân vịt</button>');
+                    $('#table_chanvit_wrapper .row .col-sm-12').first().html('<button id="btn_addScrewSystem" onclick="btn_addScrewSystem()" class="btn btn-info btn-lg col-md-6" data-toggle="modal" data-target="#model-add-ScrewSystem" style="height: 35px; padding - top: 4px;margin - top: -4px;">Thêm hệ trục chân vịt</button>');
                     $('#table_chanvit_wrapper .row').first().next().children().css("overflow-x", "auto");
                 }, error: function (ret) {
                     console.log('errorGET');
@@ -2073,7 +2073,7 @@
                     tabletext += "</tbody>";
                     $('#tableSecondaryEngine').html(tabletext);
                     loadTable('tableSecondaryEngine');
-                    $('#tableSecondaryEngine_wrapper .row .col-sm-12').first().html('<button id="btn_addSecondaryEngine" onclick="btn_addSecondaryEngine()" class="btn btn-info btn-lg col-6" data-toggle="modal" data-target="#model-add-SecondaryEngine" style="height: 35px; padding - top: 4px;margin - top: -4px;">Thêm máy phụ</button>');
+                    $('#tableSecondaryEngine_wrapper .row .col-sm-12').first().html('<button id="btn_addSecondaryEngine" onclick="btn_addSecondaryEngine()" class="btn btn-info btn-lg col-md-6" data-toggle="modal" data-target="#model-add-SecondaryEngine" style="height: 35px; padding - top: 4px;margin - top: -4px;">Thêm máy phụ</button>');
                     $('#tableSecondaryEngine_wrapper .row').first().next().children().css("overflow-x", "auto");
                 }, error: function (ret) {
                     console.log('errorGET');
@@ -2242,7 +2242,7 @@
                     tabletext += "</tbody>";
                     $('#table_KhiTai').html(tabletext);
                     loadTable('table_KhiTai');
-                    $('#table_KhiTai_wrapper .row .col-sm-12').first().html('<button id="btn_addWeaponMarine" onclick="btn_addWeaponMarine()" class="btn btn-info btn-lg col-6" data-toggle="modal" data-target="#model-add-WeaponMarine" style="height: 35px; padding - top: 4px;margin - top: -4px;">Thêm khí tài, hàng hóa</button>');
+                    $('#table_KhiTai_wrapper .row .col-sm-12').first().html('<button id="btn_addWeaponMarine" onclick="btn_addWeaponMarine()" class="btn btn-info btn-lg col-md-6" data-toggle="modal" data-target="#model-add-WeaponMarine" style="height: 35px; padding - top: 4px;margin - top: -4px;">Thêm khí tài, hàng hóa</button>');
                     $('#table_KhiTai_wrapper .row').first().next().children().css("overflow-x", "auto");
                 }, error: function (ret) {
                     console.log('errorGET');
@@ -2372,7 +2372,7 @@
                     tabletext += "</tbody>";
                     $('#tableMotoBoat').html(tabletext);
                     loadTable('tableMotoBoat');
-                    $('#tableMotoBoat_wrapper .row .col-sm-12').first().html('<button id="btn_addMotoBoat" onclick="btn_addMotoBoat()" class="btn btn-info btn-lg col-6" data-toggle="modal" data-target="#model-add-MotoBoat" style="height: 35px; padding - top: 4px;margin - top: -4px;">Thêm xuồng công tác</button>');
+                    $('#tableMotoBoat_wrapper .row .col-sm-12').first().html('<button id="btn_addMotoBoat" onclick="btn_addMotoBoat()" class="btn btn-info btn-lg col-md-6" data-toggle="modal" data-target="#model-add-MotoBoat" style="height: 35px; padding - top: 4px;margin - top: -4px;">Thêm xuồng công tác</button>');
                     $('#tableMotoBoat_wrapper .row').first().next().children().css("overflow-x", "auto");
                 }, error: function (ret) {
                     console.log('errorGET');
@@ -2528,7 +2528,8 @@
                     tabletext += "</tbody>";
                     $('#tableAnchor').html(tabletext);
                     loadTable('tableAnchor');
-                    $('#tableAnchor_wrapper .row .col-sm-12').first().html('<button id="btn_addAnchor" onclick="btn_addAnchor()" class="btn btn-info btn-lg col-6" data-toggle="modal" data-target="#model-add-Anchor" style="height: 35px; padding - top: 4px;margin - top: -4px;">Thêm tời neo</button>');
+                    $('#tableAnchor_wrapper .row .col-sm-12').first().html('<button id="btn_addAnchor" onclick="btn_addAnchor()" class="btn btn-info btn-lg col-md-6" data-toggle="modal" data-target="#model-add-Anchor" style="height: 35px; padding - top: 4px;margin - top: -4px;">Thêm tời neo</button>');
+                    $('#tableAnchor_wrapper .row').first().next().children().css("overflow-x", "auto");
                 }, error: function (ret) {
                     console.log('errorGET');
                 }
@@ -2552,7 +2553,7 @@
                     tabletext += "</tbody>";
                     $('#tableLifeSaving').html(tabletext);
                     loadTable('tableLifeSaving');
-                    $('#tableLifeSaving_wrapper .row .col-sm-12').first().html('<button id="btn_addLifeSaving" onclick="btn_addLifeSaving()" class="btn btn-info btn-lg col-6" data-toggle="modal" data-target="#model-add-LifeSaving" style="height: 35px; padding - top: 4px;margin - top: -4px;">Thêm trang bị cứu sinh</button>');
+                    $('#tableLifeSaving_wrapper .row .col-sm-12').first().html('<button id="btn_addLifeSaving" onclick="btn_addLifeSaving()" class="btn btn-info btn-lg col-md-6" data-toggle="modal" data-target="#model-add-LifeSaving" style="height: 35px; padding - top: 4px;margin - top: -4px;">Thêm trang bị cứu sinh</button>');
                     $('#tableLiftSaving_wrapper .row').first().next().children().css("overflow-x", "auto");
                 }, error: function (ret) {
                     console.log('errorGET');
@@ -2680,7 +2681,7 @@
                     tabletext += "</tbody>";
                     $('#tableOtherEquipment').html(tabletext);
                     loadTable('tableOtherEquipment');
-                    $('#tableOtherEquipment_wrapper .row .col-sm-12').first().html('<button id="btn_addOtherEquipment" onclick="btn_addOtherEquipment()" class="btn btn-info btn-lg col-6" data-toggle="modal" data-target="#model-add-OtherEquipment" style="height: 35px; padding - top: 4px;margin - top: -4px;">Thêm trang bị khác</button>');
+                    $('#tableOtherEquipment_wrapper .row .col-sm-12').first().html('<button id="btn_addOtherEquipment" onclick="btn_addOtherEquipment()" class="btn btn-info btn-lg col-md-6" data-toggle="modal" data-target="#model-add-OtherEquipment" style="height: 35px; padding - top: 4px;margin - top: -4px;">Thêm trang bị khác</button>');
                     $('#tableOtherEquipment_wrapper .row').first().next().children().css("overflow-x", "auto");
                 }, error: function (ret) {
                     console.log('errorGET');
@@ -2812,7 +2813,7 @@
                     tabletext += "</tbody>";
                     $('#tableSupplies').html(tabletext);
                     loadTable('tableSupplies');
-                    $('#tableSupplies_wrapper .row .col-sm-12').first().html('<button id="btn_addsuply" onclick="btn_addsuply()" class="btn btn-info btn-lg col-6" data-toggle="modal" data-target="#model-add-supply" style="height: 35px; padding - top: 4px;margin - top: -4px;">Thêm vật tư bảo đảm</button>');
+                    $('#tableSupplies_wrapper .row .col-sm-12').first().html('<button id="btn_addsuply" onclick="btn_addsuply()" class="btn btn-info btn-lg col-md-6" data-toggle="modal" data-target="#model-add-supply" style="height: 35px; padding - top: 4px;margin - top: -4px;">Thêm vật tư bảo đảm</button>');
                     $('#tableSupplies_wrapper .row').first().next().children().css("overflow-x", "auto");
                 }, error: function (ret) {
                     console.log('errorGET');

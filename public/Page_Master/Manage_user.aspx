@@ -13,7 +13,7 @@
                     </div>
                 </div>
                 <div class="section-header">
-                    <div class="col-12">
+                    <div class="col-md-12">
                         <table id="tableuser" class="table table-bordered table-striped table-md" style="width: 100%">
                             <thead>
                                 <tr>
@@ -63,16 +63,16 @@
                         <div class="row clearfix ">
                             <div style="width: 100%; float: left; padding: 10px">
                                 <div class="form-group">
-                                    <label class="col-5 control-label"><strong>Tên đầy đủ     : </strong></label>
-                                    <div class="col-7">
+                                    <label class="col-md-5 control-label"><strong>Tên đầy đủ     : </strong></label>
+                                    <div class="col-md-7">
                                         <input type="text" class="form-control" id="TenDayDu_adduser" name="TenDayDu" placeholder="Nhập tên đầy đủ" required value="">
                                     </div>
                                 </div>
                             </div>
                             <div style="width: 100%; float: left; padding: 10px">
                                 <div class="form-group">
-                                    <label class="col-5 control-label"><strong>Tên đăng nhập     : </strong></label>
-                                    <div class="col-7">
+                                    <label class="col-md-5 control-label"><strong>Tên đăng nhập     : </strong></label>
+                                    <div class="col-md-7">
                                         <input type="text" class="form-control" id="TenND_adduser" name="TenND" placeholder="Nhập tên người dùng" required value="">
                                     </div>
                                 </div>
@@ -80,24 +80,24 @@
 
                             <div style="width: 100%; float: left; padding: 10px">
                                 <div class="form-group">
-                                    <label class="col-5 control-label"><strong>Mật khẩu     : </strong></label>
-                                    <div class="col-7">
+                                    <label class="col-md-5 control-label"><strong>Mật khẩu     : </strong></label>
+                                    <div class="col-md-7">
                                         <input type="password" class="form-control" id="MatKhau_adduser" name="MatKhau" placeholder="Nhập mật khẩu" required value="">
                                     </div>
                                 </div>
                             </div>
                             <div style="width: 100%; float: left; padding: 10px">
                                 <div class="form-group">
-                                    <label class="col-5 control-label"><strong>Xác nhận mật khẩu     : </strong></label>
-                                    <div class="col-7">
+                                    <label class="col-md-5 control-label"><strong>Xác nhận mật khẩu     : </strong></label>
+                                    <div class="col-md-7">
                                         <input type="password" class="form-control" id="XacNhanMatKhau_adduser" name="XacNhanMatKhau" placeholder="Xác nhận mật khẩu" required value="">
                                     </div>
                                 </div>
                             </div>
                             <div style="width: 100%; float: left; padding: 10px">
                                 <div class="form-group">
-                                    <label class="col-5 control-label"><strong>Quyền     : </strong></label>
-                                    <div class="col-7">
+                                    <label class="col-md-5 control-label"><strong>Quyền     : </strong></label>
+                                    <div class="col-md-7">
                                         <select class="form-control" id="Quyen_adduser">
                                             <option value="AD">Admin</option>
                                             <option selected value="US">User</option>
@@ -130,24 +130,24 @@
                             <input hidden id="edCreated" value="">
                             <div style="width: 100%; float: left; padding-top: 10px">
                                 <div class="form-group">
-                                    <label class="col-5 control-label"><strong>Tên đầy đủ     : </strong></label>
-                                    <div class="col-7">
+                                    <label class="col-md-5 control-label"><strong>Tên đầy đủ     : </strong></label>
+                                    <div class="col-md-7">
                                         <input type="text" class="form-control" id="edFullName" placeholder="Nhập tên người dùng" value="">
                                     </div>
                                 </div>
                             </div>
                             <div style="width: 100%; float: left; padding-top: 10px">
                                 <div class="form-group">
-                                    <label class="col-5 control-label"><strong>Tên đăng nhập     : </strong></label>
-                                    <div class="col-7">
+                                    <label class="col-md-5 control-label"><strong>Tên đăng nhập     : </strong></label>
+                                    <div class="col-md-7">
                                         <input type="text" class="form-control" id="edUserName" placeholder="" value="" disabled>
                                     </div>
                                 </div>
                             </div>
                             <div style="width: 100%; float: left; padding-top: 10px">
                                 <div class="form-group">
-                                    <label class="col-5 control-label"><strong>Đổi mật khẩu     : </strong></label>
-                                    <div class="col-7">
+                                    <label class="col-md-5 control-label"><strong>Đổi mật khẩu     : </strong></label>
+                                    <div class="col-md-7">
                                         <input type="checkbox" id="changepass" name="changepass" value="" onchange="ChangePass(this)" />
                                         Đổi mật khẩu
                                     </div>
@@ -155,24 +155,24 @@
                             </div>
                             <div style="width: 100%; float: left; padding-top: 10px">
                                 <div class="form-group">
-                                    <label class="col-5 control-label"><strong>Mật khẩu mới     : </strong></label>
-                                    <div class="col-7">
+                                    <label class="col-md-5 control-label"><strong>Mật khẩu mới     : </strong></label>
+                                    <div class="col-md-7">
                                         <input type="password" class="form-control" id="edPasswordNew" placeholder="" value="" disabled>
                                     </div>
                                 </div>
                             </div>
                             <div style="width: 100%; float: left; padding-top: 10px">
                                 <div class="form-group">
-                                    <label class="col-5 control-label"><strong>Xác nhận mật khẩu     : </strong></label>
-                                    <div class="col-7">
+                                    <label class="col-md-5 control-label"><strong>Xác nhận mật khẩu     : </strong></label>
+                                    <div class="col-md-7">
                                         <input type="password" class="form-control" id="edPasswordNew2" placeholder="" value="" disabled>
                                     </div>
                                 </div>
                             </div>
                             <div style="width: 100%; float: left; padding-top: 10px">
                                 <div class="form-group">
-                                    <label class="col-5 control-label"><strong>Quyền     : </strong></label>
-                                    <div class="col-7">
+                                    <label class="col-md-5 control-label"><strong>Quyền     : </strong></label>
+                                    <div class="col-md-7">
                                         <select class="form-control" id="edRole">
                                             <option selected value="AD">Admin</option>
                                             <option value="US">User</option>
@@ -182,8 +182,8 @@
                             </div>
                             <div style="width: 100%; float: left; padding-top: 10px">
                                 <div class="form-group">
-                                    <label class="col-5 control-label"><strong>Khóa tài khoản     : </strong></label>
-                                    <div class="col-7">
+                                    <label class="col-md-5 control-label"><strong>Khóa tài khoản     : </strong></label>
+                                    <div class="col-md-7">
                                         <div class="radio" style="display: flex; padding-top: 10px;">
                                             <label class="col-md-6">
                                                 <input type="radio" name="edLOCK" value="true">
@@ -277,7 +277,7 @@
                 });
                 table1.buttons().container()
                     .appendTo('this_wrapper .col-md-6:eq(0)');
-                $('.col-sm-12').first().html('<button id="btn_adduser" onclick="btn_adduser()" class="btn btn-info btn-lg col-6" data-toggle="modal" data-target="#model-add-user" style="height: 35px; padding - top: 4px;margin - top: -4px;">Thêm người dùng</button>');
+                $('.col-sm-12').first().html('<button id="btn_adduser" onclick="btn_adduser()" class="btn btn-info btn-lg col-md-6" data-toggle="modal" data-target="#model-add-user" style="height: 35px; padding - top: 4px;margin - top: -4px;">Thêm người dùng</button>');
             });
         };
 

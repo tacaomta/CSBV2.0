@@ -51,7 +51,7 @@
                         </div>
                     </div>
                     <div class="section-header">
-                        <div class="col-12">
+                        <div class="col-md-12">
                             <table id="tableship" class="table table-bordered table-striped table-md" style="width: 100%">
                                 <thead>
                                     <tr>
@@ -106,7 +106,7 @@
                                         <h3 class="panel-title pull-left">Hình ảnh</h3>
                                     </div>
                                     <div class="file-tab panel-body">
-                                        <img class="img-responsive" id="add_imageproduct" src="../Image/Ships/Tau1.jpg" style="margin: 8% 2%; height: 200px; max-width: 300px;" />
+                                        <img class="img-responsive" id="add_imageproduct" src="../Image/Ships/boat.jpg" style="margin: 8% 2%; height: 200px; max-width: 300px;" />
                                         <label class="btn btn-default btn-file">
                                             <span>Tải lên</span>
                                             <input type="file" name="Anh" id="add_Anh" onchange="PreviewImage()">
@@ -319,7 +319,7 @@
                                         <h3 class="panel-title pull-left">Hình ảnh</h3>
                                     </div>
                                     <div class="file-tab panel-body">
-                                        <img class="img-responsive" id="upload_imageproduct" src="../Image/Ships/Tau1.jpg" style="margin: 8% 2%; height: 200px; max-width: 300px;" />
+                                        <img class="img-responsive" id="upload_imageproduct" src="../Image/Ships/boat.jpg" style="margin: 8% 2%; height: 200px; max-width: 300px;" />
                                         <label class="btn btn-default btn-file">
                                             <span>Tải lên</span>
                                             <input type="file" name="Anh" id="Anh" onchange="PreviewImage()">
@@ -588,7 +588,8 @@
                     tabletext += "</tbody>";
                     $('#tableship').html(tabletext);
                     loadTableShip();
-                    $('#tableship_wrapper .row .col-sm-12').first().html('<button onclick="btn_addship()" class="btn btn-info btn-lg col-6" data-toggle="modal" data-target="#model-add-ship" style="height: 35px; padding - top: 4px;margin - top: -4px;">Thêm tàu</button>');
+                    $('#tableship_wrapper .row .col-sm-12').first().html('<button onclick="btn_addship()" class="btn btn-info btn-lg col-md-6" data-toggle="modal" data-target="#model-add-ship" style="height: 35px; padding - top: 4px;margin - top: -4px;">Thêm tàu</button>');
+                    $('#tableship_wrapper .row').first().next().children().css("overflow-x", "auto");
                 }, error: function (ret) {
                     console.log('errorGET');
                 },
