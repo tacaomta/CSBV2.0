@@ -844,7 +844,7 @@ select.form-control:not([size]):not([multiple]) {
 
 /* 3.5 Card */
 .card {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.03);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     background-color: #fff;
     border-radius: 3px;
     border: none;
@@ -890,10 +890,18 @@ select.form-control:not([size]):not([multiple]) {
         align-self: center;
         width: 100%;
         min-height: 70px;
-        padding: 15px 25px;
+        padding: 15px 20px;
         display: flex;
         align-items: center;
+        justify-content: space-between;
     }
+        .card .card-header-title{
+            display: block;
+        }
+        .card .card-header i{
+            color: #dbdbdbc7;
+        }
+        
 
         .card .card-header .btn {
             margin-top: 1px;
@@ -1034,28 +1042,56 @@ select.form-control:not([size]):not([multiple]) {
         border-top: 2px solid #6777ef;
     }
 
+    .card.card-primary h4 {
+        color: #6777ef !important;
+    }
+
     .card.card-secondary {
-        border-top: 2px solid #cdd3d8;
+        border-top: 2px solid #17a2b8;
+    }
+
+    .card.card-secondary h4 {
+        color: #17a2b8 !important;
     }
 
     .card.card-success {
         border-top: 2px solid #47c363;
     }
 
+    .card.card-success h4 {
+        color: #47c363;
+    }
+
     .card.card-danger {
         border-top: 2px solid #fc544b;
+    }
+
+    .card.card-danger h4{
+        color: #fc544b;
     }
 
     .card.card-warning {
         border-top: 2px solid #ffa426;
     }
 
+    .card.card-warning h4 {
+        color: #ffa426;
+    }
+
     .card.card-info {
         border-top: 2px solid #3abaf4;
     }
 
+    .card.card-info h4 {
+        color: #3abaf4;
+    }
+
     .card.card-dark {
         border-top: 2px solid #191d21;
+    }
+
+    .card.card-dark h4 {
+        color: #191d21;
     }
 
     .card.card-hero .card-header {
@@ -4964,6 +5000,15 @@ table tr:hover .table-links {
             margin-top: 10px;
         }
 }
+.section-body-card {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+    .section-body-card h6{
+        font-weight: 100;
+    }
 
 .form-group {
     display: flex;
@@ -5056,6 +5101,13 @@ table tr:hover .table-links {
 .card .card-header a {
     color: #01b5f9;
     font-weight: bold;
+}
+
+.card .card-header p {
+    color: #191d21;
+    font-weight: 600;
+    font-size: 13px;
+    margin-bottom: 0;
 }
 
 .card_body .btn-group-vertical .btn-primary {
@@ -5275,7 +5327,7 @@ table tr:hover .table-links {
                     <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-folder"></i> <span>Hồ sơ tàu</span></a>
                     <ul class="dropdown-menu">
                         <li><a class="nav-link" href="../Page_Master/Null.aspx">Tính năng chiến, kỹ thuật tàu, trang bị</a></li>
-                        <li><a class="nav-link" href="../Page_Master/Null.aspx">Theo dõi thống kê hoạt động tàu</a></li>
+                        <li><a class="nav-link" href="../Page_Master/ShipActivity.aspx">Theo dõi thống kê hoạt động tàu</a></li>
                         <li><a class="nav-link" href="../Page_Master/Null.aspx">Quản lý tai nạn hư hỏng</a></li>
                         <li><a class="nav-link" href="../Page_Master/Null.aspx">Quản lý tình trạng kỹ thuật - khả năng hoạt động</a></li>
                         <li><a class="nav-link" href="../Page_Master/Null.aspx">Hồ sơ xuất xưởng sau đóng mới, cải hoán</a></li>
@@ -5366,7 +5418,7 @@ table tr:hover .table-links {
     <!-- ===== JS =====-->
     <script>
         var linkapi = "http://localhost:8082/api/";
-        var baseaddress = "http://localhost:8080/";
+        var baseaddress = "http://localhost:44347/";
     </script>
     <script src="../Scripts/jquery-3.4.1.slim.min.js"></script>
     <script src="../Scripts/jquery-3.4.1.min.js"></script>

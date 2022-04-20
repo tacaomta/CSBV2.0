@@ -246,6 +246,7 @@
     <Content Include="Page_Master\Manage_ship.aspx" />
     <Content Include="Page_Master\Manage_user.aspx" />
     <Content Include="Page_Master\Null.aspx" />
+    <Content Include="Page_Master\ShipActivity.aspx" />
     <Content Include="Page_Master\Ship_equiment.aspx" />
     <Content Include="Page_Master\TrangChu.aspx" />
     <Content Include="reports\report.docx" />
@@ -392,6 +393,13 @@
     </Compile>
     <Compile Include="Page_Master\Null.aspx.designer.cs">
       <DependentUpon>Null.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Page_Master\ShipActivity.aspx.cs">
+      <DependentUpon>ShipActivity.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page_Master\ShipActivity.aspx.designer.cs">
+      <DependentUpon>ShipActivity.aspx</DependentUpon>
     </Compile>
     <Compile Include="Page_Master\Ship_equiment.aspx.cs">
       <DependentUpon>Ship_equiment.aspx</DependentUpon>
