@@ -26,17 +26,6 @@
                                                     <table id="table_maychinh" class="table table-bordered table-striped table-md" style="width: 100%">
                                                         <thead>
                                                             <tr>
-                                                                <th>STT</th>
-                                                                <th>LOẠI MÁY</th>
-                                                                <th>NĂM SẢN XUẤT</th>
-                                                                <th>XUÁT XỨ</th>
-                                                                <th>CÔNG XUẤT(CV)</th>
-                                                                <th>ĐỊNH MỨC TIÊU THỤ(l/h)</th>
-                                                                <th>VÒNG QUAY LỚN NHÂT(v/p)</th>
-                                                                <th>SỐ XY LANH</th>
-                                                                <th>ĐK XY LANH</th>
-                                                                <th>GHI CHÚ</th>
-                                                                <th>TÁC VỤ</th>
                                                             </tr>
                                                         </thead>
                                                         <tbody>
@@ -45,7 +34,6 @@
                                                             </tr>
 
                                                         </tbody>
-
                                                     </table>
                                                 </div>
                                             </div>
@@ -179,7 +167,7 @@
                                         <div class="card-body">
                                            <div class="section-header">
                                                 <div class="col-md-12">
-                                                    <table id="tableAnchor" class="table table-bordered table-striped table-md" style="width: 100%">
+                                                    <table id="tableToiNeo" class="table table-bordered table-striped table-md" style="width: 100%">
                                                         <thead>
                                                             <tr>
                                                                 <th>STT</th>
@@ -198,9 +186,59 @@
 
                                                     </table>
                                                 </div>
+           
+                                            </div>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="section-header">
+                                                <div class="col-md-12">
+                                                    <table id="tableNeo" class="table table-bordered table-striped table-md" style="width: 100%">
+                                                        <thead>
+                                                            <tr>
+                                                                <th>STT</th>
+                                                                <th>KIỂU NEO</th>
+                                                                <th>TRỌNG LƯỢNG NEO (tấn)</th>
+                                                                <th>SỐ LƯỢNG</th>
+                                                                <th>GHI CHÚ</th>
+                                                                <th>TÁC VỤ</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                            </tr>
+
+                                                        </tbody>
+
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="section-header">
+                                                <div class="col-md-12">
+                                                    <table id="tableXichNeo" class="table table-bordered table-striped table-md" style="width: 100%">
+                                                        <thead>
+                                                            <tr>
+                                                                <th>STT</th>
+                                                                <th>KIỂU XÍCH NEO</th>
+                                                                <th>CHIỀU DÀI XÍCH NEO (m)</th>
+                                                                <th>ĐƯỜNG KÍNH XÍCH NEO(mm)</th>
+                                                                <th>GHI CHÚ</th>
+                                                                <th>TÁC VỤ</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                            </tr>
+
+                                                        </tbody>
+
+                                                    </table>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
+                                    
                                 </div>
                                 <div class="accordion-item">
                                     <h2 class="accordion-header" id="headLifeSaving">
@@ -208,7 +246,6 @@
                                     </h2>
                                     <div id="collLifeSaving" class="accordion-collapse collapse" data-parent="#accorShipEquiment">
                                         <div class="card-body">
-                                              <div class="card-body">
                                             <div class="section-header">
                                                 <div class="col-md-12">
                                                     <table id="tableLifeSaving" class="table table-bordered table-striped table-md" style="width: 100%">
@@ -233,7 +270,6 @@
                                                     </table>
                                                 </div>
                                             </div>
-                                        </div>
                                         </div>
                                     </div>
                                 </div>
@@ -1369,6 +1405,60 @@
                     </div>
                     <div class="modal-footer">
                         <button onclick="Update_LifeSaving()" type="submit" class="btn btn-info">Lưu</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        <div class="modal fade" id="model-add-Neo" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="card auth_form">
+                    <div class="modal-header">
+                        <h6 class="title-modal-banve font-weight-bold">Thêm neo</h6>
+                    </div>
+                    <div class="modal-body">
+
+                        <div class="row clearfix ">
+
+                            <div style="width: 100%; float: left; padding: 10px">
+                                <div class="form-group">
+                                    <label class="col-md-5 control-label"><strong>Kiểu neo     : </strong></label>
+                                    <div class="col-md-7">
+                                        <input type="text" class="form-control" id="add_Neo_Kieu" name="KieuNeo" required value="" placeholder="Nhập kiểu neo">
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="width: 100%; float: left; padding: 10px">
+                                <div class="form-group">
+                                    <label class="col-md-5 control-label"><strong>Trọng lượng neo (tấn)     : </strong></label>
+                                    <div class="col-md-7">
+                                        <input type="text" class="form-control" id="add_Neo_TrongLuong" name="TrongLuong" placeholder="Nhập trọng lượng neo" value="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="width: 100%; float: left; padding: 10px">
+                                <div class="form-group">
+                                    <label class="col-md-5 control-label"><strong>Số lượng   : </strong></label>
+                                    <div class="col-md-7">
+                                        <input type="text" class="form-control" id="add_Neo_SoLuong" name="SoLuong" placeholder="Nhập số lượng neo" required value="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="width: 100%; float: left; padding: 10px">
+                                <div class="form-group">
+                                    <label class="col-md-5 control-label"><strong>Ghi chú     : </strong></label>
+                                    <div class="col-md-7">
+                                        <input type="text" class="form-control" id="add_Neo_GhiChu" name="GhiChu" placeholder="Nhập ghi chú" required value="">
+                                    </div>
+                                </div>
+                            </div>
+                            <p id="Error_AddNeo" class="textER" hidden="hidden">Lỗi</p>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button onclick="Add_Neo()" type="submit" class="btn btn-info">Thêm</button>
                         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                     </div>
                 </div>
@@ -2519,20 +2609,76 @@
                 url: linkapi + "anchor?imo=" + ship_ID,
                 dataType: "json",
                 success: function (data) {
-                    var tabletext = "<thead><tr><th>STT</th><th>KIỂU TỜI NEO</th><th>TRỌNG TẢI (tấn)</th><th>SỐ LƯỢNG</th><th>GHI CHÚ</th><th>TÁC VỤ</th></tr></thead><tbody>";
+                    var tabletext_ToiNeo = "<thead><tr><th>STT</th><th>KIỂU TỜI NEO</th><th>TRỌNG TẢI (tấn)</th><th>SỐ LƯỢNG</th><th>GHI CHÚ</th><th>TÁC VỤ</th></tr></thead><tbody>";
+                    var tabletext_Neo = "<thead><tr><th>STT</th><th>KIỂU NEO</th><th>TRỌNG LƯỢNG NEO (tấn)</th><th>SỐ LƯỢNG</th><th>GHI CHÚ</th><th>TÁC VỤ</th></tr></thead><tbody>";
+                    var tabletext_XichNeo = "<thead><tr><th>STT</th><th>KIỂU XÍCH NEO</th><th>CHIỀU DÀI XÍCH NEO (m)</th><th>ĐƯỜNG KÍNH XÍCH NEO (mm)</th><th>GHI CHÚ</th><th>TÁC VỤ</th></tr></thead><tbody>";
                     var i = 1;
                     $.each(data, function (key, item) {
-                        tabletext += "<tr><td>" + i + "</td><td>" + item.Type + "</td><td>" + item.Load + "</td><td>" + item.Quantity + "</td><td>" + item.Note + '</td>' + '<td><div style="width: max-content;"><a href="#" class="edit" title="Sửa" onclick="btn_update_Anchor(`' + item.ID + '`,`' + item.Type + '`,`' + item.Load + '`,`' + item.Quantity + '`,`' + item.Note + '`)" data-toggle="modal" data-target="#model-update-Anchor"><i class="material-icons">&#xE254;</i></a><a href="#" class="delete" title="Xóa"onclick="btn_delete_Anchor(`' + item.ID + '`)"><i class="material-icons">&#xE872;</i></a></div></td></tr>';
+                        tabletext_ToiNeo += "<tr><td>" + i + "</td><td>" + item.Type + "</td><td>" + item.Load + "</td><td>" + item.Quantity + "</td><td>" + item.Note + '</td>' + '<td><div style="width: max-content;"><a href="#" class="edit" title="Sửa" onclick="btn_update_Anchor(`' + item.ID + '`,`' + item.Type + '`,`' + item.Load + '`,`' + item.Quantity + '`,`' + item.Note + '`)" data-toggle="modal" data-target="#model-update-ToiNeo"><i class="material-icons">&#xE254;</i></a><a href="#" class="delete" title="Xóa"onclick="btn_delete_ToiNeo(`' + item.ID + '`)"><i class="material-icons">&#xE872;</i></a></div></td></tr>';
+                        tabletext_Neo += "<tr><td>" + i + "</td><td>" + item.Type + "</td><td>" + item.Load + "</td><td>" + item.Quantity + "</td><td>" + item.Note + '</td>' + '<td><div style="width: max-content;"><a href="#" class="edit" title="Sửa" onclick="btn_update_Anchor(`' + item.ID + '`,`' + item.Type + '`,`' + item.Load + '`,`' + item.Quantity + '`,`' + item.Note + '`)" data-toggle="modal" data-target="#model-update-Neo"><i class="material-icons">&#xE254;</i></a><a href="#" class="delete" title="Xóa"onclick="btn_delete_Neo(`' + item.ID + '`)"><i class="material-icons">&#xE872;</i></a></div></td></tr>';
+                        tabletext_XichNeo += "<tr><td>" + i + "</td><td>" + item.Type + "</td><td>" + item.Load + "</td><td>" + item.Quantity + "</td><td>" + item.Note + '</td>' + '<td><div style="width: max-content;"><a href="#" class="edit" title="Sửa" onclick="btn_update_Anchor(`' + item.ID + '`,`' + item.Type + '`,`' + item.Load + '`,`' + item.Quantity + '`,`' + item.Note + '`)" data-toggle="modal" data-target="#model-update-Neo"><i class="material-icons">&#xE254;</i></a><a href="#" class="delete" title="Xóa"onclick="btn_delete_Neo(`' + item.ID + '`)"><i class="material-icons">&#xE872;</i></a></div></td></tr>';
                         i = i + 1;
                     });
-                    tabletext += "</tbody>";
-                    $('#tableAnchor').html(tabletext);
-                    loadTable('tableAnchor');
-                    $('#tableAnchor_wrapper .row .col-sm-12').first().html('<button id="btn_addAnchor" onclick="btn_addAnchor()" class="btn btn-info btn-lg col-md-6" data-toggle="modal" data-target="#model-add-Anchor" style="height: 35px; padding - top: 4px;margin - top: -4px;">Thêm tời neo</button>');
-                    $('#tableAnchor_wrapper .row').first().next().children().css("overflow-x", "auto");
+                    tabletext_ToiNeo += "</tbody>";
+                    tabletext_Neo += "</tbody>";
+                    tabletext_XichNeo += "</tbody>";
+                    $('#tableToiNeo').html(tabletext_ToiNeo);
+                    loadTable('tableToiNeo');
+                    $('#tableToiNeo_wrapper .row .col-sm-12').first().html('<button id="btn_addToiNeo" onclick="btn_addToiNeo()" class="btn btn-info btn-lg col-md-6" data-toggle="modal" data-target="#model-add-ToiNeo" style="height: 35px; padding - top: 4px;margin - top: -4px;">Thêm tời neo</button>');
+                    $('#tableToiNeo_wrapper .row').first().next().children().css("overflow-x", "auto");
+
+                    $('#tableNeo').html(tabletext_Neo);
+                    loadTable('tableNeo');
+                    $('#tableNeo_wrapper .row .col-sm-12').first().html('<button id="btn_addNeo" onclick="btn_addNeo()" class="btn btn-info btn-lg col-md-6" data-toggle="modal" data-target="#model-add-Neo" style="height: 35px; padding - top: 4px;margin - top: -4px;">Thêm neo</button>');
+                    $('#tableNeo_wrapper .row').first().next().children().css("overflow-x", "auto");
+
+                    $('#tableXichNeo').html(tabletext_XichNeo);
+                    loadTable('tableXichNeo');
+                    $('#tableXichNeo_wrapper .row .col-sm-12').first().html('<button id="btn_addXichNeo" onclick="btn_addXichNeo()" class="btn btn-info btn-lg col-md-6" data-toggle="modal" data-target="#model-add-XichNeo" style="height: 35px; padding - top: 4px;margin - top: -4px;">Thêm xích neo</button>');
+                    $('#tableXichNeo_wrapper .row').first().next().children().css("overflow-x", "auto");
                 }, error: function (ret) {
                     console.log('errorGET');
                 }
+            });
+        }
+
+        function btn_addNeo() {
+            $('#add_Neo_Kieu').val('');
+            $('#add_Neo_TrongLuong').val('');
+            $('#add_Neo_SoLuong').val('');
+            $('#add_Neo_GhiChu').val('');
+        }
+        function Add_Neo() {
+            var new_Neo = {
+                Ship: {
+                    ID: Ship_ID
+                },
+                Type: $("#add_Neo_Kieu").val(),
+                Load: $("#add_Neo_TrongLuong").val(),
+                Quantity: $("#add_Neo_SoLuong").val(),
+                Note: $("#add_Neo_GhiChu").val(),
+            };
+            console.log(new_Neo);
+            $.ajax({
+                type: "POST",
+                url: linkapi + "insert_anchor",
+                dataType: "json",
+                data: JSON.stringify(new_Neo),
+                contentType: "application/json",
+                beforeSend: function () { // Before we send the request, remove the .hidden class from the spinner and default to inline-block.
+                    $('#loader').removeClass('hidden');
+                },
+                success: function (data) {
+                    Load_Equiment();
+                    toastSuccess("Thành công", "Thêm neo thành công.");
+                    $('#model-add-Neo').modal("hide");
+                }, error: function (ret) {
+                    console.log(ret.responseJSON.Message);
+                    toastError("Thất bại", ret.responseJSON.Message);
+                },
+                complete: function () { // Set our complete callback, adding the .hidden class and hiding the spinner.
+                    $('#loader').addClass('hidden');
+                },
             });
         }
          // ===================================== LifeSaving ========================================
