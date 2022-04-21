@@ -51,39 +51,8 @@
                         </div>
                     </div>
                     <div class="section-header">
-                        <div class="col-md-12">
+                        <div class="col-md-12" style="padding: 0">
                             <table id="tableship" class="table table-bordered table-striped table-md" style="width: 100%">
-                                <thead>
-                                    <tr>
-                                        <th>STT</th>
-                                        <th>TÊN TÀU</th>
-                                        <th>SỐ HIỆU</th>
-                                        <th>SỐ THUYỀN VIÊN</th>
-                                        <th>NĂM HẠ THỦY</th>
-                                        <th>TRỌNG TẢI</th>
-                                        <th>TỐC ĐỘ</th>
-                                        <th title="Thời gian hành trình tối đa">TG HÀNH TRÌNH TỐI ĐA</th>
-                                        <th>TÁC VỤ</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>1</td>
-                                        <td>Tiger Nixon</td>
-                                        <td>System Architect</td>
-                                        <td>Edinburgh</td>
-                                        <td>61</td>
-                                        <td>2011/04/25</td>
-                                        <td>$320,800</td>
-                                        <td>System Architect</td>
-                                        <td>
-                                            <a href="#"><i class="fas fa-edit icon_action" title="Sửa thông tin"></i></a>
-                                            <a href="#"><i class="fas fa-trash-alt icon_action" title="Xoá thông tin"></i></a>
-                                        </td>
-                                    </tr>
-
-                                </tbody>
-
                             </table>
                         </div>
                     </div>
@@ -588,7 +557,7 @@
                     tabletext += "</tbody>";
                     $('#tableship').html(tabletext);
                     loadTableShip();
-                    $('#tableship_wrapper .row .col-sm-12').first().html('<button onclick="btn_addship()" class="btn btn-info btn-lg col-md-6" data-toggle="modal" data-target="#model-add-ship" style="height: 35px; padding - top: 4px;margin - top: -4px;">Thêm tàu</button>');
+                    $('#tableship_wrapper .row .col-sm-12').first().html('<button onclick="btn_addship()" class="btn btn-info btn-lg col-md-6" data-toggle="modal" data-target="#model-add-ship" style="height: 40px; margin-bottom: 8px; margin-top: -4px; font-size: 18px;">Thêm tàu</button>');
                     $('#tableship_wrapper .row').first().next().children().css("overflow-x", "auto");
                 }, error: function (ret) {
                     console.log('errorGET');
@@ -678,7 +647,7 @@
             });
         }
         function ViewInforShip(ID) {
-            debugger;
+            //debugger;
             $.ajax({
                 type: "GET",
                 url: linkapi + "ship_detail?id=" + ID,
@@ -738,7 +707,7 @@
                         }
 
                     });
-                    debugger
+                    //debugger
                     if (id_flotilla == '') {
                         $('#' + string_HaiDoi).append($('<option>', {
                             selected: true,
@@ -847,7 +816,7 @@
             document.getElementById("upload_imageproduct").src = ""
         }
         function delete_ship(ship_id) {
-            debugger;
+            //debugger;
             let text = "Bạn có chắc muốn xóa thông tin tàu này?";
             if (confirm(text) == true) {
                 $.ajax({

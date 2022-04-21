@@ -24,16 +24,6 @@
                                             <div class="section-header">
                                                 <div class="col-md-12">
                                                     <table id="table_maychinh" class="table table-bordered table-striped table-md" style="width: 100%">
-                                                        <thead>
-                                                            <tr>
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody>
-                                                            <tr>
-                                                                
-                                                            </tr>
-
-                                                        </tbody>
                                                     </table>
                                                 </div>
                                             </div>
@@ -64,27 +54,6 @@
                                             <div class="section-header">
                                                 <div class="col-md-12">
                                                     <table id="table_chanvit" class="table table-bordered table-striped table-md" style="width: 100%">
-                                                        <thead>
-                                                            <tr>
-                                                                <th>STT</th>
-                                                                <th>TÊN TRỤC</th>
-                                                                <th>CHIỀU DÀI HỆ TRỤC</th>
-                                                                <th>ĐK CƠ BẢN (mm)</th>
-                                                                <th>ĐK Ổ ĐỠ SAU (mm)</th>
-                                                                <th>ĐK Ổ ĐỠ GIỮA(mm)</th>
-                                                                <th>ĐK Ổ ĐỠ TRƯỚC(mm)</th>
-                                                                <th>ĐƯỜNG KÍNH CHÂN VỊT (mm)</th>
-                                                                <th>SỐ CÁNH CHÂN VỊT</th>
-                                                                <th>GHI CHÚ</th>
-                                                                <th>TÁC VỤ</th>
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody>
-                                                            <tr>
-                                                            </tr>
-
-                                                        </tbody>
-
                                                     </table>
                                                 </div>
                                             </div>
@@ -100,24 +69,6 @@
                                             <div class="section-header">
                                                 <div class="col-md-12">
                                                     <table id="table_KhiTai" class="table table-bordered table-striped table-md" style="width: 100%">
-                                                        <thead>
-                                                            <tr>
-                                                                <th>STT</th>
-                                                                <th>LOẠI THIẾT BỊ</th>
-                                                                <th>KÍ MÃ HIỆU</th>
-                                                                <th>SỐ LƯỢNG</th>
-                                                                <th>XUẤT XỨ</th>
-                                                                <th>CÔNG XUẤT</th>
-                                                                <th>TÍNH NĂNG NGẮN GỌN</th>
-                                                                <th>TÁC VỤ</th>
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody>
-                                                            <tr>
-                                                            </tr>
-
-                                                        </tbody>
-
                                                     </table>
                                                 </div>
                                             </div>
@@ -133,26 +84,6 @@
                                                <div class="section-header">
                                                 <div class="col-md-12">
                                                     <table id="tableMotoBoat" class="table table-bordered table-striped table-md" style="width: 100%">
-                                                        <thead>
-                                                            <tr>
-                                                                <th>STT</th>
-                                                                <th>TÊN</th>
-                                                                <th>SỐ THUYỀN VIÊN MAX</th>
-                                                                <th>DÀI (m)</th>
-                                                                <th>RỘNG (m)</th>
-                                                                <th>TỐC ĐỘ TỐI ĐA (m)</th>
-                                                                <th>TẢI TRỌNG (tấn)</th>
-                                                                <th>KIỂU CHÂN VỊT</th>
-                                                                <th>GHI CHÚ</th>
-                                                                <th>TÁC VỤ</th>
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody>
-                                                            <tr>
-                                                            </tr>
-
-                                                        </tbody>
-
                                                     </table>
                                                 </div>
                                             </div>
@@ -168,22 +99,6 @@
                                            <div class="section-header">
                                                 <div class="col-md-12">
                                                     <table id="tableToiNeo" class="table table-bordered table-striped table-md" style="width: 100%">
-                                                        <thead>
-                                                            <tr>
-                                                                <th>STT</th>
-                                                                <th>KIỂU TỜI NEO</th>
-                                                                <th>TRỌNG TẢI (tấn)</th>
-                                                                <th>SỐ LƯỢNG</th>
-                                                                <th>GHI CHÚ</th>
-                                                                <th>TÁC VỤ</th>
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody>
-                                                            <tr>
-                                                            </tr>
-
-                                                        </tbody>
-
                                                     </table>
                                                 </div>
            
@@ -193,22 +108,6 @@
                                             <div class="section-header">
                                                 <div class="col-md-12">
                                                     <table id="tableNeo" class="table table-bordered table-striped table-md" style="width: 100%">
-                                                        <thead>
-                                                            <tr>
-                                                                <th>STT</th>
-                                                                <th>KIỂU NEO</th>
-                                                                <th>TRỌNG LƯỢNG NEO (tấn)</th>
-                                                                <th>SỐ LƯỢNG</th>
-                                                                <th>GHI CHÚ</th>
-                                                                <th>TÁC VỤ</th>
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody>
-                                                            <tr>
-                                                            </tr>
-
-                                                        </tbody>
-
                                                     </table>
                                                 </div>
                                             </div>
@@ -217,22 +116,6 @@
                                             <div class="section-header">
                                                 <div class="col-md-12">
                                                     <table id="tableXichNeo" class="table table-bordered table-striped table-md" style="width: 100%">
-                                                        <thead>
-                                                            <tr>
-                                                                <th>STT</th>
-                                                                <th>KIỂU XÍCH NEO</th>
-                                                                <th>CHIỀU DÀI XÍCH NEO (m)</th>
-                                                                <th>ĐƯỜNG KÍNH XÍCH NEO(mm)</th>
-                                                                <th>GHI CHÚ</th>
-                                                                <th>TÁC VỤ</th>
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody>
-                                                            <tr>
-                                                            </tr>
-
-                                                        </tbody>
-
                                                     </table>
                                                 </div>
                                             </div>
@@ -249,24 +132,6 @@
                                             <div class="section-header">
                                                 <div class="col-md-12">
                                                     <table id="tableLifeSaving" class="table table-bordered table-striped table-md" style="width: 100%">
-                                                        <thead>
-                                                            <tr>
-                                                                <th>STT</th>
-                                                                <th>LOẠI THIẾT BỊ</th>
-                                                                <th>XUẤT XỨ</th>
-                                                                <th>TÌNH TRẠNG</th>
-                                                                <th>SỐ LƯỢNG</th>
-                                                                <th>ĐƠN VỊ TÍNH</th>
-                                                                <th>GHI CHÚ</th>
-                                                                <th>TÁC VỤ</th>
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody>
-                                                            <tr>
-                                                            </tr>
-
-                                                        </tbody>
-
                                                     </table>
                                                 </div>
                                             </div>
@@ -1843,7 +1708,7 @@
                     $('#loader').removeClass('hidden');
                 },
                 success: function (data) {
-                    var tabletext = "<thead><tr><th>STT</th><th>LOẠI MÁY</th><th>NĂM SẢN XUẤT</th><th>XUẤT XỨ</th><th>CÔNG XUẤT(CV)</th><th>ĐỊNH MỨC TIÊU THỤ(l/h)</th><th>VÒNG QUAY LỚN NHẤT (v/p)</th><th>SỐ XY LANH</th><th>ĐK XY LANH</th><th>GHI CHÚ</th><th>TÁC VỤ</th></tr></thead><tbody>";
+                    var tabletext = "<thead><tr><th>STT</th><th>LOẠI MÁY</th><th>NĂM SẢN XUẤT</th><th>XUẤT XỨ</th><th>CÔNG SUẤT (CV)</th><th>ĐỊNH MỨC TIÊU THỤ (l/h)</th><th>VÒNG QUAY LỚN NHẤT (v/p)</th><th>SỐ XY LANH</th><th>ĐK XY LANH</th><th>GHI CHÚ</th><th>TÁC VỤ</th></tr></thead><tbody>";
                     var i = 1;
                     $.each(data, function (key, item) {
                         tabletext += "<tr><td>" + i + "</td><td>" + item.Name + "</td><td>" + item.ProductionYear + "</td><td>" + item.Origin + "</td><td>" + item.Power + "</td><td>" + item.Waste + "</td><td>" + item.Speed + "</td><td>" + item.Pittong + "</td><td>" + item.Diameter + "</td><td>" + item.Note + '</td>' + '<td><div style="width: max-content;"><a href="#" class="edit" title="Sửa" onclick="btn_update_MainEngine(`' + item.ID + '`,`' + item.Name + '`,`' + item.ProductionYear + '`,`' + item.Origin + '`,`' + item.Power + '`,`' + item.Waste + '`,`' + item.Speed + '`,`' + item.Pittong + '`,`' + item.Diameter + '`,`' + item.Note + '`)" data-toggle="modal" data-target="#model-update-MainEngine" ><i class="material-icons">&#xE254;</i></a><a href="#" class="delete" title="Xóa" onclick="btn_delete_MainEngine(`' + item.ID + '`)"><i class="material-icons">&#xE872;</i></a></div></td></tr>';
@@ -1853,7 +1718,7 @@
                     $('#table_maychinh').html(tabletext);
                     console.log(linkapi + "main_engines?imo=" + Ship_ID);
                     loadTable("table_maychinh");
-                    $('#table_maychinh_wrapper .row .col-sm-12').first().html('<button id="btn_addMayChinh" onclick="btn_addMayChinh()" class="btn btn-info btn-lg col-md-6" data-toggle="modal" data-target="#model-add-MainEngine" style="height: 35px; padding - top: 4px;margin - top: -4px;">Thêm máy chính</button>');
+                    $('#table_maychinh_wrapper .row .col-sm-12').first().html('<button id="btn_addMayChinh" onclick="btn_addMayChinh()" class="btn btn-info btn-lg col-md-6" data-toggle="modal" data-target="#model-add-MainEngine" style="height: 40px; margin-bottom: 8px; margin-top: -4px; font-size: 18px;">Thêm máy chính</button>');
                     $('#table_maychinh_wrapper .row').first().next().children().css("overflow-x","auto");
                 }, error: function (ret) {
                     console.log('errorGET');
@@ -2001,7 +1866,7 @@
                     $('#loader').removeClass('hidden');
                 },
                 success: function (data) {
-                    var tabletext = "<thead><tr><th>STT</th><th>TÊN TRỤC</th><th>HIỀU DÀI HỆ TRỤC</th><th>ĐK CƠ BẢN (mm)</th><th>ĐK Ổ ĐỠ SAU (mm)</th><th>ĐK Ổ ĐỠ GIỮA(mm)</th><th>ĐK Ổ ĐỠ TRƯỚC(mm)</th><th>ĐƯỜNG KÍNH CHÂN VỊT (mm)</th><th>SỐ CÁNH CHÂN VỊT</th><th>GHI CHÚ</th><th>TÁC VỤ</th></tr></thead><tbody>";
+                    var tabletext = "<thead><tr><th>STT</th><th>TÊN TRỤC</th><th>CHIỀU DÀI HỆ TRỤC</th><th>ĐK CƠ BẢN (mm)</th><th>ĐK Ổ ĐỠ SAU (mm)</th><th>ĐK Ổ ĐỠ GIỮA (mm)</th><th>ĐK Ổ ĐỠ TRƯỚC (mm)</th><th>ĐƯỜNG KÍNH CHÂN VỊT (mm)</th><th>SỐ CÁNH CHÂN VỊT</th><th>GHI CHÚ</th><th>TÁC VỤ</th></tr></thead><tbody>";
                     var i = 1;
                     $.each(data, function (key, item) {
                         tabletext += "<tr><td>" + i + "</td><td>" + item.Name + "</td><td>" + item.Width + "</td><td>" + item.BasicDiameter + "</td><td>" + item.BehindDiameter + "</td><td>" + item.MiddleDiameter + "</td><td>" + item.FrontDiameter + "</td><td>" + item.Diameter + "</td><td>" + item.Wings + "</td><td>" + item.Note + '</td>' + '<td><div style="width: max-content;"><a href="#" class="edit" onclick="btn_update_ScrewSystem(`' + item.ID + '`,`' + item.Name + '`,`' + item.Width + '`,`' + item.BasicDiameter + '`,`' + item.BehindDiameter + '`,`' + item.MiddleDiameter + '`,`' + item.FrontDiameter + '`,`' + item.Diameter + '`,`' + item.Wings + '`,`' + item.Note + '`)"  title="Sửa" data-toggle="modal" data-target="#model-update-ScrewSystem"><i class="material-icons">&#xE254;</i></a><a href="#" class="delete" title="Xóa" onclick="btn_delete_ScrewSystem(`' + item.ID + '`)"><i class="material-icons">&#xE872;</i></a></div></td></tr>';
@@ -2011,7 +1876,7 @@
                     $('#table_chanvit').html(tabletext);
                     console.log(linkapi + "screw_system?imo=" + Ship_ID);
                     loadTable('table_chanvit');
-                    $('#table_chanvit_wrapper .row .col-sm-12').first().html('<button id="btn_addScrewSystem" onclick="btn_addScrewSystem()" class="btn btn-info btn-lg col-md-6" data-toggle="modal" data-target="#model-add-ScrewSystem" style="height: 35px; padding - top: 4px;margin - top: -4px;">Thêm hệ trục chân vịt</button>');
+                    $('#table_chanvit_wrapper .row .col-sm-12').first().html('<button id="btn_addScrewSystem" onclick="btn_addScrewSystem()" class="btn btn-info btn-lg col-md-6" data-toggle="modal" data-target="#model-add-ScrewSystem" style="height: 40px; margin-bottom: 8px; margin-top: -4px; font-size: 18px;">Thêm hệ trục chân vịt</button>');
                     $('#table_chanvit_wrapper .row').first().next().children().css("overflow-x", "auto");
                 }, error: function (ret) {
                     console.log('errorGET');
@@ -2163,7 +2028,7 @@
                     tabletext += "</tbody>";
                     $('#tableSecondaryEngine').html(tabletext);
                     loadTable('tableSecondaryEngine');
-                    $('#tableSecondaryEngine_wrapper .row .col-sm-12').first().html('<button id="btn_addSecondaryEngine" onclick="btn_addSecondaryEngine()" class="btn btn-info btn-lg col-md-6" data-toggle="modal" data-target="#model-add-SecondaryEngine" style="height: 35px; padding - top: 4px;margin - top: -4px;">Thêm máy phụ</button>');
+                    $('#tableSecondaryEngine_wrapper .row .col-sm-12').first().html('<button id="btn_addSecondaryEngine" onclick="btn_addSecondaryEngine()" class="btn btn-info btn-lg col-md-6" data-toggle="modal" data-target="#model-add-SecondaryEngine" style="height: 40px; margin-bottom: 8px; margin-top: -4px; font-size: 18px;">Thêm máy phụ</button>');
                     $('#tableSecondaryEngine_wrapper .row').first().next().children().css("overflow-x", "auto");
                 }, error: function (ret) {
                     console.log('errorGET');
@@ -2332,7 +2197,7 @@
                     tabletext += "</tbody>";
                     $('#table_KhiTai').html(tabletext);
                     loadTable('table_KhiTai');
-                    $('#table_KhiTai_wrapper .row .col-sm-12').first().html('<button id="btn_addWeaponMarine" onclick="btn_addWeaponMarine()" class="btn btn-info btn-lg col-md-6" data-toggle="modal" data-target="#model-add-WeaponMarine" style="height: 35px; padding - top: 4px;margin - top: -4px;">Thêm khí tài, hàng hóa</button>');
+                    $('#table_KhiTai_wrapper .row .col-sm-12').first().html('<button id="btn_addWeaponMarine" onclick="btn_addWeaponMarine()" class="btn btn-info btn-lg col-md-6" data-toggle="modal" data-target="#model-add-WeaponMarine" style="height: 40px; margin-bottom: 8px; margin-top: -4px; font-size: 18px;">Thêm khí tài, hàng hóa</button>');
                     $('#table_KhiTai_wrapper .row').first().next().children().css("overflow-x", "auto");
                 }, error: function (ret) {
                     console.log('errorGET');
@@ -2462,7 +2327,7 @@
                     tabletext += "</tbody>";
                     $('#tableMotoBoat').html(tabletext);
                     loadTable('tableMotoBoat');
-                    $('#tableMotoBoat_wrapper .row .col-sm-12').first().html('<button id="btn_addMotoBoat" onclick="btn_addMotoBoat()" class="btn btn-info btn-lg col-md-6" data-toggle="modal" data-target="#model-add-MotoBoat" style="height: 35px; padding - top: 4px;margin - top: -4px;">Thêm xuồng công tác</button>');
+                    $('#tableMotoBoat_wrapper .row .col-sm-12').first().html('<button id="btn_addMotoBoat" onclick="btn_addMotoBoat()" class="btn btn-info btn-lg col-md-6" data-toggle="modal" data-target="#model-add-MotoBoat" style="height: 40px; margin-bottom: 8px; margin-top: -4px; font-size: 18px;">Thêm xuồng công tác</button>');
                     $('#tableMotoBoat_wrapper .row').first().next().children().css("overflow-x", "auto");
                 }, error: function (ret) {
                     console.log('errorGET');
@@ -2624,17 +2489,17 @@
                     tabletext_XichNeo += "</tbody>";
                     $('#tableToiNeo').html(tabletext_ToiNeo);
                     loadTable('tableToiNeo');
-                    $('#tableToiNeo_wrapper .row .col-sm-12').first().html('<button id="btn_addToiNeo" onclick="btn_addToiNeo()" class="btn btn-info btn-lg col-md-6" data-toggle="modal" data-target="#model-add-ToiNeo" style="height: 35px; padding - top: 4px;margin - top: -4px;">Thêm tời neo</button>');
+                    $('#tableToiNeo_wrapper .row .col-sm-12').first().html('<button id="btn_addToiNeo" onclick="btn_addToiNeo()" class="btn btn-info btn-lg col-md-6" data-toggle="modal" data-target="#model-add-ToiNeo" style="height: 40px; margin-bottom: 8px; margin-top: -4px; font-size: 18px;">Thêm tời neo</button>');
                     $('#tableToiNeo_wrapper .row').first().next().children().css("overflow-x", "auto");
 
                     $('#tableNeo').html(tabletext_Neo);
                     loadTable('tableNeo');
-                    $('#tableNeo_wrapper .row .col-sm-12').first().html('<button id="btn_addNeo" onclick="btn_addNeo()" class="btn btn-info btn-lg col-md-6" data-toggle="modal" data-target="#model-add-Neo" style="height: 35px; padding - top: 4px;margin - top: -4px;">Thêm neo</button>');
+                    $('#tableNeo_wrapper .row .col-sm-12').first().html('<button id="btn_addNeo" onclick="btn_addNeo()" class="btn btn-info btn-lg col-md-6" data-toggle="modal" data-target="#model-add-Neo" style="height: 40px; margin-bottom: 8px; margin-top: -4px; font-size: 18px;">Thêm neo</button>');
                     $('#tableNeo_wrapper .row').first().next().children().css("overflow-x", "auto");
 
                     $('#tableXichNeo').html(tabletext_XichNeo);
                     loadTable('tableXichNeo');
-                    $('#tableXichNeo_wrapper .row .col-sm-12').first().html('<button id="btn_addXichNeo" onclick="btn_addXichNeo()" class="btn btn-info btn-lg col-md-6" data-toggle="modal" data-target="#model-add-XichNeo" style="height: 35px; padding - top: 4px;margin - top: -4px;">Thêm xích neo</button>');
+                    $('#tableXichNeo_wrapper .row .col-sm-12').first().html('<button id="btn_addXichNeo" onclick="btn_addXichNeo()" class="btn btn-info btn-lg col-md-6" data-toggle="modal" data-target="#model-add-XichNeo" style="height: 40px; margin-bottom: 8px; margin-top: -4px; font-size: 18px;">Thêm xích neo</button>');
                     $('#tableXichNeo_wrapper .row').first().next().children().css("overflow-x", "auto");
                 }, error: function (ret) {
                     console.log('errorGET');
@@ -2699,7 +2564,7 @@
                     tabletext += "</tbody>";
                     $('#tableLifeSaving').html(tabletext);
                     loadTable('tableLifeSaving');
-                    $('#tableLifeSaving_wrapper .row .col-sm-12').first().html('<button id="btn_addLifeSaving" onclick="btn_addLifeSaving()" class="btn btn-info btn-lg col-md-6" data-toggle="modal" data-target="#model-add-LifeSaving" style="height: 35px; padding - top: 4px;margin - top: -4px;">Thêm trang bị cứu sinh</button>');
+                    $('#tableLifeSaving_wrapper .row .col-sm-12').first().html('<button id="btn_addLifeSaving" onclick="btn_addLifeSaving()" class="btn btn-info btn-lg col-md-6" data-toggle="modal" data-target="#model-add-LifeSaving" style="height: 40px; margin-bottom: 8px; margin-top: -4px; font-size: 18px;">Thêm trang bị cứu sinh</button>');
                     $('#tableLiftSaving_wrapper .row').first().next().children().css("overflow-x", "auto");
                 }, error: function (ret) {
                     console.log('errorGET');
@@ -2827,7 +2692,7 @@
                     tabletext += "</tbody>";
                     $('#tableOtherEquipment').html(tabletext);
                     loadTable('tableOtherEquipment');
-                    $('#tableOtherEquipment_wrapper .row .col-sm-12').first().html('<button id="btn_addOtherEquipment" onclick="btn_addOtherEquipment()" class="btn btn-info btn-lg col-md-6" data-toggle="modal" data-target="#model-add-OtherEquipment" style="height: 35px; padding - top: 4px;margin - top: -4px;">Thêm trang bị khác</button>');
+                    $('#tableOtherEquipment_wrapper .row .col-sm-12').first().html('<button id="btn_addOtherEquipment" onclick="btn_addOtherEquipment()" class="btn btn-info btn-lg col-md-6" data-toggle="modal" data-target="#model-add-OtherEquipment" style="height: 40px; margin-bottom: 8px; margin-top: -4px; font-size: 18px;">Thêm trang bị khác</button>');
                     $('#tableOtherEquipment_wrapper .row').first().next().children().css("overflow-x", "auto");
                 }, error: function (ret) {
                     console.log('errorGET');
@@ -2959,7 +2824,7 @@
                     tabletext += "</tbody>";
                     $('#tableSupplies').html(tabletext);
                     loadTable('tableSupplies');
-                    $('#tableSupplies_wrapper .row .col-sm-12').first().html('<button id="btn_addsuply" onclick="btn_addsuply()" class="btn btn-info btn-lg col-md-6" data-toggle="modal" data-target="#model-add-supply" style="height: 35px; padding - top: 4px;margin - top: -4px;">Thêm vật tư bảo đảm</button>');
+                    $('#tableSupplies_wrapper .row .col-sm-12').first().html('<button id="btn_addsuply" onclick="btn_addsuply()" class="btn btn-info btn-lg col-md-6" data-toggle="modal" data-target="#model-add-supply" style="height: 40px; margin-bottom: 8px; margin-top: -4px; font-size: 18px;">Thêm vật tư bảo đảm</button>');
                     $('#tableSupplies_wrapper .row').first().next().children().css("overflow-x", "auto");
                 }, error: function (ret) {
                     console.log('errorGET');

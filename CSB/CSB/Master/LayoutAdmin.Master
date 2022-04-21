@@ -256,6 +256,7 @@ p, ul:not(.list-unstyled), ol {
 .custom-file-label {
     background-color: rgba(179, 164, 164, 0.1);
     border-color: rgba(252, 252, 252, 0.1);
+    font-size: 16px;
 }
 
     .form-control:focus,
@@ -1388,11 +1389,13 @@ select.form-control:not([size]):not([multiple]) {
         color: #666;
         padding-top: 15px;
         padding-bottom: 15px;
+        vertical-align: middle;
     }
 
     .table.table-md th,
     .table.table-md td {
         padding: 10px 15px;
+        vertical-align: middle;
     }
 
     .table.table-bordered td,
@@ -4362,7 +4365,7 @@ table.dataTable {
 
 .dataTables_wrapper {
     padding: 0 !important;
-    font-size: 13px !important;
+    font-size: 15px !important;
 }
 
     .dataTables_wrapper .dataTables_paginate .paginate_button {
@@ -4397,7 +4400,7 @@ div.dataTables_wrapper div.dataTables_processing {
 
 /* 3.6 Table */
 .table {
-    color: inherit;
+    color: #3e4347;
 }
 
     .table td, .table:not(.table-bordered) th {
@@ -5291,7 +5294,7 @@ table tr:hover .table-links {
             <ul class="sidebar-menu">
                 <li class="menu-header"></li>
                 <li class="nav-item dropdown">
-                    <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-database"></i> <span>Nghiệp vụ PQLKKT</span></a>
+                    <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-database"></i> <span>Nghiệp vụ PQLKTT</span></a>
                     <ul class="dropdown-menu">
                         <li><a class="nav-link" href="../Page_Master/Null.aspx">Công văn, tài liệu cấp trên</a></li>
                         <li><a class="nav-link" href="../Page_Master/Null.aspx">Công văn, tài liệu các đơn vị</a></li>
@@ -5299,7 +5302,7 @@ table tr:hover .table-links {
                         <li><a class="nav-link" href="../Page_Master/Null.aspx">NCKH, sáng kiến, cải tiến</a></li>
                         <li><a class="nav-link" href="../Page_Master/Null.aspx">Huấn luyện, hội thi, hội thao</a></li>
                         <li><a class="nav-link" href="../Page_Master/Null.aspx">Theo dõi thực hiện nhiệm vụ phòng</a></li>
-                        <li><a class="nav-link" href="../Page_Master/None.aspx">Thực hiện chế độ báo cáo</a></li>
+                        <li><a class="nav-link" href="../Page_Master/Null.aspx">Thực hiện chế độ báo cáo</a></li>
                     </ul>
                 </li>
                 <li class="nav-item dropdown">

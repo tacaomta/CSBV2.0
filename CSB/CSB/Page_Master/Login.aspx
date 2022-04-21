@@ -63,7 +63,19 @@
     <script src="../Scripts/js/Login.js"></script>
     <script src = "../Scripts/js/Master.js"></script>
     <script>
-
+        // Add event press Enter in an input tag
+        $('#username').keypress(function (event) {
+            var keycode = (event.keyCode ? event.keyCode : event.which);
+            if (keycode == '13') {
+                Login();
+            }
+        });
+        $('#password').keypress(function (event) {
+            var keycode = (event.keyCode ? event.keyCode : event.which);
+            if (keycode == '13') {
+                Login();
+            }
+        });
         function Login() {
             $('#error-login-text').attr('hidden', '');
             if ($('#username').val() == '') {
