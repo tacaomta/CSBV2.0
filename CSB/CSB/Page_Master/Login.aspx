@@ -6,6 +6,7 @@
 <head runat="server">
     <title>Đăng nhập</title>
 <%--    <link rel="stylesheet" href="~/Content/bootstrap.min.css" />--%>
+
     <link href="../css/bootstrap.min.css" rel="stylesheet" />
     <link href="../Content/MaterialIcons.css" rel="stylesheet" />
     <link href="../css/login.css" rel="stylesheet" />
