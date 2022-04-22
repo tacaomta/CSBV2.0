@@ -910,7 +910,7 @@
         </member>
         <member name="T:DHSLAPI.Controllers.SecondaryEngineController">
             <summary>
-            Máy phụ (máy phát điện)
+            Tổ hợp Diesel - máy điện
             </summary>
         </member>
         <member name="M:DHSLAPI.Controllers.SecondaryEngineController.GetAll(System.String)">
@@ -1229,6 +1229,26 @@
             <param name="id">Id của tời neo</param>
             <returns></returns>
         </member>
+        <member name="P:ShipyardInfo.classes.Anchor.Ship">
+            <summary>
+            Thông tin tàu
+            </summary>
+        </member>
+        <member name="P:ShipyardInfo.classes.Anchor.ID">
+            <summary>
+            Id của neo
+            </summary>
+        </member>
+        <member name="P:ShipyardInfo.classes.Anchor.Type">
+            <summary>
+            Kiểu neo
+            </summary>
+        </member>
+        <member name="P:ShipyardInfo.classes.Anchor.Quantity">
+            <summary>
+            Số lượng neo
+            </summary>
+        </member>
         <member name="P:ShipyardInfo.classes.Anchor.Width">
             <summary>
             outdate
@@ -1237,6 +1257,51 @@
         <member name="P:ShipyardInfo.classes.Anchor.Diameter">
             <summary>
             outdate
+            </summary>
+        </member>
+        <member name="P:ShipyardInfo.classes.Anchor.Weight">
+            <summary>
+            Trọng lượng neo (tấn)
+            </summary>
+        </member>
+        <member name="P:ShipyardInfo.classes.Anchor.Note">
+            <summary>
+            Ghi chú
+            </summary>
+        </member>
+        <member name="T:ShipyardInfo.classes.Chain">
+            <summary>
+            Xích neo
+            </summary>
+        </member>
+        <member name="P:ShipyardInfo.classes.Chain.ID">
+            <summary>
+            Id xích neo
+            </summary>
+        </member>
+        <member name="P:ShipyardInfo.classes.Chain.Type">
+            <summary>
+            Kiểu xích neo
+            </summary>
+        </member>
+        <member name="P:ShipyardInfo.classes.Chain.Width">
+            <summary>
+            Chiều dài xích neo (m)
+            </summary>
+        </member>
+        <member name="P:ShipyardInfo.classes.Chain.Diameter">
+            <summary>
+            Đường kính xích neo (mm)
+            </summary>
+        </member>
+        <member name="P:ShipyardInfo.classes.Chain.Note">
+            <summary>
+            Ghi chú
+            </summary>
+        </member>
+        <member name="P:ShipyardInfo.classes.Chain.Ship">
+            <summary>
+            Thông tin tàu
             </summary>
         </member>
         <member name="M:ShipyardInfo.classes.Connection.GetUserInfoByItsId(System.String)">
@@ -1529,6 +1594,461 @@
         <member name="P:ShipyardInfo.classes.Flotilla.Squadron">
             <summary>
             Với các đơn vị trực thuộc BTL thì Squadron = null
+            </summary>
+        </member>
+        <member name="T:ShipyardInfo.classes.LifeSaving">
+            <summary>
+            Trang bị cứu sinh tàu
+            </summary>
+        </member>
+        <member name="P:ShipyardInfo.classes.LifeSaving.Ship">
+            <summary>
+            Thông tin tàu
+            </summary>
+        </member>
+        <member name="P:ShipyardInfo.classes.LifeSaving.Type">
+            <summary>
+            Loại trang bị
+            </summary>
+        </member>
+        <member name="P:ShipyardInfo.classes.LifeSaving.Origin">
+            <summary>
+            Xuất xứ
+            </summary>
+        </member>
+        <member name="P:ShipyardInfo.classes.LifeSaving.State">
+            <summary>
+            Tình trạng
+            </summary>
+        </member>
+        <member name="P:ShipyardInfo.classes.LifeSaving.Quantity">
+            <summary>
+            Số lượng
+            </summary>
+        </member>
+        <member name="P:ShipyardInfo.classes.LifeSaving.Unit">
+            <summary>
+            Đơn vị tính
+            </summary>
+        </member>
+        <member name="P:ShipyardInfo.classes.LifeSaving.Note">
+            <summary>
+            Ghi chú
+            </summary>
+        </member>
+        <member name="P:ShipyardInfo.classes.LifeSaving.ID">
+            <summary>
+            Id
+            </summary>
+        </member>
+        <member name="T:ShipyardInfo.classes.OtherEquipment">
+            <summary>
+            Các trang bị khác
+            </summary>
+        </member>
+        <member name="T:ShipyardInfo.classes.Supply">
+            <summary>
+            Vật tư bảm đảm
+            </summary>
+        </member>
+        <member name="P:ShipyardInfo.classes.Supply.Code">
+            <summary>
+            Mã vật tư
+            </summary>
+        </member>
+        <member name="T:ShipyardInfo.classes.MainEngine">
+            <summary>
+            Máy chính
+            </summary>
+        </member>
+        <member name="P:ShipyardInfo.classes.MainEngine.Name">
+            <summary>
+            Tên máy
+            </summary>
+        </member>
+        <member name="P:ShipyardInfo.classes.MainEngine.ProductionYear">
+            <summary>
+            Năm sản xuất
+            </summary>
+        </member>
+        <member name="P:ShipyardInfo.classes.MainEngine.Origin">
+            <summary>
+            Xuất xứ
+            </summary>
+        </member>
+        <member name="P:ShipyardInfo.classes.MainEngine.Power">
+            <summary>
+            Công suất (CV)
+            </summary>
+        </member>
+        <member name="P:ShipyardInfo.classes.MainEngine.Waste">
+            <summary>
+            Định mức tiêu thụ (l/h)
+            </summary>
+        </member>
+        <member name="P:ShipyardInfo.classes.MainEngine.Speed">
+            <summary>
+            Vòng quay lớn nhất (v/p)
+            </summary>
+        </member>
+        <member name="P:ShipyardInfo.classes.MainEngine.Pittong">
+            <summary>
+            Số xy lanh
+            </summary>
+        </member>
+        <member name="P:ShipyardInfo.classes.MainEngine.Diameter">
+            <summary>
+            Đường kính xy lanh (mm)
+            </summary>
+        </member>
+        <member name="P:ShipyardInfo.classes.MainEngine.ID">
+            <summary>
+            ID
+            </summary>
+        </member>
+        <member name="P:ShipyardInfo.classes.MainEngine.Ship">
+            <summary>
+            Thông tin tàu
+            </summary>
+        </member>
+        <member name="P:ShipyardInfo.classes.MainEngine.Note">
+            <summary>
+            Ghi chú
+            </summary>
+        </member>
+        <member name="P:ShipyardInfo.classes.MainEngine.Time">
+            <summary>
+            Thời gian
+            </summary>
+        </member>
+        <member name="P:ShipyardInfo.classes.MainEngine.State">
+            <summary>
+            Trạng thái
+            </summary>
+        </member>
+        <member name="T:ShipyardInfo.classes.MarineWeapon">
+            <summary>
+            Khí tài hàng hải
+            </summary>
+        </member>
+        <member name="P:ShipyardInfo.classes.MarineWeapon.ID">
+            <summary>
+            Id
+            </summary>
+        </member>
+        <member name="P:ShipyardInfo.classes.MarineWeapon.Ship">
+            <summary>
+            Thông tin tàu
+            </summary>
+        </member>
+        <member name="P:ShipyardInfo.classes.MarineWeapon.Name">
+            <summary>
+            Kí mã hiệu
+            </summary>
+        </member>
+        <member name="P:ShipyardInfo.classes.MarineWeapon.Type">
+            <summary>
+            Loại khí tài
+            </summary>
+        </member>
+        <member name="P:ShipyardInfo.classes.MarineWeapon.Quantity">
+            <summary>
+            Số lượng
+            </summary>
+        </member>
+        <member name="P:ShipyardInfo.classes.MarineWeapon.Origin">
+            <summary>
+            Xuất xứ
+            </summary>
+        </member>
+        <member name="P:ShipyardInfo.classes.MarineWeapon.Power">
+            <summary>
+            Công suất
+            </summary>
+        </member>
+        <member name="P:ShipyardInfo.classes.MarineWeapon.Function">
+            <summary>
+            Tính năng ngắn gọn
+            </summary>
+        </member>
+        <member name="T:ShipyardInfo.classes.MotoBoat">
+            <summary>
+            Xuồng máy công tác
+            </summary>
+        </member>
+        <member name="P:ShipyardInfo.classes.MotoBoat.Ship">
+            <summary>
+            Thông tin tàu
+            </summary>
+        </member>
+        <member name="P:ShipyardInfo.classes.MotoBoat.ID">
+            <summary>
+            Id
+            </summary>
+        </member>
+        <member name="P:ShipyardInfo.classes.MotoBoat.Name">
+            <summary>
+            Tên
+            </summary>
+        </member>
+        <member name="P:ShipyardInfo.classes.MotoBoat.Personel">
+            <summary>
+            Số thuyền viên tối đa
+            </summary>
+        </member>
+        <member name="P:ShipyardInfo.classes.MotoBoat.EngineType">
+            <summary>
+            Loại động cơ
+            </summary>
+        </member>
+        <member name="P:ShipyardInfo.classes.MotoBoat.EngineNumber">
+            <summary>
+            Số lượng động cơ
+            </summary>
+        </member>
+        <member name="P:ShipyardInfo.classes.MotoBoat.ScrewType">
+            <summary>
+            Kiểu chân vịt
+            </summary>
+        </member>
+        <member name="P:ShipyardInfo.classes.MotoBoat.ScrewNumber">
+            <summary>
+            Số trục chân vịt
+            </summary>
+        </member>
+        <member name="P:ShipyardInfo.classes.MotoBoat.Note">
+            <summary>
+            Ghi chú
+            </summary>
+        </member>
+        <member name="P:ShipyardInfo.classes.MotoBoat.Width">
+            <summary>
+            Dài (m)
+            </summary>
+        </member>
+        <member name="P:ShipyardInfo.classes.MotoBoat.Height">
+            <summary>
+            Rộng (m)
+            </summary>
+        </member>
+        <member name="P:ShipyardInfo.classes.MotoBoat.Deep">
+            <summary>
+            Mớn nước (m)
+            </summary>
+        </member>
+        <member name="P:ShipyardInfo.classes.MotoBoat.Speed">
+            <summary>
+            Tốc độ tối đa (dặm/h)
+            </summary>
+        </member>
+        <member name="P:ShipyardInfo.classes.MotoBoat.Weight">
+            <summary>
+            Tải trọng (tấn)
+            </summary>
+        </member>
+        <member name="T:ShipyardInfo.classes.Screw">
+            <summary>
+            Hệ trục chân vịt
+            </summary>
+        </member>
+        <member name="P:ShipyardInfo.classes.Screw.Name">
+            <summary>
+            Tên hệ trục
+            </summary>
+        </member>
+        <member name="P:ShipyardInfo.classes.Screw.Width">
+            <summary>
+            Chiều dài hệ trục (mm)
+            </summary>
+        </member>
+        <member name="P:ShipyardInfo.classes.Screw.BasicDiameter">
+            <summary>
+            Đường kính cơ sở (mm)
+            </summary>
+        </member>
+        <member name="P:ShipyardInfo.classes.Screw.BehindDiameter">
+            <summary>
+            Đường kính ổ đỡ sau (mm)
+            </summary>
+        </member>
+        <member name="P:ShipyardInfo.classes.Screw.MiddleDiameter">
+            <summary>
+            Đường kính ổ đỡ giữa (mm)
+            </summary>
+        </member>
+        <member name="P:ShipyardInfo.classes.Screw.FrontDiameter">
+            <summary>
+            Đường kính ổ đỡ trước (mm)
+            </summary>
+        </member>
+        <member name="P:ShipyardInfo.classes.Screw.Diameter">
+            <summary>
+            Đường kính chân vịt (mm)
+            </summary>
+        </member>
+        <member name="P:ShipyardInfo.classes.Screw.ID">
+            <summary>
+            Id
+            </summary>
+        </member>
+        <member name="P:ShipyardInfo.classes.Screw.Note">
+            <summary>
+            Ghi chú
+            </summary>
+        </member>
+        <member name="P:ShipyardInfo.classes.Screw.Ship">
+            <summary>
+            Thông tin tàu
+            </summary>
+        </member>
+        <member name="P:ShipyardInfo.classes.Screw.Wings">
+            <summary>
+            Số cánh chân vịt
+            </summary>
+        </member>
+        <member name="T:ShipyardInfo.classes.SecondaryEngine">
+            <summary>
+            Tổ hợp máy diesel - máy phát điện
+            </summary>
+        </member>
+        <member name="P:ShipyardInfo.classes.SecondaryEngine.Ship">
+            <summary>
+            Thông tin tàu
+            </summary>
+        </member>
+        <member name="P:ShipyardInfo.classes.SecondaryEngine.Name">
+            <summary>
+            Tên động cơ diesel
+            </summary>
+        </member>
+        <member name="P:ShipyardInfo.classes.SecondaryEngine.ProductionYear">
+            <summary>
+            Năm sản xuất
+            </summary>
+        </member>
+        <member name="P:ShipyardInfo.classes.SecondaryEngine.Origin">
+            <summary>
+            Xuất xứ
+            </summary>
+        </member>
+        <member name="P:ShipyardInfo.classes.SecondaryEngine.Power">
+            <summary>
+            Công suất (KW)
+            </summary>
+        </member>
+        <member name="P:ShipyardInfo.classes.SecondaryEngine.Waste">
+            <summary>
+            Định mức tiêu thụ (l/h)
+            </summary>
+        </member>
+        <member name="P:ShipyardInfo.classes.SecondaryEngine.Speed">
+            <summary>
+            Vòng quay lớn nhất (v/p)
+            </summary>
+        </member>
+        <member name="P:ShipyardInfo.classes.SecondaryEngine.Voltage">
+            <summary>
+            Điện áp (V)
+            </summary>
+        </member>
+        <member name="P:ShipyardInfo.classes.SecondaryEngine.Intensity">
+            <summary>
+            Cường độ dòng điện (A)
+            </summary>
+        </member>
+        <member name="P:ShipyardInfo.classes.SecondaryEngine.ID">
+            <summary>
+            Id
+            </summary>
+        </member>
+        <member name="P:ShipyardInfo.classes.SecondaryEngine.Machine">
+            <summary>
+            Máy phát điện
+            </summary>
+        </member>
+        <member name="P:ShipyardInfo.classes.SecondaryEngine.Year">
+            <summary>
+            Năm sản xuất
+            </summary>
+        </member>
+        <member name="P:ShipyardInfo.classes.SecondaryEngine.Power2">
+            <summary>
+            Công suất (KW)
+            </summary>
+        </member>
+        <member name="P:ShipyardInfo.classes.SecondaryEngine.Origin2">
+            <summary>
+            Xuất xứ
+            </summary>
+        </member>
+        <member name="P:ShipyardInfo.classes.SecondaryEngine.Speed2">
+            <summary>
+            Vòng quay lớn nhất (v/p)
+            </summary>
+        </member>
+        <member name="P:ShipyardInfo.classes.SecondaryEngine.Cosphi">
+            <summary>
+            Cos phi
+            </summary>
+        </member>
+        <member name="P:ShipyardInfo.classes.SecondaryEngine.Note">
+            <summary>
+            Ghi chú
+            </summary>
+        </member>
+        <member name="P:ShipyardInfo.classes.SecondaryEngine.Time1">
+            <summary>
+            Thời gian máy diesel (năm)
+            </summary>
+        </member>
+        <member name="P:ShipyardInfo.classes.SecondaryEngine.State1">
+            <summary>
+            Trạng thái máy diesel
+            </summary>
+        </member>
+        <member name="P:ShipyardInfo.classes.SecondaryEngine.Time2">
+            <summary>
+            Thời gian máy phát điện (năm)
+            </summary>
+        </member>
+        <member name="P:ShipyardInfo.classes.SecondaryEngine.State2">
+            <summary>
+            Trạng thái máy phát điện
+            </summary>
+        </member>
+        <member name="T:ShipyardInfo.classes.Winch">
+            <summary>
+            TỜI NEO
+            </summary>
+        </member>
+        <member name="P:ShipyardInfo.classes.Winch.ID">
+            <summary>
+            ID của tời neo
+            </summary>        
+        </member>
+        <member name="P:ShipyardInfo.classes.Winch.Type">
+            <summary>
+            Kiểu tời neo
+            </summary>
+        </member>
+        <member name="P:ShipyardInfo.classes.Winch.Load">
+            <summary>
+            Trọng tải (tấn)
+            </summary>
+        </member>
+        <member name="P:ShipyardInfo.classes.Winch.Quantity">
+            <summary>
+            Số lượng
+            </summary>
+        </member>
+        <member name="P:ShipyardInfo.classes.Winch.Note">
+            <summary>
+            Ghi chú
+            </summary>
+        </member>
+        <member name="P:ShipyardInfo.classes.Winch.Ship">
+            <summary>
+            Thông tin tàu có tời neo
             </summary>
         </member>
     </members>
