@@ -573,7 +573,7 @@
         </member>
         <member name="M:DHSLAPI.Controllers.AnchorController.GetAnchorDetail(System.String)">
             <summary>
-            Lấy thông tin chi tiết của neo theo id
+            Lấy thông tin chi tiết của neo theo id.
             </summary>
             <param name="id">id của neo</param>
             <returns></returns>
@@ -1326,6 +1326,27 @@
             <param name="IMO"></param>
             <returns></returns>
         </member>
+        <member name="M:ShipyardInfo.classes.Connection.DeleteAnchor(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="v"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ShipyardInfo.classes.Connection.InsertNewAnchor(ShipyardInfo.classes.Anchor)">
+            <summary>
+            outdate
+            </summary>
+            <param name="anchor"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ShipyardInfo.classes.Connection.GetAnchorByIMO(System.String)">
+            <summary>
+            Hàm này outdate, dành trên form
+            </summary>
+            <param name="iMO"></param>
+            <returns></returns>
+        </member>
         <member name="M:ShipyardInfo.classes.Connection.GetLifeSavingByIMO(System.String)">
             <summary>
             Lấy toàn bộ thiết bị cứu sinh trên tàu theo id tàu
@@ -1394,6 +1415,13 @@
             Lấy thông tin chi tiết của neo theo ID
             </summary>
             <param name="iD"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ShipyardInfo.classes.Connection.GetAnchor1ByIMO(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="iMO"></param>
             <returns></returns>
         </member>
         <member name="M:ShipyardInfo.classes.Connection.GetAllShipInfoByNavalRegionID(System.String)">
