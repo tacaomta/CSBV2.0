@@ -1,0 +1,1497 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DHSLAPI</name>
+    </assembly>
+    <members>
+        <member name="T:CSBAPI.Controllers.HomeController">
+            <summary>
+            Home controller
+            </summary>
+        </member>
+        <member name="M:CSBAPI.Controllers.HomeController.Index">
+            <summary>
+            Index
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:CSBAPI.Controllers.UserController">
+            <summary>
+            Người dùng
+            </summary>
+        </member>
+        <member name="M:CSBAPI.Controllers.UserController.Login(ShipyardInfo.classes.User)">
+            <summary>
+            Đăng nhập
+            </summary>
+            <param name="user">Đối tượng User chứa tên đăng nhập (username) và mật khẩu (password)</param>
+            <returns></returns>
+        </member>
+        <member name="M:CSBAPI.Controllers.UserController.GetAll">
+            <summary>
+            Lấy danh mục người dùng
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CSBAPI.Controllers.UserController.GetUserInfoByItsId(System.String)">
+            <summary>
+            Lấy thông tin chi tiết của người dùng
+            </summary>
+            <param name="id">id người dùng</param>
+            <returns></returns>
+        </member>
+        <member name="M:CSBAPI.Controllers.UserController.InsertNewUser(ShipyardInfo.classes.User)">
+            <summary>
+            Thêm người dùng mới
+            </summary>
+            <param name="user">thông tin người dùng mới</param>
+            <returns></returns>
+        </member>
+        <member name="M:CSBAPI.Controllers.UserController.UpdateUser(ShipyardInfo.classes.User)">
+            <summary>
+            Cập nhật thông tin người dùng
+            </summary>
+            <param name="user">thông tin người dùng</param>
+            <returns></returns>
+        </member>
+        <member name="M:CSBAPI.Controllers.UserController.DeleteUser(System.String)">
+            <summary>
+            Xoá thông tin người dùng
+            </summary>
+            <param name="id">id người dùng</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Areas.HelpPage.ApiDescriptionExtensions.GetFriendlyId(System.Web.Http.Description.ApiDescription)">
+            <summary>
+            Generates an URI-friendly ID for the <see cref="T:System.Web.Http.Description.ApiDescription"/>. E.g. "Get-Values-id_name" instead of "GetValues/{id}?name={name}"
+            </summary>
+            <param name="description">The <see cref="T:System.Web.Http.Description.ApiDescription"/>.</param>
+            <returns>The ID as a string.</returns>
+        </member>
+        <member name="T:DHSLAPI.Areas.HelpPage.HelpPageConfig">
+            <summary>
+            Use this class to customize the Help Page.
+            For example you can set a custom <see cref="T:System.Web.Http.Description.IDocumentationProvider"/> to supply the documentation
+            or you can provide the samples for the requests/responses.
+            </summary>
+        </member>
+        <member name="T:DHSLAPI.Areas.HelpPage.Controllers.HelpController">
+            <summary>
+            The controller that will handle requests for the help page.
+            </summary>
+        </member>
+        <member name="M:DHSLAPI.Areas.HelpPage.HelpPageConfigurationExtensions.SetDocumentationProvider(System.Web.Http.HttpConfiguration,System.Web.Http.Description.IDocumentationProvider)">
+            <summary>
+            Sets the documentation provider for help page.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="documentationProvider">The documentation provider.</param>
+        </member>
+        <member name="M:DHSLAPI.Areas.HelpPage.HelpPageConfigurationExtensions.SetSampleObjects(System.Web.Http.HttpConfiguration,System.Collections.Generic.IDictionary{System.Type,System.Object})">
+            <summary>
+            Sets the objects that will be used by the formatters to produce sample requests/responses.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="sampleObjects">The sample objects.</param>
+        </member>
+        <member name="M:DHSLAPI.Areas.HelpPage.HelpPageConfigurationExtensions.SetSampleRequest(System.Web.Http.HttpConfiguration,System.Object,System.Net.Http.Headers.MediaTypeHeaderValue,System.String,System.String)">
+            <summary>
+            Sets the sample request directly for the specified media type and action.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="sample">The sample request.</param>
+            <param name="mediaType">The media type.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+        </member>
+        <member name="M:DHSLAPI.Areas.HelpPage.HelpPageConfigurationExtensions.SetSampleRequest(System.Web.Http.HttpConfiguration,System.Object,System.Net.Http.Headers.MediaTypeHeaderValue,System.String,System.String,System.String[])">
+            <summary>
+            Sets the sample request directly for the specified media type and action with parameters.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="sample">The sample request.</param>
+            <param name="mediaType">The media type.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+            <param name="parameterNames">The parameter names.</param>
+        </member>
+        <member name="M:DHSLAPI.Areas.HelpPage.HelpPageConfigurationExtensions.SetSampleResponse(System.Web.Http.HttpConfiguration,System.Object,System.Net.Http.Headers.MediaTypeHeaderValue,System.String,System.String)">
+            <summary>
+            Sets the sample request directly for the specified media type of the action.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="sample">The sample response.</param>
+            <param name="mediaType">The media type.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+        </member>
+        <member name="M:DHSLAPI.Areas.HelpPage.HelpPageConfigurationExtensions.SetSampleResponse(System.Web.Http.HttpConfiguration,System.Object,System.Net.Http.Headers.MediaTypeHeaderValue,System.String,System.String,System.String[])">
+            <summary>
+            Sets the sample response directly for the specified media type of the action with specific parameters.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="sample">The sample response.</param>
+            <param name="mediaType">The media type.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+            <param name="parameterNames">The parameter names.</param>
+        </member>
+        <member name="M:DHSLAPI.Areas.HelpPage.HelpPageConfigurationExtensions.SetSampleForMediaType(System.Web.Http.HttpConfiguration,System.Object,System.Net.Http.Headers.MediaTypeHeaderValue)">
+            <summary>
+            Sets the sample directly for all actions with the specified media type.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="sample">The sample.</param>
+            <param name="mediaType">The media type.</param>
+        </member>
+        <member name="M:DHSLAPI.Areas.HelpPage.HelpPageConfigurationExtensions.SetSampleForType(System.Web.Http.HttpConfiguration,System.Object,System.Net.Http.Headers.MediaTypeHeaderValue,System.Type)">
+            <summary>
+            Sets the sample directly for all actions with the specified type and media type.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="sample">The sample.</param>
+            <param name="mediaType">The media type.</param>
+            <param name="type">The parameter type or return type of an action.</param>
+        </member>
+        <member name="M:DHSLAPI.Areas.HelpPage.HelpPageConfigurationExtensions.SetActualRequestType(System.Web.Http.HttpConfiguration,System.Type,System.String,System.String)">
+            <summary>
+            Specifies the actual type of <see cref="T:System.Net.Http.ObjectContent`1"/> passed to the <see cref="T:System.Net.Http.HttpRequestMessage"/> in an action.
+            The help page will use this information to produce more accurate request samples.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="type">The type.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+        </member>
+        <member name="M:DHSLAPI.Areas.HelpPage.HelpPageConfigurationExtensions.SetActualRequestType(System.Web.Http.HttpConfiguration,System.Type,System.String,System.String,System.String[])">
+            <summary>
+            Specifies the actual type of <see cref="T:System.Net.Http.ObjectContent`1"/> passed to the <see cref="T:System.Net.Http.HttpRequestMessage"/> in an action.
+            The help page will use this information to produce more accurate request samples.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="type">The type.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+            <param name="parameterNames">The parameter names.</param>
+        </member>
+        <member name="M:DHSLAPI.Areas.HelpPage.HelpPageConfigurationExtensions.SetActualResponseType(System.Web.Http.HttpConfiguration,System.Type,System.String,System.String)">
+            <summary>
+            Specifies the actual type of <see cref="T:System.Net.Http.ObjectContent`1"/> returned as part of the <see cref="T:System.Net.Http.HttpRequestMessage"/> in an action.
+            The help page will use this information to produce more accurate response samples.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="type">The type.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+        </member>
+        <member name="M:DHSLAPI.Areas.HelpPage.HelpPageConfigurationExtensions.SetActualResponseType(System.Web.Http.HttpConfiguration,System.Type,System.String,System.String,System.String[])">
+            <summary>
+            Specifies the actual type of <see cref="T:System.Net.Http.ObjectContent`1"/> returned as part of the <see cref="T:System.Net.Http.HttpRequestMessage"/> in an action.
+            The help page will use this information to produce more accurate response samples.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="type">The type.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+            <param name="parameterNames">The parameter names.</param>
+        </member>
+        <member name="M:DHSLAPI.Areas.HelpPage.HelpPageConfigurationExtensions.GetHelpPageSampleGenerator(System.Web.Http.HttpConfiguration)">
+            <summary>
+            Gets the help page sample generator.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <returns>The help page sample generator.</returns>
+        </member>
+        <member name="M:DHSLAPI.Areas.HelpPage.HelpPageConfigurationExtensions.SetHelpPageSampleGenerator(System.Web.Http.HttpConfiguration,DHSLAPI.Areas.HelpPage.HelpPageSampleGenerator)">
+            <summary>
+            Sets the help page sample generator.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="sampleGenerator">The help page sample generator.</param>
+        </member>
+        <member name="M:DHSLAPI.Areas.HelpPage.HelpPageConfigurationExtensions.GetModelDescriptionGenerator(System.Web.Http.HttpConfiguration)">
+            <summary>
+            Gets the model description generator.
+            </summary>
+            <param name="config">The configuration.</param>
+            <returns>The <see cref="T:DHSLAPI.Areas.HelpPage.ModelDescriptions.ModelDescriptionGenerator"/></returns>
+        </member>
+        <member name="M:DHSLAPI.Areas.HelpPage.HelpPageConfigurationExtensions.GetHelpPageApiModel(System.Web.Http.HttpConfiguration,System.String)">
+            <summary>
+            Gets the model that represents an API displayed on the help page. The model is initialized on the first call and cached for subsequent calls.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="apiDescriptionId">The <see cref="T:System.Web.Http.Description.ApiDescription"/> ID.</param>
+            <returns>
+            An <see cref="T:DHSLAPI.Areas.HelpPage.Models.HelpPageApiModel"/>
+            </returns>
+        </member>
+        <member name="T:DHSLAPI.Areas.HelpPage.ModelDescriptions.ModelDescription">
+            <summary>
+            Describes a type model.
+            </summary>
+        </member>
+        <member name="T:DHSLAPI.Areas.HelpPage.ModelDescriptions.ModelDescriptionGenerator">
+            <summary>
+            Generates model descriptions for given types.
+            </summary>
+        </member>
+        <member name="T:DHSLAPI.Areas.HelpPage.ModelDescriptions.ModelNameAttribute">
+            <summary>
+            Use this attribute to change the name of the <see cref="T:DHSLAPI.Areas.HelpPage.ModelDescriptions.ModelDescription"/> generated for a type.
+            </summary>
+        </member>
+        <member name="T:DHSLAPI.Areas.HelpPage.Models.HelpPageApiModel">
+            <summary>
+            The model that represents an API displayed on the help page.
+            </summary>
+        </member>
+        <member name="M:DHSLAPI.Areas.HelpPage.Models.HelpPageApiModel.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:DHSLAPI.Areas.HelpPage.Models.HelpPageApiModel"/> class.
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Areas.HelpPage.Models.HelpPageApiModel.ApiDescription">
+            <summary>
+            Gets or sets the <see cref="P:DHSLAPI.Areas.HelpPage.Models.HelpPageApiModel.ApiDescription"/> that describes the API.
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Areas.HelpPage.Models.HelpPageApiModel.UriParameters">
+            <summary>
+            Gets or sets the <see cref="T:DHSLAPI.Areas.HelpPage.ModelDescriptions.ParameterDescription"/> collection that describes the URI parameters for the API.
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Areas.HelpPage.Models.HelpPageApiModel.RequestDocumentation">
+            <summary>
+            Gets or sets the documentation for the request.
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Areas.HelpPage.Models.HelpPageApiModel.RequestModelDescription">
+            <summary>
+            Gets or sets the <see cref="T:DHSLAPI.Areas.HelpPage.ModelDescriptions.ModelDescription"/> that describes the request body.
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Areas.HelpPage.Models.HelpPageApiModel.RequestBodyParameters">
+            <summary>
+            Gets the request body parameter descriptions.
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Areas.HelpPage.Models.HelpPageApiModel.ResourceDescription">
+            <summary>
+            Gets or sets the <see cref="T:DHSLAPI.Areas.HelpPage.ModelDescriptions.ModelDescription"/> that describes the resource.
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Areas.HelpPage.Models.HelpPageApiModel.ResourceProperties">
+            <summary>
+            Gets the resource property descriptions.
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Areas.HelpPage.Models.HelpPageApiModel.SampleRequests">
+            <summary>
+            Gets the sample requests associated with the API.
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Areas.HelpPage.Models.HelpPageApiModel.SampleResponses">
+            <summary>
+            Gets the sample responses associated with the API.
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Areas.HelpPage.Models.HelpPageApiModel.ErrorMessages">
+            <summary>
+            Gets the error messages associated with this model.
+            </summary>
+        </member>
+        <member name="T:DHSLAPI.Areas.HelpPage.HelpPageSampleGenerator">
+            <summary>
+            This class will generate the samples for the help page.
+            </summary>
+        </member>
+        <member name="M:DHSLAPI.Areas.HelpPage.HelpPageSampleGenerator.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:DHSLAPI.Areas.HelpPage.HelpPageSampleGenerator"/> class.
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Areas.HelpPage.HelpPageSampleGenerator.ActualHttpMessageTypes">
+            <summary>
+            Gets CLR types that are used as the content of <see cref="T:System.Net.Http.HttpRequestMessage"/> or <see cref="T:System.Net.Http.HttpResponseMessage"/>.
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Areas.HelpPage.HelpPageSampleGenerator.ActionSamples">
+            <summary>
+            Gets the objects that are used directly as samples for certain actions.
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Areas.HelpPage.HelpPageSampleGenerator.SampleObjects">
+            <summary>
+            Gets the objects that are serialized as samples by the supported formatters.
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Areas.HelpPage.HelpPageSampleGenerator.SampleObjectFactories">
+            <summary>
+            Gets factories for the objects that the supported formatters will serialize as samples. Processed in order,
+            stopping when the factory successfully returns a non-<see langref="null"/> object.
+            </summary>
+            <remarks>
+            Collection includes just <see cref="M:DHSLAPI.Areas.HelpPage.ObjectGenerator.GenerateObject(System.Type)"/> initially. Use
+            <code>SampleObjectFactories.Insert(0, func)</code> to provide an override and
+            <code>SampleObjectFactories.Add(func)</code> to provide a fallback.</remarks>
+        </member>
+        <member name="M:DHSLAPI.Areas.HelpPage.HelpPageSampleGenerator.GetSampleRequests(System.Web.Http.Description.ApiDescription)">
+            <summary>
+            Gets the request body samples for a given <see cref="T:System.Web.Http.Description.ApiDescription"/>.
+            </summary>
+            <param name="api">The <see cref="T:System.Web.Http.Description.ApiDescription"/>.</param>
+            <returns>The samples keyed by media type.</returns>
+        </member>
+        <member name="M:DHSLAPI.Areas.HelpPage.HelpPageSampleGenerator.GetSampleResponses(System.Web.Http.Description.ApiDescription)">
+            <summary>
+            Gets the response body samples for a given <see cref="T:System.Web.Http.Description.ApiDescription"/>.
+            </summary>
+            <param name="api">The <see cref="T:System.Web.Http.Description.ApiDescription"/>.</param>
+            <returns>The samples keyed by media type.</returns>
+        </member>
+        <member name="M:DHSLAPI.Areas.HelpPage.HelpPageSampleGenerator.GetSample(System.Web.Http.Description.ApiDescription,DHSLAPI.Areas.HelpPage.SampleDirection)">
+            <summary>
+            Gets the request or response body samples.
+            </summary>
+            <param name="api">The <see cref="T:System.Web.Http.Description.ApiDescription"/>.</param>
+            <param name="sampleDirection">The value indicating whether the sample is for a request or for a response.</param>
+            <returns>The samples keyed by media type.</returns>
+        </member>
+        <member name="M:DHSLAPI.Areas.HelpPage.HelpPageSampleGenerator.GetActionSample(System.String,System.String,System.Collections.Generic.IEnumerable{System.String},System.Type,System.Net.Http.Formatting.MediaTypeFormatter,System.Net.Http.Headers.MediaTypeHeaderValue,DHSLAPI.Areas.HelpPage.SampleDirection)">
+            <summary>
+            Search for samples that are provided directly through <see cref="P:DHSLAPI.Areas.HelpPage.HelpPageSampleGenerator.ActionSamples"/>.
+            </summary>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+            <param name="parameterNames">The parameter names.</param>
+            <param name="type">The CLR type.</param>
+            <param name="formatter">The formatter.</param>
+            <param name="mediaType">The media type.</param>
+            <param name="sampleDirection">The value indicating whether the sample is for a request or for a response.</param>
+            <returns>The sample that matches the parameters.</returns>
+        </member>
+        <member name="M:DHSLAPI.Areas.HelpPage.HelpPageSampleGenerator.GetSampleObject(System.Type)">
+            <summary>
+            Gets the sample object that will be serialized by the formatters. 
+            First, it will look at the <see cref="P:DHSLAPI.Areas.HelpPage.HelpPageSampleGenerator.SampleObjects"/>. If no sample object is found, it will try to create
+            one using <see cref="M:DHSLAPI.Areas.HelpPage.HelpPageSampleGenerator.DefaultSampleObjectFactory(DHSLAPI.Areas.HelpPage.HelpPageSampleGenerator,System.Type)"/> (which wraps an <see cref="T:DHSLAPI.Areas.HelpPage.ObjectGenerator"/>) and other
+            factories in <see cref="P:DHSLAPI.Areas.HelpPage.HelpPageSampleGenerator.SampleObjectFactories"/>.
+            </summary>
+            <param name="type">The type.</param>
+            <returns>The sample object.</returns>
+        </member>
+        <member name="M:DHSLAPI.Areas.HelpPage.HelpPageSampleGenerator.ResolveHttpRequestMessageType(System.Web.Http.Description.ApiDescription)">
+            <summary>
+            Resolves the actual type of <see cref="T:System.Net.Http.ObjectContent`1"/> passed to the <see cref="T:System.Net.Http.HttpRequestMessage"/> in an action.
+            </summary>
+            <param name="api">The <see cref="T:System.Web.Http.Description.ApiDescription"/>.</param>
+            <returns>The type.</returns>
+        </member>
+        <member name="M:DHSLAPI.Areas.HelpPage.HelpPageSampleGenerator.ResolveType(System.Web.Http.Description.ApiDescription,System.String,System.String,System.Collections.Generic.IEnumerable{System.String},DHSLAPI.Areas.HelpPage.SampleDirection,System.Collections.ObjectModel.Collection{System.Net.Http.Formatting.MediaTypeFormatter}@)">
+            <summary>
+            Resolves the type of the action parameter or return value when <see cref="T:System.Net.Http.HttpRequestMessage"/> or <see cref="T:System.Net.Http.HttpResponseMessage"/> is used.
+            </summary>
+            <param name="api">The <see cref="T:System.Web.Http.Description.ApiDescription"/>.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+            <param name="parameterNames">The parameter names.</param>
+            <param name="sampleDirection">The value indicating whether the sample is for a request or a response.</param>
+            <param name="formatters">The formatters.</param>
+        </member>
+        <member name="M:DHSLAPI.Areas.HelpPage.HelpPageSampleGenerator.WriteSampleObjectUsingFormatter(System.Net.Http.Formatting.MediaTypeFormatter,System.Object,System.Type,System.Net.Http.Headers.MediaTypeHeaderValue)">
+            <summary>
+            Writes the sample object using formatter.
+            </summary>
+            <param name="formatter">The formatter.</param>
+            <param name="value">The value.</param>
+            <param name="type">The type.</param>
+            <param name="mediaType">Type of the media.</param>
+            <returns></returns>
+        </member>
+        <member name="T:DHSLAPI.Areas.HelpPage.HelpPageSampleKey">
+            <summary>
+            This is used to identify the place where the sample should be applied.
+            </summary>
+        </member>
+        <member name="M:DHSLAPI.Areas.HelpPage.HelpPageSampleKey.#ctor(System.Net.Http.Headers.MediaTypeHeaderValue)">
+            <summary>
+            Creates a new <see cref="T:DHSLAPI.Areas.HelpPage.HelpPageSampleKey"/> based on media type.
+            </summary>
+            <param name="mediaType">The media type.</param>
+        </member>
+        <member name="M:DHSLAPI.Areas.HelpPage.HelpPageSampleKey.#ctor(System.Net.Http.Headers.MediaTypeHeaderValue,System.Type)">
+            <summary>
+            Creates a new <see cref="T:DHSLAPI.Areas.HelpPage.HelpPageSampleKey"/> based on media type and CLR type.
+            </summary>
+            <param name="mediaType">The media type.</param>
+            <param name="type">The CLR type.</param>
+        </member>
+        <member name="M:DHSLAPI.Areas.HelpPage.HelpPageSampleKey.#ctor(DHSLAPI.Areas.HelpPage.SampleDirection,System.String,System.String,System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Creates a new <see cref="T:DHSLAPI.Areas.HelpPage.HelpPageSampleKey"/> based on <see cref="P:DHSLAPI.Areas.HelpPage.HelpPageSampleKey.SampleDirection"/>, controller name, action name and parameter names.
+            </summary>
+            <param name="sampleDirection">The <see cref="P:DHSLAPI.Areas.HelpPage.HelpPageSampleKey.SampleDirection"/>.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+            <param name="parameterNames">The parameter names.</param>
+        </member>
+        <member name="M:DHSLAPI.Areas.HelpPage.HelpPageSampleKey.#ctor(System.Net.Http.Headers.MediaTypeHeaderValue,DHSLAPI.Areas.HelpPage.SampleDirection,System.String,System.String,System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Creates a new <see cref="T:DHSLAPI.Areas.HelpPage.HelpPageSampleKey"/> based on media type, <see cref="P:DHSLAPI.Areas.HelpPage.HelpPageSampleKey.SampleDirection"/>, controller name, action name and parameter names.
+            </summary>
+            <param name="mediaType">The media type.</param>
+            <param name="sampleDirection">The <see cref="P:DHSLAPI.Areas.HelpPage.HelpPageSampleKey.SampleDirection"/>.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+            <param name="parameterNames">The parameter names.</param>
+        </member>
+        <member name="P:DHSLAPI.Areas.HelpPage.HelpPageSampleKey.ControllerName">
+            <summary>
+            Gets the name of the controller.
+            </summary>
+            <value>
+            The name of the controller.
+            </value>
+        </member>
+        <member name="P:DHSLAPI.Areas.HelpPage.HelpPageSampleKey.ActionName">
+            <summary>
+            Gets the name of the action.
+            </summary>
+            <value>
+            The name of the action.
+            </value>
+        </member>
+        <member name="P:DHSLAPI.Areas.HelpPage.HelpPageSampleKey.MediaType">
+            <summary>
+            Gets the media type.
+            </summary>
+            <value>
+            The media type.
+            </value>
+        </member>
+        <member name="P:DHSLAPI.Areas.HelpPage.HelpPageSampleKey.ParameterNames">
+            <summary>
+            Gets the parameter names.
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Areas.HelpPage.HelpPageSampleKey.SampleDirection">
+            <summary>
+            Gets the <see cref="P:DHSLAPI.Areas.HelpPage.HelpPageSampleKey.SampleDirection"/>.
+            </summary>
+        </member>
+        <member name="T:DHSLAPI.Areas.HelpPage.ImageSample">
+            <summary>
+            This represents an image sample on the help page. There's a display template named ImageSample associated with this class.
+            </summary>
+        </member>
+        <member name="M:DHSLAPI.Areas.HelpPage.ImageSample.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:DHSLAPI.Areas.HelpPage.ImageSample"/> class.
+            </summary>
+            <param name="src">The URL of an image.</param>
+        </member>
+        <member name="T:DHSLAPI.Areas.HelpPage.InvalidSample">
+            <summary>
+            This represents an invalid sample on the help page. There's a display template named InvalidSample associated with this class.
+            </summary>
+        </member>
+        <member name="T:DHSLAPI.Areas.HelpPage.ObjectGenerator">
+            <summary>
+            This class will create an object of a given type and populate it with sample data.
+            </summary>
+        </member>
+        <member name="M:DHSLAPI.Areas.HelpPage.ObjectGenerator.GenerateObject(System.Type)">
+            <summary>
+            Generates an object for a given type. The type needs to be public, have a public default constructor and settable public properties/fields. Currently it supports the following types:
+            Simple types: <see cref="T:System.Int32"/>, <see cref="T:System.String"/>, <see cref="T:System.Enum"/>, <see cref="T:System.DateTime"/>, <see cref="T:System.Uri"/>, etc.
+            Complex types: POCO types.
+            Nullables: <see cref="T:System.Nullable`1"/>.
+            Arrays: arrays of simple types or complex types.
+            Key value pairs: <see cref="T:System.Collections.Generic.KeyValuePair`2"/>
+            Tuples: <see cref="T:System.Tuple`1"/>, <see cref="T:System.Tuple`2"/>, etc
+            Dictionaries: <see cref="T:System.Collections.Generic.IDictionary`2"/> or anything deriving from <see cref="T:System.Collections.Generic.IDictionary`2"/>.
+            Collections: <see cref="T:System.Collections.Generic.IList`1"/>, <see cref="T:System.Collections.Generic.IEnumerable`1"/>, <see cref="T:System.Collections.Generic.ICollection`1"/>, <see cref="T:System.Collections.IList"/>, <see cref="T:System.Collections.IEnumerable"/>, <see cref="T:System.Collections.ICollection"/> or anything deriving from <see cref="T:System.Collections.Generic.ICollection`1"/> or <see cref="T:System.Collections.IList"/>.
+            Queryables: <see cref="T:System.Linq.IQueryable"/>, <see cref="T:System.Linq.IQueryable`1"/>.
+            </summary>
+            <param name="type">The type.</param>
+            <returns>An object of the given type.</returns>
+        </member>
+        <member name="T:DHSLAPI.Areas.HelpPage.SampleDirection">
+            <summary>
+            Indicates whether the sample is used for request or response
+            </summary>
+        </member>
+        <member name="T:DHSLAPI.Areas.HelpPage.TextSample">
+            <summary>
+            This represents a preformatted text sample on the help page. There's a display template named TextSample associated with this class.
+            </summary>
+        </member>
+        <member name="T:DHSLAPI.Areas.HelpPage.XmlDocumentationProvider">
+            <summary>
+            A custom <see cref="T:System.Web.Http.Description.IDocumentationProvider"/> that reads the API documentation from an XML documentation file.
+            </summary>
+        </member>
+        <member name="M:DHSLAPI.Areas.HelpPage.XmlDocumentationProvider.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:DHSLAPI.Areas.HelpPage.XmlDocumentationProvider"/> class.
+            </summary>
+            <param name="documentPath">The physical path to XML document.</param>
+        </member>
+        <member name="T:DHSLAPI.Controllers.AnchorController">
+            <summary>
+            Neo API
+            </summary>
+        </member>
+        <member name="M:DHSLAPI.Controllers.AnchorController.GetAll(System.String)">
+            <summary>
+            Lấy danh mục neo trên tàu
+            </summary>
+            <param name="imo">Id tàu</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.AnchorController.InsertAnchor(ShipyardInfo.classes.Anchor)">
+            <summary>
+            Thêm neo vào danh mục neo của tàu
+            </summary>
+            <param name="anchor">Thông tin đối tượng neo</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.AnchorController.UpdateAnchor(ShipyardInfo.classes.Anchor)">
+            <summary>
+            Cập nhật thông tin neo
+            </summary>
+            <param name="anchor">Thông tin đối tượng neo</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.AnchorController.DeleteAnchor(System.String)">
+            <summary>
+            Xoá thông tin neo
+            </summary>
+            <param name="id">Id của neo</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.AnchorController.GetAnchorDetail(System.String)">
+            <summary>
+            Lấy thông tin chi tiết của neo theo id
+            </summary>
+            <param name="id">id của neo</param>
+            <returns></returns>
+        </member>
+        <member name="T:DHSLAPI.Controllers.CaptainController">
+            <summary>
+            Thuyền trưởng API
+            </summary>
+        </member>
+        <member name="M:DHSLAPI.Controllers.CaptainController.GetCaptains">
+            <summary>
+            Lấy danh mục thuyền trưởng trong CSDL
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.CaptainController.InsertNewCaptain(ShipyardInfo.classes.CaptainInfo)">
+            <summary>
+            Thêm thuyền trưởng
+            </summary>
+            <param name="captain">Thông tin thuyền trưởng</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.CaptainController.UpdateCaptain(ShipyardInfo.classes.CaptainInfo,System.String)">
+            <summary>
+            Cập nhật thông tin thuyền trưởng
+            </summary>
+            <param name="captain">Thông tin thuyền trưởng</param>
+            <param name="id">id của thuyền trưởng sẽ cập nhật</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.CaptainController.DeleteCaptain(System.String)">
+            <summary>
+            Xoá thuyền trưởng
+            </summary>
+            <param name="id">id của thuyền trưởng</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.CaptainController.GetCaptain(System.String)">
+            <summary>
+            Lấy thông tin chi tiết của thuyền trưởng
+            </summary>
+            <param name="id">id của thuyền trưởng</param>
+            <returns></returns>
+        </member>
+        <member name="T:DHSLAPI.Controllers.ChainController">
+            <summary>
+            Xích neo API
+            </summary>
+        </member>
+        <member name="M:DHSLAPI.Controllers.ChainController.GetAll(System.String)">
+            <summary>
+            Lấy danh mục xích neo của tàu
+            </summary>
+            <param name="imo">id của tàu</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.ChainController.InsertChain(ShipyardInfo.classes.Chain)">
+            <summary>
+            Thêm xích neo trên tàu
+            </summary>
+            <param name="chain">thông tin của xích neo</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.ChainController.UpdateChain(ShipyardInfo.classes.Chain)">
+            <summary>
+            Cập nhật thông tin xích neo
+            </summary>
+            <param name="chain">Thông tin của xích neo</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.ChainController.DeleteChain(System.String)">
+            <summary>
+            Xoá thông tin xích neo
+            </summary>
+            <param name="id">id của xích neo</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.ChainController.GetChainDetail(System.String)">
+            <summary>
+            Lấy thông tin chi tiết của xích neo
+            </summary>
+            <param name="id">id của xích neo</param>
+            <returns></returns>
+        </member>
+        <member name="T:DHSLAPI.Controllers.FlotillaController">
+            <summary>
+            Hải đội API
+            </summary>
+        </member>
+        <member name="M:DHSLAPI.Controllers.FlotillaController.GetFlotillas">
+            <summary>
+            Lấy danh mục hải đội trong toàn quân
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.FlotillaController.GetFlotilla(System.String)">
+            <summary>
+            Lấy thông tin của hải đội theo id
+            </summary>
+            <param name="id">id của hải đội</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.FlotillaController.GetFlotillasBySquadron(System.String)">
+            <summary>
+            Lấy danh mục hải đội trong Hải đoàn
+            </summary>
+            <param name="id">id của hải đoàn</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.FlotillaController.GetFlotillasByNavalRegion(System.String)">
+            <summary>
+            Lấy danh mục hải đội trong BTL Vùng
+            </summary>
+            <param name="id">id của vùng</param>
+            <returns></returns>
+        </member>
+        <member name="T:DHSLAPI.Controllers.LifeSavingController">
+            <summary>
+            Trang bị cứu sinh API
+            </summary>
+        </member>
+        <member name="M:DHSLAPI.Controllers.LifeSavingController.GetAll(System.String)">
+            <summary>
+            Lấy danh mục trang bị cứu sinh trên tàu
+            </summary>
+            <param name="imo">id của tàu</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.LifeSavingController.GetLifeSavingByItsId(System.String)">
+            <summary>
+            Lấy thông tin chi tiết của trang bị cứu sinh
+            </summary>
+            <param name="id">id cứu sinh</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.LifeSavingController.InsertLifeSaving(ShipyardInfo.classes.LifeSaving)">
+            <summary>
+            Thêm trang bị cứu sinh trên tàu
+            </summary>
+            <param name="lifesaving">thông tin trang bị cứu sinh</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.LifeSavingController.UpdateLifeSaving(ShipyardInfo.classes.LifeSaving)">
+            <summary>
+            Cập nhật thông tin trang bị cứu sinh trên tàu
+            </summary>
+            <param name="lifesaving">thông tin trang bị cứu sinh</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.LifeSavingController.DeleteLifeSaving(System.String)">
+            <summary>
+            Xoá thông tin trang bị cứu sinh trên tàu
+            </summary>
+            <param name="id">id của trang bị cứu sinh</param>
+            <returns></returns>
+        </member>
+        <member name="T:DHSLAPI.Controllers.MainEngineController">
+            <summary>
+            Máy chính API
+            </summary>
+        </member>
+        <member name="M:DHSLAPI.Controllers.MainEngineController.GetAll(System.String)">
+            <summary>
+            Lấy danh mục máy chính trên tàu
+            </summary>
+            <param name="imo">id của tàu</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.MainEngineController.GetMainEngineByItsId(System.String)">
+            <summary>
+            Lấy thông tin chi tiết của máy chính theo id
+            </summary>
+            <param name="id">id của máy chính</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.MainEngineController.InsertMainEngine(ShipyardInfo.classes.MainEngine)">
+            <summary>
+            Thêm thông tin máy chính
+            </summary>
+            <param name="engine">thông tin máy chính</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.MainEngineController.UpdateMainEngine(ShipyardInfo.classes.MainEngine)">
+            <summary>
+            Cập nhật thông tin máy chính
+            </summary>
+            <param name="engine"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.MainEngineController.DeleteMainEngine(System.String)">
+            <summary>
+            Xoá thông tin máy chính
+            </summary>
+            <param name="id">id máy chính</param>
+            <returns></returns>
+        </member>
+        <member name="T:DHSLAPI.Controllers.MotoBoatController">
+            <summary>
+            Xuồng máy API
+            </summary>
+        </member>
+        <member name="M:DHSLAPI.Controllers.MotoBoatController.GetAll(System.String)">
+            <summary>
+            Lấy danh mục xuồng máy trên tàu
+            </summary>
+            <param name="imo">id tàu</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.MotoBoatController.GetMotoBoatByItsId(System.String)">
+            <summary>
+            Lấy thông tin chi tiết của xuồng máy
+            </summary>
+            <param name="id">id của xuồng máy</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.MotoBoatController.InsertMotoBoat(ShipyardInfo.classes.MotoBoat)">
+            <summary>
+            Thêm thông tin xuồng máy
+            </summary>
+            <param name="moto">thông tin xuồng máy</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.MotoBoatController.UpdateMotoBoat(ShipyardInfo.classes.MotoBoat)">
+            <summary>
+            Cập nhật thông tin xuồng máy
+            </summary>
+            <param name="moto">thông tin xuồng máy</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.MotoBoatController.DeleteMotoBoat(System.String)">
+            <summary>
+            Xoá thông tin xuồng máy
+            </summary>
+            <param name="id">id xuồng máy</param>
+            <returns></returns>
+        </member>
+        <member name="T:DHSLAPI.Controllers.NavalRegionController">
+            <summary>
+            Vùng CSB API
+            </summary>
+        </member>
+        <member name="M:DHSLAPI.Controllers.NavalRegionController.GetListNavalRegions">
+            <summary>
+            Lấy danh mục vùng
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.NavalRegionController.GetShipsbyNavalRegionId(System.String)">
+            <summary>
+            Lấy thông tin chi tiết của vùng theo id
+            </summary>
+            <param name="id">id của vùng</param>
+            <returns></returns>
+        </member>
+        <member name="T:DHSLAPI.Controllers.OtherEquipmentController">
+            <summary>
+            Trang bị khác API
+            </summary>
+        </member>
+        <member name="M:DHSLAPI.Controllers.OtherEquipmentController.GetAll(System.String)">
+            <summary>
+            Lấy danh mục trang bị khác trên tàu
+            </summary>
+            <param name="imo">id của tàu</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.OtherEquipmentController.GetOtherEquipmentByItsId(System.String)">
+            <summary>
+            Lấy thông tin chi tiết của trang bị khác theo id
+            </summary>
+            <param name="id">id của trang bị</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.OtherEquipmentController.InsertOtherEquipment(ShipyardInfo.classes.OtherEquipment)">
+            <summary>
+            Thêm thông tin trang bị khác
+            </summary>
+            <param name="equipment">thông tin trang bị khác</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.OtherEquipmentController.UpdateOtherEquipment(ShipyardInfo.classes.OtherEquipment)">
+            <summary>
+            Cập nhật thông tin trang bị khác
+            </summary>
+            <param name="equipment">thông tin trang bị khác</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.OtherEquipmentController.DeleteOtherEquipment(System.String)">
+            <summary>
+            Xoá thông tin trang bị khác
+            </summary>
+            <param name="id">id trang bị</param>
+            <returns></returns>
+        </member>
+        <member name="T:DHSLAPI.Controllers.ScrewSystemController">
+            <summary>
+            Hệ thống chân vịt
+            </summary>
+        </member>
+        <member name="M:DHSLAPI.Controllers.ScrewSystemController.GetAll(System.String)">
+            <summary>
+            Lấy danh mục hệ thống chân vịt trên tàu
+            </summary>
+            <param name="imo">id của tàu</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.ScrewSystemController.GetScrewSystemByItsId(System.String)">
+            <summary>
+            Lấy thông tin chi tiết hệ thống chân vịt trên tàu
+            </summary>
+            <param name="id">id của hệ thống chân vịt</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.ScrewSystemController.InsertScrewSystem(ShipyardInfo.classes.Screw)">
+            <summary>
+            Thêm hệ thống chân vịt
+            </summary>
+            <param name="screw">thông tin hệ thống chân vịt</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.ScrewSystemController.UpdateScrewSystem(ShipyardInfo.classes.Screw)">
+            <summary>
+            Cập nhật thông tin hệ thống chân vịt
+            </summary>
+            <param name="screw">thông tin hệ thống chân vịt</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.ScrewSystemController.DeleteScrewSystem(System.String)">
+            <summary>
+            Xoá thông tin hệ thống chân vịt
+            </summary>
+            <param name="id">id hệ thống chân vịt</param>
+            <returns></returns>
+        </member>
+        <member name="T:DHSLAPI.Controllers.SecondaryEngineController">
+            <summary>
+            Máy phụ (máy phát điện)
+            </summary>
+        </member>
+        <member name="M:DHSLAPI.Controllers.SecondaryEngineController.GetAll(System.String)">
+            <summary>
+            Lấy danh mục máy phụ trên tàu
+            </summary>
+            <param name="imo">id của tàu</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.SecondaryEngineController.GetSecondaryEngineByItsId(System.String)">
+            <summary>
+            Lấy thông tin chi tiết của máy phụ theo id
+            </summary>
+            <param name="id">id của máy phụ</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.SecondaryEngineController.InsertSecondaryEngine(ShipyardInfo.classes.SecondaryEngine)">
+            <summary>
+            Thêm thông tin máy phụ của tàu
+            </summary>
+            <param name="engine">thông tin máy phụ</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.SecondaryEngineController.UpdateSecondaryEngine(ShipyardInfo.classes.SecondaryEngine)">
+            <summary>
+            Cập nhật thông tin máy phụ
+            </summary>
+            <param name="engine">thông tin máy phụ</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.SecondaryEngineController.DeleteSecondaryEngine(System.String)">
+            <summary>
+            Xoá thông tin máy phụ trên tàu
+            </summary>
+            <param name="id">id</param>
+            <returns></returns>
+        </member>
+        <member name="T:DHSLAPI.Controllers.ShipActivityController">
+            <summary>
+            Thống kê hoạt động tàu
+            </summary>
+        </member>
+        <member name="M:DHSLAPI.Controllers.ShipActivityController.GetCurrentShipActivityByRegionId(System.String)">
+            <summary>
+            Xem hoạt động của tàu trong vùng tại thời điểm hiện tại
+            </summary>
+            <param name="id">id vùng</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.ShipActivityController.GetCurrentShipActivityBySquadronId(System.String)">
+            <summary>
+            Xem hoạt động của tàu trong hải đoàn tại thời điểm hiện tại
+            </summary>
+            <param name="id">id của hải đoàn</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.ShipActivityController.GetCurrentShipActivityByFlottilaId(System.String)">
+            <summary>
+            Xem hoạt động của tàu trong đội tại thời điểm hiện tại
+            </summary>
+            <param name="id">id của hải đội</param>
+            <returns></returns>
+        </member>
+        <member name="T:DHSLAPI.Controllers.ShipActivityNoteController">
+            <summary>
+            Nhật ký hoạt động tàu
+            </summary>
+        </member>
+        <member name="M:DHSLAPI.Controllers.ShipActivityNoteController.GetShipActivityNotesByRegion(System.String)">
+            <summary>
+            Lấy toàn bộ nhật ký hoạt động của tàu trong vùng
+            </summary>
+            <param name="id">id vùng</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.ShipActivityNoteController.GetShipActivityNotesBySquadron(System.String)">
+            <summary>
+            Lấy toàn bộ nhật ký hoạt động của tàu trong hải đoàn
+            </summary>
+            <param name="id">id hải đoàn</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.ShipActivityNoteController.GetShipActivityNotesByFlotilla(System.String)">
+            <summary>
+            Lấy toàn bộ nhật ký hoạt động của tàu trong hải đội
+            </summary>
+            <param name="id">id của hải đội</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.ShipActivityNoteController.GetShipActivityListByItsId(System.String)">
+            <summary>
+            Lấy thông tin chi tiết của nhật ký hoạt động theo id
+            </summary>
+            <param name="id">id của nhật ký</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.ShipActivityNoteController.InsertShipActivityNote(DHSLAPI.Models.ShipActivityNote)">
+            <summary>
+            Thêm nhật ký hoạt động tàu
+            </summary>
+            <param name="note">thông tin nhật ký hoạt động tàu</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.ShipActivityNoteController.UpdateShipActivityNote(System.String,DHSLAPI.Models.ShipActivityNote)">
+            <summary>
+            Cập nhật nhật ký hoạt động tàu
+            </summary>
+            <param name="id">id của nhật ký cập nhật</param>
+            <param name="note">thông tin nhật ký cập nhật</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.ShipActivityNoteController.DeleteShipActivityNote(System.String)">
+            <summary>
+            Xoá nhật ký hoạt động tàu
+            </summary>
+            <param name="id">id của nhật ký</param>
+            <returns></returns>
+        </member>
+        <member name="T:DHSLAPI.Controllers.ShipInfoController">
+            <summary>
+            Thông tin tàu
+            </summary>
+        </member>
+        <member name="M:DHSLAPI.Controllers.ShipInfoController.GetAll(System.Int32,System.String)">
+            <summary>
+            Lấy thông tin ngắn gọn của tàu theo vùng. (outdated)
+            </summary>
+            <param name="region">vùng</param>
+            <param name="filter">filter</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.ShipInfoController.GetShipsbyNavalRegionId(System.String)">
+            <summary>
+            Lấy danh mục tàu trong vùng, thuộc quản lý của vùng
+            </summary>
+            <param name="id">id vùng</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.ShipInfoController.GetShipInfoByItsID(System.String)">
+            <summary>
+            Lấy thông tin chi tiết của tàu theo id của nó
+            </summary>
+            <param name="id">id của tàu</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.ShipInfoController.GetShipOverviewByItsId(System.String)">
+            <summary>
+            Lấy thông tin ngắn gọn của tàu theo id của tàu. (outdated)
+            </summary>
+            <param name="id">id của tàu</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.ShipInfoController.InsertNewShip(ShipyardInfo.classes.ShipInfo)">
+            <summary>
+            Thêm thông tin tàu
+            </summary>
+            <param name="ship">thông tin tàu</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.ShipInfoController.UpdateShip(ShipyardInfo.classes.ShipInfo)">
+            <summary>
+            Cập nhật thông tin tàu
+            </summary>
+            <param name="ship">thông tin của tàu</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.ShipInfoController.DeleteShip(System.String)">
+            <summary>
+            Xoá thông tin tàu
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="T:DHSLAPI.Controllers.SquadronController">
+            <summary>
+            Hải đoàn
+            </summary>
+        </member>
+        <member name="M:DHSLAPI.Controllers.SquadronController.GetSquadrons">
+            <summary>
+            Lấy danh mục các hải đoàn
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.SquadronController.GetSquadronByItsId(System.String)">
+            <summary>
+            Lấy thông tin chi tiết của hải đoàn theo id
+            </summary>
+            <param name="id">id hải đoàn</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.SquadronController.GetSquadronsRegion(System.String)">
+            <summary>
+            Lấy thông tin các hải đoàn trong vùng
+            </summary>
+            <param name="id">id vùng</param>
+            <returns></returns>
+        </member>
+        <member name="T:DHSLAPI.Controllers.SupplyController">
+            <summary>
+            Thiết bị bảo đảm
+            </summary>
+        </member>
+        <member name="M:DHSLAPI.Controllers.SupplyController.GetAll(System.String)">
+            <summary>
+            Lấy danh mục thiết bị bảo đảm trên tàu
+            </summary>
+            <param name="imo">id tàu</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.SupplyController.GetSupplyByItsId(System.String)">
+            <summary>
+            Lấy thông tin chi tiết của thiết bị bảo đảm
+            </summary>
+            <param name="id">id thiết bị bảo đảm</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.SupplyController.InsertSupply(ShipyardInfo.classes.Supply)">
+            <summary>
+            Thêm thông tin thiết bị bảo đảm
+            </summary>
+            <param name="supply">thông tin thiết bị bảo đảm</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.SupplyController.UpdateSupply(ShipyardInfo.classes.Supply)">
+            <summary>
+            Cập nhật thông tin thiết bị bảo đảm
+            </summary>
+            <param name="supply">thông tin thiết bị bảo đảm</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.SupplyController.DeleteSupply(System.String)">
+            <summary>
+            Xoá thông tin thiết bị bảo đảm
+            </summary>
+            <param name="id">id thiết bị bảo đảm</param>
+            <returns></returns>
+        </member>
+        <member name="T:DHSLAPI.Controllers.WeaponMarineController">
+            <summary>
+            Khí tài hàng hải
+            </summary>
+        </member>
+        <member name="M:DHSLAPI.Controllers.WeaponMarineController.GetAll(System.String)">
+            <summary>
+            Lấy danh mục khí tài hàng hải trên tàu
+            </summary>
+            <param name="imo">id tàu</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.WeaponMarineController.GetMarineWeaponsByItsId(System.String)">
+            <summary>
+            Lấy thông tin chi tiết của khí tài hàng hải theo id
+            </summary>
+            <param name="id">id của khí tài</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.WeaponMarineController.InsertWeaponMarine(ShipyardInfo.classes.MarineWeapon)">
+            <summary>
+            Thêm thông tin khí tài hàng hải
+            </summary>
+            <param name="weapon">thông tin khí tài hàng hải</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.WeaponMarineController.UpdateWeaponMarine(ShipyardInfo.classes.MarineWeapon)">
+            <summary>
+            Cập nhật thông tin khí tài hàng hải
+            </summary>
+            <param name="weapon">thông tin khí tài hàng hải</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.WeaponMarineController.DeleteWeaponMarine(System.String)">
+            <summary>
+            Xoá thông tin khí tài hàng hải
+            </summary>
+            <param name="id">id khí tài hàng hải</param>
+            <returns></returns>
+        </member>
+        <member name="T:DHSLAPI.Controllers.WinchController">
+            <summary>
+            Tời neo API
+            </summary>
+        </member>
+        <member name="M:DHSLAPI.Controllers.WinchController.GetAll(System.String)">
+            <summary>
+            Lấy danh mục tời neo theo id của tàu
+            </summary>
+            <param name="imo">số id của tàu</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.WinchController.InsertWinch(ShipyardInfo.classes.Winch)">
+            <summary>
+            Thêm mới tời neo cho tàu
+            </summary>
+            <param name="winch">thông tin đối tượng tời neo</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.WinchController.UpdateWinch(ShipyardInfo.classes.Winch)">
+            <summary>
+            Cập nhật thông tin tời neo
+            </summary>
+            <param name="winch">thông tin đối tượng tời neo</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.WinchController.DeleteWinch(System.String)">
+            <summary>
+            Xoá tời neo trên tàu
+            </summary>
+            <param name="id">Id của tời neo</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.WinchController.GetWinchDetail(System.String)">
+            <summary>
+            Lấy thông tin chi tiết của tời neo theo id
+            </summary>
+            <param name="id">Id của tời neo</param>
+            <returns></returns>
+        </member>
+        <member name="M:ShipyardInfo.classes.Connection.GetUserInfoByItsId(System.String)">
+            <summary>
+            THông tin chi tiết user theo Id
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ShipyardInfo.classes.Connection.GetMainEngineByIMO(System.String)">
+            <summary>
+            Lấy danh mục máy chính trên tàu
+            </summary>
+            <param name="IMO"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ShipyardInfo.classes.Connection.GetMainEngineByItsId(System.String)">
+            <summary>
+            Lấy thông tin chi tiết máy chính theo Id
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ShipyardInfo.classes.Connection.GetMarineWeaponsByIMO(System.String)">
+            <summary>
+            Lấy danh mục vũ khí hàng hải theo id tàu
+            </summary>
+            <param name="IMO"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ShipyardInfo.classes.Connection.GetMarineWeaponsByItsId(System.String)">
+            <summary>
+            Lấy thông tin chi tiết vũ khí hàng hải theo id
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ShipyardInfo.classes.Connection.GetCurrentShipActivityByRegionId(System.String)">
+            <summary>
+            Lấy tình trạng hoạt động tại thời điểm hiện tại của tàu theo từng Vùng
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ShipyardInfo.classes.Connection.GetCurrentShipActivityBySquadronId(System.String)">
+            <summary>
+            Lấy hoạt động của tàu theo Hải đoàn Id
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ShipyardInfo.classes.Connection.GetCurrentShipActivityByFlottilaId(System.String)">
+            <summary>
+            Lấy tình trạng hoạt động tàu theo hải đội ID
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ShipyardInfo.classes.Connection.GetShipOverviewByItsId(System.String)">
+            <summary>
+            Lấy thông tin chung về tàu theo Id
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ShipyardInfo.classes.Connection.GetSecondaryEngineByIMO(System.String)">
+            <summary>
+            Lấy danh mục máy phụ
+            </summary>
+            <param name="IMO">Số IMO của tàu có máy phụ</param>
+            <returns></returns>
+        </member>
+        <member name="M:ShipyardInfo.classes.Connection.InsertNewShipOlderVersion(ShipyardInfo.classes.ShipInfo)">
+            <summary>
+            không áp dụng cho phiên bản khi sử dụng API
+            </summary>
+            <param name="ship"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ShipyardInfo.classes.Connection.GetScrewSystemByIMO(System.String)">
+            <summary>
+            Lấy danh mục theo tàu
+            </summary>
+            <param name="iMO"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ShipyardInfo.classes.Connection.GetScrewSystemByItsId(System.String)">
+            <summary>
+            Lấy thông tin chi tiết theo ID
+            </summary>
+            <param name="iMO"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ShipyardInfo.classes.Connection.GetMotoBoatByIMO(System.String)">
+            <summary>
+            Lấy danh mục motoboard trên tàu
+            </summary>
+            <param name="IMO"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ShipyardInfo.classes.Connection.GetLifeSavingByIMO(System.String)">
+            <summary>
+            Lấy toàn bộ thiết bị cứu sinh trên tàu theo id tàu
+            </summary>
+            <param name="iD"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ShipyardInfo.classes.Connection.GetLifeSavingByItsId(System.String)">
+            <summary>
+            Lấy thông tin chi tiết của thiết bị cứu sinh theo Id
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ShipyardInfo.classes.Connection.GetOtherEquipmentByIMO(System.String)">
+            <summary>
+            Lấy danh sách các thiết bị khác trên tàu
+            </summary>
+            <param name="iD"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ShipyardInfo.classes.Connection.GetOtherEquipmentByItsId(System.String)">
+            <summary>
+            Lấy thông tin chi tiết trang thiết bị khác theo Id
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ShipyardInfo.classes.Connection.GetSuppliesByIMO(System.String)">
+            <summary>
+            Lấy danh mục thiết bị đảm bảo trên tàu theo Id của tàu
+            </summary>
+            <param name="iD"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ShipyardInfo.classes.Connection.GetSupplyByItsId(System.String)">
+            <summary>
+            Lấy thông tin chi tiết của thiết bị đảm bảo theo ID
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ShipyardInfo.classes.Connection.GetChain(System.String)">
+            <summary>
+            Lấy danh mục xích theo Id của tàu
+            </summary>
+            <param name="iD"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ShipyardInfo.classes.Connection.GetChainByItsId(System.String)">
+            <summary>
+            Lấy thông tin chi tiết của xích theo Id
+            </summary>
+            <param name="iD"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ShipyardInfo.classes.Connection.GetAnchor(System.String)">
+            <summary>
+            Lấy danh mục neo theo ID tàu
+            </summary>
+            <param name="iD"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ShipyardInfo.classes.Connection.GetAnchorByItsId(System.String)">
+            <summary>
+            Lấy thông tin chi tiết của neo theo ID
+            </summary>
+            <param name="iD"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ShipyardInfo.classes.Connection.GetAllShipInfoByNavalRegionID(System.String)">
+            <summary>
+            Lấy thông tin toàn bộ tàu theo vùng
+            </summary>
+            <param name="navalID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ShipyardInfo.classes.Connection.GetShipInfoByItsID(System.String)">
+            <summary>
+            Lấy thông tin chi tiết của tàu theo ID của nó
+            </summary>
+            <param name="shipId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ShipyardInfo.classes.Connection.GetListNavalRegion">
+            <summary>
+            Lấy thông tin toàn bộ các vùng
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ShipyardInfo.classes.Connection.GetNavalRegionByItsId(System.String)">
+            <summary>
+            Lấy thông tin vùng theo ID
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ShipyardInfo.classes.Connection.GetListSquadron">
+            <summary>
+            Lấy danh mục tất cả Hải đoàn
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ShipyardInfo.classes.Connection.GetSquadronByItsId(System.String)">
+            <summary>
+            Lấy thông tin chi tiết của Hải đoàn theo Id
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ShipyardInfo.classes.Connection.GetListSquadronByRegion(System.String)">
+            <summary>
+            Lấy danh sách hải đoàn trong Vùng
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ShipyardInfo.classes.Connection.GetListFlotilla">
+            <summary>
+            Lấy toàn bộ danh mục hải đội, cả trực thuộc và không trực thuộc BTL
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ShipyardInfo.classes.Connection.GetFlotillaByItsId(System.String)">
+            <summary>
+            Lấy thông tin chi tiết của Hải đội
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ShipyardInfo.classes.Connection.GetAllFlotillaBySquadronId(System.String)">
+            <summary>
+            Lấy danh mục hải đội theo Id của hải đoàn
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ShipyardInfo.classes.Connection.GetAllFlotillaByNavalRegionId(System.String)">
+            <summary>
+            Lấy danh mục hải đội theo BTL vùng
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ShipyardInfo.classes.Connection.GetShipActivityNotesByRegion(System.String)">
+            <summary>
+            Lấy toàn bộ thông tin nhật ký hoạt động của tàu
+            theo vùng
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ShipyardInfo.classes.Connection.GetShipActivityNotesBySquadron(System.String)">
+            <summary>
+            Lấy nhật ký hoạt động tàu theo Hải đoàn
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ShipyardInfo.classes.Connection.GetShipActivityNotesByFlotilla(System.String)">
+            <summary>
+            Lấy nhật ký hoạt động tàu theo Hải đội
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="P:ShipyardInfo.classes.Flotilla.Squadron">
+            <summary>
+            Với các đơn vị trực thuộc BTL thì Squadron = null
+            </summary>
+        </member>
+    </members>
+</doc>
