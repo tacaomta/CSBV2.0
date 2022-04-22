@@ -1229,6 +1229,16 @@
             <param name="id">Id của tời neo</param>
             <returns></returns>
         </member>
+        <member name="P:ShipyardInfo.classes.Anchor.Width">
+            <summary>
+            outdate
+            </summary>
+        </member>
+        <member name="P:ShipyardInfo.classes.Anchor.Diameter">
+            <summary>
+            outdate
+            </summary>
+        </member>
         <member name="M:ShipyardInfo.classes.Connection.GetUserInfoByItsId(System.String)">
             <summary>
             THông tin chi tiết user theo Id
