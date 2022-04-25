@@ -2974,7 +2974,7 @@
             let text = "Bạn có chắc muốn xóa tời neo này?";
             if (confirm(text) == true) {
                 $.ajax({
-                    url: linkapi + "delete_chain?id=" + ID,
+                    url: linkapi + "delete_winch?id=" + ID,
                     type: "DELETE",
 
                 }).done(function (res) {

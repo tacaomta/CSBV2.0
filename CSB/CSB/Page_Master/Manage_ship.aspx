@@ -60,9 +60,9 @@
             </div>
         </div>
     </div>
-        <div class="modal fade" id="model-add-ship" tabindex="-1" role="dialog">
+    <div class="modal fade" id="model-add-ship"   tabindex="-1" role="dialog">
         <div class="modal-dialog" role="document" style="max-width: 70%;">
-            <div class="modal-content">
+            <form id="form_add_ship" runat="server" class="modal-content">
                 <div class="card auth_form">
                     <div class="modal-header">
                         <h6 class="title-modal-banve font-weight-bold">Thêm mới tàu</h6>
@@ -78,7 +78,8 @@
                                         <img class="img-responsive" id="add_imageproduct" src="../Image/Ships/boat.jpg" style="margin: 8% 2%; height: 200px; max-width: 300px;" />
                                         <label class="btn btn-default btn-file">
                                             <span>Tải lên</span>
-                                            <input type="file" name="Anh" id="add_Anh" onchange="PreviewImage()">
+                                            <asp:FileUpload ID="FileImgsave" runat="server"  />
+                                            <%--<input type="file" name="Anh" id="add_Anh" onchange="PreviewImage()">--%>
                                         </label>
                                         <%--<button type="button" class="btn btn-dejfault" id="delete" onclick="Xoa()">Xóa</button>--%>
                                     </div>
@@ -88,7 +89,9 @@
                                         <div class="form-group">
                                             <label class="col-md-4 control-label" style="text-align: right"><strong>Tên tàu     <span style="color: red;">(*)</span>: </strong></label>
                                             <div class="col-md-8">
-                                                <input type="text" class="form-control" id="add_TenTau" name="TenTau" required value="">
+                                              <%--  <input type="text" class="form-control" id="add_TenTau" name="TenTau" required value="">--%>
+                                          <%--      <input id="add_TenTau" class="form-control" name="TenTau" runat="server"  required value="" type="text" />--%>
+                                                <asp:TextBox ID="addTenTau" class="form-control"  name="add_TenTau" runat="server" ></asp:TextBox>
                                             </div>
                                         </div>
                                     </div>
@@ -116,7 +119,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                  
+
                                     <div style="width: 100%; float: left; padding: 5px">
                                         <div class="form-group">
                                             <label class="col-md-4 control-label" style="text-align: right"><strong>Hải đội  : </strong></label>
@@ -209,7 +212,7 @@
                                     </div>
                                 </div>
                                 <div class="col-md-6" style="padding: 0px;">
-                                   
+
                                     <div style="width: 100%; float: left; padding: 5px">
                                         <div class="form-group">
                                             <label class="col-md-5 control-label" style="text-align: right"><strong>Trọng tải    : </strong></label>
@@ -251,7 +254,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                      <div style="float: left; padding: 5px" class="col-md-12">
+                                    <div style="float: left; padding: 5px" class="col-md-12">
                                         <div class="form-group">
                                             <label class="col-md-5 control-label" style="text-align: right"><strong>Năm hạ thủy    : </strong></label>
                                             <div class="col-md-7">
@@ -264,14 +267,16 @@
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <button onclick="Add_Ship()" type="button" class="btn btn-info">Save</button>
+                        <%--<button onclick="Add_Ship()" type="button" class="btn btn-info">Save</button>
+                        <button type="button" class="btn btn-info" data-dismiss="modal">Close</button>--%>
+                        <asp:Button ID="btn_save" class="btn btn-info" runat="server" Text="Save" OnClick="btn_save_Click"/>
                         <button type="button" class="btn btn-info" data-dismiss="modal">Close</button>
                     </div>
                 </div>
-            </div>
+            </form>
         </div>
     </div>
-
+   
     <div class="modal fade" id="model-infordetail-ship" tabindex="-1" role="dialog">
         <div class="modal-dialog" role="document" style="max-width: 70%;">
             <div class="modal-content">
@@ -365,7 +370,7 @@
                                         </div>
                                     </div>
 
-                                   
+
 
                                 </div>
                             </div>
@@ -473,11 +478,6 @@
                                     </div>
                                 </div>
                             </div>
-
-
-
-
-
                         </div>
                     </div>
                     <div class="modal-footer">
@@ -569,10 +569,10 @@
                 },
             });
         };
-        function btn_addship(){
+        function btn_addship() {
             $('#add_Ship_ID').val('');
             //$("#Anh").val(data.Name);
-            $("#add_TenTau").val('');
+            $("#MainContentAdmin_addTenTau").val('');
             $("#add_SoHieu").val('');
             $("#add_NoiCap").val('');
             $("#add_NgayCap").val('');
@@ -581,7 +581,7 @@
             $("#add_NhienLieuToiDa").val('');
             $("#add_NuocNgotToiDa").val('');
             $("#add_SoThuyenVien").val('');
-            list_captain('','add_ThuyenTruong');
+            list_captain('', 'add_ThuyenTruong');
             $("#add_TocDo").val('');
             $("#add_TG_HanhTrinhToiDa").val('');
             $("#add_NgayTao").val('');
@@ -589,16 +589,70 @@
             $("#add_ChieuDai").val('');
             $("#add_ChieuRong").val('');
             $("#add_VatLieu").val('');
-            list_flotilla('','add_HaiDoi');
+            list_flotilla('', 'add_HaiDoi');
             $("#add_MonNuoc").val('');
         }
+        $("#form_add_ship").submit(function () {
+            debugger;
+            var id_Flotilla = $('#add_HaiDoi').val();
+            var id_Captain = $('#add_ThuyenTruong').val();
+            var New_Ship = {
+                Image: $('#MainContentAdmin_addTenTau').val() + ".jpg",
+                Name: $('#MainContentAdmin_addTenTau').val(),
+                RegistrationNumber: $('#add_SoHieu').val(),
+                Weight: $('#add_TrongTai').val(),
+                Fuel: $('#add_NhienLieuToiDa').val(),
+                Water: $('#add_NuocNgotToiDa').val(),
+                Personel: $('#add_SoThuyenVien').val(),
+                Captain: {
+                    ID: id_Captain
+                },
+                Speed: $("#add_TocDo").val(),
+                Time: $("#add_TG_HanhTrinhToiDa").val(),
+                LaunchYear: $("#add_NamHaThuy").val(),
+                RegistrationDate: $("#add_NgayCap").val(),
+                RegistrationPlace: $("#add_NoiCap").val(),
+                Width: $("#add_ChieuDai").val(),
+                Wide: $("#add_ChieuRong").val(),
+                Draught: $("#add_MonNuoc").val(),
+                Material: $("#add_VatLieu").val(),
+                Created: $("#add_NgayTao").val(),
+                Updated: strDate,
+                Flotilla: {
+                    Id: id_Flotilla
+                }
+            };
+            console.log(New_Ship);
+            $.ajax({
+                type: "POST",
+                url: linkapi + "ship_insert",
+                dataType: "json",
+                data: JSON.stringify(New_Ship),
+                contentType: "application/json",
+
+                beforeSend: function () { // Before we send the request, remove the .hidden class from the spinner and default to inline-block.
+                    $('#loader').removeClass('hidden');
+                },
+                success: function (data) {
+                    toastSuccess("Thành công", "Thêm tàu thành công.");
+                    $('#model-add-ship').modal("hide");
+                }, error: function (ret) {
+                    console.log(ret.responseJSON.Message);
+                    toastError("Thất bại! Có thể số hiệu tàu này đã tồn tại", ret.responseJSON.Message);
+                    loadDataListShips(vung_id);
+                },
+                complete: function () { // Set our complete callback, adding the .hidden class and hiding the spinner.
+                    $('#loader').addClass('hidden');
+                },
+            });
+        });
 
         function Add_Ship() {
             var id_Flotilla = $('#add_HaiDoi').val();
             var id_Captain = $('#add_ThuyenTruong').val();
             var New_Ship = {
                 Image: 'imgs\\default.jpg',
-                Name: $('#add_TenTau').val(),
+                Name: $('#addTenTau').val(),
                 RegistrationNumber: $('#add_SoHieu').val(),
                 Weight: $('#add_TrongTai').val(),
                 Fuel: $('#add_NhienLieuToiDa').val(),
@@ -654,7 +708,7 @@
                 dataType: "json",
                 success: function (data) {
                     $('#Ship_ID').val(data.ID);
-                    //$("#Anh").val(data.Name);
+                    $("#upload_imageproduct").attr("src", "../Image/Ships/" + data.Image);
                     $("#TenTau").val(data.Name);
                     $("#SoHieu").val(data.RegistrationNumber);
                     $("#NoiCap").val(data.RegistrationPlace);
@@ -664,7 +718,7 @@
                     $("#NhienLieuToiDa").val(data.Fuel);
                     $("#NuocNgotToiDa").val(data.Water);
                     $("#SoThuyenVien").val(data.Personel);
-                    list_captain(data.Captain.ID,'ThuyenTruong');
+                    list_captain(data.Captain.ID, 'ThuyenTruong');
                     $("#TocDo").val(data.Speed);
                     $("#TG_HanhTrinhToiDa").val(data.Time);
                     $("#NgayTao").val(data.Created);
@@ -672,7 +726,7 @@
                     $("#ChieuDai").val(data.Width);
                     $("#ChieuRong").val(data.Wide);
                     $("#VatLieu").val(data.Material);
-                    list_flotilla(data.Flotilla.Id,'HaiDoi');
+                    list_flotilla(data.Flotilla.Id, 'HaiDoi');
                     $("#MonNuoc").val(data.Draught);
                 }, error: function (ret) {
                     console.log('errorGET');
@@ -682,7 +736,7 @@
             });
 
         }
-        function list_flotilla(id_flotilla,string_HaiDoi) {
+        function list_flotilla(id_flotilla, string_HaiDoi) {
             $.ajax({
                 type: "GET",
                 url: linkapi + "flotillas",
@@ -723,7 +777,7 @@
             });
 
         }
-        function list_captain(id_captain,string_thuyentruong) {
+        function list_captain(id_captain, string_thuyentruong) {
             $.ajax({
                 type: "GET",
                 url: linkapi + "captains",
