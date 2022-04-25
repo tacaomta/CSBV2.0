@@ -46,8 +46,8 @@
                     <div class="section-header">
                         <h4 id="title" style="color: black; margin: 0">QUẢN LÝ TÀU - VÙNG 1</h4>
                         <div class="section-header-breadcrumb">
-                            <div class="breadcrumb-item active"><a href="TrangChu.aspx" style="color: #01b5f9">Trang chủ</a></div>
-                            <div class="breadcrumb-item active"><a href="#" style="color: #01b5f9">Quản lý tàu</a></div>
+                            <div class="breadcrumb-item active"><a href="TrangChu.aspx" style="color: #01b5f9; font-size: 18px;">Trang chủ</a></div>
+                            <div class="breadcrumb-item active"><a href="#" style="color: #01b5f9; font-size: 18px;">Quản lý tàu</a></div>
                         </div>
                     </div>
                     <div class="section-header">

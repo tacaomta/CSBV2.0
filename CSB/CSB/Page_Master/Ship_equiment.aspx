@@ -8,8 +8,8 @@
                     <div class="section-header">
                         <h4 id="title" style="color: black; margin: 0">THIẾT BỊ TRÊN TÀU - TÀU CỨU HỘ XH123</h4>
                         <div class="section-header-breadcrumb">
-                            <div class="breadcrumb-item active"><a href="TrangChu.aspx" style="color: #01b5f9">Trang chủ</a></div>
-                            <div class="breadcrumb-item active"><a href="Manage_ship.aspx" style="color: #01b5f9">Quản lý tàu</a></div>
+                            <div class="breadcrumb-item active"><a href="TrangChu.aspx" style="color: #01b5f9; font-size: 18px;">Trang chủ</a></div>
+                            <div class="breadcrumb-item active"><a href="Manage_ship.aspx" style="color: #01b5f9; font-size: 18px;">Quản lý tàu</a></div>
                         </div>
                     </div>
                     <div class="section-header">
@@ -20,8 +20,8 @@
                                         <button id="btn_MayChinh" type="button" class="accordion-button collapsed" data-toggle="collapse" data-target="#collMainEngine">0 - Máy chính </button>
                                     </h2>
                                     <div id="collMainEngine" class="accordion-collapse collapse" data-parent="#accorShipEquiment">
-                                        <div class="card-body">
-                                            <div class="section-header">
+                                        <div class="card-body" style="padding: 30px 10px;">
+                                            <div class="">
                                                 <div class="col-md-12">
                                                     <table id="table_maychinh" class="table table-bordered table-striped table-md" style="width: 100%">
                                                     </table>
@@ -35,8 +35,8 @@
                                         <button type="button" id="btn_MayPhu" class="accordion-button collapsed" data-toggle="collapse" data-target="#collSecondaryEngine">0 - Máy phụ </button>
                                     </h2>
                                     <div id="collSecondaryEngine" class="accordion-collapse collapse" data-parent="#accorShipEquiment">
-                                        <div class="card-body">
-                                            <div class="section-header">
+                                        <div class="card-body" style="padding: 30px 10px;">
+                                            <div class="">
                                                 <div class="col-md-12">
                                                     <table id="tableSecondaryEngine" class="table table-bordered table-striped table-md" style="width: 100%">
                                                     </table>
@@ -50,8 +50,8 @@
                                         <button type="button" id="btn_ChanVit" class="accordion-button collapsed" data-toggle="collapse" data-target="#collScrew">0 - Hệ trục chân vịt </button>
                                     </h2>
                                     <div id="collScrew" class="accordion-collapse collapse" data-parent="#accorShipEquiment">
-                                        <div class="card-body">
-                                            <div class="section-header">
+                                        <div class="card-body" style="padding: 30px 10px;">
+                                            <div class="">
                                                 <div class="col-md-12">
                                                     <table id="table_chanvit" class="table table-bordered table-striped table-md" style="width: 100%">
                                                     </table>
@@ -65,8 +65,8 @@
                                         <button type="button" id="btn_KhiTai" class="accordion-button collapsed" data-toggle="collapse" data-target="#collWeapon">0 - Khí tài, hàng hải </button>
                                     </h2>
                                     <div id="collWeapon" class="accordion-collapse collapse" data-parent="#accorShipEquiment">
-                                        <div class="card-body">
-                                            <div class="section-header">
+                                        <div class="card-body" style="padding: 30px 10px;">
+                                            <div class="">
                                                 <div class="col-md-12">
                                                     <table id="table_KhiTai" class="table table-bordered table-striped table-md" style="width: 100%">
                                                     </table>
@@ -80,8 +80,8 @@
                                         <button type="button" id="btn_XuongCT" class="accordion-button collapsed" data-toggle="collapse" data-target="#collMotoBoat">0 - Xuồng công tác </button>
                                     </h2>
                                     <div id="collMotoBoat" class="accordion-collapse collapse" data-parent="#accorShipEquiment">
-                                        <div class="card-body">
-                                            <div class="section-header">
+                                        <div class="card-body" style="padding: 30px 10px;">
+                                            <div class="">
                                                 <div class="col-md-12">
                                                     <table id="tableMotoBoat" class="table table-bordered table-striped table-md" style="width: 100%">
                                                     </table>
@@ -95,8 +95,8 @@
                                         <button type="button" id="btn_Neo" class="accordion-button collapsed" data-toggle="collapse" data-target="#collAnchor">0 - Neo, tời neo, xích neo </button>
                                     </h2>
                                     <div id="collAnchor" class="accordion-collapse collapse" data-parent="#accorShipEquiment">
-                                        <div class="card-body">
-                                            <div class="section-header">
+                                        <div class="card-body" style="padding: 30px 10px;">
+                                            <div class="">
                                                 <div class="col-md-12">
                                                     <table id="tableToiNeo" class="table table-bordered table-striped table-md" style="width: 100%">
                                                     </table>
@@ -104,16 +104,16 @@
 
                                             </div>
                                         </div>
-                                        <div class="card-body">
-                                            <div class="section-header">
+                                        <div class="card-body" style="padding: 30px 10px;">
+                                            <div class="">
                                                 <div class="col-md-12">
                                                     <table id="tableNeo" class="table table-bordered table-striped table-md" style="width: 100%">
                                                     </table>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="card-body">
-                                            <div class="section-header">
+                                        <div class="card-body" style="padding: 30px 10px;">
+                                            <div class="">
                                                 <div class="col-md-12">
                                                     <table id="tableXichNeo" class="table table-bordered table-striped table-md" style="width: 100%">
                                                     </table>
@@ -128,8 +128,8 @@
                                         <button type="button" id="btn_TBCuuSinh" class="accordion-button collapsed" data-toggle="collapse" data-target="#collLifeSaving">0 - Trang bị cứu sinh </button>
                                     </h2>
                                     <div id="collLifeSaving" class="accordion-collapse collapse" data-parent="#accorShipEquiment">
-                                        <div class="card-body">
-                                            <div class="section-header">
+                                        <div class="card-body" style="padding: 30px 10px;">
+                                            <div class="">
                                                 <div class="col-md-12">
                                                     <table id="tableLifeSaving" class="table table-bordered table-striped table-md" style="width: 100%">
                                                     </table>
@@ -143,8 +143,8 @@
                                         <button type="button" id="btn_TBKhac" class="accordion-button collapsed" data-toggle="collapse" data-target="#collOther">0 - Các trang bị khác </button>
                                     </h2>
                                     <div id="collOther" class="accordion-collapse collapse" data-parent="#accorShipEquiment">
-                                        <div class="card-body">
-                                            <div class="section-header">
+                                        <div class="card-body" style="padding: 30px 10px;">
+                                            <div class="">
                                                 <div class="col-md-12">
                                                     <table id="tableOtherEquipment" class="table table-bordered table-striped table-md" style="width: 100%">
                                                     </table>
@@ -158,8 +158,8 @@
                                         <button type="button" id="btn_VatTu" class="accordion-button collapsed" data-toggle="collapse" data-target="#collSupplies">0 - Vật tư bảo đảm </button>
                                     </h2>
                                     <div id="collSupplies" class="accordion-collapse collapse" data-parent="#accorShipEquiment">
-                                        <div class="card-body">
-                                            <div class="section-header">
+                                        <div class="card-body" style="padding: 30px 10px;">
+                                            <div class="">
                                                 <div class="col-md-12">
                                                     <table id="tableSupplies" class="table table-bordered table-striped table-md" style="width: 100%">
                                                     </table>

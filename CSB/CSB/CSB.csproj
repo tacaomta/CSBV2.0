@@ -239,6 +239,7 @@
     <Content Include="Image\header.jpg" />
     <Content Include="Image\login.jpg" />
     <Content Include="Image\ic-login.png" />
+    <Content Include="Image\logo_CSB.png" />
     <Content Include="Image\phuhieu.jpg" />
     <Content Include="Image\Ships\boat.jpg" />
     <Content Include="Image\Ships\default.jpg" />

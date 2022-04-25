@@ -2248,16 +2248,17 @@ h6 .badge {
     }
 
 .navbar-bg {
-    content: ' ';
+    content: '';
     position: absolute;
     top: 0;
     left: 250px;
     width: calc(100% - 250px);
-    height: 93px;
+    height: 100%;
+    background-size: contain;
     background-image: url('../Image/header.jpg');
     background-repeat: no-repeat;
-    background-size: 100% 100%;
     z-index: -1;
+    transition: all 0.2s linear 0s;
 }
 
 .navbar {
@@ -3277,7 +3278,6 @@ pre {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: false;
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 65%, rgba(0, 0, 0, 0.65) 100%);
     z-index: 1;
 }
@@ -3496,7 +3496,7 @@ body.sidebar-mini .main-sidebar .sidebar-menu > li {
     padding: 10px;
 }
 
-    body.sidebar-mini .main-sidebar .sidebar-menu > li.menu-header {
+    body.sidebar-mini .main-sidebar .sidebar-menu > li.main-header {
         padding: 0;
         font-size: 0;
         height: 2px;
@@ -3815,14 +3815,29 @@ body.layout-3 .main-footer {
 
 .main-sidebar .sidebar-brand {
     display: inline-block;
-    width: 100%;
+    width: 250px;
     text-align: center;
-    height: 60px;
-    line-height: 60px;
+    height: 250px;
+    background-image: url('../Image/logo_CSB.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    align-items: center;
+    margin-top: 20px;
+
+    transition: all .5s;
+    
 }
 
-    .main-sidebar .sidebar-brand.sidebar-brand-sm {
+    .main-sidebar .sidebar-brand-sm {
         display: none;
+    width: 70px;
+    text-align: center;
+    height: 50px;
+    line-height: 50px;
+    color: #01b5f9;
+    font-weight: bold;
+    text-shadow: 0 0 black;
     }
 
     .main-sidebar .sidebar-brand a {
@@ -3976,7 +3991,7 @@ body.layout-3 .main-footer {
 .main-content {
     padding-left: 260px;
     padding-right: 10px;
-    padding-top: 64px;
+    padding-top: 128px;
     width: 100%;
     position: relative;
 }
@@ -4045,6 +4060,12 @@ body:not(.sidebar-mini) .sidebar-style-2 .sidebar-menu li.active ul.dropdown-men
 }
 
 @media (max-width: 1024px) {
+    .navbar-bg {
+        left: 0;
+        width: 100%;
+
+    }
+
     .sidebar-gone-hide {
         display: none !important;
     }
@@ -4232,6 +4253,7 @@ input[type=file] {
     box-shadow: 0 4px 8px rgb(0 0 0 / 3%);
     display: flex;
     justify-content: space-between;
+    transition: all 0.5s;
 }
 
 .mainMenu-list{
@@ -4269,8 +4291,8 @@ input[type=file] {
 
 #li_infor_login {
     float: right;
-    margin-right: 10px;
-    text-align-last: right;
+    /*margin-right: 10px;*/
+    /*text-align-last: right;*/
 }
 
 #menu_infor_login {
@@ -4283,13 +4305,13 @@ input[type=file] {
     }
 
 .icon_account {
-    font-size: 20px;
+    font-size: 18px;
     color: #01b5f9;
     font-style: inherit;
 }
 
 .icon_menu_account {
-    font-size: 20px;
+    font-size: 18px;
     color: #01b5f9;
     font-style: inherit;
 }
@@ -5143,27 +5165,6 @@ table tr:hover .table-links {
     vertical-align: unset;
 }
 
-#menu_infor_login {
-    width: 100%;
-}
-
-    #menu_infor_login a {
-        padding: 0.25rem 1rem;
-        line-height: 35px;
-    }
-
-.icon_account {
-    font-size: 20px;
-    color: #01b5f9;
-    font-style: inherit;
-}
-
-.icon_menu_account {
-    font-size: 20px;
-    color: #01b5f9;
-    font-style: inherit;
-}
-
 .toast {
     background-color: rgb(17, 165 ,42);
     box-shadow: 0 2px 6px #2e933a;
@@ -5243,56 +5244,19 @@ table tr:hover .table-links {
                 <form class="form-inline mr-auto">
                     <ul class="navbar-nav mr-3">
                         <li><a href="#" data-toggle="sidebar" class="nav-link nav-link-lg"><i class="fas fa-bars" style="color: #2595ff;"></i></a></li>
-                        <%--<li><a href="#" data-toggle="search" class="nav-link nav-link-lg d-sm-none"><i class="fas fa-search"></i></a></li>--%>
                     </ul>
-                    <%--<div class="search-element">
-                        <input class="form-control" type="search" placeholder="Search" aria-label="Search" data-width="250">
-                        <button class="btn" type="submit"><i class="fas fa-search"></i></button>
-                        <div class="search-backdrop"></div>
-                    </div>--%>
                 </form>
-                <%--<ul class="navbar-nav navbar-right">
-                    <li class="dropdown">
-                        <br />
-                        <a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg nav-link-user">
-                            
-                                    <img src="~/Models/ImageFile/tải xuống.png" class="rounded-circle mr-2" />
-                                
-
-
-
-                                    <div class="d-sm-none d-lg-inline-block">Người dùng</div>
-                               
-                        </a>
-                        <br />
-                        <div class="dropdown-menu dropdown-menu-right">
-                            <div class="dropdown-title">Logged in 5 min ago</div>
-                            <a href="#" class="dropdown-item has-icon">
-                                <i class="far fa-user"></i> Hồ sơ
-                            </a>
-                            <a href="#" class="dropdown-item has-icon">
-                                <i class="fas fa-cog"></i> Cài đặt
-                            </a>
-                            <div class="dropdown-divider"></div>
-                            <a href="#" class="dropdown-item has-icon text-danger">
-                                <i class="fas fa-sign-out-alt"></i> Đăng xuất
-                            </a>
-                        </div>
-                    </li>
-                </ul>--%>
             </nav>
         </div>
     </div>
     <div class="main-sidebar">
         <aside id="sidebar-wrapper">
             <div class="sidebar-brand">
-                <a href="#">Phòng QL kỹ thuật tàu</a>
             </div>
-            <div class="sidebar-brand sidebar-brand-sm">
-                <a href="#">PQLKTT</a>
+            <div class="sidebar-brand-sm">
+                PQLKTT
             </div>
             <ul class="sidebar-menu">
-                <li class="menu-header"></li>
                 <li class="nav-item dropdown">
                     <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-database"></i> <span>Nghiệp vụ PQLKTT</span></a>
                     <ul class="dropdown-menu">
@@ -5357,20 +5321,20 @@ table tr:hover .table-links {
     <br />
     <div class="main-content" style="min-height: 543px;">
         <section class="section" style="margin-bottom: 20px;z-index: 2;">
-            <div class="mainMenu">
+            <div class="mainMenu" style="margin-top: -15px;">
                 <ul class="mainMenu-list">
                     <li><a id="Vung1"  class="a_menu" href="../Page_Master/Manage_ship?vung=1">VÙNG 1</a></li>
                     <li><a id="Vung2"  class="a_menu" href="../Page_Master/Manage_ship?vung=2">VÙNG 2</a></li>
                     <li><a id="Vung3"  class="a_menu" href="../Page_Master/Manage_ship?vung=3">VÙNG 3</a></li>
                     <li><a id="Vung4"  class="a_menu" href="../Page_Master/Manage_ship?vung=4">VÙNG 4</a></li>
                     <li><a class="a_menu" href="../Page_Master/Null.aspx">CÁC ĐƠN VỊ TRỰC THUỘC</a></li>
-                </ul>
+                </ul>    
                 <ul class="mainMenu-list">
                     <li id="li_infor_login">
                         <div class="dropdown" >
                                 
                             <a id="btn_Infor_Login" class="btn dropdown-toggle" data-toggle="dropdown">
-                                <i id="user-login-fullname" class="bi bi-person-circle icon_account"> Dương Văn Tuyên</i>
+                                <i id="user-login-fullname" class="bi bi-person-circle icon_account"></i>
                             </a>
                                
                             <div class="dropdown-menu" id="menu_infor_login">
@@ -5600,13 +5564,21 @@ table tr:hover .table-links {
             });
 
             var toggle_sidebar_mini = function (mini) {
-                let body = $('body');
+                let body = $('body'),
+                    w = $(window);
 
                 if (!mini) {
                     body.removeClass('sidebar-mini');
-                    $('.navbar-bg').css("left", "250px");
-                    $('.navbar-bg').css("width", "calc(100% - 250px)");
-                    $('.navbar-bg').css("height", "93px");
+                    if (w.outerWidth() > 1024) {
+                        $('.navbar-bg').css("width", "calc(100% - 250px)");
+                        $('.navbar-bg').css("left", "250px");
+
+                    } else {
+                        $('.navbar-bg').css("width", "100%");
+                        $('.navbar-bg').css("left", "0");
+                    }
+                    $('.mainMenu').css("margin-top", "-15px");
+                    $('.navbar-bg').css("height", "100%");
                     $(".main-sidebar").css({
                         overflow: 'hidden'
                     });
@@ -5623,9 +5595,10 @@ table tr:hover .table-links {
                     body.removeClass('sidebar-show');
                     sidebar_nicescroll.remove();
                     sidebar_nicescroll = null;
+                    $('.mainMenu').css("margin-top", "47px");
                     $('.navbar-bg').css("left", "70px");
                     $('.navbar-bg').css("width", "calc(100% - 70px)");
-                    $('.navbar-bg').css("height", "108px");
+                    $('.navbar-bg').css("background-size", "contain");
                     $(".main-sidebar .sidebar-menu > li").each(function () {
                         let me = $(this);
 
@@ -5697,7 +5670,6 @@ table tr:hover .table-links {
                             $("body").removeClass("sidebar-show");
                             $("body").addClass("sidebar-gone");
                             $("body").removeClass("search-show");
-
                             update_sidebar_nicescroll();
                         }
                     });

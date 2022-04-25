@@ -24,14 +24,5 @@ namespace CSB.Page_Master
                 FileImgsave.SaveAs(Server.MapPath("~/Image/Ships/") + imgfile);
             }
         }
-        protected void btn_update_Click(object sender, EventArgs e)
-        {
-            if (FileImgsave_upd.PostedFile != null)
-            {
-                int index = FileImgsave_upd.PostedFile.FileName.IndexOf('.');
-                string imgfile = Path.GetFileName(updateTenTau.Text + "." + "jpg");
-                FileImgsave.SaveAs(Server.MapPath("~/Image/Ships/") + imgfile);
-            }
-        }
     }
 }
