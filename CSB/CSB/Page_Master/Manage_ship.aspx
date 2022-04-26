@@ -65,7 +65,7 @@
             <form id="form_add_ship" runat="server" class="modal-content">
                 <div class="card auth_form">
                     <div class="modal-header">
-                        <h6 class="title-modal-banve font-weight-bold">Thêm mới tàu</h6>
+                        <h6 class="title-modal-banve font-weight-bold">Thêm mới tàu</h6>                        
                     </div>
                     <div class="modal-body">
                         <div class="clearfix ">
@@ -288,7 +288,7 @@
                         <input type="hidden" class="form-control" id="Ship_ID">
                         <div class="clearfix ">
                             <div style="display: flex;">
-                                <div class="imageupload panel panel-success col-md-6" style="min-height: 300px; padding: 0;">
+                                <div class="imageupload panel panel-success" style="min-height: 300px; padding: 0;">
                                     <div class="panel-heading clearfix">
                                         <h3 class="panel-title pull-left">Hình ảnh</h3>
                                     </div>
@@ -557,7 +557,7 @@
                     tabletext += "</tbody>";
                     $('#tableship').html(tabletext);
                     loadTableShip();
-                    $('#tableship_wrapper .row .col-sm-12').first().html('<button onclick="btn_addship()" class="btn btn-info btn-lg col-md-6" data-toggle="modal" data-target="#model-add-ship" style="height: 40px; margin-bottom: 8px; margin-top: -4px; font-size: 18px;">Thêm tàu</button>');
+                    $('#tableship_wrapper .row .col-sm-12').first().html('<button onclick="btn_addship()" class="btn btn-info btn-lg col-md-6" data-toggle="modal" data-target="#model-add-ship" style="height: 40px; margin-bottom: 8px; margin-top: -4px; font-size: 18px;"><span class="glyphicon glyphicon-plus"></span>Thêm tàu</button>');
                     $('#tableship_wrapper .row').first().next().children().css("overflow-x", "auto");
                 }, error: function (ret) {
                     console.log('errorGET');

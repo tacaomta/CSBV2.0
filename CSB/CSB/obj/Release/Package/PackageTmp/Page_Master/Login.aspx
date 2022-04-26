@@ -6,6 +6,7 @@
 <head runat="server">
     <title>Đăng nhập</title>
 <%--    <link rel="stylesheet" href="~/Content/bootstrap.min.css" />--%>
+
     <link href="../css/bootstrap.min.css" rel="stylesheet" />
     <link href="../Content/MaterialIcons.css" rel="stylesheet" />
     <link href="../css/login.css" rel="stylesheet" />
@@ -62,7 +63,19 @@
     <script src="../Scripts/js/Login.js"></script>
     <script src = "../Scripts/js/Master.js"></script>
     <script>
-
+        // Add event press Enter in an input tag
+        $('#username').keypress(function (event) {
+            var keycode = (event.keyCode ? event.keyCode : event.which);
+            if (keycode == '13') {
+                Login();
+            }
+        });
+        $('#password').keypress(function (event) {
+            var keycode = (event.keyCode ? event.keyCode : event.which);
+            if (keycode == '13') {
+                Login();
+            }
+        });
         function Login() {
             $('#error-login-text').attr('hidden', '');
             if ($('#username').val() == '') {
@@ -101,7 +114,7 @@
                     sessionStorage.setItem("userLoginUsername", data.UserName);
                     sessionStorage.setItem("userLoginFullname", data.Fullname);
                     sessionStorage.setItem("userLoginID", data.ID);
-                    window.location = "http://localhost:8080/Page_Master/Manage_ship?vung=1";
+                    window.location = "http://localhost:44347/Page_Master/Manage_ship?vung=1";
                 }, error: function (ret) {
                     console.log(ret);
                     $('#error-login-text').text('Tài khoản hoặc mật khẩu không đúng');

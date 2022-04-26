@@ -5,11 +5,11 @@
         <div class="section-header">
             <div class="">
                 <div class="section">
-                    <div class="section-header" >
+                    <div class="section-header">
                         <h4 id="title" style="color: black; margin: 0">THIẾT BỊ TRÊN TÀU - TÀU CỨU HỘ XH123</h4>
                         <div class="section-header-breadcrumb">
-                            <div class="breadcrumb-item active"><a href="TrangChu.aspx" style="color: #01b5f9">Trang chủ</a></div>
-                            <div class="breadcrumb-item active"><a href="Manage_ship.aspx" style="color: #01b5f9">Quản lý tàu</a></div>
+                            <div class="breadcrumb-item active"><a href="TrangChu.aspx" style="color: #01b5f9; font-size: 18px;">Trang chủ</a></div>
+                            <div class="breadcrumb-item active"><a href="Manage_ship.aspx" style="color: #01b5f9; font-size: 18px;">Quản lý tàu</a></div>
                         </div>
                     </div>
                     <div class="section-header">
@@ -20,32 +20,10 @@
                                         <button id="btn_MayChinh" type="button" class="accordion-button collapsed" data-toggle="collapse" data-target="#collMainEngine">0 - Máy chính </button>
                                     </h2>
                                     <div id="collMainEngine" class="accordion-collapse collapse" data-parent="#accorShipEquiment">
-                                        <div class="card-body">
-                                            <div class="section-header">
+                                        <div class="card-body" style="padding: 30px 10px;">
+                                            <div class="">
                                                 <div class="col-md-12">
                                                     <table id="table_maychinh" class="table table-bordered table-striped table-md" style="width: 100%">
-                                                        <thead>
-                                                            <tr>
-                                                                <th>STT</th>
-                                                                <th>LOẠI MÁY</th>
-                                                                <th>NĂM SẢN XUẤT</th>
-                                                                <th>XUÁT XỨ</th>
-                                                                <th>CÔNG XUẤT(CV)</th>
-                                                                <th>ĐỊNH MỨC TIÊU THỤ(l/h)</th>
-                                                                <th>VÒNG QUAY LỚN NHÂT(v/p)</th>
-                                                                <th>SỐ XY LANH</th>
-                                                                <th>ĐK XY LANH</th>
-                                                                <th>GHI CHÚ</th>
-                                                                <th>TÁC VỤ</th>
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody>
-                                                            <tr>
-                                                                
-                                                            </tr>
-
-                                                        </tbody>
-
                                                     </table>
                                                 </div>
                                             </div>
@@ -57,8 +35,8 @@
                                         <button type="button" id="btn_MayPhu" class="accordion-button collapsed" data-toggle="collapse" data-target="#collSecondaryEngine">0 - Máy phụ </button>
                                     </h2>
                                     <div id="collSecondaryEngine" class="accordion-collapse collapse" data-parent="#accorShipEquiment">
-                                        <div class="card-body">
-                                            <div class="section-header">
+                                        <div class="card-body" style="padding: 30px 10px;">
+                                            <div class="">
                                                 <div class="col-md-12">
                                                     <table id="tableSecondaryEngine" class="table table-bordered table-striped table-md" style="width: 100%">
                                                     </table>
@@ -72,31 +50,10 @@
                                         <button type="button" id="btn_ChanVit" class="accordion-button collapsed" data-toggle="collapse" data-target="#collScrew">0 - Hệ trục chân vịt </button>
                                     </h2>
                                     <div id="collScrew" class="accordion-collapse collapse" data-parent="#accorShipEquiment">
-                                        <div class="card-body">
-                                            <div class="section-header">
+                                        <div class="card-body" style="padding: 30px 10px;">
+                                            <div class="">
                                                 <div class="col-md-12">
                                                     <table id="table_chanvit" class="table table-bordered table-striped table-md" style="width: 100%">
-                                                        <thead>
-                                                            <tr>
-                                                                <th>STT</th>
-                                                                <th>TÊN TRỤC</th>
-                                                                <th>CHIỀU DÀI HỆ TRỤC</th>
-                                                                <th>ĐK CƠ BẢN (mm)</th>
-                                                                <th>ĐK Ổ ĐỠ SAU (mm)</th>
-                                                                <th>ĐK Ổ ĐỠ GIỮA(mm)</th>
-                                                                <th>ĐK Ổ ĐỠ TRƯỚC(mm)</th>
-                                                                <th>ĐƯỜNG KÍNH CHÂN VỊT (mm)</th>
-                                                                <th>SỐ CÁNH CHÂN VỊT</th>
-                                                                <th>GHI CHÚ</th>
-                                                                <th>TÁC VỤ</th>
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody>
-                                                            <tr>
-                                                            </tr>
-
-                                                        </tbody>
-
                                                     </table>
                                                 </div>
                                             </div>
@@ -108,28 +65,10 @@
                                         <button type="button" id="btn_KhiTai" class="accordion-button collapsed" data-toggle="collapse" data-target="#collWeapon">0 - Khí tài, hàng hải </button>
                                     </h2>
                                     <div id="collWeapon" class="accordion-collapse collapse" data-parent="#accorShipEquiment">
-                                        <div class="card-body">
-                                            <div class="section-header">
+                                        <div class="card-body" style="padding: 30px 10px;">
+                                            <div class="">
                                                 <div class="col-md-12">
                                                     <table id="table_KhiTai" class="table table-bordered table-striped table-md" style="width: 100%">
-                                                        <thead>
-                                                            <tr>
-                                                                <th>STT</th>
-                                                                <th>LOẠI THIẾT BỊ</th>
-                                                                <th>KÍ MÃ HIỆU</th>
-                                                                <th>SỐ LƯỢNG</th>
-                                                                <th>XUẤT XỨ</th>
-                                                                <th>CÔNG XUẤT</th>
-                                                                <th>TÍNH NĂNG NGẮN GỌN</th>
-                                                                <th>TÁC VỤ</th>
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody>
-                                                            <tr>
-                                                            </tr>
-
-                                                        </tbody>
-
                                                     </table>
                                                 </div>
                                             </div>
@@ -141,30 +80,10 @@
                                         <button type="button" id="btn_XuongCT" class="accordion-button collapsed" data-toggle="collapse" data-target="#collMotoBoat">0 - Xuồng công tác </button>
                                     </h2>
                                     <div id="collMotoBoat" class="accordion-collapse collapse" data-parent="#accorShipEquiment">
-                                        <div class="card-body">
-                                               <div class="section-header">
+                                        <div class="card-body" style="padding: 30px 10px;">
+                                            <div class="">
                                                 <div class="col-md-12">
                                                     <table id="tableMotoBoat" class="table table-bordered table-striped table-md" style="width: 100%">
-                                                        <thead>
-                                                            <tr>
-                                                                <th>STT</th>
-                                                                <th>TÊN</th>
-                                                                <th>SỐ THUYỀN VIÊN MAX</th>
-                                                                <th>DÀI (m)</th>
-                                                                <th>RỘNG (m)</th>
-                                                                <th>TỐC ĐỘ TỐI ĐA (m)</th>
-                                                                <th>TẢI TRỌNG (tấn)</th>
-                                                                <th>KIỂU CHÂN VỊT</th>
-                                                                <th>GHI CHÚ</th>
-                                                                <th>TÁC VỤ</th>
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody>
-                                                            <tr>
-                                                            </tr>
-
-                                                        </tbody>
-
                                                     </table>
                                                 </div>
                                             </div>
@@ -176,64 +95,46 @@
                                         <button type="button" id="btn_Neo" class="accordion-button collapsed" data-toggle="collapse" data-target="#collAnchor">0 - Neo, tời neo, xích neo </button>
                                     </h2>
                                     <div id="collAnchor" class="accordion-collapse collapse" data-parent="#accorShipEquiment">
-                                        <div class="card-body">
-                                           <div class="section-header">
+                                        <div class="card-body" style="padding: 30px 10px;">
+                                            <div class="">
                                                 <div class="col-md-12">
-                                                    <table id="tableAnchor" class="table table-bordered table-striped table-md" style="width: 100%">
-                                                        <thead>
-                                                            <tr>
-                                                                <th>STT</th>
-                                                                <th>KIỂU TỜI NEO</th>
-                                                                <th>TRỌNG TẢI (tấn)</th>
-                                                                <th>SỐ LƯỢNG</th>
-                                                                <th>GHI CHÚ</th>
-                                                                <th>TÁC VỤ</th>
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody>
-                                                            <tr>
-                                                            </tr>
+                                                    <table id="tableToiNeo" class="table table-bordered table-striped table-md" style="width: 100%">
+                                                    </table>
+                                                </div>
 
-                                                        </tbody>
-
+                                            </div>
+                                        </div>
+                                        <div class="card-body" style="padding: 30px 10px;">
+                                            <div class="">
+                                                <div class="col-md-12">
+                                                    <table id="tableNeo" class="table table-bordered table-striped table-md" style="width: 100%">
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card-body" style="padding: 30px 10px;">
+                                            <div class="">
+                                                <div class="col-md-12">
+                                                    <table id="tableXichNeo" class="table table-bordered table-striped table-md" style="width: 100%">
                                                     </table>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
+
                                 </div>
                                 <div class="accordion-item">
                                     <h2 class="accordion-header" id="headLifeSaving">
                                         <button type="button" id="btn_TBCuuSinh" class="accordion-button collapsed" data-toggle="collapse" data-target="#collLifeSaving">0 - Trang bị cứu sinh </button>
                                     </h2>
                                     <div id="collLifeSaving" class="accordion-collapse collapse" data-parent="#accorShipEquiment">
-                                        <div class="card-body">
-                                              <div class="card-body">
-                                            <div class="section-header">
+                                        <div class="card-body" style="padding: 30px 10px;">
+                                            <div class="">
                                                 <div class="col-md-12">
                                                     <table id="tableLifeSaving" class="table table-bordered table-striped table-md" style="width: 100%">
-                                                        <thead>
-                                                            <tr>
-                                                                <th>STT</th>
-                                                                <th>LOẠI THIẾT BỊ</th>
-                                                                <th>XUẤT XỨ</th>
-                                                                <th>TÌNH TRẠNG</th>
-                                                                <th>SỐ LƯỢNG</th>
-                                                                <th>ĐƠN VỊ TÍNH</th>
-                                                                <th>GHI CHÚ</th>
-                                                                <th>TÁC VỤ</th>
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody>
-                                                            <tr>
-                                                            </tr>
-
-                                                        </tbody>
-
                                                     </table>
                                                 </div>
                                             </div>
-                                        </div>
                                         </div>
                                     </div>
                                 </div>
@@ -242,8 +143,8 @@
                                         <button type="button" id="btn_TBKhac" class="accordion-button collapsed" data-toggle="collapse" data-target="#collOther">0 - Các trang bị khác </button>
                                     </h2>
                                     <div id="collOther" class="accordion-collapse collapse" data-parent="#accorShipEquiment">
-                                        <div class="card-body">
-                                            <div class="section-header">
+                                        <div class="card-body" style="padding: 30px 10px;">
+                                            <div class="">
                                                 <div class="col-md-12">
                                                     <table id="tableOtherEquipment" class="table table-bordered table-striped table-md" style="width: 100%">
                                                     </table>
@@ -257,8 +158,8 @@
                                         <button type="button" id="btn_VatTu" class="accordion-button collapsed" data-toggle="collapse" data-target="#collSupplies">0 - Vật tư bảo đảm </button>
                                     </h2>
                                     <div id="collSupplies" class="accordion-collapse collapse" data-parent="#accorShipEquiment">
-                                        <div class="card-body">
-                                            <div class="section-header">
+                                        <div class="card-body" style="padding: 30px 10px;">
+                                            <div class="">
                                                 <div class="col-md-12">
                                                     <table id="tableSupplies" class="table table-bordered table-striped table-md" style="width: 100%">
                                                     </table>
@@ -927,7 +828,7 @@
             </div>
         </div>
     </div>
-   
+
     <div class="modal fade" id="model-update-WeaponMarine" tabindex="-1" role="dialog">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -1089,7 +990,7 @@
                                     </div>
                                 </div>
                             </div>
-                             <div style="width: 100%; float: left; padding: 10px">
+                            <div style="width: 100%; float: left; padding: 10px">
                                 <div class="form-group">
                                     <label class="col-md-5 control-label"><strong>Số trục chân vịt    : </strong></label>
                                     <div class="col-md-7">
@@ -1097,7 +998,7 @@
                                     </div>
                                 </div>
                             </div>
-                             <div style="width: 100%; float: left; padding: 10px">
+                            <div style="width: 100%; float: left; padding: 10px">
                                 <div class="form-group">
                                     <label class="col-md-5 control-label"><strong>Ghi chú    : </strong></label>
                                     <div class="col-md-7">
@@ -1369,6 +1270,331 @@
                     </div>
                     <div class="modal-footer">
                         <button onclick="Update_LifeSaving()" type="submit" class="btn btn-info">Lưu</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="model-add-ToiNeo" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="card auth_form">
+                    <div class="modal-header">
+                        <h6 class="title-modal-banve font-weight-bold">Thêm tời neo</h6>
+                    </div>
+                    <div class="modal-body">
+
+                        <div class="row clearfix ">
+
+                            <div style="width: 100%; float: left; padding: 10px">
+                                <div class="form-group">
+                                    <label class="col-md-5 control-label"><strong>Kiểu tời neo     : </strong></label>
+                                    <div class="col-md-7">
+                                        <input type="text" class="form-control" id="add_ToiNeo_Kieu" name="KieuNeo" required value="" placeholder="Nhập kiểu tời neo">
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="width: 100%; float: left; padding: 10px">
+                                <div class="form-group">
+                                    <label class="col-md-5 control-label"><strong>Trọng tải (tấn)     : </strong></label>
+                                    <div class="col-md-7">
+                                        <input type="text" class="form-control" id="add_ToiNeo_TrongTai" name="TrongTai" placeholder="Nhập trọng tải tời neo" value="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="width: 100%; float: left; padding: 10px">
+                                <div class="form-group">
+                                    <label class="col-md-5 control-label"><strong>Số lượng   : </strong></label>
+                                    <div class="col-md-7">
+                                        <input type="text" class="form-control" id="add_ToiNeo_SoLuong" name="SoLuong" placeholder="Nhập số lượng tời neo" required value="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="width: 100%; float: left; padding: 10px">
+                                <div class="form-group">
+                                    <label class="col-md-5 control-label"><strong>Ghi chú     : </strong></label>
+                                    <div class="col-md-7">
+                                        <input type="text" class="form-control" id="add_ToiNeo_GhiChu" name="GhiChu" placeholder="Nhập ghi chú" required value="">
+                                    </div>
+                                </div>
+                            </div>
+                            <p id="Error_AddToiNeo" class="textER" hidden="hidden">Lỗi</p>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button onclick="Add_ToiNeo()" type="submit" class="btn btn-info">Thêm</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="model-update-ToiNeo" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="card auth_form">
+                    <div class="modal-header">
+                        <h6 class="title-modal-banve font-weight-bold">Sửa thông tời neo</h6>
+                    </div>
+                    <div class="modal-body">
+                        <input type="hidden" class="form-control" id="update_ToiNeo_Id">
+                        <div class="row clearfix ">
+
+                            <div style="width: 100%; float: left; padding: 10px">
+                                <div class="form-group">
+                                    <label class="col-md-5 control-label"><strong>Kiểu tời neo    : </strong></label>
+                                    <div class="col-md-7">
+                                        <input type="text" class="form-control" id="update_ToiNeo_Kieu">
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="width: 100%; float: left; padding: 10px">
+                                <div class="form-group">
+                                    <label class="col-md-5 control-label"><strong>Trọng tải(tấn)   : </strong></label>
+                                    <div class="col-md-7">
+                                        <input type="text" class="form-control" id="update_ToiNeo_TrongTai">
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="width: 100%; float: left; padding: 10px">
+                                <div class="form-group">
+                                    <label class="col-md-5 control-label"><strong>Số lượng     : </strong></label>
+                                    <div class="col-md-7">
+                                        <input type="text" class="form-control" id="update_ToiNeo_SoLuong">
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="width: 100%; float: left; padding: 10px">
+                                <div class="form-group">
+                                    <label class="col-md-5 control-label"><strong>Ghi chú   : </strong></label>
+                                    <div class="col-md-7">
+                                        <input type="text" class="form-control" id="update_ToiNeo_GhiChu">
+                                    </div>
+                                </div>
+                            </div>
+                            <p id="Error_UpdToiNeo" class="textER" hidden="hidden">Lỗi</p>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button onclick="Update_ToiNeo()" type="submit" class="btn btn-info">Lưu</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="model-add-Neo" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="card auth_form">
+                    <div class="modal-header">
+                        <h6 class="title-modal-banve font-weight-bold">Thêm neo</h6>
+                    </div>
+                    <div class="modal-body">
+
+                        <div class="row clearfix ">
+
+                            <div style="width: 100%; float: left; padding: 10px">
+                                <div class="form-group">
+                                    <label class="col-md-5 control-label"><strong>Kiểu neo     : </strong></label>
+                                    <div class="col-md-7">
+                                        <input type="text" class="form-control" id="add_Neo_Kieu" name="KieuNeo" required value="" placeholder="Nhập kiểu neo">
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="width: 100%; float: left; padding: 10px">
+                                <div class="form-group">
+                                    <label class="col-md-5 control-label"><strong>Trọng lượng neo (tấn)     : </strong></label>
+                                    <div class="col-md-7">
+                                        <input type="text" class="form-control" id="add_Neo_TrongLuong" name="TrongLuong" placeholder="Nhập trọng lượng neo" value="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="width: 100%; float: left; padding: 10px">
+                                <div class="form-group">
+                                    <label class="col-md-5 control-label"><strong>Số lượng   : </strong></label>
+                                    <div class="col-md-7">
+                                        <input type="text" class="form-control" id="add_Neo_SoLuong" name="SoLuong" placeholder="Nhập số lượng neo" required value="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="width: 100%; float: left; padding: 10px">
+                                <div class="form-group">
+                                    <label class="col-md-5 control-label"><strong>Ghi chú     : </strong></label>
+                                    <div class="col-md-7">
+                                        <input type="text" class="form-control" id="add_Neo_GhiChu" name="GhiChu" placeholder="Nhập ghi chú" required value="">
+                                    </div>
+                                </div>
+                            </div>
+                            <p id="Error_AddNeo" class="textER" hidden="hidden">Lỗi</p>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button onclick="Add_Neo()" type="submit" class="btn btn-info">Thêm</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="model-update-Neo" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="card auth_form">
+                    <div class="modal-header">
+                        <h6 class="title-modal-banve font-weight-bold">Sửa thông neo</h6>
+                    </div>
+                    <div class="modal-body">
+                        <input type="hidden" class="form-control" id="update_Neo_Id">
+                        <div class="row clearfix ">
+
+                            <div style="width: 100%; float: left; padding: 10px">
+                                <div class="form-group">
+                                    <label class="col-md-5 control-label"><strong>Kiểu neo    : </strong></label>
+                                    <div class="col-md-7">
+                                        <input type="text" class="form-control" id="update_Neo_Kieu">
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="width: 100%; float: left; padding: 10px">
+                                <div class="form-group">
+                                    <label class="col-md-5 control-label"><strong>Trọng lượng neo(tấn)   : </strong></label>
+                                    <div class="col-md-7">
+                                        <input type="text" class="form-control" id="update_Neo_TrongLuong">
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="width: 100%; float: left; padding: 10px">
+                                <div class="form-group">
+                                    <label class="col-md-5 control-label"><strong>Số lượng     : </strong></label>
+                                    <div class="col-md-7">
+                                        <input type="text" class="form-control" id="update_Neo_SoLuong">
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="width: 100%; float: left; padding: 10px">
+                                <div class="form-group">
+                                    <label class="col-md-5 control-label"><strong>Ghi chú   : </strong></label>
+                                    <div class="col-md-7">
+                                        <input type="text" class="form-control" id="update_Neo_GhiChu" name="TenDayDu" required value="">
+                                    </div>
+                                </div>
+                            </div>
+                            <p id="Error_UpdNeo" class="textER" hidden="hidden">Lỗi</p>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button onclick="Update_Neo()" type="submit" class="btn btn-info">Lưu</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <div class="modal fade" id="model-add-XichNeo" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="card auth_form">
+                    <div class="modal-header">
+                        <h6 class="title-modal-banve font-weight-bold">Thêm xích neo</h6>
+                    </div>
+                    <div class="modal-body">
+
+                        <div class="row clearfix ">
+
+                            <div style="width: 100%; float: left; padding: 10px">
+                                <div class="form-group">
+                                    <label class="col-md-5 control-label"><strong>Kiểu xích neo     : </strong></label>
+                                    <div class="col-md-7">
+                                        <input type="text" class="form-control" id="add_XichNeo_Kieu" name="KieuNeo" required value="" placeholder="Nhập kiểu xích neo">
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="width: 100%; float: left; padding: 10px">
+                                <div class="form-group">
+                                    <label class="col-md-5 control-label"><strong>CHiều dài xích neo(m)     : </strong></label>
+                                    <div class="col-md-7">
+                                        <input type="text" class="form-control" id="add_XichNeo_ChieuDai" name="ChieuDai" placeholder="Nhập chiều dài xích neo" value="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="width: 100%; float: left; padding: 10px">
+                                <div class="form-group">
+                                    <label class="col-md-5 control-label"><strong>Đường kính xích neo(mm)   : </strong></label>
+                                    <div class="col-md-7">
+                                        <input type="text" class="form-control" id="add_XichNeo_DuongKinh" name="SoLuong" placeholder="Nhập đường kính xích neo" required value="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="width: 100%; float: left; padding: 10px">
+                                <div class="form-group">
+                                    <label class="col-md-5 control-label"><strong>Ghi chú     : </strong></label>
+                                    <div class="col-md-7">
+                                        <input type="text" class="form-control" id="add_XichNeo_GhiChu" name="GhiChu" placeholder="Nhập ghi chú" required value="">
+                                    </div>
+                                </div>
+                            </div>
+                            <p id="Error_AddXichNeo" class="textER" hidden="hidden">Lỗi</p>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button onclick="Add_XichNeo()" type="submit" class="btn btn-info">Thêm</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="model-update-XichNeo" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="card auth_form">
+                    <div class="modal-header">
+                        <h6 class="title-modal-banve font-weight-bold">Sửa thông xích neo</h6>
+                    </div>
+                    <div class="modal-body">
+                        <input type="hidden" class="form-control" id="update_XichNeo_Id">
+                        <div class="row clearfix ">
+
+                            <div style="width: 100%; float: left; padding: 10px">
+                                <div class="form-group">
+                                    <label class="col-md-5 control-label"><strong>Kiểu xích neo    : </strong></label>
+                                    <div class="col-md-7">
+                                        <input type="text" class="form-control" id="update_XichNeo_Kieu">
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="width: 100%; float: left; padding: 10px">
+                                <div class="form-group">
+                                    <label class="col-md-5 control-label"><strong>Chiều dài xích neo(m)   : </strong></label>
+                                    <div class="col-md-7">
+                                        <input type="text" class="form-control" id="update_XichNeo_ChieuDai">
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="width: 100%; float: left; padding: 10px">
+                                <div class="form-group">
+                                    <label class="col-md-5 control-label"><strong>Đường kính xích neo(mm)    : </strong></label>
+                                    <div class="col-md-7">
+                                        <input type="text" class="form-control" id="update_XichNeo_DuongKinh">
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="width: 100%; float: left; padding: 10px">
+                                <div class="form-group">
+                                    <label class="col-md-5 control-label"><strong>Ghi chú   : </strong></label>
+                                    <div class="col-md-7">
+                                        <input type="text" class="form-control" id="update_XichNeo_GhiChu" required value="">
+                                    </div>
+                                </div>
+                            </div>
+                            <p id="Error_UpdXichNeo" class="textER" hidden="hidden">Lỗi</p>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button onclick="Update_XichNeo()" type="submit" class="btn btn-info">Lưu</button>
                         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                     </div>
                 </div>
@@ -1674,7 +1900,7 @@
     </div>
 
     <script src="../Scripts/jquery-3.4.1.slim.min.js"></script>
-    
+
 
     <script>
         var Ship_ID;
@@ -1684,11 +1910,11 @@
                 window.location = baseaddress + "Page_Master/Manage_ship?vung=1";
             }
             else {
-                Load_Equiment();
+                Load_Equiment(Ship_ID);
             }
 
         });
-        function Load_Equiment() {
+        function Load_Equiment(Ship_ID) {
             $('#loader').removeClass('hidden');
             loadInforShip(Ship_ID);
             loadDataList_Main_Engine(Ship_ID);
@@ -1699,11 +1925,13 @@
             loadDataList_Supply(Ship_ID);
             loadDataList_MotoBoat(Ship_ID);
             loadDataList_Anchor(Ship_ID);
+            loadDataList_Winch(Ship_ID);
+            loadDataList_Chain(Ship_ID);
             loadDataList_LifeSaving(Ship_ID);
             $('#loader').addClass('hidden');
         }
         function loadInforShip(Ship_ID) {
-            
+
             $.ajax({
                 type: "GET",
                 url: linkapi + "ship_overview?id=" + Ship_ID,
@@ -1714,15 +1942,15 @@
                 },
                 success: function (data) {
                     $("#title").html("THIẾT BỊ TRÊN TÀU - " + data.Ship.Name);
-                    $('#btn_MayChinh').html("1. Máy chính - " + data.MainEngine );
+                    $('#btn_MayChinh').html("1. Máy chính - " + data.MainEngine);
                     $('#btn_MayPhu').html("2. Máy phụ - " + data.SecondaryEngine);
-                    $('#btn_ChanVit').html("3. Hệ trục chân vịt - " + data.Screw );
-                    $('#btn_KhiTai').html("4. Khí tài, Hàng hải - " + data.Weapon );
-                    $('#btn_XuongCT').html("5. Xuồng công tác - " + data.MotoBoat );
-                    $('#btn_Neo').html("6. Neo, tời, xích neo - " + data.Anchor );
-                    $('#btn_TBCuuSinh').html("7. Trang bị cứu sinh - " + data.LifeSaving );
-                    $('#btn_TBKhac').html("8. Các trang bị khác - " + data.Other );
-                    $('#btn_VatTu').html("9. Vật tư bảo đảm - " + data.Supplies );
+                    $('#btn_ChanVit').html("3. Hệ trục chân vịt - " + data.Screw);
+                    $('#btn_KhiTai').html("4. Khí tài, Hàng hải - " + data.Weapon);
+                    $('#btn_XuongCT').html("5. Xuồng công tác - " + data.MotoBoat);
+                    $('#btn_Neo').html("6. Neo, tời, xích neo - " + data.Anchor);
+                    $('#btn_TBCuuSinh').html("7. Trang bị cứu sinh - " + data.LifeSaving);
+                    $('#btn_TBKhac').html("8. Các trang bị khác - " + data.Other);
+                    $('#btn_VatTu').html("9. Vật tư bảo đảm - " + data.Supplies);
                 }, error: function (ret) {
                     console.log('errorGET');
                 }, complete: function () { // Set our complete callback, adding the .hidden class and hiding the spinner.
@@ -1753,7 +1981,7 @@
                     $('#loader').removeClass('hidden');
                 },
                 success: function (data) {
-                    var tabletext = "<thead><tr><th>STT</th><th>LOẠI MÁY</th><th>NĂM SẢN XUẤT</th><th>XUẤT XỨ</th><th>CÔNG XUẤT(CV)</th><th>ĐỊNH MỨC TIÊU THỤ(l/h)</th><th>VÒNG QUAY LỚN NHẤT (v/p)</th><th>SỐ XY LANH</th><th>ĐK XY LANH</th><th>GHI CHÚ</th><th>TÁC VỤ</th></tr></thead><tbody>";
+                    var tabletext = "<thead><tr><th>STT</th><th>LOẠI MÁY</th><th>NĂM SẢN XUẤT</th><th>XUẤT XỨ</th><th>CÔNG SUẤT (CV)</th><th>ĐỊNH MỨC TIÊU THỤ (l/h)</th><th>VÒNG QUAY LỚN NHẤT (v/p)</th><th>SỐ XY LANH</th><th>ĐK XY LANH</th><th>GHI CHÚ</th><th>TÁC VỤ</th></tr></thead><tbody>";
                     var i = 1;
                     $.each(data, function (key, item) {
                         tabletext += "<tr><td>" + i + "</td><td>" + item.Name + "</td><td>" + item.ProductionYear + "</td><td>" + item.Origin + "</td><td>" + item.Power + "</td><td>" + item.Waste + "</td><td>" + item.Speed + "</td><td>" + item.Pittong + "</td><td>" + item.Diameter + "</td><td>" + item.Note + '</td>' + '<td><div style="width: max-content;"><a href="#" class="edit" title="Sửa" onclick="btn_update_MainEngine(`' + item.ID + '`,`' + item.Name + '`,`' + item.ProductionYear + '`,`' + item.Origin + '`,`' + item.Power + '`,`' + item.Waste + '`,`' + item.Speed + '`,`' + item.Pittong + '`,`' + item.Diameter + '`,`' + item.Note + '`)" data-toggle="modal" data-target="#model-update-MainEngine" ><i class="material-icons">&#xE254;</i></a><a href="#" class="delete" title="Xóa" onclick="btn_delete_MainEngine(`' + item.ID + '`)"><i class="material-icons">&#xE872;</i></a></div></td></tr>';
@@ -1763,8 +1991,8 @@
                     $('#table_maychinh').html(tabletext);
                     console.log(linkapi + "main_engines?imo=" + Ship_ID);
                     loadTable("table_maychinh");
-                    $('#table_maychinh_wrapper .row .col-sm-12').first().html('<button id="btn_addMayChinh" onclick="btn_addMayChinh()" class="btn btn-info btn-lg col-md-6" data-toggle="modal" data-target="#model-add-MainEngine" style="height: 35px; padding - top: 4px;margin - top: -4px;">Thêm máy chính</button>');
-                    $('#table_maychinh_wrapper .row').first().next().children().css("overflow-x","auto");
+                    $('#table_maychinh_wrapper .row .col-sm-12').first().html('<button id="btn_addMayChinh" onclick="btn_addMayChinh()" class="btn btn-info btn-lg col-md-6" data-toggle="modal" data-target="#model-add-MainEngine" style="height: 40px; margin-bottom: 8px; margin-top: -4px; font-size: 18px;">Thêm máy chính</button>');
+                    $('#table_maychinh_wrapper .row').first().next().children().css("overflow-x", "auto");
                 }, error: function (ret) {
                     console.log('errorGET');
                 },
@@ -1807,7 +2035,7 @@
                 success: function (data) {
                     $('#model-add-MainEngine').modal("hide");
                     toastSuccess("Thành công", "Thêm máy chính thành công.");
-                    Load_Equiment();
+                    Load_Equiment(Ship_ID);
                 }, error: function (ret) {
                     console.log(ret.responseJSON.Message);
                     toastError("Thất bại", ret.responseJSON.Message);
@@ -1871,7 +2099,7 @@
                 success: function (data) {
                     console.log("okPUT");
                     toastSuccess("Thành công", "Cập nhật thông tin máy chính thành công.");
-                    Load_Equiment();
+                    Load_Equiment(Ship_ID);
                     $('#model-update-MainEngine').modal("hide");
                 }, error: function (ret) {
                     console.log('errorPUT');
@@ -1890,7 +2118,7 @@
                     type: "DELETE",
 
                 }).done(function (res) {
-                    Load_Equiment();
+                    Load_Equiment(Ship_ID);
                     toastSuccess("Thành công", "Xóa máy chính thành công.");
                 }).fail(function (res) {
                     toastError("Lỗi", "Xóa máy chính không thành công");
@@ -1911,7 +2139,7 @@
                     $('#loader').removeClass('hidden');
                 },
                 success: function (data) {
-                    var tabletext = "<thead><tr><th>STT</th><th>TÊN TRỤC</th><th>HIỀU DÀI HỆ TRỤC</th><th>ĐK CƠ BẢN (mm)</th><th>ĐK Ổ ĐỠ SAU (mm)</th><th>ĐK Ổ ĐỠ GIỮA(mm)</th><th>ĐK Ổ ĐỠ TRƯỚC(mm)</th><th>ĐƯỜNG KÍNH CHÂN VỊT (mm)</th><th>SỐ CÁNH CHÂN VỊT</th><th>GHI CHÚ</th><th>TÁC VỤ</th></tr></thead><tbody>";
+                    var tabletext = "<thead><tr><th>STT</th><th>TÊN TRỤC</th><th>CHIỀU DÀI HỆ TRỤC</th><th>ĐK CƠ BẢN (mm)</th><th>ĐK Ổ ĐỠ SAU (mm)</th><th>ĐK Ổ ĐỠ GIỮA (mm)</th><th>ĐK Ổ ĐỠ TRƯỚC (mm)</th><th>ĐƯỜNG KÍNH CHÂN VỊT (mm)</th><th>SỐ CÁNH CHÂN VỊT</th><th>GHI CHÚ</th><th>TÁC VỤ</th></tr></thead><tbody>";
                     var i = 1;
                     $.each(data, function (key, item) {
                         tabletext += "<tr><td>" + i + "</td><td>" + item.Name + "</td><td>" + item.Width + "</td><td>" + item.BasicDiameter + "</td><td>" + item.BehindDiameter + "</td><td>" + item.MiddleDiameter + "</td><td>" + item.FrontDiameter + "</td><td>" + item.Diameter + "</td><td>" + item.Wings + "</td><td>" + item.Note + '</td>' + '<td><div style="width: max-content;"><a href="#" class="edit" onclick="btn_update_ScrewSystem(`' + item.ID + '`,`' + item.Name + '`,`' + item.Width + '`,`' + item.BasicDiameter + '`,`' + item.BehindDiameter + '`,`' + item.MiddleDiameter + '`,`' + item.FrontDiameter + '`,`' + item.Diameter + '`,`' + item.Wings + '`,`' + item.Note + '`)"  title="Sửa" data-toggle="modal" data-target="#model-update-ScrewSystem"><i class="material-icons">&#xE254;</i></a><a href="#" class="delete" title="Xóa" onclick="btn_delete_ScrewSystem(`' + item.ID + '`)"><i class="material-icons">&#xE872;</i></a></div></td></tr>';
@@ -1921,7 +2149,7 @@
                     $('#table_chanvit').html(tabletext);
                     console.log(linkapi + "screw_system?imo=" + Ship_ID);
                     loadTable('table_chanvit');
-                    $('#table_chanvit_wrapper .row .col-sm-12').first().html('<button id="btn_addScrewSystem" onclick="btn_addScrewSystem()" class="btn btn-info btn-lg col-md-6" data-toggle="modal" data-target="#model-add-ScrewSystem" style="height: 35px; padding - top: 4px;margin - top: -4px;">Thêm hệ trục chân vịt</button>');
+                    $('#table_chanvit_wrapper .row .col-sm-12').first().html('<button id="btn_addScrewSystem" onclick="btn_addScrewSystem()" class="btn btn-info btn-lg col-md-6" data-toggle="modal" data-target="#model-add-ScrewSystem" style="height: 40px; margin-bottom: 8px; margin-top: -4px; font-size: 18px;">Thêm hệ trục chân vịt</button>');
                     $('#table_chanvit_wrapper .row').first().next().children().css("overflow-x", "auto");
                 }, error: function (ret) {
                     console.log('errorGET');
@@ -1977,7 +2205,7 @@
                 success: function (data) {
                     toastSuccess("Thành công", "Thêm hệ trục chân vịt thành công.");
                     $('#model-add-ScrewSystem').modal("hide");
-                    Load_Equiment();
+                    Load_Equiment(Ship_ID);
                 }, error: function (ret) {
                     toastError("Thất bại", "Thêm không thành công.");
                 },
@@ -2048,7 +2276,7 @@
                     type: "DELETE",
 
                 }).done(function (res) {
-                    Load_Equiment();
+                    Load_Equiment(Ship_ID);
                     toastSuccess("Thành công", "Xóa hệ trục chân vịt thành công.");
                 }).fail(function (res) {
                     toastError("Lỗi", "Xóa hệ trục chân vịt không thành công");
@@ -2073,7 +2301,7 @@
                     tabletext += "</tbody>";
                     $('#tableSecondaryEngine').html(tabletext);
                     loadTable('tableSecondaryEngine');
-                    $('#tableSecondaryEngine_wrapper .row .col-sm-12').first().html('<button id="btn_addSecondaryEngine" onclick="btn_addSecondaryEngine()" class="btn btn-info btn-lg col-md-6" data-toggle="modal" data-target="#model-add-SecondaryEngine" style="height: 35px; padding - top: 4px;margin - top: -4px;">Thêm máy phụ</button>');
+                    $('#tableSecondaryEngine_wrapper .row .col-sm-12').first().html('<button id="btn_addSecondaryEngine" onclick="btn_addSecondaryEngine()" class="btn btn-info btn-lg col-md-6" data-toggle="modal" data-target="#model-add-SecondaryEngine" style="height: 40px; margin-bottom: 8px; margin-top: -4px; font-size: 18px;">Thêm máy phụ</button>');
                     $('#tableSecondaryEngine_wrapper .row').first().next().children().css("overflow-x", "auto");
                 }, error: function (ret) {
                     console.log('errorGET');
@@ -2121,7 +2349,7 @@
                 success: function (data) {
                     toastSuccess("Thành công", "Thêm máy phụ thành công.");
                     $('#model-add-SecondaryEngine').modal("hide");
-                    Load_Equiment();
+                    Load_Equiment(Ship_ID);
                 }, error: function (ret) {
                     console.log(ret.responseJSON.Message);
                     toastError("Thất bại", ret.responseJSON.Message);
@@ -2197,7 +2425,7 @@
                 success: function (data) {
                     console.log("okPUT");
                     toastSuccess("Thành công", "Cập nhật thông tin máy phụ thành công.");
-                    Load_Equiment();
+                    Load_Equiment(Ship_ID);
                 }, error: function (ret) {
                     console.log('errorPUT');
                 },
@@ -2217,7 +2445,7 @@
                     type: "DELETE",
 
                 }).done(function (res) {
-                    Load_Equiment();
+                    Load_Equiment(Ship_ID);
                     toastSuccess("Thành công", "Xóa máy phụ thành công.");
                 }).fail(function (res) {
                     toastError("Lỗi", "Xóa máy phụ không thành công");
@@ -2242,7 +2470,7 @@
                     tabletext += "</tbody>";
                     $('#table_KhiTai').html(tabletext);
                     loadTable('table_KhiTai');
-                    $('#table_KhiTai_wrapper .row .col-sm-12').first().html('<button id="btn_addWeaponMarine" onclick="btn_addWeaponMarine()" class="btn btn-info btn-lg col-md-6" data-toggle="modal" data-target="#model-add-WeaponMarine" style="height: 35px; padding - top: 4px;margin - top: -4px;">Thêm khí tài, hàng hóa</button>');
+                    $('#table_KhiTai_wrapper .row .col-sm-12').first().html('<button id="btn_addWeaponMarine" onclick="btn_addWeaponMarine()" class="btn btn-info btn-lg col-md-6" data-toggle="modal" data-target="#model-add-WeaponMarine" style="height: 40px; margin-bottom: 8px; margin-top: -4px; font-size: 18px;">Thêm khí tài, hàng hóa</button>');
                     $('#table_KhiTai_wrapper .row').first().next().children().css("overflow-x", "auto");
                 }, error: function (ret) {
                     console.log('errorGET');
@@ -2279,7 +2507,7 @@
                     $('#loader').removeClass('hidden');
                 },
                 success: function (data) {
-                    Load_Equiment();
+                    Load_Equiment(Ship_ID);
                     toastSuccess("Thành công", "Thêm khí tài, hàng hóa thành công.");
                     $('#model-add-WeaponMarine').modal("hide");
                 }, error: function (ret) {
@@ -2328,7 +2556,7 @@
                 success: function (data) {
                     console.log("okPUT");
                     toastSuccess("Thành công", "Cập nhật khí tài, hàng hóa thành công.");
-                    Load_Equiment();
+                    Load_Equiment(Ship_ID);
                 }, error: function (ret) {
                     console.log('errorPUT');
                 },
@@ -2338,7 +2566,7 @@
                 },
             });
         }
-        function btn_delete_WeaponMarine(ID){
+        function btn_delete_WeaponMarine(ID) {
             let text = "Bạn có chắc muốn xóa khí tài, hàng hóa này?";
             if (confirm(text) == true) {
                 $.ajax({
@@ -2347,7 +2575,7 @@
 
                 }).done(function (res) {
                     toastSuccess("Thành công", "Xóa khí tài, hàng hóa thành công.");
-                    Load_Equiment();
+                    Load_Equiment(Ship_ID);
                 }).fail(function (res) {
                     toastError("Lỗi", "Xóa khí tài, hàng hóa không thành công");
                 })
@@ -2372,7 +2600,7 @@
                     tabletext += "</tbody>";
                     $('#tableMotoBoat').html(tabletext);
                     loadTable('tableMotoBoat');
-                    $('#tableMotoBoat_wrapper .row .col-sm-12').first().html('<button id="btn_addMotoBoat" onclick="btn_addMotoBoat()" class="btn btn-info btn-lg col-md-6" data-toggle="modal" data-target="#model-add-MotoBoat" style="height: 35px; padding - top: 4px;margin - top: -4px;">Thêm xuồng công tác</button>');
+                    $('#tableMotoBoat_wrapper .row .col-sm-12').first().html('<button id="btn_addMotoBoat" onclick="btn_addMotoBoat()" class="btn btn-info btn-lg col-md-6" data-toggle="modal" data-target="#model-add-MotoBoat" style="height: 40px; margin-bottom: 8px; margin-top: -4px; font-size: 18px;">Thêm xuồng công tác</button>');
                     $('#tableMotoBoat_wrapper .row').first().next().children().css("overflow-x", "auto");
                 }, error: function (ret) {
                     console.log('errorGET');
@@ -2424,7 +2652,7 @@
                     $('#loader').removeClass('hidden');
                 },
                 success: function (data) {
-                    Load_Equiment();
+                    Load_Equiment(Ship_ID);
                     toastSuccess("Thành công", "Thêm máy xuồng thành công.");
                     $('#model-add-MotoBoat').modal("hide");
                 }, error: function (ret) {
@@ -2484,7 +2712,7 @@
                 success: function (data) {
                     console.log("okPUT");
                     toastSuccess("Thành công", "Cập nhật xuồng công tác thành công.");
-                    Load_Equiment();
+                    Load_Equiment(Ship_ID);
                 }, error: function (ret) {
                     console.log('errorPUT');
                 },
@@ -2504,7 +2732,7 @@
 
                 }).done(function (res) {
                     toastSuccess("Thành công", "Xóa xuồng công tác thành công.");
-                    Load_Equiment();
+                    Load_Equiment(Ship_ID);
                 }).fail(function (res) {
                     toastError("Lỗi", "Xóa xuồng công tác không thành công");
                 })
@@ -2519,23 +2747,371 @@
                 url: linkapi + "anchor?imo=" + ship_ID,
                 dataType: "json",
                 success: function (data) {
-                    var tabletext = "<thead><tr><th>STT</th><th>KIỂU TỜI NEO</th><th>TRỌNG TẢI (tấn)</th><th>SỐ LƯỢNG</th><th>GHI CHÚ</th><th>TÁC VỤ</th></tr></thead><tbody>";
+                    var tabletext_Neo = "<thead><tr><th>STT</th><th>KIỂU NEO</th><th>TRỌNG LƯỢNG NEO (tấn)</th><th>SỐ LƯỢNG</th><th>GHI CHÚ</th><th>TÁC VỤ</th></tr></thead><tbody>";
                     var i = 1;
                     $.each(data, function (key, item) {
-                        tabletext += "<tr><td>" + i + "</td><td>" + item.Type + "</td><td>" + item.Load + "</td><td>" + item.Quantity + "</td><td>" + item.Note + '</td>' + '<td><div style="width: max-content;"><a href="#" class="edit" title="Sửa" onclick="btn_update_Anchor(`' + item.ID + '`,`' + item.Type + '`,`' + item.Load + '`,`' + item.Quantity + '`,`' + item.Note + '`)" data-toggle="modal" data-target="#model-update-Anchor"><i class="material-icons">&#xE254;</i></a><a href="#" class="delete" title="Xóa"onclick="btn_delete_Anchor(`' + item.ID + '`)"><i class="material-icons">&#xE872;</i></a></div></td></tr>';
+                        tabletext_Neo += "<tr><td>" + i + "</td><td>" + item.Type + "</td><td>" + item.Load + "</td><td>" + item.Quantity + "</td><td>" + item.Note + '</td>' + '<td><div style="width: max-content;"><a href="#" class="edit" title="Sửa" onclick="btn_update_Neo(`' + item.ID + '`,`' + item.Type + '`,`' + item.Load + '`,`' + item.Quantity + '`,`' + item.Note + '`)" data-toggle="modal" data-target="#model-update-Neo"><i class="material-icons">&#xE254;</i></a><a href="#" class="delete" title="Xóa"onclick="btn_delete_Neo(`' + item.ID + '`)"><i class="material-icons">&#xE872;</i></a></div></td></tr>';
                         i = i + 1;
                     });
-                    tabletext += "</tbody>";
-                    $('#tableAnchor').html(tabletext);
-                    loadTable('tableAnchor');
-                    $('#tableAnchor_wrapper .row .col-sm-12').first().html('<button id="btn_addAnchor" onclick="btn_addAnchor()" class="btn btn-info btn-lg col-md-6" data-toggle="modal" data-target="#model-add-Anchor" style="height: 35px; padding - top: 4px;margin - top: -4px;">Thêm tời neo</button>');
-                    $('#tableAnchor_wrapper .row').first().next().children().css("overflow-x", "auto");
+
+                    tabletext_Neo += "</tbody>";
+                    $('#tableNeo').html(tabletext_Neo);
+                    loadTable('tableNeo');
+                    $('#tableNeo_wrapper .row .col-sm-12').first().html('<button id="btn_addNeo" onclick="btn_addNeo()" class="btn btn-info btn-lg col-md-6" data-toggle="modal" data-target="#model-add-Neo" style="height: 40px; margin-bottom: 8px; margin-top: -4px; font-size: 18px;">Thêm neo</button>');
+                    $('#tableNeo_wrapper .row').first().next().children().css("overflow-x", "auto");
+
                 }, error: function (ret) {
                     console.log('errorGET');
                 }
             });
         }
-         // ===================================== LifeSaving ========================================
+
+        function btn_addNeo() {
+            $('#add_Neo_Kieu').val('');
+            $('#add_Neo_TrongLuong').val('');
+            $('#add_Neo_SoLuong').val('');
+            $('#add_Neo_GhiChu').val('');
+        }
+        function Add_Neo() {
+            var new_Neo = {
+                Ship: {
+                    ID: Ship_ID
+                },
+                Type: $("#add_Neo_Kieu").val(),
+                Load: $("#add_Neo_TrongLuong").val(),
+                Quantity: $("#add_Neo_SoLuong").val(),
+                Note: $("#add_Neo_GhiChu").val(),
+            };
+            console.log(new_Neo);
+            $.ajax({
+                type: "POST",
+                url: linkapi + "insert_anchor",
+                dataType: "json",
+                data: JSON.stringify(new_Neo),
+                contentType: "application/json",
+                beforeSend: function () { // Before we send the request, remove the .hidden class from the spinner and default to inline-block.
+                    $('#loader').removeClass('hidden');
+                },
+                success: function (data) {
+                    Load_Equiment(Ship_ID);
+                    toastSuccess("Thành công", "Thêm neo thành công.");
+                    $('#model-add-Neo').modal("hide");
+                }, error: function (ret) {
+                    console.log(ret.responseJSON.Message);
+                    toastError("Thất bại", ret.responseJSON.Message);
+                },
+                complete: function () { // Set our complete callback, adding the .hidden class and hiding the spinner.
+                    $('#loader').addClass('hidden');
+                },
+            });
+        }
+        function btn_update_Neo(ID, Type, Load, Quantity, Note) {
+
+            $('#update_Neo_Id').val(ID);
+            $('#update_Neo_Kieu').val(Type);
+            $('#update_Neo_TrongLuong').val(Load);
+            $('#update_Neo_SoLuong').val(Quantity);
+            $('#update_Neo_GhiChu').val(Note);
+        }
+        function Update_Neo() {
+            debugger
+            var New_Neo = {
+                Ship: {
+                    ID: Ship_ID
+                },
+                ID: $('#update_Neo_Id').val(),
+                Type: $('#update_Neo_Kieu').val(),
+                Load: $('#update_Neo_TrongLuong').val(),
+                Quantity: $('#update_Neo_SoLuong').val(),
+                Note: $('#update_Neo_GhiChu').val()
+            };
+            $.ajax({
+                type: "PUT",
+                url: linkapi + "update_anchor",
+                dataType: "json",
+                data: JSON.stringify(New_Neo),
+                contentType: "application/json",
+                beforeSend: function () { // Before we send the request, remove the .hidden class from the spinner and default to inline-block.
+                    $('#loader').removeClass('hidden');
+                },
+                success: function (data) {
+                    console.log("okPUT");
+                    toastSuccess("Thành công", "Cập nhật neo thành công.");
+                    Load_Equiment(Ship_ID);
+                }, error: function (ret) {
+                    console.log('errorPUT');
+                },
+                complete: function () { // Set our complete callback, adding the .hidden class and hiding the spinner.
+                    $('#loader').addClass('hidden');
+                    $('#model-update-Neo').modal("hide");
+                },
+            });
+        }
+        function btn_delete_Neo(ID) {
+            let text = "Bạn có chắc muốn xóa neo này?";
+            if (confirm(text) == true) {
+                $.ajax({
+                    url: linkapi + "delete_anchor?id=" + ID,
+                    type: "DELETE",
+
+                }).done(function (res) {
+                    toastSuccess("Thành công", "Xóa neo thành công.");
+                    Load_Equiment(Ship_ID);
+                }).fail(function (res) {
+                    toastError("Lỗi", "Xóa neo không thành công");
+                })
+            } else {
+
+            }
+        }
+        // ===================================== Winch ============================================
+        function loadDataList_Winch(ship_ID) {
+            $.ajax({
+                type: "GET",
+                url: linkapi + "winches?imo=" + ship_ID,
+                dataType: "json",
+                success: function (data) {
+                    var tabletext_ToiNeo = "<thead><tr><th>STT</th><th>KIỂU TỜI NEO</th><th>TRỌNG TẢI (tấn)</th><th>SỐ LƯỢNG</th><th>GHI CHÚ</th><th>TÁC VỤ</th></tr></thead><tbody>";
+                    var i = 1;
+                    $.each(data, function (key, item) {
+                        tabletext_ToiNeo += "<tr><td>" + i + "</td><td>" + item.Type + "</td><td>" + item.Weight + "</td><td>" + item.Quantity + "</td><td>" + item.Note + '</td>' + '<td><div style="width: max-content;"><a href="#" class="edit" title="Sửa" onclick="btn_update_ToiNeo(`' + item.ID + '`,`' + item.Type + '`,`' + item.Weight + '`,`' + item.Quantity + '`,`' + item.Note + '`)" data-toggle="modal" data-target="#model-update-ToiNeo"><i class="material-icons">&#xE254;</i></a><a href="#" class="delete" title="Xóa"onclick="btn_delete_ToiNeo(`' + item.ID + '`)"><i class="material-icons">&#xE872;</i></a></div></td></tr>';
+                        i = i + 1;
+                    });
+                    tabletext_ToiNeo += "</tbody>";
+
+                    $('#tableToiNeo').html(tabletext_ToiNeo);
+                    loadTable('tableToiNeo');
+                    $('#tableToiNeo_wrapper .row .col-sm-12').first().html('<button id="btn_addToiNeo" onclick="btn_addToiNeo()" class="btn btn-info btn-lg col-md-6" data-toggle="modal" data-target="#model-add-ToiNeo" style="height: 40px; margin-bottom: 8px; margin-top: -4px; font-size: 18px;">Thêm tời neo</button>');
+                    $('#tableToiNeo_wrapper .row').first().next().children().css("overflow-x", "auto");
+                }, error: function (ret) {
+                    console.log('errorGET');
+                }
+            });
+        }
+
+        function btn_addToiNeo() {
+            $('#add_ToiNeo_Kieu').val('');
+            $('#add_ToiNeo_TrongTai').val('');
+            $('#add_ToiNeo_SoLuong').val('');
+            $('#add_ToiNeo_GhiChu').val('');
+        }
+        function Add_ToiNeo() {
+            var new_ToiNeo = {
+                Ship: {
+                    ID: Ship_ID
+                },
+                Type: $("#add_ToiNeo_Kieu").val(),
+                Weight: $("#add_ToiNeo_TrongTai").val(),
+                Quantity: $("#add_ToiNeo_SoLuong").val(),
+                Note: $("#add_ToiNeo_GhiChu").val(),
+            };
+            console.log(new_ToiNeo);
+            $.ajax({
+                type: "POST",
+                url: linkapi + "insert_winch",
+                dataType: "json",
+                data: JSON.stringify(new_ToiNeo),
+                contentType: "application/json",
+                beforeSend: function () { // Before we send the request, remove the .hidden class from the spinner and default to inline-block.
+                    $('#loader').removeClass('hidden');
+                },
+                success: function (data) {
+                    Load_Equiment(Ship_ID);
+                    toastSuccess("Thành công", "Thêm tời neo thành công.");
+                    $('#model-add-ToiNeo').modal("hide");
+                }, error: function (ret) {
+                    console.log(ret.responseJSON.Message);
+                    toastError("Thất bại", ret.responseJSON.Message);
+                },
+                complete: function () { // Set our complete callback, adding the .hidden class and hiding the spinner.
+                    $('#loader').addClass('hidden');
+                },
+            });
+        }
+        function btn_update_ToiNeo(ID, Type, Weight, Quantity, Note) {
+
+            $('#update_ToiNeo_Id').val(ID);
+            $('#update_ToiNeo_Kieu').val(Type);
+            $('#update_ToiNeo_TrongTai').val(Weight);
+            $('#update_ToiNeo_SoLuong').val(Quantity);
+            $('#update_ToiNeo_GhiChu').val(Note);
+        }
+        function Update_ToiNeo() {
+            debugger
+            var New_ToiNeo = {
+                Ship: {
+                    ID: Ship_ID
+                },
+                ID: $('#update_ToiNeo_Id').val(),
+                Type: $('#update_ToiNeo_Kieu').val(),
+                Weight: $('#update_ToiNeo_TrongTai').val(),
+                Quantity: $('#update_ToiNeo_SoLuong').val(),
+                Note: $('#update_ToiNeo_GhiChu').val()
+            };
+            $.ajax({
+                type: "PUT",
+                url: linkapi + "update_winch",
+                dataType: "json",
+                data: JSON.stringify(New_ToiNeo),
+                contentType: "application/json",
+                beforeSend: function () { // Before we send the request, remove the .hidden class from the spinner and default to inline-block.
+                    $('#loader').removeClass('hidden');
+                },
+                success: function (data) {
+                    console.log("okPUT");
+                    toastSuccess("Thành công", "Cập nhật tời neo thành công.");
+                    Load_Equiment(Ship_ID);
+                }, error: function (ret) {
+                    console.log('errorPUT');
+                },
+                complete: function () { // Set our complete callback, adding the .hidden class and hiding the spinner.
+                    $('#loader').addClass('hidden');
+                    $('#model-update-ToiNeo').modal("hide");
+                },
+            });
+        }
+        function btn_delete_ToiNeo(ID) {
+            let text = "Bạn có chắc muốn xóa tời neo này?";
+            if (confirm(text) == true) {
+                $.ajax({
+                    url: linkapi + "delete_winch?id=" + ID,
+                    type: "DELETE",
+
+                }).done(function (res) {
+                    toastSuccess("Thành công", "Xóa tời neo thành công.");
+                    Load_Equiment(Ship_ID);
+                }).fail(function (res) {
+                    toastError("Lỗi", "Xóa tời neo không thành công");
+                })
+            } else {
+
+            }
+        }
+        // ===================================== Chain ============================================
+        function loadDataList_Chain(ship_ID) {
+            $.ajax({
+                type: "GET",
+                url: linkapi + "chains?imo=" + ship_ID,
+                dataType: "json",
+                success: function (data) {
+                    var tabletext_XichNeo = "<thead><tr><th>STT</th><th>KIỂU XÍCH NEO</th><th>CHIỀU DÀI XÍCH NEO (m)</th><th>ĐƯỜNG KÍNH XÍCH NEO (mm)</th><th>GHI CHÚ</th><th>TÁC VỤ</th></tr></thead><tbody>";
+                    var i = 1;
+                    $.each(data, function (key, item) {
+                        tabletext_XichNeo += "<tr><td>" + i + "</td><td>" + item.Type + "</td><td>" + item.Width + "</td><td>" + item.Diameter + "</td><td>" + item.Note + '</td>' + '<td><div style="width: max-content;"><a href="#" class="edit" title="Sửa" onclick="btn_update_XichNeo(`' + item.ID + '`,`' + item.Type + '`,`' + item.Width + '`,`' + item.Diameter + '`,`' + item.Note + '`)" data-toggle="modal" data-target="#model-update-XichNeo"><i class="material-icons">&#xE254;</i></a><a href="#" class="delete" title="Xóa"onclick="btn_delete_XichNeo(`' + item.ID + '`)"><i class="material-icons">&#xE872;</i></a></div></td></tr>';
+                        i = i + 1;
+                    });
+                    tabletext_XichNeo += "</tbody>";
+
+                    $('#tableXichNeo').html(tabletext_XichNeo);
+                    loadTable('tableXichNeo');
+                    $('#tableXichNeo_wrapper .row .col-sm-12').first().html('<button id="btn_addXichNeo" onclick="btn_addXichNeo()" class="btn btn-info btn-lg col-md-6" data-toggle="modal" data-target="#model-add-XichNeo" style="height: 40px; margin-bottom: 8px; margin-top: -4px; font-size: 18px;">Thêm xích neo</button>');
+                    $('#tableXichNeo_wrapper .row').first().next().children().css("overflow-x", "auto");
+                  
+                }, error: function (ret) {
+                    console.log('errorGET');
+                }
+            });
+        }
+
+        function btn_addXichNeo() {
+            $('#add_XichNeo_Kieu').val('');
+            $('#add_XichNeo_ChieuDai').val('');
+            $('#add_XichNeo_DuongKinh').val('');
+            $('#add_XichNeo_GhiChu').val('');
+        }
+        function Add_XichNeo() {
+            var new_XichNeo = {
+                Ship: {
+                    ID: Ship_ID
+                },
+                Type: $("#add_XichNeo_Kieu").val(),
+                Width: $("#add_XichNeo_ChieuDai").val(),
+                Diameter: $("#add_XichNeo_DuongKinh").val(),
+                Note: $("#add_XichNeo_GhiChu").val(),
+            };
+            console.log(new_XichNeo);
+            $.ajax({
+                type: "POST",
+                url: linkapi + "insert_chain",
+                dataType: "json",
+                data: JSON.stringify(new_XichNeo),
+                contentType: "application/json",
+                beforeSend: function () { // Before we send the request, remove the .hidden class from the spinner and default to inline-block.
+                    $('#loader').removeClass('hidden');
+                },
+                success: function (data) {
+                    Load_Equiment(Ship_ID);
+                    toastSuccess("Thành công", "Thêm xích neo thành công.");
+                    $('#model-add-XichNeo').modal("hide");
+                }, error: function (ret) {
+                    console.log(ret.responseJSON.Message);
+                    toastError("Thất bại", ret.responseJSON.Message);
+                },
+                complete: function () { // Set our complete callback, adding the .hidden class and hiding the spinner.
+                    $('#loader').addClass('hidden');
+                },
+            });
+        }
+        function btn_update_XichNeo(ID, Type, Width, Diameter, Note) {
+
+            $('#update_XichNeo_Id').val(ID);
+            $('#update_XichNeo_Kieu').val(Type);
+            $('#update_XichNeo_ChieuDai').val(Width);
+            $('#update_XichNeo_DuongKinh').val(Diameter);
+            $('#update_XichNeo_GhiChu').val(Note);
+        }
+        function Update_XichNeo() {
+            debugger
+            var New_XichNeo = {
+                Ship: {
+                    ID: Ship_ID
+                },
+                ID: $('#update_XichNeo_Id').val(),
+                Type: $('#update_XichNeo_Kieu').val(),
+                Width: $('#update_XichNeo_ChieuDai').val(),
+                Diameter: $('#update_XichNeo_DuongKinh').val(),
+                Note: $('#update_XichNeo_GhiChu').val()
+            };
+            $.ajax({
+                type: "PUT",
+                url: linkapi + "update_chain",
+                dataType: "json",
+                data: JSON.stringify(New_XichNeo),
+                contentType: "application/json",
+                beforeSend: function () { // Before we send the request, remove the .hidden class from the spinner and default to inline-block.
+                    $('#loader').removeClass('hidden');
+                },
+                success: function (data) {
+                    console.log("okPUT");
+                    toastSuccess("Thành công", "Cập nhật xích neo thành công.");
+                    Load_Equiment(Ship_ID);
+                }, error: function (ret) {
+                    console.log('errorPUT');
+                },
+                complete: function () { // Set our complete callback, adding the .hidden class and hiding the spinner.
+                    $('#loader').addClass('hidden');
+                    $('#model-update-XichNeo').modal("hide");
+                },
+            });
+        }
+        function btn_delete_XichNeo(ID) {
+            let text = "Bạn có chắc muốn xóa xích neo này?";
+            if (confirm(text) == true) {
+                $.ajax({
+                    url: linkapi + "delete_chain?id=" + ID,
+                    type: "DELETE",
+
+                }).done(function (res) {
+                    toastSuccess("Thành công", "Xóa xích neo thành công.");
+                    Load_Equiment(Ship_ID);
+                }).fail(function (res) {
+                    toastError("Lỗi", "Xóa xích neo không thành công");
+                })
+            } else {
+
+            }
+        }
+        // ===================================== LifeSaving ========================================
 
 
         function loadDataList_LifeSaving(ship_ID) {
@@ -2553,7 +3129,7 @@
                     tabletext += "</tbody>";
                     $('#tableLifeSaving').html(tabletext);
                     loadTable('tableLifeSaving');
-                    $('#tableLifeSaving_wrapper .row .col-sm-12').first().html('<button id="btn_addLifeSaving" onclick="btn_addLifeSaving()" class="btn btn-info btn-lg col-md-6" data-toggle="modal" data-target="#model-add-LifeSaving" style="height: 35px; padding - top: 4px;margin - top: -4px;">Thêm trang bị cứu sinh</button>');
+                    $('#tableLifeSaving_wrapper .row .col-sm-12').first().html('<button id="btn_addLifeSaving" onclick="btn_addLifeSaving()" class="btn btn-info btn-lg col-md-6" data-toggle="modal" data-target="#model-add-LifeSaving" style="height: 40px; margin-bottom: 8px; margin-top: -4px; font-size: 18px;">Thêm trang bị cứu sinh</button>');
                     $('#tableLiftSaving_wrapper .row').first().next().children().css("overflow-x", "auto");
                 }, error: function (ret) {
                     console.log('errorGET');
@@ -2570,7 +3146,7 @@
             $('#add_LifeSaving_GhiChu').val('');
         }
         function Add_LifeSaving() {
-            var new_LifeSaving= {
+            var new_LifeSaving = {
                 Ship: {
                     ID: Ship_ID
                 },
@@ -2591,7 +3167,7 @@
                     $('#loader').removeClass('hidden');
                 },
                 success: function (data) {
-                    Load_Equiment();
+                    Load_Equiment(Ship_ID);
                     toastSuccess("Thành công", "Thêm trang bị cứu sinh thành công.");
                     $('#model-add-LifeSaving').modal("hide");
                 }, error: function (ret) {
@@ -2637,7 +3213,7 @@
                 success: function (data) {
                     console.log("okPUT");
                     toastSuccess("Thành công", "Cập nhật thiết bị cứu sinh thành công.");
-                    Load_Equiment();
+                    Load_Equiment(Ship_ID);
                 }, error: function (ret) {
                     console.log('errorPUT');
                 },
@@ -2657,7 +3233,7 @@
 
                 }).done(function (res) {
                     toastSuccess("Thành công", "Xóa thiết bị cứu sinh thành công.");
-                    Load_Equiment();
+                    Load_Equiment(Ship_ID);
                 }).fail(function (res) {
                     toastError("Lỗi", "Xóa thiết bị cứu sinh không thành công");
                 })
@@ -2681,7 +3257,7 @@
                     tabletext += "</tbody>";
                     $('#tableOtherEquipment').html(tabletext);
                     loadTable('tableOtherEquipment');
-                    $('#tableOtherEquipment_wrapper .row .col-sm-12').first().html('<button id="btn_addOtherEquipment" onclick="btn_addOtherEquipment()" class="btn btn-info btn-lg col-md-6" data-toggle="modal" data-target="#model-add-OtherEquipment" style="height: 35px; padding - top: 4px;margin - top: -4px;">Thêm trang bị khác</button>');
+                    $('#tableOtherEquipment_wrapper .row .col-sm-12').first().html('<button id="btn_addOtherEquipment" onclick="btn_addOtherEquipment()" class="btn btn-info btn-lg col-md-6" data-toggle="modal" data-target="#model-add-OtherEquipment" style="height: 40px; margin-bottom: 8px; margin-top: -4px; font-size: 18px;">Thêm trang bị khác</button>');
                     $('#tableOtherEquipment_wrapper .row').first().next().children().css("overflow-x", "auto");
                 }, error: function (ret) {
                     console.log('errorGET');
@@ -2711,7 +3287,7 @@
                     $('#loader').removeClass('hidden');
                 },
                 success: function (data) {
-                    Load_Equiment();
+                    Load_Equiment(Ship_ID);
                     toastSuccess("Thành công", "Thêm trang bị thành công.");
                     $('#model-add-OtherEquipment').modal("hide");
                 }, error: function (ret) {
@@ -2768,7 +3344,7 @@
                 success: function (data) {
                     console.log("okPUT");
                     toastSuccess("Thành công", "Cập nhật thông tin trang bị thành công.");
-                    Load_Equiment();
+                    Load_Equiment(Ship_ID);
                 }, error: function (ret) {
                     console.log('errorPUT');
                 },
@@ -2788,7 +3364,7 @@
 
                 }).done(function (res) {
                     toastSuccess("Thành công", "Xóa trang bị thành công.");
-                    Load_Equiment();
+                    Load_Equiment(Ship_ID);
                 }).fail(function (res) {
                     toastError("Lỗi", "Xóa trang bị không thành công");
                 })
@@ -2813,7 +3389,7 @@
                     tabletext += "</tbody>";
                     $('#tableSupplies').html(tabletext);
                     loadTable('tableSupplies');
-                    $('#tableSupplies_wrapper .row .col-sm-12').first().html('<button id="btn_addsuply" onclick="btn_addsuply()" class="btn btn-info btn-lg col-md-6" data-toggle="modal" data-target="#model-add-supply" style="height: 35px; padding - top: 4px;margin - top: -4px;">Thêm vật tư bảo đảm</button>');
+                    $('#tableSupplies_wrapper .row .col-sm-12').first().html('<button id="btn_addsuply" onclick="btn_addsuply()" class="btn btn-info btn-lg col-md-6" data-toggle="modal" data-target="#model-add-supply" style="height: 40px; margin-bottom: 8px; margin-top: -4px; font-size: 18px;">Thêm vật tư bảo đảm</button>');
                     $('#tableSupplies_wrapper .row').first().next().children().css("overflow-x", "auto");
                 }, error: function (ret) {
                     console.log('errorGET');
@@ -2834,6 +3410,7 @@
                 Unit: $("#asupplyUnit").val(),
                 Note: $("#asupplyNote").val(),
             };
+            console.log(supply);
             $.ajax({
                 type: "POST",
                 url: linkapi + "insert_supply",
@@ -2846,7 +3423,7 @@
                 },
                 success: function (data) {
                     toastSuccess("Thành công", "Thêm vật tư bảo đảm thành công.");
-                    Load_Equiment();
+                    Load_Equiment(Ship_ID);
                     $('#model-add-supply').modal("hide");
                 }, error: function (ret) {
                     console.log(ret.responseJSON.Message);
@@ -2905,7 +3482,7 @@
                 success: function (data) {
                     console.log("okPUT");
                     toastSuccess("Thành công", "Cập nhật thông tin vật tư bảo đảm thành công.");
-                    Load_Equiment();
+                    Load_Equiment(Ship_ID);
 
                 }, error: function (ret) {
                     console.log('errorPUT');
@@ -2926,7 +3503,7 @@
 
                 }).done(function (res) {
                     toastSuccess("Thành công", "Xóa vật tư bảo đảm thành công.");
-                    Load_Equiment();
+                    Load_Equiment(Ship_ID);
                 }).fail(function (res) {
                     toastError("Lỗi", "Xóa vật tư bảo đảm không thành công");
                 })
