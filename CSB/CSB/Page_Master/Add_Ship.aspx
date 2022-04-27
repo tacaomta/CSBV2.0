@@ -1,20 +1,18 @@
-﻿<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8" />
-    <title></title>
-    <link href="../Content/bootstrap.min.css" rel="stylesheet" />
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Master/LayoutAdmin.Master" AutoEventWireup="true" CodeBehind="Add_Ship.aspx.cs" Inherits="CSB.Page_Master.Add_Ship" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="MainContentAdmin" runat="server">
+        <link href="../Content/bootstrap.min.css" rel="stylesheet" />
     <link href="../Content/bootstrap-theme.min.css" rel="stylesheet" />
     <style type="text/css">
         .row {
             margin-bottom: 20px;
         }
     </style>
-</head>
-<body style="padding-top:40px;">
     <div class="container">
-        <button class="btn btn-primary" data-toggle="modal" data-target="#model-add-ship"><span class="glyphicon glyphicon-plus-sign"></span> Thêm mới tàu</button>
-        <br /><br /><br />
+        <button class="btn btn-primary" data-toggle="modal" data-target="#model-add-ship"><span class="glyphicon glyphicon-plus-sign"></span>Thêm mới tàu</button>
+        <br />
+        <br />
+        <br />
         <div class="panel panel-info">
             <div class="panel-heading">
                 <h2 class="panel-title">Thêm thông tin tàu</h2>
@@ -30,7 +28,7 @@
                                 <img class="img-responsive" id="upload_imageproduct" src="../Image/Ships/boat.jpg" />
                             </div>
                             <div class="panel-footer text-justify">
-                                <input type="file" name="Anh" id="Anh" title="Cập nhật ảnh mới" class="btn btn-default" style="width:stretch" />
+                                <input type="file" name="Anh" id="Anh" title="Cập nhật ảnh mới" class="btn btn-default" style="width: stretch" />
                             </div>
                         </div>
                     </div>
@@ -118,16 +116,14 @@
                         <label class="col-md-4 control-label" style="text-align: right">Lượng nhiên liệu</label>
                         <div class="col-md-8 input-group">
                             <input type="text" class="form-control" placeholder="Lượng nhiên liệu đối đa">
-                            <span class="input-group-addon">
-                                tấn
+                            <span class="input-group-addon">tấn
                             </span>
                         </div>
                         <br />
                         <label class="col-md-4 control-label" style="text-align: right">Lượng nước ngọt</label>
                         <div class="col-md-8 input-group">
                             <input type="text" class="form-control" placeholder="Lượng nước ngọt tối đa">
-                            <span class="input-group-addon">
-                                tấn
+                            <span class="input-group-addon">tấn
                             </span>
                         </div>
                         <br />
@@ -202,8 +198,8 @@
             </div>
 
             <div class="panel-footer text-right">
-                <button class="btn btn-warning"><span class="glyphicon glyphicon-remove-sign"></span> Xoá ô nhập</button>
-                <button class="btn btn-success"><span class="glyphicon glyphicon-floppy-saved"></span> Lưu thông tin</button>
+                <button class="btn btn-warning"><span class="glyphicon glyphicon-remove-sign"></span>Xoá ô nhập</button>
+                <button class="btn btn-success"><span class="glyphicon glyphicon-floppy-saved"></span>Lưu thông tin</button>
             </div>
         </div>
 
@@ -211,13 +207,12 @@
     </div>
     <script src="../Scripts/jquery-3.4.1.min.js"></script>
     <script src="../Scripts/bootstrap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.14.30/js/bootstrap-datetimepicker.min.js"></script>
-    <script type="text/javascript">
+ <%--   <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.14.30/js/bootstrap-datetimepicker.min.js"></script>--%>
+  <%--  <script type="text/javascript">
         $(function () {
             $('#dateIssued1').datepicker({
                 format: 'LT'
             });
         });
-    </script>
-</body>
-</html>
+    </script>--%>
+</asp:Content>

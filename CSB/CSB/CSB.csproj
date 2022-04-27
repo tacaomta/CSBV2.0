@@ -246,6 +246,7 @@
     <Content Include="Image\Ships\boat.jpg" />
     <Content Include="Image\Ships\default.jpg" />
     <Content Include="Image\Ships\Tau1.jpg" />
+    <Content Include="Page_Master\Add_Ship.aspx" />
     <Content Include="Page_Master\Login.aspx" />
     <Content Include="Page_Master\Manage_ship.aspx" />
     <Content Include="Page_Master\Manage_user.aspx" />
@@ -370,6 +371,13 @@
     </Compile>
     <Compile Include="Models\myclass.cs" />
     <Compile Include="Models\User.cs" />
+    <Compile Include="Page_Master\Add_Ship.aspx.cs">
+      <DependentUpon>Add_Ship.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page_Master\Add_Ship.aspx.designer.cs">
+      <DependentUpon>Add_Ship.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Page_Master\Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
