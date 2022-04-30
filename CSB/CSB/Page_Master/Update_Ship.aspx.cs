@@ -8,7 +8,7 @@ using System.Web.UI.WebControls;
 
 namespace CSB.Page_Master
 {
-    public partial class Add_Ship : System.Web.UI.Page
+    public partial class Update_Ship : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -16,11 +16,11 @@ namespace CSB.Page_Master
         }
         protected void btn_save_Click(object sender, EventArgs e)
         {
-            if (FileImgsave.PostedFile != null)
+            if (FileImgsave_update.PostedFile != null)
             {
-                int index = FileImgsave.PostedFile.FileName.IndexOf('.');
-                string imgfile = Path.GetFileName(addTenTau.Text + "." + "jpg");
-                FileImgsave.SaveAs(Server.MapPath("~/Image/Ships/") + imgfile);
+                int index = FileImgsave_update.PostedFile.FileName.IndexOf('.');
+                string imgfile = Path.GetFileName(update_TenTau.Text + "." + "jpg");
+                FileImgsave_update.SaveAs(Server.MapPath("~/Image/Ships/") + imgfile);
             }
         }
     }

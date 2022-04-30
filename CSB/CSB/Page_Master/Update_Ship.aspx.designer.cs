@@ -11,35 +11,35 @@ namespace CSB.Page_Master
 {
 
 
-    public partial class Add_Ship
+    public partial class Update_Ship
     {
 
         /// <summary>
-        /// form_add_ship control.
+        /// form_update_ship control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form_add_ship;
+        protected global::System.Web.UI.HtmlControls.HtmlForm form_update_ship;
 
         /// <summary>
-        /// FileImgsave control.
+        /// FileImgsave_update control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.FileUpload FileImgsave;
+        protected global::System.Web.UI.WebControls.FileUpload FileImgsave_update;
 
         /// <summary>
-        /// addTenTau control.
+        /// update_TenTau control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox addTenTau;
+        protected global::System.Web.UI.WebControls.TextBox update_TenTau;
 
         /// <summary>
         /// btn_save control.

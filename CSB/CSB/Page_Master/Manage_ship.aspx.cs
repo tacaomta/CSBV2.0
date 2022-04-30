@@ -15,14 +15,14 @@ namespace CSB.Page_Master
 
         }
 
-        protected void btn_save_Click(object sender, EventArgs e)
-        {
-            if (FileImgsave.PostedFile!=null)
-            {
-                int index = FileImgsave.PostedFile.FileName.IndexOf('.');
-                string imgfile = Path.GetFileName(addTenTau.Text+"."+ "jpg");
-                FileImgsave.SaveAs(Server.MapPath("~/Image/Ships/") + imgfile);
-            }
-        }
+        //protected void btn_save_Click(object sender, EventArgs e)
+        //{
+        //    if (FileImgsave.PostedFile!=null)
+        //    {
+        //        int index = FileImgsave.PostedFile.FileName.IndexOf('.');
+        //        string imgfile = Path.GetFileName(addTenTau.Text+"."+ "jpg");
+        //        FileImgsave.SaveAs(Server.MapPath("~/Image/Ships/") + imgfile);
+        //    }
+        //}
     }
 }
