@@ -5,11 +5,13 @@
 <html>
 <head runat="server">
     <title>Đăng nhập</title>
-<%--    <link rel="stylesheet" href="~/Content/bootstrap.min.css" />--%>
+    <link rel="stylesheet" href="~/Content/bootstrap.min.css" />
 
-    <link href="../css/bootstrap.min.css" rel="stylesheet" />
+    <%--<link href="../css/bootstrap.min.css" rel="stylesheet" />--%>
     <link href="../Content/MaterialIcons.css" rel="stylesheet" />
     <link href="../css/login.css" rel="stylesheet" />
+    <link href="../Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="../Content/bootstrap-theme.min.css" rel="stylesheet" />
 
 </head>
 <body>
@@ -30,13 +32,12 @@
                             <div class="col-lg-12 login-form">
                                 <div class="form-group">
                                     <i class="material-icons icon-name">person</i >
-                                    <input type="text" class="form-control" id="username" placeholder="Tài khoản" />
+                                    <input type="text" class="form-control" id="username" placeholder="Tài khoản" autofocus />
                                 </div>
                                 <div class="form-group">
                                     <i class="material-icons icon-name">lock</i >
                                     <input type="password" pattern=".{6,}" title="Mật khẩu tối thiểu 6 kí tự" class="form-control" id="password" placeholder="Mật khẩu" />
                                 </div>
-
                                 <div class="col-md-12 loginbttm">
                                     <div class="col-md-12 login-btm login-text">
                                         <p hidden="hidden" id="error-login-text">Mật khẩu không chính xác</p>
