@@ -318,7 +318,7 @@
                         $('#tableship').html(tabletext);
                         loadTableShip();
                         //$('#tableship_wrapper .row .col-sm-12').first().html('<button onclick="btn_addship()" class="btn btn-info btn-lg col-md-6" /*data-toggle="modal" data-target="#model-add-ship"*/ style="height: 40px; margin-bottom: 8px; margin-top: -4px; font-size: 18px;"><span class="glyphicon glyphicon-plus"></span>Thêm tàu</button>');
-                        $('#tableship_wrapper .row .col-sm-12').first().html('<button onclick="btn_addship()" class="btn btn-primary"><span class="glyphicon glyphicon-plus-sign"></span>Thêm mới tàu</button>');
+                        $('#tableship_wrapper .row .col-sm-12').first().html('<button onclick="btn_addship()" class="btn btn-lg btn-primary"><span class="glyphicon glyphicon-plus-sign"></span>Thêm mới tàu</button>');
                         $('#tableship_wrapper .row').first().next().children().css("overflow-x", "auto");
                     }, error: function (ret) {
                         console.log('errorGET');

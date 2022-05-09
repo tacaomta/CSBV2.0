@@ -1,43 +1,46 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Master/LayoutAdmin.Master" AutoEventWireup="true" CodeBehind="Add_Ship.aspx.cs" Inherits="CSB.Page_Master.Add_Ship" %>
+﻿<%@ Page Title="Thêm mới tàu" Language="C#" MasterPageFile="~/Master/LayoutAdmin.Master" AutoEventWireup="true" CodeBehind="Add_Ship.aspx.cs" Inherits="CSB.Page_Master.Add_Ship" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContentAdmin" runat="server">
-        <link href="../Content/bootstrap.min.css" rel="stylesheet" />
-    <link href="../Content/bootstrap-theme.min.css" rel="stylesheet" />
     <style type="text/css">
         .row {
             margin-bottom: 20px;
         }
+        .select-inform {
+            padding: 10px 10px;
+            font-size: 13px;
+            line-height: 42px;
+            background-color: rgba(179,164,164,0.1);
+            border-color: rgba(252,252,252,0.1);
+            width: 100%;
+            color: #555;
+        }
     </style>
-    <div class="container">
-        
-        <br />
-        <br />
-        <br />
+    <div class="" style="margin: 0 auto; width: 98%">
         <form id="form_add_ship" runat="server" class="panel panel-info">
             <div class="panel-heading">
-                <h2 class="panel-title">Thêm thông tin tàu</h2>
+                <h2 class="panel-title" style="padding: 5px 10px; margin: 0;">Thêm mới tàu</h2>
             </div>
-            <div class="panel-body">
+            <div class="panel-body" style="background-color: #ffffff">
                 <div class="row">
-                    <div class="col-md-6">
-                        <div class="imageupload panel panel-success">
+                    <div class="col-md-6" style="padding: 15px 50px;">
+                        <div class="imageupload panel panel-success" style="height: 100%; display: flex; flex-direction: column; justify-content: space-between;">
                             <div class="panel-heading">
-                                <h3 class="panel-title">Hình ảnh tàu kiểm ngư 4007</h3>
+                                <h3 class="panel-title" style="padding: 5px 10px; margin: 0;">Hình ảnh tàu kiểm ngư 4007</h3>
                             </div>
-                            <div class="file-tab panel-body">
-                                <img class="img-responsive" id="upload_imageproduct" src="../Image/Ships/boat.jpg" />
+                            <div class="file-tab panel-body" style="padding: 0;">
+                                <img class="img-responsive" id="upload_imageproduct" src="../Image/Ships/boat.jpg" style="max-height: 300px; margin: 0 auto;"/>
                             </div>
-                            <div class="panel-footer text-justify">
+                            <div class="panel-footer text-justify" style="padding: 0;">
                                 <%--<input type="file" name="Anh" id="Anh" title="Cập nhật ảnh mới" class="btn btn-default" style="width: stretch" />--%>
                                  <asp:FileUpload ID="FileImgsave" runat="server"  />
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-6" style="padding: 30px 50px 30px 0px;">
                         <div class="row">
-                            <div class="form-group has-feedback">
-                                <label class="col-md-4 control-label" style="text-align: right">Tên tàu <span style="color: red;">(*)</span></label>
-                                <div class="col-md-7 input-group">
+                            <div class="form-group has-feedback col-md-12">
+                                <label class="col-md-4 control-label" style="text-align: right"><strong>Tên tàu <span style="color: red;">(*)</span>: </strong></label>
+                                <div class="col-md-8 input-group">
                                     <span class="input-group-addon">ví dụ: 4008</span>
                                  <%--   <input type="text" class="form-control" placeholder="Tên tàu">--%>
                                     <asp:TextBox ID="addTenTau" class="form-control"  name="add_TenTau" runat="server" ></asp:TextBox>
@@ -46,9 +49,9 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="form-group has-feedback">
+                            <div class="form-group has-feedback col-md-12">
                                 <label class="col-md-4 control-label" style="text-align: right"><strong>Số hiệu <span style="color: red;">(*)</span>: </strong></label>
-                                <div class="col-md-7 input-group">
+                                <div class="col-md-8 input-group">
                                     <span class="input-group-addon">ví dụ: 22-44-66</span>
                                     <input type="text" id="add_SoHieu"  class="form-control" placeholder="Số hiệu tàu">
                                     <span class="glyphicon glyphicon-remove form-control-feedback text-danger"></span>
@@ -56,9 +59,9 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="form-group has-feedback">
-                                <label class="col-md-4 control-label"  style="text-align: right">Nơi cấp</label>
-                                <div class="col-md-7 input-group">
+                            <div class="form-group has-feedback col-md-12">
+                                <label class="col-md-4 control-label"  style="text-align: right"><strong>Nơi cấp: </strong></label>
+                                <div class="col-md-8 input-group">
                                     <span class="input-group-addon">ví dụ: Đà Nẵng</span>
                                     <input type="text"  id="add_NoiCap" class="form-control" placeholder="Nơi cấp phép">
                                     <span class="glyphicon glyphicon-warning-sign form-control-feedback text-warning"></span>
@@ -66,47 +69,55 @@
                             </div>
                         </div>
                         <div class="row">
-                            <label class="col-md-4 control-label" style="text-align: right">Ngày cấp</label>
-                            <div class='col-md-7 input-group' id='dateIssued'>
-                                <input type='text' id="add_NgayCap" class="form-control"  placeholder="Ngày cấp phép" />
-                                <span class="input-group-addon">
-                                    <span class="glyphicon glyphicon-calendar"></span>
-                                </span>
+                            <div class="form-group has-feedback col-md-12">
+                                <label class="col-md-4 control-label" style="text-align: right"><strong>Ngày cấp: </strong></label>
+                                <div class='col-md-8 input-group' id='dateIssued'>
+                                    <input type='text' id="add_NgayCap" class="form-control"  placeholder="Ngày cấp phép" />
+                                    <span class="input-group-addon">
+                                        <span class="glyphicon glyphicon-calendar"></span>
+                                    </span>
+                                </div>
                             </div>
                         </div>
                         <div class="row">
-                            <label class="col-md-4 control-label" style="text-align: right">Hải đội</label>
-                            <div class="col-md-7 input-group">
-                                <select id="add_HaiDoi" class="form-control">
-                                </select>
+                            <div class="col-md-12">
+                                <label class="col-md-4 control-label" style="text-align: right"><strong>Hải đội: </strong></label>
+                                <div class="col-md-8 input-group">
+                                    <select id="add_HaiDoi" class="select-inform">
+                                    </select>
+                                </div>
                             </div>
                         </div>
                         <div class="row">
-                            <label class="col-md-4 control-label" style="text-align: right">Thuyền trưởng</label>
-                            <div class="col-md-7 input-group">
-                                <div class="row">
-                                    <div class="col-md-8">
-                                        <select  id="add_ThuyenTruong" class="form-control">
-                                        </select>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <span class="btn btn-info btn-sm glyphicon glyphicon-eye-open pull-left" title="Xem thông tin"></span>
-                                        <span class="btn btn-primary btn-sm glyphicon glyphicon-plus pull-right" title="Thêm thuyền trưởng"></span>
+                            <div class="col-md-12">
+                                <label class="col-md-4 control-label" style="text-align: right"><strong>Thuyền trưởng: </strong></label>
+                                <div class="col-md-8 input-group">
+                                    <div class="row">
+                                        <div class="col-md-10">
+                                            <select  id="add_ThuyenTruong" class="select-inform">
+                                            </select>
+                                        </div>
+                                        <div class="col-md-2">
+                                            <span class="btn btn-info btn-sm glyphicon glyphicon-eye-open pull-left" title="Xem thông tin"></span>
+                                            <span class="btn btn-primary btn-sm glyphicon glyphicon-plus pull-right" title="Thêm thuyền trưởng"></span>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="row">
-                            <label class="col-md-4 control-label" style="text-align: right">Số thuyền viên</label>
-                            <div class="col-md-7 input-group">
-                                <input type="text" id="add_SoThuyenVien" class="form-control" placeholder="Số thuyền viên">
-                                <span class="input-group-addon">người</span>
+                            <div class="form-group has-feedback col-md-12">
+                                <label class="col-md-4 control-label" style="text-align: right"><strong>Số thuyền viên: </strong></label>
+                                <div class="col-md-8 input-group">
+                                    <input type="text" id="add_SoThuyenVien" class="form-control" placeholder="Số thuyền viên">
+                                    <span class="input-group-addon">người</span>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-md-6">
+                    <div class="col-md-6" style="padding: 15px 50px;">
                         <label class="col-md-4 control-label" style="text-align: right">Lượng nhiên liệu</label>
                         <div class="col-md-8 input-group">
                             <input type="text" class="form-control" id="add_NhienLieuToiDa"  placeholder="Lượng nhiên liệu đối đa">
@@ -150,7 +161,7 @@
                         </div>
                         <br />
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-6" style="padding: 15px 50px 0px 0px;">
                         <label class="col-md-4 control-label" style="text-align: right">Trọng tải</label>
                         <div class="col-md-8 input-group">
                             <input type="text" class="form-control" id="add_TrongTai" placeholder="Trọng tải">
@@ -202,14 +213,14 @@
     </div>
     <script src="../Scripts/jquery-3.4.1.min.js"></script>
     <script src="../Scripts/bootstrap.min.js"></script>
- <%--   <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.14.30/js/bootstrap-datetimepicker.min.js"></script>--%>
-  <%--  <script type="text/javascript">
+    <%--<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.14.30/js/bootstrap-datetimepicker.min.js"></script>
+    <script type="text/javascript">
         $(function () {
-            $('#add_NgayCap').datepicker({
-                format: 'LT'
+            $('#add_ngaycap').datepicker({
+                format: 'lt'
             });
         });
-    </script>--%>
+    </script> --%>
     <script>
         var date = new Date();
         var strDate = '' + date.getDate() + '/' + (Number(date.getMonth()) + 1) + '/' + date.getFullYear() + ' ' + date.getHours() + ':' + date.getMinutes() + ':' + date.getSeconds();
