@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Master/LayoutAdmin.Master" AutoEventWireup="true" CodeBehind="Manage_user.aspx.cs" Inherits="CSB.Page_Master.Manage_user" %>
+﻿<%@ Page Title="Quản lý người dùng" Language="C#" MasterPageFile="~/Master/LayoutAdmin.Master" AutoEventWireup="true" CodeBehind="Manage_user.aspx.cs" Inherits="CSB.Page_Master.Manage_user" %>
 
 <asp:Content ID="Manage_User" ContentPlaceHolderID="MainContentAdmin" runat="server">
     <link href="../css/manager_user.css" rel="stylesheet" />

@@ -246,6 +246,8 @@
     <Content Include="Image\Ships\boat.jpg" />
     <Content Include="Image\Ships\default.jpg" />
     <Content Include="Image\Ships\Tau1.jpg" />
+    <Content Include="Page_Master\Add_Ship.aspx" />
+    <Content Include="Page_Master\Change_Password.aspx" />
     <Content Include="Page_Master\Login.aspx" />
     <Content Include="Page_Master\Manage_ship.aspx" />
     <Content Include="Page_Master\Manage_user.aspx" />
@@ -253,6 +255,7 @@
     <Content Include="Page_Master\ShipActivity.aspx" />
     <Content Include="Page_Master\Ship_equiment.aspx" />
     <Content Include="Page_Master\TrangChu.aspx" />
+    <Content Include="Page_Master\Update_Ship.aspx" />
     <Content Include="reports\report.docx" />
     <Content Include="Master\TrangChu.Master" />
     <Content Include="Master\LayoutAdmin.Master" />
@@ -370,6 +373,20 @@
     </Compile>
     <Compile Include="Models\myclass.cs" />
     <Compile Include="Models\User.cs" />
+    <Compile Include="Page_Master\Add_Ship.aspx.cs">
+      <DependentUpon>Add_Ship.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page_Master\Add_Ship.aspx.designer.cs">
+      <DependentUpon>Add_Ship.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Page_Master\Change_Password.aspx.cs">
+      <DependentUpon>Change_Password.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page_Master\Change_Password.aspx.designer.cs">
+      <DependentUpon>Change_Password.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Page_Master\Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -418,6 +435,13 @@
     </Compile>
     <Compile Include="Page_Master\TrangChu.aspx.designer.cs">
       <DependentUpon>TrangChu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Page_Master\Update_Ship.aspx.cs">
+      <DependentUpon>Update_Ship.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page_Master\Update_Ship.aspx.designer.cs">
+      <DependentUpon>Update_Ship.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site.Master.cs">

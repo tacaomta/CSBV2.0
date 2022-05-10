@@ -5,19 +5,23 @@
 <html>
 <head runat="server">
     <title></title>
+    <link href="../Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="../Content/bootstrap-theme.min.css" rel="stylesheet" />
+    <link href="../css/bootstrap.min.css" rel="stylesheet" />
     <!-- Google Fonts -->
     <!-- Vendor CSS Files -->
-    <link href="../Content/bootstrap.min.css" rel="stylesheet" />
+    <%-- %><link href="../Content/bootstrap.min.css" rel="stylesheet" />--%>
     <link href="../Content/bootstrap-icons.css" rel="stylesheet" />
-    <link href="../Content/boxicons.min.css" rel="stylesheet" />
+    <%--<link href="../Content/boxicons.min.css" rel="stylesheet" />
     <link href="../Content/quill.snow.css" rel="stylesheet" />
     <link href="../Content/quill.bubble.css" rel="stylesheet" />
     <link href="../Content/remixicon.css" rel="stylesheet" />
-    <!-- Datatables CSS -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <!-- Datatables CSS -->--%>
+    <%-- %><link href="../Content/icon/all.css" rel="stylesheet" />--%>
+    <%-- %><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">--%>
     <link href="../Content/dataTables.bootstrap4.min.css" rel="stylesheet" />
-    <link href="../Content/buttons.bootstrap4.min.css" rel="stylesheet" />
-    <link href="../Content/responsive.bootstrap4.min.css" rel="stylesheet" />
+<%--    <link href="../Content/buttons.bootstrap4.min.css" rel="stylesheet" />
+    <link href="../Content/responsive.bootstrap4.min.css" rel="stylesheet" />--%>
 
     <!-- Template Main CSS File -->
 <%--    <link href="../css/LayoutAdmin.css" rel="stylesheet" />--%>
@@ -130,7 +134,6 @@
 .custom-select:focus,
 .form-control:focus {
     box-shadow: none !important;
-    outline: none;
 }
 
 a {
@@ -257,6 +260,7 @@ p, ul:not(.list-unstyled), ol {
     background-color: rgba(179, 164, 164, 0.1);
     border-color: rgba(252, 252, 252, 0.1);
     font-size: 16px;
+    border: 1px solid #cccccc;
 }
 
     .form-control:focus,
@@ -3935,9 +3939,7 @@ body.layout-3 .main-footer {
             background-color: #f8fafb;
         }
 
-        .main-sidebar .sidebar-menu li a.has-dropdown:after {
-            content: "";
-            font-family: 'Font Awesome 5 Free';
+        .nav-icon {
             font-weight: 900;
             position: absolute;
             top: 50%;
@@ -4910,10 +4912,6 @@ table tr:hover .table-links {
     z-index: 1;
 }
 
-    .section > *:first-child {
-        margin-top: -7px;
-    }
-
     .section .section-header {
         box-shadow: 2px 4px 8px 2px rgba(0, 0, 0, 0.05);
         background-color: #fff;
@@ -5243,7 +5241,7 @@ table tr:hover .table-links {
             <nav class="navbar navbar-expand-lg main-navbar">
                 <form class="form-inline mr-auto">
                     <ul class="navbar-nav mr-3">
-                        <li><a href="#" data-toggle="sidebar" class="nav-link nav-link-lg"><i class="fas fa-bars" style="color: #2595ff;"></i></a></li>
+                        <li><a href="#" data-toggle="sidebar" class="nav-link nav-link-lg"><i class="bi-list" style="color: #2595ff;"></i></a></li>
                     </ul>
                 </form>
             </nav>
@@ -5258,7 +5256,7 @@ table tr:hover .table-links {
             </div>
             <ul class="sidebar-menu">
                 <li class="nav-item dropdown">
-                    <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-database"></i> <span>Nghiệp vụ PQLKTT</span></a>
+                    <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="bi-ui-checks-grid"></i> <span>Nghiệp vụ PQLKTT</span></a>
                     <ul class="dropdown-menu">
                         <li><a class="nav-link" href="../Page_Master/Null.aspx">Công văn, tài liệu cấp trên</a></li>
                         <li><a class="nav-link" href="../Page_Master/Null.aspx">Công văn, tài liệu các đơn vị</a></li>
@@ -5270,7 +5268,7 @@ table tr:hover .table-links {
                     </ul>
                 </li>
                 <li class="nav-item dropdown">
-                    <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-ship"></i> <span>Sửa chữa tàu</span></a>
+                    <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="bi-gear-fill"></i> <span>Sửa chữa tàu</span></a>
                     <ul class="dropdown-menu">
                         <li><a class="nav-link" href="../Page_Master/Null.aspx">Tài liệu pháp quy</a></li>
                         <li><a class="nav-link" href="../Page_Master/Null.aspx">Thống kê sửa chữa tàu</a></li>
@@ -5282,7 +5280,7 @@ table tr:hover .table-links {
                     </ul>
                 </li>
                 <li class="nav-item dropdown">
-                    <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-columns"></i> <span>ĐBKT ngành tàu</span></a>
+                    <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="bi-file-earmark-fill"></i> <span>ĐBKT ngành tàu</span></a>
                     <ul class="dropdown-menu">
                         <li><a class="nav-link" href="../Page_Master/Null.aspx">Thời gian làm việc của máy móc trang bị</a></li>
                         <li><a class="nav-link" href="../Page_Master/Null.aspx">Tiếp nhận tàu thuyền, trang bị mới</a></li>
@@ -5291,7 +5289,7 @@ table tr:hover .table-links {
                     </ul>
                 </li>
                 <li class="nav-item dropdown">
-                    <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-folder"></i> <span>Hồ sơ tàu</span></a>
+                    <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="bi-folder"></i> <span>Hồ sơ tàu</span></a>
                     <ul class="dropdown-menu">
                         <li><a class="nav-link" href="../Page_Master/Null.aspx">Tính năng chiến, kỹ thuật tàu, trang bị</a></li>
                         <li><a class="nav-link" href="../Page_Master/ShipActivity.aspx">Theo dõi thống kê hoạt động tàu</a></li>
@@ -5301,7 +5299,7 @@ table tr:hover .table-links {
                     </ul>
                 </li>
                 <li class="nav-item dropdown">
-                    <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-cart-plus"></i> <span>QL vật tư, mua sắm</span></a>
+                    <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="bi-cart3"></i> <span>QL vật tư, mua sắm</span></a>
                     <ul class="dropdown-menu">
                         <li><a class="nav-link" href="../Page_Master/Null.aspx">Ngân sách, hạng mục mua sắm</a></li>
                         <li><a class="nav-link" href="../Page_Master/Null.aspx">Quản lý gói thầu</a></li>
@@ -5312,7 +5310,7 @@ table tr:hover .table-links {
                         <li><a class="nav-link" href="../Page_Master/Null.aspx">Hiệu quả sử dụng vật tư</a></li>
                     </ul>
                 </li>
-                <li><a class="nav-link" href="../Page_Master/Manage_user"><i class="fas fa-user-shield"></i> <span>Quản lý người dùng</span></a></li>
+                <li><a class="nav-link" href="../Page_Master/Manage_user"><i class="bi-person-fill"></i> <span>Quản lý người dùng</span></a></li>
                     
 
             </ul>
@@ -5321,7 +5319,7 @@ table tr:hover .table-links {
     <br />
     <div class="main-content" style="min-height: 543px;">
         <section class="section" style="margin-bottom: 20px;z-index: 2;">
-            <div class="mainMenu" style="margin-top: -15px;">
+            <div class="mainMenu">
                 <ul class="mainMenu-list">
                     <li><a id="Vung1"  class="a_menu" href="../Page_Master/Manage_ship?vung=1">VÙNG 1</a></li>
                     <li><a id="Vung2"  class="a_menu" href="../Page_Master/Manage_ship?vung=2">VÙNG 2</a></li>
@@ -5339,7 +5337,7 @@ table tr:hover .table-links {
                                
                             <div class="dropdown-menu" id="menu_infor_login">
                                 <a class="dropdown-item" href="../Page_Master/Null.aspx"><i class="bi bi-info-circle icon_menu_account"> Thông tin tài khoản</i></a>
-                                <a class="dropdown-item" href="../Page_Master/Null.aspx"><i class="bi bi-unlock-fill icon_menu_account"> Đổi mật khẩu</i> </a>
+                                <a class="dropdown-item" href="../Page_Master/Change_Password"><i class="bi bi-unlock-fill icon_menu_account"> Đổi mật khẩu</i> </a>
                                 <a class="dropdown-item" href="#" onclick="clickDangXuat()"><i class="bi bi-box-arrow-in-left icon_menu_account "id="btnDangXuat"> Đăng xuất</i> </a>
                             </div>
                         </div>
@@ -5407,7 +5405,7 @@ table tr:hover .table-links {
     <script src="../Scripts/vendor/dataTables.responsive.min.js"></script>
     <script src="../Scripts/vendor/responsive.bootstrap4.min.js"></script>
     <script src="../Scripts/vendor/jquery.nicescroll.min.js"></script>
-    <script src="../Scripts/js/Master.js"></script>
+    <script src="../Scripts/js/Master.js"></script>--%>
     <script>
         $(document).ready(function () {
             if (sessionStorage.getItem("userLoginUsername") != null) {
@@ -5577,7 +5575,7 @@ table tr:hover .table-links {
                         $('.navbar-bg').css("width", "100%");
                         $('.navbar-bg').css("left", "0");
                     }
-                    $('.mainMenu').css("margin-top", "-15px");
+                    $('.mainMenu').css("margin-top", "-40px");
                     $('.navbar-bg').css("height", "100%");
                     $(".main-sidebar").css({
                         overflow: 'hidden'
@@ -5873,11 +5871,11 @@ table tr:hover .table-links {
                     $(target).collapse('toggle');
                     $(target).on('shown.bs.collapse', function (e) {
                         e.stopPropagation();
-                        me.html('<i class="fas fa-minus"></i>');
+                        me.html('<i class="bi-dash"></i>');
                     });
                     $(target).on('hidden.bs.collapse', function (e) {
                         e.stopPropagation();
-                        me.html('<i class="fas fa-plus"></i>');
+                        me.html('<i class="bi-plus"></i>');
                     });
                     return false;
                 });
