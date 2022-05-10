@@ -19,16 +19,16 @@
     <!-- Datatables CSS -->--%>
     <%-- %><link href="../Content/icon/all.css" rel="stylesheet" />--%>
     <%-- %><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">--%>
-    <%-- %><link href="../Content/dataTables.bootstrap4.min.css" rel="stylesheet" />
-    <link href="../Content/buttons.bootstrap4.min.css" rel="stylesheet" />
-    <link href="../Content/responsive.bootstrap4.min.css" rel="stylesheet" />
+    <link href="../Content/dataTables.bootstrap4.min.css" rel="stylesheet" />
+<%--    <link href="../Content/buttons.bootstrap4.min.css" rel="stylesheet" />
+    <link href="../Content/responsive.bootstrap4.min.css" rel="stylesheet" />--%>
 
     <!-- Template Main CSS File -->
 <%--    <link href="../css/LayoutAdmin.css" rel="stylesheet" />--%>
 
     <!-- fas fa icon CSS-->
     <link href="../Content/MaterialIcons.css" rel="stylesheet" />
-    <link href="../Content/font-awesome.min.css" rel="stylesheet" />--%>
+    <link href="../Content/font-awesome.min.css" rel="stylesheet" />
 
     <!-- Table icon CSS -->
     <style>
@@ -134,7 +134,6 @@
 .custom-select:focus,
 .form-control:focus {
     box-shadow: none !important;
-    outline: none;
 }
 
 a {
@@ -5338,7 +5337,7 @@ table tr:hover .table-links {
                                
                             <div class="dropdown-menu" id="menu_infor_login">
                                 <a class="dropdown-item" href="../Page_Master/Null.aspx"><i class="bi bi-info-circle icon_menu_account"> Thông tin tài khoản</i></a>
-                                <a class="dropdown-item" href="../Page_Master/Null.aspx"><i class="bi bi-unlock-fill icon_menu_account"> Đổi mật khẩu</i> </a>
+                                <a class="dropdown-item" href="../Page_Master/Change_Password"><i class="bi bi-unlock-fill icon_menu_account"> Đổi mật khẩu</i> </a>
                                 <a class="dropdown-item" href="#" onclick="clickDangXuat()"><i class="bi bi-box-arrow-in-left icon_menu_account "id="btnDangXuat"> Đăng xuất</i> </a>
                             </div>
                         </div>

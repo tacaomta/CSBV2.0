@@ -14,7 +14,7 @@ namespace CSB.Page_Master
         {
 
         }
-        protected void btn_update1_Click(object sender, EventArgs e)
+        protected void btn_update_Click(object sender, EventArgs e)
         {
             if (FileImgsave_update.PostedFile != null)
             {

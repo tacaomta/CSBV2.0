@@ -25,14 +25,14 @@
                     <div class="col-md-6" style="padding: 15px 50px;">
                         <div class="imageupload panel panel-success" style="height: 100%; display: flex; flex-direction: column; justify-content: space-between;">
                             <div class="panel-heading">
-                                <h3 class="panel-title" style="padding: 5px 10px; margin: 0;">Hình ảnh tàu kiểm ngư 4007</h3>
+                                <h3 id="add_panel-title" class="panel-title" style="padding: 5px 10px; margin: 0;">Chọn hình ảnh cho tàu</h3>
                             </div>
                             <div class="file-tab panel-body" style="padding: 0;">
                                 <img class="img-responsive" id="upload_imageproduct" src="../Image/Ships/boat.jpg" style="max-height: 300px; margin: 0 auto;"/>
                             </div>
                             <div class="panel-footer text-justify" style="padding: 0;">
                                 <%--<input type="file" name="Anh" id="Anh" title="Cập nhật ảnh mới" class="btn btn-default" style="width: stretch" />--%>
-                                 <asp:FileUpload ID="FileImgsave" runat="server"  />
+                                 <asp:FileUpload ID="FileImgsave" onchange="PreviewImage()" runat="server"  />
                             </div>
                         </div>
                     </div>
@@ -203,8 +203,8 @@
             </div>
 
             <div class="panel-footer text-right">
+                <button class="btn btn-warning"><span class="glyphicon glyphicon-remove-sign"></span>&nbsp;Xoá ô nhập</button>
                 <asp:Button ID="btn_save" class="btn btn-info" runat="server" Text="Lưu thông tin" OnClick="btn_save_Click"/>
-                <button class="btn btn-warning"><span class="glyphicon glyphicon-remove-sign"></span>Xoá ô nhập</button>
           <%--      <button class="btn btn-success"><span class="glyphicon glyphicon-floppy-saved"></span>Lưu thông tin</button>--%>
             </div>
         </form>
@@ -213,10 +213,10 @@
     </div>
     <script src="../Scripts/jquery-3.4.1.min.js"></script>
     <script src="../Scripts/bootstrap.min.js"></script>
-    <%--<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.14.30/js/bootstrap-datetimepicker.min.js"></script>
+<%--    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.14.30/js/bootstrap-datetimepicker.min.js"></script>
     <script type="text/javascript">
         $(function () {
-            $('#add_ngaycap').datepicker({
+            $('#add_NgayCap').datepicker({
                 format: 'lt'
             });
         });
@@ -309,8 +309,16 @@
             debugger;
             var id_Flotilla = $('#add_HaiDoi').val();
             var id_Captain = $('#add_ThuyenTruong').val();
+            var kt_image = $("#MainContentAdmin_FileImgsave").val();
+            var image_link;
+            if (kt_image == "") {
+                image_link = "default.jpg";
+            }
+            else {
+                image_link = $('#MainContentAdmin_addTenTau').val() + ".jpg";
+            }
             var New_Ship = {
-                Image: $('#MainContentAdmin_addTenTau').val() + ".jpg",
+                Image: image_link,
                 Name: $('#MainContentAdmin_addTenTau').val(),
                 RegistrationNumber: $('#add_SoHieu').val(),
                 Weight: $('#add_TrongTai').val(),
@@ -358,5 +366,18 @@
                 },
             });
         });
+        function PreviewImage() {
+            var oFReader = new FileReader();
+            if (document.getElementById("MainContentAdmin_FileImgsave").files[0] == null) alert("1");
+            oFReader.readAsDataURL(document.getElementById("MainContentAdmin_FileImgsave").files[0]);
+
+            oFReader.onload = function (oFREvent) {
+                document.getElementById("upload_imageproduct").src = oFREvent.target.result;
+            };
+        };
+        function Xoa() {
+            $('#MainContentAdmin_FileImgsave').attr('disabled', '');
+            document.getElementById("upload_imageproduct").src = ""
+        }
     </script>
 </asp:Content>

@@ -25,14 +25,14 @@
                     <div class="col-md-6" style="padding: 15px 50px;">
                         <div class="imageupload panel panel-success" style="height: 100%; display: flex; flex-direction: column; justify-content: space-between;">
                             <div class="panel-heading">
-                                <h3 class="panel-title" style="padding: 5px 10px; margin: 0;">Hình ảnh tàu kiểm ngư 4007</h3>
+                                <h3 id="panel-title" class="panel-title" style="padding: 5px 10px; margin: 0;">Chọn hình ảnh cho tàu</h3>
                             </div>
                             <div class="file-tab panel-body" style="padding: 0;">
                                 <img class="img-responsive" id="upload_imageproduct" src="../Image/Ships/boat.jpg" style="max-height: 300px; margin: 0 auto;"/>
                             </div>
                             <div class="panel-footer text-justify" style="padding: 0;">
                                 <%--<input type="file" name="Anh" id="Anh" title="Cập nhật ảnh mới" class="btn btn-default" style="width: stretch" />--%>
-                                 <asp:FileUpload ID="FileImgsave_update" runat="server"  />
+                                 <asp:FileUpload ID="FileImgsave_update" onchange="PreviewImage()" runat="server"  />
                             </div>
                         </div>
                     </div>
@@ -53,7 +53,7 @@
                                 <label class="col-md-4 control-label" style="text-align: right"><strong>Số hiệu <span style="color: red;">(*)</span>: </strong></label>
                                 <div class="col-md-8 input-group">
                                     <span class="input-group-addon">ví dụ: 22-44-66</span>
-                                    <input type="text" id="update_SoHieu"  class="form-control" placeholder="Số hiệu tàu">
+                                    <input type="text" id="update_SoHieu"  class="form-control"  placeholder="Số hiệu tàu">
                                     <span class="glyphicon glyphicon-remove form-control-feedback text-danger"></span>
                                 </div>
                             </div>
@@ -203,7 +203,7 @@
             </div>
 
             <div class="panel-footer text-right">
-                <asp:Button ID="btn_save" class="btn btn-info" runat="server" Text="Lưu thông tin" OnClick="btn_update1_Click"/>
+                <asp:Button ID="btn_save" class="btn btn-info" runat="server" Text="Lưu thông tin" OnClick="btn_update_Click"/>
                 <button class="btn btn-warning"><span class="glyphicon glyphicon-remove-sign"></span>Xoá ô nhập</button>
           <%--      <button class="btn btn-success"><span class="glyphicon glyphicon-floppy-saved"></span>Lưu thông tin</button>--%>
             </div>
@@ -315,6 +315,13 @@
                 dataType: "json",
                 success: function (data) {
                     console.log(data);
+                    if (data.Image == "default.jpg") {
+                        $("#panel-title").html("Hình ảnh tàu kiểm ngư " + data.Name + "( chưa có ảnh)");
+                    }
+                    else {
+                        $("#panel-title").html("Hình ảnh tàu kiểm ngư " + data.Name);
+                    }
+                   
                     $('#Ship_ID').val(data.ID);
                     $("#upload_imageproduct").attr("src", "../Image/Ships/" + data.Image);
                     $("#MainContentAdmin_update_TenTau").val(data.Name);
@@ -450,6 +457,19 @@
                 },
             });
         }
+          function PreviewImage() {
+                var oFReader = new FileReader();
+              if (document.getElementById("MainContentAdmin_FileImgsave_update").files[0] == null) alert("1");
+              oFReader.readAsDataURL(document.getElementById("MainContentAdmin_FileImgsave_update").files[0]);
+
+                oFReader.onload = function (oFREvent) {
+                    document.getElementById("upload_imageproduct").src = oFREvent.target.result;
+                };
+            };
+            function Xoa() {
+                $('#MainContentAdmin_FileImgsave_update').attr('disabled', '');
+                document.getElementById("upload_imageproduct").src = ""
+            }
         function getParameterByName(name, url = window.location.href) {
             name = name.replace(/[\[\]]/g, '\\$&');
             var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),

@@ -247,6 +247,7 @@
     <Content Include="Image\Ships\default.jpg" />
     <Content Include="Image\Ships\Tau1.jpg" />
     <Content Include="Page_Master\Add_Ship.aspx" />
+    <Content Include="Page_Master\Change_Password.aspx" />
     <Content Include="Page_Master\Login.aspx" />
     <Content Include="Page_Master\Manage_ship.aspx" />
     <Content Include="Page_Master\Manage_user.aspx" />
@@ -378,6 +379,13 @@
     </Compile>
     <Compile Include="Page_Master\Add_Ship.aspx.designer.cs">
       <DependentUpon>Add_Ship.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Page_Master\Change_Password.aspx.cs">
+      <DependentUpon>Change_Password.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page_Master\Change_Password.aspx.designer.cs">
+      <DependentUpon>Change_Password.aspx</DependentUpon>
     </Compile>
     <Compile Include="Page_Master\Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
