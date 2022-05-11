@@ -72,10 +72,7 @@
                             <div class="form-group has-feedback col-md-12">
                                <label class="col-md-4 control-label" style="text-align: right"><strong>Ngày cấp: </strong></label>
                                 <div class='col-md-8 input-group' id='dateIssued'>
-                                    <input type='text' id="update_NgayCap" class="form-control"  placeholder="Ngày cấp phép" />
-                                    <span class="input-group-addon">
-                                        <span class="glyphicon glyphicon-calendar"></span>
-                                    </span>
+                                    <input type='date' id="update_NgayCap" class="form-control"  placeholder="Ngày cấp phép" />
                                 </div>
                             </div>
                         </div>
@@ -146,18 +143,12 @@
                         <br />
                         <label class="col-md-4 control-label" style="text-align: right">Ngày tạo</label>
                         <div class="col-md-8 input-group">
-                            <span class="input-group-addon">
-                                <span class="glyphicon glyphicon-calendar"></span>
-                            </span>
-                            <input type="text" class="form-control" id="update_NgayTao" placeholder="Ngày tạo" value="01/5/2010" readonly>
+                            <input type="text" class="form-control" id="update_NgayTao" placeholder="Ngày tạo" readonly>
                         </div>
                         <br />
                         <label class="col-md-4 control-label" style="text-align: right">Ngày cập nhật</label>
                         <div class="col-md-8 input-group">
-                            <span class="input-group-addon">
-                                <span class="glyphicon glyphicon-calendar"></span>
-                            </span>
-                            <input type="text" class="form-control" id="update_NgayCapNhat" placeholder="Ngày cập nhật cuối cùng" readonly value="20/6/2021">
+                            <input type="text" class="form-control" id="update_NgayCapNhat" placeholder="Ngày cập nhật cuối cùng" readonly >
                         </div>
                         <br />
                     </div>
@@ -343,6 +334,7 @@
                     $("#update_VatLieu").val(data.Material);
                     list_flotilla(data.Flotilla.Id, 'update_HaiDoi');
                     $("#update_MonNuoc").val(data.Draught);
+                    debugger
                 }, error: function (ret) {
                     console.log('errorGET');
                 },

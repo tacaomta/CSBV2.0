@@ -40,20 +40,20 @@
                         <div class="row">
                             <div class="form-group has-feedback col-md-12">
                                 <label class="col-md-4 control-label" style="text-align: right"><strong>Tên tàu <span style="color: red;">(*)</span>: </strong></label>
-                                <div class="col-md-8 input-group">
+                                <div class="col-md-8 input-group addTenTau">
                                     <span class="input-group-addon">ví dụ: 4008</span>
                                  <%--   <input type="text" class="form-control" placeholder="Tên tàu">--%>
-                                    <asp:TextBox ID="addTenTau" class="form-control"  name="add_TenTau" runat="server" ></asp:TextBox>
-                                    <span class="glyphicon glyphicon-ok form-control-feedback text-success"></span>
+                                    <asp:TextBox ID="addTenTau" class="form-control"  placeholder="Tên tầu" name="add_TenTau" runat="server" ></asp:TextBox>
+                                     <span class="glyphicon glyphicon-remove form-control-feedback text-danger"></span>
                                 </div>
                             </div>
                         </div>
                         <div class="row">
                             <div class="form-group has-feedback col-md-12">
                                 <label class="col-md-4 control-label" style="text-align: right"><strong>Số hiệu <span style="color: red;">(*)</span>: </strong></label>
-                                <div class="col-md-8 input-group">
+                                <div class="col-md-8 input-group add_SoHieu">
                                     <span class="input-group-addon">ví dụ: 22-44-66</span>
-                                    <input type="text" id="add_SoHieu"  class="form-control" placeholder="Số hiệu tàu">
+                                    <input type="text" id="add_SoHieu"  class="form-control"  placeholder="Số hiệu tàu">
                                     <span class="glyphicon glyphicon-remove form-control-feedback text-danger"></span>
                                 </div>
                             </div>
@@ -61,10 +61,11 @@
                         <div class="row">
                             <div class="form-group has-feedback col-md-12">
                                 <label class="col-md-4 control-label"  style="text-align: right"><strong>Nơi cấp: </strong></label>
-                                <div class="col-md-8 input-group">
+                                <div class="col-md-8 input-group add_NoiCap">
                                     <span class="input-group-addon">ví dụ: Đà Nẵng</span>
                                     <input type="text"  id="add_NoiCap" class="form-control" placeholder="Nơi cấp phép">
-                                    <span class="glyphicon glyphicon-warning-sign form-control-feedback text-warning"></span>
+                                     <span class="glyphicon glyphicon-remove form-control-feedback text-danger"></span>
+                                  
                                 </div>
                             </div>
                         </div>
@@ -72,10 +73,7 @@
                             <div class="form-group has-feedback col-md-12">
                                 <label class="col-md-4 control-label" style="text-align: right"><strong>Ngày cấp: </strong></label>
                                 <div class='col-md-8 input-group' id='dateIssued'>
-                                    <input type='text' id="add_NgayCap" class="form-control"  placeholder="Ngày cấp phép" />
-                                    <span class="input-group-addon">
-                                        <span class="glyphicon glyphicon-calendar"></span>
-                                    </span>
+                                    <input type='date' id="add_NgayCap" class="form-control"  placeholder="Ngày cấp phép" value="2010-07-12"/>
                                 </div>
                             </div>
                         </div>
@@ -121,15 +119,13 @@
                         <label class="col-md-4 control-label" style="text-align: right">Lượng nhiên liệu</label>
                         <div class="col-md-8 input-group">
                             <input type="text" class="form-control" id="add_NhienLieuToiDa"  placeholder="Lượng nhiên liệu đối đa">
-                            <span class="input-group-addon">tấn
-                            </span>
+                            <span class="input-group-addon">tấn</span>
                         </div>
                         <br />
                         <label class="col-md-4 control-label" style="text-align: right">Lượng nước ngọt</label>
                         <div class="col-md-8 input-group">
                             <input type="text" class="form-control" id="add_NuocNgotToiDa"  placeholder="Lượng nước ngọt tối đa">
-                            <span class="input-group-addon">tấn
-                            </span>
+                            <span class="input-group-addon">tấn</span>
                         </div>
                         <br />
                         <label class="col-md-4 control-label" style="text-align: right">Tốc độ</label>
@@ -146,18 +142,12 @@
                         <br />
                         <label class="col-md-4 control-label" style="text-align: right">Ngày tạo</label>
                         <div class="col-md-8 input-group">
-                            <span class="input-group-addon">
-                                <span class="glyphicon glyphicon-calendar"></span>
-                            </span>
-                            <input type="text" class="form-control" id="add_NgayTao" placeholder="Ngày tạo" value="01/5/2010" readonly>
+                            <input type="date" class="form-control" id="add_NgayTao" placeholder="Ngày tạo"  readonly value="2010-07-12" >
                         </div>
                         <br />
                         <label class="col-md-4 control-label" style="text-align: right">Ngày cập nhật</label>
                         <div class="col-md-8 input-group">
-                            <span class="input-group-addon">
-                                <span class="glyphicon glyphicon-calendar"></span>
-                            </span>
-                            <input type="text" class="form-control" id="add_NgayCapNhat" placeholder="Ngày cập nhật cuối cùng" readonly value="20/6/2021">
+                            <input type="date" class="form-control" id="add_NgayCapNhat" placeholder="Ngày cập nhật cuối cùng"  readonly value="2010-07-12">
                         </div>
                         <br />
                     </div>
@@ -197,6 +187,7 @@
                             <input type="text" class="form-control" id="add_NamHaThuy" placeholder="Năm hạ thuỷ">
                             <span class="input-group-addon">Ví dụ: 2000</span>
                         </div>
+                      
                         <br />
                     </div>
                 </div>
@@ -213,7 +204,7 @@
     </div>
     <script src="../Scripts/jquery-3.4.1.min.js"></script>
     <script src="../Scripts/bootstrap.min.js"></script>
-<%--    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.14.30/js/bootstrap-datetimepicker.min.js"></script>
+    <%--<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.14.30/js/bootstrap-datetimepicker.min.js"></script>
     <script type="text/javascript">
         $(function () {
             $('#add_NgayCap').datepicker({
@@ -223,6 +214,14 @@
     </script> --%>
     <script>
         var date = new Date();
+        if (Number(date.getMonth()) + 1 < 10) {
+            debugger
+            var strDate_ntn = '' + date.getFullYear() + '-' + '0' + (Number(date.getMonth()) + 1) + '-' + date.getDate();
+        }
+        else {
+            var strDate_ntn = '' + date.getFullYear() + '-' + (Number(date.getMonth()) + 1) + '-' + date.getDate();
+        }
+       
         var strDate = '' + date.getDate() + '/' + (Number(date.getMonth()) + 1) + '/' + date.getFullYear() + ' ' + date.getHours() + ':' + date.getMinutes() + ':' + date.getSeconds();
         var selectedValue_Captain_ID;
         var selectedValue_Flotilla_ID;
@@ -230,7 +229,46 @@
 
             list_captain('', 'add_ThuyenTruong');
             list_flotilla('', 'add_HaiDoi');
+            $("#add_NgayTao").val(strDate_ntn);
+            $("#add_NgayCapNhat").val(strDate_ntn);
+            check_input();
+            
+
         });
+        function check_input() {
+            $("#MainContentAdmin_addTenTau").change(function () {
+                if ($("#MainContentAdmin_addTenTau").val() == '') {
+                    $(".addTenTau span").remove(".glyphicon-ok");
+                    $(".addTenTau").append('<span class="glyphicon glyphicon-remove form-control-feedback text-danger"></span>');
+                }
+                else {
+                    $(".addTenTau span").remove(".glyphicon-remove");
+                    $(".addTenTau").append('<span class="glyphicon glyphicon-ok form-control-feedback text-success"></span>');
+                }
+               
+               
+            })
+            $("#add_SoHieu").change(function () {
+                if ($("#add_SoHieu").val() == '') {
+                    $(".add_SoHieu span").remove(".glyphicon-ok");
+                    $(".add_SoHieu").append('<span class="glyphicon glyphicon-remove form-control-feedback text-danger"></span>');
+                }
+                else {
+                    $(".add_SoHieu span").remove(".glyphicon-remove");
+                    $(".add_SoHieu").append('<span class="glyphicon glyphicon-ok form-control-feedback text-success"></span>');
+                }
+            })
+            $("#add_NoiCap").change(function () {
+                if ($("#add_NoiCap").val() == '') {
+                    $(".add_NoiCap span").remove(".glyphicon-ok");
+                    $(".add_NoiCap").append('<span class="glyphicon glyphicon-remove form-control-feedback text-danger"></span>');
+                }
+                else {
+                    $(".add_NoiCap span").remove(".glyphicon-remove");
+                    $(".add_NoiCap").append('<span class="glyphicon glyphicon-ok form-control-feedback text-success"></span>');
+                }
+            })
+        }
         function list_flotilla(id_flotilla, string_HaiDoi) {
             $.ajax({
                 type: "GET",
