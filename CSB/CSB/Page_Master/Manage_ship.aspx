@@ -585,8 +585,32 @@
             function loadTableShip() {
                 $('table[id=tableship]').each(function () {
                     var table1 = $(this).DataTable({
-                        'destroy': true,
-                        lengthChange: false,
+                        stateSave: true,
+                        "columns": [
+                            { name: 'STT' },
+                            { name: 'TÊN TÀU', width: 65 },
+                            { name: 'SỐ HIỆU', width: 85 },
+                            { name: 'SỐ THUYỀN VIÊN', width: 60 },
+                            { name: 'NĂM HẠ THỦY', width: 60},
+                            { name: 'TRỌNG TẢI', width: 60 },
+                            { name: 'TỐC ĐỘ', width: 60 },
+                            { name: 'TG HT TỐI ĐA', width: 60 },
+                        ],
+                        "columnDefs": [
+                            {
+                                "targets": [0,3,4,5,6,7,8,9],
+                                "searchable": false,
+                            },
+                            {
+                                "targets": [5, 6, 7, 8, 9],
+                                "orderable": false
+                            },
+                            {
+                                "targets": [0, 1, 2, 3, 4],
+                                "orderable": true
+                            }
+                        ],
+                        lengthChange: true,
                         "language": {
                             "sProcessing": "Đang xử lý...",
                             "sLengthMenu": "Xem _MENU_ mục",

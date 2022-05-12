@@ -255,7 +255,30 @@
         function loadTableUser() {
             $('table[id=tableuser]').each(function () {
                 var table1 = $(this).DataTable({
-                    'destroy': true,
+                    stateSave: true,
+                    "columns" : [
+                        { name: 'STT' },
+                        { name: 'Họ tên', width: 140},
+                        { name: 'Tên DN', width: 140 },
+                        { name: 'Quyền', width: 140 },
+                        { name: 'Cập nhật gần đây', width: 200 },
+                        { name: 'Khóa' },
+                        { name: 'Tác vụ' },
+                    ],
+                    "columnDefs": [
+                        {
+                            "targets": [0, 4, 5, 6],
+                            "searchable": false,
+                        },
+                        {
+                            "targets": [5, 6],
+                            "orderable": false
+                        },
+                        {
+                            "targets": [0, 1, 2, 3, 4],
+                            "orderable": true
+                        }
+                    ],
                     lengthChange: false,
                     "language": {
                         "sProcessing": "Đang xử lý...",

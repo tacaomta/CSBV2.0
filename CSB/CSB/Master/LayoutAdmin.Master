@@ -8,30 +8,14 @@
     <link href="../Content/bootstrap.min.css" rel="stylesheet" />
     <link href="../Content/bootstrap-theme.min.css" rel="stylesheet" />
     <link href="../css/bootstrap.min.css" rel="stylesheet" />
-    <!-- Google Fonts -->
-    <!-- Vendor CSS Files -->
-    <%-- %><link href="../Content/bootstrap.min.css" rel="stylesheet" />--%>
     <link href="../Content/bootstrap-icons.css" rel="stylesheet" />
-    <%--<link href="../Content/boxicons.min.css" rel="stylesheet" />
-    <link href="../Content/quill.snow.css" rel="stylesheet" />
-    <link href="../Content/quill.bubble.css" rel="stylesheet" />
-    <link href="../Content/remixicon.css" rel="stylesheet" />
-    <!-- Datatables CSS -->--%>
-    <%-- %><link href="../Content/icon/all.css" rel="stylesheet" />--%>
-    <%-- %><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">--%>
     <link href="../Content/dataTables.bootstrap4.min.css" rel="stylesheet" />
-<%--    <link href="../Content/buttons.bootstrap4.min.css" rel="stylesheet" />
-    <link href="../Content/responsive.bootstrap4.min.css" rel="stylesheet" />--%>
-
-    <!-- Template Main CSS File -->
-<%--    <link href="../css/LayoutAdmin.css" rel="stylesheet" />--%>
-
-    <!-- fas fa icon CSS-->
     <link href="../Content/MaterialIcons.css" rel="stylesheet" />
     <link href="../Content/font-awesome.min.css" rel="stylesheet" />
+    <link href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css" rel="stylesheet" />
 
-    <!-- Table icon CSS -->
     <style>
+        table.fixedHeader-floating{position:fixed !important;background-color:white}table.fixedHeader-floating.no-footer{border-bottom-width:0}table.fixedHeader-locked{position:absolute !important;background-color:white}@media print{table.fixedHeader-floating{display:none}}
         table.table td a {
             color: #a0a5b1;
             display: inline-block;
@@ -5405,19 +5389,21 @@ table tr:hover .table-links {
     <script src="../Scripts/vendor/dataTables.responsive.min.js"></script>
     <script src="../Scripts/vendor/responsive.bootstrap4.min.js"></script>
     <script src="../Scripts/vendor/jquery.nicescroll.min.js"></script>
+    <script src="https://cdn.datatables.net/fixedheader/3.1.2/js/dataTables.fixedHeader.min.js"></script>
+
     <script src="../Scripts/js/Master.js"></script>--%>
     <script>
-        //$(document).ready(function () {
-        //    if (sessionStorage.getItem("userLoginUsername") != null) {
-        //        $('#user-login-fullname').text(" " + sessionStorage.getItem("userLoginFullname"));
-        //        $('#btnDangXuat').text(" Đăng xuất");
-        //    }
-        //    else {
-        //        $('#user-login-fullname').text(" Người dùng X");
-        //        $('#btnDangXuat').text(" Đăng nhập");
-        //        window.location = baseaddress + "Page_Master/Login";
-        //    }
-        //});
+        $(document).ready(function () {
+            if (sessionStorage.getItem("userLoginUsername") != null) {
+                $('#user-login-fullname').text(" " + sessionStorage.getItem("userLoginFullname"));
+                $('#btnDangXuat').text(" Đăng xuất");
+            }
+            else {
+                $('#user-login-fullname').text(" Người dùng X");
+                $('#btnDangXuat').text(" Đăng nhập");
+                window.location = baseaddress + "Page_Master/Login";
+            }
+        });
 
         function clickDangXuat() {
             if (sessionStorage.getItem("userLoginUsername") != null) {
