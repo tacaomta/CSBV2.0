@@ -5409,17 +5409,17 @@ table tr:hover .table-links {
     <script src="../Scripts/vendor/jquery.nicescroll.min.js"></script>
     <script src="../Scripts/js/Master.js"></script>
     <script>
-        $(document).ready(function () {
-            if (sessionStorage.getItem("userLoginUsername") != null) {
-                $('#user-login-fullname').text(" " + sessionStorage.getItem("userLoginFullname"));
-                $('#btnDangXuat').text(" Đăng xuất");
-            }
-            else {
-                $('#user-login-fullname').text(" Người dùng X");
-                $('#btnDangXuat').text(" Đăng nhập");
-                window.location = baseaddress + "Page_Master/Login";
-            }
-        });
+        //$(document).ready(function () {
+        //    if (sessionStorage.getItem("userLoginUsername") != null) {
+        //        $('#user-login-fullname').text(" " + sessionStorage.getItem("userLoginFullname"));
+        //        $('#btnDangXuat').text(" Đăng xuất");
+        //    }
+        //    else {
+        //        $('#user-login-fullname').text(" Người dùng X");
+        //        $('#btnDangXuat').text(" Đăng nhập");
+        //        window.location = baseaddress + "Page_Master/Login";
+        //    }
+        //});
 
         function clickDangXuat() {
             if (sessionStorage.getItem("userLoginUsername") != null) {
