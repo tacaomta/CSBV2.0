@@ -263,6 +263,7 @@
     <Content Include="Page_Master\Ship_equiment.aspx">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Page_Master\Ship_equipment2.aspx" />
     <Content Include="Page_Master\TrangChu.aspx" />
     <Content Include="Page_Master\Update_Ship.aspx" />
     <Content Include="Page_Master\WebForm1.aspx" />
@@ -451,6 +452,13 @@
     <Compile Include="Page_Master\Ship_equiment.aspx.designer.cs">
       <DependentUpon>Ship_equiment.aspx</DependentUpon>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Page_Master\Ship_equipment2.aspx.cs">
+      <DependentUpon>Ship_equipment2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page_Master\Ship_equipment2.aspx.designer.cs">
+      <DependentUpon>Ship_equipment2.aspx</DependentUpon>
     </Compile>
     <Compile Include="Page_Master\TrangChu.aspx.cs">
       <DependentUpon>TrangChu.aspx</DependentUpon>
