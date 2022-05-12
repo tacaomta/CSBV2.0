@@ -15,34 +15,6 @@
                 <div class="section-header">
                     <div class="col-md-12">
                         <table id="tableuser" class="table table-bordered table-striped table-md" style="width: 100%">
-                            <thead>
-                                <tr>
-                                    <th>STT</th>
-                                    <th>Họ tên</th>
-                                    <th>Tên DN</th>
-                                    <th>Quyền</th>
-                                    <th>Cập nhật gần đây</th>
-                                    <th>Khóa</th>
-                                    <th>Tác vụ</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>1</td>
-                                    <td>Tiger Nixon</td>
-                                    <td>System Architect</td>
-                                    <td>Edinburgh</td>
-                                    <td>61</td>
-                                    <td>2011/04/25</td>
-                                    <td>$320,800</td>
-                                    <td>
-                                        <a href="#"><i class="fas fa-edit icon_action" title="Sửa thông tin"></i></a>
-                                        <a href="#"><i class="fas fa-trash-alt icon_action" title="Xoá thông tin"></i></a>
-                                    </td>
-                                </tr>
-
-                            </tbody>
-
                         </table>
                     </div>
                 </div>
@@ -300,7 +272,7 @@
                 });
                 table1.buttons().container()
                     .appendTo('this_wrapper .col-md-6:eq(0)');
-                $('.col-sm-12').first().html('<button id="btn_adduser" onclick="btn_adduser()" class="btn btn-info btn-lg col-md-6" data-toggle="modal" data-target="#model-add-user" style="height: 35px; padding - top: 4px;margin - top: -4px;">Thêm người dùng</button>');
+                $('.col-sm-12').first().html('<button id="btn_adduser" onclick="btn_adduser()" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#model-add-user" style="height: 35px; padding - top: 4px;margin - top: -4px;">Thêm người dùng</button>');
             });
         };
 
