@@ -39,6 +39,15 @@
             flex-wrap: wrap-reverse;
         }
     </style>
+    <div class="mainMenu" style="justify-content: flex-start">
+        <ul class="mainMenu-list">
+            <li><a id="Vung1" class="a_menu" href="../Page_Master/Manage_ship?vung=1">VÙNG 1</a></li>
+            <li><a id="Vung2" class="a_menu" href="../Page_Master/Manage_ship?vung=2">VÙNG 2</a></li>
+            <li><a id="Vung3" class="a_menu" href="../Page_Master/Manage_ship?vung=3">VÙNG 3</a></li>
+            <li><a id="Vung4" class="a_menu" href="../Page_Master/Manage_ship?vung=4">VÙNG 4</a></li>
+            <li><a class="a_menu" href="../Page_Master/Null.aspx">CÁC ĐƠN VỊ TRỰC THUỘC</a></li>
+        </ul>
+    </div>
     <div id="form1">
         <div class="section-header">
             <div class="">
@@ -318,7 +327,7 @@
                         $('#tableship').html(tabletext);
                         loadTableShip();
                         //$('#tableship_wrapper .row .col-sm-12').first().html('<button onclick="btn_addship()" class="btn btn-info btn-lg col-md-6" /*data-toggle="modal" data-target="#model-add-ship"*/ style="height: 40px; margin-bottom: 8px; margin-top: -4px; font-size: 18px;"><span class="glyphicon glyphicon-plus"></span>Thêm tàu</button>');
-                        $('#tableship_wrapper .row .col-sm-12').first().html('<button onclick="btn_addship()" class="btn btn-lg btn-primary"><span class="glyphicon glyphicon-plus-sign"></span> &nbsp;Thêm mới tàu</button>');
+                        $('#tableship_wrapper .row .col-sm-12').first().html('<button onclick="btn_addship()" class="btn btn-lg btn-primary mb-3"><span class="glyphicon glyphicon-plus-sign"></span> &nbsp;Thêm mới tàu</button>');
                         $('#tableship_wrapper .row').first().next().children().css("overflow-x", "auto");
                     }, error: function (ret) {
                         console.log('errorGET');
@@ -587,14 +596,16 @@
                     var table1 = $(this).DataTable({
                         stateSave: true,
                         "columns": [
-                            { name: 'STT' },
-                            { name: 'TÊN TÀU', width: 65 },
-                            { name: 'SỐ HIỆU', width: 85 },
-                            { name: 'SỐ THUYỀN VIÊN', width: 60 },
-                            { name: 'NĂM HẠ THỦY', width: 60},
+                            { name: 'STT', width: 30  },
+                            { name: 'TÊN TÀU', width: 80 },
+                            { name: 'SỐ HIỆU', width: 100 },
+                            { name: 'SỐ THUYỀN VIÊN', width: 100 },
+                            { name: 'NĂM HẠ THỦY', width: 80},
                             { name: 'TRỌNG TẢI', width: 60 },
                             { name: 'TỐC ĐỘ', width: 60 },
-                            { name: 'TG HT TỐI ĐA', width: 60 },
+                            { name: 'TG HT TỐI ĐA', width: 80 },
+                            { name: 'XEM THIẾT BỊ', width: 80 },
+                            { name: 'TÁC VỤ', width: 40 },
                         ],
                         "columnDefs": [
                             {
