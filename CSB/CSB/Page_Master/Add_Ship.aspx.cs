@@ -10,10 +10,7 @@ namespace CSB.Page_Master
 {
     public partial class Add_Ship : System.Web.UI.Page
     {
-        protected void Page_Load(object sender, EventArgs e)
-        {
 
-        }
         protected void btn_save_Click(object sender, EventArgs e)
         {
             if (FileImgsave.PostedFile != null)

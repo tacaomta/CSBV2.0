@@ -54,6 +54,14 @@
             <param name="user">thông tin người dùng</param>
             <returns></returns>
         </member>
+        <member name="M:CSBAPI.Controllers.UserController.UpdatePassword(ShipyardInfo.classes.User,System.String)">
+            <summary>
+            Hàm cập nhật mật khẩu người dùng
+            </summary>
+            <param name="user">Thông tin user: username và password cũ</param>
+            <param name="newpassword">password mới</param>
+            <returns>trả về status OK nếu thành công, ngược lại Sai</returns>
+        </member>
         <member name="M:CSBAPI.Controllers.UserController.DeleteUser(System.String)">
             <summary>
             Xoá thông tin người dùng

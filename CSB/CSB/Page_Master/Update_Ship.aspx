@@ -1,44 +1,46 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Master/LayoutAdmin.Master" AutoEventWireup="true" CodeBehind="Update_Ship.aspx.cs" Inherits="CSB.Page_Master.Update_Ship" %>
+﻿<%@ Page Title="Sửa thông tin tàu" Language="C#" MasterPageFile="~/Master/LayoutAdmin.Master" AutoEventWireup="true" CodeBehind="Update_Ship.aspx.cs" Inherits="CSB.Page_Master.Update_Ship" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContentAdmin" runat="server">
-
-         <link href="../Content/bootstrap.min.css" rel="stylesheet" />
-    <link href="../Content/bootstrap-theme.min.css" rel="stylesheet" />
     <style type="text/css">
         .row {
             margin-bottom: 20px;
         }
+        .select-inform {
+            padding: 10px 10px;
+            font-size: 13px;
+            line-height: 42px;
+            background-color: rgba(179,164,164,0.1);
+            border-color: rgba(252,252,252,0.1);
+            width: 100%;
+            color: #555;
+        }
     </style>
-    <div class="container">
-        
-        <br />
-        <br />
-        <br />
+    <div class="" style="margin: 0 auto; width: 98%">
         <form id="form_update_ship" runat="server" class="panel panel-info">
             <div class="panel-heading">
-                <h2 class="panel-title">Thông tin chi tiết của tàu</h2>
+                <h2 class="panel-title" style="padding: 5px 10px; margin: 0;">Sửa thông tin tàu</h2>
             </div>
-            <div class="panel-body">
+            <div class="panel-body" style="background-color: #ffffff">
                 <input type="hidden" class="form-control" id="Ship_ID">
                 <div class="row">
-                    <div class="col-md-6">
-                        <div class="imageupload panel panel-success">
+                    <div class="col-md-6" style="padding: 15px 50px;">
+                        <div class="imageupload panel panel-success" style="height: 100%; display: flex; flex-direction: column; justify-content: space-between;">
                             <div class="panel-heading">
-                                <h3 class="panel-title">Hình ảnh tàu kiểm ngư 4007</h3>
+                                <h3 id="panel-title" class="panel-title" style="padding: 5px 10px; margin: 0;">Chọn hình ảnh cho tàu</h3>
                             </div>
-                            <div class="file-tab panel-body">
-                                <img class="img-responsive" id="upload_imageproduct" src="../Image/Ships/boat.jpg" />
+                            <div class="file-tab panel-body" style="padding: 0;">
+                                <img class="img-responsive" id="upload_imageproduct" src="../Image/Ships/boat.jpg" style="max-height: 300px; margin: 0 auto;"/>
                             </div>
-                            <div class="panel-footer text-justify">
+                            <div class="panel-footer text-justify" style="padding: 0;">
                                 <%--<input type="file" name="Anh" id="Anh" title="Cập nhật ảnh mới" class="btn btn-default" style="width: stretch" />--%>
-                                 <asp:FileUpload ID="FileImgsave_update" runat="server"  />
+                                 <asp:FileUpload ID="FileImgsave_update" onchange="PreviewImage()" runat="server"  />
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-6" style="padding: 30px 50px 30px 0px;">
                         <div class="row">
-                            <div class="form-group has-feedback">
-                                <label class="col-md-4 control-label" style="text-align: right">Tên tàu <span style="color: red;">(*)</span></label>
-                                <div class="col-md-7 input-group">
+                            <div class="form-group has-feedback col-md-12">
+                                <label class="col-md-4 control-label" style="text-align: right"><strong>Tên tàu <span style="color: red;">(*)</span>: </strong></label>
+                                <div class="col-md-8 input-group">
                                     <span class="input-group-addon">ví dụ: 4008</span>
                                  <%--   <input type="text" class="form-control" placeholder="Tên tàu">--%>
                                     <asp:TextBox ID="update_TenTau" class="form-control"  name="update_TenTau" runat="server" ></asp:TextBox>
@@ -47,19 +49,19 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="form-group has-feedback">
+                            <div class="form-group has-feedback col-md-12">
                                 <label class="col-md-4 control-label" style="text-align: right"><strong>Số hiệu <span style="color: red;">(*)</span>: </strong></label>
-                                <div class="col-md-7 input-group">
+                                <div class="col-md-8 input-group">
                                     <span class="input-group-addon">ví dụ: 22-44-66</span>
-                                    <input type="text" id="update_SoHieu"  class="form-control" placeholder="Số hiệu tàu">
+                                    <input type="text" id="update_SoHieu"  class="form-control"  placeholder="Số hiệu tàu">
                                     <span class="glyphicon glyphicon-remove form-control-feedback text-danger"></span>
                                 </div>
                             </div>
                         </div>
                         <div class="row">
-                            <div class="form-group has-feedback">
-                                <label class="col-md-4 control-label"  style="text-align: right">Nơi cấp</label>
-                                <div class="col-md-7 input-group">
+                            <div class="form-group has-feedback col-md-12">
+                                <label class="col-md-4 control-label" style="text-align: right"><strong>Nơi cấp: </strong></label>
+                                <div class="col-md-8 input-group">
                                     <span class="input-group-addon">ví dụ: Đà Nẵng</span>
                                     <input type="text"  id="update_NoiCap" class="form-control" placeholder="Nơi cấp phép">
                                     <span class="glyphicon glyphicon-warning-sign form-control-feedback text-warning"></span>
@@ -67,47 +69,52 @@
                             </div>
                         </div>
                         <div class="row">
-                            <label class="col-md-4 control-label" style="text-align: right">Ngày cấp</label>
-                            <div class='col-md-7 input-group' id='dateIssued'>
-                                <input type='text' id="update_NgayCap" class="form-control"  placeholder="Ngày cấp phép" />
-                                <span class="input-group-addon">
-                                    <span class="glyphicon glyphicon-calendar"></span>
-                                </span>
+                            <div class="form-group has-feedback col-md-12">
+                               <label class="col-md-4 control-label" style="text-align: right"><strong>Ngày cấp: </strong></label>
+                                <div class='col-md-8 input-group' id='dateIssued'>
+                                    <input type='date' id="update_NgayCap" class="form-control"  placeholder="Ngày cấp phép" />
+                                </div>
                             </div>
                         </div>
                         <div class="row">
-                            <label class="col-md-4 control-label" style="text-align: right">Hải đội</label>
-                            <div class="col-md-7 input-group">
-                                <select id="update_HaiDoi" class="form-control">
-                                </select>
+                            <div class="col-md-12">
+                                <label class="col-md-4 control-label" style="text-align: right">Hải đội</label>
+                                <div class="col-md-8 input-group">
+                                    <select id="update_HaiDoi" class="select-inform">
+                                    </select>
+                                </div>
                             </div>
                         </div>
                         <div class="row">
-                            <label class="col-md-4 control-label" style="text-align: right">Thuyền trưởng</label>
-                            <div class="col-md-7 input-group">
-                                <div class="row">
-                                    <div class="col-md-8">
-                                        <select  id="update_ThuyenTruong" class="form-control">
-                                        </select>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <span class="btn btn-info btn-sm glyphicon glyphicon-eye-open pull-left" title="Xem thông tin"></span>
-                                        <span class="btn btn-primary btn-sm glyphicon glyphicon-plus pull-right" title="Thêm thuyền trưởng"></span>
+                            <div class="col-md-12">
+                                <label class="col-md-4 control-label" style="text-align: right"><strong>Thuyền trưởng: </strong></label>
+                                <div class="col-md-8 input-group">
+                                    <div class="row">
+                                        <div class="col-md-10">
+                                            <select  id="update_ThuyenTruong" class="select-inform">
+                                            </select>
+                                        </div>
+                                        <div class="col-md-2">
+                                            <span class="btn btn-info btn-sm glyphicon glyphicon-eye-open pull-left" title="Xem thông tin"></span>
+                                            <span class="btn btn-primary btn-sm glyphicon glyphicon-plus pull-right" title="Thêm thuyền trưởng"></span>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="row">
-                            <label class="col-md-4 control-label" style="text-align: right">Số thuyền viên</label>
-                            <div class="col-md-7 input-group">
-                                <input type="text" id="update_SoThuyenVien" class="form-control" placeholder="Số thuyền viên">
-                                <span class="input-group-addon">người</span>
+                            <div class="form-group has-feedback col-md-12">
+                                <label class="col-md-4 control-label" style="text-align: right">Số thuyền viên: </label>
+                                <div class="col-md-8 input-group">
+                                    <input type="text" id="update_SoThuyenVien" class="form-control" placeholder="Số thuyền viên">
+                                    <span class="input-group-addon">người</span>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-md-6">
+                    <div class="col-md-6" style="padding: 15px 50px;">
                         <label class="col-md-4 control-label" style="text-align: right">Lượng nhiên liệu</label>
                         <div class="col-md-8 input-group">
                             <input type="text" class="form-control" id="update_NhienLieuToiDa"  placeholder="Lượng nhiên liệu đối đa">
@@ -136,22 +143,16 @@
                         <br />
                         <label class="col-md-4 control-label" style="text-align: right">Ngày tạo</label>
                         <div class="col-md-8 input-group">
-                            <span class="input-group-addon">
-                                <span class="glyphicon glyphicon-calendar"></span>
-                            </span>
-                            <input type="text" class="form-control" id="update_NgayTao" placeholder="Ngày tạo" value="01/5/2010" readonly>
+                            <input type="text" class="form-control" id="update_NgayTao" placeholder="Ngày tạo" readonly>
                         </div>
                         <br />
                         <label class="col-md-4 control-label" style="text-align: right">Ngày cập nhật</label>
                         <div class="col-md-8 input-group">
-                            <span class="input-group-addon">
-                                <span class="glyphicon glyphicon-calendar"></span>
-                            </span>
-                            <input type="text" class="form-control" id="update_NgayCapNhat" placeholder="Ngày cập nhật cuối cùng" readonly value="20/6/2021">
+                            <input type="text" class="form-control" id="update_NgayCapNhat" placeholder="Ngày cập nhật cuối cùng" readonly >
                         </div>
                         <br />
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-6" style="padding: 15px 50px 0px 0px;">
                         <label class="col-md-4 control-label" style="text-align: right">Trọng tải</label>
                         <div class="col-md-8 input-group">
                             <input type="text" class="form-control" id="update_TrongTai" placeholder="Trọng tải">
@@ -305,6 +306,13 @@
                 dataType: "json",
                 success: function (data) {
                     console.log(data);
+                    if (data.Image == "default.jpg") {
+                        $("#panel-title").html("Hình ảnh tàu kiểm ngư " + data.Name + "( chưa có ảnh)");
+                    }
+                    else {
+                        $("#panel-title").html("Hình ảnh tàu kiểm ngư " + data.Name);
+                    }
+                   
                     $('#Ship_ID').val(data.ID);
                     $("#upload_imageproduct").attr("src", "../Image/Ships/" + data.Image);
                     $("#MainContentAdmin_update_TenTau").val(data.Name);
@@ -326,6 +334,7 @@
                     $("#update_VatLieu").val(data.Material);
                     list_flotilla(data.Flotilla.Id, 'update_HaiDoi');
                     $("#update_MonNuoc").val(data.Draught);
+                    debugger
                 }, error: function (ret) {
                     console.log('errorGET');
                 },
@@ -440,6 +449,19 @@
                 },
             });
         }
+          function PreviewImage() {
+                var oFReader = new FileReader();
+              if (document.getElementById("MainContentAdmin_FileImgsave_update").files[0] == null) alert("1");
+              oFReader.readAsDataURL(document.getElementById("MainContentAdmin_FileImgsave_update").files[0]);
+
+                oFReader.onload = function (oFREvent) {
+                    document.getElementById("upload_imageproduct").src = oFREvent.target.result;
+                };
+            };
+            function Xoa() {
+                $('#MainContentAdmin_FileImgsave_update').attr('disabled', '');
+                document.getElementById("upload_imageproduct").src = ""
+            }
         function getParameterByName(name, url = window.location.href) {
             name = name.replace(/[\[\]]/g, '\\$&');
             var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
