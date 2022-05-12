@@ -12,44 +12,38 @@
     </style>
     <div id="form1">
         <div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-4 login-box col-md-offset-4 offset-md-4">
-                        <div class="col-lg-12 login-key">
+            <div class="container" style="border: none;background-color: #ffffff;border-radius: 10px;box-shadow: 0 4px 8px rgba(0, 0, 0, 0.03);">
+                <div class="row" style="padding: 3rem 0">
+                    <div class="login-box col-md-4" style="margin: 0 auto;">
+                        <div class="login-key" style="display: flex; justify-content: center; margin-bottom: 3rem;">
                             <img class="ship-key" src="../Image/ic-login.png" />
                         </div>
-                        <div class="col-lg-12 login-title">
+                        <div class="login-title my-3" style="display: flex; justify-content: center; font-size: 20px;">
                             ĐỔI MẬT KHẨU
                         </div>
 
-                        <div class="col-lg-12 login-form">
-                            <div class="col-lg-12 login-form">
-                                <div class="form-group">
-                                    <i class="material-icons icon-name">lock</i>
-                                    <input type="password" pattern=".{6,}" title="Mật khẩu tối thiểu 6 kí tự" class="form-control" id="password_old" placeholder="Mật khẩu cũ" />
+                        <div class="login-form">
+                            <div class="form-group mb-4" style="display: flex; align-items: center;">
+                                <i class="material-icons icon-name mr-2">lock</i>
+                                <input type="password" pattern=".{6,}" title="Mật khẩu tối thiểu 6 kí tự" class="form-control" id="password_old" placeholder="Mật khẩu cũ" />
+                            </div>
+                            <div class="form-group mb-4" style="display: flex; align-items: center;">
+                                <i class="material-icons icon-name mr-2">lock</i>
+                                <input type="password" pattern=".{6,}" title="Mật khẩu tối thiểu 6 kí tự" class="form-control" id="password_new" placeholder="Mật khẩu mới" />
+                            </div>
+                            <div class="form-group" style="display: flex; align-items: center;">
+                                <i class="material-icons icon-name mr-2">lock</i>
+                                <input type="password" pattern=".{6,}" title="Mật khẩu tối thiểu 6 kí tự" class="form-control" id="password_confirm" placeholder="Xác nhận mật khẩu" />
+                            </div>
+                            <div class="loginbttm" style="display: flex; justify-content: space-between;">
+                                <div class="login-btm login-text">
+                                    <p hidden="hidden" id="error-login-text">Đổi mật khẩu không thành công!</p>
                                 </div>
-                                <div class="form-group">
-                                    <i class="material-icons icon-name">lock</i>
-                                    <input type="password" pattern=".{6,}" title="Mật khẩu tối thiểu 6 kí tự" class="form-control" id="password_new" placeholder="Mật khẩu mới" />
-                                </div>
-                                <div class="form-group">
-                                    <i class="material-icons icon-name">lock</i>
-                                    <input type="password" pattern=".{6,}" title="Mật khẩu tối thiểu 6 kí tự" class="form-control" id="password_confirm" placeholder="Xác nhận mật khẩu" />
-                                </div>
-                                <div class="col-md-12 loginbttm">
-                                    <div class="col-md-12 login-btm login-text">
-                                        <p hidden="hidden" id="error-login-text">Đổi mật khẩu không thành công!</p>
-                                    </div>
-                                    <div class="col-md-12 login-btm login-button">
-                                        <button class="btn btn-outline-primary" onclick="Save_Change()">Lưu thay đổi</button>
-                                    </div>
-                                    <div class="col-md-12 login-btm forgot-password">
-                                        <a>Quên mật khẩu?</a>
-                                    </div>
+                                <div class="login-btm login-button mt-3">
+                                    <button class="btn btn-outline-primary" onclick="Save_Change()">Lưu thay đổi</button>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-3 col-md-2"></div>
                     </div>
                 </div>
             </div>
