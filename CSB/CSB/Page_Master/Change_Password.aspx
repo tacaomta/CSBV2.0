@@ -93,20 +93,18 @@
                     data: JSON.stringify(change_pass),
                     contentType: "application/json",
                     beforeSend: function () { // Before we send the request, remove the .hidden class from the spinner and default to inline-block.
-
+                        
                     },
                     success: function (data) {
                         console.log("okPUT");
                         alert("Đổi mật khẩu thành công! Vui lòng đăng nhập lại!");
+                        window.location = "http://localhost:44347/Page_Master/Login";   
                     }, error: function (ret) {
-                        console.log('errorPUT');
                         $('#error-login-text').text('Mật khẩu cũ không chính xác!');
                         $('#error-login-text').removeAttr('hidden');
-                        return;
                     },
                     complete: function () { // Set our complete callback, adding the .hidden class and hiding the spinner.
-                        $('#loader').addClass('hidden');
-                        window.location = "http://localhost:44347/Page_Master/Login";
+                        
                     },
                 });
             }

@@ -194,8 +194,9 @@
             </div>
 
             <div class="panel-footer text-right">
+                 <button class="btn btn-warning"><span class="glyphicon glyphicon-remove-sign"></span> Xoá ô nhập</button>
                 <asp:Button ID="btn_save" class="btn btn-info" runat="server" Text="Lưu thông tin" OnClick="btn_update_Click"/>
-                <button class="btn btn-warning"><span class="glyphicon glyphicon-remove-sign"></span>Xoá ô nhập</button>
+               
           <%--      <button class="btn btn-success"><span class="glyphicon glyphicon-floppy-saved"></span>Lưu thông tin</button>--%>
             </div>
         </form>
@@ -381,7 +382,7 @@
                 data: JSON.stringify(New_Ship),
                 contentType: "application/json",
                 beforeSend: function () { // Before we send the request, remove the .hidden class from the spinner and default to inline-block.
-                    $('#loader').removeClass('hidden');
+                 
                 },
                 success: function (data) {
                     console.log("okPUT");
@@ -391,7 +392,7 @@
                     console.log('errorPUT');
                 },
                 complete: function () { // Set our complete callback, adding the .hidden class and hiding the spinner.
-                    $('#loader').addClass('hidden');
+                    
                     $('#model-infordetail-ship').modal("hide");
                 },
             });

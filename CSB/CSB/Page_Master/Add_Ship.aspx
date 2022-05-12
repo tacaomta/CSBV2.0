@@ -44,7 +44,7 @@
                                     <span class="input-group-addon">ví dụ: 4008</span>
                                  <%--   <input type="text" class="form-control" placeholder="Tên tàu">--%>
                                     <asp:TextBox ID="addTenTau" class="form-control"  placeholder="Tên tầu" name="add_TenTau" runat="server" ></asp:TextBox>
-                                     <span class="glyphicon glyphicon-remove form-control-feedback text-danger"></span>
+                                    
                                 </div>
                             </div>
                         </div>
@@ -54,7 +54,7 @@
                                 <div class="col-md-8 input-group add_SoHieu">
                                     <span class="input-group-addon">ví dụ: 22-44-66</span>
                                     <input type="text" id="add_SoHieu"  class="form-control"  placeholder="Số hiệu tàu">
-                                    <span class="glyphicon glyphicon-remove form-control-feedback text-danger"></span>
+                                 
                                 </div>
                             </div>
                         </div>
@@ -64,7 +64,7 @@
                                 <div class="col-md-8 input-group add_NoiCap">
                                     <span class="input-group-addon">ví dụ: Đà Nẵng</span>
                                     <input type="text"  id="add_NoiCap" class="form-control" placeholder="Nơi cấp phép">
-                                     <span class="glyphicon glyphicon-remove form-control-feedback text-danger"></span>
+          
                                   
                                 </div>
                             </div>
@@ -229,6 +229,7 @@
 
             list_captain('', 'add_ThuyenTruong');
             list_flotilla('', 'add_HaiDoi');
+            $("#add_NgayCap").val(strDate_ntn);
             $("#add_NgayTao").val(strDate_ntn);
             $("#add_NgayCapNhat").val(strDate_ntn);
             check_input();
