@@ -1,0 +1,17 @@
+﻿
+/*==============TUYEN===================*/
+#Error_Adduser {
+    padding-left: 23px;
+    color: red;
+}
+
+#Error_Edituser {
+    padding-left: 13px;
+    color: red;
+}
+.icon_lock{
+    font-size:21px;
+}
+.icon_unlock {
+    font-size: 21px;
+}

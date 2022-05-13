@@ -12,7 +12,7 @@
     </style>
     <div id="form1">
         <div>
-            <div class="container" style="border: none;background-color: #ffffff;border-radius: 10px;box-shadow: 0 4px 8px rgba(0, 0, 0, 0.03);">
+            <div class="container" style="border: none; background-color: #ffffff; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.03);">
                 <div class="row" style="padding: 3rem 0">
                     <div class="login-box col-md-4" style="margin: 0 auto;">
                         <div class="login-key" style="display: flex; justify-content: center; margin-bottom: 3rem;">
@@ -23,6 +23,10 @@
                         </div>
 
                         <div class="login-form">
+                            <div class="form-group mb-4" style="display: flex; align-items: center;">
+                                <i class="material-icons icon-name mr-2">person</i>
+                                <input type="text" class="form-control" id="username" placeholder="Tài khoản" readonly />
+                            </div>
                             <div class="form-group mb-4" style="display: flex; align-items: center;">
                                 <i class="material-icons icon-name mr-2">lock</i>
                                 <input type="password" pattern=".{6,}" title="Mật khẩu tối thiểu 6 kí tự" class="form-control" id="password_old" placeholder="Mật khẩu cũ" />
@@ -53,7 +57,7 @@
     <script src="../Scripts/bootstrap.min.js"></script>
     <script>
         $(document).ready(function () {
-
+            $("#username").val(sessionStorage.getItem("userLoginUsername"));
         });
         function Save_Change() {
             $('#error-login-text').attr('hidden', '');
@@ -93,18 +97,18 @@
                     data: JSON.stringify(change_pass),
                     contentType: "application/json",
                     beforeSend: function () { // Before we send the request, remove the .hidden class from the spinner and default to inline-block.
-                        
+
                     },
                     success: function (data) {
                         console.log("okPUT");
                         alert("Đổi mật khẩu thành công! Vui lòng đăng nhập lại!");
-                        window.location = "http://localhost:44347/Page_Master/Login";   
+                        window.location = "http://localhost:44347/Page_Master/Login";
                     }, error: function (ret) {
                         $('#error-login-text').text('Mật khẩu cũ không chính xác!');
                         $('#error-login-text').removeAttr('hidden');
                     },
                     complete: function () { // Set our complete callback, adding the .hidden class and hiding the spinner.
-                        
+
                     },
                 });
             }

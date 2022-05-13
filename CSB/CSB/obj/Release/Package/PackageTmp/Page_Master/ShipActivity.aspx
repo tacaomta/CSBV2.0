@@ -62,15 +62,15 @@ a.dropdown-item {
                         <div class="breadcrumb-item active"><a href="#" style="color: #01b5f9; font-size: 18px;">Hoạt động tàu</a></div>
                     </div>
                 </div>
-                <div class="section-header" style="display: block;">
+                <div class="mt-4" style="display: block;">
                     <div class="col-md-12">
-                    <div class="section-body-card" style="color:black;margin-bottom: 20px;">
+                    <div style="color:black;margin-bottom: 20px; display: flex; justify-content: space-between;">
                         <div class="navalueRegion" style="display: flex">
                             <div class="form-group text-uppercase text-left" style="padding: 15px 5px 5px 5px;">
                                 <h6>Vùng</h6>
                             </div>
                             <div class="">
-                                <select id="selRegion" onchange="onchangeRegion(this.value)" valueue="" aria-controls="dataTables-example" class="form-control input-sm">
+                                <select id="selRegion" onchange="onchangeRegion(this.value)" valueue="" aria-controls="dataTables-example" class="form-control input-sm" style="height: 42px;">
                                     <option value="5AEBB23FF45F3C235AFD86B510BF9E8C">Vùng 1</option>
                                     <option value="5AEBB23FF45F3C235AFD86B510BF9E8B">Vùng 2</option>
                                     <option value="5AEBB23FF45F3C235AFD86B510BF9E8D">Vùng 3</option>
@@ -83,7 +83,7 @@ a.dropdown-item {
                                 <h6>Hải đoàn</h6>
                             </div>
                             <div class="">
-                                <select id="selSquadron" onchange="onchangeSquadron(this.value)" valueue="" aria-controls="dataTables-example" class="form-control input-sm">
+                                <select id="selSquadron" onchange="onchangeSquadron(this.value)" valueue="" aria-controls="dataTables-example" class="form-control input-sm" style="height: 42px;">
                                     <option value="">Vùng 1</option>
                                 </select>
                             </div>
@@ -93,7 +93,7 @@ a.dropdown-item {
                                 <h6>Hải đội</h6>
                             </div>
                             <div class="">
-                                <select id="selFlotilla" onchange="onchangeFlotilla(this.value)" valueue="" aria-controls="dataTables-example" class="form-control input-sm">
+                                <select id="selFlotilla" onchange="onchangeFlotilla(this.value)" valueue="" aria-controls="dataTables-example" class="form-control input-sm" style="height: 42px;">
                                     <option value="">Vùng 1</option>
                                 </select>
                             </div>
@@ -105,7 +105,7 @@ a.dropdown-item {
 
                     </div>
                     
-                    <div class="section-body-card">
+                    <div class="">
                         <div class="col-md-12">
                             <div class="card-donvi">
                                 <p class="section-lead" style="font-size:18px; margin-left:1%">
