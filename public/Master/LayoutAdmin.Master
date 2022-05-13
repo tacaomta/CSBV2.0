@@ -5321,7 +5321,7 @@ table tr:hover .table-links {
                             </a>
                                
                             <div class="dropdown-menu" id="menu_infor_login">
-                                <a class="dropdown-item" href="../Page_Master/Null.aspx"><i class="bi bi-info-circle icon_menu_account"> Thông tin tài khoản</i></a>
+                                <a class="dropdown-item" href="../Page_Master/Information_User"><i class="bi bi-info-circle icon_menu_account"> Thông tin tài khoản</i></a>
                                 <a class="dropdown-item" href="../Page_Master/Change_Password"><i class="bi bi-unlock-fill icon_menu_account"> Đổi mật khẩu</i> </a>
                                 <a class="dropdown-item" href="#" onclick="clickDangXuat()"><i class="bi bi-box-arrow-in-left icon_menu_account "id="btnDangXuat"> Đăng xuất</i> </a>
                             </div>
@@ -5366,7 +5366,7 @@ table tr:hover .table-links {
     <!-- ===== JS =====-->
     <script>
         var linkapi = "http://localhost:8082/api/";
-        //http://localhost:44347/
+        //44347
         var baseaddress = "http://localhost:8080/";
     </script>
     <script src="../Scripts/jquery-3.4.1.slim.min.js"></script>
