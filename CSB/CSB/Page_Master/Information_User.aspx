@@ -1,5 +1,10 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Master/LayoutAdmin.Master" AutoEventWireup="true" CodeBehind="Information_User.aspx.cs" Inherits="CSB.Page_Master.Information_User" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContentAdmin" runat="server">
+	<style>
+	 .card{
+		 margin-top:20px;
+	 }
+	</style>
         <div id="form1">
         <div>
             <div class="container" style="border: none; background-color: #ffffff; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.03);">
