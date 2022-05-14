@@ -12,10 +12,58 @@
     <link href="../css/login.css" rel="stylesheet" />
     <link href="../Content/bootstrap.min.css" rel="stylesheet" />
     <link href="../Content/bootstrap-theme.min.css" rel="stylesheet" />
+    
 
 </head>
 <body>
+    <style>
+        /*Hidden class for adding and removing*/
+.lds-dual-ring.hidden {
+    display: none;
+}
 
+/*Add an overlay to the entire page blocking any further presses to buttons or other elements.*/
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0,0,0,.8);
+    z-index: 999;
+    opacity: 1;
+    transition: all 0.5s;
+}
+
+/*Spinner Styles*/
+.lds-dual-ring {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}
+
+    .lds-dual-ring:after {
+        content: " ";
+        display: block;
+        width: 64px;
+        height: 64px;
+        margin: 5% auto;
+        border-radius: 50%;
+        border: 6px solid #fff;
+        border-color: #fff transparent #fff transparent;
+        animation: lds-dual-ring 1.2s linear infinite;
+    }
+
+@keyframes lds-dual-ring {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+    </style>
     <div id="form1">
         <div>
             <div class="container">
@@ -57,7 +105,7 @@
             </div>
         </div>
     </div>
-    <div id="loader" class="lds-dual-ring overlay"></div>
+    <div id="loader" class="lds-dual-ring overlay hidden"></div>
 
     <script src="../Scripts/jquery-3.4.1.slim.min.js"></script>
     <script src="../Scripts/jquery-3.4.1.min.js"></script>
@@ -115,7 +163,7 @@
                     sessionStorage.setItem("userLoginUsername", data.UserName);
                     sessionStorage.setItem("userLoginFullname", data.Fullname);
                     sessionStorage.setItem("userLoginID", data.ID);
-                    window.location = "http://localhost:8080/Page_Master/Manage_ship?vung=1";
+                    window.location = "http://localhost:44347/Page_Master/Manage_ship?vung=1";
                 }, error: function (ret) {
                     console.log(ret);
                     $('#error-login-text').text('Tài khoản hoặc mật khẩu không đúng');
