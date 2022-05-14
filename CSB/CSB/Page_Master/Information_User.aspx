@@ -9,7 +9,7 @@
 
 
         .card {
-            min-height: 476px;
+            min-height: 487px;
             margin-top: 20px;
             position: relative;
             display: flex;
@@ -122,8 +122,9 @@
                                     </div>
 
                                 </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-primary px-4" onclick="updateUser()">Lưu thay đổi</button>
+                                <div class="panel-footer text-right">
+                                    <a href="../Page_Master/Null" style="float: left" class="btn btn-success"><span class="glyphicon glyphicon-arrow-left"></span>&nbsp;Quay lại</a>
+                                    <button type="button" class="btn btn-info" onclick="updateUser_view()"><span class="glyphicon glyphicon-floppy-save"></span>&nbsp;Lưu thay đổi</button>
                                 </div>
                             </div>
                         </div>
@@ -135,7 +136,11 @@
     <script src="../Scripts/jquery-3.4.1.min.js"></script>
     <script src="../Scripts/bootstrap.min.js"></script>
     <script>
+        var date = new Date();
+        var strDate = '' + date.getDate() + '/' + (Number(date.getMonth()) + 1) + '/' + date.getFullYear() + ' ' + date.getHours() + ':' + date.getMinutes() + ':' + date.getSeconds();
         var id_user;
+        var password;
+        var role_id;
         $(document).ready(function () {
             id_user = sessionStorage.getItem("userLoginID");
             debugger
@@ -150,12 +155,14 @@
 
                 },
                 success: function (data) {
-                    $("#title_fullname").val(data.Fullname);
+                    password = data.Password;
+                    role_id = data.Role.RoleId;
+                    $("#title_fullname").html(data.Fullname);
                     if (data.Role.RoleId == 'US') {
-                        $("#title_rolename").val("Người dùng phần mềm");
+                        $("#title_rolename").html("Người dùng phần mềm");
                     }
                     else if (data.Role.RoleId == 'ADMINISTRATOR') {
-                        $("#title_rolename").val("Quản lí phần mềm");
+                        $("#title_rolename").html("Quản lí phần mềm");
                     }
                     $("#TenDayDu_viewuser").val(data.Fullname);
                     $("#TenND_viewuser").val(data.UserName);
@@ -174,6 +181,46 @@
                 },
                 complete: function () { // Set our complete callback, adding the .hidden class and hiding the spinner.
 
+                },
+            });
+        }
+
+        function updateUser_view() {
+            debugger
+            var user = {
+                UserName: $('#TenND_viewuser').val(),
+                Password: '',
+                Fullname: $('#TenDayDu_viewuser').val(),
+                Role: {
+                    RoleId: role_id,
+                    RoleName: $("#Quyen_viewuser").val(),
+                },
+                Created: $('#NgayTao_viewuser').val(),
+                LOCKED: false,
+                ID: id_user
+            }
+
+            $.ajax({
+                type: "PUT",
+                url: linkapi + "update_user",
+                dataType: "json",
+                data: JSON.stringify(user),
+                contentType: "application/json",
+                beforeSend: function () { // Before we send the request, remove the .hidden class from the spinner and default to inline-block.
+                  
+                },
+                success: function (data) {
+                    console.log("okPUT");
+                    alert("Cập nhật thông tin người dùng thành công");
+                    //toastSuccess("Thành công", "Cập nhật thông tin người dùng thành công.");
+                    sessionStorage.setItem("userLoginFullname", data.Fullname);
+                }, error: function (ret) {
+                    console.log('errorPUT');
+                },
+                complete: function () { // Set our complete callback, adding the .hidden class and hiding the spinner.
+                    
+                   
+                    location.reload(true);
                 },
             });
         }
