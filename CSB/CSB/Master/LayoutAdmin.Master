@@ -5377,7 +5377,7 @@ table tr:hover .table-links {
     </script>
     <script src="../Scripts/jquery-3.4.1.slim.min.js"></script>
     <script src="../Scripts/jquery-3.4.1.min.js"></script>
-    <script src="../Scripts/bootstrap-4.6.1/bootstrap.bundle.min.js"></script>
+    <%--<script src="../Scripts/bootstrap-4.6.1/bootstrap.bundle.min.js"></script>--%>
     <script src="../Scripts/vendor/jquery.dataTables.min.js"></script>
     <script src="../Scripts/vendor/dataTables.bootstrap4.min.js"></script>
     <script src="../Scripts/vendor/popper.min.js"></script>

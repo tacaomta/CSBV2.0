@@ -28,7 +28,7 @@
             <div class="modal-content">
                 <div class="card auth_form">
                     <div class="modal-header">
-                        <h6 class="title-modal-banve font-weight-bold" id="largeModalLabel">Thêm người dùng mới</h6>
+                        <h4 class="title-modal-banve font-weight-bold" id="largeModalLabel">Thêm người dùng mới</h4>
                     </div>
                     <div class="modal-body">
 
@@ -94,7 +94,7 @@
             <div class="modal-content">
                 <div class="card auth_form">
                     <div class="modal-header">
-                        <h6 class="title-modal-banve font-weight-bold">Sửa thông tin người dùng</h6>
+                        <h4 class="title-modal-banve font-weight-bold">Sửa thông tin người dùng</h4>
                     </div>
                     <div class="modal-body">
                         <div class="row clearfix ">

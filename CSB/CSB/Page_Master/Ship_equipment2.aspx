@@ -47,7 +47,7 @@
                               <div class="tab-pane active" id="cnt_MayChinh" role="tabpanel" aria-labelledby="btn_MayChinh">
                                   <div id="collMainEngine">
                                     <div class="col-md-12">
-                                        <table id="table_maychinh" class="table table-bordered table-striped table-md" style="width: 100%">
+                                        <table id="table_maychinh" class="table table-bordered table-striped table-md" style="width: 130%">
                                         </table>
                                     </div>
                                   </div>
@@ -55,7 +55,7 @@
                               <div class="tab-pane" id="cnt_MayPhu" role="tabpanel" aria-labelledby="btn_MayPhu">
                                   <div id="collSecondaryEngine">
                                     <div class="col-md-12">
-                                        <table id="table_mayphu" class="table table-bordered table-striped table-md" style="width: 100%">
+                                        <table id="table_mayphu" class="table table-bordered table-striped table-md" style="width: 130%">
                                         </table>
                                     </div>
                                   </div>
@@ -63,7 +63,7 @@
                               <div class="tab-pane" id="cnt_ChanVit" role="tabpanel" aria-labelledby="btn_ChanVit">
                                   <div id="collScrew">
                                     <div class="col-md-12">
-                                        <table id="table_chanvit" class="table table-bordered table-striped table-md" style="width: 100%">
+                                        <table id="table_chanvit" class="table table-bordered table-striped table-md" style="width: 130%">
                                         </table>
                                     </div>
                                   </div>
@@ -71,7 +71,7 @@
                               <div class="tab-pane" id="cnt_KhiTai" role="tabpanel" aria-labelledby="btn_KhiTai">
                                   <div id="collWeapon">
                                     <div class="col-md-12">
-                                        <table id="table_khitai" class="table table-bordered table-striped table-md" style="width: 100%">
+                                        <table id="table_khitai" class="table table-bordered table-striped table-md" style="width: 130%">
                                         </table>
                                     </div>
                                   </div>
@@ -79,7 +79,7 @@
                               <div class="tab-pane" id="cnt_XuongCT" role="tabpanel" aria-labelledby="btn_XuongCT">
                                   <div id="collMotoBoat">
                                     <div class="col-md-12">
-                                        <table id="table_xuongct" class="table table-bordered table-striped table-md" style="width: 100%">
+                                        <table id="table_xuongct" class="table table-bordered table-striped table-md" style="width: 130%">
                                         </table>
                                     </div>
                                   </div>
@@ -87,15 +87,15 @@
                               <div class="tab-pane" id="cnt_Neo" role="tabpanel" aria-labelledby="btn_Neo">
                                   <div id="collAnchor">
                                     <div class="col-md-12">
-                                        <table id="table_toineo" class="table table-bordered table-striped table-md" style="width: 100%">
+                                        <table id="table_toineo" class="table table-bordered table-striped table-md" style="width: 130%">
                                         </table>
                                     </div>
                                     <div class="col-md-12">
-                                        <table id="table_neo" class="table table-bordered table-striped table-md" style="width: 100%">
+                                        <table id="table_neo" class="table table-bordered table-striped table-md" style="width: 130%">
                                         </table>
                                     </div>
                                     <div class="col-md-12">
-                                        <table id="table_xichneo" class="table table-bordered table-striped table-md" style="width: 100%">
+                                        <table id="table_xichneo" class="table table-bordered table-striped table-md" style="width: 130%">
                                         </table>
                                     </div>
                                   </div>     
@@ -103,7 +103,7 @@
                               <div class="tab-pane" id="cnt_TBCuuSinh" role="tabpanel" aria-labelledby="btn_TBCuuSinh">
                                   <div id="collLifeSaving">
                                     <div class="col-md-12">
-                                        <table id="table_tbcuusinh" class="table table-bordered table-striped table-md" style="width: 100%">
+                                        <table id="table_tbcuusinh" class="table table-bordered table-striped table-md" style="width: 130%">
                                         </table>
                                     </div>
                                   </div>
@@ -111,7 +111,7 @@
                               <div class="tab-pane" id="cnt_TBKhac" role="tabpanel" aria-labelledby="btn_TBKhac">
                                   <div id="collOther">
                                     <div class="col-md-12">
-                                        <table id="table_tbkhac" class="table table-bordered table-striped table-md" style="width: 100%">
+                                        <table id="table_tbkhac" class="table table-bordered table-striped table-md" style="width: 130%">
                                         </table>
                                     </div>
                                   </div>
@@ -119,7 +119,7 @@
                               <div class="tab-pane" id="cnt_VatTu" role="tabpanel" aria-labelledby="btn_VatTu">
                                   <div id="collSupplies">
                                     <div class="col-md-12">
-                                        <table id="table_vattu" class="table table-bordered table-striped table-md" style="width: 100%">
+                                        <table id="table_vattu" class="table table-bordered table-striped table-md" style="width: 130%">
                                         </table>
                                     </div>
                                   </div>
@@ -138,7 +138,7 @@
             <div class="modal-content">
                 <div class="card auth_form">
                     <div class="modal-header">
-                        <h6 class="title-modal-banve font-weight-bold">Thêm hệ trục chân vịt</h6>
+                        <h4 class="title-modal-banve font-weight-bold">Thêm hệ trục chân vịt</h4>
                     </div>
                     <div class="modal-body">
 
@@ -233,7 +233,7 @@
             <div class="modal-content">
                 <div class="card auth_form">
                     <div class="modal-header">
-                        <h6 class="title-modal-banve font-weight-bold">Sửa thông tin máy phụ</h6>
+                        <h4 class="title-modal-banve font-weight-bold">Sửa thông tin máy phụ</h4>
                     </div>
                     <div class="modal-body">
                         <input type="hidden" class="form-control" id="uScrewSystemID">
@@ -327,7 +327,7 @@
             <div class="modal-content">
                 <div class="card auth_form">
                     <div class="modal-header">
-                        <h6 class="title-modal-banve font-weight-bold">Thêm máy chính</h6>
+                        <h4 class="title-modal-banve font-weight-bold">Thêm máy chính</h4>
                     </div>
                     <div class="modal-body">
 
@@ -422,7 +422,7 @@
             <div class="modal-content">
                 <div class="card auth_form">
                     <div class="modal-header">
-                        <h6 class="title-modal-banve font-weight-bold">Sửa thông tin máy chính</h6>
+                        <h4 class="title-modal-banve font-weight-bold">Sửa thông tin máy chính</h4>
                     </div>
                     <div class="modal-body">
                         <input type="hidden" class="form-control" id="update_MainEngine_ID">
@@ -517,7 +517,7 @@
             <div class="modal-content">
                 <div class="card auth_form">
                     <div class="modal-header">
-                        <h6 class="title-modal-banve font-weight-bold">Thêm máy phụ</h6>
+                        <h4 class="title-modal-banve font-weight-bold">Thêm máy phụ</h4>
                     </div>
                     <div class="modal-body">
 
@@ -620,7 +620,7 @@
             <div class="modal-content">
                 <div class="card auth_form">
                     <div class="modal-header">
-                        <h6 class="title-modal-banve font-weight-bold">Sửa thông tin máy phụ</h6>
+                        <h4 class="title-modal-banve font-weight-bold">Sửa thông tin máy phụ</h4>
                     </div>
                     <div class="modal-body">
                         <input type="hidden" class="form-control" id="uSecondaryEngineID">
@@ -722,7 +722,7 @@
             <div class="modal-content">
                 <div class="card auth_form">
                     <div class="modal-header">
-                        <h6 class="title-modal-banve font-weight-bold">Thêm khí tài, hàng hóa khác</h6>
+                        <h4 class="title-modal-banve font-weight-bold">Thêm khí tài, hàng hóa khác</h4>
                     </div>
                     <div class="modal-body">
                         <div class="row clearfix ">
@@ -791,7 +791,7 @@
             <div class="modal-content">
                 <div class="card auth_form">
                     <div class="modal-header">
-                        <h6 class="title-modal-banve font-weight-bold">Sửa thông tin khí tài, hàng hóa</h6>
+                        <h4 class="title-modal-banve font-weight-bold">Sửa thông tin khí tài, hàng hóa</h4>
                     </div>
                     <div class="modal-body">
                         <input type="hidden" class="form-control" id="update_WeaponMarine_ID">
@@ -861,7 +861,7 @@
             <div class="modal-content">
                 <div class="card auth_form">
                     <div class="modal-header">
-                        <h6 class="title-modal-banve font-weight-bold">Thêm xuồng công tác</h6>
+                        <h4 class="title-modal-banve font-weight-bold">Thêm xuồng công tác</h4>
                     </div>
                     <div class="modal-body">
 
@@ -979,7 +979,7 @@
             <div class="modal-content">
                 <div class="card auth_form">
                     <div class="modal-header">
-                        <h6 class="title-modal-banve font-weight-bold">Sửa thông tin xuồng công tác</h6>
+                        <h4 class="title-modal-banve font-weight-bold">Sửa thông tin xuồng công tác</h4>
                     </div>
                     <div class="modal-body">
                         <input type="hidden" class="form-control" id="update_MotoBoat_ID">
@@ -1097,7 +1097,7 @@
             <div class="modal-content">
                 <div class="card auth_form">
                     <div class="modal-header">
-                        <h6 class="title-modal-banve font-weight-bold">Thêm trang bị cứu sinh</h6>
+                        <h4 class="title-modal-banve font-weight-bold">Thêm trang bị cứu sinh</h4>
                     </div>
                     <div class="modal-body">
 
@@ -1168,7 +1168,7 @@
             <div class="modal-content">
                 <div class="card auth_form">
                     <div class="modal-header">
-                        <h6 class="title-modal-banve font-weight-bold">Sửa thiết bị cứu sinh</h6>
+                        <h4 class="title-modal-banve font-weight-bold">Sửa thiết bị cứu sinh</h4>
                     </div>
                     <div class="modal-body">
                         <input type="hidden" class="form-control" id="update_LifeSaving_ID">
@@ -1238,7 +1238,7 @@
             <div class="modal-content">
                 <div class="card auth_form">
                     <div class="modal-header">
-                        <h6 class="title-modal-banve font-weight-bold">Thêm tời neo</h6>
+                        <h4 class="title-modal-banve font-weight-bold">Thêm tời neo</h4>
                     </div>
                     <div class="modal-body">
 
@@ -1292,7 +1292,7 @@
             <div class="modal-content">
                 <div class="card auth_form">
                     <div class="modal-header">
-                        <h6 class="title-modal-banve font-weight-bold">Sửa thông tời neo</h6>
+                        <h4 class="title-modal-banve font-weight-bold">Sửa thông tời neo</h4>
                     </div>
                     <div class="modal-body">
                         <input type="hidden" class="form-control" id="update_ToiNeo_Id">
@@ -1346,7 +1346,7 @@
             <div class="modal-content">
                 <div class="card auth_form">
                     <div class="modal-header">
-                        <h6 class="title-modal-banve font-weight-bold">Thêm neo</h6>
+                        <h4 class="title-modal-banve font-weight-bold">Thêm neo</h4>
                     </div>
                     <div class="modal-body">
 
@@ -1400,7 +1400,7 @@
             <div class="modal-content">
                 <div class="card auth_form">
                     <div class="modal-header">
-                        <h6 class="title-modal-banve font-weight-bold">Sửa thông neo</h6>
+                        <h4 class="title-modal-banve font-weight-bold">Sửa thông neo</h4>
                     </div>
                     <div class="modal-body">
                         <input type="hidden" class="form-control" id="update_Neo_Id">
@@ -1455,7 +1455,7 @@
             <div class="modal-content">
                 <div class="card auth_form">
                     <div class="modal-header">
-                        <h6 class="title-modal-banve font-weight-bold">Thêm xích neo</h6>
+                        <h4 class="title-modal-banve font-weight-bold">Thêm xích neo</h4>
                     </div>
                     <div class="modal-body">
 
@@ -1509,7 +1509,7 @@
             <div class="modal-content">
                 <div class="card auth_form">
                     <div class="modal-header">
-                        <h6 class="title-modal-banve font-weight-bold">Sửa thông xích neo</h6>
+                        <h4 class="title-modal-banve font-weight-bold">Sửa thông xích neo</h4>
                     </div>
                     <div class="modal-body">
                         <input type="hidden" class="form-control" id="update_XichNeo_Id">
@@ -1563,7 +1563,7 @@
             <div class="modal-content">
                 <div class="card auth_form">
                     <div class="modal-header">
-                        <h6 class="title-modal-banve font-weight-bold">Thêm trang bị khác</h6>
+                        <h4 class="title-modal-banve font-weight-bold">Thêm trang bị khác</h4>
                     </div>
                     <div class="modal-body">
 
@@ -1634,7 +1634,7 @@
             <div class="modal-content">
                 <div class="card auth_form">
                     <div class="modal-header">
-                        <h6 class="title-modal-banve font-weight-bold">Sửa thông tin vật tư bảo đảm</h6>
+                        <h4 class="title-modal-banve font-weight-bold">Sửa thông tin vật tư bảo đảm</h4>
                     </div>
                     <div class="modal-body">
                         <input type="hidden" class="form-control" id="uOtherEquipmentID">
@@ -1705,7 +1705,7 @@
             <div class="modal-content">
                 <div class="card auth_form">
                     <div class="modal-header">
-                        <h6 class="title-modal-banve font-weight-bold">Thêm vật tư bảo đảm</h6>
+                        <h4 class="title-modal-banve font-weight-bold">Thêm vật tư bảo đảm</h4>
                     </div>
                     <div class="modal-body">
 
@@ -1783,7 +1783,7 @@
             <div class="modal-content">
                 <div class="card auth_form">
                     <div class="modal-header">
-                        <h6 class="title-modal-banve font-weight-bold">Sửa thông tin vật tư bảo đảm</h6>
+                        <h4 class="title-modal-banve font-weight-bold">Sửa thông tin vật tư bảo đảm</h4>
                     </div>
                     <div class="modal-body">
                         <input type="hidden" class="form-control" id="usupplyID">
