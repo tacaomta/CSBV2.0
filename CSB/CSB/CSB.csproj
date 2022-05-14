@@ -224,6 +224,7 @@
     <Content Include="Content\Site.css" />
     <Content Include="Content\use.fontawesome.com_releases_v5.7.2_css_all.css" />
     <Content Include="css\bootstrap.min.css" />
+    <Content Include="css\bootstrap3.css" />
     <Content Include="css\login.css" />
     <Content Include="css\manager_user.css" />
     <Content Include="css\manage_ship.css" />

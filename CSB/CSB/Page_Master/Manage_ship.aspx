@@ -599,6 +599,7 @@
         function loadTableShip() {
             $('table[id=tableship]').each(function () {
                 var table1 = $(this).DataTable({
+                    destroy: true,
                     stateSave: true,
                     "columns": [
                         { name: 'STT', width: 30 },

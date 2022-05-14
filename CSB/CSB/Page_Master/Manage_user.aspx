@@ -227,6 +227,7 @@
         function loadTableUser() {
             $('table[id=tableuser]').each(function () {
                 var table1 = $(this).DataTable({
+                    destroy: true,
                     stateSave: true,
                     "columns" : [
                         { name: 'STT' },
@@ -272,7 +273,7 @@
                 });
                 table1.buttons().container()
                     .appendTo('this_wrapper .col-md-6:eq(0)');
-                $('.col-sm-12').first().html('<button id="btn_adduser" onclick="btn_adduser()" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#model-add-user" style="height: 35px; padding - top: 4px;margin - top: -4px;">Thêm người dùng</button>');
+                $('.col-sm-12').first().html('<button id="btn_adduser" onclick="btn_adduser()" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#model-add-user" style="height: 35px; padding - top: 4px;margin - top: -4px;"><span class="glyphicon glyphicon-plus-sign"></span> Thêm người dùng</button>');
             });
         };
 

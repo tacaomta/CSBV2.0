@@ -4459,6 +4459,7 @@
         function loadTable(table_id) {
             $('table[id=' + table_id + ']').each(function () {
                 var table1 = $(this).DataTable({
+                    destroy: true,
                     stateSave: true,
                     lengthChange: false,
                     searching: false,
