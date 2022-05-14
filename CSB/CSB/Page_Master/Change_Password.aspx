@@ -37,7 +37,7 @@
                             </div>
                             <div class="form-group" style="display: flex; align-items: center;">
                                 <i class="material-icons icon-name mr-2">lock</i>
-                                <input type="password" pattern=".{6,}" title="Mật khẩu tối thiểu 6 kí tự" class="form-control" id="password_confirm" placeholder="Xác nhận mật khẩu" />
+                                <input type="password" pattern=".{6,}" title="Mật khẩu tối thiểu 6 kí tự" class="form-control" id="password_confirm" placeholder="Xác nhận mật khẩu mới" />
                             </div>
                             <div class="loginbttm" style="display: flex; justify-content: space-between;">
                                 <div class="login-btm login-text">

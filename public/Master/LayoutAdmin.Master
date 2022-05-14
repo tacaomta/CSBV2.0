@@ -4176,6 +4176,9 @@ input[type=file] {
     width: 280px;
     z-index: 100;
 }
+        .toast .hide{
+            display: none;
+        }
 
 .toast-header {
     background-color: rgb(17, 165 ,42);
@@ -4259,6 +4262,9 @@ input[type=file] {
         color: #01b5f9;
         font-weight: bold;
         padding: 0 22px;
+        line-height: 20px;
+        padding-top: 10px;
+        padding-bottom: 10px;
     }
 
         .mainMenu .a_menu:hover {
@@ -5348,7 +5354,7 @@ table tr:hover .table-links {
 
     <!-- ====== PopUp ====== -->
     <div>
-        <div class="toast mt-3">
+        <div class="toast mt-3 fade hide">
             <div class="toast-header" >
                 <p id="toast-header" class="mr-auto toast-header-text">Toast Header</p>
                 <button type="button" class="ml-2 mb-3 close" onclick="closeToast()" aria-label="Close">
