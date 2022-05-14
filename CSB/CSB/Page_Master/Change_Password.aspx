@@ -9,10 +9,31 @@
             padding-top: 10px;
             padding-bottom: 10px;
         }
+                .row {
+            margin-bottom: 20px;
+        }
+
+        .select-inform {
+            padding: 10px 10px;
+            font-size: 13px;
+            line-height: 42px;
+            background-color: rgba(179,164,164,0.1);
+            border-color: rgba(252,252,252,0.1);
+            width: 100%;
+            color: #555;
+        }
     </style>
     <div id="form1">
-        <div>
-            <div class="container" style="border: none; background-color: #ffffff; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.03);">
+        <div class="section">
+                        <div class="section-header">
+                <h4 id="title" style="color: black; margin: 0">ĐỔI MẬT KHẨU</h4>
+                <div class="section-header-breadcrumb">
+                    <div class="breadcrumb-item active"><a href="Null.aspx" style="color: #01b5f9; font-size: 18px;">Trang chủ</a></div>
+                    <div class="breadcrumb-item active"><a href="#" style="color: #01b5f9; font-size: 18px;">Đổi mật khẩu</a></div>
+                    
+                </div>
+            </div>
+            <div class="container" style="margin-top:50px; border: none; background-color: #ffffff; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.03);">
                 <div class="row" style="padding: 3rem 0">
                     <div class="login-box col-md-4" style="margin: 0 auto;">
                         <div class="login-key" style="display: flex; justify-content: center; margin-bottom: 3rem;">
@@ -37,14 +58,16 @@
                             </div>
                             <div class="form-group" style="display: flex; align-items: center;">
                                 <i class="material-icons icon-name mr-2">lock</i>
-                                <input type="password" pattern=".{6,}" title="Mật khẩu tối thiểu 6 kí tự" class="form-control" id="password_confirm" placeholder="Xác nhận mật khẩu" />
+                                <input type="password" pattern=".{6,}" title="Mật khẩu tối thiểu 6 kí tự" class="form-control" id="password_confirm" placeholder="Xác nhận mật khẩu mới" />
                             </div>
                             <div class="loginbttm" style="display: flex; justify-content: space-between;">
+                                
                                 <div class="login-btm login-text">
                                     <p hidden="hidden" id="error-login-text">Đổi mật khẩu không thành công!</p>
                                 </div>
                                 <div class="login-btm login-button mt-3">
-                                    <button class="btn btn-outline-primary" onclick="Save_Change()">Lưu thay đổi</button>
+                                   
+                                    <button class="btn btn-info" onclick="Save_Change()">Lưu thay đổi</button>
                                 </div>
                             </div>
                         </div>

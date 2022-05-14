@@ -12,7 +12,7 @@
                         </div>--%>
                     </div>
                     
-                    <div class="col-md-12">
+                    <div class="">
                         <ul class="nav nav-tabs" id="myTab" role="tablist">
                           <li class="nav-item" role="presentation">
                             <a class="nav-link active" id="btn_MayChinh" data-toggle="tab" href="#cnt_MayChinh" role="tab" aria-controls="maychinh" aria-selected="true" style="display: flex; color: #000;"></a>
@@ -2795,7 +2795,7 @@
                     loadTable("table_maychinh");
                     $('#table_maychinh_wrapper .row .col-sm-12').first().css("display", "flex");
                     $('#table_maychinh_wrapper .row .col-sm-12').first().css("flex-direction", "row");
-                    $('#table_maychinh_wrapper .row .col-sm-12').first().html('<button id="btn_addMayChinh" onclick="btn_addMayChinh()" class="btn btn-primary mr-3" data-toggle="modal" data-target="#model-add-MainEngine" style="height: 40px; margin-bottom: 8px; margin-top: -4px; font-size: 12px;">Thêm máy chính</button><div class="dropdown"><button id="btn-etwMayChinh" class="btn btn-primary mr-3 dropdown-toggle" type="button" id = "dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="height: 40px; margin-bottom: 8px; margin-top: -4px; font-size: 12px;">Xuất báo cáo</button><div class="dropdown-menu" aria-labelledby="btn-etwMayChinh"><button class="dropdown-item" onclick="exportToWord(`contentMayChinh`,`Thông tin máy chính tàu ' + shipName + '`)">Xuất file Word</button><button class="dropdown-item">Xuất file Excel</button><button class="dropdown-item">Xuất file PDF</button></div></div><button id="prt_etwMayChinh" onclick="In_Content(`contentMayChinh`)" class="btn btn-primary" style="height: 40px; margin-bottom: 8px; margin-top: -4px; font-size: 12px;">In</button>');
+                    $('#table_maychinh_wrapper .row .col-sm-12').first().html('<div class="btn-group"><button id="btn_addMayChinh" onclick="btn_addMayChinh()" class="btn btn-lg btn-primary mb-3" data-toggle="modal" data-target="#model-add-MainEngine" ><span class="glyphicon glyphicon-plus-sign"></span> Thêm máy chính</button><div class="btn-group"><button type="button" class="btn btn-lg btn-primary mb-3 dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-file"></span> Xuất báo cáo </button><ul class="dropdown-menu" role="menu"><li><a href="#" onclick="exportToWord(`contentMayChinh`,`Thông tin máy chính tàu ' + shipName + '`)">Xuất file Word</a></li><li><a href="#">Xuất file Excel</a></li><li><a href="#">Xuất file PDF</a></li></ul></div><button id="prt_etwMayChinh" onclick="In_Content(`contentMayChinh`)" class="btn btn-lg btn-primary mb-3"><span class="glyphicon glyphicon-print"></span> In báo cáo</button></div>');
                     $('#table_maychinh_wrapper .row').first().next().children().css("overflow-x", "auto");
                     console.log('<div class="dropdown">< button class= "btn btn-secondary dropdown-toggle" type = "button" id = "dropdownMenuButton" data - toggle="dropdown" aria - haspopup="true" aria - expanded="false" >Dropdown button</button ><div class="dropdown-menu" aria-labelledby="dropdownMenuButton"><a class="dropdown-item" href="#">Action</a><a class="dropdown-item" href="#">Another action</a><a class="dropdown-item" href="#">Something else here</a></div></div >')
                 }, error: function (ret) {
@@ -2984,7 +2984,7 @@
                     $('#table_chanvit').html(tabletext);
                     console.log(linkapi + "screw_system?imo=" + Ship_ID);
                     loadTable('table_chanvit');
-                    $('#table_chanvit_wrapper .row .col-sm-12').first().html('<button id="btn_addScrewSystem" onclick="btn_addScrewSystem()" class="btn btn-primary mr-3" data-toggle="modal" data-target="#model-add-ScrewSystem" style="height: 40px; margin-bottom: 8px; margin-top: -4px; font-size: 12px;">Thêm hệ trục chân vịt</button><button id="btn_etwChanVit" onclick="exportToWord(`contentChanVit`,`Thông tin hệ thống chân vịt tàu ' + shipName + '`)" class="btn btn-primary mr-3" style="height: 40px; margin-bottom: 8px; margin-top: -4px; font-size: 12px;">Xuất báo cáo</button><button id="prt_etwChanVit" onclick="In_Content(`contentChanVit`)" class="btn btn-primary mr-3" style="height: 40px; margin-bottom: 8px; margin-top: -4px; font-size: 12px;">In</button>');
+                    $('#table_chanvit_wrapper .row .col-sm-12').first().html('<button id="btn_addScrewSystem" onclick="btn_addScrewSystem()" class="btn btn-primary mr-3" data-toggle="modal" data-target="#model-add-ScrewSystem" style="height: 40px; margin-bottom: 8px; margin-top: -4px; font-size: 12px;">Thêm hệ trục chân vịt</button><button id="btn_etwChanVit" onclick="exportToWord(`contentChanVit`,`Thông tin hệ thống chân vịt tàu ' + shipName + '`)" class="btn btn-primary mr-3" style="height: 40px; margin-bottom: 8px; margin-top: -4px; font-size: 12px;">Xuất báo cáo</button><button id="prt_etwChanVit" onclick="In_Content(`contentChanVit`)" class="btn btn-primary mr-3" style="height: 40px; margin-bottom: 8px; margin-top: -4px; font-size: 12px;">In báo cáo</button>');
                     $('#table_chanvit_wrapper .row').first().next().children().css("overflow-x", "auto");
                 }, error: function (ret) {
                     console.log('errorGET');
@@ -3178,7 +3178,7 @@
                     $('#tablecontentMayPhu').html(tablechild);
                     $('#table_mayphu').html(tabletext);
                     loadTable('table_mayphu');
-                    $('#table_mayphu_wrapper .row .col-sm-12').first().html('<button id="btn_addSecondaryEngine" onclick="btn_addSecondaryEngine()" class="btn btn-primary mr-3" data-toggle="modal" data-target="#model-add-SecondaryEngine" style="height: 40px; margin-bottom: 8px; margin-top: -4px; font-size: 12px;">Thêm máy phụ</button><button id="btn_etwMayPhu" onclick="exportToWord(`contentMayPhu`,`Thông tin máy phụ tàu ' + shipName + '`)" class="btn btn-primary mr-3" style="height: 40px; margin-bottom: 8px; margin-top: -4px; font-size: 12px;">Xuất báo cáo</button><button id="prt_etwMayPhu" onclick="In_Content(`contentMayPhu`)" class="btn btn-primary mr-3" style="height: 40px; margin-bottom: 8px; margin-top: -4px; font-size: 12px;">In</button>');
+                    $('#table_mayphu_wrapper .row .col-sm-12').first().html('<button id="btn_addSecondaryEngine" onclick="btn_addSecondaryEngine()" class="btn btn-primary mr-3" data-toggle="modal" data-target="#model-add-SecondaryEngine" style="height: 40px; margin-bottom: 8px; margin-top: -4px; font-size: 12px;">Thêm máy phụ</button><button id="btn_etwMayPhu" onclick="exportToWord(`contentMayPhu`,`Thông tin máy phụ tàu ' + shipName + '`)" class="btn btn-primary mr-3" style="height: 40px; margin-bottom: 8px; margin-top: -4px; font-size: 12px;">Xuất báo cáo</button><button id="prt_etwMayPhu" onclick="In_Content(`contentMayPhu`)" class="btn btn-primary mr-3" style="height: 40px; margin-bottom: 8px; margin-top: -4px; font-size: 12px;">In báo cáo</button>');
                     $('#table_mayphu_wrapper .row').first().next().children().css("overflow-x", "auto");
                 }, error: function (ret) {
                     console.log('errorGET');
@@ -3414,7 +3414,7 @@
                     $('#tablecontentKhiTai').html(tablechild);
                     $('#table_khitai').html(tabletext);
                     loadTable('table_khitai');
-                    $('#table_khitai_wrapper .row .col-sm-12').first().html('<button id="btn_addWeaponMarine" onclick="btn_addWeaponMarine()" class="btn btn-primary mr-3" data-toggle="modal" data-target="#model-add-WeaponMarine" style="height: 40px; margin-bottom: 8px; margin-top: -4px; font-size: 12px;">Thêm khí tài, hàng hóa</button><button id="btn_etwKhiTai" onclick="exportToWord(`contentKhiTai`,`Thông tin khí tài, hàng hóa tàu ' + shipName + '`)" class="btn btn-primary mr-3" style="height: 40px; margin-bottom: 8px; margin-top: -4px; font-size: 12px;">Xuất báo cáo</button><button id="prt_etwKhiTai" onclick="In_Content(`contentKhiTai`)" class="btn btn-primary mr-3" style="height: 40px; margin-bottom: 8px; margin-top: -4px; font-size: 12px;">In</button>');
+                    $('#table_khitai_wrapper .row .col-sm-12').first().html('<button id="btn_addWeaponMarine" onclick="btn_addWeaponMarine()" class="btn btn-primary mr-3" data-toggle="modal" data-target="#model-add-WeaponMarine" style="height: 40px; margin-bottom: 8px; margin-top: -4px; font-size: 12px;">Thêm khí tài, hàng hóa</button><button id="btn_etwKhiTai" onclick="exportToWord(`contentKhiTai`,`Thông tin khí tài, hàng hóa tàu ' + shipName + '`)" class="btn btn-primary mr-3" style="height: 40px; margin-bottom: 8px; margin-top: -4px; font-size: 12px;">Xuất báo cáo</button><button id="prt_etwKhiTai" onclick="In_Content(`contentKhiTai`)" class="btn btn-primary mr-3" style="height: 40px; margin-bottom: 8px; margin-top: -4px; font-size: 12px;">In báo cáo</button>');
                     $('#table_khitai_wrapper .row').first().next().children().css("overflow-x", "auto");
                 }, error: function (ret) {
                     console.log('errorGET');
@@ -3544,7 +3544,7 @@
                     tabletext += "</tbody>";
                     $('#table_xuongct').html(tabletext);
                     loadTable('table_xuongct');
-                    $('#table_xuongct_wrapper .row .col-sm-12').first().html('<button id="btn_addMotoBoat" onclick="btn_addMotoBoat()" class="btn btn-primary mr-3" data-toggle="modal" data-target="#model-add-MotoBoat" style="height: 40px; margin-bottom: 8px; margin-top: -4px; font-size: 12px;">Thêm xuồng công tác</button><button id="btn_etwXuongCT" onclick="exportToWord(`contentXuongCT`,`Thông tin xuồng công tác của tàu' + shipName + '`)" class="btn btn-primary mr-3" style="height: 40px; margin-bottom: 8px; margin-top: -4px; font-size: 12px;">Xuất báo cáo</button><button id="prt_etwXuongCT" onclick="In_Content(`contentXuongCT`)" class="btn btn-primary mr-3" style="height: 40px; margin-bottom: 8px; margin-top: -4px; font-size: 12px;">In</button>');
+                    $('#table_xuongct_wrapper .row .col-sm-12').first().html('<button id="btn_addMotoBoat" onclick="btn_addMotoBoat()" class="btn btn-primary mr-3" data-toggle="modal" data-target="#model-add-MotoBoat" style="height: 40px; margin-bottom: 8px; margin-top: -4px; font-size: 12px;">Thêm xuồng công tác</button><button id="btn_etwXuongCT" onclick="exportToWord(`contentXuongCT`,`Thông tin xuồng công tác của tàu' + shipName + '`)" class="btn btn-primary mr-3" style="height: 40px; margin-bottom: 8px; margin-top: -4px; font-size: 12px;">Xuất báo cáo</button><button id="prt_etwXuongCT" onclick="In_Content(`contentXuongCT`)" class="btn btn-primary mr-3" style="height: 40px; margin-bottom: 8px; margin-top: -4px; font-size: 12px;">In báo cáo</button>');
                     $('#table_xuongct_wrapper .row').first().next().children().css("overflow-x", "auto");
                 }, error: function (ret) {
                     console.log('errorGET');
@@ -3701,7 +3701,7 @@
                     tabletext_Neo += "</tbody>";
                     $('#table_neo').html(tabletext_Neo);
                     loadTable('table_neo');
-                    $('#table_neo_wrapper .row .col-sm-12').first().html('<button id="btn_addNeo" onclick="btn_addNeo()" class="btn btn-primary mr-3" data-toggle="modal" data-target="#model-add-Neo" style="height: 40px; margin-bottom: 8px; margin-top: -4px; font-size: 12px;">Thêm neo</button><button id="btn_etwNeo" onclick="exportToWord(`contentNeo`,`Thông tin neo của tàu ' + shipName + '`)" class="btn btn-primary mr-3" style="height: 40px; margin-bottom: 8px; margin-top: -4px; font-size: 12px;">Xuất báo cáo</button><button id="prt_etwNeo" onclick="In_Content(`contentNeo`)" class="btn btn-primary mr-3" style="height: 40px; margin-bottom: 8px; margin-top: -4px; font-size: 12px;">In</button>');
+                    $('#table_neo_wrapper .row .col-sm-12').first().html('<button id="btn_addNeo" onclick="btn_addNeo()" class="btn btn-primary mr-3" data-toggle="modal" data-target="#model-add-Neo" style="height: 40px; margin-bottom: 8px; margin-top: -4px; font-size: 12px;">Thêm neo</button><button id="btn_etwNeo" onclick="exportToWord(`contentNeo`,`Thông tin neo của tàu ' + shipName + '`)" class="btn btn-primary mr-3" style="height: 40px; margin-bottom: 8px; margin-top: -4px; font-size: 12px;">Xuất báo cáo</button><button id="prt_etwNeo" onclick="In_Content(`contentNeo`)" class="btn btn-primary mr-3" style="height: 40px; margin-bottom: 8px; margin-top: -4px; font-size: 12px;">In báo cáo</button>');
                     $('#table_neo_wrapper .row').first().next().children().css("overflow-x", "auto");
 
                 }, error: function (ret) {
@@ -3825,7 +3825,7 @@
 
                     $('#table_toineo').html(tabletext_ToiNeo);
                     loadTable('table_toineo');
-                    $('#table_toineo_wrapper .row .col-sm-12').first().html('<button id="btn_addToiNeo" onclick="btn_addToiNeo()" class="btn btn-primary mr-3" data-toggle="modal" data-target="#model-add-ToiNeo" style="height: 40px; margin-bottom: 8px; margin-top: -4px; font-size: 12px;">Thêm tời neo</button><button id="btn_etwToiNeo" onclick="exportToWord(`contentToiNeo`,`Thông tin tời neo tàu ' + shipName + '`)" class="btn btn-primary mr-3" style="height: 40px; margin-bottom: 8px; margin-top: -4px; font-size: 12px;">Xuất báo cáo</button><button id="prt_etwToiNeo" onclick="In_Content(`contentToiNeo`)" class="btn btn-primary mr-3" style="height: 40px; margin-bottom: 8px; margin-top: -4px; font-size: 12px;">In</button>');
+                    $('#table_toineo_wrapper .row .col-sm-12').first().html('<button id="btn_addToiNeo" onclick="btn_addToiNeo()" class="btn btn-primary mr-3" data-toggle="modal" data-target="#model-add-ToiNeo" style="height: 40px; margin-bottom: 8px; margin-top: -4px; font-size: 12px;">Thêm tời neo</button><button id="btn_etwToiNeo" onclick="exportToWord(`contentToiNeo`,`Thông tin tời neo tàu ' + shipName + '`)" class="btn btn-primary mr-3" style="height: 40px; margin-bottom: 8px; margin-top: -4px; font-size: 12px;">Xuất báo cáo</button><button id="prt_etwToiNeo" onclick="In_Content(`contentToiNeo`)" class="btn btn-primary mr-3" style="height: 40px; margin-bottom: 8px; margin-top: -4px; font-size: 12px;">In báo cáo</button>');
                     $('#table_toineo_wrapper .row').first().next().children().css("overflow-x", "auto");
                 }, error: function (ret) {
                     console.log('errorGET');
@@ -3948,7 +3948,7 @@
 
                     $('#table_xichneo').html(tabletext_XichNeo);
                     loadTable('table_xichneo');
-                    $('#table_xichneo_wrapper .row .col-sm-12').first().html('<button id="btn_addXichNeo" onclick="btn_addXichNeo()" class="btn btn-primary mr-3" data-toggle="modal" data-target="#model-add-XichNeo" style="height: 40px; margin-bottom: 8px; margin-top: -4px; font-size: 12px;">Thêm xích neo</button><button id="btn_etwXichNeo" onclick="exportToWord(`contentXichNeo`,`Thông tin xích neo tàu ' + shipName + '`)" class="btn btn-primary mr-3" style="height: 40px; margin-bottom: 8px; margin-top: -4px; font-size: 12px;">Xuất báo cáo</button><button id="prt_etwXichNeo" onclick="In_Content(`contentXichNeo`)" class="btn btn-primary mr-3" style="height: 40px; margin-bottom: 8px; margin-top: -4px; font-size: 12px;">In</button>');
+                    $('#table_xichneo_wrapper .row .col-sm-12').first().html('<button id="btn_addXichNeo" onclick="btn_addXichNeo()" class="btn btn-primary mr-3" data-toggle="modal" data-target="#model-add-XichNeo" style="height: 40px; margin-bottom: 8px; margin-top: -4px; font-size: 12px;">Thêm xích neo</button><button id="btn_etwXichNeo" onclick="exportToWord(`contentXichNeo`,`Thông tin xích neo tàu ' + shipName + '`)" class="btn btn-primary mr-3" style="height: 40px; margin-bottom: 8px; margin-top: -4px; font-size: 12px;">Xuất báo cáo</button><button id="prt_etwXichNeo" onclick="In_Content(`contentXichNeo`)" class="btn btn-primary mr-3" style="height: 40px; margin-bottom: 8px; margin-top: -4px; font-size: 12px;">In báo cáo</button>');
                     $('#table_xichneo_wrapper .row').first().next().children().css("overflow-x", "auto");
 
                 }, error: function (ret) {
@@ -4073,7 +4073,7 @@
                     tabletext += "</tbody>";
                     $('#table_tbcuusinh').html(tabletext);
                     loadTable('table_tbcuusinh');
-                    $('#table_tbcuusinh_wrapper .row .col-sm-12').first().html('<button id="btn_addLifeSaving" onclick="btn_addLifeSaving()" class="btn btn-primary mr-3" data-toggle="modal" data-target="#model-add-LifeSaving" style="height: 40px; margin-bottom: 8px; margin-top: -4px; font-size: 12px;">Thêm trang bị cứu sinh</button><button id="btn_etwTBCuuSinh" onclick="exportToWord(`contentTBCuuSinh`,`Thông tin thiết bị cứu sinh tàu ' + shipName + '`)" class="btn btn-primary mr-3" style="height: 40px; margin-bottom: 8px; margin-top: -4px; font-size: 12px;">Xuất báo cáo</button><button id="prt_etwTBCuuSinh" onclick="In_Content(`contentTBCuuSinh`)" class="btn btn-primary mr-3" style="height: 40px; margin-bottom: 8px; margin-top: -4px; font-size: 12px;">In</button>');
+                    $('#table_tbcuusinh_wrapper .row .col-sm-12').first().html('<button id="btn_addLifeSaving" onclick="btn_addLifeSaving()" class="btn btn-primary mr-3" data-toggle="modal" data-target="#model-add-LifeSaving" style="height: 40px; margin-bottom: 8px; margin-top: -4px; font-size: 12px;">Thêm trang bị cứu sinh</button><button id="btn_etwTBCuuSinh" onclick="exportToWord(`contentTBCuuSinh`,`Thông tin thiết bị cứu sinh tàu ' + shipName + '`)" class="btn btn-primary mr-3" style="height: 40px; margin-bottom: 8px; margin-top: -4px; font-size: 12px;">Xuất báo cáo</button><button id="prt_etwTBCuuSinh" onclick="In_Content(`contentTBCuuSinh`)" class="btn btn-primary mr-3" style="height: 40px; margin-bottom: 8px; margin-top: -4px; font-size: 12px;">In báo cáo</button>');
                     $('#table_tbcuusinh_wrapper .row').first().next().children().css("overflow-x", "auto");
                 }, error: function (ret) {
                     console.log('errorGET');
@@ -4201,7 +4201,7 @@
                     tabletext += "</tbody>";
                     $('#table_tbkhac').html(tabletext);
                     loadTable('table_tbkhac');
-                    $('#table_tbkhac_wrapper .row .col-sm-12').first().html('<button id="btn_addOtherEquipment" onclick="btn_addOtherEquipment()" class="btn btn-primary mr-3" data-toggle="modal" data-target="#model-add-OtherEquipment" style="height: 40px; margin-bottom: 8px; margin-top: -4px; font-size: 12px;">Thêm trang bị khác</button><button id="btn_etwTBKhac" onclick="exportToWord(`contentTBKhac`,`Thông tin trang bị khác tàu ' + shipName + '`)" class="btn btn-primary mr-3" style="height: 40px; margin-bottom: 8px; margin-top: -4px; font-size: 12px;">Xuất báo cáo</button><button id="prt_etwTBKhac" onclick="In_Content(`contentTBKhac`)" class="btn btn-primary mr-3" style="height: 40px; margin-bottom: 8px; margin-top: -4px; font-size: 12px;">In</button>');
+                    $('#table_tbkhac_wrapper .row .col-sm-12').first().html('<button id="btn_addOtherEquipment" onclick="btn_addOtherEquipment()" class="btn btn-primary mr-3" data-toggle="modal" data-target="#model-add-OtherEquipment" style="height: 40px; margin-bottom: 8px; margin-top: -4px; font-size: 12px;">Thêm trang bị khác</button><button id="btn_etwTBKhac" onclick="exportToWord(`contentTBKhac`,`Thông tin trang bị khác tàu ' + shipName + '`)" class="btn btn-primary mr-3" style="height: 40px; margin-bottom: 8px; margin-top: -4px; font-size: 12px;">Xuất báo cáo</button><button id="prt_etwTBKhac" onclick="In_Content(`contentTBKhac`)" class="btn btn-primary mr-3" style="height: 40px; margin-bottom: 8px; margin-top: -4px; font-size: 12px;">In báo cáo</button>');
                     $('#table_tbkhac_wrapper .row').first().next().children().css("overflow-x", "auto");
                 }, error: function (ret) {
                     console.log('errorGET');
@@ -4333,7 +4333,7 @@
                     tabletext += "</tbody>";
                     $('#table_vattu').html(tabletext);
                     loadTable('table_vattu');
-                    $('#table_vattu_wrapper .row .col-sm-12').first().html('<button id="btn_addsuply" onclick="btn_addsuply()" class="btn btn-primary mr-3" data-toggle="modal" data-target="#model-add-supply" style="height: 40px; margin-bottom: 8px; margin-top: -4px; font-size: 12px;">Thêm vật tư bảo đảm</button><button id="btn_etwsupply" onclick="exportToWord(`contentSupply`,`Thông tin vật tư bảo đảm tàu ' + shipName + '`)" class="btn btn-primary mr-3" style="height: 40px; margin-bottom: 8px; margin-top: -4px; font-size: 12px;">Xuất báo cáo</button><button id="prt_etwSupply" onclick="In_Content(`contentSupply`)" class="btn btn-primary mr-3" style="height: 40px; margin-bottom: 8px; margin-top: -4px; font-size: 12px;">In</button>');
+                    $('#table_vattu_wrapper .row .col-sm-12').first().html('<button id="btn_addsuply" onclick="btn_addsuply()" class="btn btn-primary mr-3" data-toggle="modal" data-target="#model-add-supply" style="height: 40px; margin-bottom: 8px; margin-top: -4px; font-size: 12px;">Thêm vật tư bảo đảm</button><button id="btn_etwsupply" onclick="exportToWord(`contentSupply`,`Thông tin vật tư bảo đảm tàu ' + shipName + '`)" class="btn btn-primary mr-3" style="height: 40px; margin-bottom: 8px; margin-top: -4px; font-size: 12px;">Xuất báo cáo</button><button id="prt_etwSupply" onclick="In_Content(`contentSupply`)" class="btn btn-primary mr-3" style="height: 40px; margin-bottom: 8px; margin-top: -4px; font-size: 12px;">In báo cáo</button>');
                     $('#table_vattu .row').first().next().children().css("overflow-x", "auto");
                 }, error: function (ret) {
                     console.log('errorGET');
@@ -4459,8 +4459,9 @@
         function loadTable(table_id) {
             $('table[id=' + table_id + ']').each(function () {
                 var table1 = $(this).DataTable({
-                    'destroy': true,
+                    stateSave: true,
                     lengthChange: false,
+                    searching: false,
                     "language": {
                         "sProcessing": "Đang xử lý...",
                         "sLengthMenu": "Xem _MENU_ mục",
@@ -4469,7 +4470,6 @@
                         "sInfoEmpty": "Đang xem 0 đến 0 trong tổng số 0 mục",
                         "sInfoFiltered": "(được lọc từ _MAX_ mục)",
                         "sInfoPostFix": "",
-                        "sSearch": "Tìm kiếm: ",
                         "sUrl": "",
                         "oPaginate": {
                             "sFirst": "Đầu",
