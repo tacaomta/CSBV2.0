@@ -956,14 +956,8 @@ table tr:hover .table-links {
 <%--    <script src="../Scripts/js/Manage_ship.js"></script>--%>
     <script>
         $(document).ready(function () {
-            if (sessionStorage.getItem("userLoginUsername") != null) {
-                $('#user-login-fullname').text(" " + sessionStorage.getItem("userLoginFullname"));
-                $('#btnDangXuat').text(" Đăng xuất");
-            }
-            else {
-                $('#user-login-fullname').text(" Người dùng X");
-                $('#btnDangXuat').text(" Đăng nhập");
-            }
+            window.location = "http://localhost:8080/Page_Master/Login";
+            
         });
 
         function clickDangXuat() {

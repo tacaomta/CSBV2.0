@@ -2952,7 +2952,17 @@
         // ===================================== ScrewSystem ========================================
 
         function loadDataList_Screw_System(Ship_ID) {
-
+            $.ajax({
+                type: "GET",
+                url: linkapi + "ship_overview?id=" + Ship_ID,
+                dataType: "json",
+                success: function (data) {
+                    shipName = data.Ship.Name;
+                    $('#shipnameChanVit').html(shipName);
+                }, error: function (ret) {
+                    console.log('errorGET');
+                }
+            });
             $.ajax({
                 type: "GET",
                 url: linkapi + "screw_systems?imo=" + Ship_ID,
@@ -2984,7 +2994,7 @@
                     $('#table_chanvit').html(tabletext);
                     console.log(linkapi + "screw_system?imo=" + Ship_ID);
                     loadTable('table_chanvit');
-                    $('#table_chanvit_wrapper .row .col-sm-12').first().html('<button id="btn_addScrewSystem" onclick="btn_addScrewSystem()" class="btn btn-primary mr-3" data-toggle="modal" data-target="#model-add-ScrewSystem" style="height: 40px; margin-bottom: 8px; margin-top: -4px; font-size: 12px;">Thêm hệ trục chân vịt</button><button id="btn_etwChanVit" onclick="exportToWord(`contentChanVit`,`Thông tin hệ thống chân vịt tàu ' + shipName + '`)" class="btn btn-primary mr-3" style="height: 40px; margin-bottom: 8px; margin-top: -4px; font-size: 12px;">Xuất báo cáo</button><button id="prt_etwChanVit" onclick="In_Content(`contentChanVit`)" class="btn btn-primary mr-3" style="height: 40px; margin-bottom: 8px; margin-top: -4px; font-size: 12px;">In báo cáo</button>');
+                    $('#table_chanvit_wrapper .row .col-sm-12').first().html('<div class="btn-group"><button id="btn_addScrewSystem" onclick="btn_addScrewSystem()" class="btn btn-lg btn-primary mb-3" data-toggle="modal" data-target="#model-add-ScrewSystem"><span class="glyphicon glyphicon-plus-sign"></span> Thêm hệ trục chân vịt</button><div class="btn-group"><button type="button" class="btn btn-lg btn-primary mb-3 dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><span class="glyphicon glyphicon-file"></span> Xuất báo cáo <ul class="dropdown-menu" role="menu" style=""><li><a href="#" onclick="exportToWord(`contentChanVit`,`Thông tin hệ thống chân vịt tàu ' + shipName + '`)" >Xuất file Word</a></li><li><a href="#">Xuất file Excel</a></li><li><a href="#">Xuất file PDF</a></li></ul></div><button id="prt_etwChanVit" onclick="In_Content(`contentChanVit`)" class="btn btn-lg btn-primary mb-3"><span class="glyphicon glyphicon-print"></span> In báo cáo</button></div>');
                     $('#table_chanvit_wrapper .row').first().next().children().css("overflow-x", "auto");
                 }, error: function (ret) {
                     console.log('errorGET');
@@ -3012,17 +3022,7 @@
             $('#sp-dayChanVit').html(date.getDate());
             $('#sp-monthChanVit').html(Number(date.getMonth()) + 1);
             $('#sp-yearChanVit').html(date.getFullYear());
-            $.ajax({
-                type: "GET",
-                url: linkapi + "ship_overview?id=" + Ship_ID,
-                dataType: "json",
-                success: function (data) {
-                    shipName = data.Ship.Name;
-                    $('#shipnameChanVit').html(shipName);
-                }, error: function (ret) {
-                    console.log('errorGET');
-                }
-            });
+            
         };
         function btn_addScrewSystem() {
             $('#uScrewSystemID').val();
@@ -3178,7 +3178,7 @@
                     $('#tablecontentMayPhu').html(tablechild);
                     $('#table_mayphu').html(tabletext);
                     loadTable('table_mayphu');
-                    $('#table_mayphu_wrapper .row .col-sm-12').first().html('<button id="btn_addSecondaryEngine" onclick="btn_addSecondaryEngine()" class="btn btn-primary mr-3" data-toggle="modal" data-target="#model-add-SecondaryEngine" style="height: 40px; margin-bottom: 8px; margin-top: -4px; font-size: 12px;">Thêm máy phụ</button><button id="btn_etwMayPhu" onclick="exportToWord(`contentMayPhu`,`Thông tin máy phụ tàu ' + shipName + '`)" class="btn btn-primary mr-3" style="height: 40px; margin-bottom: 8px; margin-top: -4px; font-size: 12px;">Xuất báo cáo</button><button id="prt_etwMayPhu" onclick="In_Content(`contentMayPhu`)" class="btn btn-primary mr-3" style="height: 40px; margin-bottom: 8px; margin-top: -4px; font-size: 12px;">In báo cáo</button>');
+                    $('#table_mayphu_wrapper .row .col-sm-12').first().html('<div class="btn-group"><button id="btn_addSecondaryEngine" onclick="btn_addSecondaryEngine()" class="btn btn-lg btn-primary mb-3" data-toggle="modal" data-target="#model-add-SecondaryEngine"><span class="glyphicon glyphicon-plus-sign"></span> Thêm máy phụ</button><div class="btn-group"><button type="button" class="btn btn-lg btn-primary mb-3 dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><span class="glyphicon glyphicon-file"></span> Xuất báo cáo </button><ul class="dropdown-menu" role="menu" style=""><li><a href="#" onclick="exportToWord(`contentMayPhu`,`Thông tin máy phụ tàu' + shipName + '`)">Xuất file Word</a></li><li><a href="#">Xuất file Excel</a></li><li><a href="#">Xuất file PDF</a></li></ul></div><button id="prt_etwMayPhu" onclick="In_Content(`contentMayPhu`)" class="btn btn-lg btn-primary mb-3"><span class="glyphicon glyphicon-print"></span> In báo cáo</button></div>');
                     $('#table_mayphu_wrapper .row').first().next().children().css("overflow-x", "auto");
                 }, error: function (ret) {
                     console.log('errorGET');
@@ -3414,7 +3414,7 @@
                     $('#tablecontentKhiTai').html(tablechild);
                     $('#table_khitai').html(tabletext);
                     loadTable('table_khitai');
-                    $('#table_khitai_wrapper .row .col-sm-12').first().html('<button id="btn_addWeaponMarine" onclick="btn_addWeaponMarine()" class="btn btn-primary mr-3" data-toggle="modal" data-target="#model-add-WeaponMarine" style="height: 40px; margin-bottom: 8px; margin-top: -4px; font-size: 12px;">Thêm khí tài, hàng hóa</button><button id="btn_etwKhiTai" onclick="exportToWord(`contentKhiTai`,`Thông tin khí tài, hàng hóa tàu ' + shipName + '`)" class="btn btn-primary mr-3" style="height: 40px; margin-bottom: 8px; margin-top: -4px; font-size: 12px;">Xuất báo cáo</button><button id="prt_etwKhiTai" onclick="In_Content(`contentKhiTai`)" class="btn btn-primary mr-3" style="height: 40px; margin-bottom: 8px; margin-top: -4px; font-size: 12px;">In báo cáo</button>');
+                    $('#table_khitai_wrapper .row .col-sm-12').first().html('<div class="btn-group"><button id="btn_addWeaponMarine" onclick="btn_addWeaponMarine()" class="btn btn-lg btn-primary mb-3" data-toggle="modal" data-target="#model-add-WeaponMarine"><span class="glyphicon glyphicon-plus-sign"></span> Thêm khí tài, hàng hóa</button><div class="btn-group"><button type="button" class="btn btn-lg btn-primary mb-3 dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><span class="glyphicon glyphicon-file"></span> Xuất báo cáo <ul class="dropdown-menu" role="menu" style=""><li><a href="#" onclick="exportToWord(`contentKhiTai`,`Thông tin khí tài, hàng hóa tàu ' + shipName + '`)">Xuất file Word</a></li><li><a href="#">Xuất file Excel</a></li><li><a href="#">Xuất file PDF</a></li></ul></div><button id="prt_etwKhiTai" onclick="In_Content(`contentKhiTai`)" class="btn btn-lg btn-primary mb-3"><span class="glyphicon glyphicon-print"></span> In báo cáo</button></div>');
                     $('#table_khitai_wrapper .row').first().next().children().css("overflow-x", "auto");
                 }, error: function (ret) {
                     console.log('errorGET');
