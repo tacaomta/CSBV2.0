@@ -23,8 +23,8 @@
                     <h4 id="title" style="color: black; margin: 0">THÊM MỚI TẦU</h4>
                     <div class="section-header-breadcrumb">
                         <div class="breadcrumb-item active"><a href="Null.aspx" style="color: #01b5f9; font-size: 18px;">Trang chủ</a></div>
-                        <div class="breadcrumb-item active"><a href="Manage_ship?vung=1" style="color: #01b5f9; font-size: 18px;">Quản lý tàu</a></div>
-                        <div class="breadcrumb-item active"><a href="Add_Ship" style="color: #01b5f9; font-size: 18px;">Thêm mới tầu</a></div>
+                        /<div class="breadcrumb-item active"><a href="Manage_ship?vung=1" style="color: #01b5f9; font-size: 18px;">Quản lý tàu</a></div>
+                        /<div class="breadcrumb-item active"><a href="Add_Ship" style="color: #01b5f9; font-size: 18px;">Thêm mới tầu</a></div>
                     </div>
                 </div>
 
