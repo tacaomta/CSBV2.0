@@ -47,8 +47,8 @@
                     <div class="section-header">
                         <h4 id="title" style="color: black; margin: 0">QUẢN LÝ TÀU - VÙNG 1</h4>
                         <div class="section-header-breadcrumb">
-                            <div class="breadcrumb-item active"><a href="Null.aspx" style="color: #01b5f9; font-size: 18px;">Trang chủ</a></div>
-                            <div class="breadcrumb-item active"><a href="Manage_ship?vung=1" style="color: #01b5f9; font-size: 18px;">Quản lý tàu</a></div>
+                            <div class="breadcrumb-item active"><a href="Null.aspx" style="color: #01b5f9; font-size: 18px;">Trang chủ </a></div>
+                            / <div class="breadcrumb-item active"><a href="Manage_ship?vung=1" style="color: #01b5f9; font-size: 18px;"> Quản lý tàu</a></div>
                         </div>
                     </div>
                     <div class="mainMenu" style="justify-content: flex-start">
@@ -60,7 +60,7 @@
                             <li><a class="a_menu" href="../Page_Master/Null.aspx">CÁC ĐƠN VỊ TRỰC THUỘC</a></li>
                         </ul>
                     </div>
-                  <br />
+                    <br />
                     <div class="section-header">
                         <div class="col-md-12" style="padding: 0">
                             <table id="tableship" class="table table-bordered table-striped table-md" style="width: 100%">
@@ -283,6 +283,1388 @@
             </div>
         </div>
     </div>
+
+    <div id="contentptrMayChinh" style="width: fit-content;" hidden="hidden">
+        <div class="WordSection1" id="contentMayChinh">
+            <table class="MsoTableGrid" border="0" cellspacing="0" cellpadding="0" width="933"
+                style='width: 700.0pt; border-collapse: collapse; border: none'>
+                <tr style='height: 20.9pt'>
+                    <td width="284" valign="top" style='width: 212.65pt; padding: 0in 5.4pt 0in 5.4pt; height: 20.9pt'>
+                        <p class="MsoNormal" align="center" style='text-align: center; text-indent: 0in; line-height: normal'>
+                            B&#7896; T&#431; L&#7878;NH C&#7842;NH SÁT BI&#7874;N
+                        </p>
+                    </td>
+                    <td width="650" valign="top" style='width: 487.35pt; padding: 0in 5.4pt 0in 5.4pt; height: 20.9pt'>
+                        <p class="MsoNormal" align="center" style='text-align: center; text-indent: 0in; line-height: normal'>
+                            <b>C&#7896;NG HÒA XÃ H&#7896;I CH&#7910; NGH&#296;A VI&#7878;T
+  NAM</b>
+                        </p>
+                    </td>
+                </tr>
+                <tr style='height: 35.35pt'>
+                    <td width="284" valign="top" style='width: 212.65pt; padding: 0in 5.4pt 0in 5.4pt; height: 35.35pt'>
+                        <p class="MsoNormal" align="center" style='text-align: center; text-indent: 0in; line-height: normal'>
+                            <b><span id="donvi"></span></b>
+                        </p>
+                    </td>
+                    <td width="650" valign="top" style='width: 487.35pt; padding: 0in 5.4pt 0in 5.4pt; height: 35.35pt'>
+                        <p class="MsoNormal" align="center" style='text-align: center; text-indent: 0in; line-height: normal'>
+                            <b>&#272;&#7897;c
+  L<u>&#7853;p – T&#7921; Do – H&#7841;nh P</u>húc</b>
+                        </p>
+                    </td>
+                </tr>
+                <tr style='height: 34.4pt'>
+                    <td width="284" valign="top" style='width: 212.65pt; padding: 0in 5.4pt 0in 5.4pt; height: 34.4pt'>
+                        <p class="MsoNormal" align="center" style='text-align: center; text-indent: 0in; line-height: normal'>
+                            <b>&nbsp;</b>
+                        </p>
+                    </td>
+                    <td width="650" valign="top" style='width: 487.35pt; padding: 0in 5.4pt 0in 5.4pt; height: 34.4pt'>
+                        <p class="MsoNormal" align="right" style='text-align: right; text-indent: 0in; line-height: normal'>
+                            <i>Hà N&#7897;i, ngày <span id="sp-day">Day</span> tháng <span id="sp-month">Month</span> n&#259;m <span id="sp-year">Year</span></i>
+                        </p>
+                        <p class="MsoNormal" align="center" style='text-align: center; text-indent: 0in; line-height: normal'>
+                            <b>&nbsp;</b>
+                        </p>
+                    </td>
+                </tr>
+            </table>
+            <p class="MsoNormal" align="center" style='margin: 0in; text-align: center; text-indent: 0in'>
+                <b><span style='font-size: 16.0pt; line-height: 115%'>BẢNG THÔNG TIN</span></b>
+            </p>
+            <p class="MsoNormal" align="center" style='margin-top: 0in; text-align: center; text-indent: 0in'>
+                <b>T<u>àu “<span id="shipname"></span></u>”</b>
+            </p>
+            <p class="MsoListParagraph" align="left" style='margin-top: 0in; margin-right: 0in; margin-bottom: 6.0pt; margin-left: 14.2pt; text-align: left; text-indent: -14.2pt'>
+                <b>1.<span style='font: 7.0pt "Times New Roman"'>&nbsp;&nbsp; </span></b><b>B&#7842;NG THÔNG TIN CHUNG</b>
+            </p>
+            <table class="MsoTableGrid" border="1" cellspacing="0" cellpadding="0" width="926"
+                style='width: 694.6pt; margin-left: -30.05pt; border-collapse: collapse; border: none'>
+                <tr style='height: 34.45pt'>
+                    <td width="57" style='width: 42.6pt; border: solid windowtext 1.0pt; padding: 0in 5.4pt 0in 5.4pt; height: 34.45pt'>
+                        <p class="MsoNormal" align="center" style='margin-top: 0in; text-align: center; text-indent: 0in; line-height: normal'>
+                            <b><span style='font-size: 12.0pt'>STT</span></b>
+                        </p>
+                    </td>
+                    <td width="170" style='width: 127.55pt; border: solid windowtext 1.0pt; border-left: none; padding: 0in 5.4pt 0in 5.4pt; height: 34.45pt'>
+                        <p class="MsoNormal" align="center" style='margin-top: 0in; text-align: center; text-indent: 0in; line-height: normal'>
+                            <b><span style='font-size: 12.0pt'>TÊN TÀU</span></b>
+                        </p>
+                    </td>
+                    <td width="76" style='width: 56.7pt; border: solid windowtext 1.0pt; border-left: none; padding: 0in 5.4pt 0in 5.4pt; height: 34.45pt'>
+                        <p class="MsoNormal" align="center" style='margin-top: 0in; text-align: center; text-indent: 0in; line-height: normal'>
+                            <b><span style='font-size: 12.0pt'>MÁY
+  CHÍNH</span></b>
+                        </p>
+                    </td>
+                    <td width="76" style='width: 56.7pt; border: solid windowtext 1.0pt; border-left: none; padding: 0in 5.4pt 0in 5.4pt; height: 34.45pt'>
+                        <p class="MsoNormal" align="center" style='margin-top: 0in; text-align: center; text-indent: 0in; line-height: normal'>
+                            <b><span style='font-size: 12.0pt'>TH
+  DIESEL – MP &#272;I&#7878;N</span></b>
+                        </p>
+                    </td>
+                    <td width="85" style='width: 63.75pt; border: solid windowtext 1.0pt; border-left: none; padding: 0in 5.4pt 0in 5.4pt; height: 34.45pt'>
+                        <p class="MsoNormal" align="center" style='margin-top: 0in; text-align: center; text-indent: 0in; line-height: normal'>
+                            <b><span style='font-size: 12.0pt'>H&#7878;
+  TR&#7908;C CHÂN V&#7882;T</span></b>
+                        </p>
+                    </td>
+                    <td width="85" style='width: 63.8pt; border: solid windowtext 1.0pt; border-left: none; padding: 0in 5.4pt 0in 5.4pt; height: 34.45pt'>
+                        <p class="MsoNormal" align="center" style='margin-top: 0in; text-align: center; text-indent: 0in; line-height: normal'>
+                            <b><span style='font-size: 12.0pt'>KHÍ TÀI
+  HÀNG H&#7842;I</span></b>
+                        </p>
+                    </td>
+                    <td width="85" style='width: 63.8pt; border: solid windowtext 1.0pt; border-left: none; padding: 0in 5.4pt 0in 5.4pt; height: 34.45pt'>
+                        <p class="MsoNormal" align="center" style='margin-top: 0in; text-align: center; text-indent: 0in; line-height: normal'>
+                            <b><span style='font-size: 12.0pt'>XU&#7890;NG
+  CÔNG TÁC</span></b>
+                        </p>
+                    </td>
+                    <td width="76" style='width: 56.7pt; border: solid windowtext 1.0pt; border-left: none; padding: 0in 5.4pt 0in 5.4pt; height: 34.45pt'>
+                        <p class="MsoNormal" align="center" style='margin-top: 0in; text-align: center; text-indent: 0in; line-height: normal'>
+                            <b><span style='font-size: 12.0pt'>NEO, T&#7900;I,
+  XÍCH NEO</span></b>
+                        </p>
+                    </td>
+                    <td width="76" style='width: 56.7pt; border: solid windowtext 1.0pt; border-left: none; padding: 0in 5.4pt 0in 5.4pt; height: 34.45pt'>
+                        <p class="MsoNormal" align="center" style='margin-top: 0in; text-align: center; text-indent: 0in; line-height: normal'>
+                            <b><span style='font-size: 12.0pt'>TRANG B&#7882;
+  C&#7912;U SINH</span></b>
+                        </p>
+                    </td>
+                    <td width="76" style='width: 56.7pt; border: solid windowtext 1.0pt; border-left: none; padding: 0in 5.4pt 0in 5.4pt; height: 34.45pt'>
+                        <p class="MsoNormal" align="center" style='margin-top: 0in; text-align: center; text-indent: 0in; line-height: normal'>
+                            <b><span style='font-size: 12.0pt'>TRANG B&#7882;
+  KHÁC</span></b>
+                        </p>
+                    </td>
+                    <td width="66" style='width: 49.6pt; border: solid windowtext 1.0pt; border-left: none; padding: 0in 5.4pt 0in 5.4pt; height: 34.45pt'>
+                        <p class="MsoNormal" align="center" style='margin-top: 0in; text-align: center; text-indent: 0in; line-height: normal'>
+                            <b><span style='font-size: 12.0pt'>V&#7852;T
+  T&#431; B&#7842;O &#272;&#7842;M</span></b>
+                        </p>
+                    </td>
+                </tr>
+                <tr style='height: 24.1pt'>
+                    <td width="57" style='width: 42.6pt; border: solid windowtext 1.0pt; border-top: none; padding: 0in 5.4pt 0in 5.4pt; height: 24.1pt'>
+                        <p class="MsoNormal" align="center" style='margin-top: 0in; text-align: center; text-indent: 0in; line-height: normal'>
+                            <span style='font-size: 12.0pt'>1</span>
+                        </p>
+                    </td>
+                    <td width="170" style='width: 127.55pt; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; padding: 0in 5.4pt 0in 5.4pt; height: 24.1pt'>
+                        <p class="MsoNormal" align="center" style='margin-top: 0in; text-align: center; text-indent: 0in; line-height: normal'>
+                            <span style='font-size: 12.0pt'>C1</span>
+                        </p>
+                    </td>
+                    <td width="76" style='width: 56.7pt; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; padding: 0in 5.4pt 0in 5.4pt; height: 24.1pt'>
+                        <p class="MsoNormal" align="center" style='margin-top: 0in; text-align: center; text-indent: 0in; line-height: normal'>
+                            <span style='font-size: 12.0pt'>5</span>
+                        </p>
+                    </td>
+                    <td width="76" style='width: 56.7pt; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; padding: 0in 5.4pt 0in 5.4pt; height: 24.1pt'>
+                        <p class="MsoNormal" align="center" style='margin-top: 0in; text-align: center; text-indent: 0in; line-height: normal'>
+                            <span style='font-size: 12.0pt'>2</span>
+                        </p>
+                    </td>
+                    <td width="85" style='width: 63.75pt; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; padding: 0in 5.4pt 0in 5.4pt; height: 24.1pt'>
+                        <p class="MsoNormal" align="center" style='margin-top: 0in; text-align: center; text-indent: 0in; line-height: normal'>
+                            <span style='font-size: 12.0pt'>4</span>
+                        </p>
+                    </td>
+                    <td width="85" style='width: 63.8pt; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; padding: 0in 5.4pt 0in 5.4pt; height: 24.1pt'>
+                        <p class="MsoNormal" align="center" style='margin-top: 0in; text-align: center; text-indent: 0in; line-height: normal'>
+                            <span style='font-size: 12.0pt'>3</span>
+                        </p>
+                    </td>
+                    <td width="85" style='width: 63.8pt; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; padding: 0in 5.4pt 0in 5.4pt; height: 24.1pt'>
+                        <p class="MsoNormal" align="center" style='margin-top: 0in; text-align: center; text-indent: 0in; line-height: normal'>
+                            <span style='font-size: 12.0pt'>2</span>
+                        </p>
+                    </td>
+                    <td width="76" style='width: 56.7pt; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; padding: 0in 5.4pt 0in 5.4pt; height: 24.1pt'>
+                        <p class="MsoNormal" align="center" style='margin-top: 0in; text-align: center; text-indent: 0in; line-height: normal'>
+                            <span style='font-size: 12.0pt'>9</span>
+                        </p>
+                    </td>
+                    <td width="76" style='width: 56.7pt; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; padding: 0in 5.4pt 0in 5.4pt; height: 24.1pt'>
+                        <p class="MsoNormal" align="center" style='margin-top: 0in; text-align: center; text-indent: 0in; line-height: normal'>
+                            <span style='font-size: 12.0pt'>4</span>
+                        </p>
+                    </td>
+                    <td width="76" style='width: 56.7pt; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; padding: 0in 5.4pt 0in 5.4pt; height: 24.1pt'>
+                        <p class="MsoNormal" align="center" style='margin-top: 0in; text-align: center; text-indent: 0in; line-height: normal'>
+                            <span style='font-size: 12.0pt'>4</span>
+                        </p>
+                    </td>
+                    <td width="66" style='width: 49.6pt; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; padding: 0in 5.4pt 0in 5.4pt; height: 24.1pt'>
+                        <p class="MsoNormal" align="center" style='margin-top: 0in; text-align: center; text-indent: 0in; line-height: normal'>
+                            <span style='font-size: 12.0pt'>4</span>
+                        </p>
+                    </td>
+                </tr>
+            </table>
+            <p class="MsoListParagraph" align="left" style='margin-top: 5.0pt; margin-right: 0in; margin-bottom: 6.0pt; margin-left: 14.2pt; text-align: left; text-indent: -14.2pt'>
+                <b><span
+                    style='line-height: 115%'>2.<span style='font: 7.0pt "Times New Roman"'>&nbsp;&nbsp;
+                    </span></span></b><b><span style='line-height: 115%'>B&#7842;NG THÔNG TIN CHI TI&#7870;T</span></b>
+            </p>
+            <table class="MsoTableGrid" border="1" cellspacing="0" cellpadding="0" width="926"
+                style='width: 694.6pt; margin-left: -30.05pt; border-collapse: collapse; border: none'>
+                <tr style='height: 46.1pt'>
+                    <td width="57" style='width: 42.6pt; border: solid windowtext 1.0pt; padding: 0in 5.4pt 0in 5.4pt; height: 46.1pt'>
+                        <p class="MsoNormal" align="center" style='margin-top: 0in; text-align: center; text-indent: 0in; line-height: normal'>
+                            <b><span style='font-size: 12.0pt'>STT</span></b>
+                        </p>
+                    </td>
+                    <td width="189" style='width: 141.75pt; border: solid windowtext 1.0pt; border-left: none; padding: 0in 5.4pt 0in 5.4pt; height: 46.1pt'>
+                        <p class="MsoNormal" align="center" style='margin-top: 0in; text-align: center; text-indent: 0in; line-height: normal'>
+                            <b><span style='font-size: 12.0pt'>TÊN TÀU</span></b>
+                        </p>
+                    </td>
+                    <td width="76" style='width: 56.65pt; border: solid windowtext 1.0pt; border-left: none; padding: 0in 5.4pt 0in 5.4pt; height: 46.1pt'>
+                        <p class="MsoNormal" align="center" style='margin-top: 0in; text-align: center; text-indent: 0in; line-height: normal'>
+                            <b><span style='font-size: 12.0pt'>S&#7888;
+  IMO</span></b>
+                        </p>
+                    </td>
+                    <td width="85" style='width: 63.8pt; border: solid windowtext 1.0pt; border-left: none; padding: 0in 5.4pt 0in 5.4pt; height: 46.1pt'>
+                        <p class="MsoNormal" align="center" style='margin-top: 0in; text-align: center; text-indent: 0in; line-height: normal'>
+                            <b><span style='font-size: 12.0pt'>TR&#7884;NG
+  T&#7842;I</span></b>
+                        </p>
+                    </td>
+                    <td width="85" style='width: 63.8pt; border: solid windowtext 1.0pt; border-left: none; padding: 0in 5.4pt 0in 5.4pt; height: 46.1pt'>
+                        <p class="MsoNormal" align="center" style='margin-top: 0in; text-align: center; text-indent: 0in; line-height: normal'>
+                            <b><span style='font-size: 12.0pt'>NHIÊN
+  LI&#7878;U</span></b>
+                        </p>
+                    </td>
+                    <td width="85" style='width: 63.75pt; border: solid windowtext 1.0pt; border-left: none; padding: 0in 5.4pt 0in 5.4pt; height: 46.1pt'>
+                        <p class="MsoNormal" align="center" style='margin-top: 0in; text-align: center; text-indent: 0in; line-height: normal'>
+                            <b><span style='font-size: 12.0pt'>N&#431;&#7898;C
+  NG&#7884;T</span></b>
+                        </p>
+                    </td>
+                    <td width="95" style='width: 70.9pt; border: solid windowtext 1.0pt; border-left: none; padding: 0in 5.4pt 0in 5.4pt; height: 46.1pt'>
+                        <p class="MsoNormal" align="center" style='margin-top: 0in; text-align: center; text-indent: 0in; line-height: normal'>
+                            <b><span style='font-size: 12.0pt'>S&#7888;
+  THUY&#7872;N VIÊN</span></b>
+                        </p>
+                    </td>
+                    <td width="94" style='width: 70.85pt; border: solid windowtext 1.0pt; border-left: none; padding: 0in 5.4pt 0in 5.4pt; height: 46.1pt'>
+                        <p class="MsoNormal" align="center" style='margin-top: 0in; text-align: center; text-indent: 0in; line-height: normal'>
+                            <b><span style='font-size: 12.0pt'>THUY&#7872;N
+  TR&#431;&#7902;NG</span></b>
+                        </p>
+                    </td>
+                    <td width="76" style='width: 56.7pt; border: solid windowtext 1.0pt; border-left: none; padding: 0in 5.4pt 0in 5.4pt; height: 46.1pt'>
+                        <p class="MsoNormal" align="center" style='margin-top: 0in; text-align: center; text-indent: 0in; line-height: normal'>
+                            <b><span style='font-size: 12.0pt'>T&#7888;C
+  &#272;&#7896;</span></b>
+                        </p>
+                    </td>
+                    <td width="85" style='width: 63.8pt; border: solid windowtext 1.0pt; border-left: none; padding: 0in 5.4pt 0in 5.4pt; height: 46.1pt'>
+                        <p class="MsoNormal" align="center" style='margin-top: 0in; text-align: center; text-indent: 0in; line-height: normal'>
+                            <b><span style='font-size: 12.0pt'>T.G
+  HÀNH TRÌNH</span></b>
+                        </p>
+                    </td>
+                </tr>
+                <tr style='height: 24.1pt'>
+                    <td width="57" style='width: 42.6pt; border: solid windowtext 1.0pt; border-top: none; padding: 0in 5.4pt 0in 5.4pt; height: 24.1pt'>
+                        <p class="MsoNormal" align="center" style='margin-top: 0in; text-align: center; text-indent: 0in; line-height: normal'>
+                            <span style='font-size: 12.0pt'>1</span>
+                        </p>
+                    </td>
+                    <td width="189" style='width: 141.75pt; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; padding: 0in 5.4pt 0in 5.4pt; height: 24.1pt'>
+                        <p class="MsoNormal" align="center" style='margin-top: 0in; text-align: center; text-indent: 0in; line-height: normal'>
+                            <span style='font-size: 12.0pt'>C1</span>
+                        </p>
+                    </td>
+                    <td width="76" style='width: 56.65pt; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; padding: 0in 5.4pt 0in 5.4pt; height: 24.1pt'>
+                        <p class="MsoNormal" align="center" style='margin-top: 0in; text-align: center; text-indent: 0in; line-height: normal'>
+                            <span style='font-size: 12.0pt'>5</span>
+                        </p>
+                    </td>
+                    <td width="85" style='width: 63.8pt; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; padding: 0in 5.4pt 0in 5.4pt; height: 24.1pt'>
+                        <p class="MsoNormal" align="center" style='margin-top: 0in; text-align: center; text-indent: 0in; line-height: normal'>
+                            <span style='font-size: 12.0pt'>2</span>
+                        </p>
+                    </td>
+                    <td width="85" style='width: 63.8pt; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; padding: 0in 5.4pt 0in 5.4pt; height: 24.1pt'>
+                        <p class="MsoNormal" align="center" style='margin-top: 0in; text-align: center; text-indent: 0in; line-height: normal'>
+                            <span style='font-size: 12.0pt'>4</span>
+                        </p>
+                    </td>
+                    <td width="85" style='width: 63.75pt; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; padding: 0in 5.4pt 0in 5.4pt; height: 24.1pt'>
+                        <p class="MsoNormal" align="center" style='margin-top: 0in; text-align: center; text-indent: 0in; line-height: normal'>
+                            <span style='font-size: 12.0pt'>3</span>
+                        </p>
+                    </td>
+                    <td width="95" style='width: 70.9pt; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; padding: 0in 5.4pt 0in 5.4pt; height: 24.1pt'>
+                        <p class="MsoNormal" align="center" style='margin-top: 0in; text-align: center; text-indent: 0in; line-height: normal'>
+                            <span style='font-size: 12.0pt'>2</span>
+                        </p>
+                    </td>
+                    <td width="94" style='width: 70.85pt; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; padding: 0in 5.4pt 0in 5.4pt; height: 24.1pt'>
+                        <p class="MsoNormal" align="center" style='margin-top: 0in; text-align: center; text-indent: 0in; line-height: normal'>
+                            <span style='font-size: 12.0pt'>9</span>
+                        </p>
+                    </td>
+                    <td width="76" style='width: 56.7pt; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; padding: 0in 5.4pt 0in 5.4pt; height: 24.1pt'>
+                        <p class="MsoNormal" align="center" style='margin-top: 0in; text-align: center; text-indent: 0in; line-height: normal'>
+                            <span style='font-size: 12.0pt'>5</span>
+                        </p>
+                    </td>
+                    <td width="85" style='width: 63.8pt; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; padding: 0in 5.4pt 0in 5.4pt; height: 24.1pt'>
+                        <p class="MsoNormal" align="center" style='margin-top: 0in; text-align: center; text-indent: 0in; line-height: normal'>
+                            <span style='font-size: 12.0pt'>6</span>
+                        </p>
+                    </td>
+                </tr>
+            </table>
+            <p class="MsoListParagraph" align="left" style='margin-top: 5.0pt; margin-right: 0in; margin-bottom: 6.0pt; margin-left: 14.2pt; text-align: left; text-indent: -14.2pt'>
+                <b><span
+                    style='line-height: 115%'>3.<span style='font: 7.0pt "Times New Roman"'>&nbsp;&nbsp;
+                    </span></span></b><b><span style='line-height: 115%'>B&#7842;NG THÔNG TIN MÁY
+CHÍNH</span></b>
+            </p>
+            <table id="tablecontentMayChinh" class="MsoTableGrid" border="1" cellspacing="0" cellpadding="0" width="926"
+                style='width: 694.6pt; ; border-collapse: collapse; border: none'>
+                <tr style="height: 46.1pt">
+                    <td width="57" style="width: 42.6pt; border: solid windowtext 1.0pt; padding: 0in 5.4pt 0in 5.4pt; height: 46.1pt">
+                        <p class="MsoNormal" align="center" style="margin-top: 0in; text-align: center; text-indent: 0in; line-height: normal">
+                            <b><span style="font-size: 12.0pt">STT</span></b>
+                        </p>
+                    </td>
+                    <td width="189" style="width: 141.75pt; border: solid windowtext 1.0pt; border-left: none; padding: 0in 5.4pt 0in 5.4pt; height: 46.1pt">
+                        <p class="MsoNormal" align="center" style="margin-top: 0in; text-align: center; text-indent: 0in; line-height: normal">
+                            <b><span style="font-size: 12.0pt">LO&#7840;I
+  MÁY</span></b>
+                        </p>
+                    </td>
+                    <td width="94" style="width: 70.85pt; border: solid windowtext 1.0pt; border-left: none; padding: 0in 5.4pt 0in 5.4pt; height: 46.1pt">
+                        <p class="MsoNormal" align="center" style="margin-top: 0in; text-align: center; text-indent: 0in; line-height: normal">
+                            <b><span style="font-size: 12.0pt">N&#258;M
+  SX</span></b>
+                        </p>
+                    </td>
+                    <td width="85" style="width: 63.75pt; border: solid windowtext 1.0pt; border-left: none; padding: 0in 5.4pt 0in 5.4pt; height: 46.1pt">
+                        <p class="MsoNormal" align="center" style="margin-top: 0in; text-align: center; text-indent: 0in; line-height: normal">
+                            <b><span style="font-size: 12.0pt">XU&#7844;T
+  X&#7912;</span></b>
+                        </p>
+                    </td>
+                    <td width="85" style="width: 63.8pt; border: solid windowtext 1.0pt; border-left: none; padding: 0in 5.4pt 0in 5.4pt; height: 46.1pt">
+                        <p class="MsoNormal" align="center" style="margin-top: 0in; text-align: center; text-indent: 0in; line-height: normal">
+                            <b><span style="font-size: 12.0pt">CÔNG SU&#7844;T</span></b>
+                        </p>
+                    </td>
+                    <td width="95" style="width: 70.9pt; border: solid windowtext 1.0pt; border-left: none; padding: 0in 5.4pt 0in 5.4pt; height: 46.1pt">
+                        <p class="MsoNormal" align="center" style="margin-top: 0in; text-align: center; text-indent: 0in; line-height: normal">
+                            <b><span style="font-size: 12.0pt">SU&#7844;T
+  TIÊU HAO</span></b>
+                        </p>
+                    </td>
+                    <td width="85" style="width: 63.75pt; border: solid windowtext 1.0pt; border-left: none; padding: 0in 5.4pt 0in 5.4pt; height: 46.1pt">
+                        <p class="MsoNormal" align="center" style="margin-top: 0in; text-align: center; text-indent: 0in; line-height: normal">
+                            <b><span style="font-size: 12.0pt">T&#7888;C
+  &#272;&#7896;</span></b>
+                        </p>
+                    </td>
+                    <td width="113" style="width: 85.05pt; border: solid windowtext 1.0pt; border-left: none; padding: 0in 5.4pt 0in 5.4pt; height: 46.1pt">
+                        <p class="MsoNormal" align="center" style="margin-top: 0in; text-align: center; text-indent: 0in; line-height: normal">
+                            <b><span style="font-size: 12.0pt">S&#7888;
+  XY LANH</span></b>
+                        </p>
+                    </td>
+                    <td width="123" style="width: 92.15pt; border: solid windowtext 1.0pt; border-left: none; padding: 0in 5.4pt 0in 5.4pt; height: 46.1pt">
+                        <p class="MsoNormal" align="center" style="margin-top: 0in; text-align: center; text-indent: 0in; line-height: normal">
+                            <b><span style="font-size: 12.0pt">&#272;&#431;&#7900;NG
+  KÍNH XY LANH</span></b>
+                        </p>
+                    </td>
+                </tr>
+                <tr style="height: 24.1pt">
+                    <td width="57" style="width: 42.6pt; border: solid windowtext 1.0pt; border-top: none; padding: 0in 5.4pt 0in 5.4pt; height: 24.1pt">
+                        <p class="MsoNormal" align="center" style="margin-top: 0in; text-align: center; text-indent: 0in; line-height: normal">
+                            <span style="font-size: 12.0pt">1</span>
+                        </p>
+                    </td>
+                    <td width="189" style="width: 141.75pt; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; padding: 0in 5.4pt 0in 5.4pt; height: 24.1pt">
+                        <p class="MsoNormal" align="center" style="margin-top: 0in; text-align: center; text-indent: 0in; line-height: normal">
+                            <span style="font-size: 12.0pt">C1</span>
+                        </p>
+                    </td>
+                    <td width="94" style="width: 70.85pt; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; padding: 0in 5.4pt 0in 5.4pt; height: 24.1pt">
+                        <p class="MsoNormal" align="center" style="margin-top: 0in; text-align: center; text-indent: 0in; line-height: normal">
+                            <span style="font-size: 12.0pt">5</span>
+                        </p>
+                    </td>
+                    <td width="85" style="width: 63.75pt; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; padding: 0in 5.4pt 0in 5.4pt; height: 24.1pt">
+                        <p class="MsoNormal" align="center" style="margin-top: 0in; text-align: center; text-indent: 0in; line-height: normal">
+                            <span style="font-size: 12.0pt">2</span>
+                        </p>
+                    </td>
+                    <td width="85" style="width: 63.8pt; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; padding: 0in 5.4pt 0in 5.4pt; height: 24.1pt">
+                        <p class="MsoNormal" align="center" style="margin-top: 0in; text-align: center; text-indent: 0in; line-height: normal">
+                            <span style="font-size: 12.0pt">4</span>
+                        </p>
+                    </td>
+                    <td width="95" style="width: 70.9pt; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; padding: 0in 5.4pt 0in 5.4pt; height: 24.1pt">
+                        <p class="MsoNormal" align="center" style="margin-top: 0in; text-align: center; text-indent: 0in; line-height: normal">
+                            <span style="font-size: 12.0pt">3</span>
+                        </p>
+                    </td>
+                    <td width="85" style="width: 63.75pt; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; padding: 0in 5.4pt 0in 5.4pt; height: 24.1pt">
+                        <p class="MsoNormal" align="center" style="margin-top: 0in; text-align: center; text-indent: 0in; line-height: normal">
+                            <span style="font-size: 12.0pt">2</span>
+                        </p>
+                    </td>
+                    <td width="113" style="width: 85.05pt; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; padding: 0in 5.4pt 0in 5.4pt; height: 24.1pt">
+                        <p class="MsoNormal" align="center" style="margin-top: 0in; text-align: center; text-indent: 0in; line-height: normal">
+                            <span style="font-size: 12.0pt">9</span>
+                        </p>
+                    </td>
+                    <td width="123" style="width: 92.15pt; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; padding: 0in 5.4pt 0in 5.4pt; height: 24.1pt">
+                        <p class="MsoNormal" align="center" style="margin-top: 0in; text-align: center; text-indent: 0in; line-height: normal">
+                            <span style="font-size: 12.0pt">5</span>
+                        </p>
+                    </td>
+                </tr>
+            </table>
+            <p class=MsoListParagraph align=left style='margin-top:5.0pt;margin-right:0in;
+margin-bottom:6.0pt;margin-left:14.2pt;text-align:left;text-indent:-14.2pt'><b><span
+style='line-height:115%'>4.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span></b><b><span style='line-height:115%'>B&#7842;NG THÔNG TIN T&#7892;
+H&#7906;P DIESEL – MÁY PHÁT &#272;I&#7878;N</span></b></p>
+            <table id="tablecontentMayPhu" class="MsoTableGrid" border="1" cellspacing="0" cellpadding="0" width="926"
+                style='width: 694.6pt; ; border-collapse: collapse; border: none'>
+                <tr style="height: 46.1pt">
+                    <td width="57" style="width: 42.6pt; border: solid windowtext 1.0pt; padding: 0in 5.4pt 0in 5.4pt; height: 46.1pt">
+                        <p class="MsoNormal" align="center" style="margin-top: 0in; text-align: center; text-indent: 0in; line-height: normal">
+                            <b><span style="font-size: 12.0pt">STT</span></b>
+                        </p>
+                    </td>
+                    <td width="152" style="width: 114.35pt; border: solid windowtext 1.0pt; border-left: none; padding: 0in 5.4pt 0in 5.4pt; height: 46.1pt">
+                        <p class="MsoNormal" align="center" style="margin-top: 0in; text-align: center; text-indent: 0in; line-height: normal">
+                            <b><span style="font-size: 12.0pt">ĐỘNG CƠ DIESEL</span></b>
+                        </p>
+                    </td>
+                    <td width="83" style="width: 62.6pt; border: solid windowtext 1.0pt; border-left: none; padding: 0in 5.4pt 0in 5.4pt; height: 46.1pt">
+                        <p class="MsoNormal" align="center" style="margin-top: 0in; text-align: center; text-indent: 0in; line-height: normal">
+                            <b><span style="font-size: 12.0pt">NĂM SX</span></b>
+                        </p>
+                    </td>
+                    <td width="72" style="width: 60.6pt; border: solid windowtext 1.0pt; border-left: none; padding: 0in 5.4pt 0in 5.4pt; height: 46.1pt">
+                        <p class="MsoNormal" align="center" style="margin-top: 0in; text-align: center; text-indent: 0in; line-height: normal">
+                            <b><span style="font-size: 12.0pt">XUẤT XỨ</span></b>
+                        </p>
+                    </td>
+                    <td width="85" style="width: 63.8pt; border: solid windowtext 1.0pt; border-left: none; padding: 0in 5.4pt 0in 5.4pt; height: 46.1pt">
+                        <p class="MsoNormal" align="center" style="margin-top: 0in; text-align: center; text-indent: 0in; line-height: normal">
+                            <b><span style="font-size: 12.0pt">CÔNG SUẤT</span></b>
+                        </p>
+                    </td>
+                    <td width="95" style="width: 70.9pt; border: solid windowtext 1.0pt; border-left: none; padding: 0in 5.4pt 0in 5.4pt; height: 46.1pt">
+                        <p class="MsoNormal" align="center" style="margin-top: 0in; text-align: center; text-indent: 0in; line-height: normal">
+                            <b><span style="font-size: 12.0pt">SUẤT TIÊU HAO</span></b>
+                        </p>
+                    </td>
+                    <td width="67" style="width: 50.2pt; border: solid windowtext 1.0pt; border-left: none; padding: 0in 5.4pt 0in 5.4pt; height: 46.1pt">
+                        <p class="MsoNormal" align="center" style="margin-top: 0in; text-align: center; text-indent: 0in; line-height: normal">
+                            <b><span style="font-size: 12.0pt">TỐC ĐỘ</span></b>
+                        </p>
+                    </td>
+                    <td width="156" style="width: 117.0pt; border: solid windowtext 1.0pt; border-left: none; padding: 0in 5.4pt 0in 5.4pt; height: 46.1pt">
+                        <p class="MsoNormal" align="center" style="margin-top: 0in; text-align: center; text-indent: 0in; line-height: normal">
+                            <b><span style="font-size: 12.0pt">MÁY PHÁT ĐIỆN</span></b>
+                        </p>
+                    </td>
+                    <td width="78" style="width: 58.5pt; border: solid windowtext 1.0pt; border-left: none; padding: 0in 5.4pt 0in 5.4pt; height: 46.1pt">
+                        <p class="MsoNormal" align="center" style="margin-top: 0in; text-align: center; text-indent: 0in; line-height: normal">
+                            <b><span style="font-size: 12.0pt">NĂM SX</span></b>
+                        </p>
+                    </td>
+                    <td width="78" style="width: 58.5pt; border: solid windowtext 1.0pt; border-left: none; padding: 0in 5.4pt 0in 5.4pt; height: 46.1pt">
+                        <p class="MsoNormal" align="center" style="margin-top: 0in; text-align: center; text-indent: 0in; line-height: normal">
+                            <b><span style="font-size: 12.0pt">XUẤT XỨ</span></b>
+                        </p>
+                    </td>
+                </tr>
+                <tr style="height: 24.1pt">
+                    <td width="57" style="width: 42.6pt; border: solid windowtext 1.0pt; border-top: none; padding: 0in 5.4pt 0in 5.4pt; height: 24.1pt">
+                        <p class="MsoNormal" align="center" style="margin-top: 0in; text-align: center; text-indent: 0in; line-height: normal">
+                            <span style="font-size: 12.0pt">1</span>
+                        </p>
+                    </td>
+                    <td width="189" style="width: 141.75pt; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; padding: 0in 5.4pt 0in 5.4pt; height: 24.1pt">
+                        <p class="MsoNormal" align="center" style="margin-top: 0in; text-align: center; text-indent: 0in; line-height: normal">
+                            <span style="font-size: 12.0pt">C1</span>
+                        </p>
+                    </td>
+                    <td width="94" style="width: 70.85pt; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; padding: 0in 5.4pt 0in 5.4pt; height: 24.1pt">
+                        <p class="MsoNormal" align="center" style="margin-top: 0in; text-align: center; text-indent: 0in; line-height: normal">
+                            <span style="font-size: 12.0pt">5</span>
+                        </p>
+                    </td>
+                    <td width="85" style="width: 63.75pt; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; padding: 0in 5.4pt 0in 5.4pt; height: 24.1pt">
+                        <p class="MsoNormal" align="center" style="margin-top: 0in; text-align: center; text-indent: 0in; line-height: normal">
+                            <span style="font-size: 12.0pt">2</span>
+                        </p>
+                    </td>
+                    <td width="85" style="width: 63.8pt; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; padding: 0in 5.4pt 0in 5.4pt; height: 24.1pt">
+                        <p class="MsoNormal" align="center" style="margin-top: 0in; text-align: center; text-indent: 0in; line-height: normal">
+                            <span style="font-size: 12.0pt">4</span>
+                        </p>
+                    </td>
+                    <td width="95" style="width: 70.9pt; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; padding: 0in 5.4pt 0in 5.4pt; height: 24.1pt">
+                        <p class="MsoNormal" align="center" style="margin-top: 0in; text-align: center; text-indent: 0in; line-height: normal">
+                            <span style="font-size: 12.0pt">3</span>
+                        </p>
+                    </td>
+                    <td width="85" style="width: 63.75pt; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; padding: 0in 5.4pt 0in 5.4pt; height: 24.1pt">
+                        <p class="MsoNormal" align="center" style="margin-top: 0in; text-align: center; text-indent: 0in; line-height: normal">
+                            <span style="font-size: 12.0pt">2</span>
+                        </p>
+                    </td>
+                    <td width="113" style="width: 85.05pt; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; padding: 0in 5.4pt 0in 5.4pt; height: 24.1pt">
+                        <p class="MsoNormal" align="center" style="margin-top: 0in; text-align: center; text-indent: 0in; line-height: normal">
+                            <span style="font-size: 12.0pt">9</span>
+                        </p>
+                    </td>
+                    <td width="123" style="width: 92.15pt; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; padding: 0in 5.4pt 0in 5.4pt; height: 24.1pt">
+                        <p class="MsoNormal" align="center" style="margin-top: 0in; text-align: center; text-indent: 0in; line-height: normal">
+                            <span style="font-size: 12.0pt">5</span>
+                        </p>
+                    </td>
+                    <td width="123" style="width: 92.15pt; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; padding: 0in 5.4pt 0in 5.4pt; height: 24.1pt">
+                        <p class="MsoNormal" align="center" style="margin-top: 0in; text-align: center; text-indent: 0in; line-height: normal">
+                            <span style="font-size: 12.0pt">5</span>
+                        </p>
+                    </td>
+                </tr>
+            </table>
+            <p class=MsoListParagraph align=left style='margin-top:5.0pt;margin-right:0in;
+margin-bottom:6.0pt;margin-left:14.2pt;text-align:left;text-indent:-14.2pt'><b><span
+style='line-height:115%'>5.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span></b><b><span style='line-height:115%'>B&#7842;NG THÔNG TIN H&#7878;
+TR&#7908;C CHÂN V&#7882;T</span></b></p>
+            <table id="tablecontentChanVit" class="MsoTableGrid" border="1" cellspacing="0" cellpadding="0" width="923"
+                style='width: 692.45pt; ; border-collapse: collapse; border: none'>
+                <tr style="height: 46.1pt">
+                    <td width="57" style="width: 42.6pt; border: solid windowtext 1.0pt; padding: 0in 5.4pt 0in 5.4pt; height: 46.1pt">
+                        <p class="MsoNormal" align="center" style="margin-top: 0in; text-align: center; text-indent: 0in; line-height: normal">
+                            <b><span style="font-size: 12.0pt">STT</span></b>
+                        </p>
+                    </td>
+                    <td width="189" style="width: 141.75pt; border: solid windowtext 1.0pt; border-left: none; padding: 0in 5.4pt 0in 5.4pt; height: 46.1pt">
+                        <p class="MsoNormal" align="center" style="margin-top: 0in; text-align: center; text-indent: 0in; line-height: normal">
+                            <b><span style="font-size: 12.0pt">TÊN HỆ TRỤC</span></b>
+                        </p>
+                    </td>
+                    <td width="101" style="width: 76.1pt; border: solid windowtext 1.0pt; border-left: none; padding: 0in 5.4pt 0in 5.4pt; height: 46.1pt">
+                        <p class="MsoNormal" align="center" style="margin-top: 0in; text-align: center; text-indent: 0in; line-height: normal">
+                            <b><span style="font-size: 12.0pt">CHIỀU DÀI HỆ TRỤC</span></b>
+                        </p>
+                    </td>
+                    <td width="96" style="width: 1.0in; border: solid windowtext 1.0pt; border-left: none; padding: 0in 5.4pt 0in 5.4pt; height: 46.1pt">
+                        <p class="MsoNormal" align="center" style="margin-top: 0in; text-align: center; text-indent: 0in; line-height: normal">
+                            <b><span style="font-size: 12.0pt">ĐK CƠ SỞ</span></b>
+                        </p>
+                    </td>
+                    <td width="96" style="width: 1.0in; border: solid windowtext 1.0pt; border-left: none; padding: 0in 5.4pt 0in 5.4pt; height: 46.1pt">
+                        <p class="MsoNormal" align="center" style="margin-top: 0in; text-align: center; text-indent: 0in; line-height: normal">
+                            <b><span style="font-size: 12.0pt">ĐK Ổ ĐỠ SAU</span></b>
+                        </p>
+                    </td>
+                    <td width="96" style="width: 1.0in; border: solid windowtext 1.0pt; border-left: none; padding: 0in 5.4pt 0in 5.4pt; height: 46.1pt">
+                        <p class="MsoNormal" align="center" style="margin-top: 0in; text-align: center; text-indent: 0in; line-height: normal">
+                            <b><span style="font-size: 12.0pt">ĐK Ổ ĐỠ GIỮA</span></b>
+                        </p>
+                    </td>
+                    <td width="96" style="width: 1.0in; border: solid windowtext 1.0pt; border-left: none; padding: 0in 5.4pt 0in 5.4pt; height: 46.1pt">
+                        <p class="MsoNormal" align="center" style="margin-top: 0in; text-align: center; text-indent: 0in; line-height: normal">
+                            <b><span style="font-size: 12.0pt">ĐK Ổ ĐỠ TRƯỚC</span></b>
+                        </p>
+                    </td>
+                    <td width="96" style="width: 1.0in; border: solid windowtext 1.0pt; border-left: none; padding: 0in 5.4pt 0in 5.4pt; height: 46.1pt">
+                        <p class="MsoNormal" align="center" style="margin-top: 0in; text-align: center; text-indent: 0in; line-height: normal">
+                            <b><span style="font-size: 12.0pt">ĐK CHÂN VỊT</span></b>
+                        </p>
+                    </td>
+                    <td width="96" style="width: 1.0in; border: solid windowtext 1.0pt; border-left: none; padding: 0in 5.4pt 0in 5.4pt; height: 46.1pt">
+                        <p class="MsoNormal" align="center" style="margin-top: 0in; text-align: center; text-indent: 0in; line-height: normal">
+                            <b><span style="font-size: 12.0pt">SỐ CÁNH CHÂN VỊT</span></b>
+                        </p>
+                    </td>
+                </tr>
+                <tr style="height: 24.1pt">
+                    <td width="57" style="width: 42.6pt; border: solid windowtext 1.0pt; border-top: none; padding: 0in 5.4pt 0in 5.4pt; height: 24.1pt">
+                        <p class="MsoNormal" align="center" style="margin-top: 0in; text-align: center; text-indent: 0in; line-height: normal">
+                            <span style="font-size: 12.0pt">1</span>
+                        </p>
+                    </td>
+                    <td width="189" style="width: 141.75pt; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; padding: 0in 5.4pt 0in 5.4pt; height: 24.1pt">
+                        <p class="MsoNormal" align="center" style="margin-top: 0in; text-align: center; text-indent: 0in; line-height: normal">
+                            <span style="font-size: 12.0pt">C1</span>
+                        </p>
+                    </td>
+                    <td width="94" style="width: 70.85pt; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; padding: 0in 5.4pt 0in 5.4pt; height: 24.1pt">
+                        <p class="MsoNormal" align="center" style="margin-top: 0in; text-align: center; text-indent: 0in; line-height: normal">
+                            <span style="font-size: 12.0pt">5</span>
+                        </p>
+                    </td>
+                    <td width="85" style="width: 63.75pt; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; padding: 0in 5.4pt 0in 5.4pt; height: 24.1pt">
+                        <p class="MsoNormal" align="center" style="margin-top: 0in; text-align: center; text-indent: 0in; line-height: normal">
+                            <span style="font-size: 12.0pt">2</span>
+                        </p>
+                    </td>
+                    <td width="85" style="width: 63.8pt; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; padding: 0in 5.4pt 0in 5.4pt; height: 24.1pt">
+                        <p class="MsoNormal" align="center" style="margin-top: 0in; text-align: center; text-indent: 0in; line-height: normal">
+                            <span style="font-size: 12.0pt">4</span>
+                        </p>
+                    </td>
+                    <td width="95" style="width: 70.9pt; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; padding: 0in 5.4pt 0in 5.4pt; height: 24.1pt">
+                        <p class="MsoNormal" align="center" style="margin-top: 0in; text-align: center; text-indent: 0in; line-height: normal">
+                            <span style="font-size: 12.0pt">3</span>
+                        </p>
+                    </td>
+                    <td width="85" style="width: 63.75pt; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; padding: 0in 5.4pt 0in 5.4pt; height: 24.1pt">
+                        <p class="MsoNormal" align="center" style="margin-top: 0in; text-align: center; text-indent: 0in; line-height: normal">
+                            <span style="font-size: 12.0pt">2</span>
+                        </p>
+                    </td>
+                    <td width="113" style="width: 85.05pt; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; padding: 0in 5.4pt 0in 5.4pt; height: 24.1pt">
+                        <p class="MsoNormal" align="center" style="margin-top: 0in; text-align: center; text-indent: 0in; line-height: normal">
+                            <span style="font-size: 12.0pt">9</span>
+                        </p>
+                    </td>
+                    <td width="123" style="width: 92.15pt; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; padding: 0in 5.4pt 0in 5.4pt; height: 24.1pt">
+                        <p class="MsoNormal" align="center" style="margin-top: 0in; text-align: center; text-indent: 0in; line-height: normal">
+                            <span style="font-size: 12.0pt">5</span>
+                        </p>
+                    </td>
+                </tr>
+            </table>
+            <p class=MsoListParagraph align=left style='margin-top:5.0pt;margin-right:0in;
+margin-bottom:6.0pt;margin-left:14.2pt;text-align:left;text-indent:-14.2pt'><b><span
+style='line-height:115%'>6.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span></b><b><span style='line-height:115%'>B&#7842;NG THÔNG TIN KHÍ
+TÀI, HÀNG H&#7842;I</span></b></p>
+            <table id="tablecontentKhiTai" class="MsoTableGrid" border="1" cellspacing="0" cellpadding="0" width="923"
+                style='width: 692.45pt; ; border-collapse: collapse; border: none'>
+                <tr style="height: 46.1pt">
+                    <td width="57" style="width: 42.6pt; border: solid windowtext 1.0pt; padding: 0in 5.4pt 0in 5.4pt; height: 46.1pt">
+                        <p class="MsoNormal" align="center" style="margin-top: 0in; text-align: center; text-indent: 0in; line-height: normal">
+                            <b><span style="font-size: 12.0pt">STT</span></b>
+                        </p>
+                    </td>
+                    <td width="212" style="width: 159.35pt; border: solid windowtext 1.0pt; border-left: none; padding: 0in 5.4pt 0in 5.4pt; height: 46.1pt">
+                        <p class="MsoNormal" align="center" style="margin-top: 0in; text-align: center; text-indent: 0in; line-height: normal">
+                            <b><span style="font-size: 12.0pt">LOẠI KHÍ TÀI</span></b>
+                        </p>
+                    </td>
+                    <td width="102" style="width: 76.5pt; border: solid windowtext 1.0pt; border-left: none; padding: 0in 5.4pt 0in 5.4pt; height: 46.1pt">
+                        <p class="MsoNormal" align="center" style="margin-top: 0in; text-align: center; text-indent: 0in; line-height: normal">
+                            <b><span style="font-size: 12.0pt">KÍ HIỆU MÃ</span></b>
+                        </p>
+                    </td>
+                    <td width="96" style="width: 1.0in; border: solid windowtext 1.0pt; border-left: none; padding: 0in 5.4pt 0in 5.4pt; height: 46.1pt">
+                        <p class="MsoNormal" align="center" style="margin-top: 0in; text-align: center; text-indent: 0in; line-height: normal">
+                            <b><span style="font-size: 12.0pt">SỐ LƯỢNG</span></b>
+                        </p>
+                    </td>
+                    <td width="102" style="width: 76.5pt; border: solid windowtext 1.0pt; border-left: none; padding: 0in 5.4pt 0in 5.4pt; height: 46.1pt">
+                        <p class="MsoNormal" align="center" style="margin-top: 0in; text-align: center; text-indent: 0in; line-height: normal">
+                            <b><span style="font-size: 12.0pt">XUẤT XỨ</span></b>
+                        </p>
+                    </td>
+                    <td width="96" style="width: 1.0in; border: solid windowtext 1.0pt; border-left: none; padding: 0in 5.4pt 0in 5.4pt; height: 46.1pt">
+                        <p class="MsoNormal" align="center" style="margin-top: 0in; text-align: center; text-indent: 0in; line-height: normal">
+                            <b><span style="font-size: 12.0pt">CÔNG SUẤT</span></b>
+                        </p>
+                    </td>
+                    <td width="258" style="width: 193.5pt; border: solid windowtext 1.0pt; border-left: none; padding: 0in 5.4pt 0in 5.4pt; height: 46.1pt">
+                        <p class="MsoNormal" align="center" style="margin-top: 0in; text-align: center; text-indent: 0in; line-height: normal">
+                            <b><span style="font-size: 12.0pt">TÍNH NĂNG</span></b>
+                        </p>
+                    </td>
+                </tr>
+                <tr style="height: 24.1pt">
+                    <td width="57" style="width: 42.6pt; border: solid windowtext 1.0pt; border-top: none; padding: 0in 5.4pt 0in 5.4pt; height: 24.1pt">
+                        <p class="MsoNormal" align="center" style="margin-top: 0in; text-align: center; text-indent: 0in; line-height: normal">
+                            <span style="font-size: 12.0pt">1</span>
+                        </p>
+                    </td>
+                    <td width="189" style="width: 141.75pt; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; padding: 0in 5.4pt 0in 5.4pt; height: 24.1pt">
+                        <p class="MsoNormal" align="center" style="margin-top: 0in; text-align: center; text-indent: 0in; line-height: normal">
+                            <span style="font-size: 12.0pt">C1</span>
+                        </p>
+                    </td>
+                    <td width="94" style="width: 70.85pt; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; padding: 0in 5.4pt 0in 5.4pt; height: 24.1pt">
+                        <p class="MsoNormal" align="center" style="margin-top: 0in; text-align: center; text-indent: 0in; line-height: normal">
+                            <span style="font-size: 12.0pt">5</span>
+                        </p>
+                    </td>
+                    <td width="85" style="width: 63.75pt; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; padding: 0in 5.4pt 0in 5.4pt; height: 24.1pt">
+                        <p class="MsoNormal" align="center" style="margin-top: 0in; text-align: center; text-indent: 0in; line-height: normal">
+                            <span style="font-size: 12.0pt">2</span>
+                        </p>
+                    </td>
+                    <td width="85" style="width: 63.8pt; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; padding: 0in 5.4pt 0in 5.4pt; height: 24.1pt">
+                        <p class="MsoNormal" align="center" style="margin-top: 0in; text-align: center; text-indent: 0in; line-height: normal">
+                            <span style="font-size: 12.0pt">4</span>
+                        </p>
+                    </td>
+                    <td width="95" style="width: 70.9pt; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; padding: 0in 5.4pt 0in 5.4pt; height: 24.1pt">
+                        <p class="MsoNormal" align="center" style="margin-top: 0in; text-align: center; text-indent: 0in; line-height: normal">
+                            <span style="font-size: 12.0pt">3</span>
+                        </p>
+                    </td>
+                    <td width="85" style="width: 63.75pt; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; padding: 0in 5.4pt 0in 5.4pt; height: 24.1pt">
+                        <p class="MsoNormal" align="center" style="margin-top: 0in; text-align: center; text-indent: 0in; line-height: normal">
+                            <span style="font-size: 12.0pt">2</span>
+                        </p>
+                    </td>
+                </tr>
+            </table>
+            <p class=MsoListParagraph align=left style='margin-top:5.0pt;margin-right:0in;
+margin-bottom:6.0pt;margin-left:14.2pt;text-align:left;text-indent:-14.2pt'><b><span
+style='line-height:115%'>7.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span></b><b><span style='line-height:115%'>B&#7842;NG THÔNG TIN XU&#7890;NG
+MÁY CÔNG TÁC</span></b></p>
+
+<table class=MsoTableGrid border=1 cellspacing=0 cellpadding=0 width=964
+ style='width:723.15pt;margin-left:-30.05pt;border-collapse:collapse;
+ border:none'>
+ <tr style='height:46.1pt'>
+  <td width=47 style='width:35.45pt;border:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt;
+  height:46.1pt'>
+  <p class=MsoNormal align=center style='margin-top:0in;text-align:center;
+  text-indent:0in;line-height:normal'><b><span style='font-size:11.0pt'>STT</span></b></p>
+  </td>
+  <td width=104 style='width:78.0pt;border:solid windowtext 1.0pt;border-left:
+  none;padding:0in 5.4pt 0in 5.4pt;height:46.1pt'>
+  <p class=MsoNormal align=center style='margin-top:0in;text-align:center;
+  text-indent:0in;line-height:normal'><b><span style='font-size:11.0pt'>TÊN</span></b></p>
+  </td>
+  <td width=76 style='width:56.7pt;border:solid windowtext 1.0pt;border-left:
+  none;padding:0in 5.4pt 0in 5.4pt;height:46.1pt'>
+  <p class=MsoNormal align=center style='margin-top:0in;text-align:center;
+  text-indent:0in;line-height:normal'><b><span style='font-size:11.0pt'>S&#7888;
+  NG&#431;&#7900;I T&#7888;I &#272;A</span></b></p>
+  </td>
+  <td width=66 style='width:49.6pt;border:solid windowtext 1.0pt;border-left:
+  none;padding:0in 5.4pt 0in 5.4pt;height:46.1pt'>
+  <p class=MsoNormal align=center style='margin-top:0in;text-align:center;
+  text-indent:0in;line-height:normal'><b><span style='font-size:11.0pt'>LO&#7840;I
+  &#272;&#7896;NG C&#416;</span></b></p>
+  </td>
+  <td width=66 style='width:49.6pt;border:solid windowtext 1.0pt;border-left:
+  none;padding:0in 5.4pt 0in 5.4pt;height:46.1pt'>
+  <p class=MsoNormal align=center style='margin-top:0in;text-align:center;
+  text-indent:0in;line-height:normal'><b><span style='font-size:11.0pt'>SL
+  &#272;&#7896;NG C&#416;</span></b></p>
+  </td>
+  <td width=95 style='width:70.9pt;border:solid windowtext 1.0pt;border-left:
+  none;padding:0in 5.4pt 0in 5.4pt;height:46.1pt'>
+  <p class=MsoNormal align=center style='margin-top:0in;text-align:center;
+  text-indent:0in;line-height:normal'><b><span style='font-size:11.0pt'>KI&#7874;U
+  CHÂN V&#7882;T</span></b></p>
+  </td>
+  <td width=66 style='width:49.6pt;border:solid windowtext 1.0pt;border-left:
+  none;padding:0in 5.4pt 0in 5.4pt;height:46.1pt'>
+  <p class=MsoNormal align=center style='margin-top:0in;text-align:center;
+  text-indent:0in;line-height:normal'><b><span style='font-size:11.0pt'>SL CHÂN
+  V&#7882;T</span></b></p>
+  </td>
+  <td width=76 style='width:56.7pt;border:solid windowtext 1.0pt;border-left:
+  none;padding:0in 5.4pt 0in 5.4pt;height:46.1pt'>
+  <p class=MsoNormal align=center style='margin-top:0in;text-align:center;
+  text-indent:0in;line-height:normal'><b><span style='font-size:11.0pt'>CHI&#7872;U
+  DÀI (m)</span></b></p>
+  </td>
+  <td width=76 style='width:56.7pt;border:solid windowtext 1.0pt;border-left:
+  none;padding:0in 5.4pt 0in 5.4pt;height:46.1pt'>
+  <p class=MsoNormal align=center style='margin-top:0in;text-align:center;
+  text-indent:0in;line-height:normal'><b><span style='font-size:11.0pt'>CHI&#7872;U
+  R&#7896;NG (m)</span></b></p>
+  </td>
+  <td width=66 style='width:49.6pt;border:solid windowtext 1.0pt;border-left:
+  none;padding:0in 5.4pt 0in 5.4pt;height:46.1pt'>
+  <p class=MsoNormal align=center style='margin-top:0in;text-align:center;
+  text-indent:0in;line-height:normal'><b><span style='font-size:11.0pt'>CHI&#7872;U
+  SÂU (m)</span></b></p>
+  </td>
+  <td width=66 style='width:49.6pt;border:solid windowtext 1.0pt;border-left:
+  none;padding:0in 5.4pt 0in 5.4pt;height:46.1pt'>
+  <p class=MsoNormal align=center style='margin-top:0in;text-align:center;
+  text-indent:0in;line-height:normal'><b><span style='font-size:11.0pt'>T&#272;
+  T&#7888;I &#272;A (M/h)</span></b></p>
+  </td>
+  <td width=76 style='width:56.75pt;border:solid windowtext 1.0pt;border-left:
+  none;padding:0in 5.4pt 0in 5.4pt;height:46.1pt'>
+  <p class=MsoNormal align=center style='margin-top:0in;text-align:center;
+  text-indent:0in;line-height:normal'><b><span style='font-size:11.0pt'>T&#7842;I
+  TR&#7884;NG (t&#7845;n)</span></b></p>
+  </td>
+  <td width=85 style='width:63.95pt;border:solid windowtext 1.0pt;border-left:
+  none;padding:0in 5.4pt 0in 5.4pt;height:46.1pt'>
+  <p class=MsoNormal align=center style='margin-top:0in;text-align:center;
+  text-indent:0in;line-height:normal'><b><span style='font-size:11.0pt'>GHI CHÚ</span></b></p>
+  </td>
+ </tr>
+ <tr style='height:24.1pt'>
+  <td width=47 style='width:35.45pt;border:solid windowtext 1.0pt;border-top:
+  none;padding:0in 5.4pt 0in 5.4pt;height:24.1pt'>
+  <p class=MsoNormal align=center style='margin-top:0in;text-align:center;
+  text-indent:0in;line-height:normal'><span style='font-size:12.0pt'>1</span></p>
+  </td>
+  <td width=104 style='width:78.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:24.1pt'>
+  <p class=MsoNormal align=center style='margin-top:0in;text-align:center;
+  text-indent:0in;line-height:normal'><span style='font-size:12.0pt'>C1</span></p>
+  </td>
+  <td width=76 style='width:56.7pt;border-top:none;border-left:none;border-bottom:
+  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt;
+  height:24.1pt'>
+  <p class=MsoNormal align=center style='margin-top:0in;text-align:center;
+  text-indent:0in;line-height:normal'><span style='font-size:12.0pt'>5</span></p>
+  </td>
+  <td width=66 style='width:49.6pt;border-top:none;border-left:none;border-bottom:
+  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt;
+  height:24.1pt'>
+  <p class=MsoNormal align=center style='margin-top:0in;text-align:center;
+  text-indent:0in;line-height:normal'><span style='font-size:12.0pt'>2</span></p>
+  </td>
+  <td width=66 style='width:49.6pt;border-top:none;border-left:none;border-bottom:
+  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt;
+  height:24.1pt'>
+  <p class=MsoNormal align=center style='margin-top:0in;text-align:center;
+  text-indent:0in;line-height:normal'><span style='font-size:12.0pt'>4</span></p>
+  </td>
+  <td width=95 style='width:70.9pt;border-top:none;border-left:none;border-bottom:
+  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt;
+  height:24.1pt'>
+  <p class=MsoNormal align=center style='margin-top:0in;text-align:center;
+  text-indent:0in;line-height:normal'><span style='font-size:12.0pt'>3</span></p>
+  </td>
+  <td width=66 style='width:49.6pt;border-top:none;border-left:none;border-bottom:
+  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt;
+  height:24.1pt'>
+  <p class=MsoNormal align=center style='margin-top:0in;text-align:center;
+  text-indent:0in;line-height:normal'><span style='font-size:12.0pt'>2</span></p>
+  </td>
+  <td width=76 style='width:56.7pt;border-top:none;border-left:none;border-bottom:
+  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt;
+  height:24.1pt'>
+  <p class=MsoNormal align=center style='margin-top:0in;text-align:center;
+  text-indent:0in;line-height:normal'><span style='font-size:12.0pt'>9</span></p>
+  </td>
+  <td width=76 style='width:56.7pt;border-top:none;border-left:none;border-bottom:
+  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt;
+  height:24.1pt'>
+  <p class=MsoNormal align=center style='margin-top:0in;text-align:center;
+  text-indent:0in;line-height:normal'><span style='font-size:12.0pt'>5</span></p>
+  </td>
+  <td width=66 style='width:49.6pt;border-top:none;border-left:none;border-bottom:
+  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt;
+  height:24.1pt'>
+  <p class=MsoNormal align=center style='margin-top:0in;text-align:center;
+  text-indent:0in;line-height:normal'><span style='font-size:12.0pt'>4</span></p>
+  </td>
+  <td width=66 style='width:49.6pt;border-top:none;border-left:none;border-bottom:
+  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt;
+  height:24.1pt'>
+  <p class=MsoNormal align=center style='margin-top:0in;text-align:center;
+  text-indent:0in;line-height:normal'><span style='font-size:12.0pt'>5</span></p>
+  </td>
+  <td width=76 style='width:56.75pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:24.1pt'>
+  <p class=MsoNormal align=center style='margin-top:0in;text-align:center;
+  text-indent:0in;line-height:normal'><span style='font-size:12.0pt'>6</span></p>
+  </td>
+  <td width=85 style='width:63.95pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:24.1pt'>
+  <p class=MsoNormal align=center style='margin-top:0in;text-align:center;
+  text-indent:0in;line-height:normal'><span style='font-size:12.0pt'>ABC</span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoListParagraph align=left style='margin-top:5.0pt;margin-right:0in;
+margin-bottom:6.0pt;margin-left:14.2pt;text-align:left;text-indent:-14.2pt'><b><span
+style='line-height:115%'>8.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span></b><b><span style='line-height:115%;color:white'>B</span></b><b><span
+style='line-height:115%'>&#7842;NG THÔNG TIN T&#7900;I NEO</span></b></p>
+
+<table class=MsoTableGrid border=1 cellspacing=0 cellpadding=0 width=917
+ style='width:687.5pt;margin-left:-30.05pt;border-collapse:collapse;border:
+ none'>
+ <tr style='height:46.1pt'>
+  <td width=57 style='width:42.6pt;border:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt;
+  height:46.1pt'>
+  <p class=MsoNormal align=center style='margin-top:0in;text-align:center;
+  text-indent:0in;line-height:normal'><b><span style='font-size:12.0pt'>STT</span></b></p>
+  </td>
+  <td width=217 style='width:162.95pt;border:solid windowtext 1.0pt;border-left:
+  none;padding:0in 5.4pt 0in 5.4pt;height:46.1pt'>
+  <p class=MsoNormal align=center style='margin-top:0in;text-align:center;
+  text-indent:0in;line-height:normal'><b><span style='font-size:12.0pt'>KI&#7874;U
+  T&#7900;I NEO</span></b></p>
+  </td>
+  <td width=142 style='width:106.35pt;border:solid windowtext 1.0pt;border-left:
+  none;padding:0in 5.4pt 0in 5.4pt;height:46.1pt'>
+  <p class=MsoNormal align=center style='margin-top:0in;text-align:center;
+  text-indent:0in;line-height:normal'><b><span style='font-size:12.0pt'>TR&#7884;NG
+  T&#7842;I (t&#7845;n)</span></b></p>
+  </td>
+  <td width=132 style='width:99.2pt;border:solid windowtext 1.0pt;border-left:
+  none;padding:0in 5.4pt 0in 5.4pt;height:46.1pt'>
+  <p class=MsoNormal align=center style='margin-top:0in;text-align:center;
+  text-indent:0in;line-height:normal'><b><span style='font-size:12.0pt'>S&#7888;
+  L&#431;&#7906;NG</span></b></p>
+  </td>
+  <td width=369 style='width:276.4pt;border:solid windowtext 1.0pt;border-left:
+  none;padding:0in 5.4pt 0in 5.4pt;height:46.1pt'>
+  <p class=MsoNormal align=center style='margin-top:0in;text-align:center;
+  text-indent:0in;line-height:normal'><b><span style='font-size:12.0pt'>GHI CHÚ</span></b></p>
+  </td>
+ </tr>
+ <tr style='height:24.1pt'>
+  <td width=57 style='width:42.6pt;border:solid windowtext 1.0pt;border-top:
+  none;padding:0in 5.4pt 0in 5.4pt;height:24.1pt'>
+  <p class=MsoNormal align=center style='margin-top:0in;text-align:center;
+  text-indent:0in;line-height:normal'><span style='font-size:12.0pt'>1</span></p>
+  </td>
+  <td width=217 style='width:162.95pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:24.1pt'>
+  <p class=MsoNormal align=center style='margin-top:0in;text-align:center;
+  text-indent:0in;line-height:normal'><span style='font-size:12.0pt'>C1</span></p>
+  </td>
+  <td width=142 style='width:106.35pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:24.1pt'>
+  <p class=MsoNormal align=center style='margin-top:0in;text-align:center;
+  text-indent:0in;line-height:normal'><span style='font-size:12.0pt'>5</span></p>
+  </td>
+  <td width=132 style='width:99.2pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:24.1pt'>
+  <p class=MsoNormal align=center style='margin-top:0in;text-align:center;
+  text-indent:0in;line-height:normal'><span style='font-size:12.0pt'>2</span></p>
+  </td>
+  <td width=369 style='width:276.4pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:24.1pt'>
+  <p class=MsoNormal align=left style='margin-top:0in;text-align:left;
+  text-indent:0in;line-height:normal'><span style='font-size:12.0pt'>5</span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoListParagraph align=left style='margin-top:5.0pt;margin-right:0in;
+margin-bottom:6.0pt;margin-left:14.2pt;text-align:left;text-indent:-14.2pt'><b><span
+style='line-height:115%'>9.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span></b><b><span style='line-height:115%'>B&#7842;NG THÔNG TIN NEO</span></b></p>
+
+<table class=MsoTableGrid border=1 cellspacing=0 cellpadding=0 width=917
+ style='width:687.5pt;margin-left:-30.05pt;border-collapse:collapse;border:
+ none'>
+ <tr style='height:46.1pt'>
+  <td width=57 style='width:42.6pt;border:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt;
+  height:46.1pt'>
+  <p class=MsoNormal align=center style='margin-top:0in;text-align:center;
+  text-indent:0in;line-height:normal'><b><span style='font-size:12.0pt'>STT</span></b></p>
+  </td>
+  <td width=217 style='width:162.95pt;border:solid windowtext 1.0pt;border-left:
+  none;padding:0in 5.4pt 0in 5.4pt;height:46.1pt'>
+  <p class=MsoNormal align=center style='margin-top:0in;text-align:center;
+  text-indent:0in;line-height:normal'><b><span style='font-size:12.0pt'>KI&#7874;U
+  NEO</span></b></p>
+  </td>
+  <td width=142 style='width:106.35pt;border:solid windowtext 1.0pt;border-left:
+  none;padding:0in 5.4pt 0in 5.4pt;height:46.1pt'>
+  <p class=MsoNormal align=center style='margin-top:0in;text-align:center;
+  text-indent:0in;line-height:normal'><b><span style='font-size:12.0pt'>TR&#7884;NG
+  L&#431;&#7906;NG NEO (t&#7845;n)</span></b></p>
+  </td>
+  <td width=132 style='width:99.2pt;border:solid windowtext 1.0pt;border-left:
+  none;padding:0in 5.4pt 0in 5.4pt;height:46.1pt'>
+  <p class=MsoNormal align=center style='margin-top:0in;text-align:center;
+  text-indent:0in;line-height:normal'><b><span style='font-size:12.0pt'>S&#7888;
+  L&#431;&#7906;NG</span></b></p>
+  </td>
+  <td width=369 style='width:276.4pt;border:solid windowtext 1.0pt;border-left:
+  none;padding:0in 5.4pt 0in 5.4pt;height:46.1pt'>
+  <p class=MsoNormal align=center style='margin-top:0in;text-align:center;
+  text-indent:0in;line-height:normal'><b><span style='font-size:12.0pt'>GHI CHÚ</span></b></p>
+  </td>
+ </tr>
+ <tr style='height:24.1pt'>
+  <td width=57 style='width:42.6pt;border:solid windowtext 1.0pt;border-top:
+  none;padding:0in 5.4pt 0in 5.4pt;height:24.1pt'>
+  <p class=MsoNormal align=center style='margin-top:0in;text-align:center;
+  text-indent:0in;line-height:normal'><span style='font-size:12.0pt'>1</span></p>
+  </td>
+  <td width=217 style='width:162.95pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:24.1pt'>
+  <p class=MsoNormal align=center style='margin-top:0in;text-align:center;
+  text-indent:0in;line-height:normal'><span style='font-size:12.0pt'>C1</span></p>
+  </td>
+  <td width=142 style='width:106.35pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:24.1pt'>
+  <p class=MsoNormal align=center style='margin-top:0in;text-align:center;
+  text-indent:0in;line-height:normal'><span style='font-size:12.0pt'>5</span></p>
+  </td>
+  <td width=132 style='width:99.2pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:24.1pt'>
+  <p class=MsoNormal align=center style='margin-top:0in;text-align:center;
+  text-indent:0in;line-height:normal'><span style='font-size:12.0pt'>2</span></p>
+  </td>
+  <td width=369 style='width:276.4pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:24.1pt'>
+  <p class=MsoNormal align=left style='margin-top:0in;text-align:left;
+  text-indent:0in;line-height:normal'><span style='font-size:12.0pt'>5</span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoListParagraph align=left style='margin-top:5.0pt;margin-right:0in;
+margin-bottom:6.0pt;margin-left:14.2pt;text-align:left;text-indent:-14.2pt'><b><span
+style='line-height:115%'>10.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></b><b><span style='line-height:115%'>B&#7842;NG THÔNG TIN XÍCH 
+NEO</span></b></p>
+
+<table class=MsoTableGrid border=1 cellspacing=0 cellpadding=0 width=917
+ style='width:687.5pt;margin-left:-30.05pt;border-collapse:collapse;border:
+ none'>
+ <tr style='height:46.1pt'>
+  <td width=57 style='width:42.6pt;border:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt;
+  height:46.1pt'>
+  <p class=MsoNormal align=center style='margin-top:0in;text-align:center;
+  text-indent:0in;line-height:normal'><b><span style='font-size:12.0pt'>STT</span></b></p>
+  </td>
+  <td width=217 style='width:162.95pt;border:solid windowtext 1.0pt;border-left:
+  none;padding:0in 5.4pt 0in 5.4pt;height:46.1pt'>
+  <p class=MsoNormal align=center style='margin-top:0in;text-align:center;
+  text-indent:0in;line-height:normal'><b><span style='font-size:12.0pt'>KI&#7874;U
+  XÍCH NEO</span></b></p>
+  </td>
+  <td width=142 style='width:106.35pt;border:solid windowtext 1.0pt;border-left:
+  none;padding:0in 5.4pt 0in 5.4pt;height:46.1pt'>
+  <p class=MsoNormal align=center style='margin-top:0in;text-align:center;
+  text-indent:0in;line-height:normal'><b><span style='font-size:12.0pt'>CHI&#7872;U
+  DÀI (m)</span></b></p>
+  </td>
+  <td width=132 style='width:99.2pt;border:solid windowtext 1.0pt;border-left:
+  none;padding:0in 5.4pt 0in 5.4pt;height:46.1pt'>
+  <p class=MsoNormal align=center style='margin-top:0in;text-align:center;
+  text-indent:0in;line-height:normal'><b><span style='font-size:12.0pt'>&#272;&#431;&#7900;NG
+  KÍNH (mm)</span></b></p>
+  </td>
+  <td width=369 style='width:276.4pt;border:solid windowtext 1.0pt;border-left:
+  none;padding:0in 5.4pt 0in 5.4pt;height:46.1pt'>
+  <p class=MsoNormal align=center style='margin-top:0in;text-align:center;
+  text-indent:0in;line-height:normal'><b><span style='font-size:12.0pt'>GHI CHÚ</span></b></p>
+  </td>
+ </tr>
+ <tr style='height:24.1pt'>
+  <td width=57 style='width:42.6pt;border:solid windowtext 1.0pt;border-top:
+  none;padding:0in 5.4pt 0in 5.4pt;height:24.1pt'>
+  <p class=MsoNormal align=center style='margin-top:0in;text-align:center;
+  text-indent:0in;line-height:normal'><span style='font-size:12.0pt'>1</span></p>
+  </td>
+  <td width=217 style='width:162.95pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:24.1pt'>
+  <p class=MsoNormal align=center style='margin-top:0in;text-align:center;
+  text-indent:0in;line-height:normal'><span style='font-size:12.0pt'>C1</span></p>
+  </td>
+  <td width=142 style='width:106.35pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:24.1pt'>
+  <p class=MsoNormal align=center style='margin-top:0in;text-align:center;
+  text-indent:0in;line-height:normal'><span style='font-size:12.0pt'>2</span></p>
+  </td>
+  <td width=132 style='width:99.2pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:24.1pt'>
+  <p class=MsoNormal align=center style='margin-top:0in;text-align:center;
+  text-indent:0in;line-height:normal'><span style='font-size:12.0pt'>4</span></p>
+  </td>
+  <td width=369 style='width:276.4pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:24.1pt'>
+  <p class=MsoNormal align=left style='margin-top:0in;text-align:left;
+  text-indent:0in;line-height:normal'><span style='font-size:12.0pt'>2</span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoListParagraph align=left style='margin-top:5.0pt;margin-right:0in;
+margin-bottom:6.0pt;margin-left:14.2pt;text-align:left;text-indent:-14.2pt'><b><span
+style='line-height:115%'>11.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></b><b><span style='line-height:115%'>B&#7842;NG THÔNG TIN TRANG
+B&#7882; C&#7912;U SINH</span></b></p>
+
+<table class=MsoTableGrid border=1 cellspacing=0 cellpadding=0 width=926
+ style='width:694.6pt;margin-left:-30.05pt;border-collapse:collapse;border:
+ none'>
+ <tr style='height:46.1pt'>
+  <td width=57 style='width:42.6pt;border:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt;
+  height:46.1pt'>
+  <p class=MsoNormal align=center style='margin-top:0in;text-align:center;
+  text-indent:0in;line-height:normal'><b><span style='font-size:12.0pt'>STT</span></b></p>
+  </td>
+  <td width=208 style='width:155.9pt;border:solid windowtext 1.0pt;border-left:
+  none;padding:0in 5.4pt 0in 5.4pt;height:46.1pt'>
+  <p class=MsoNormal align=center style='margin-top:0in;text-align:center;
+  text-indent:0in;line-height:normal'><b><span style='font-size:12.0pt'>LO&#7840;I
+  TRANG B&#7882;</span></b></p>
+  </td>
+  <td width=104 style='width:77.95pt;border:solid windowtext 1.0pt;border-left:
+  none;padding:0in 5.4pt 0in 5.4pt;height:46.1pt'>
+  <p class=MsoNormal align=center style='margin-top:0in;text-align:center;
+  text-indent:0in;line-height:normal'><b><span style='font-size:12.0pt'>XU&#7844;T
+  X&#7912;</span></b></p>
+  </td>
+  <td width=104 style='width:77.95pt;border:solid windowtext 1.0pt;border-left:
+  none;padding:0in 5.4pt 0in 5.4pt;height:46.1pt'>
+  <p class=MsoNormal align=center style='margin-top:0in;text-align:center;
+  text-indent:0in;line-height:normal'><b><span style='font-size:12.0pt'>TÌNH TR&#7840;NG</span></b></p>
+  </td>
+  <td width=104 style='width:77.95pt;border:solid windowtext 1.0pt;border-left:
+  none;padding:0in 5.4pt 0in 5.4pt;height:46.1pt'>
+  <p class=MsoNormal align=center style='margin-top:0in;text-align:center;
+  text-indent:0in;line-height:normal'><b><span style='font-size:12.0pt'>S&#7888;
+  L&#431;&#7906;NG</span></b></p>
+  </td>
+  <td width=113 style='width:85.05pt;border:solid windowtext 1.0pt;border-left:
+  none;padding:0in 5.4pt 0in 5.4pt;height:46.1pt'>
+  <p class=MsoNormal align=center style='margin-top:0in;text-align:center;
+  text-indent:0in;line-height:normal'><b><span style='font-size:12.0pt'>&#272;&#416;N
+  V&#7882; TÍNH</span></b></p>
+  </td>
+  <td width=236 style='width:177.2pt;border:solid windowtext 1.0pt;border-left:
+  none;padding:0in 5.4pt 0in 5.4pt;height:46.1pt'>
+  <p class=MsoNormal align=center style='margin-top:0in;text-align:center;
+  text-indent:0in;line-height:normal'><b><span style='font-size:12.0pt'>GHI CHÚ</span></b></p>
+  </td>
+ </tr>
+ <tr style='height:24.1pt'>
+  <td width=57 style='width:42.6pt;border:solid windowtext 1.0pt;border-top:
+  none;padding:0in 5.4pt 0in 5.4pt;height:24.1pt'>
+  <p class=MsoNormal align=center style='margin-top:0in;text-align:center;
+  text-indent:0in;line-height:normal'><span style='font-size:12.0pt'>1</span></p>
+  </td>
+  <td width=208 style='width:155.9pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:24.1pt'>
+  <p class=MsoNormal align=left style='margin-top:0in;text-align:left;
+  text-indent:0in;line-height:normal'><span style='font-size:12.0pt'>C1</span></p>
+  </td>
+  <td width=104 style='width:77.95pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:24.1pt'>
+  <p class=MsoNormal align=left style='margin-top:0in;text-align:left;
+  text-indent:0in;line-height:normal'><span style='font-size:12.0pt'>2</span></p>
+  </td>
+  <td width=104 style='width:77.95pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:24.1pt'>
+  <p class=MsoNormal align=left style='margin-top:0in;text-align:left;
+  text-indent:0in;line-height:normal'><span style='font-size:12.0pt'>4</span></p>
+  </td>
+  <td width=104 style='width:77.95pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:24.1pt'>
+  <p class=MsoNormal align=center style='margin-top:0in;text-align:center;
+  text-indent:0in;line-height:normal'><span style='font-size:12.0pt'>3</span></p>
+  </td>
+  <td width=113 style='width:85.05pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:24.1pt'>
+  <p class=MsoNormal align=left style='margin-top:0in;text-align:left;
+  text-indent:0in;line-height:normal'><span style='font-size:12.0pt'>2</span></p>
+  </td>
+  <td width=236 style='width:177.2pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:24.1pt'>
+  <p class=MsoNormal align=left style='margin-top:0in;text-align:left;
+  text-indent:0in;line-height:normal'><span style='font-size:12.0pt'>9</span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoListParagraph align=left style='margin-top:5.0pt;margin-right:0in;
+margin-bottom:6.0pt;margin-left:14.2pt;text-align:left;text-indent:-14.2pt'><b><span
+style='line-height:115%'>12.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></b><b><span style='line-height:115%'>B&#7842;NG THÔNG TIN TRANG
+B&#7882; KHÁC</span></b></p>
+
+<table class=MsoTableGrid border=1 cellspacing=0 cellpadding=0 width=926
+ style='width:694.6pt;margin-left:-30.05pt;border-collapse:collapse;border:
+ none'>
+ <tr style='height:46.1pt'>
+  <td width=57 style='width:42.6pt;border:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt;
+  height:46.1pt'>
+  <p class=MsoNormal align=center style='margin-top:0in;text-align:center;
+  text-indent:0in;line-height:normal'><b><span style='font-size:12.0pt'>STT</span></b></p>
+  </td>
+  <td width=208 style='width:155.9pt;border:solid windowtext 1.0pt;border-left:
+  none;padding:0in 5.4pt 0in 5.4pt;height:46.1pt'>
+  <p class=MsoNormal align=center style='margin-top:0in;text-align:center;
+  text-indent:0in;line-height:normal'><b><span style='font-size:12.0pt'>LO&#7840;I
+  TRANG B&#7882;</span></b></p>
+  </td>
+  <td width=104 style='width:77.95pt;border:solid windowtext 1.0pt;border-left:
+  none;padding:0in 5.4pt 0in 5.4pt;height:46.1pt'>
+  <p class=MsoNormal align=center style='margin-top:0in;text-align:center;
+  text-indent:0in;line-height:normal'><b><span style='font-size:12.0pt'>XU&#7844;T
+  X&#7912;</span></b></p>
+  </td>
+  <td width=104 style='width:77.95pt;border:solid windowtext 1.0pt;border-left:
+  none;padding:0in 5.4pt 0in 5.4pt;height:46.1pt'>
+  <p class=MsoNormal align=center style='margin-top:0in;text-align:center;
+  text-indent:0in;line-height:normal'><b><span style='font-size:12.0pt'>TÌNH TR&#7840;NG</span></b></p>
+  </td>
+  <td width=104 style='width:77.95pt;border:solid windowtext 1.0pt;border-left:
+  none;padding:0in 5.4pt 0in 5.4pt;height:46.1pt'>
+  <p class=MsoNormal align=center style='margin-top:0in;text-align:center;
+  text-indent:0in;line-height:normal'><b><span style='font-size:12.0pt'>S&#7888;
+  L&#431;&#7906;NG</span></b></p>
+  </td>
+  <td width=113 style='width:85.05pt;border:solid windowtext 1.0pt;border-left:
+  none;padding:0in 5.4pt 0in 5.4pt;height:46.1pt'>
+  <p class=MsoNormal align=center style='margin-top:0in;text-align:center;
+  text-indent:0in;line-height:normal'><b><span style='font-size:12.0pt'>&#272;&#416;N
+  V&#7882; TÍNH</span></b></p>
+  </td>
+  <td width=236 style='width:177.2pt;border:solid windowtext 1.0pt;border-left:
+  none;padding:0in 5.4pt 0in 5.4pt;height:46.1pt'>
+  <p class=MsoNormal align=center style='margin-top:0in;text-align:center;
+  text-indent:0in;line-height:normal'><b><span style='font-size:12.0pt'>GHI CHÚ</span></b></p>
+  </td>
+ </tr>
+ <tr style='height:24.1pt'>
+  <td width=57 style='width:42.6pt;border:solid windowtext 1.0pt;border-top:
+  none;padding:0in 5.4pt 0in 5.4pt;height:24.1pt'>
+  <p class=MsoNormal align=center style='margin-top:0in;text-align:center;
+  text-indent:0in;line-height:normal'><span style='font-size:12.0pt'>1</span></p>
+  </td>
+  <td width=208 style='width:155.9pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:24.1pt'>
+  <p class=MsoNormal align=left style='margin-top:0in;text-align:left;
+  text-indent:0in;line-height:normal'><span style='font-size:12.0pt'>C1</span></p>
+  </td>
+  <td width=104 style='width:77.95pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:24.1pt'>
+  <p class=MsoNormal align=left style='margin-top:0in;text-align:left;
+  text-indent:0in;line-height:normal'><span style='font-size:12.0pt'>2</span></p>
+  </td>
+  <td width=104 style='width:77.95pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:24.1pt'>
+  <p class=MsoNormal align=left style='margin-top:0in;text-align:left;
+  text-indent:0in;line-height:normal'><span style='font-size:12.0pt'>4</span></p>
+  </td>
+  <td width=104 style='width:77.95pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:24.1pt'>
+  <p class=MsoNormal align=center style='margin-top:0in;text-align:center;
+  text-indent:0in;line-height:normal'><span style='font-size:12.0pt'>3</span></p>
+  </td>
+  <td width=113 style='width:85.05pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:24.1pt'>
+  <p class=MsoNormal align=left style='margin-top:0in;text-align:left;
+  text-indent:0in;line-height:normal'><span style='font-size:12.0pt'>2</span></p>
+  </td>
+  <td width=236 style='width:177.2pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:24.1pt'>
+  <p class=MsoNormal align=left style='margin-top:0in;text-align:left;
+  text-indent:0in;line-height:normal'><span style='font-size:12.0pt'>9</span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoListParagraph align=left style='margin-top:5.0pt;margin-right:0in;
+margin-bottom:6.0pt;margin-left:14.2pt;text-align:left;text-indent:-14.2pt'><b><span
+style='line-height:115%'>13.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></b><b><span style='line-height:115%'>B&#7842;NG THÔNG TIN V&#7852;T
+T&#431; B&#7842;O &#272;&#7842;M</span></b></p>
+
+<table class=MsoTableGrid border=1 cellspacing=0 cellpadding=0 width=926
+ style='width:694.6pt;margin-left:-30.05pt;border-collapse:collapse;border:
+ none'>
+ <tr style='height:46.1pt'>
+  <td width=57 style='width:42.6pt;border:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt;
+  height:46.1pt'>
+  <p class=MsoNormal align=center style='margin-top:0in;text-align:center;
+  text-indent:0in;line-height:normal'><b><span style='font-size:12.0pt'>STT</span></b></p>
+  </td>
+  <td width=208 style='width:155.9pt;border:solid windowtext 1.0pt;border-left:
+  none;padding:0in 5.4pt 0in 5.4pt;height:46.1pt'>
+  <p class=MsoNormal align=center style='margin-top:0in;text-align:center;
+  text-indent:0in;line-height:normal'><b><span style='font-size:12.0pt'>TÊN V&#7852;T
+  T&#431;</span></b></p>
+  </td>
+  <td width=104 style='width:77.95pt;border:solid windowtext 1.0pt;border-left:
+  none;padding:0in 5.4pt 0in 5.4pt;height:46.1pt'>
+  <p class=MsoNormal align=center style='margin-top:0in;text-align:center;
+  text-indent:0in;line-height:normal'><b><span style='font-size:12.0pt'>XU&#7844;T
+  X&#7912;</span></b></p>
+  </td>
+  <td width=104 style='width:77.95pt;border:solid windowtext 1.0pt;border-left:
+  none;padding:0in 5.4pt 0in 5.4pt;height:46.1pt'>
+  <p class=MsoNormal align=center style='margin-top:0in;text-align:center;
+  text-indent:0in;line-height:normal'><b><span style='font-size:12.0pt'>MÃ V&#7852;T
+  T&#431;</span></b></p>
+  </td>
+  <td width=104 style='width:77.95pt;border:solid windowtext 1.0pt;border-left:
+  none;padding:0in 5.4pt 0in 5.4pt;height:46.1pt'>
+  <p class=MsoNormal align=center style='margin-top:0in;text-align:center;
+  text-indent:0in;line-height:normal'><b><span style='font-size:12.0pt'>S&#7888;
+  L&#431;&#7906;NG</span></b></p>
+  </td>
+  <td width=113 style='width:85.05pt;border:solid windowtext 1.0pt;border-left:
+  none;padding:0in 5.4pt 0in 5.4pt;height:46.1pt'>
+  <p class=MsoNormal align=center style='margin-top:0in;text-align:center;
+  text-indent:0in;line-height:normal'><b><span style='font-size:12.0pt'>&#272;&#416;N
+  V&#7882; TÍNH</span></b></p>
+  </td>
+  <td width=236 style='width:177.2pt;border:solid windowtext 1.0pt;border-left:
+  none;padding:0in 5.4pt 0in 5.4pt;height:46.1pt'>
+  <p class=MsoNormal align=center style='margin-top:0in;text-align:center;
+  text-indent:0in;line-height:normal'><b><span style='font-size:12.0pt'>GHI CHÚ</span></b></p>
+  </td>
+ </tr>
+ <tr style='height:24.1pt'>
+  <td width=57 style='width:42.6pt;border:solid windowtext 1.0pt;border-top:
+  none;padding:0in 5.4pt 0in 5.4pt;height:24.1pt'>
+  <p class=MsoNormal align=center style='margin-top:0in;text-align:center;
+  text-indent:0in;line-height:normal'><span style='font-size:12.0pt'>1</span></p>
+  </td>
+  <td width=208 style='width:155.9pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:24.1pt'>
+  <p class=MsoNormal align=left style='margin-top:0in;text-align:left;
+  text-indent:0in;line-height:normal'><span style='font-size:12.0pt'>C1</span></p>
+  </td>
+  <td width=104 style='width:77.95pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:24.1pt'>
+  <p class=MsoNormal align=left style='margin-top:0in;text-align:left;
+  text-indent:0in;line-height:normal'><span style='font-size:12.0pt'>2</span></p>
+  </td>
+  <td width=104 style='width:77.95pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:24.1pt'>
+  <p class=MsoNormal align=left style='margin-top:0in;text-align:left;
+  text-indent:0in;line-height:normal'><span style='font-size:12.0pt'>4</span></p>
+  </td>
+  <td width=104 style='width:77.95pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:24.1pt'>
+  <p class=MsoNormal align=center style='margin-top:0in;text-align:center;
+  text-indent:0in;line-height:normal'><span style='font-size:12.0pt'>3</span></p>
+  </td>
+  <td width=113 style='width:85.05pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:24.1pt'>
+  <p class=MsoNormal align=left style='margin-top:0in;text-align:left;
+  text-indent:0in;line-height:normal'><span style='font-size:12.0pt'>2</span></p>
+  </td>
+  <td width=236 style='width:177.2pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:24.1pt'>
+  <p class=MsoNormal align=left style='margin-top:0in;text-align:left;
+  text-indent:0in;line-height:normal'><span style='font-size:12.0pt'>9</span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal align=left style='margin-top:7.0pt;text-align:left;
+text-indent:0in'><span style='line-height:115%'>&nbsp;</span></p>
+
+        </div>
+    </div>
+
     <script src="../Scripts/jquery-3.4.1.slim.min.js"></script>
     <script src="../Scripts/jquery-3.4.1.min.js"></script>
     <script>
@@ -753,6 +2135,44 @@
                     $('#model-infordetail-ship').modal("hide");
                 },
             });
+        }
+        function exportToWord(element, filename) {
+            var preHtml = "<html xmlns:  o='urn:schemas-microsoft-com:office:office' xmlns:w='urn:schemas-microsoft-com:office:word' xmlns='http://www.w3.org/TR/REC-html40'><head><meta charset='utf-8'><title>Export HTML To Doc</title></head><body>";
+            var postHtml = "</body></html>";
+            var html = preHtml + document.getElementById(element).innerHTML + postHtml;
+            var blob = new Blob(['\ufeff', html], {
+                type: 'application/msword'
+            });
+            // Specify link url
+            var url = 'data:application/vnd.ms-word;charset=utf-8,' + encodeURIComponent(html);
+
+            // Specify file name
+            filename = filename ? filename + '.doc' : 'document.doc';
+
+            // Create download link element
+            var downloadLink = document.createElement("a");
+
+            document.body.appendChild(downloadLink);
+            if (navigator.msSaveOrOpenBlob) {
+                navigator.msSaveOrOpenBlob(blob, filename);
+            } else {
+                // Create a link to the file
+                downloadLink.href = url;
+                // Setting the file name
+                downloadLink.download = filename;
+                //triggering the function
+                downloadLink.click();
+            }
+            document.body.removeChild(downloadLink);
+        }
+
+        function In_Content(strid) {
+            var prtContent = document.getElementById(strid);
+            var WinPrint = window.open('', '', 'letf=0,top=0,width=800,height=800');
+            WinPrint.document.write(prtContent.innerHTML);
+            WinPrint.document.close();
+            WinPrint.focus();
+            WinPrint.print();
         }
     </script>
 </asp:Content>

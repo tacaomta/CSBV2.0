@@ -8,8 +8,8 @@
                 <div class="section-header">
                     <h4 style="color: black; margin: 0; margin-left: 15px;">QUẢN LÝ NGƯỜI DÙNG</h4>
                     <div class="section-header-breadcrumb">
-                        <div class="breadcrumb-item active"><a href="TrangChu.aspx" style="color: #01b5f9">Trang chủ</a></div>
-                        <div class="breadcrumb-item active"><a href="#" style="color: #01b5f9">Quản lý người dùng</a></div>
+                        <div class="breadcrumb-item active"><a href="TrangChu.aspx" style="color: #01b5f9">Trang chủ </a></div>
+                        /<div class="breadcrumb-item active"><a href="#" style="color: #01b5f9"> Quản lý người dùng</a></div>
                     </div>
                 </div>
                 <div class="section-header">
@@ -81,7 +81,7 @@
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <button onclick="Add_User()" type="submit" class="btn btn-info">Cập nhật</button>
+                        <button onclick="Add_User()" type="submit" class="btn btn-info">Thêm</button>
                         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                     </div>
                 </div>
@@ -181,7 +181,7 @@
             </div>
         </div>
     </div>
-    
+
     <script src="../Scripts/jquery-3.4.1.slim.min.js"></script>
     <script>
         $(document).ready(function () {
@@ -219,7 +219,6 @@
                 },
                 complete: function () { // Set our complete callback, adding the .hidden class and hiding the spinner.
                     $('#loader').addClass('hidden');
-                    $('#model-edit-user').addClass('hidden');
                 },
             });
         };
@@ -229,9 +228,9 @@
                 var table1 = $(this).DataTable({
                     destroy: true,
                     stateSave: true,
-                    "columns" : [
+                    "columns": [
                         { name: 'STT' },
-                        { name: 'Họ tên', width: 140},
+                        { name: 'Họ tên', width: 140 },
                         { name: 'Tên DN', width: 140 },
                         { name: 'Quyền', width: 140 },
                         { name: 'Cập nhật gần đây', width: 200 },
