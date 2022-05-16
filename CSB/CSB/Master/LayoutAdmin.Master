@@ -2142,7 +2142,7 @@
 
         .badge {
             vertical-align: middle;
-            padding: 7px 12px;
+            padding: 7px 7px;
             font-weight: 600;
             letter-spacing: .3px;
             border-radius: 30px;

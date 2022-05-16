@@ -2731,15 +2731,15 @@
                     shipName = data.Ship.Name;
                     $('#shipname').html(shipName);
                     $("#title").html("THIẾT BỊ TRÊN TÀU - " + data.Ship.Name);
-                    $('#btn_MayChinh').html('Máy chính <span class="badge badge-pill ml-3">' + data.MainEngine + '</span>');
-                    $('#btn_MayPhu').html('Máy phụ <span class="badge badge-pill ml-3">' + data.SecondaryEngine + '</span>');
-                    $('#btn_ChanVit').html('Hệ trục chân vịt <span class="badge badge-pill ml-3">' + data.Screw + '</span>');
-                    $('#btn_KhiTai').html('Khí tài, Hàng hải <span class="badge badge-pill ml-3">' + data.Weapon + '</span>');
-                    $('#btn_XuongCT').html('Xuồng công tác <span class="badge badge-pill ml-3">' + data.MotoBoat + '</span>');
-                    $('#btn_Neo').html('Neo, tời, xích neo <span class="badge badge-pill ml-3">' + data.Anchor + '</span>');
-                    $('#btn_TBCuuSinh').html('Trang bị cứu sinh <span class="badge badge-pill ml-3">' + data.LifeSaving + '</span>');
-                    $('#btn_TBKhac').html('Các trang bị khác <span class="badge badge-pill ml-3">' + data.Other + '</span>');
-                    $('#btn_VatTu').html('Vật tư bảo đảm <span class="badge badge-pill ml-3">' + data.Supplies + '</span>');
+                    $('#btn_MayChinh').html('Máy chính <span class="badge badge-pill" style="margin-left: 0.5rem;">' + data.MainEngine + '</span>');
+                    $('#btn_MayPhu').html('Máy phụ <span class="badge badge-pill" style="margin-left: 0.5rem;">' + data.SecondaryEngine + '</span>');
+                    $('#btn_ChanVit').html('Hệ trục chân vịt <span class="badge badge-pill" style="margin-left: 0.5rem;">' + data.Screw + '</span>');
+                    $('#btn_KhiTai').html('Khí tài, Hàng hải <span class="badge badge-pill" style="margin-left: 0.5rem;">' + data.Weapon + '</span>');
+                    $('#btn_XuongCT').html('Xuồng công tác <span class="badge badge-pill" style="margin-left: 0.5rem;">' + data.MotoBoat + '</span>');
+                    $('#btn_Neo').html('Neo, tời, xích neo <span class="badge badge-pill" style="margin-left: 0.5rem;">' + data.Anchor + '</span>');
+                    $('#btn_TBCuuSinh').html('Trang bị cứu sinh <span class="badge badge-pill" style="margin-left: 0.5rem;">' + data.LifeSaving + '</span>');
+                    $('#btn_TBKhac').html('Các trang bị khác <span class="badge badge-pill" style="margin-left: 0.5rem;">' + data.Other + '</span>');
+                    $('#btn_VatTu').html('Vật tư bảo đảm <span class="badge badge-pill" style="margin-left: 0.5rem;">' + data.Supplies + '</span>');
                 }, error: function (ret) {
                     console.log('errorGET');
                 }, complete: function () { // Set our complete callback, adding the .hidden class and hiding the spinner.
@@ -3544,7 +3544,7 @@
                     tabletext += "</tbody>";
                     $('#table_xuongct').html(tabletext);
                     loadTable('table_xuongct');
-                    $('#table_xuongct_wrapper .row .col-sm-12').first().html('<button id="btn_addMotoBoat" onclick="btn_addMotoBoat()" class="btn btn-primary mr-3" data-toggle="modal" data-target="#model-add-MotoBoat" style="height: 40px; margin-bottom: 8px; margin-top: -4px; font-size: 12px;">Thêm xuồng công tác</button><button id="btn_etwXuongCT" onclick="exportToWord(`contentXuongCT`,`Thông tin xuồng công tác của tàu' + shipName + '`)" class="btn btn-primary mr-3" style="height: 40px; margin-bottom: 8px; margin-top: -4px; font-size: 12px;">Xuất báo cáo</button><button id="prt_etwXuongCT" onclick="In_Content(`contentXuongCT`)" class="btn btn-primary mr-3" style="height: 40px; margin-bottom: 8px; margin-top: -4px; font-size: 12px;">In báo cáo</button>');
+                    $('#table_xuongct_wrapper .row .col-sm-12').first().html('<div class="btn-group"><button id="btn_addMotoBoat" onclick="btn_addMotoBoat()" class="btn btn-lg btn-primary mb-3" data-toggle="modal" data-target="#model-add-MotoBoat"><span class="glyphicon glyphicon-plus-sign"></span> Thêm xuồng công tác</button><div class="btn-group"><button type="button" class="btn btn-lg btn-primary mb-3 dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><span class="glyphicon glyphicon-file"></span> Xuất báo cáo <ul class="dropdown-menu" role="menu" style=""><li><a href="#" onclick="exportToWord(`content`,`Thông tin xuồng công tác tàu ' + shipName + '`)">Xuất file Word</a></li><li><a href="#">Xuất file Excel</a></li><li><a href="#">Xuất file PDF</a></li></ul></div><button id="prt_etwXuongCT" onclick="In_Content(`contentXuongCT`)" class="btn btn-lg btn-primary mb-3"><span class="glyphicon glyphicon-print"></span> In báo cáo</button></div>')
                     $('#table_xuongct_wrapper .row').first().next().children().css("overflow-x", "auto");
                 }, error: function (ret) {
                     console.log('errorGET');
@@ -3701,7 +3701,7 @@
                     tabletext_Neo += "</tbody>";
                     $('#table_neo').html(tabletext_Neo);
                     loadTable('table_neo');
-                    $('#table_neo_wrapper .row .col-sm-12').first().html('<button id="btn_addNeo" onclick="btn_addNeo()" class="btn btn-primary mr-3" data-toggle="modal" data-target="#model-add-Neo" style="height: 40px; margin-bottom: 8px; margin-top: -4px; font-size: 12px;">Thêm neo</button><button id="btn_etwNeo" onclick="exportToWord(`contentNeo`,`Thông tin neo của tàu ' + shipName + '`)" class="btn btn-primary mr-3" style="height: 40px; margin-bottom: 8px; margin-top: -4px; font-size: 12px;">Xuất báo cáo</button><button id="prt_etwNeo" onclick="In_Content(`contentNeo`)" class="btn btn-primary mr-3" style="height: 40px; margin-bottom: 8px; margin-top: -4px; font-size: 12px;">In báo cáo</button>');
+                    $('#table_neo_wrapper .row .col-sm-12').first().html('<div class="btn-group"><button id="btn_addNeo" onclick="btn_addNeo()" class="btn btn-lg btn-primary mb-3" data-toggle="modal" data-target="#model-add-Neo"><span class="glyphicon glyphicon-plus-sign"></span> Thêm neo</button><div class="btn-group"><button type="button" class="btn btn-lg btn-primary mb-3 dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><span class="glyphicon glyphicon-file"></span> Xuất báo cáo <ul class="dropdown-menu" role="menu" style=""><li><a href="#" onclick="exportToWord(`content`,`Thông tin neo tàu ' + shipName + '`)">Xuất file Word</a></li><li><a href="#">Xuất file Excel</a></li><li><a href="#">Xuất file PDF</a></li></ul></div><button id="prt_etwNeo" onclick="In_Content(`contentNeo`)" class="btn btn-lg btn-primary mb-3"><span class="glyphicon glyphicon-print"></span> In báo cáo</button></div>')
                     $('#table_neo_wrapper .row').first().next().children().css("overflow-x", "auto");
 
                 }, error: function (ret) {
@@ -3825,7 +3825,7 @@
 
                     $('#table_toineo').html(tabletext_ToiNeo);
                     loadTable('table_toineo');
-                    $('#table_toineo_wrapper .row .col-sm-12').first().html('<button id="btn_addToiNeo" onclick="btn_addToiNeo()" class="btn btn-primary mr-3" data-toggle="modal" data-target="#model-add-ToiNeo" style="height: 40px; margin-bottom: 8px; margin-top: -4px; font-size: 12px;">Thêm tời neo</button><button id="btn_etwToiNeo" onclick="exportToWord(`contentToiNeo`,`Thông tin tời neo tàu ' + shipName + '`)" class="btn btn-primary mr-3" style="height: 40px; margin-bottom: 8px; margin-top: -4px; font-size: 12px;">Xuất báo cáo</button><button id="prt_etwToiNeo" onclick="In_Content(`contentToiNeo`)" class="btn btn-primary mr-3" style="height: 40px; margin-bottom: 8px; margin-top: -4px; font-size: 12px;">In báo cáo</button>');
+                    $('#table_toineo_wrapper .row .col-sm-12').first().html('<div class="btn-group"><button id="btn_addToiNeo" onclick="btn_addToiNeo()" class="btn btn-lg btn-primary mb-3" data-toggle="modal" data-target="#model-add-ToiNeo"><span class="glyphicon glyphicon-plus-sign"></span> Thêm tời neo</button><div class="btn-group"><button type="button" class="btn btn-lg btn-primary mb-3 dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><span class="glyphicon glyphicon-file"></span> Xuất báo cáo <ul class="dropdown-menu" role="menu" style=""><li><a href="#" onclick="exportToWord(`content`,`Thông tin tời neo tàu ' + shipName + '`)">Xuất file Word</a></li><li><a href="#">Xuất file Excel</a></li><li><a href="#">Xuất file PDF</a></li></ul></div><button id="prt_etwToiNeo" onclick="In_Content(`contentToiNeo`)" class="btn btn-lg btn-primary mb-3"><span class="glyphicon glyphicon-print"></span> In báo cáo</button></div>')
                     $('#table_toineo_wrapper .row').first().next().children().css("overflow-x", "auto");
                 }, error: function (ret) {
                     console.log('errorGET');
@@ -3948,7 +3948,7 @@
 
                     $('#table_xichneo').html(tabletext_XichNeo);
                     loadTable('table_xichneo');
-                    $('#table_xichneo_wrapper .row .col-sm-12').first().html('<button id="btn_addXichNeo" onclick="btn_addXichNeo()" class="btn btn-primary mr-3" data-toggle="modal" data-target="#model-add-XichNeo" style="height: 40px; margin-bottom: 8px; margin-top: -4px; font-size: 12px;">Thêm xích neo</button><button id="btn_etwXichNeo" onclick="exportToWord(`contentXichNeo`,`Thông tin xích neo tàu ' + shipName + '`)" class="btn btn-primary mr-3" style="height: 40px; margin-bottom: 8px; margin-top: -4px; font-size: 12px;">Xuất báo cáo</button><button id="prt_etwXichNeo" onclick="In_Content(`contentXichNeo`)" class="btn btn-primary mr-3" style="height: 40px; margin-bottom: 8px; margin-top: -4px; font-size: 12px;">In báo cáo</button>');
+                    $('#table_xichneo_wrapper .row .col-sm-12').first().html('<div class="btn-group"><button id="btn_addXichNeo" onclick="btn_addXichNeo()" class="btn btn-lg btn-primary mb-3" data-toggle="modal" data-target="#model-add-XichNeo"><span class="glyphicon glyphicon-plus-sign"></span> Thêm xích neo</button><div class="btn-group"><button type="button" class="btn btn-lg btn-primary mb-3 dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><span class="glyphicon glyphicon-file"></span> Xuất báo cáo <ul class="dropdown-menu" role="menu" style=""><li><a href="#" onclick="exportToWord(`content`,`Thông tin xích neo tàu ' + shipName + '`)">Xuất file Word</a></li><li><a href="#">Xuất file Excel</a></li><li><a href="#">Xuất file PDF</a></li></ul></div><button id="prt_etwXichNeo" onclick="In_Content(`contentXichNeo`)" class="btn btn-lg btn-primary mb-3"><span class="glyphicon glyphicon-print"></span> In báo cáo</button></div>')
                     $('#table_xichneo_wrapper .row').first().next().children().css("overflow-x", "auto");
 
                 }, error: function (ret) {
@@ -4073,7 +4073,7 @@
                     tabletext += "</tbody>";
                     $('#table_tbcuusinh').html(tabletext);
                     loadTable('table_tbcuusinh');
-                    $('#table_tbcuusinh_wrapper .row .col-sm-12').first().html('<button id="btn_addLifeSaving" onclick="btn_addLifeSaving()" class="btn btn-primary mr-3" data-toggle="modal" data-target="#model-add-LifeSaving" style="height: 40px; margin-bottom: 8px; margin-top: -4px; font-size: 12px;">Thêm trang bị cứu sinh</button><button id="btn_etwTBCuuSinh" onclick="exportToWord(`contentTBCuuSinh`,`Thông tin thiết bị cứu sinh tàu ' + shipName + '`)" class="btn btn-primary mr-3" style="height: 40px; margin-bottom: 8px; margin-top: -4px; font-size: 12px;">Xuất báo cáo</button><button id="prt_etwTBCuuSinh" onclick="In_Content(`contentTBCuuSinh`)" class="btn btn-primary mr-3" style="height: 40px; margin-bottom: 8px; margin-top: -4px; font-size: 12px;">In báo cáo</button>');
+                    $('#table_tbcuusinh_wrapper .row .col-sm-12').first().html('<div class="btn-group"><button id="btn_addLifeSaving" onclick="btn_addLifeSaving()" class="btn btn-lg btn-primary mb-3" data-toggle="modal" data-target="#model-add-LifeSaving"><span class="glyphicon glyphicon-plus-sign"></span> Thêm trang bị cứu sinh</button><div class="btn-group"><button type="button" class="btn btn-lg btn-primary mb-3 dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><span class="glyphicon glyphicon-file"></span> Xuất báo cáo <ul class="dropdown-menu" role="menu" style=""><li><a href="#" onclick="exportToWord(`content`,`Thông tin trang bị cứu sinh tàu ' + shipName + '`)">Xuất file Word</a></li><li><a href="#">Xuất file Excel</a></li><li><a href="#">Xuất file PDF</a></li></ul></div><button id="prt_etwTBCuuSinh" onclick="In_Content(`contentTBCuuSinh`)" class="btn btn-lg btn-primary mb-3"><span class="glyphicon glyphicon-print"></span> In báo cáo</button></div>')
                     $('#table_tbcuusinh_wrapper .row').first().next().children().css("overflow-x", "auto");
                 }, error: function (ret) {
                     console.log('errorGET');
@@ -4201,7 +4201,7 @@
                     tabletext += "</tbody>";
                     $('#table_tbkhac').html(tabletext);
                     loadTable('table_tbkhac');
-                    $('#table_tbkhac_wrapper .row .col-sm-12').first().html('<button id="btn_addOtherEquipment" onclick="btn_addOtherEquipment()" class="btn btn-primary mr-3" data-toggle="modal" data-target="#model-add-OtherEquipment" style="height: 40px; margin-bottom: 8px; margin-top: -4px; font-size: 12px;">Thêm trang bị khác</button><button id="btn_etwTBKhac" onclick="exportToWord(`contentTBKhac`,`Thông tin trang bị khác tàu ' + shipName + '`)" class="btn btn-primary mr-3" style="height: 40px; margin-bottom: 8px; margin-top: -4px; font-size: 12px;">Xuất báo cáo</button><button id="prt_etwTBKhac" onclick="In_Content(`contentTBKhac`)" class="btn btn-primary mr-3" style="height: 40px; margin-bottom: 8px; margin-top: -4px; font-size: 12px;">In báo cáo</button>');
+                    $('#table_tbkhac_wrapper .row .col-sm-12').first().html('<div class="btn-group"><button id="btn_addOtherEquipment" onclick="btn_addOtherEquipment()" class="btn btn-lg btn-primary mb-3" data-toggle="modal" data-target="#model-add-OtherEquipment"><span class="glyphicon glyphicon-plus-sign"></span> Thêm trang bị khác</button><div class="btn-group"><button type="button" class="btn btn-lg btn-primary mb-3 dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><span class="glyphicon glyphicon-file"></span> Xuất báo cáo <ul class="dropdown-menu" role="menu" style=""><li><a href="#" onclick="exportToWord(`content`,`Thông tin trang bị khác tàu ' + shipName + '`)">Xuất file Word</a></li><li><a href="#">Xuất file Excel</a></li><li><a href="#">Xuất file PDF</a></li></ul></div><button id="prt_etwTBKhac" onclick="In_Content(`contentTBKhac`)" class="btn btn-lg btn-primary mb-3"><span class="glyphicon glyphicon-print"></span> In báo cáo</button></div>')
                     $('#table_tbkhac_wrapper .row').first().next().children().css("overflow-x", "auto");
                 }, error: function (ret) {
                     console.log('errorGET');
@@ -4333,7 +4333,7 @@
                     tabletext += "</tbody>";
                     $('#table_vattu').html(tabletext);
                     loadTable('table_vattu');
-                    $('#table_vattu_wrapper .row .col-sm-12').first().html('<button id="btn_addsuply" onclick="btn_addsuply()" class="btn btn-primary mr-3" data-toggle="modal" data-target="#model-add-supply" style="height: 40px; margin-bottom: 8px; margin-top: -4px; font-size: 12px;">Thêm vật tư bảo đảm</button><button id="btn_etwsupply" onclick="exportToWord(`contentSupply`,`Thông tin vật tư bảo đảm tàu ' + shipName + '`)" class="btn btn-primary mr-3" style="height: 40px; margin-bottom: 8px; margin-top: -4px; font-size: 12px;">Xuất báo cáo</button><button id="prt_etwSupply" onclick="In_Content(`contentSupply`)" class="btn btn-primary mr-3" style="height: 40px; margin-bottom: 8px; margin-top: -4px; font-size: 12px;">In báo cáo</button>');
+                    $('#table_vattu_wrapper .row .col-sm-12').first().html('<div class="btn-group"><button id="btn_addsuply" onclick="btn_addsuply()" class="btn btn-lg btn-primary mb-3" data-toggle="modal" data-target="#model-add-supply"><span class="glyphicon glyphicon-plus-sign"></span> Thêm vật tư bảo đảm</button><div class="btn-group"><button type="button" class="btn btn-lg btn-primary mb-3 dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><span class="glyphicon glyphicon-file"></span> Xuất báo cáo <ul class="dropdown-menu" role="menu" style=""><li><a href="#" onclick="exportToWord(`content`,`Thông tin vật tư bảo đảm tàu ' + shipName + '`)">Xuất file Word</a></li><li><a href="#">Xuất file Excel</a></li><li><a href="#">Xuất file PDF</a></li></ul></div><button id="prt_etwSupply" onclick="In_Content(`contentSupply`)" class="btn btn-lg btn-primary mb-3"><span class="glyphicon glyphicon-print"></span> In báo cáo</button></div>')
                     $('#table_vattu .row').first().next().children().css("overflow-x", "auto");
                 }, error: function (ret) {
                     console.log('errorGET');
