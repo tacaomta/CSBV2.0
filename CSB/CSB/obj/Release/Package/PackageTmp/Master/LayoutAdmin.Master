@@ -2142,7 +2142,7 @@
 
         .badge {
             vertical-align: middle;
-            padding: 7px 12px;
+            padding: 7px 7px;
             font-weight: 600;
             letter-spacing: .3px;
             border-radius: 30px;
@@ -6184,7 +6184,7 @@
     <script>
         var linkapi = "http://localhost:8082/api/";
         //44347
-        var baseaddress = "http://localhost:44347/";
+        var baseaddress = "http://localhost:8080/";
     </script>
     <%--<script src="../Scripts/jquery-3.4.1.slim.min.js"></script>--%>
     <script src="../Scripts/jquery-3.4.1.min.js"></script>

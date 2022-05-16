@@ -4,7 +4,7 @@
     <style>
         .container {
             background: #f7f7ff;
-            margin-top:50px;
+            margin-top:15px;
         }
 
 
@@ -44,11 +44,11 @@
                 <h4 id="title" style="color: black; margin: 0">THÔNG TIN TÀI KHOẢN</h4>
                 <div class="section-header-breadcrumb">
                     <div class="breadcrumb-item active"><a href="Null.aspx" style="color: #01b5f9; font-size: 18px;">Trang chủ</a></div>
-                    <div class="breadcrumb-item active"><a href="#" style="color: #01b5f9; font-size: 18px;">Thông tin tài khoản</a></div>
+                    /&nbsp;<div class="breadcrumb-item active"><a href="#" style="color: #01b5f9; font-size: 18px;">Thông tin tài khoản</a></div>
                     
                 </div>
             </div>
-            <div class="container" style="border: none; background-color: #ffffff; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.03);">
+            <div class="container" style="border: none; background-color: #ffffff; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.03); width: 100%">
                 <div class="main-body">
                     <div class="row">
                         <div id="infor_left " class="col-lg-4">
@@ -123,7 +123,7 @@
 
                                 </div>
                                 <div class="panel-footer text-right">
-                                    <a href="../Page_Master/Null" style="float: left" class="btn btn-success"><span class="glyphicon glyphicon-arrow-left"></span>&nbsp;Quay lại</a>
+                                    <a href="javascript: history.go(-1)" style="float: left" class="btn btn-success"><span class="glyphicon glyphicon-arrow-left"></span>&nbsp;Quay lại</a>
                                     <button type="button" class="btn btn-info" onclick="updateUser_view()"><span class="glyphicon glyphicon-floppy-save"></span>&nbsp;Lưu thay đổi</button>
                                 </div>
                             </div>

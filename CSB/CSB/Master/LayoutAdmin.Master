@@ -6184,7 +6184,7 @@
     <script>
         var linkapi = "http://localhost:8082/api/";
         //44347
-        var baseaddress = "http://localhost:44347/";
+        var baseaddress = "http://localhost:8080/";
     </script>
     <%--<script src="../Scripts/jquery-3.4.1.slim.min.js"></script>--%>
     <script src="../Scripts/jquery-3.4.1.min.js"></script>

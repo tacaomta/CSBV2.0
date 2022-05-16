@@ -6,8 +6,7 @@
             text-align: left;
             padding-left: 0px;
             color: #ff0000;
-            padding-top: 10px;
-            padding-bottom: 10px;
+          
         }
                 .row {
             margin-bottom: 20px;
@@ -28,14 +27,14 @@
                         <div class="section-header">
                 <h4 id="title" style="color: black; margin: 0">ĐỔI MẬT KHẨU</h4>
                 <div class="section-header-breadcrumb">
-                    <div class="breadcrumb-item active"><a href="Null.aspx" style="color: #01b5f9; font-size: 18px;">Trang chủ</a></div>
-                    <div class="breadcrumb-item active"><a href="#" style="color: #01b5f9; font-size: 18px;">Đổi mật khẩu</a></div>
+                    <div class="breadcrumb-item active"><a href="Null.aspx" style="color: #01b5f9; font-size: 18px;">Trang chủ </a></div>
+                    /&nbsp; <div class="breadcrumb-item active"><a href="#" style="color: #01b5f9; font-size: 18px;"> Đổi mật khẩu</a></div>
                     
                 </div>
             </div>
-            <div class="container" style="margin-top:50px; border: none; background-color: #ffffff; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.03);">
+            <div class="container" style="margin-top:15px; border: none; background-color: #ffffff; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.03); width: 100%;">
                 <div class="row" style="padding: 3rem 0">
-                    <div class="login-box col-md-4" style="margin: 0 auto;">
+                    <div class="login-box col-md-4 col-md-offset-4">
                         <div class="login-key" style="display: flex; justify-content: center; margin-bottom: 3rem;">
                             <img class="ship-key" src="../Image/ic-login.png" />
                         </div>
@@ -44,29 +43,30 @@
                         </div>
 
                         <div class="login-form">
-                            <div class="form-group mb-4" style="display: flex; align-items: center;">
+                            <div class="form-group mb-4" style="display: flex; padding: 10px; align-items: center;">
                                 <i class="material-icons icon-name mr-2">person</i>
                                 <input type="text" class="form-control" id="username" placeholder="Tài khoản" readonly />
                             </div>
-                            <div class="form-group mb-4" style="display: flex; align-items: center;">
+                            <div class="form-group mb-4" style="display: flex; padding: 10px; align-items: center;">
                                 <i class="material-icons icon-name mr-2">lock</i>
                                 <input type="password" pattern=".{6,}" title="Mật khẩu tối thiểu 6 kí tự" class="form-control" id="password_old" placeholder="Mật khẩu cũ" />
                             </div>
-                            <div class="form-group mb-4" style="display: flex; align-items: center;">
+                            <div class="form-group mb-4" style="display: flex; padding: 10px; align-items: center;">
                                 <i class="material-icons icon-name mr-2">lock</i>
                                 <input type="password" pattern=".{6,}" title="Mật khẩu tối thiểu 6 kí tự" class="form-control" id="password_new" placeholder="Mật khẩu mới" />
                             </div>
-                            <div class="form-group" style="display: flex; align-items: center;">
+                            <div class="form-group" style="display: flex; padding: 10px; align-items: center;">
                                 <i class="material-icons icon-name mr-2">lock</i>
                                 <input type="password" pattern=".{6,}" title="Mật khẩu tối thiểu 6 kí tự" class="form-control" id="password_confirm" placeholder="Xác nhận mật khẩu mới" />
                             </div>
-                            <div class="loginbttm" style="display: flex; justify-content: space-between;">
+                            <div class="loginbttm" style="display: flex; padding: 10px; justify-content: space-between;">
                                 
                                 <div class="login-btm login-text">
-                                    <p hidden="hidden" id="error-login-text">Đổi mật khẩu không thành công!</p>
+                                    <div hidden="hidden" id="error-login-text">Đổi mật khẩu không thành công!</div>
                                 </div>
+
                                 <div class="login-btm login-button mt-3">
-                                   
+                                    <a href="javascript: history.go(-1)" style="margin:0px 10px" class="btn btn-success"><span class="glyphicon glyphicon-arrow-left"></span>&nbsp;Quay lại</a>
                                     <button class="btn btn-info" onclick="Save_Change()">Lưu thay đổi</button>
                                 </div>
                             </div>
@@ -85,22 +85,22 @@
         function Save_Change() {
             $('#error-login-text').attr('hidden', '');
             if ($('#password_old').val() == '') {
-                $('#error-login-text').text('Chưa nhập mật khẩu cũ');
+                $('#error-login-text').text('Chưa nhập mật khẩu cũ!');
                 $('#error-login-text').removeAttr('hidden');
                 return;
             }
             else if ($('#password_new').val() == '') {
-                $('#error-login-text').text('Chưa nhập mật khẩu mới');
+                $('#error-login-text').text('Chưa nhập mật khẩu mới!');
                 $('#error-login-text').removeAttr('hidden');
                 return;
             }
             else if ($('#password_confirm').val() == '') {
-                $('#error-login-text').text('Chưa nhập mật khẩu xác nhận');
+                $('#error-login-text').text('Chưa nhập mật khẩu xác nhận!');
                 $('#error-login-text').removeAttr('hidden');
                 return;
             }
             else if ($('#password_new').val() != $('#password_confirm').val()) {
-                $('#error-login-text').text('Mật khẩu xác nhận không khớp');
+                $('#error-login-text').text('Mật khẩu xác nhận không khớp!');
                 $('#error-login-text').removeAttr('hidden');
                 return;
             }
