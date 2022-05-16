@@ -29,13 +29,13 @@
                 <h4 id="title" style="color: black; margin: 0">ĐỔI MẬT KHẨU</h4>
                 <div class="section-header-breadcrumb">
                     <div class="breadcrumb-item active"><a href="Null.aspx" style="color: #01b5f9; font-size: 18px;">Trang chủ</a></div>
-                    <div class="breadcrumb-item active"><a href="#" style="color: #01b5f9; font-size: 18px;">Đổi mật khẩu</a></div>
+                    /<div class="breadcrumb-item active"><a href="#" style="color: #01b5f9; font-size: 18px;">Đổi mật khẩu</a></div>
                     
                 </div>
             </div>
-            <div class="container" style="margin-top:50px; border: none; background-color: #ffffff; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.03);">
+            <div class="container" style="margin-top:50px; border: none; background-color: #ffffff; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.03); width: 100%;">
                 <div class="row" style="padding: 3rem 0">
-                    <div class="login-box col-md-4" style="margin: 0 auto;">
+                    <div class="login-box col-md-4 col-md-offset-4">
                         <div class="login-key" style="display: flex; justify-content: center; margin-bottom: 3rem;">
                             <img class="ship-key" src="../Image/ic-login.png" />
                         </div>

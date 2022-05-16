@@ -23,8 +23,8 @@
                     <h4 id="title" style="color: black; margin: 0">THÊM MỚI TẦU</h4>
                     <div class="section-header-breadcrumb">
                         <div class="breadcrumb-item active"><a href="Null.aspx" style="color: #01b5f9; font-size: 18px;">Trang chủ</a></div>
-                        <div class="breadcrumb-item active"><a href="Manage_ship?vung=1" style="color: #01b5f9; font-size: 18px;">Quản lý tàu</a></div>
-                        <div class="breadcrumb-item active"><a href="Add_Ship" style="color: #01b5f9; font-size: 18px;">Thêm mới tầu</a></div>
+                        /<div class="breadcrumb-item active"><a href="Manage_ship?vung=1" style="color: #01b5f9; font-size: 18px;">Quản lý tàu</a></div>
+                        /<div class="breadcrumb-item active"><a href="Add_Ship" style="color: #01b5f9; font-size: 18px;">Thêm mới tầu</a></div>
                     </div>
                 </div>
 
@@ -98,11 +98,11 @@
                                     <label class="col-md-4 control-label" style="text-align: right"><strong>Thuyền trưởng: </strong></label>
                                     <div class="col-md-8 input-group">
                                         <div class="row">
-                                            <div class="col-md-10">
+                                            <div class="col-md-9">
                                                 <select id="add_ThuyenTruong" class="select-inform">
                                                 </select>
                                             </div>
-                                            <div class="col-md-2">
+                                            <div class="col-md-3">
                                                 <span class="btn btn-info btn-sm glyphicon glyphicon-eye-open pull-left" title="Xem thông tin"></span>
                                                 <span class="btn btn-primary btn-sm glyphicon glyphicon-plus pull-right" title="Thêm thuyền trưởng"></span>
                                             </div>
