@@ -5,7 +5,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <_PublishTargetUrl>C:\Users\Linh\Documents\GitHub\CSBV2.0\public</_PublishTargetUrl>
-    <History>True|2022-05-20T02:56:54.3216157Z;True|2022-05-15T15:36:04.7405365+07:00;True|2022-05-15T15:35:44.3944619+07:00;True|2022-05-15T15:25:40.1255793+07:00;True|2022-05-15T15:02:40.9558306+07:00;</History>
+    <History>True|2022-05-20T07:32:19.1797407Z;True|2022-05-20T09:56:54.3216157+07:00;True|2022-05-15T15:36:04.7405365+07:00;True|2022-05-15T15:35:44.3944619+07:00;True|2022-05-15T15:25:40.1255793+07:00;True|2022-05-15T15:02:40.9558306+07:00;</History>
   </PropertyGroup>
   <ItemGroup>
     <File Include="About.aspx">
@@ -84,10 +84,10 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>02/04/2021 21:27:12</publishTime>
     </File>
     <File Include="bin/CSB.dll">
-      <publishTime>05/19/2022 14:16:03</publishTime>
+      <publishTime>05/20/2022 09:57:22</publishTime>
     </File>
     <File Include="bin/CSB.pdb">
-      <publishTime>05/19/2022 14:16:03</publishTime>
+      <publishTime>05/20/2022 09:57:22</publishTime>
     </File>
     <File Include="bin/Microsoft.AspNet.FriendlyUrls.dll">
       <publishTime>04/08/2022 08:01:24</publishTime>
@@ -489,7 +489,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>04/08/2022 08:01:23</publishTime>
     </File>
     <File Include="Master/LayoutAdmin.Master">
-      <publishTime>05/20/2022 09:56:23</publishTime>
+      <publishTime>05/20/2022 14:32:06</publishTime>
     </File>
     <File Include="Master/TrangChu.Master">
       <publishTime>05/15/2022 15:06:02</publishTime>
@@ -504,10 +504,10 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>05/18/2022 15:20:48</publishTime>
     </File>
     <File Include="Page_Master/Login.aspx">
-      <publishTime>05/20/2022 09:56:23</publishTime>
+      <publishTime>05/20/2022 14:32:06</publishTime>
     </File>
     <File Include="Page_Master/Manage_ship.aspx">
-      <publishTime>05/20/2022 09:50:05</publishTime>
+      <publishTime>05/20/2022 14:31:45</publishTime>
     </File>
     <File Include="Page_Master/Manage_user.aspx">
       <publishTime>05/15/2022 14:14:46</publishTime>

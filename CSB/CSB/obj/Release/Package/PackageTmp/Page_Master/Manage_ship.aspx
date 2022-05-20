@@ -2299,7 +2299,7 @@ TR&#7908;C CHÂN V&#7882;T</span></b></p>
         }
         function xuatWordTau(idTau) {
             loadBaoCao(idTau);
-            /*exportToWord(`contentptrTau`, `Thông tin chung tàu ` + shipName);*/
+            exportToWord(`contentptrTau`, `Thông tin chung tàu ` + shipName);
         }
 
         function xuatExcelTau(idTau) {
@@ -2308,50 +2308,13 @@ TR&#7908;C CHÂN V&#7882;T</span></b></p>
 
         function xuatPdfTau(idTau) {
             loadBaoCao(idTau);
-            /*exportToPdf(`contentTau`, `Thông tin máy chính tàu ` + shipName);*/
+            exportToPdf(`contentTau`, `Thông tin chung tàu ` + shipName);
         }
 
         function inBCTau(idTau) {
             loadBaoCao(idTau);
-            /* In_Content(`contentTau`);*/
+             In_Content(`contentTau`);
         }
-        function exportToWord(element, filename) {
-            var preHtml = "<html xmlns:  o='urn:schemas-microsoft-com:office:office' xmlns:w='urn:schemas-microsoft-com:office:word' xmlns='http://www.w3.org/TR/REC-html40'><head><meta charset='utf-8'><title>Export HTML To Doc</title></head><body>";
-            var postHtml = "</body></html>";
-            var html = preHtml + document.getElementById(element).innerHTML + postHtml;
-            var blob = new Blob(['\ufeff', html], {
-                type: 'application/msword'
-            });
-            // Specify link url
-            var url = 'data:application/vnd.ms-word;charset=utf-8,' + encodeURIComponent(html);
-
-            // Specify file name
-            filename = filename ? filename + '.doc' : 'document.doc';
-
-            // Create download link element
-            var downloadLink = document.createElement("a");
-
-            document.body.appendChild(downloadLink);
-            if (navigator.msSaveOrOpenBlob) {
-                navigator.msSaveOrOpenBlob(blob, filename);
-            } else {
-                // Create a link to the file
-                downloadLink.href = url;
-                // Setting the file name
-                downloadLink.download = filename;
-                //triggering the function
-                downloadLink.click();
-            }
-            document.body.removeChild(downloadLink);
-        }
-
-        function In_Content(strid) {
-            var prtContent = document.getElementById(strid);
-            var WinPrint = window.open('', '', 'letf=0,top=0,width=800,height=800');
-            WinPrint.document.write(prtContent.innerHTML);
-            WinPrint.document.close();
-            WinPrint.focus();
-            WinPrint.print();
-        }
+        
     </script>
 </asp:Content>
