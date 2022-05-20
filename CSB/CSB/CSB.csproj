@@ -320,6 +320,7 @@
     <Content Include="Scripts\vendor\dataTables.buttons.min.js" />
     <Content Include="Scripts\vendor\dataTables.responsive.min.js" />
     <Content Include="Scripts\vendor\echarts.min.js" />
+    <Content Include="Scripts\vendor\html2pdf.bundle.js" />
     <Content Include="Scripts\vendor\jquery.dataTables.min.js" />
     <Content Include="Scripts\vendor\jszip.min.js" />
     <Content Include="Scripts\vendor\pdfmake.min.js" />

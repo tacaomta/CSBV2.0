@@ -5,10 +5,8 @@
 <html>
 <head runat="server">
     <title></title>
-    <%--<link href="../css/bootstrap.min.css" rel="stylesheet" />--%>
     <link href="../css/bootstrap3.css" rel="stylesheet" />
-    <%--<link href="../Content/bootstrap.min.css" rel="stylesheet" />--%>
-    <link href="../Content/bootstrap-theme.min.css" rel="stylesheet" />
+    <%--<link href="../Content/bootstrap-theme.min.css" rel="stylesheet" />--%>
     <link href="../Content/bootstrap-icons.css" rel="stylesheet" />
     <link href="../Content/dataTables.bootstrap4.min.css" rel="stylesheet" />
     <link href="../Content/MaterialIcons.css" rel="stylesheet" />
@@ -3419,7 +3417,7 @@
             font-size: 16px;
             font-weight: 400;
             font-family: "Nunito", "Segoe UI", arial;
-            color: #6c757d;
+            color: #000;
         }
 
         a.bb {
@@ -6186,20 +6184,19 @@
         //44347
         var baseaddress = "http://localhost:8080/";
     </script>
-    <%--<script src="../Scripts/jquery-3.4.1.slim.min.js"></script>--%>
     <script src="../Scripts/jquery-3.4.1.min.js"></script>
     <script src="../Scripts/bootstrap-4.6.1/bootstrap.bundle.min.js"></script>
     <script src="../Scripts/vendor/jquery.dataTables.min.js"></script>
     <script src="../Scripts/vendor/dataTables.bootstrap4.min.js"></script>
     <script src="../Scripts/vendor/popper.min.js"></script>
-    <%--<script src="../Scripts/vendor/bootstrap.min.js"></script>--%>
     <script src="../Scripts/vendor/jquery.dataTables.min.js"></script>
     <script src="../Scripts/vendor/dataTables.bootstrap4.min.js"></script>
     <script src="../Scripts/vendor/dataTables.buttons.min.js"></script>
-    <script src="../Scripts/vendor/buttons.bootstrap4.min.js"></script>
-    <script src="../Scripts/vendor/jszip.min.js"></script>
-    <script src="../Scripts/vendor/pdfmake.min.js"></script>
-    <script src="../Scripts/vendor/vfs_fonts.js"></script>
+<%--    <script src="../Scripts/vendor/buttons.bootstrap4.min.js"></script>--%>
+    <%--<script src="../Scripts/vendor/jszip.min.js"></script>--%>
+    <%--<script src="../Scripts/vendor/pdfmake.min.js"></script>--%>
+    <%--<script src="../Scripts/vendor/vfs_fonts.js"></script>--%>
+    <script src="../Scripts/vendor/html2pdf.bundle.js"></script>
     <script src="../Scripts/vendor/buttons.html5.min.js"></script>
     <script src="../Scripts/vendor/buttons.print.min.js"></script>
     <script src="../Scripts/vendor/buttons.colVis.min.js"></script>
@@ -6207,7 +6204,6 @@
     <script src="../Scripts/vendor/responsive.bootstrap4.min.js"></script>
     <script src="../Scripts/vendor/jquery.nicescroll.min.js"></script>
     <script src="https://cdn.datatables.net/fixedheader/3.1.2/js/dataTables.fixedHeader.min.js"></script>
-
     <script src="../Scripts/js/Master.js"></script>
     --%>
     <script>
@@ -6850,6 +6846,64 @@
             }
         });
 
+        function exportToWord(element, filename) {
+            if (!window.Blob) {
+                alert('Your legacy browser does not support this action.');
+                return;
+            }
+            var html, link, blob, url, css;
+            // EU A4 use: size: 841.95pt 595.35pt;
+            // US Letter use: size:11.0in 8.5in;
+            css = (
+                '<style>' +
+                '@page WordSection1{size: 841.95pt 595.35pt;mso-page-orientation: landscape;}' +
+                'div.WordSection1 {page: WordSection1;}' +
+                /*'table{border-collapse:collapse;}td{border:1px gray solid;width:5em;padding:2px;}' +*/
+                '</style>'
+            );
+            var date = new Date();
+            var strdate = " " + date.getDate() + (Number(date.getMonth()) + 1) + date.getFullYear();
+            filename = filename ? filename + strdate + '.doc' : 'document.doc';
+            var html = document.getElementById(element).innerHTML;
+            blob = new Blob(['\ufeff', css + html], {
+                type: 'application/msword'
+            });
+            url = URL.createObjectURL(blob);
+            link = document.createElement('A');
+            link.href = url;
+            // Set default file name.
+            // Word will append file extension - do not add an extension here.
+            link.download = filename;
+            document.body.appendChild(link);
+            if (navigator.msSaveOrOpenBlob) navigator.msSaveOrOpenBlob(blob, filename); // IE10-11
+            else link.click();  // other browsers
+            document.body.removeChild(link);
+        };
+
+
+        function In_Content(strid) {
+            var prtContent = document.getElementById(strid);
+            var WinPrint = window.open('', '', 'letf=0,top=0,width=800,height=800');
+            WinPrint.document.write(prtContent.innerHTML);
+            WinPrint.document.close();
+            WinPrint.focus();
+            WinPrint.print();
+        }
+
+        function exportToPdf(element, filename) {
+            var ele = document.getElementById(element);
+            var date = new Date();
+            var strdate = " " + date.getDate() + (Number(date.getMonth()) + 1) + date.getFullYear();
+            filename = filename ? filename + strdate + '.pdf' : 'document.pdf';
+            var opt = {
+                margin: 0.9,
+                filename: filename,
+                image: { type: 'jpeg', quality: 0.98},
+                html2canvas: { scale: 2 },
+                jsPDF: {unit: 'in', format:'A4', orientation:'landscape'}
+            };
+            html2pdf(ele, opt);
+        }
     </script>
 </body>
 </html>
