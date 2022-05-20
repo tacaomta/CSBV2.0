@@ -2299,7 +2299,9 @@ TR&#7908;C CHÂN V&#7882;T</span></b></p>
         }
         function xuatWordTau(idTau) {
             loadBaoCao(idTau);
-            exportToWord(`contentptrTau`, `Thông tin chung tàu ` + shipName);
+            setTimeout(() => {
+                exportToWord(`contentptrTau`, `Thông tin chung tàu ` + shipName);
+            }, 1000);
         }
 
         function xuatExcelTau(idTau) {
@@ -2308,12 +2310,18 @@ TR&#7908;C CHÂN V&#7882;T</span></b></p>
 
         function xuatPdfTau(idTau) {
             loadBaoCao(idTau);
-            exportToPdf(`contentTau`, `Thông tin chung tàu ` + shipName);
+            setTimeout(() => {
+                exportToPdf(`contentTau`, `Thông tin chung tàu ` + shipName);
+            }, 1000);
+            
         }
 
         function inBCTau(idTau) {
             loadBaoCao(idTau);
-             In_Content(`contentTau`);
+            setTimeout(() => {
+                In_Content(`contentTau`);
+            }, 1000);
+             
         }
         
     </script>
