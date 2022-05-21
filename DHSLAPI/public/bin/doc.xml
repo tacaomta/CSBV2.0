@@ -698,6 +698,28 @@
             <param name="id">id của vùng</param>
             <returns></returns>
         </member>
+        <member name="M:DHSLAPI.Controllers.FlotillaController.InsertFlotilla(ShipyardInfo.classes.Flotilla)">
+            <summary>
+            Thêm mới hải đội. Nếu hải đội trực thuộc vùng thì Hải đoàn = NULL
+            </summary>
+            <param name="flotilla">Thông tin hải đội sẽ được thêm vào cơ sở dữ liệu</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.FlotillaController.UpdateFlotilla(System.String,ShipyardInfo.classes.Flotilla)">
+            <summary>
+            Update thông tin hải đội. Nếu hải đội trực thuộc vùng thì Hải đoàn = NULL
+            </summary>
+            <param name="id"></param>
+            <param name="flotilla"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.FlotillaController.DeleteFlotilla(System.String)">
+            <summary>
+            Xoá thông tin hải đội trong CSDL
+            </summary>
+            <param name="id">Id của hải đội</param>
+            <returns></returns>
+        </member>
         <member name="T:DHSLAPI.Controllers.LifeSavingController">
             <summary>
             Trang bị cứu sinh API
