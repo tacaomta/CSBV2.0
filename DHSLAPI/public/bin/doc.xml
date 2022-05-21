@@ -1139,6 +1139,28 @@
             <param name="id">id vùng</param>
             <returns></returns>
         </member>
+        <member name="M:DHSLAPI.Controllers.SquadronController.InsertSquadron(ShipyardInfo.classes.Squadron)">
+            <summary>
+            Thêm mới hải đoàn
+            </summary>
+            <param name="squadron">Thông tin hải đoàn</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.SquadronController.UpdateSquadron(System.String,ShipyardInfo.classes.Squadron)">
+            <summary>
+            Update thông tin hải đoàn
+            </summary>
+            <param name="id">id</param>
+            <param name="squadron">thông tin mới của hải đoàn</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.SquadronController.DeleteSquadron(System.String)">
+            <summary>
+            Xoá thông tin hải đoàn
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
         <member name="T:DHSLAPI.Controllers.SupplyController">
             <summary>
             Thiết bị bảo đảm
