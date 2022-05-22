@@ -205,9 +205,13 @@
                 });
                 table1.buttons().container()
                     .appendTo('this_wrapper .col-md-6:eq(0)');
-                $('.col-sm-12').first().html('<button id="btn_addflotilla" onclick="btn_addflotilla()" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#model-add-flotilla" style="height: 35px; padding - top: 4px;margin - top: -4px;"><span class="glyphicon glyphicon-plus-sign"></span> Thêm hải đội</button>');
+                $('.col-sm-12').first().html('<div class="btn-group"><button onclick="btn_Load_listflotilla()" class="btn btn-lg btn-primary mb-3"><span class="glyphicon glyphicon-refresh"></span> &nbsp;Load dữ liệu</button><button id="btn_addflotilla" onclick="btn_addflotilla()" class="btn btn-lg btn-primary mb-3" data-toggle="modal" data-target="#model-add-flotilla" style=" padding - top: 4px;margin - top: -4px;"><span class="glyphicon glyphicon-plus-sign"></span> Thêm hải đội</button></div>');
             });
         };
+
+        function btn_Load_listflotilla() {
+            location.reload(true);
+        }
         function list_Region(id_Region, string_Region) {
             debugger
             $.ajax({
