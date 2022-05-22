@@ -23,7 +23,7 @@
     <div class="modal fade" id="model-add-flotilla" tabindex="-1" role="dialog">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
-                <div class="card auth_form">
+                <div class="card auth_form" style="margin-bottom: 0px">
                     <div class="modal-header">
                         <h4 class="title-modal-banve font-weight-bold" id="largeModalLabel">Thêm hải đội mới</h4>
                     </div>
@@ -43,8 +43,6 @@
                                     <label class="col-md-5 control-label"><strong>Vùng     : </strong></label>
                                     <div class="col-md-7">
                                         <select class="form-control" style="height: 42px;" id="TT_Vung_addflotilla">
-                                            <option selected >Vùng 1</option>
-                                            <option >Vùng 2</option>
                                         </select>
                                     </div>
                                 </div>
@@ -54,13 +52,11 @@
                                     <label class="col-md-5 control-label"><strong>Hải đoàn    : </strong></label>
                                     <div class="col-md-7">
                                         <select class="form-control" style="height: 42px;" id="TT_HaiDoan_addflotilla">
-                                            <option selected >Vùng 1</option>
-                                            <option >Vùng</option>
                                         </select>
                                     </div>
                                 </div>
                             </div>
-                           <%-- <p id="Error_AddFlotillar" class="textER">Lỗi</p>--%>
+                            <p id="Error_AddFlotillar" hidden="hidden" class="textER" style="color: red; margin-left: 25px;">Lỗi</p>
                         </div>
                     </div>
                     <div class="modal-footer">
@@ -71,11 +67,60 @@
             </div>
         </div>
     </div>
+
+    <div class="modal fade" id="model-edit-flotilla" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="card auth_form" style="margin-bottom: 0px">
+                    <div class="modal-header">
+                        <h4 class="title-modal-banve font-weight-bold">Sửa thông tin hải đội </h4>
+                    </div>
+                    <div class="modal-body">
+
+                        <div class="row clearfix ">
+                            <div style="width: 100%; float: left; padding: 10px">
+                                <div class="form-group">
+                                    <label class="col-md-5 control-label"><strong>Tên hải đội   : </strong></label>
+                                    <div class="col-md-7">
+                                        <input type="text" class="form-control" id="TenHaiDoi_editflotilla" name="TenHaiDoi" placeholder="Nhập tên hải đội" required value="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="width: 100%; float: left; padding: 10px">
+                                <div class="form-group">
+                                    <label class="col-md-5 control-label"><strong>Vùng     : </strong></label>
+                                    <div class="col-md-7">
+                                        <select class="form-control" style="height: 42px;" id="TT_Vung_editflotilla">
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="width: 100%; float: left; padding: 10px">
+                                <div class="form-group">
+                                    <label class="col-md-5 control-label"><strong>Hải đoàn    : </strong></label>
+                                    <div class="col-md-7">
+                                        <select class="form-control" style="height: 42px;" id="TT_HaiDoan_editflotilla">
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <p id="Error_editFlotillar" hidden="hidden" class="textER" style="color: red; margin-left: 25px;">Lỗi</p>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button onclick="Edit_Flotilla()" type="submit" class="btn btn-info">Save</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <script src="../Scripts/jquery-3.4.1.slim.min.js"></script>
     <script>
         $(document).ready(function () {
             loadDataList_Flotilla();
-            list_Region('','TT_Vung_addflotilla')
+            list_Region('', 'TT_Vung_addflotilla');
+
         });
         var date = new Date();
         var strDate = '' + date.getDate() + '/' + (Number(date.getMonth()) + 1) + '/' + date.getFullYear() + ' ' + date.getHours() + ':' + date.getMinutes() + ':' + date.getSeconds();
@@ -93,10 +138,10 @@
                     $.each(data, function (key, item) {
 
                         if (item.Squadron == null) {
-                            tabletext += "<tr><td>" + i + "</td><td>" + item.Name + "</td><td>" + item.NavalRegion.Name + '</td><td><div style="width: max-content;"><a href="#" class="edit" title="Sửa" data-toggle="modal" data-target="#model-edit-user"  onclick="edituser(`' + item.Name + '`)"><i class="material-icons">&#xE254;</i></a><a href="#" class="delete" title="Xóa" onclick="delete_user(`' + item.Id + '`)"><i class="material-icons">&#xE872;</i></a></div></td></tr>';
+                            tabletext += "<tr><td>" + i + "</td><td>" + item.Name + "</td><td>" + item.NavalRegion.Name + '</td><td><div style="width: max-content;"><a href="#" class="edit" title="Sửa" data-toggle="modal" data-target="#model-edit-flotilla"  onclick="editflotilla(`' + item.Id + '`,`' + item.NavalRegion.ID + '`,`' + item.Squadron+ '`)"><i class="material-icons">&#xE254;</i></a><a href="#" class="delete" title="Xóa" onclick="delete_flotilla(`' + item.Id + '`)"><i class="material-icons">&#xE872;</i></a></div></td></tr>';
                         }
                         else {
-                            tabletext += "<tr><td>" + i + "</td><td>" + item.Name + "</td><td>" + item.Squadron.Name + '</td><td><div style="width: max-content;"><a href="#" class="edit" title="Sửa" data-toggle="modal" data-target="#model-edit-user"  onclick="edituser(`' + item.Name + '`)"><i class="material-icons">&#xE254;</i></a><a href="#" class="delete" title="Xóa" onclick="delete_user(`' + item.Id + '`)"><i class="material-icons">&#xE872;</i></a></div></td></tr>';
+                            tabletext += "<tr><td>" + i + "</td><td>" + item.Name + "</td><td>" + item.Squadron.Name + '</td><td><div style="width: max-content;"><a href="#" class="edit" title="Sửa" data-toggle="modal" data-target="#model-edit-flotilla"  onclick="editflotilla(`' + item.Id + '`,`' + item.NavalRegion.ID + '`,`' + item.Squadron + '`)"><i class="material-icons">&#xE254;</i></a><a href="#" class="delete" title="Xóa" onclick="delete_flotilla(`' + item.Id + '`)"><i class="material-icons">&#xE872;</i></a></div></td></tr>';
                         }
                         i = i + 1;
                     });
@@ -109,6 +154,7 @@
                 },
                 complete: function () { // Set our complete callback, adding the .hidden class and hiding the spinner.
                     $('#loader').addClass('hidden');
+
                 },
             });
         };
@@ -163,6 +209,7 @@
             });
         };
         function list_Region(id_Region, string_Region) {
+            debugger
             $.ajax({
                 type: "GET",
                 url: linkapi + "naval_region",
@@ -190,43 +237,72 @@
                     });
                     if (id_Region == '') {
                         $('#' + string_Region + 'select').val(data[0].ID);
+
                     }
                 }, error: function (ret) {
                     console.log('errorGET');
                 },
                 complete: function () { // Set our complete callback, adding the .hidden class and hiding the spinner.
+
                 },
             });
 
         }
+        $("#TT_Vung_addflotilla").change(function () {
+            list_Squadron('', $("#TT_Vung_addflotilla").val(), 'TT_HaiDoan_addflotilla');
+        });
+        //$("#TT_HaiDoan_addflotilla").change(function () {
+        //    alert($("#TT_HaiDoan_addflotilla").val());
+        //});
         function list_Squadron(id_Squadron, id_Region, string_Squadron) {
+            debugger
             $.ajax({
                 type: "GET",
-                url: linkapi + "naval_region",
+                url: linkapi + "squadrons_by_region?id=" + id_Region,
                 dataType: "json",
                 success: function (data) {
                     console.log(data);
-                    $('#' + string_Region).empty();
+                    $('#' + string_Squadron).empty();
+
                     $.each(data, function (key, item) {
 
-                        if (item.ID == id_Region) {
-                            $('#' + string_Region).append($('<option>', {
+                        if (item.Id == id_Squadron) {
+                            $('#' + string_Squadron).append($('<option>', {
                                 selected: true,
-                                value: item.ID,
-                                text: item.ShortName
+                                value: item.Id,
+                                text: item.Name
                             }));
                         }
                         else {
-                            $('#' + string_Region).append($('<option>', {
+                            $('#' + string_Squadron).append($('<option>', {
                                 selected: false,
-                                value: item.ID,
-                                text: item.ShortName
+                                value: item.Id,
+                                text: item.Name
                             }));
                         }
 
                     });
-                    if (id_Region == '') {
-                        $('#' + string_Region + 'select').val(data[0].ID);
+                    if (id_Squadron == '') {
+                        $('#' + string_Squadron + 'select').val(data[0].Id);
+                        $('#' + string_Squadron).append($('<option>', {
+                            selected: false,
+                            value: 'null',
+                            text: "Không trực thuộc"
+                        }));
+                    }
+                    else if (id_Squadron == 'null') {
+                        $('#' + string_Squadron).append($('<option>', {
+                            selected: true,
+                            value: 'null',
+                            text: "Không trực thuộc"
+                        }));
+                    }
+                    else {
+                        $('#' + string_Squadron).append($('<option>', {
+                            selected: false,
+                            value: 'null',
+                            text: "Không trực thuộc"
+                        }));
                     }
                 }, error: function (ret) {
                     console.log('errorGET');
@@ -237,7 +313,75 @@
 
         }
         function btn_flotilla() {
+            $('#Error_AddFlotillar').attr('hidden', '');
+            list_Squadron('', $("#TT_Vung_addflotilla").val(), 'TT_HaiDoan_addflotilla');
+        }
+        function Add_Flotilla() {
 
+            if ($("#TenHaiDoi_addflotilla").val() == "") {
+                $("#Error_AddFlotillar").text("Chưa nhập tên hải đội!");
+                $("#Error_AddFlotillar").removeAttr('hidden');
+            }
+            else {
+                debugger
+                var id_region = $("#TT_Vung_addflotilla").val();
+                if ($("#TT_HaiDoan_addflotilla").val() == 'null') {
+                    var flotilla = {
+                        Name: $("#TenHaiDoi_addflotilla").val(),
+                        Squadron: null,
+                        NavalRegion: {
+                            ID: id_region
+                        }
+                    };
+                }
+                else {
+                    var id_squadron = $("#TT_HaiDoan_addflotilla").val();
+                    var flotilla = {
+                        Name: $("#TenHaiDoi_addflotilla").val(),
+                        Squadron: {
+                            ID: id_squadron
+                        },
+                        NavalRegion: {
+                            ID: id_region
+                        }
+                    };
+                }
+                console.log(flotilla);
+                $.ajax({
+                    type: "POST",
+                    url: linkapi + "flotilla_insert",
+                    dataType: "json",
+                    data: JSON.stringify(flotilla),
+                    contentType: "application/json",
+
+                    beforeSend: function () { // Before we send the request, remove the .hidden class from the spinner and default to inline-block.
+                        $('#loader').removeClass('hidden');
+                    },
+                    success: function (data) {
+                        toastSuccess("Thành công", "Thêm hải đội mới thành công.");
+                    }, error: function (ret) {
+                        console.log(ret.responseJSON.Message);
+                        toastError("Thất bại", ret.responseJSON.Message);
+                    },
+                    complete: function () { // Set our complete callback, adding the .hidden class and hiding the spinner.
+                        $('#loader').addClass('hidden');
+                        $('#model-add-flotilla').modal("hide");
+                        loadTableFlotilla();
+                    },
+                });
+            }
+        }
+
+        function editflotilla(id_flotilla, id_region, Squadron) {
+            debugger
+            if (Squadron == "null") {
+                list_Region(id_region, 'TT_Vung_editflotilla');
+                list_Squadron(Squadron, id_region, 'TT_HaiDoan_editflotilla');
+            }
+            else {
+                list_Region(id_region, 'TT_Vung_editflotilla');
+                list_Squadron(Squadron.Id, id_region, 'TT_HaiDoan_editflotilla');
+            }
         }
     </script>
 </asp:Content>
