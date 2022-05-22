@@ -61,7 +61,7 @@
                     </div>
                     <div class="modal-footer">
                         <button onclick="Add_Flotilla()" type="submit" class="btn btn-info">Thêm</button>
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button onclick="Close_AddFlotilla()" type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                     </div>
                 </div>
             </div>
@@ -205,7 +205,7 @@
                 });
                 table1.buttons().container()
                     .appendTo('this_wrapper .col-md-6:eq(0)');
-                $('.col-sm-12').first().html('<button id="btn_flotilla" onclick="btn_flotilla()" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#model-add-flotilla" style="height: 35px; padding - top: 4px;margin - top: -4px;"><span class="glyphicon glyphicon-plus-sign"></span> Thêm hải đội</button>');
+                $('.col-sm-12').first().html('<button id="btn_addflotilla" onclick="btn_addflotilla()" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#model-add-flotilla" style="height: 35px; padding - top: 4px;margin - top: -4px;"><span class="glyphicon glyphicon-plus-sign"></span> Thêm hải đội</button>');
             });
         };
         function list_Region(id_Region, string_Region) {
@@ -315,8 +315,13 @@
             });
 
         }
-        function btn_flotilla() {
+
+        function Close_AddFlotilla() {
+            list_Region('', 'TT_Vung_addflotilla');
+        }
+        function btn_addflotilla() {
             $('#Error_AddFlotillar').attr('hidden', '');
+            $("#TenHaiDoi_addflotilla").val("");          
             list_Squadron('', $("#TT_Vung_addflotilla").val(), 'TT_HaiDoan_addflotilla');
         }
         function Add_Flotilla() {
