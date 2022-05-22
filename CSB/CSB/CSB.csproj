@@ -259,6 +259,7 @@
     <Content Include="Page_Master\Change_Password.aspx" />
     <Content Include="Page_Master\Information_User.aspx" />
     <Content Include="Page_Master\Login.aspx" />
+    <Content Include="Page_Master\Manage_flotilla.aspx" />
     <Content Include="Page_Master\Manage_ship.aspx" />
     <Content Include="Page_Master\Manage_user.aspx" />
     <Content Include="Page_Master\Null.aspx" />
@@ -426,6 +427,13 @@
     </Compile>
     <Compile Include="Page_Master\Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Page_Master\Manage_flotilla.aspx.cs">
+      <DependentUpon>Manage_flotilla.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page_Master\Manage_flotilla.aspx.designer.cs">
+      <DependentUpon>Manage_flotilla.aspx</DependentUpon>
     </Compile>
     <Compile Include="Page_Master\Manage_ship.aspx.cs">
       <DependentUpon>Manage_ship.aspx</DependentUpon>
