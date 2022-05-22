@@ -78,6 +78,7 @@
                     <div class="modal-body">
 
                         <div class="row clearfix ">
+                              <input hidden id="id_editflotilla" value="">
                             <div style="width: 100%; float: left; padding: 10px">
                                 <div class="form-group">
                                     <label class="col-md-5 control-label"><strong>Tên hải đội   : </strong></label>
@@ -130,7 +131,7 @@
                 url: linkapi + "flotillas",
                 dataType: "json",
                 beforeSend: function () { // Before we send the request, remove the .hidden class from the spinner and default to inline-block.
-                    $('#loader').removeClass('hidden');
+                  
                 },
                 success: function (data) {
                     var tabletext = "<thead><tr><th>STT</th><th>Tên hải đội</th><th>Trưc thuộc</th><th>Tác vụ</th></tr></thead><tbody>";
@@ -153,7 +154,6 @@
                     console.log('errorGET');
                 },
                 complete: function () { // Set our complete callback, adding the .hidden class and hiding the spinner.
-                    $('#loader').addClass('hidden');
 
                 },
             });
@@ -331,7 +331,7 @@
                 if ($("#TT_HaiDoan_addflotilla").val() == 'null') {
                     var flotilla = {
                         Name: $("#TenHaiDoi_addflotilla").val(),
-                        Squadron: null,
+                        Squadron: 'null',
                         NavalRegion: {
                             ID: id_region
                         }
@@ -358,18 +358,18 @@
                     contentType: "application/json",
 
                     beforeSend: function () { // Before we send the request, remove the .hidden class from the spinner and default to inline-block.
-                        $('#loader').removeClass('hidden');
+                     
                     },
                     success: function (data) {
                         toastSuccess("Thành công", "Thêm hải đội mới thành công.");
+                        loadDataList_Flotilla();
                     }, error: function (ret) {
                         console.log(ret.responseJSON.Message);
                         toastError("Thất bại", ret.responseJSON.Message);
                     },
                     complete: function () { // Set our complete callback, adding the .hidden class and hiding the spinner.
-                        $('#loader').addClass('hidden');
                         $('#model-add-flotilla').modal("hide");
-                        loadTableFlotilla();
+                       
                     },
                 });
             }
@@ -377,6 +377,7 @@
 
         function editflotilla(id_flotilla, name_flotilla ,id_region, Squadron) {
             debugger
+            $("#id_editflotilla").val(id_flotilla);
             $("#TenHaiDoi_editflotilla").val(name_flotilla);
             if (Squadron == "null") {
                 list_Region(id_region, 'TT_Vung_editflotilla');
@@ -385,6 +386,81 @@
             else {
                 list_Region(id_region, 'TT_Vung_editflotilla');
                 list_Squadron(Squadron.Id, id_region, 'TT_HaiDoan_editflotilla');
+            }
+        }
+
+        function Edit_Flotilla() {
+            if ($("#TenHaiDoi_editflotilla").val() == "") {
+                $("#Error_editFlotillar").text("Chưa nhập tên hải đội!");
+                $("#Error_editlotillar").removeAttr('hidden');
+            }
+            else {
+                debugger
+                var id_region = $("#TT_Vung_editflotilla").val();
+                if ($("#TT_HaiDoan_editflotilla").val() == 'null') {
+                    var flotilla = {
+                        Id: $("#id_editflotilla").val(),
+                        Name: $("#TenHaiDoi_editflotilla").val(),
+                        Squadron: 'null',
+                        NavalRegion: {
+                            ID: id_region
+                        }
+                    };
+                }
+                else {
+                    var id_squadron = $("#TT_HaiDoan_editflotilla").val();
+                    var flotilla = {
+                        Id: $("#id_editflotilla").val(),
+                        Name: $("#TenHaiDoi_editflotilla").val(),
+                        Squadron: {
+                            ID: id_squadron
+                        },
+                        NavalRegion: {
+                            ID: id_region
+                        }
+                    };
+                }
+                console.log(flotilla);
+                $.ajax({
+                    type: "PUT",
+                    url: linkapi + "flotilla_update?id=" + $("#id_editflotilla").val(),
+                    dataType: "json",
+                    data: JSON.stringify(flotilla),
+                    contentType: "application/json",
+
+                    beforeSend: function () { // Before we send the request, remove the .hidden class from the spinner and default to inline-block.
+
+                    },
+                    success: function (data) {
+                        toastSuccess("Thành công", "Sửa hải đội mới thành công.");
+                        loadDataList_Flotilla();
+                    }, error: function (ret) {
+                        console.log(ret.responseJSON.Message);
+                        toastError("Thất bại", ret.responseJSON.Message);
+                    },
+                    complete: function () { // Set our complete callback, adding the .hidden class and hiding the spinner.
+                        $('#model-edit-flotilla').modal("hide");
+
+                    },
+                });
+            }
+        }
+        function delete_flotilla(flotilla_id) {
+            debugger;
+            let text = "Bạn có chắc muốn xóa hải đội này?";
+            if (confirm(text) == true) {
+                $.ajax({
+                    url: linkapi + "flotilla_delete?id=" + flotilla_id,
+                    type: "DELETE",
+
+                }).done(function (res) {
+                    loadDataList_Flotilla();
+                    toastSuccess("Thành công", "Xóa hải đội thành công!");
+                }).fail(function (res) {
+                    toastError("Lỗi", "Xóa hải đội không thành công!");
+                })
+            } else {
+
             }
         }
     </script>
