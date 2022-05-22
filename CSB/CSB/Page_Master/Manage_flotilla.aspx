@@ -138,10 +138,10 @@
                     $.each(data, function (key, item) {
 
                         if (item.Squadron == null) {
-                            tabletext += "<tr><td>" + i + "</td><td>" + item.Name + "</td><td>" + item.NavalRegion.Name + '</td><td><div style="width: max-content;"><a href="#" class="edit" title="Sửa" data-toggle="modal" data-target="#model-edit-flotilla"  onclick="editflotilla(`' + item.Id + '`,`' + item.NavalRegion.ID + '`,`' + item.Squadron+ '`)"><i class="material-icons">&#xE254;</i></a><a href="#" class="delete" title="Xóa" onclick="delete_flotilla(`' + item.Id + '`)"><i class="material-icons">&#xE872;</i></a></div></td></tr>';
+                            tabletext += "<tr><td>" + i + "</td><td>" + item.Name + "</td><td>" + item.NavalRegion.Name + '</td><td><div style="width: max-content;"><a href="#" class="edit" title="Sửa" data-toggle="modal" data-target="#model-edit-flotilla"  onclick="editflotilla(`' + item.Id + '`,`' + item.Name + '`,`' + item.NavalRegion.ID + '`,`' + item.Squadron + '`)"><i class="material-icons">&#xE254;</i></a><a href="#" class="delete" title="Xóa" onclick="delete_flotilla(`' + item.Id + '`)"><i class="material-icons">&#xE872;</i></a></div></td></tr>';
                         }
                         else {
-                            tabletext += "<tr><td>" + i + "</td><td>" + item.Name + "</td><td>" + item.Squadron.Name + '</td><td><div style="width: max-content;"><a href="#" class="edit" title="Sửa" data-toggle="modal" data-target="#model-edit-flotilla"  onclick="editflotilla(`' + item.Id + '`,`' + item.NavalRegion.ID + '`,`' + item.Squadron + '`)"><i class="material-icons">&#xE254;</i></a><a href="#" class="delete" title="Xóa" onclick="delete_flotilla(`' + item.Id + '`)"><i class="material-icons">&#xE872;</i></a></div></td></tr>';
+                            tabletext += "<tr><td>" + i + "</td><td>" + item.Name + "</td><td>" + item.Squadron.Name + '</td><td><div style="width: max-content;"><a href="#" class="edit" title="Sửa" data-toggle="modal" data-target="#model-edit-flotilla"  onclick="editflotilla(`' + item.Id + '`,`' + item.Name + '`,`' +item.NavalRegion.ID + '`,`' + item.Squadron + '`)"><i class="material-icons">&#xE254;</i></a><a href="#" class="delete" title="Xóa" onclick="delete_flotilla(`' + item.Id + '`)"><i class="material-icons">&#xE872;</i></a></div></td></tr>';
                         }
                         i = i + 1;
                     });
@@ -250,6 +250,9 @@
         }
         $("#TT_Vung_addflotilla").change(function () {
             list_Squadron('', $("#TT_Vung_addflotilla").val(), 'TT_HaiDoan_addflotilla');
+        });
+        $("#TT_Vung_editflotilla").change(function () {
+            list_Squadron('', $("#TT_Vung_editflotilla").val(), 'TT_HaiDoan_editflotilla');
         });
         //$("#TT_HaiDoan_addflotilla").change(function () {
         //    alert($("#TT_HaiDoan_addflotilla").val());
@@ -372,8 +375,9 @@
             }
         }
 
-        function editflotilla(id_flotilla, id_region, Squadron) {
+        function editflotilla(id_flotilla, name_flotilla ,id_region, Squadron) {
             debugger
+            $("#TenHaiDoi_editflotilla").val(name_flotilla);
             if (Squadron == "null") {
                 list_Region(id_region, 'TT_Vung_editflotilla');
                 list_Squadron(Squadron, id_region, 'TT_HaiDoan_editflotilla');
