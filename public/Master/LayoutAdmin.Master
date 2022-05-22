@@ -6094,6 +6094,8 @@
                         <li><a class="nav-link" href="../Page_Master/Null.aspx">Quản lý tai nạn hư hỏng</a></li>
                         <li><a class="nav-link" href="../Page_Master/Null.aspx">Quản lý tình trạng kỹ thuật - khả năng hoạt động</a></li>
                         <li><a class="nav-link" href="../Page_Master/Null.aspx">Hồ sơ xuất xưởng sau đóng mới, cải hoán</a></li>
+                        <li><a class="nav-link" href="../Page_Master/Manage_flotilla.aspx">Quản lí hải đội</a></li>
+                         <li><a class="nav-link" href="../Page_Master/Manage_squadron.aspx">Quản lí hải đoàn</a></li>
                     </ul>
                 </li>
                 <li class="nav-item dropdown">

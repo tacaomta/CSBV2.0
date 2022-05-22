@@ -307,8 +307,6 @@
                     alert("Nhập số thuyền viên > 0");
                     $("#add_SoThuyenVien").val("");
                 }
-
-
             })
             $("#add_NhienLieuToiDa").change(function () {
                 debugger
