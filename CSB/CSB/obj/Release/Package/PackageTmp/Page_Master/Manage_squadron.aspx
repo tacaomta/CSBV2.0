@@ -20,7 +20,7 @@
         </div>
     </div>
 
-        <div class="modal fade" id="model-add-squadron" tabindex="-1" role="dialog">
+        <div class="modal fade" id="model-add-squadron" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="card auth_form" style="margin-bottom: 0px">
@@ -58,7 +58,7 @@
             </div>
         </div>
     </div>
-            <div class="modal fade" id="model-edit-squadron" tabindex="-1" role="dialog">
+            <div class="modal fade" id="model-edit-squadron" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="card auth_form" style="margin-bottom: 0px">

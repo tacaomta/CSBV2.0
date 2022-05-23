@@ -23,7 +23,7 @@
         <%--Xóa--%>
         <%--<div id="loader" class="lds-dual-ring overlay"></div>--%>
     </div>
-    <div class="modal fade" id="model-add-user" tabindex="-1" role="dialog">
+    <div class="modal fade" id="model-add-user" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="card auth_form">
@@ -89,7 +89,7 @@
         </div>
     </div>
 
-    <div class="modal fade" id="model-edit-user" tabindex="-1" role="dialog">
+    <div class="modal fade" id="model-edit-user" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="card auth_form">
