@@ -956,7 +956,7 @@ table tr:hover .table-links {
 <%--    <script src="../Scripts/js/Manage_ship.js"></script>--%>
     <script>
         $(document).ready(function () {
-            window.location = "http://localhost:8080/Page_Master/Login";
+            window.location = "http://localhost:44347/Page_Master/Login";
             
         });
 
