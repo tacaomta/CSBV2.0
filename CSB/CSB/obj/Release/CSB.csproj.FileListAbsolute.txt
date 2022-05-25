@@ -604,3 +604,4 @@ D:\Code Visual 2019\CanhSatBien\CSB\CSB\CSB\bin\CrystalDecisions.ReportAppServer
 D:\Code Visual 2019\CanhSatBien\CSB\CSB\CSB\bin\CrystalDecisions.ReportAppServer.CommonControls.dll
 D:\Code Visual 2019\CanhSatBien\CSB\CSB\CSB\bin\stdole.dll
 D:\Code Visual 2019\CanhSatBien\CSB\CSB\CSB\bin\RestSharp.xml
+C:\Users\Linh\Documents\GitHub\CSBV2.0\CSB\CSB\obj\Release\CSB.csproj.CopyComplete

@@ -1,15 +1,18 @@
 ﻿
 body {
     background: #0DB8DE;
-    background-image: url('../Image/bg-bien.jpg');
+    background-image: url(../Image/bg-bien.jpg);
     background-size: cover;
+    background-repeat: no-repeat;
     font-family: 'Roboto', sans-serif;
+    height: 100vh;
 }
 
 .login-box {
+    border-radius: 5px;
     margin-top: 75px;
     height: auto;
-    background: #ECF0F5;
+    background: #FFF;
     text-align: center;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
@@ -27,11 +30,11 @@ body {
 .login-title {
     margin-top: 15px;
     text-align: center;
-    font-size: 26px;
+    font-size: 22px;
     letter-spacing: 2px;
-    margin-top: 15px;
     font-weight: bold;
     color: #333;
+    padding-bottom: 5px;
 }
 
 .login-form {
@@ -40,7 +43,7 @@ body {
 }
 
 input[type=text] {
-    background-color: #ECF0F5;
+    background-color: #FFF;
     border-left: none;
     border-right: none;
     box-shadow: none;
@@ -54,7 +57,7 @@ input[type=text] {
 }
 
 input[type=password] {
-    background-color: #ECF0F5;
+    background-color: #FFF;
     box-shadow: none;
     border-left: none;
     border-right: none;
@@ -110,7 +113,7 @@ label {
 .icon-name {
     position: absolute;
     display: inline-block;
-    top: 22px;
+    top: 24px;
     left: 6px;
     font-size: 19px;
 }

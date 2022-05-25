@@ -9,7 +9,7 @@
 
     <%--<link href="../css/bootstrap.min.css" rel="stylesheet" />--%>
     <link href="../Content/MaterialIcons.css" rel="stylesheet" />
-    <link href="../css/login.css" rel="stylesheet" />
+    <link href="../css/login1.css" rel="stylesheet" />
     <link href="../Content/bootstrap.min.css" rel="stylesheet" />
     <link href="../Content/bootstrap-theme.min.css" rel="stylesheet" />
 
@@ -29,7 +29,7 @@
             left: 0;
             width: 100%;
             height: 100vh;
-            background: rgba(0,0,0,.8);
+            background: rgba(255,255,255,.01);
             z-index: 999;
             opacity: 1;
             transition: all 0.5s;
@@ -49,8 +49,8 @@
                 height: 64px;
                 margin: 5% auto;
                 border-radius: 50%;
-                border: 6px solid #fff;
-                border-color: #fff transparent #fff transparent;
+                border: 6px solid #000;
+                border-color: #000 transparent #000 transparent;
                 animation: lds-dual-ring 1.2s linear infinite;
             }
 
@@ -73,7 +73,8 @@
                             <img class="ship-key" src="../Image/ic-login.png" />
                         </div>
                         <div class="col-lg-12 login-title">
-                            ĐĂNG NHẬP
+                            <%--ĐĂNG NHẬP--%>
+                            PHẦN MỀM QUẢN LÝ TÀU
                         </div>
 
                         <div class="col-lg-12 login-form">
