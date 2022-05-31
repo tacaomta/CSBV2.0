@@ -666,6 +666,191 @@
             <param name="id">id của xích neo</param>
             <returns></returns>
         </member>
+        <member name="M:DHSLAPI.Controllers.DegreeController.GetAll">
+            <summary>
+            Lấy toàn bộ danh mục bằng cấp
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.DegreeController.GetDegreeById(System.String)">
+            <summary>
+            Lấy thông tin chi tiết của bằng cấp
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.DegreeController.InsertNewDegree(DHSLAPI.Models.Degree)">
+            <summary>
+            Thêm mới bằng cấp
+            </summary>
+            <param name="d">Thông tin bằng cấp</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.DegreeController.UpdateDegree(System.String,DHSLAPI.Models.Degree)">
+            <summary>
+            Cập nhật thông tin bằng cấp
+            </summary>
+            <param name="id"></param>
+            <param name="r"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.DegreeController.DeleteDegree(System.String)">
+            <summary>
+            Xoá thông tin bằng cấp
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.InstitutionController.GetAll">
+            <summary>
+            Lấy toàn bộ danh mục trường đào tạo
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.InstitutionController.GetInstitutionById(System.String)">
+            <summary>
+            Lấy thông tin chi tiết của trường đào tạo
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.InstitutionController.InsertNewInstitution(DHSLAPI.Models.Institution)">
+            <summary>
+            Thêm mới trường đào tạo
+            </summary>
+            <param name="r">Thông tin trường đào tạo</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.InstitutionController.UpdateInstitution(System.String,DHSLAPI.Models.Institution)">
+            <summary>
+            Cập nhật thông tin trường đào tạo
+            </summary>
+            <param name="id"></param>
+            <param name="i"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.InstitutionController.DeleteInstitution(System.String)">
+            <summary>
+            Xoá thông tin trường đào tạo
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="T:DHSLAPI.Controllers.MajoringController">
+            <summary>
+            API Chuyên ngành
+            </summary>
+        </member>
+        <member name="M:DHSLAPI.Controllers.MajoringController.GetAll">
+            <summary>
+            Lấy toàn bộ danh mục chuyên ngành
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.MajoringController.GetMajorById(System.String)">
+            <summary>
+            Lấy thông tin chi tiết của chuyên ngành
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.MajoringController.InsertNewMajor(DHSLAPI.Models.Majoring)">
+            <summary>
+            Thêm mới chuyên ngành
+            </summary>
+            <param name="r">Thông tin chuyên ngành</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.MajoringController.UpdateMajor(System.String,DHSLAPI.Models.Majoring)">
+            <summary>
+            Cập nhật thông tin chuyên ngành
+            </summary>
+            <param name="id"></param>
+            <param name="i"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.MajoringController.DeleteMajor(System.String)">
+            <summary>
+            Xoá thông tin chuyên ngành
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.PositionController.GetAll">
+            <summary>
+            Lấy toàn bộ danh mục chức vụ
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.PositionController.GetPositionById(System.String)">
+            <summary>
+            Lấy thông tin chi tiết chức vụ
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.PositionController.InsertNewPosition(DHSLAPI.Models.Position)">
+            <summary>
+            Thêm mới chức vụ
+            </summary>
+            <param name="p">Thông tin chức vụ</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.PositionController.UpdatePosition(System.String,DHSLAPI.Models.Position)">
+            <summary>
+            Cập nhật thông tin chức vụ
+            </summary>
+            <param name="id"></param>
+            <param name="p"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.PositionController.DeletePosition(System.String)">
+            <summary>
+            Xoá thông tin chức vụ
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="T:DHSLAPI.Controllers.RankingController">
+            <summary>
+            Cấp bậc API
+            </summary>
+        </member>
+        <member name="M:DHSLAPI.Controllers.RankingController.GetAll">
+            <summary>
+            Lấy toàn bộ danh mục cấp bậc
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.RankingController.GetRankById(System.String)">
+            <summary>
+            Lấy thông tin chi tiết của cấp bậc
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.RankingController.InsertNewRank(DHSLAPI.Models.Ranking)">
+            <summary>
+            Thêm mới cấp bậc
+            </summary>
+            <param name="r">Thông tin cấp bậc</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.RankingController.UpdateRank(System.String,DHSLAPI.Models.Ranking)">
+            <summary>
+            Cập nhật thông tin cấp bậc
+            </summary>
+            <param name="id"></param>
+            <param name="r"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.RankingController.DeleteRank(System.String)">
+            <summary>
+            Xoá thông tin cấp bậc
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
         <member name="T:DHSLAPI.Controllers.FlotillaController">
             <summary>
             Hải đội API
@@ -1280,6 +1465,191 @@
             </summary>
             <param name="id">Id của tời neo</param>
             <returns></returns>
+        </member>
+        <member name="T:DHSLAPI.Models.Degree">
+            <summary>
+            Trình độ
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.Degree.ID">
+            <summary>
+            ID
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.Degree.Name">
+            <summary>
+            Tên trình độ
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.Degree.Note">
+            <summary>
+            Ghi chú
+            </summary>
+        </member>
+        <member name="T:DHSLAPI.Models.Institution">
+            <summary>
+            Trường đào tạo
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.Institution.ID">
+            <summary>
+            ID
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.Institution.Name">
+            <summary>
+            Tên trường đào tạo
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.Institution.Note">
+            <summary>
+            Ghi chú
+            </summary>
+        </member>
+        <member name="T:DHSLAPI.Models.Majoring">
+            <summary>
+            Chuyên ngành của cán bộ, nhân viên kĩ thuật
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.Majoring.ID">
+            <summary>
+            ID
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.Majoring.Name">
+            <summary>
+            Tên chuyên ngành
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.Majoring.Note">
+            <summary>
+            Ghi chú
+            </summary>
+        </member>
+        <member name="T:DHSLAPI.Models.Position">
+            <summary>
+            Chức vụ của cán bộ, nhân viên kỹ thuật trên tàu
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.Position.ID">
+            <summary>
+            ID
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.Position.Name">
+            <summary>
+            Tên chức vụ
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.Position.Note">
+            <summary>
+            Ghi chú
+            </summary>
+        </member>
+        <member name="T:DHSLAPI.Models.Ranking">
+            <summary>
+            Cấp bậc của cán bộ, nhân viên kỹ thuật trên tàu
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.Ranking.ID">
+            <summary>
+            ID
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.Ranking.Name">
+            <summary>
+            Tên cấp bậc
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.Ranking.Note">
+            <summary>
+            Ghi chú
+            </summary>
+        </member>
+        <member name="T:DHSLAPI.Models.Personnel">
+            <summary>
+            Thông tin cán bộ, nhân viên kỹ thuật
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.Personnel.ID">
+            <summary>
+            ID
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.Personnel.FullName">
+            <summary>
+            Họ và tên
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.Personnel.BirthYear">
+            <summary>
+            Năm sinh
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.Personnel.Residence">
+            <summary>
+            Quê quán
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.Personnel.Enlist">
+            <summary>
+            Nhập ngũ
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.Personnel.Majoring">
+            <summary>
+            Chuyên ngành
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.Personnel.Ranking">
+            <summary>
+            Cấp bậc
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.Personnel.Position">
+            <summary>
+            Chức vụ
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.Personnel.Institution">
+            <summary>
+            Trường đào tạo
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.Personnel.Graduation">
+            <summary>
+            Tháng, năm tốt nghiệp
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.Personnel.Degree">
+            <summary>
+            Trình độ
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.Personnel.From">
+            <summary>
+            Từ đâu đến
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.Personnel.FromDate">
+            <summary>
+            Ngày tháng đến
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.Personnel.Leave">
+            <summary>
+            Chuyển đi đâu
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.Personnel.LeaveDate">
+            <summary>
+            Ngày tháng đi
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.Personnel.Note">
+            <summary>
+            Ghi chú
+            </summary>
         </member>
         <member name="P:ShipyardInfo.classes.Anchor.Ship">
             <summary>
