@@ -701,6 +701,41 @@
             <param name="id"></param>
             <returns></returns>
         </member>
+        <member name="T:DHSLAPI.Controllers.HANGHAIController">
+            <summary>
+            Hàng hải
+            </summary>
+        </member>
+        <member name="M:DHSLAPI.Controllers.HANGHAIController.LAYTHONGTINHANGHAI(System.String)">
+            <summary>
+            Lấy thông tin hàng hải của tàu
+            </summary>
+            <param name="id">id tàu</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.HANGHAIController.InsertMC(System.String,DHSLAPI.Models.HANGHAI)">
+            <summary>
+            Thêm thông tin hàng hải cho tàu
+            </summary>
+            <param name="id">id tàu</param>
+            <param name="hh">Thông tin hàng hải</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.HANGHAIController.UpdateHH(System.String,DHSLAPI.Models.HANGHAI)">
+            <summary>
+            Sửa thông tin hàng hải
+            </summary>
+            <param name="id">id thông tin hàng hải</param>
+            <param name="hh">thông tin hàng hải mới</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.HANGHAIController.DeleteHH(System.String)">
+            <summary>
+            Xoá thông tin hàng hải của tàu
+            </summary>
+            <param name="id">id của tàu</param>
+            <returns></returns>
+        </member>
         <member name="M:DHSLAPI.Controllers.InstitutionController.GetAll">
             <summary>
             Lấy toàn bộ danh mục trường đào tạo
@@ -776,6 +811,185 @@
             <param name="id"></param>
             <returns></returns>
         </member>
+        <member name="T:DHSLAPI.Controllers.MAYCHINHController">
+            <summary>
+            Máy chính trên tàu
+            </summary>
+        </member>
+        <member name="M:DHSLAPI.Controllers.MAYCHINHController.LAYTHONGTINMAYCHINH(System.String)">
+            <summary>
+            Lấy thông tin máy chính của tàu
+            </summary>
+            <param name="id">id tàu</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.MAYCHINHController.InsertMC(System.String,DHSLAPI.Models.MAYCHINH)">
+            <summary>
+            Thêm thông tin máy chính cho tàu
+            </summary>
+            <param name="id">id tàu</param>
+            <param name="mc">Thông tin máy chính</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.MAYCHINHController.UpdateMC(System.String,DHSLAPI.Models.MAYCHINH)">
+            <summary>
+            Sửa thông tin máy chính
+            </summary>
+            <param name="id">id thông tin máy chính</param>
+            <param name="mc">thông tin máy chính mới</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.MAYCHINHController.DeleteMC(System.String)">
+            <summary>
+            Xoá thông tin máy chính của tàu
+            </summary>
+            <param name="id">id của tàu</param>
+            <returns></returns>
+        </member>
+        <member name="T:DHSLAPI.Controllers.MAYNENKHIController">
+            <summary>
+            Máy nén khí
+            </summary>
+        </member>
+        <member name="M:DHSLAPI.Controllers.MAYNENKHIController.LAYTHONGTINMAYNENKHI(System.String)">
+            <summary>
+            Lấy thông tin máy nén khí của tàu
+            </summary>
+            <param name="id">id tàu</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.MAYNENKHIController.InsertMN(System.String,DHSLAPI.Models.MAYNENKHI)">
+            <summary>
+            Thêm thông tin máy nén khí cho tàu
+            </summary>
+            <param name="id">id tàu</param>
+            <param name="mn">Thông tin máy nén khí</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.MAYNENKHIController.UpdateMN(System.String,DHSLAPI.Models.MAYNENKHI)">
+            <summary>
+            Sửa thông tin máy nén khí
+            </summary>
+            <param name="id">id thông tin máy nén khí</param>
+            <param name="mn">thông tin máy nén khí mới</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.MAYNENKHIController.DeleteMN(System.String)">
+            <summary>
+            Xoá thông tin máy nén khí của tàu
+            </summary>
+            <param name="id">id của tàu</param>
+            <returns></returns>
+        </member>
+        <member name="T:DHSLAPI.Controllers.MAYPHUPHATDIENController">
+            <summary>
+            Máy phụ phát điện
+            </summary>
+        </member>
+        <member name="M:DHSLAPI.Controllers.MAYPHUPHATDIENController.LAYTHONGTINMAYPHUPHATDIEN(System.String)">
+            <summary>
+            Lấy thông tin máy phụ phát điện của tàu
+            </summary>
+            <param name="id">id tàu</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.MAYPHUPHATDIENController.InsertMP(System.String,DHSLAPI.Models.MAYPHUPHATDIEN)">
+            <summary>
+            Thêm thông tin máy phụ phát điện cho tàu
+            </summary>
+            <param name="id">id tàu</param>
+            <param name="mp">Thông tin máy phụ phát điện</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.MAYPHUPHATDIENController.UpdateMP(System.String,DHSLAPI.Models.MAYPHUPHATDIEN)">
+            <summary>
+            Sửa thông tin máy phụ phát điện
+            </summary>
+            <param name="id">id thông tin máy phụ phát điện</param>
+            <param name="mp">thông tin máy phụ phát điện mới</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.MAYPHUPHATDIENController.DeleteMP(System.String)">
+            <summary>
+            Xoá thông tin máy phụ phát điện của tàu
+            </summary>
+            <param name="id">id của tàu</param>
+            <returns></returns>
+        </member>
+        <member name="T:DHSLAPI.Controllers.P2Controller">
+            <summary>
+            Phần 2: ĐẶC ĐIỂM CHUNG CỦA TÀU
+            </summary>
+        </member>
+        <member name="M:DHSLAPI.Controllers.P2Controller.GetDACDIEMCHUNGTAU(System.String)">
+            <summary>
+            Phần 2: Lấy thông tin đặc điểm chung của tàu:
+            Bao gồm các thông tin chi tiết  + các lần thay đổi số hiệu
+            </summary>
+            <param name="id">id của tàu</param>
+            <returns></returns>
+        </member>
+        <member name="T:DHSLAPI.Controllers.P3Controller">
+            <summary>
+            Phần 3: TÍNH NĂNG CHỦ YẾU CỦA TÀU
+            </summary>
+        </member>
+        <member name="M:DHSLAPI.Controllers.P3Controller.GetTINHNANGCHUYEUCUATAU(System.String)">
+            <summary>
+            Phần 2: Lấy thông tin tính năng chủ yếu của tàu:
+            Bao gồm các danh mục:
+            1. Thân vỏ
+            2. Máy chính
+            3. Máy phụ phát điện
+            4. Máy nén khí
+            5. Hàng hải
+            6. Ra đa
+            7. Vũ khí
+            </summary>
+            <param name="id">id của tàu</param>
+            <returns></returns>
+        </member>
+        <member name="T:DHSLAPI.Controllers.PersonnelController">
+            <summary>
+            Cán bộ, nhân viên kỹ thuật biên chế trên tàu
+            </summary>
+        </member>
+        <member name="M:DHSLAPI.Controllers.PersonnelController.GetPersonnelByShip(System.String)">
+            <summary>
+            Lấy danh mục cán bộ, nhân viên kỹ thuật biên chế trên tàu
+            </summary>
+            <param name="id">id của tàu</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.PersonnelController.GetPersonnelDetail(System.String)">
+            <summary>
+            Lấy thông tin chi tiết của cán bộ, nhân viên kỹ thuật trên tàu
+            </summary>
+            <param name="id">id của cán bộ, nhân viên</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.PersonnelController.InsertNewPersonnel(DHSLAPI.Models.Personnel)">
+            <summary>
+            Biên chế thêm cán bộ, nhân viên kỹ thuật mới trên tàu
+            </summary>
+            <param name="p">thông tin cán bộ, nhân viên</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.PersonnelController.UpdatePersonnel(System.String,DHSLAPI.Models.Personnel)">
+            <summary>
+            Cập nhật thông tin của cán bộ, nhân viên kỹ thuật trên tàu
+            </summary>
+            <param name="id">ID cán bộ, nhân viên</param>
+            <param name="p"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.PersonnelController.DeletePersonnel(System.String)">
+            <summary>
+            Xoá thông tin cán bộ, nhân viên kỹ thuật trên tàu
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
         <member name="M:DHSLAPI.Controllers.PositionController.GetAll">
             <summary>
             Lấy toàn bộ danh mục chức vụ
@@ -809,6 +1023,41 @@
             Xoá thông tin chức vụ
             </summary>
             <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="T:DHSLAPI.Controllers.RADAController">
+            <summary>
+            Ra đa
+            </summary>
+        </member>
+        <member name="M:DHSLAPI.Controllers.RADAController.LAYTHONGTINRADA(System.String)">
+            <summary>
+            Lấy thông tin ra đa của tàu
+            </summary>
+            <param name="id">id tàu</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.RADAController.InsertRD(System.String,DHSLAPI.Models.RADA)">
+            <summary>
+            Thêm thông tin ra đa cho tàu
+            </summary>
+            <param name="id">id tàu</param>
+            <param name="rd">Thông tin ra đa</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.RADAController.UpdateRD(System.String,DHSLAPI.Models.RADA)">
+            <summary>
+            Sửa thông tin ra đa
+            </summary>
+            <param name="id">id thông tin ra đa</param>
+            <param name="rd">thông tin ra đa mới</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.RADAController.DeleteRD(System.String)">
+            <summary>
+            Xoá thông tin ra đa của tàu
+            </summary>
+            <param name="id">id của tàu</param>
             <returns></returns>
         </member>
         <member name="T:DHSLAPI.Controllers.RankingController">
@@ -849,6 +1098,131 @@
             Xoá thông tin cấp bậc
             </summary>
             <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="T:DHSLAPI.Controllers.TAUController">
+            <summary>
+            Các hàm dịch vụ API của TÀU v2.0
+            </summary>
+        </member>
+        <member name="M:DHSLAPI.Controllers.TAUController.GetShipDetailByShipId(System.String)">
+            <summary>
+            Lấy thông tin chi tiết của tàu
+            Chỉ có thông tin chi tiết,
+            không có thông tin các lần thay đổi số hiệu
+            </summary>
+            <param name="id">id tàu</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.TAUController.InsertShip(DHSLAPI.Models.THONGTINTAU)">
+            <summary>
+            Biên chế tàu mới cho Hải đội (thêm tàu mới)
+            </summary>
+            <param name="t"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.TAUController.UpdateShip(System.String,DHSLAPI.Models.THONGTINTAU)">
+            <summary>
+            Cập nhật thông tin cơ bản của tàu:
+            Trong thủ tục này Số hiệu không được cập nhật
+            Không thể thay đổi hải đội của tàu
+            </summary>
+            <param name="id">Id của tàu</param>
+            <param name="t">Thông tin cập nhật</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.TAUController.UpdateSerial(System.String,DHSLAPI.Models.THAYDOISOHIEU)">
+            <summary>
+            Thay đổi số hiệu của tàu theo cấp quy định
+            </summary>
+            <param name="id">Id của tàu</param>
+            <param name="t">Thông tin thay đổi</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.TAUController.ChangeShipPayroll(System.String,ShipyardInfo.classes.Flotilla)">
+            <summary>
+            Biên chế lại tàu cho đơn vị khác trong vùng 
+            </summary>
+            <param name="id">Id của tàu</param>
+            <param name="flot">Thông tin hải đội mới</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.TAUController.DeleteShip(System.String)">
+            <summary>
+            Xoá thông tin tàu
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="T:DHSLAPI.Controllers.THANVOController">
+            <summary>
+            Thân vỏ
+            </summary>
+        </member>
+        <member name="M:DHSLAPI.Controllers.THANVOController.LAYTHONGTINTHANVO(System.String)">
+            <summary>
+            Lấy thông tin thân vỏ của tàu
+            </summary>
+            <param name="id">id tàu</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.THANVOController.InsertTV(System.String,DHSLAPI.Models.THANVO)">
+            <summary>
+            Thêm thông tin thân vỏ cho tàu
+            </summary>
+            <param name="id">id tàu</param>
+            <param name="tv">Thông tin thân vỏ</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.THANVOController.UpdateTV(System.String,DHSLAPI.Models.THANVO)">
+            <summary>
+            Sửa thông tin thân vỏ,
+            
+            </summary>
+            <param name="id">id thông tin thân vỏ</param>
+            <param name="tv">thông tin thân vỏ mới</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.THANVOController.DeleteTV(System.String)">
+            <summary>
+            Xoá thông tin thân vỏ của tàu
+            </summary>
+            <param name="id">id của tàu</param>
+            <returns></returns>
+        </member>
+        <member name="T:DHSLAPI.Controllers.VUKHIController">
+            <summary>
+            Vũ khí
+            </summary>
+        </member>
+        <member name="M:DHSLAPI.Controllers.VUKHIController.LAYTHONGTINVUKHI(System.String)">
+            <summary>
+            Lấy thông tin Vũ khí của tàu
+            </summary>
+            <param name="id">id tàu</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.VUKHIController.InsertVK(System.String,DHSLAPI.Models.VUKHI)">
+            <summary>
+            Thêm thông tin vũ khí cho tàu
+            </summary>
+            <param name="id">id tàu</param>
+            <param name="vk">Thông tin vũ khí</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.VUKHIController.UpdateVK(System.String,DHSLAPI.Models.VUKHI)">
+            <summary>
+            Sửa thông tin vũ khí
+            </summary>
+            <param name="id">id thông tin vũ khí</param>
+            <param name="vk">thông tin vũ khí mới</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.VUKHIController.DeleteVK(System.String)">
+            <summary>
+            Xoá thông tin vũ khí của tàu
+            </summary>
+            <param name="id">id của vũ khí</param>
             <returns></returns>
         </member>
         <member name="T:DHSLAPI.Controllers.FlotillaController">
@@ -1036,11 +1410,18 @@
             </summary>
             <returns></returns>
         </member>
-        <member name="M:DHSLAPI.Controllers.NavalRegionController.GetShipsbyNavalRegionId(System.String)">
+        <member name="M:DHSLAPI.Controllers.NavalRegionController.GetNavalRegionId(System.String)">
             <summary>
             Lấy thông tin chi tiết của vùng theo id
             </summary>
             <param name="id">id của vùng</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.NavalRegionController.GetShipsbyNavalRegionId(System.String)">
+            <summary>
+            Lấy toàn bộ danh mục tàu với thông tin cơ bản của tàu trong vùng theo ID của vùng
+            </summary>
+            <param name="id">id vùng</param>
             <returns></returns>
         </member>
         <member name="T:DHSLAPI.Controllers.OtherEquipmentController">
@@ -1466,6 +1847,21 @@
             <param name="id">Id của tời neo</param>
             <returns></returns>
         </member>
+        <member name="T:DHSLAPI.Models.DACDIEMCHUNGTAU">
+            <summary>
+            Phần 2: Đặc điểm chung của tàu
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.DACDIEMCHUNGTAU.THONGTIN">
+            <summary>
+            Thông tin cơ bản của tàu
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.DACDIEMCHUNGTAU.TDSOHIEU">
+            <summary>
+            Các số lần thay đổi số hiệu
+            </summary>
+        </member>
         <member name="T:DHSLAPI.Models.Degree">
             <summary>
             Trình độ
@@ -1649,6 +2045,536 @@
         <member name="P:DHSLAPI.Models.Personnel.Note">
             <summary>
             Ghi chú
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.Personnel.ShipID">
+            <summary>
+            ID của tàu
+            </summary>
+        </member>
+        <member name="T:DHSLAPI.Models.THAYDOISOHIEU">
+            <summary>
+            Thay đổi số hiệu
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.THAYDOISOHIEU.ID">
+            <summary>
+            ID
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.THAYDOISOHIEU.THANGNAM">
+            <summary>
+            Tháng, năm
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.THAYDOISOHIEU.SOHIEU">
+            <summary>
+            Số hiệu
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.THAYDOISOHIEU.CAPQUYDINH">
+            <summary>
+            Cấp quy định
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.THAYDOISOHIEU.Created">
+            <summary>
+            Ngày thêm vào csdl
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.THAYDOISOHIEU.LastUpdated">
+            <summary>
+            Lần cập nhật cuối cùng
+            </summary>
+        </member>
+        <member name="T:DHSLAPI.Models.THONGTINTAU">
+            <summary>
+            Thông tin tàu
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.THONGTINTAU.ID">
+            <summary>
+            ID
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.THONGTINTAU.TTCOBAN">
+            <summary>
+            Thông tin cơ bản
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.THONGTINTAU.GIANNUOC">
+            <summary>
+            Lượng giãn nước (tấn)
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.THONGTINTAU.KT">
+            <summary>
+            Kích thước (m)
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.THONGTINTAU.MN">
+            <summary>
+            Mớn nước (m)
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.THONGTINTAU.VT">
+            <summary>
+            Vận tốc (HL/h)
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.THONGTINTAU.KNHD">
+            <summary>
+            Khả năng hoạt động trên biển
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.THONGTINTAU.LDT">
+            <summary>
+            Lượng dự trữ
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.THONGTINTAU.BC">
+            <summary>
+            Biên chế
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.THONGTINTAU.Meta">
+            <summary>
+            Thông tin về dữ liệu
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.THONGTINTAU.FlotId">
+            <summary>
+            Id của Hải đội
+            </summary>
+        </member>
+        <member name="T:DHSLAPI.Models.TTCOBAN">
+            <summary>
+            Thông tin cơ bản của tàu
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.TTCOBAN.SOHIEU">
+            <summary>
+            Số hiệu tàu
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.TTCOBAN.KYHIEU">
+            <summary>
+            Ký hiệu tàu
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.TTCOBAN.NOISANXUAT">
+            <summary>
+            Nơi sản xuất
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.TTCOBAN.NAMHATHUY">
+            <summary>
+            Năm hạ thuỷ
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.TTCOBAN.NAMTIEPNHAN">
+            <summary>
+            Năm tiếp nhận
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.TTCOBAN.CHUCNANG">
+            <summary>
+            Chức năng và nhiệm vụ
+            </summary>
+        </member>
+        <member name="T:DHSLAPI.Models.LUONGGIANNUOC">
+            <summary>
+            Lượng giãn nước (tấn)
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.LUONGGIANNUOC.Dmax">
+            <summary>
+            Dmax
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.LUONGGIANNUOC.Dmin">
+            <summary>
+            Dmin
+            </summary>
+        </member>
+        <member name="T:DHSLAPI.Models.KICHTHUOC">
+            <summary>
+            Kích thước (m)
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.KICHTHUOC.Lmax">
+            <summary>
+            Dài nhất (Lmax)
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.KICHTHUOC.Ltk">
+            <summary>
+            Dài thiết kế (Ltk)
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.KICHTHUOC.Bmax">
+            <summary>
+            Rộng nhất (Bmax)
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.KICHTHUOC.Htb">
+            <summary>
+            Cao mạn (Htb)
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.KICHTHUOC.Hmax">
+            <summary>
+            Chiều cao nhất của tàu
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.KICHTHUOC.Dmax">
+            <summary>
+            Chiều sâu nhất của tàu
+            </summary>
+        </member>
+        <member name="T:DHSLAPI.Models.MONNUOC">
+            <summary>
+            Mớn nước (m)
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.MONNUOC.Tm">
+            <summary>
+            Mũi tàu (Tm)
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.MONNUOC.Ttb">
+            <summary>
+            Giữa tàu (Ttb)
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.MONNUOC.Td">
+            <summary>
+            Đuôi tàu (Td)
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.MONNUOC.Tmax">
+            <summary>
+            Lớn nhất (Tmax)
+            </summary>
+        </member>
+        <member name="T:DHSLAPI.Models.VANTOC">
+            <summary>
+            Vận tốc (HL/h)
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.VANTOC.Vmax">
+            <summary>
+            Lớn nhất (Vmax)
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.VANTOC.Vkt">
+            <summary>
+            Kinh tế (Vkt)
+            </summary>
+        </member>
+        <member name="T:DHSLAPI.Models.KHANANGHOATDONG">
+            <summary>
+            Khả năng hoạt động trên biển
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.KHANANGHOATDONG.H1">
+            <summary>
+            Bán kính hoạt động (H1)
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.KHANANGHOATDONG.Tm">
+            <summary>
+            Thời gian hoạt động tối đa (ngày đêm)
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.KHANANGHOATDONG.Wmax">
+            <summary>
+            Cấp chịu đựng sóng gió (max)
+            </summary>
+        </member>
+        <member name="T:DHSLAPI.Models.LUONGDUTRU">
+            <summary>
+            Lượng dữ trữ
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.LUONGDUTRU.DCKH">
+            <summary>
+            Dầu cháy: Ký hiệu
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.LUONGDUTRU.DCSL">
+            <summary>
+            Dầu cháy: Số lượng (tấn)
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.LUONGDUTRU.DNKH">
+            <summary>
+            Dầu nhờn: Ký hiệu
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.LUONGDUTRU.DNSL">
+            <summary>
+            Dầu nhờn: Số lượng (tấn)
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.LUONGDUTRU.MN">
+            <summary>
+            Nước ngọt: Ký hiệu
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.LUONGDUTRU.MNSL">
+            <summary>
+            Nước ngọt: Số lượng (tấn)
+            </summary>
+        </member>
+        <member name="T:DHSLAPI.Models.BIENCHE">
+            <summary>
+            Biên chế
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.BIENCHE.QS">
+            <summary>
+            Tổng quân số
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.BIENCHE.SQ">
+            <summary>
+            Sĩ quan
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.BIENCHE.VCQP">
+            <summary>
+            Viên chức quốc phòng
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.BIENCHE.QNCN">
+            <summary>
+            Quân nhân chuyên nghiệp
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.BIENCHE.HSQCS">
+            <summary>
+            Hạ sĩ quan, chiến sĩ
+            </summary>
+        </member>
+        <member name="T:DHSLAPI.Models.Meta">
+            <summary>
+            Thông tin về dữ liệu
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.Meta.Created">
+            <summary>
+            Thời gian thêm dữ liệu
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.Meta.LastUpdated">
+            <summary>
+            Lần cuối cùng cập nhật dữ liệu
+            </summary>
+        </member>
+        <member name="T:DHSLAPI.Models.TINHNANGCHUYEUCUATAU">
+            <summary>
+            Phần 3: Tính năng chủ yếu của tàu
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.TINHNANGCHUYEUCUATAU.THANVO">
+            <summary>
+            Thân vỏ
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.TINHNANGCHUYEUCUATAU.MAYCHINH">
+            <summary>
+            Máy chính
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.TINHNANGCHUYEUCUATAU.MAYPHUPHATDIEN">
+            <summary>
+            Máy phụ phát điện
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.TINHNANGCHUYEUCUATAU.MAYNENKHI">
+            <summary>
+            Máy nén khí
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.TINHNANGCHUYEUCUATAU.HANGHAI">
+            <summary>
+            Hàng hải
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.TINHNANGCHUYEUCUATAU.RADA">
+            <summary>
+            Ra đa
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.TINHNANGCHUYEUCUATAU.VUKHI">
+            <summary>
+            Vũ khí
+            </summary>
+        </member>
+        <member name="T:DHSLAPI.Models.THANVO">
+            <summary>
+            Thân vỏ
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.THANVO.ID">
+            <summary>
+            Id thân vỏ
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.THANVO.KYHIEUVATLIEU">
+            <summary>
+            Ký hiệu vật liệu
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.THANVO.SOKHOANGKINNUOC">
+            <summary>
+            Số khoang kín nước
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.THANVO.SOSUONTAU">
+            <summary>
+            Số sườn tàu
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.THANVO.SOKETDAUCHAY">
+            <summary>
+            Số két dầu cháy
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.THANVO.SOKETDAUNHON">
+            <summary>
+            Số két dầu nhờn
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.THANVO.SOKETNUOC">
+            <summary>
+            Số két nước
+            </summary>
+        </member>
+        <member name="T:DHSLAPI.Models.MAYCHINH">
+            <summary>
+            Máy chính v2.0
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.MAYCHINH.ID">
+            <summary>
+            ID máy chính
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.MAYCHINH.VITRIDAT">
+            <summary>
+            Vị trí đặt
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.MAYCHINH.KYHIEU">
+            <summary>
+            Ký hiệu
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.MAYCHINH.CONGSUAT">
+            <summary>
+            Công suất (CV)
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.MAYCHINH.VONGQUAY">
+            <summary>
+            Vòng quay (vòng/phút)
+            </summary>
+        </member>
+        <member name="T:DHSLAPI.Models.MAYPHUPHATDIEN">
+            <summary>
+            Máy phụ phát điện
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.MAYPHUPHATDIEN.ID">
+            <summary>
+            Id máy phụ phát điện
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.MAYPHUPHATDIEN.VITRIDAT">
+            <summary>
+            Vị trí đặt
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.MAYPHUPHATDIEN.KYHIEU">
+            <summary>
+            Ký hiệu
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.MAYPHUPHATDIEN.CONGSUAT">
+            <summary>
+            Công suất (CV/Kw)
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.MAYPHUPHATDIEN.VONGQUAY">
+            <summary>
+            Vòng quay (vòng/phút)
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.MAYPHUPHATDIEN.LOAIDIENAP">
+            <summary>
+            Loại điện áp (V)
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.MAYPHUPHATDIEN.TANSO">
+            <summary>
+            Tần số (Hz)
+            </summary>
+        </member>
+        <member name="T:DHSLAPI.Models.MAYNENKHI">
+            <summary>
+            Máy nén khí
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.MAYNENKHI.ID">
+            <summary>
+            Id của máy nén khí
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.MAYNENKHI.KYHIEU">
+            <summary>
+            Ký hiệu
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.MAYNENKHI.SOLUONG">
+            <summary>
+            Số lượng
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.MAYNENKHI.APSUAT">
+            <summary>
+            Áp suất (Kg/cm3)
+            </summary>
+        </member>
+        <member name="T:DHSLAPI.Models.HANGHAI">
+            <summary>
+            Hàng hải
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.HANGHAI.ID">
+            <summary>
+            ID
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.HANGHAI.KYHIEU">
+            <summary>
+            Ký hiệu
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.HANGHAI.SOLUONG">
+            <summary>
+            số lượng
+            </summary>
+        </member>
+        <member name="T:DHSLAPI.Models.RADA">
+            <summary>
+            Ra đa
+            </summary>
+        </member>
+        <member name="T:DHSLAPI.Models.VUKHI">
+            <summary>
+            Vũ khí
             </summary>
         </member>
         <member name="P:ShipyardInfo.classes.Anchor.Ship">
@@ -1947,6 +2873,13 @@
             </summary>
             <returns></returns>
         </member>
+        <member name="M:ShipyardInfo.classes.Connection.GetShipOverviewInfoInNavalRegion(System.String)">
+            <summary>
+            Thông tin cơ bản của các tàu trong vùng
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
         <member name="M:ShipyardInfo.classes.Connection.GetListSquadron">
             <summary>
             Lấy danh mục tất cả Hải đoàn
@@ -2011,6 +2944,70 @@
             Lấy nhật ký hoạt động tàu theo Hải đội
             </summary>
             <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ShipyardInfo.classes.Connection.ChangeShipPayroll(System.String,ShipyardInfo.classes.Flotilla)">
+            <summary>
+            Thay đổi hải đội của tàu
+            </summary>
+            <param name="id"></param>
+            <param name="t"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ShipyardInfo.classes.Connection.SUATHONGTINTHANVOTAU(System.String,DHSLAPI.Models.THANVO)">
+            <summary>
+            Sửa thông tin thân vỏ
+            </summary>
+            <param name="id">id thông tin thân vỏ</param>
+            <param name="tv">thông tin thân vỏ mới</param>
+            <returns></returns>
+        </member>
+        <member name="M:ShipyardInfo.classes.Connection.SUATHONGTINMAYCHINHTAU(System.String,DHSLAPI.Models.MAYCHINH)">
+            <summary>
+            Sửa thông tin máy chính
+            </summary>
+            <param name="id">id thông tin máy chính</param>
+            <param name="tv">thông tin máy chính mới</param>
+            <returns></returns>
+        </member>
+        <member name="M:ShipyardInfo.classes.Connection.SUATHONGTINMAYPHUTAU(System.String,DHSLAPI.Models.MAYPHUPHATDIEN)">
+            <summary>
+            Sửa thông tin máy phụ phát điện
+            </summary>
+            <param name="id">id thông tin máy phụ phát điện</param>
+            <param name="mp">thông tin máy phụ phát điện mới</param>
+            <returns></returns>
+        </member>
+        <member name="M:ShipyardInfo.classes.Connection.SUATHONGTINMAYNENKHITAU(System.String,DHSLAPI.Models.MAYNENKHI)">
+            <summary>
+            Sửa thông tin máy phụ phát điện
+            </summary>
+            <param name="id">id thông tin máy phụ phát điện</param>
+            <param name="mn">thông tin máy phụ phát điện mới</param>
+            <returns></returns>
+        </member>
+        <member name="M:ShipyardInfo.classes.Connection.SUATHONGTINHANGHAITAU(System.String,DHSLAPI.Models.HANGHAI)">
+            <summary>
+            Sửa thông tin hàng hải
+            </summary>
+            <param name="id">id thông tin hàng hải</param>
+            <param name="hh">thông tin hàng hải</param>
+            <returns></returns>
+        </member>
+        <member name="M:ShipyardInfo.classes.Connection.SUATHONGTINRADATAU(System.String,DHSLAPI.Models.RADA)">
+            <summary>
+            Sửa thông tin rada
+            </summary>
+            <param name="id">id thông tin rada</param>
+            <param name="rd">thông tin rada</param>
+            <returns></returns>
+        </member>
+        <member name="M:ShipyardInfo.classes.Connection.SUATHONGTINVUKHITAU(System.String,DHSLAPI.Models.VUKHI)">
+            <summary>
+            Sửa thông tin vũ khí
+            </summary>
+            <param name="id">id thông tin vũ khí</param>
+            <param name="vk">thông tin vũ khí</param>
             <returns></returns>
         </member>
         <member name="P:ShipyardInfo.classes.Flotilla.Squadron">
