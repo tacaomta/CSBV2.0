@@ -228,7 +228,6 @@
     <Content Include="css\login1.css" />
     <Content Include="css\manager_user.css" />
     <Content Include="css\manage_ship.css" />
-    <Content Include="css\master.css" />
     <Content Include="css\Ship_equiment.css" />
     <Content Include="Default.aspx" />
     <Content Include="Demos\Detail.html" />

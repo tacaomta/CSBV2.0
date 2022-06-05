@@ -1,6 +1,6 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Master/LayoutAdmin.Master" AutoEventWireup="true" CodeBehind="Information_User.aspx.cs" Inherits="CSB.Page_Master.Information_User" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Master/TrangChu.Master" AutoEventWireup="true" CodeBehind="Information_User.aspx.cs" Inherits="CSB.Page_Master.Information_User" %>
 
-<asp:Content ID="Content1" ContentPlaceHolderID="MainContentAdmin" runat="server">
+<asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <style>
         .container {
             background: #f7f7ff;

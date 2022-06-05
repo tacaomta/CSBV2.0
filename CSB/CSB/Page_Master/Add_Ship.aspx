@@ -1,6 +1,6 @@
-﻿<%@ Page Title="Thêm mới tàu" Language="C#" MasterPageFile="~/Master/LayoutAdmin.Master" AutoEventWireup="true" CodeBehind="Add_Ship.aspx.cs" Inherits="CSB.Page_Master.Add_Ship" %>
+﻿<%@ Page Title="Thêm mới tàu" Language="C#" MasterPageFile="~/Master/TrangChu.Master" AutoEventWireup="true" CodeBehind="Add_Ship.aspx.cs" Inherits="CSB.Page_Master.Add_Ship" %>
 
-<asp:Content ID="Content1" ContentPlaceHolderID="MainContentAdmin" runat="server">
+<asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <style type="text/css">
         .row {
             margin-bottom: 20px;
