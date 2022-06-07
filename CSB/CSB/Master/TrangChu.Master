@@ -326,7 +326,6 @@
         }
 
         #masterContent {
-            min-width: 1200px;
             overflow: hidden;
             margin: auto;
         }
@@ -599,8 +598,15 @@
                 }
         .show {
             display: block;
-            z-index: 999;
         }
+        
+            table.table td a.edit {
+                color: #FFC107;
+            }
+
+            table.table td a.delete {
+                color: #E34724;
+            }
 
         /* section header */
 
