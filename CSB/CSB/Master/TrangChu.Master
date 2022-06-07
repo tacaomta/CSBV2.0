@@ -20,711 +20,736 @@
     <link href="../Content/MaterialIcons.css" rel="stylesheet" />
     <link href="../Content/font-awesome.min.css" rel="stylesheet" />
     <link href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css" rel="stylesheet" />
-<style>
-* {
-    padding: 0;
-    margin-right: 0;
-    margin-top: 0;
-    margin-bottom: 0;
-}
-
-body {
-    background-color: #F6F9FF;
-    font-size: 17px;
-    overflow-x: hidden;
-    color: #455a64;
-    font-family: system-ui;
-    background-attachment: fixed;
-}
-.main-body .page-wrapper {
-    padding: 10px;
-    -webkit-transition: all ease-in 0.3s;
-    transition: all ease-in 0.3s;
-}
-button:focus {
-    outline: 0 !important;
-}
-.breadcrumb {
-    background-color: transparent;
-    margin-bottom: 0;
-}
-.card {
-    border-radius: 5px;
-    -webkit-box-shadow: 0 1px 20px 0 rgb(69 90 100 / 8%);
-    box-shadow: 0 1px 20px 0 rgb(69 90 100 / 8%);
-    border: none;
-    margin-bottom: 30px;
-    -webkit-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
-}
-.card .card-header {
-    background-color: transparent;
-    border-bottom: none;
-    padding: 10px 20px;
-    position: relative;
-    -webkit-box-shadow: 0px 1px 20px 0px rgb(69 90 100 / 8%);
-    box-shadow: 0px 1px 20px 0px rgb(69 90 100 / 8%);
-    display: flex;
-    align-items: center;
-}
-.card .card-header h5 {
-    margin-bottom: 0;
-    color: #000;
-    font-size: 22px;
-    font-weight: 600;
-    display: inline-block;
-    margin-right: 10px;
-    line-height: 1.4;
-    position: relative;
-}
-.card .card-header a {
-    color: #01b5f9;
-    font-weight: normal;
-}
-.card .card-block {
-    padding: 20px;
-}
-.card .card-block .sub-title {
-    font-size: 18px;
-    font-weight: 700;
-}
-.sub-title {
-    border-bottom: 1px solid rgba(204, 204, 204, 0.35);
-    padding-bottom: 5px;
-    margin-bottom: 20px;
-    font-size: 18px;
-    font-weight: 400;
-    color: #000000;
-}
-.card .page-header-breadcrumb{
-    margin-left: auto;
-}
-.form-group.row{
-    align-items: center;
-}
-.form-group .table{
-    font-size: 17px;
-}
-.col-form-label {
-    font-size: 17px;
-    font-weight: 600;
-    text-align: right;
-    line-height: normal;
-}
-.form-control {
-    color: #000000;
-    font-weight: 400;
-    font-size: 17px;
-}
-.table-responsive {
-    display: inline-block;
-    width: 100%;
-    overflow-x: auto;
-}
-.table-border-style .table {
-    margin-bottom: 0;
-    color: #000000;
-}
-.table thead th {
-    border-bottom: 1px solid #d6dde1;
-}
-.dataTable-table {
-    max-width: 100%;
-    width: 100%;
-    border-spacing: 0;
-    border-collapse: separate;
-}
-.btn-group-right{
-    margin-left: auto;
-    float: right;
-}
-.right{
-    float: right;
-}
-
-
-#phuhieu {
-    text-align: center;
-}
-
-    #phuhieu img {
-        width: 90%;
-        padding: 5% 10%;
-        height: 90%;
-    }
-
-#banner img {
-    width: 100%;    
-}
-
-#card #card-body {
-    padding: 0px 0px;
-}
-
-.btn-group-vertical {
-    width: 100%;
-}
-
-.card .card-header a {
-    color: #01b5f9;
-    font-weight: bold;
-}
-
-.card_body .btn-group-vertical .btn-primary {
-    font-size: 13px;
-    text-align: left;
-    border-radius: unset;
-    border: unset;
-}
-
-.btn-primary {
-    background-color: #1081ba;
-}
-
-#accordion {
-    font-size: 15px;
-}
-
-.rightContent .navbar {
-    justify-content: flex-end;
-    background-color: #ffffff !important;
-}
-
-#btn_Infor_Login {
-    text-align: right;
-    min-width: 200px;
-    background-color: transparent;
-    border: unset;
-    border-color: unset;
-    width: 100%;
-    color: #ffffff;
-}
-
-#li_infor_login {
-    float: right;
-}
-
-#menu_infor_login {
-    
-}
-
-    #menu_infor_login a {
-        padding: 0.25rem 1rem;
-        line-height: 35px;
-    }
-
-.icon_account {
-    font-size: 17px;
-    color: #ffffff;
-    font-style: inherit;
-}
-
-.icon_menu_account {
-    font-size: 14px;
-    color: #798a78;
-    font-style: inherit;
-}
-
-.toast {
-    background-color: rgb(17, 165 ,42);
-    box-shadow: 0 2px 6px #2e933a;
-    color: white;
-    padding: 6px 10px;
-    border: none;
-    cursor: pointer;
-    position: fixed;
-    bottom: 10px;
-    right: 28px;
-    width: 280px;
-    z-index: 100;
-}
-
-.toast-header {
-    background-color: rgb(17, 165 ,42);
-}
-
-.close {
-    color: #fff;
-    opacity: 0.8;
-}
-
-.toast-header-text {
-    color: white;
-    font-weight: bold;
-    font-size: 16px;
-    margin-top: 5px;
-}
-
-.toast-body {
-    background-color: rgb(17 ,165, 42);
-    color: white;
-    font-size: 14px;
-}
-
-.toastError {
-    background-color: rgb(183, 22 ,22);
-    box-shadow: 0 2px 6px #c95e5e;
-    color: white;
-    padding: 6px 10px;
-    border: none;
-    cursor: pointer;
-    position: fixed;
-    bottom: 23px;
-    right: 28px;
-    width: 280px;
-    z-index: 100;
-}
-
-.toastError-header {
-    background-color: rgb(183, 22, 22);
-}
-
-.toastError-header-text {
-    color: white;
-    font-weight: bold;
-    font-size: 16px;
-    margin-top: 5px;
-}
-
-.toastError-body {
-    background-color: rgb(183 ,22, 22);
-    color: white;
-    font-size: 14px;
-}
-
-::-webkit-scrollbar {
-    width: 10px;
-}
-
-::-webkit-scrollbar-track {
-    background: #f1f1f1; 
-}
- 
-::-webkit-scrollbar-thumb {
-    border-radius: 100px;
-    background: #888; 
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background: #555; 
-}
-
-    /* Layout */
-        
-    #wrapper {
-        padding: 0px;
-        margin: auto auto;
-    }
-    
-    #masterContent {
-        min-width: 1200px;
-        overflow: hidden;
-        margin: auto;
-    }
-
-    #header {
-        margin: auto;
-    }
-    
-    .leftContent {
-        position: fixed;
-        height: 100%;
-        float: left;
-        width: 250px;
-        color: black;
-        border-radius: 5px;
-        overflow-y: overlay;
-    }
-    
-    .rightContent {
-        float: right;
-        width: calc(100% - 250px);
-        color: black;
-        border-radius: 5px;
-    }
-    
-    .sidebar-brand {
-        display: inline-block;
-        width: 250px;
-        text-align: center;
-        height: 250px;
-        background-image: url('../Image/logo_CSB.png');
-        background-repeat: no-repeat;
-        background-size: contain;
-        background-position: center;
-        align-items: center;
-        margin-top: 20px;
-        transition: all .5s;
-    }
-    
-    .sidebar-brand-sm {
-        display: none;
-        width: 70px;
-        text-align: center;
-        height: 50px;
-        line-height: 50px;
-        color: #01b5f9;
-        font-weight: bold;
-        text-shadow: 0 0 black;
-    }
-    
-    #header #banner {
-        overflow: hidden;
-    }
-
-    .mainMenu {
-        margin: 0;
-        padding: 0;
-        width: 100%;
-        background: #2070cc;
-        display: flex;
-        justify-content: space-between;
-        transition: all 0.5s;
-    }
-        
-        .mainMenu ul {
-            list-style: none;
-            margin: 0;
+    <script src="../Scripts/js/Master.js"></script>
+    <style>
+        * {
+            padding: 0;
+            margin-right: 0;
+            margin-top: 0;
+            margin-bottom: 0;
         }
 
-        .mainMenu ul li {
-            font-size: 14px;
-            display: inline-block;
+        body {
+            background-color: #F6F9FF;
+            font-size: 17px;
+            overflow-x: hidden;
+            color: #455a64;
+            font-family: system-ui;
+            background-attachment: fixed;
         }
 
-        .mainMenu .a_menu {
-            display: block;
-            height: 100%;
-            text-decoration: none;
-            text-align: center;
-            color: #ffffff;
-            font-weight: bold;
-            padding: 10px 22px;
-            line-height: 20px;
+        .main-body .page-wrapper {
+            padding: 10px;
+            -webkit-transition: all ease-in 0.3s;
+            transition: all ease-in 0.3s;
         }
 
-            .mainMenu .a_menu:hover {
-                background-color: #1862ad;
-            }
-    
-    .subMenu {
-        margin: 0;
-        padding: 0;
-        width: 100%;
-        background: #f06137;
-        display: flex;
-        justify-content: space-between;
-        transition: all 0.5s;
-    }
-        
-        .subMenu ul {
-            list-style: none;
-            margin: 0;
+        button:focus {
+            outline: 0 !important;
         }
 
-        .subMenu ul li {
-            font-size: 14px;
-            display: inline-block;
+        .breadcrumb {
+            background-color: transparent;
+            margin-bottom: 0;
         }
 
-        .subMenu .a_menu {
-            display: block;
-            height: 100%;
-            text-decoration: none;
-            text-align: center;
-            color: #ffffff;
-            font-weight: bold;
-            padding: 10px 22px;
-            line-height: 20px;
-        }
-
-            .subMenu .a_menu:hover {
-                background-color: #c44824;
-            }
-
-    .bullet, .slash {
-        display: inline;
-        margin: 0 4px;
-    }
-    
-        .bullet:after {
-            content: '\2022';
-        }
-    
-        .slash:after {
-            content: '/';
-        }
-    
-    .footer-left {
-        float: left;
-    }
-    
-    .main-footer {
-        padding: 20px;
-        color: #98a6ad;
-        border-top: 1px solid #e3eaef;
-        display: inline-block;
-        width: 100%;
-    }
-
-    .main-footer a {
-        color: black;
-    }
-
-    /**/
-
-    .sidenav a, .dropdown-btn {
-        padding: 10px 10px 10px 20px;
-        text-decoration: none;
-        font-size: 15px;
-        color: #798a78;
-        display: block;
-        border: none;
-        background: none;
-        width: 100%;
-        text-align: left;
-        cursor: pointer;
-        outline: none;
-    }
-
-    .dropdown-btn i:first-child,
-    .sidenav > a i {
-        margin-right: 10px;
-    }
-
-    .sidenav a:hover, .dropdown-btn:hover {
-        background-color: #e9ecef;
-    }
-
-    .active {
-        background-color: #e9ecef;
-    }
-
-    .dropdown-container {
-        display: none;
-        background-color: #e9ecef;
-        -webkit-transition: display 0.5s ease;
-        transition: display 0.5s ease;
-    }
-    
-    .dropdown-container a {
-        font-size: 14px;
-    }
-
-    .dropdown-container a:hover {
-        color: blue;
-    }
-
-    .bi-caret-down-fill {
-        float: right;
-        padding-right: 8px;
-    }
-
-    /* dropdown bootstrap */
-
-    .dropdown-menu {
-        position: absolute;
-        right: 0;
-        min-width: 180px;
-        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-        z-index: 1;
-        padding: 0;
-        border: none;
-        background-color: #f1f1f1;
-        font-size: 16px;
-    }
-    
-        .dropdown-menu li {
-            padding: 12px 16px;
-            background-color: #f1f1f1;
-        }
-
-            .dropdown-menu li:hover {
-                background-color: #ddd;
-            }
-
-            .dropdown-menu li a {
-                color: #798a78;
-                text-decoration: none;
-            }
-
-                .dropdown-menu li a:hover {
-                    text-decoration: none;
-                }
-    
-    /* dropdown */
-
-    .dropbtn {
-        background-color: transparent;
-        color: white;
-        font-size: 16px;
-        border: none;
-        line-height: 40px;
-        padding: 0 10px;
-    }
-    
-    .dropbtn:hover, .dropbtn:focus {
-        background-color: #1862ad;
-    }
-        
-    .dropdown-content {
-        display: none;
-        position: absolute;
-        right: 0;
-        background-color: #f1f1f1;
-        min-width: 180px;
-        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-        z-index: 1;
-    }
-    
-    .dropdown-content a {
-        padding: 12px 16px;
-        text-decoration: none;
-        display: block;
-    }
-    
-    .dropdown-content a:hover {background-color: #ddd}
-
-    .show {display:block; z-index: 999;}
-
-    /* section header */
-
-    .section {
-        position: relative;
-        z-index: 1;
-    }
-
-        .section .section-header {
-            background-color: #f6f9ff;
-            border-radius: 3px;
+        .card {
+            border-radius: 5px;
+            -webkit-box-shadow: 0 1px 20px 0 rgb(69 90 100 / 8%);
+            box-shadow: 0 1px 20px 0 rgb(69 90 100 / 8%);
             border: none;
-            position: relative;
-            padding: 15px 20px;
-            display: flex;
+            margin-bottom: 30px;
+            -webkit-transition: all 0.3s ease-in-out;
+            transition: all 0.3s ease-in-out;
+        }
+
+            .card .card-header {
+                background-color: transparent;
+                border-bottom: none;
+                padding: 10px 20px;
+                position: relative;
+                -webkit-box-shadow: 0px 1px 20px 0px rgb(69 90 100 / 8%);
+                box-shadow: 0px 1px 20px 0px rgb(69 90 100 / 8%);
+                display: flex;
+                align-items: center;
+            }
+
+                .card .card-header h5 {
+                    margin-bottom: 0;
+                    color: #000;
+                    font-size: 22px;
+                    font-weight: 600;
+                    display: inline-block;
+                    margin-right: 10px;
+                    line-height: 1.4;
+                    position: relative;
+                }
+
+                .card .card-header a {
+                    color: #01b5f9;
+                    font-weight: normal;
+                }
+
+            .card .card-block {
+                padding: 20px;
+            }
+
+                .card .card-block .sub-title {
+                    font-size: 18px;
+                    font-weight: 700;
+                }
+
+        .sub-title {
+            border-bottom: 1px solid rgba(204, 204, 204, 0.35);
+            padding-bottom: 5px;
+            margin-bottom: 20px;
+            font-size: 18px;
+            font-weight: 400;
+            color: #000000;
+        }
+
+        .card .page-header-breadcrumb {
+            margin-left: auto;
+        }
+
+        .form-group.row {
             align-items: center;
         }
 
-            .section .section-header h1 {
-                margin-bottom: 0;
-                font-weight: 700;
-                display: inline-block;
-                font-size: 24px;
-                margin-top: 3px;
-                color: #34395e;
+        .form-group .table {
+            font-size: 17px;
+        }
+
+        .col-form-label {
+            font-size: 17px;
+            font-weight: 600;
+            text-align: right;
+            line-height: normal;
+        }
+
+        .form-control {
+            color: #000000;
+            font-weight: 400;
+            font-size: 17px;
+        }
+
+        .table-responsive {
+            display: inline-block;
+            width: 100%;
+            overflow-x: auto;
+        }
+
+        .table-border-style .table {
+            margin-bottom: 0;
+            color: #000000;
+        }
+
+        .table thead th {
+            border-bottom: 1px solid #d6dde1;
+        }
+
+        .dataTable-table {
+            max-width: 100%;
+            width: 100%;
+            border-spacing: 0;
+            border-collapse: separate;
+        }
+
+        .btn-group-right {
+            margin-left: auto;
+            float: right;
+        }
+
+        .right {
+            float: right;
+        }
+
+
+        #phuhieu {
+            text-align: center;
+        }
+
+            #phuhieu img {
+                width: 90%;
+                padding: 5% 10%;
+                height: 90%;
             }
 
-            .section .section-header .section-header-back {
-                margin-right: 15px;
+        #banner img {
+            width: 100%;
+        }
+
+        #card #card-body {
+            padding: 0px 0px;
+        }
+
+        .btn-group-vertical {
+            width: 100%;
+        }
+
+        .card .card-header a {
+            color: #01b5f9;
+            font-weight: bold;
+        }
+
+        .card_body .btn-group-vertical .btn-primary {
+            font-size: 13px;
+            text-align: left;
+            border-radius: unset;
+            border: unset;
+        }
+
+        .btn-primary {
+            background-color: #1081ba;
+        }
+
+        #accordion {
+            font-size: 15px;
+        }
+
+        .rightContent .navbar {
+            justify-content: flex-end;
+            background-color: #ffffff !important;
+        }
+
+        #btn_Infor_Login {
+            text-align: right;
+            min-width: 200px;
+            background-color: transparent;
+            border: unset;
+            border-color: unset;
+            width: 100%;
+            color: #ffffff;
+        }
+
+        #li_infor_login {
+            float: right;
+        }
+
+        #menu_infor_login {
+        }
+
+            #menu_infor_login a {
+                padding: 0.25rem 1rem;
+                line-height: 35px;
             }
 
-                .section .section-header .section-header-back .btn:hover {
-                    background-color: #6777ef;
-                    color: #fff;
+        .icon_account {
+            font-size: 17px;
+            color: #ffffff;
+            font-style: inherit;
+        }
+
+        .icon_menu_account {
+            font-size: 14px;
+            color: #798a78;
+            font-style: inherit;
+        }
+
+        .toast {
+            background-color: rgb(17, 165,42);
+            box-shadow: 0 2px 6px #2e933a;
+            color: white;
+            padding: 6px 10px;
+            border: none;
+            cursor: pointer;
+            position: fixed;
+            bottom: 10px;
+            right: 28px;
+            width: 280px;
+            z-index: 100;
+        }
+
+        .toast-header {
+            background-color: rgb(17, 165,42);
+        }
+
+        .close {
+            color: #fff;
+            opacity: 0.8;
+        }
+
+        .toast-header-text {
+            color: white;
+            font-weight: bold;
+            font-size: 16px;
+            margin-top: 5px;
+        }
+
+        .toast-body {
+            background-color: rgb(17,165, 42);
+            color: white;
+            font-size: 14px;
+        }
+
+        .toastError {
+            background-color: rgb(183, 22,22);
+            box-shadow: 0 2px 6px #c95e5e;
+            color: white;
+            padding: 6px 10px;
+            border: none;
+            cursor: pointer;
+            position: fixed;
+            bottom: 23px;
+            right: 28px;
+            width: 280px;
+            z-index: 100;
+        }
+
+        .toastError-header {
+            background-color: rgb(183, 22, 22);
+        }
+
+        .toastError-header-text {
+            color: white;
+            font-weight: bold;
+            font-size: 16px;
+            margin-top: 5px;
+        }
+
+        .toastError-body {
+            background-color: rgb(183,22, 22);
+            color: white;
+            font-size: 14px;
+        }
+
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            border-radius: 100px;
+            background: #888;
+        }
+
+            ::-webkit-scrollbar-thumb:hover {
+                background: #555;
+            }
+
+        /* Layout */
+
+        #wrapper {
+            padding: 0px;
+            margin: auto auto;
+        }
+
+        #masterContent {
+            min-width: 1200px;
+            overflow: hidden;
+            margin: auto;
+        }
+
+        #header {
+            margin: auto;
+        }
+
+        .leftContent {
+            position: fixed;
+            height: 100%;
+            float: left;
+            width: 250px;
+            color: black;
+            border-radius: 5px;
+            overflow-y: overlay;
+        }
+
+        .rightContent {
+            float: right;
+            width: calc(100% - 250px);
+            color: black;
+            border-radius: 5px;
+        }
+
+        .sidebar-brand {
+            display: inline-block;
+            width: 250px;
+            text-align: center;
+            height: 250px;
+            background-image: url('../Image/logo_CSB.png');
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
+            align-items: center;
+            margin-top: 20px;
+            transition: all .5s;
+        }
+
+        .sidebar-brand-sm {
+            display: none;
+            width: 70px;
+            text-align: center;
+            height: 50px;
+            line-height: 50px;
+            color: #01b5f9;
+            font-weight: bold;
+            text-shadow: 0 0 black;
+        }
+
+        #header #banner {
+            overflow: hidden;
+        }
+
+        .mainMenu {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            background: #2070cc;
+            display: flex;
+            justify-content: space-between;
+            transition: all 0.5s;
+        }
+
+            .mainMenu ul {
+                list-style: none;
+                margin: 0;
+            }
+
+                .mainMenu ul li {
+                    font-size: 14px;
+                    display: inline-block;
                 }
 
-            .section .section-header .section-header-button {
-                margin-left: 20px;
+            .mainMenu .a_menu {
+                display: block;
+                height: 100%;
+                text-decoration: none;
+                text-align: center;
+                color: #ffffff;
+                font-weight: bold;
+                padding: 10px 22px;
+                line-height: 20px;
             }
 
-            .section .section-header .section-header-breadcrumb {
-                margin-left: auto;
+                .mainMenu .a_menu:hover {
+                    background-color: #1862ad;
+                }
+
+        .subMenu {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            background: #f06137;
+            display: flex;
+            justify-content: space-between;
+            transition: all 0.5s;
+        }
+
+            .subMenu ul {
+                list-style: none;
+                margin: 0;
+            }
+
+                .subMenu ul li {
+                    font-size: 14px;
+                    display: inline-block;
+                }
+
+            .subMenu .a_menu {
+                display: block;
+                height: 100%;
+                text-decoration: none;
+                text-align: center;
+                color: #ffffff;
+                font-weight: bold;
+                padding: 10px 22px;
+                line-height: 20px;
+            }
+
+                .subMenu .a_menu:hover {
+                    background-color: #c44824;
+                }
+
+        .bullet, .slash {
+            display: inline;
+            margin: 0 4px;
+        }
+
+            .bullet:after {
+                content: '\2022';
+            }
+
+            .slash:after {
+                content: '/';
+            }
+
+        .footer-left {
+            float: left;
+        }
+
+        .main-footer {
+            padding: 20px;
+            color: #98a6ad;
+            border-top: 1px solid #e3eaef;
+            display: inline-block;
+            width: 100%;
+        }
+
+            .main-footer a {
+                color: black;
+            }
+
+        /**/
+
+        .sidenav a, .dropdown-btn {
+            padding: 10px 10px 10px 20px;
+            text-decoration: none;
+            font-size: 15px;
+            color: #798a78;
+            display: block;
+            border: none;
+            background: none;
+            width: 100%;
+            text-align: left;
+            cursor: pointer;
+            outline: none;
+        }
+
+            .dropdown-btn i:first-child,
+            .sidenav > a i {
+                margin-right: 10px;
+            }
+
+            .sidenav a:hover, .dropdown-btn:hover {
+                background-color: #e9ecef;
+            }
+
+        .active {
+            /* background-color: #e9ecef;*/
+        }
+
+        .dropdown-container {
+            display: none;
+            background-color: #e9ecef;
+            -webkit-transition: display 0.5s ease;
+            transition: display 0.5s ease;
+        }
+
+            .dropdown-container a {
+                font-size: 14px;
+            }
+
+                .dropdown-container a:hover {
+                    color: blue;
+                }
+
+        .bi-caret-down-fill {
+            float: right;
+            padding-right: 8px;
+        }
+
+        /* dropdown bootstrap */
+
+        .dropdown-menu {
+            position: absolute;
+            right: 0;
+            min-width: 180px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            padding: 0;
+            border: none;
+            background-color: #f1f1f1;
+            font-size: 16px;
+        }
+
+            .dropdown-menu li {
+                padding: 12px 16px;
+                background-color: #f1f1f1;
+            }
+
+                .dropdown-menu li:hover {
+                    background-color: #ddd;
+                }
+
+                .dropdown-menu li a {
+                    color: #798a78;
+                    text-decoration: none;
+                }
+
+                    .dropdown-menu li a:hover {
+                        text-decoration: none;
+                    }
+
+        /* dropdown */
+
+        .dropbtn {
+            background-color: transparent;
+            color: white;
+            font-size: 16px;
+            border: none;
+            line-height: 40px;
+            padding: 0 10px;
+        }
+
+            .dropbtn:hover, .dropbtn:focus {
+                background-color: #1862ad;
+            }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            right: 0;
+            background-color: #f1f1f1;
+            min-width: 180px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+            .dropdown-content a {
+                padding: 12px 16px;
+                text-decoration: none;
+                display: block;
+            }
+
+                .dropdown-content a:hover {
+                    background-color: #ddd
+                }
+
+        /*---------------------- CHÚ Ý ---------------------------*/
+        .show {
+            display: block;
+        }
+
+        /* section header */
+
+        .section {
+            position: relative;
+            z-index: 1;
+        }
+
+            .section .section-header {
+                background-color: #f6f9ff;
+                border-radius: 3px;
+                border: none;
+                position: relative;
+                padding: 15px 20px;
                 display: flex;
                 align-items: center;
-                color: #01b5f9;
             }
 
-                .section .section-header .section-header-breadcrumb .breadcrumb-item {
-                    font-size: 14px;
-                    margin: 0 10px;
+                .section .section-header h1 {
+                    margin-bottom: 0;
+                    font-weight: 700;
+                    display: inline-block;
+                    font-size: 24px;
+                    margin-top: 3px;
+                    color: #34395e;
                 }
 
-            .section .section-header .btn {
-                font-size: 12px;
+                .section .section-header .section-header-back {
+                    margin-right: 15px;
+                }
+
+                    .section .section-header .section-header-back .btn:hover {
+                        background-color: #6777ef;
+                        color: #fff;
+                    }
+
+                .section .section-header .section-header-button {
+                    margin-left: 20px;
+                }
+
+                .section .section-header .section-header-breadcrumb {
+                    margin-left: auto;
+                    display: flex;
+                    align-items: center;
+                    color: #01b5f9;
+                }
+
+                    .section .section-header .section-header-breadcrumb .breadcrumb-item {
+                        font-size: 14px;
+                        margin: 0 10px;
+                    }
+
+                .section .section-header .btn {
+                    font-size: 12px;
+                }
+
+            .section .section-content {
+                margin: 0 20px 20px 20px;
+                border-radius: 15px;
             }
 
-        .section .section-content {
-            margin: 0 20px 20px 20px;
-            border-radius: 15px;
-        }
-
-        .section .section-title {
-            font-size: 18px;
-            color: #191d21;
-            font-weight: 600;
-            position: relative;
-            margin: 30px 0 25px 0;
-        }
-
-            .section .section-title:before {
-                content: ' ';
-                border-radius: 5px;
-                height: 8px;
-                width: 30px;
-                background-color: #6777ef;
-                display: inline-block;
-                float: left;
-                margin-top: 6px;
-                margin-right: 15px;
+            .section .section-title {
+                font-size: 18px;
+                color: #191d21;
+                font-weight: 600;
+                position: relative;
+                margin: 30px 0 25px 0;
             }
 
-            .section .section-title + .section-lead {
-                margin-top: -20px;
+                .section .section-title:before {
+                    content: ' ';
+                    border-radius: 5px;
+                    height: 8px;
+                    width: 30px;
+                    background-color: #6777ef;
+                    display: inline-block;
+                    float: left;
+                    margin-top: 6px;
+                    margin-right: 15px;
+                }
+
+                .section .section-title + .section-lead {
+                    margin-top: -20px;
+                }
+
+            .section .section-lead {
+                margin-left: 45px;
             }
 
-        .section .section-lead {
-            margin-left: 45px;
+        .main-wrapper-1 .section .section-header {
+            margin-left: -30px;
+            margin-right: -30px;
+            margin-top: -10px;
+            border-radius: 0;
+            border-top: 1px solid #dbd1d1;
+            padding-left: 35px;
+            padding-right: 35px;
         }
 
-    .main-wrapper-1 .section .section-header {
-        margin-left: -30px;
-        margin-right: -30px;
-        margin-top: -10px;
-        border-radius: 0;
-        border-top: 1px solid #dbd1d1;
-        padding-left: 35px;
-        padding-right: 35px;
-    }
-
-    .breadcrumb {
-        background-color: #f9f9f9;
-    }
-
-        .breadcrumb .breadcrumb-item {
-            line-height: 1;
+        .breadcrumb {
+            background-color: #f9f9f9;
         }
 
-            .breadcrumb-item::before {
-                color: #01b5f9 !important;
-            }    
-
-            .breadcrumb .breadcrumb-item i {
-                margin-right: 5px;
+            .breadcrumb .breadcrumb-item {
+                line-height: 1;
             }
 
-    .section .section-header .section-header-breadcrumb {
-        margin-left: auto;
-        display: flex;
-        align-items: center;
-        color: #01b5f9;
-    }
-
-        .section .section-header .section-header-breadcrumb .breadcrumb-item {
-            font-size: 14px;
-            margin: 0;
+        .breadcrumb-item::before {
+            color: #01b5f9 !important;
         }
-        
-    .pagination li {
-        border: none !important;
-        margin: 0 !important;
-        padding: 0 !important;
-    }
 
-        .pagination li:hover {
+        .breadcrumb .breadcrumb-item i {
+            margin-right: 5px;
+        }
+
+        .section .section-header .section-header-breadcrumb {
+            margin-left: auto;
+            display: flex;
+            align-items: center;
+            color: #01b5f9;
+        }
+
+            .section .section-header .section-header-breadcrumb .breadcrumb-item {
+                font-size: 14px;
+                margin: 0;
+            }
+
+        .pagination li {
             border: none !important;
-            background: transparent !important;
+            margin: 0 !important;
+            padding: 0 !important;
         }
 
-</style>
+            .pagination li:hover {
+                border: none !important;
+                background: transparent !important;
+            }
+    </style>
 </head>
 
 <body>
@@ -737,62 +762,72 @@ button:focus {
                     PQLKTT
                 </div>
                 <div class="sidenav">
-                    <button class="dropdown-btn"><i class="bi-ui-checks-grid"></i>Nghiệp vụ PQLKTT 
+                    <button class="dropdown-btn">
+                        <i class="bi-ui-checks-grid"></i>Nghiệp vụ PQLKTT 
                       <i class="bi-caret-down-fill"></i>
                     </button>
                     <div class="dropdown-container">
-                      <a href="../Page_Master/Null.aspx">Công văn, tài liệu cấp trên</a>
-                      <a href="../Page_Master/Null.aspx">Công văn, tài liệu các đơn vị</a>
-                      <a href="../Page_Master/Null.aspx">Kiểm tra, chỉ đạo, hướng dẫn các ĐV</a>
-                      <a href="../Page_Master/Null.aspx">NCKH, sáng kiến, cải tiến</a>
-                      <a href="../Page_Master/Null.aspx">Huấn luyện, hội thi, hội thao</a>
-                      <a href="../Page_Master/Null.aspx">Theo dõi thực hiện nhiệm vụ phòng</a>
-                      <a href="../Page_Master/Null.aspx">Thực hiện chế độ báo cáo</a>
+                        <a href="../Page_Master/Null.aspx">Công văn, tài liệu cấp trên</a>
+                        <a href="../Page_Master/Null.aspx">Công văn, tài liệu các đơn vị</a>
+                        <a href="../Page_Master/Null.aspx">Kiểm tra, chỉ đạo, hướng dẫn các ĐV</a>
+                        <a href="../Page_Master/Null.aspx">NCKH, sáng kiến, cải tiến</a>
+                        <a href="../Page_Master/Null.aspx">Huấn luyện, hội thi, hội thao</a>
+                        <a href="../Page_Master/Null.aspx">Theo dõi thực hiện nhiệm vụ phòng</a>
+                        <a href="../Page_Master/Null.aspx">Thực hiện chế độ báo cáo</a>
                     </div>
-                    <button class="dropdown-btn"><i class="bi-gear-fill"></i>Sửa chữa tàu 
+                    <button class="dropdown-btn">
+                        <i class="bi-gear-fill"></i>Sửa chữa tàu 
                       <i class="bi-caret-down-fill"></i>
                     </button>
                     <div class="dropdown-container">
-                      <a href="#">Tài liệu pháp quy</a>
-                      <a href="#">Thống kê sửa chữa tàu</a>
-                      <a href="#">Hồ sơ sửa chữa tàu</a>
-                      <a href="#">Tình trạng kỹ thuật trước và sau sửa chữa tàu</a>
-                      <a href="#">Ngân sách sửa chữa</a>
-                      <a href="#">Quản lý hạng mục sửa chữa</a>
-                      <a href="#">Phân cấp sửa chữa tàu, trang bị</a>
+                        <a href="#">Tài liệu pháp quy</a>
+                        <a href="#">Thống kê sửa chữa tàu</a>
+                        <a href="#">Hồ sơ sửa chữa tàu</a>
+                        <a href="#">Tình trạng kỹ thuật trước và sau sửa chữa tàu</a>
+                        <a href="#">Ngân sách sửa chữa</a>
+                        <a href="#">Quản lý hạng mục sửa chữa</a>
+                        <a href="#">Phân cấp sửa chữa tàu, trang bị</a>
                     </div>
-                    <button class="dropdown-btn"><i class="bi-file-earmark-fill"></i>ĐBKT ngành tàu 
+                    <button class="dropdown-btn">
+                        <i class="bi-file-earmark-fill"></i>ĐBKT ngành tàu 
                       <i class="bi-caret-down-fill"></i>
                     </button>
                     <div class="dropdown-container">
-                      <a href="../Page_Master/Null.aspx">Thời gian làm việc của máy móc trang bị</a>
-                      <a href="../Page_Master/Null.aspx">Tiếp nhận tàu thuyền, trang bị mới</a>
-                      <a href="../Page_Master/Null.aspx">Cải hoán, cải tiến trang bị</a>
-                      <a href="../Page_Master/Null.aspx">Quản lý ngân sách bảo đảm kỹ thuật tại đơn vị</a>
+                        <a href="../Page_Master/Null.aspx">Thời gian làm việc của máy móc trang bị</a>
+                        <a href="../Page_Master/Null.aspx">Tiếp nhận tàu thuyền, trang bị mới</a>
+                        <a href="../Page_Master/Null.aspx">Cải hoán, cải tiến trang bị</a>
+                        <a href="../Page_Master/Null.aspx">Quản lý ngân sách bảo đảm kỹ thuật tại đơn vị</a>
                     </div>
-                    <button class="dropdown-btn"><i class="bi-folder"></i>Hồ sơ tàu 
+                    <button class="dropdown-btn">
+                        <i class="bi-folder"></i>Hồ sơ tàu 
                       <i class="bi-caret-down-fill"></i>
                     </button>
                     <div class="dropdown-container">
-                      <a href="../Page_Master/Manage_ship?vung=1">Tính năng chiến, kỹ thuật tàu, trang bị</a>
-                      <a href="../Page_Master/ShipActivity.aspx">Theo dõi thống kê hoạt động tàu</a>
-                      <a href="../Page_Master/Null.aspx">Quản lý tai nạn hư hỏng</a>
-                      <a href="../Page_Master/Null.aspx">Quản lý tình trạng kỹ thuật - khả năng hoạt động</a>
-                      <a href="../Page_Master/Null.aspx">Hồ sơ xuất xưởng sau đóng mới, cải hoán</a>
-                      <a href="../Page_Master/Manage_flotilla.aspx">Quản lí hải đội</a>
-                      <a href="../Page_Master/Manage_squadron.aspx">Quản lí hải đoàn</a>
+                        <a href="../Page_Master/Manage_ChuyenNganh.aspx">Quản lí chuyên ngành</a>
+                        <a href="../Page_Master/Manage_Position.aspx">Quản lí chức vụ</a>
+                        <a href="../Page_Master/Manage_Institution.aspx">Quản lí trường đào tạo</a>
+                        <a href="../Page_Master/Manage_Degree.aspx">Quản lí bằng cấp</a>
+                        <a href="../Page_Master/Manage_Ranking.aspx">Quản lí cấp bậc</a>
+                        <a href="../Page_Master/Manage_ship?vung=1">Tính năng chiến, kỹ thuật tàu, trang bị</a>
+                        <a href="../Page_Master/ShipActivity.aspx">Theo dõi thống kê hoạt động tàu</a>
+                        <a href="../Page_Master/Null.aspx">Quản lý tai nạn hư hỏng</a>
+                        <a href="../Page_Master/Null.aspx">Quản lý tình trạng kỹ thuật - khả năng hoạt động</a>
+                        <a href="../Page_Master/Null.aspx">Hồ sơ xuất xưởng sau đóng mới, cải hoán</a>
+                        <a href="../Page_Master/Manage_flotilla.aspx">Quản lí hải đội</a>
+                        <a href="../Page_Master/Manage_squadron.aspx">Quản lí hải đoàn</a>
                     </div>
-                    <button class="dropdown-btn"><i class="bi-cart3"></i>QL vật tư, mua sắm 
+                    <button class="dropdown-btn">
+                        <i class="bi-cart3"></i>QL vật tư, mua sắm 
                       <i class="bi-caret-down-fill"></i>
                     </button>
                     <div class="dropdown-container">
-                      <a href="../Page_Master/Null.aspx">Ngân sách, hạng mục mua sắm</a>
-                      <a href="../Page_Master/Null.aspx">Quản lý gói thầu</a>
-                      <a href="../Page_Master/Null.aspx">Nhập xuất tồn kho BTL CSB</a>
-                      <a href="../Page_Master/Null.aspx">Phân cấp đảm bảo vật tư ngành tàu</a>
-                      <a href="../Page_Master/Null.aspx">Thống kê mật độ hư hỏng cụm chi tiết, hệ thống - nhu cầu vật tư</a>
-                      <a href="../Page_Master/Null.aspx">Quản lý khả năng tạo nguồn vật tư</a>
-                      <a href="../Page_Master/Null.aspx">Hiệu quả sử dụng vật tư</a>
+                        <a href="../Page_Master/Null.aspx">Ngân sách, hạng mục mua sắm</a>
+                        <a href="../Page_Master/Null.aspx">Quản lý gói thầu</a>
+                        <a href="../Page_Master/Null.aspx">Nhập xuất tồn kho BTL CSB</a>
+                        <a href="../Page_Master/Null.aspx">Phân cấp đảm bảo vật tư ngành tàu</a>
+                        <a href="../Page_Master/Null.aspx">Thống kê mật độ hư hỏng cụm chi tiết, hệ thống - nhu cầu vật tư</a>
+                        <a href="../Page_Master/Null.aspx">Quản lý khả năng tạo nguồn vật tư</a>
+                        <a href="../Page_Master/Null.aspx">Hiệu quả sử dụng vật tư</a>
                     </div>
                     <a href="../Page_Master/Manage_user"><i class="bi-person-fill"></i>Quản lý người dùng</a>
                 </div>
@@ -815,11 +850,11 @@ button:focus {
                     </ul>
                     <ul class="mainMenu-list">
                         <li id="li_infor_login">
-                            <button id="btnID" onclick="dropdownFunction()" class="dropbtn"><i id="user-login-fullname" class="bi bi-person-circle icon_account"></i> <i class="bi-caret-down-fill" style="font-size: 10px; margin-left: 5px; padding: 0;"></i></button>
+                            <button id="btnID" onclick="dropdownFunction()" class="dropbtn"><i id="user-login-fullname" class="bi bi-person-circle icon_account"></i><i class="bi-caret-down-fill" style="font-size: 10px; margin-left: 5px; padding: 0;"></i></button>
                             <div id="myDropdown" class="dropdown-content">
-                                <a href="../Page_Master/Information_User"><i class="bi bi-info-circle icon_menu_account"> Thông tin tài khoản</i></a>
-                                <a href="../Page_Master/Change_Password"><i class="bi bi-unlock-fill icon_menu_account"> Đổi mật khẩu</i></a>
-                                <a href="#" onclick="clickDangXuat()"><i class="bi bi-box-arrow-in-left icon_menu_account " id="btnDangXuat"> Đăng xuất</i></a>
+                                <a href="../Page_Master/Information_User"><i class="bi bi-info-circle icon_menu_account">Thông tin tài khoản</i></a>
+                                <a href="../Page_Master/Change_Password"><i class="bi bi-unlock-fill icon_menu_account">Đổi mật khẩu</i></a>
+                                <a href="#" onclick="clickDangXuat()"><i class="bi bi-box-arrow-in-left icon_menu_account " id="btnDangXuat">Đăng xuất</i></a>
                             </div>
                         </li>
                     </ul>
@@ -827,9 +862,9 @@ button:focus {
                 <div class="mainContent">
                     <asp:ContentPlaceHolder ID="MainContent" runat="server"></asp:ContentPlaceHolder>
                 </div>
-                
+
                 <div class="toast mt-3">
-                    <div class="toast-header" >
+                    <div class="toast-header">
                         <p id="toast-header" class="mr-auto toast-header-text">Toast Header</p>
                         <button type="button" class="ml-2 mb-3 close" data-dismiss="toast">×</button>
                     </div>
@@ -852,7 +887,7 @@ button:focus {
             </div>
         </div>
     </div>
-    
+
     <script src="../Scripts/jquery-3.4.1.min.js"></script>
     <script src="../Scripts/vendor/popper.min.js"></script>
     <script src="../Scripts/bootstrap-4.6.1/bootstrap.bundle.min.js"></script>
