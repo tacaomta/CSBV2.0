@@ -351,7 +351,7 @@
                                         <div class="form-group row">
                                             <label class="col-sm-4 col-form-label">Tổng quân số: </label>
                                             <div class="col-sm-8">
-                                                <input type="number" id="addBC-QS"  min="0" class="form-control">
+                                                <input type="number" id="addBC-QS"  min="0" class="form-control" disabled>
                                             </div>
                                         </div>
                                     </div>
@@ -361,7 +361,7 @@
                                         <div class="form-group row">
                                             <label class="col-sm-4 col-form-label">Sĩ quan: </label>
                                             <div class="col-sm-8">
-                                                <input type="number" id="addBC-SQ"  min="0" class="form-control">
+                                                <input type="number" id="addBC-SQ" onchange="changeQS()" min="0" class="form-control">
                                             </div>
                                         </div>
                                     </div>
@@ -369,7 +369,7 @@
                                         <div class="form-group row">
                                             <label class="col-sm-4 col-form-label">VCQP: </label>
                                             <div class="col-sm-8">
-                                                <input type="number" id="addBC-VCQP"  min="0" class="form-control">
+                                                <input type="number" id="addBC-VCQP" onchange="changeQS()" min="0" class="form-control">
                                             </div>
                                         </div>
                                     </div>
@@ -379,7 +379,7 @@
                                         <div class="form-group row">
                                             <label class="col-sm-4 col-form-label">QNCN: </label>
                                             <div class="col-sm-8">
-                                                <input type="number" id="addBC-QNCN" min="0"  class="form-control">
+                                                <input type="number" id="addBC-QNCN" min="0" onchange="changeQS()" class="form-control">
                                             </div>
                                         </div>
                                     </div>
@@ -387,13 +387,13 @@
                                         <div class="form-group row">
                                             <label class="col-sm-4 col-form-label">HSQ, CS: </label>
                                             <div class="col-sm-8">
-                                                <input type="number" id="addBC-HSQCS"  min="0" class="form-control">
+                                                <input type="number" id="addBC-HSQCS" onchange="changeQS()" min="0" class="form-control">
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="form-footer">
-                                    <button type="button" class="btn btn-primary right" onclick="addTau()">Lưu thông tin</button>
+                                    <button type="submit" class="btn btn-primary right" onclick="addTau()">Lưu thông tin</button>
                                 </div>
                             </form>
 
@@ -459,8 +459,12 @@
                 $("#addTTC-CHUCNANG").addClass("need-validated");
             });
 
-
+            
         });
+
+        function changeQS() {
+            $("#addBC-QS").val(Number($("#addBC-SQ").val()) + Number($("#addBC-VCQP").val()) + Number($("#addBC-QNCN").val()) + Number($("#addBC-HSQCS").val()));
+        };
 
         function loadVung() {
             $.ajax({
@@ -539,6 +543,14 @@
         function addTau() {
             var date = new Date();
             var strDate = '' + date.getDate() + '/' + (Number(date.getMonth()) + 1) + '/' + date.getFullYear() + ' ' + date.getHours() + ':' + date.getMinutes() + ':' + date.getSeconds();
+            if (Number(date.getMonth()) + 1 < 10) {
+                debugger
+                var strDate_ntn = '' + date.getFullYear() + '-' + '0' + (Number(date.getMonth()) + 1) + '-' + date.getDate();
+            }
+            else {
+                var strDate_ntn = '' + date.getFullYear() + '-' + (Number(date.getMonth()) + 1) + '-' + date.getDate();
+            }
+
             var newShip = {
                 TTCOBAN: {
                     SOHIEU: $("#addTTC-SOHIEU").val(),
@@ -591,8 +603,8 @@
                     HSQCS: $("#addBC-HSQCS").val()
                 },
                 Meta: {
-                    Created: strDate,
-                    LastUpdated: strDate
+                    Created: strDate_ntn,
+                    LastUpdated: strDate_ntn
                 },
                 FlotID: $("#addTTC-HAIDOI").val()
             };
@@ -609,9 +621,7 @@
                     console.log("data: " + data);
                     debugger
                 }, error: function (ret) {
-                    debugger
-                    alert("Có thể số hiệu tàu này đã tồn tại!" + ret.responseJSON.Message);
-                    //toastError("Thất bại! Có thể số hiệu tàu này đã tồn tại", ret.responseJSON.Message);
+                    toastError("Thất bại", ret.responseJSON.Message);
                 },
             });
             debugger
