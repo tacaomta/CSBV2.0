@@ -40,7 +40,7 @@
                 </div>
                 <div class="section-content">
                     <div class="profile-link">
-                        1. <a href="#">Danh sách đội ngũ cán bộ, nhân viên kỹ thuật</a>
+                        1. <a onclick="DS_CB_NV()" href="#">Danh sách đội ngũ cán bộ, nhân viên kỹ thuật</a>
                     </div>
                     <div class="profile-link">
                         2. <a href="#">Đặc điểm chung của tàu</a>
@@ -72,6 +72,56 @@
                     <div class="profile-link">
                         11.<a href="#" style="margin-left: 5px;">Kiểm tra kỹ thuật</a>
                     </div>
+                <a href="../Page_Master/Manage_Tau?vung=1" style="float: left" class="btn btn-success"><span class="glyphicon glyphicon-arrow-left"></span>&nbsp;Quay lại</a>
+
                 </div>
+
             </div>
+     <script src="../Scripts/jquery-3.4.1.slim.min.js"></script>
+    <script>
+        var Ship_ID;
+        var shipName;
+        function getParameterByName(name, url = window.location.href) {
+            name = name.replace(/[\[\]]/g, '\\$&');
+            var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+                results = regex.exec(url);
+            if (!results) return null;
+            if (!results[2]) return '';
+            return decodeURIComponent(results[2].replace(/\+/g, ' '));
+        }
+
+        $(document).ready(function () {
+            Ship_ID = getParameterByName('Ship_ID');
+            if (Ship_ID == null) {
+                window.location = baseaddress + "Page_Master/Manage_Tau?vung=1";
+            }
+            else {
+                Load_Profile(Ship_ID);
+            }
+
+        });
+        function Load_Profile(Ship_ID) {
+            $.ajax({
+                type: "GET",
+                url: linkapi + "v2/ship_detail?id=" + Ship_ID,
+                dataType: "json",
+                beforeSend: function () { // Before we send the request, remove the .hidden class from the spinner and default to inline-block.
+                    
+                },
+                success: function (data) {
+                    $("#title").html("HỒ SƠ TÀU " + data.TTCOBAN.SOHIEU);
+                }, error: function (ret) {
+                    console.log('errorGET');
+                },
+                complete: function () { // Set our complete callback, adding the .hidden class and hiding the spinner.
+                  
+                    
+                },
+            });
+        }
+
+        function DS_CB_NV() {
+            window.location = baseaddress + "Page_Master/Add_Staff?Ship_ID=" + Ship_ID;
+        }
+    </script>
 </asp:Content>

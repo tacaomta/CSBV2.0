@@ -161,5 +161,8 @@
         function btn_addship() {
             window.location = baseaddress + "Page_Master/AddShip";
         }
+        function View_HoSoTau(Ship_ID) {
+            window.location = baseaddress + "Page_Master/Ship_Profile?Ship_ID="+Ship_ID;
+        }
     </script>
 </asp:Content>
