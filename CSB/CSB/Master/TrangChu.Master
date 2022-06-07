@@ -749,6 +749,9 @@
                 border: none !important;
                 background: transparent !important;
             }
+            .row .form-group{
+                display:flex;
+            }
     </style>
 </head>
 
