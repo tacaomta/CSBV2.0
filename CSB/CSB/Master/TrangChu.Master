@@ -10,14 +10,8 @@
     <link href="../Content/MaterialIcons.css" rel="stylesheet" />
     <link href="../Content/font-awesome.min.css" rel="stylesheet" />
     <link href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css" rel="stylesheet" />
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
     <script src="../Scripts/js/Master.js"></script>
->>>>>>> 3d69b88a1065407bdde5835fd3d5445ee530fcfa
-=======
     <script src="../Scripts/js/Master.js"></script>
->>>>>>> 3d69b88a1065407bdde5835fd3d5445ee530fcfa
     <style>
         * {
             padding: 0;
@@ -74,15 +68,7 @@
                 .card .card-header h5 {
                     margin-bottom: 0;
                     color: #000;
-<<<<<<< HEAD
-<<<<<<< HEAD
                     font-size: 20px;
-=======
-                    font-size: 22px;
->>>>>>> 3d69b88a1065407bdde5835fd3d5445ee530fcfa
-=======
-                    font-size: 22px;
->>>>>>> 3d69b88a1065407bdde5835fd3d5445ee530fcfa
                     font-weight: 600;
                     display: inline-block;
                     margin-right: 10px;
@@ -100,28 +86,11 @@
             }
 
                 .card .card-block .sub-title {
-<<<<<<< HEAD
-<<<<<<< HEAD
                     font-size: 16px;
-=======
-                    font-size: 18px;
->>>>>>> 3d69b88a1065407bdde5835fd3d5445ee530fcfa
-=======
-                    font-size: 18px;
->>>>>>> 3d69b88a1065407bdde5835fd3d5445ee530fcfa
-                    font-weight: 700;
                 }
 
         .sub-title {
-<<<<<<< HEAD
-<<<<<<< HEAD
             border-bottom: 2px solid rgba(204, 204, 204, 0.85);
-=======
-            border-bottom: 1px solid rgba(204, 204, 204, 0.35);
->>>>>>> 3d69b88a1065407bdde5835fd3d5445ee530fcfa
-=======
-            border-bottom: 1px solid rgba(204, 204, 204, 0.35);
->>>>>>> 3d69b88a1065407bdde5835fd3d5445ee530fcfa
             padding-bottom: 5px;
             margin-bottom: 20px;
             font-size: 18px;
@@ -142,15 +111,7 @@
         }
 
         .col-form-label {
-<<<<<<< HEAD
-<<<<<<< HEAD
             font-size: 15px;
-=======
-            font-size: 17px;
->>>>>>> 3d69b88a1065407bdde5835fd3d5445ee530fcfa
-=======
-            font-size: 17px;
->>>>>>> 3d69b88a1065407bdde5835fd3d5445ee530fcfa
             font-weight: 600;
             text-align: right;
             line-height: normal;
@@ -159,15 +120,7 @@
         .form-control {
             color: #000000;
             font-weight: 400;
-<<<<<<< HEAD
-<<<<<<< HEAD
             font-size: 15px;
-=======
-            font-size: 17px;
->>>>>>> 3d69b88a1065407bdde5835fd3d5445ee530fcfa
-=======
-            font-size: 17px;
->>>>>>> 3d69b88a1065407bdde5835fd3d5445ee530fcfa
         }
 
         .table-responsive {
@@ -226,14 +179,6 @@
 
         .card .card-header a {
             color: #01b5f9;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-            font-weight: bold;
->>>>>>> 3d69b88a1065407bdde5835fd3d5445ee530fcfa
-=======
-            font-weight: bold;
->>>>>>> 3d69b88a1065407bdde5835fd3d5445ee530fcfa
         }
 
         .card_body .btn-group-vertical .btn-primary {
@@ -242,20 +187,10 @@
             border-radius: unset;
             border: unset;
         }
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 3d69b88a1065407bdde5835fd3d5445ee530fcfa
         .btn-primary {
             background-color: #1081ba;
         }
 
-<<<<<<< HEAD
->>>>>>> 3d69b88a1065407bdde5835fd3d5445ee530fcfa
-=======
->>>>>>> 3d69b88a1065407bdde5835fd3d5445ee530fcfa
         #accordion {
             font-size: 15px;
         }
@@ -472,18 +407,10 @@
                 text-decoration: none;
                 text-align: center;
                 color: #ffffff;
-<<<<<<< HEAD
-<<<<<<< HEAD
                 font-weight: 600;
                 padding: 10px 15px;
-=======
-                font-weight: bold;
                 padding: 10px 22px;
->>>>>>> 3d69b88a1065407bdde5835fd3d5445ee530fcfa
-=======
-                font-weight: bold;
                 padding: 10px 22px;
->>>>>>> 3d69b88a1065407bdde5835fd3d5445ee530fcfa
                 line-height: 20px;
             }
 
@@ -581,15 +508,7 @@
             }
 
         .active {
-<<<<<<< HEAD
-<<<<<<< HEAD
             background-color: #e9ecef;
-=======
-            /* background-color: #e9ecef;*/
->>>>>>> 3d69b88a1065407bdde5835fd3d5445ee530fcfa
-=======
-            /* background-color: #e9ecef;*/
->>>>>>> 3d69b88a1065407bdde5835fd3d5445ee530fcfa
         }
 
         .dropdown-container {
@@ -678,22 +597,9 @@
                 .dropdown-content a:hover {
                     background-color: #ddd
                 }
-
-<<<<<<< HEAD
-<<<<<<< HEAD
         .show {
             display: block;
             z-index: 999;
-=======
-        /*---------------------- CHÚ Ý ---------------------------*/
-        .show {
-            display: block;
->>>>>>> 3d69b88a1065407bdde5835fd3d5445ee530fcfa
-=======
-        /*---------------------- CHÚ Ý ---------------------------*/
-        .show {
-            display: block;
->>>>>>> 3d69b88a1065407bdde5835fd3d5445ee530fcfa
         }
 
         /* section header */
@@ -794,8 +700,6 @@
             padding-right: 35px;
         }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
         .section .section-header .section-header-breadcrumb {
             margin-left: auto;
@@ -916,7 +820,6 @@
             padding: 0 !important;
         }
 
->>>>>>> 3d69b88a1065407bdde5835fd3d5445ee530fcfa
             .pagination li:hover {
                 border: none !important;
                 background: transparent !important;
@@ -924,10 +827,6 @@
             .row .form-group{
                 display:flex;
             }
-<<<<<<< HEAD
->>>>>>> 3d69b88a1065407bdde5835fd3d5445ee530fcfa
-=======
->>>>>>> 3d69b88a1065407bdde5835fd3d5445ee530fcfa
     </style>
 </head>
 
@@ -982,20 +881,11 @@
                       <i class="bi-caret-down-fill"></i>
                     </button>
                     <div class="dropdown-container">
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 3d69b88a1065407bdde5835fd3d5445ee530fcfa
                         <a href="../Page_Master/Manage_ChuyenNganh.aspx">Quản lí chuyên ngành</a>
                         <a href="../Page_Master/Manage_Position.aspx">Quản lí chức vụ</a>
                         <a href="../Page_Master/Manage_Institution.aspx">Quản lí trường đào tạo</a>
                         <a href="../Page_Master/Manage_Degree.aspx">Quản lí bằng cấp</a>
                         <a href="../Page_Master/Manage_Ranking.aspx">Quản lí cấp bậc</a>
-<<<<<<< HEAD
->>>>>>> 3d69b88a1065407bdde5835fd3d5445ee530fcfa
-=======
->>>>>>> 3d69b88a1065407bdde5835fd3d5445ee530fcfa
                         <a href="../Page_Master/Manage_ship?vung=1">Tính năng chiến, kỹ thuật tàu, trang bị</a>
                         <a href="../Page_Master/ShipActivity.aspx">Theo dõi thống kê hoạt động tàu</a>
                         <a href="../Page_Master/Null.aspx">Quản lý tai nạn hư hỏng</a>
