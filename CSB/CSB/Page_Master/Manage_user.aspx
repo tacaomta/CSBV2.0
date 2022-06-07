@@ -146,7 +146,7 @@
                                     <label class="col-md-5 control-label"><strong>Quyền     : </strong></label>
                                     <div class="col-md-7">
                                         <select class="form-control" style="height: 42px;" id="edRole">
-                                            <option selected value="ADMINISTRATOR">Admin</option>
+                                            <option selected value="AD">Admin</option>
                                             <option value="US">User</option>
                                         </select>
                                     </div>

@@ -137,7 +137,7 @@
                         { name: 'STT', width: 90 },
                         { name: 'Tên chuyên ngành', width: 380 },
                         { name: 'Ghi chú' },
-                        { name: 'Tác vụ', width: 90 },
+                        { name: 'Tác vụ', width: 150 },
                     ],
                     "columnDefs": [
                         {
