@@ -157,5 +157,9 @@
                     .appendTo('this_wrapper .col-md-6:eq(0)');
             });
         };
+
+        function btn_addship() {
+            window.location = baseaddress + "Page_Master/AddShip";
+        }
     </script>
 </asp:Content>

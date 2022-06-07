@@ -397,7 +397,7 @@
             }
 
                 .mainMenu ul li {
-                    font-size: 14px;
+                    font-size: 13px;
                     display: inline-block;
                 }
 
@@ -893,7 +893,7 @@
                         <a href="../Page_Master/Manage_Institution.aspx">Quản lí trường đào tạo</a>
                         <a href="../Page_Master/Manage_Degree.aspx">Quản lí bằng cấp</a>
                         <a href="../Page_Master/Manage_Ranking.aspx">Quản lí cấp bậc</a>
-                        <a href="../Page_Master/Manage_ship?vung=1">Tính năng chiến, kỹ thuật tàu, trang bị</a>
+                        <a href="../Page_Master/Manage_Tau?vung=1">Tính năng chiến, kỹ thuật tàu, trang bị</a>
                         <a href="../Page_Master/ShipActivity.aspx">Theo dõi thống kê hoạt động tàu</a>
                         <a href="../Page_Master/Null.aspx">Quản lý tai nạn hư hỏng</a>
                         <a href="../Page_Master/Null.aspx">Quản lý tình trạng kỹ thuật - khả năng hoạt động</a>
