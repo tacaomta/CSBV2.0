@@ -749,9 +749,18 @@
                 border: none !important;
                 background: transparent !important;
             }
-            .row .form-group{
-                display:flex;
-            }
+
+        .row .form-group {
+            display: flex;
+        }
+
+        table.table td a.edit {
+            color: #FFC107;
+        }
+
+        table.table td a.delete {
+            color: #E34724;
+        }
     </style>
 </head>
 
