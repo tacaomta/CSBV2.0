@@ -243,6 +243,9 @@
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="Image\icon\exclamation-circle.svg" />
+    <Content Include="Image\icon\i.svg" />
+    <Content Include="Image\icon\v.svg" />
     <Content Include="Image\onworking.jpg" />
     <Content Include="Image\bg-bien.jpg" />
     <Content Include="Image\footer.png" />
