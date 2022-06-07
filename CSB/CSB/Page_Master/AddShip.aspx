@@ -20,7 +20,7 @@
                             </div>
                         </div>
                         <div class="card-block">
-                            <form>
+                            <form id="addTau">
                                 <h4 class="sub-title">Thông tin cơ bản</h4>
                                 <div class="row">
                                     <div class="col-sm-6">
@@ -603,28 +603,31 @@
                     HSQCS: $("#addBC-HSQCS").val()
                 },
                 Meta: {
-                    Created: strDate_ntn,
-                    LastUpdated: strDate_ntn
+                    Created: "",
+                    LastUpdated: ""
                 },
                 FlotID: $("#addTTC-HAIDOI").val()
             };
             console.log(newShip);
             console.log(linkapi + "v2/insert_ship");
-            $.ajax({
-                type: "POST",
-                url: linkapi + "v2/insert_ship",
-                dataType: "json",
-                data: JSON.stringify(newShip),
-                contentType: "application/json",
-                success: function (data) {
-                    toastSuccess("Thành công", "Thêm tàu thành công!");
-                    console.log("data: " + data);
-                    debugger
-                }, error: function (ret) {
-                    toastError("Thất bại", ret.responseJSON.Message);
-                },
-            });
-            debugger
+            var form = document.getElementById("addTau");
+            console.log(form.checkValidity());
+            if (form.checkValidity() == true) {
+                $.ajax({
+                    type: "POST",
+                    url: linkapi + "v2/insert_ship",
+                    dataType: "json",
+                    data: JSON.stringify(newShip),
+                    contentType: "application/json",
+                    success: function (data) {
+                        toastSuccess("Thành công", "Thêm tàu thành công!");
+                        console.log("data: " + data);
+                        debugger
+                    }, error: function (ret) {
+                        toastError("Thất bại", ret.responseJSON.Message);
+                    },
+                });
+            }
         }
 
     </script>

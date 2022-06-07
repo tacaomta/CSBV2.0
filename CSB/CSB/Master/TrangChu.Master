@@ -993,7 +993,6 @@
         var linkapi = "http://localhost:8082/api/";
         var baseaddress = "http://localhost:44347/";
         $(document).ready(function () {
-            /*  window.location = "http://localhost:44347/Page_Master/Login";*/
             if (sessionStorage.getItem("userLoginUsername") != null) {
                 $('#user-login-fullname').text(" " + sessionStorage.getItem("userLoginFullname"));
                 $('#btnDangXuat').text(" Đăng xuất");
