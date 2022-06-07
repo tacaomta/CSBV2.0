@@ -243,6 +243,9 @@
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="Image\icon\exclamation-circle.svg" />
+    <Content Include="Image\icon\i.svg" />
+    <Content Include="Image\icon\v.svg" />
     <Content Include="Image\onworking.jpg" />
     <Content Include="Image\bg-bien.jpg" />
     <Content Include="Image\footer.png" />
@@ -259,7 +262,12 @@
     <Content Include="Page_Master\Change_Password.aspx" />
     <Content Include="Page_Master\Information_User.aspx" />
     <Content Include="Page_Master\Login.aspx" />
+    <Content Include="Page_Master\Manage_ChuyenNganh.aspx" />
+    <Content Include="Page_Master\Manage_Degree.aspx" />
     <Content Include="Page_Master\Manage_flotilla.aspx" />
+    <Content Include="Page_Master\Manage_Institution.aspx" />
+    <Content Include="Page_Master\Manage_Position.aspx" />
+    <Content Include="Page_Master\Manage_Ranking.aspx" />
     <Content Include="Page_Master\Manage_ship.aspx" />
     <Content Include="Page_Master\Manage_squadron.aspx" />
     <Content Include="Page_Master\Manage_user.aspx" />
@@ -436,12 +444,47 @@
     <Compile Include="Page_Master\Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Page_Master\Manage_ChuyenNganh.aspx.cs">
+      <DependentUpon>Manage_ChuyenNganh.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page_Master\Manage_ChuyenNganh.aspx.designer.cs">
+      <DependentUpon>Manage_ChuyenNganh.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Page_Master\Manage_Degree.aspx.cs">
+      <DependentUpon>Manage_Degree.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page_Master\Manage_Degree.aspx.designer.cs">
+      <DependentUpon>Manage_Degree.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Page_Master\Manage_flotilla.aspx.cs">
       <DependentUpon>Manage_flotilla.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Page_Master\Manage_flotilla.aspx.designer.cs">
       <DependentUpon>Manage_flotilla.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Page_Master\Manage_Institution.aspx.cs">
+      <DependentUpon>Manage_Institution.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page_Master\Manage_Institution.aspx.designer.cs">
+      <DependentUpon>Manage_Institution.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Page_Master\Manage_Position.aspx.cs">
+      <DependentUpon>Manage_Position.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page_Master\Manage_Position.aspx.designer.cs">
+      <DependentUpon>Manage_Position.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Page_Master\Manage_Ranking.aspx.cs">
+      <DependentUpon>Manage_Ranking.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page_Master\Manage_Ranking.aspx.designer.cs">
+      <DependentUpon>Manage_Ranking.aspx</DependentUpon>
     </Compile>
     <Compile Include="Page_Master\Manage_ship.aspx.cs">
       <DependentUpon>Manage_ship.aspx</DependentUpon>
