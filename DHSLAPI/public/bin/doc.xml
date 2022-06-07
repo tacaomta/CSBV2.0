@@ -949,6 +949,11 @@
             <param name="id">id của tàu</param>
             <returns></returns>
         </member>
+        <member name="T:DHSLAPI.Controllers.P4Controller">
+            <summary>
+            TÍNH NĂNG TRANG BỊ
+            </summary>
+        </member>
         <member name="T:DHSLAPI.Controllers.PersonnelController">
             <summary>
             Cán bộ, nhân viên kỹ thuật biên chế trên tàu
@@ -1275,6 +1280,13 @@
         <member name="M:DHSLAPI.Controllers.FlotillaController.DeleteFlotilla(System.String)">
             <summary>
             Xoá thông tin hải đội trong CSDL
+            </summary>
+            <param name="id">Id của hải đội</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.FlotillaController.GetShipInFlotilla(System.String)">
+            <summary>
+            Lấy danh mục tàu trong hải đội
             </summary>
             <param name="id">Id của hải đội</param>
             <returns></returns>
@@ -1725,6 +1737,13 @@
             Xoá thông tin hải đoàn
             </summary>
             <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.SquadronController.GetShipInSquadron(System.String)">
+            <summary>
+            Lấy danh mục tàu trong Hải đoàn
+            </summary>
+            <param name="id">id của Hải đoàn</param>
             <returns></returns>
         </member>
         <member name="T:DHSLAPI.Controllers.SupplyController">
@@ -2876,6 +2895,13 @@
         <member name="M:ShipyardInfo.classes.Connection.GetShipOverviewInfoInNavalRegion(System.String)">
             <summary>
             Thông tin cơ bản của các tàu trong vùng
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ShipyardInfo.classes.Connection.GetListShipsInSquadron(System.String)">
+            <summary>
+            Lấy thông tin cơ bản của tàu theo ID của Hải đoàn
             </summary>
             <param name="id"></param>
             <returns></returns>
