@@ -162,7 +162,9 @@
             window.location = baseaddress + "Page_Master/AddShip";
         }
         function View_HoSoTau(Ship_ID) {
-            window.location = baseaddress + "Page_Master/Ship_Profile?Ship_ID="+Ship_ID;
+            var win = window.open(baseaddress+"Page_Master/Manage_Staff?Ship_ID=" + Ship_ID, '_blank');
+            win.focus();
+            //window.location = baseaddress + "Page_Master/Manage_Staff?Ship_ID="+Ship_ID;
         }
     </script>
 </asp:Content>

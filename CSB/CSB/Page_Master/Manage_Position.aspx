@@ -1,6 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Master/TrangChu.Master" AutoEventWireup="true" CodeBehind="Manage_Position.aspx.cs" Inherits="CSB.Page_Master.Manage_Position" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-        <div id="form1">
+    <div id="form1">
         <div class="section-header">
             <div class="section">
                 <div class="section-header">
@@ -56,7 +57,7 @@
             </div>
         </div>
     </div>
-        <div class="modal fade" id="model-edit-position" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog">
+    <div class="modal fade" id="model-edit-position" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="card auth_form" style="margin-bottom: 0px">
@@ -83,7 +84,7 @@
                                     </div>
                                 </div>
                             </div>
-                            
+
                             <p id="Error_EditPosition" hidden="hidden" class="textER" style="color: red; margin-left: 25px;">Lỗi</p>
                         </div>
                     </div>
@@ -116,7 +117,7 @@
                         i = i + 1;
                     });
                     tabletext += "</tbody>";
-                    $('#table_position').html(tabletext); 
+                    $('#table_position').html(tabletext);
                     console.log("okGET");
                     loadTablePosition();
                 }, error: function (ret) {

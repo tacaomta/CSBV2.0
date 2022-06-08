@@ -289,6 +289,7 @@
     <Content Include="Page_Master\Manage_Ranking.aspx" />
     <Content Include="Page_Master\Manage_ship.aspx" />
     <Content Include="Page_Master\Manage_squadron.aspx" />
+    <Content Include="Page_Master\Manage_Staff.aspx" />
     <Content Include="Page_Master\Manage_Tau.aspx" />
     <Content Include="Page_Master\Manage_user.aspx" />
     <Content Include="Page_Master\Null.aspx" />
@@ -527,6 +528,13 @@
     </Compile>
     <Compile Include="Page_Master\Manage_squadron.aspx.designer.cs">
       <DependentUpon>Manage_squadron.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Page_Master\Manage_Staff.aspx.cs">
+      <DependentUpon>Manage_Staff.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page_Master\Manage_Staff.aspx.designer.cs">
+      <DependentUpon>Manage_Staff.aspx</DependentUpon>
     </Compile>
     <Compile Include="Page_Master\Manage_Tau.aspx.cs">
       <DependentUpon>Manage_Tau.aspx</DependentUpon>
