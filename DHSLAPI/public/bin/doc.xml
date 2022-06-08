@@ -823,7 +823,7 @@
             <param name="id">id tàu</param>
             <returns></returns>
         </member>
-        <member name="M:DHSLAPI.Controllers.MAYCHINHController.InsertMC(System.String,DHSLAPI.Models.MAYCHINH)">
+        <member name="M:DHSLAPI.Controllers.MAYCHINHController.InsertMC(System.String,DHSLAPI.Models.THONGTINMAY)">
             <summary>
             Thêm thông tin máy chính cho tàu
             </summary>
@@ -831,7 +831,7 @@
             <param name="mc">Thông tin máy chính</param>
             <returns></returns>
         </member>
-        <member name="M:DHSLAPI.Controllers.MAYCHINHController.UpdateMC(System.String,DHSLAPI.Models.MAYCHINH)">
+        <member name="M:DHSLAPI.Controllers.MAYCHINHController.UpdateMC(System.String,DHSLAPI.Models.THONGTINMAY)">
             <summary>
             Sửa thông tin máy chính
             </summary>
@@ -842,6 +842,41 @@
         <member name="M:DHSLAPI.Controllers.MAYCHINHController.DeleteMC(System.String)">
             <summary>
             Xoá thông tin máy chính của tàu
+            </summary>
+            <param name="id">id của tàu</param>
+            <returns></returns>
+        </member>
+        <member name="T:DHSLAPI.Controllers.MAYCHUYENDUNGController">
+            <summary>
+            Máy chuyên dụng
+            </summary>
+        </member>
+        <member name="M:DHSLAPI.Controllers.MAYCHUYENDUNGController.LAYTHONGTINMAYCHUYENDUNG(System.String)">
+            <summary>
+            Lấy thông tin máy chuyên dụng
+            </summary>
+            <param name="id">id tàu</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.MAYCHUYENDUNGController.InsertMCD(System.String,DHSLAPI.Models.MAYCHUYENDUNG)">
+            <summary>
+            Thêm thông tin máy chuyên dụng cho tàu
+            </summary>
+            <param name="id">id tàu</param>
+            <param name="mc">Thông tin máy chuyên dụng</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.MAYCHUYENDUNGController.UpdateMCD(System.String,DHSLAPI.Models.MAYCHUYENDUNG)">
+            <summary>
+            Sửa thông tin máy chuyên dụng
+            </summary>
+            <param name="id">id thông tin máy chuyên dụng</param>
+            <param name="mc">thông tin máy chuyên dụng mới</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.MAYCHUYENDUNGController.DeleteMCD(System.String)">
+            <summary>
+            Xoá thông tin máy chuyên dụng của tàu
             </summary>
             <param name="id">id của tàu</param>
             <returns></returns>
@@ -2471,34 +2506,204 @@
             Số két nước
             </summary>
         </member>
+        <member name="T:DHSLAPI.Models.THONGTINMAY">
+            <summary>
+            Thông tin các máy: máy chính, máy phụ phát điện, máy chuyên dụng
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.THONGTINMAY.ID">
+            <summary>
+            ID máy
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.THONGTINMAY.THONGSOCOBAN">
+            <summary>
+            Thông số cơ bản
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.THONGTINMAY.PHUONGPHAPTRUYENTAI">
+            <summary>
+            Phương pháp truyền tải
+            </summary>
+        </member>
+        <member name="T:DHSLAPI.Models.THONGSOCOBAN">
+            <summary>
+            THông số cơ bản
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.THONGSOCOBAN.KYHIEU">
+            <summary>
+            Ký hiệu máy
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.THONGSOCOBAN.NAMSANXUAT">
+            <summary>
+            Năm sản xuất
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.THONGSOCOBAN.NOISANXUAT">
+            <summary>
+            Nơi sản xuất
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.THONGSOCOBAN.NAMLAPRAP">
+            <summary>
+            Năm lắp ráp
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.THONGSOCOBAN.VITRILAPRAP">
+            <summary>
+            Vị trí lắp ráp
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.THONGSOCOBAN.SOHIEUMAY">
+            <summary>
+            Số hiệu máy
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.THONGSOCOBAN.CONGSUAT">
+            <summary>
+            Công suất (CV;Kw)
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.THONGSOCOBAN.VONGQUAY">
+            <summary>
+            Vòng quay (Vòng/ph)
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.THONGSOCOBAN.CHIEUQUAY">
+            <summary>
+            Chiều quay
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.THONGSOCOBAN.NGUONKHOIDONG">
+            <summary>
+            Nguồn khởi động
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.THONGSOCOBAN.HETHONGDIEUKHIEN">
+            <summary>
+            Hệ thống điều khiển
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.THONGSOCOBAN.KICHTHUOCMAY">
+            <summary>
+            Kích thước
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.THONGSOCOBAN.TRONGLUONG">
+            <summary>
+            Trọng lượng khô (kg)
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.THONGSOCOBAN.CHUKYSUACHUA">
+            <summary>
+            Chu kỳ sửa chữa
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.THONGSOCOBAN.LOAIDIEN">
+            <summary>
+            Loại điện
+            </summary>
+        </member>
+        <member name="T:DHSLAPI.Models.PHUONGPHAPTRUYENTAI">
+            <summary>
+            Phương pháp truyền tải
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.PHUONGPHAPTRUYENTAI.KYHIEULYHOP_BOGIAMVONG">
+            <summary>
+            Ký hiệu ly hợp - bộ giảm vòng
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.PHUONGPHAPTRUYENTAI.SOHIEULYHOP_BOGIAMVONG">
+            <summary>
+            Số hiệu ly hợp - bộ giảm vòng
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.PHUONGPHAPTRUYENTAI.TYSOTRUYEN">
+            <summary>
+            Tỷ số truyền
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.PHUONGPHAPTRUYENTAI.KHOPNOICUNG">
+            <summary>
+            Khớp nối cứng
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.PHUONGPHAPTRUYENTAI.KHOPNOIMEM">
+            <summary>
+            Khớp nối mềm
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.PHUONGPHAPTRUYENTAI.CUROA">
+            <summary>
+            Số lượng và kích thước của dây curoa
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.PHUONGPHAPTRUYENTAI.KYHIEUVONGBI">
+            <summary>
+            Ký hiệu vòng bi
+            </summary>
+        </member>
+        <member name="T:DHSLAPI.Models.LOAIDIEN">
+            <summary>
+            Loại điện
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.LOAIDIEN.DIENAP">
+            <summary>
+            Điện áp (V)
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.LOAIDIEN.TANSO">
+            <summary>
+            Tần số (Hz)
+            </summary>
+        </member>
+        <member name="T:DHSLAPI.Models.CHUKYSUACHUA">
+            <summary>
+            Chu kỳ sửa chữa
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.CHUKYSUACHUA.TIEUTU">
+            <summary>
+            Tiểu tu (h)
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.CHUKYSUACHUA.TRUNGTU">
+            <summary>
+            Trung tu (h)
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.CHUKYSUACHUA.DAITU">
+            <summary>
+            Đại tu (h)
+            </summary>
+        </member>
+        <member name="T:DHSLAPI.Models.KICHTHUOCMAY">
+            <summary>
+            Kích thước máy
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.KICHTHUOCMAY.DAI">
+            <summary>
+            Chiều dài (m)
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.KICHTHUOCMAY.RONG">
+            <summary>
+            Chiều rộng (m)
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.KICHTHUOCMAY.CAO">
+            <summary>
+            Chiều cao (m)
+            </summary>
+        </member>
         <member name="T:DHSLAPI.Models.MAYCHINH">
             <summary>
-            Máy chính v2.0
-            </summary>
-        </member>
-        <member name="P:DHSLAPI.Models.MAYCHINH.ID">
-            <summary>
-            ID máy chính
-            </summary>
-        </member>
-        <member name="P:DHSLAPI.Models.MAYCHINH.VITRIDAT">
-            <summary>
-            Vị trí đặt
-            </summary>
-        </member>
-        <member name="P:DHSLAPI.Models.MAYCHINH.KYHIEU">
-            <summary>
-            Ký hiệu
-            </summary>
-        </member>
-        <member name="P:DHSLAPI.Models.MAYCHINH.CONGSUAT">
-            <summary>
-            Công suất (CV)
-            </summary>
-        </member>
-        <member name="P:DHSLAPI.Models.MAYCHINH.VONGQUAY">
-            <summary>
-            Vòng quay (vòng/phút)
+            Máy chính
             </summary>
         </member>
         <member name="T:DHSLAPI.Models.MAYPHUPHATDIEN">
@@ -2506,39 +2711,9 @@
             Máy phụ phát điện
             </summary>
         </member>
-        <member name="P:DHSLAPI.Models.MAYPHUPHATDIEN.ID">
+        <member name="T:DHSLAPI.Models.MAYCHUYENDUNG">
             <summary>
-            Id máy phụ phát điện
-            </summary>
-        </member>
-        <member name="P:DHSLAPI.Models.MAYPHUPHATDIEN.VITRIDAT">
-            <summary>
-            Vị trí đặt
-            </summary>
-        </member>
-        <member name="P:DHSLAPI.Models.MAYPHUPHATDIEN.KYHIEU">
-            <summary>
-            Ký hiệu
-            </summary>
-        </member>
-        <member name="P:DHSLAPI.Models.MAYPHUPHATDIEN.CONGSUAT">
-            <summary>
-            Công suất (CV/Kw)
-            </summary>
-        </member>
-        <member name="P:DHSLAPI.Models.MAYPHUPHATDIEN.VONGQUAY">
-            <summary>
-            Vòng quay (vòng/phút)
-            </summary>
-        </member>
-        <member name="P:DHSLAPI.Models.MAYPHUPHATDIEN.LOAIDIENAP">
-            <summary>
-            Loại điện áp (V)
-            </summary>
-        </member>
-        <member name="P:DHSLAPI.Models.MAYPHUPHATDIEN.TANSO">
-            <summary>
-            Tần số (Hz)
+            Tổ hợp dự phòng và chuyên dùng
             </summary>
         </member>
         <member name="T:DHSLAPI.Models.MAYNENKHI">
@@ -2988,12 +3163,12 @@
             <param name="tv">thông tin thân vỏ mới</param>
             <returns></returns>
         </member>
-        <member name="M:ShipyardInfo.classes.Connection.SUATHONGTINMAYCHINHTAU(System.String,DHSLAPI.Models.MAYCHINH)">
+        <member name="M:ShipyardInfo.classes.Connection.SUATHONGTINMAYTAU(System.String,DHSLAPI.Models.THONGTINMAY)">
             <summary>
-            Sửa thông tin máy chính
+            Sửa thông tin máy nói chung: máy chính, máy phụ, máy chuyên dụng
             </summary>
-            <param name="id">id thông tin máy chính</param>
-            <param name="tv">thông tin máy chính mới</param>
+            <param name="id">id thông tin máy</param>
+            <param name="mc">thông tin máy</param>
             <returns></returns>
         </member>
         <member name="M:ShipyardInfo.classes.Connection.SUATHONGTINMAYPHUTAU(System.String,DHSLAPI.Models.MAYPHUPHATDIEN)">
