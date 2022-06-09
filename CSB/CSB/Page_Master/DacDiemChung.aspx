@@ -88,47 +88,50 @@
                                         <input type="text" id="addTTC-CHUCNANG" class="form-control" placeholder="Ví dụ: Tuần tra" required>
                                     </div>
                                 </div>
-                                <%--<div class="form-group row" style="margin-bottom: 5px;">
-                                    <label class="col-sm-2 col-form-label">Thay đổi số hiệu: </label>
-                                    <div class="col-sm-10">
-                                        <div class="btn-group btn-group-right" role="group" aria-label="Basic example">
-                                            <button type="button" class="btn btn-primary"><i class="fas fa-bars"></i>Thêm</button>
+                                <div id="divSoHieu" disabled="">
+                                    <div class="form-group row" style="margin-bottom: 5px;">
+                                        <label class="col-sm-2 col-form-label">Thay đổi số hiệu: </label>
+                                        <div class="col-sm-10">
+                                            <div class="btn-group btn-group-right" role="group" aria-label="Basic example">
+                                                <button type="button" class="btn btn-primary"><i class="bi bi-plus-circle"></i> Thay đổi</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <div class="col-sm-2"></div>
+                                        <div class="col-sm-10">
+                                            <div class="table-responsive">
+                                                <table id="table-THAYDOISOHIEU" class="table table-bordered" style="width: 100%;">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>Tháng, năm</th>
+                                                            <th>Số hiệu</th>
+                                                            <th>Cấp quy định</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>Mark</td>
+                                                            <td>Otto</td>
+                                                            <td>@mdo</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Jacob</td>
+                                                            <td>Thornton</td>
+                                                            <td>@fat</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Larry</td>
+                                                            <td>the Bird</td>
+                                                            <td>@twitter</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="form-group row">
-                                    <div class="col-sm-2"></div>
-                                    <div class="col-sm-10">
-                                        <div class="table-responsive">
-                                            <table class="table table-bordered" style="width:100%;">
-                                                <thead>
-                                                    <tr>
-                                                        <th>Tháng, năm</th>
-                                                        <th>Số hiệu</th>
-                                                        <th>Cấp quy định</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr>
-                                                        <td>Mark</td>
-                                                        <td>Otto</td>
-                                                        <td>@mdo</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Jacob</td>
-                                                        <td>Thornton</td>
-                                                        <td>@fat</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Larry</td>
-                                                        <td>the Bird</td>
-                                                        <td>@twitter</td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                    </div>
-                                </div>--%>
+
                                 <h4 class="sub-title">Lượng giãn nước (tấn)</h4>
                                 <div class="row">
                                     <div class="col-sm-6">
@@ -397,8 +400,12 @@
                                         <a href="../Page_Master/Manage_Tau?vung=1" style="float: left" class="btn btn-success"><i class="bi bi-arrow-left-circle"></i> Quay lại</a>
                                     </div>
                                     <div class="right">
-                                        <div onclick="remove_input_add_ship()" class="btn btn-danger"><i class="bi bi-x-circle"></i> Xoá ô nhập</div>
-                                        <button type="submit" class="btn btn-primary right" onclick="addTau()"><i class="bi bi-plus-circle"></i> Lưu thông tin</button>
+                                        <div onclick="remove_input_add_ship()" class="btn btn-danger" style="margin-right: 10px;"><i class="bi bi-arrow-counterclockwise"></i>
+                                            <span id="text-remove-input">Xoá ô nhập</span>
+                                        </div>
+                                        <div class="btn btn-primary right" onclick="addTau()"><i class="bi bi-plus-circle"></i>
+                                            <span id="text-save">Lưu thông tin</span>
+                                        </div>
                                     </div>
                                 </div>
                             </form>
@@ -434,6 +441,9 @@
 
             if (themtau) {
                 $("#name").text("THÊM MỚI TÀU");
+                $("#text-remove-input").text(" Xóa ô nhập");
+                $("#text-save").text(" Lưu thông tin");
+                $("#divSoHieu").css("display", "none");
                 loadVung();
             }
             else {
@@ -442,6 +452,9 @@
                 $("#addTTC-VUNG").attr('disabled', '');
                 $("#addTTC-HAIDOAN").attr('disabled', '');
                 $("#addTTC-HAIDOI").attr('disabled', '');
+                $("#text-remove-input").text(" Đặt lại dữ liệu");
+                $("#text-save").text(" Sửa thông tin");
+                loadDataShip(Ship_ID);
             }
 
             //$('table').each(function () {
@@ -575,135 +588,245 @@
         }
 
         function addTau() {
-            var date = new Date();
-            var strDate = '' + date.getDate() + '/' + (Number(date.getMonth()) + 1) + '/' + date.getFullYear() + ' ' + date.getHours() + ':' + date.getMinutes() + ':' + date.getSeconds();
-            if (Number(date.getMonth()) + 1 < 10) {
-                debugger
-                var strDate_ntn = '' + date.getFullYear() + '-' + '0' + (Number(date.getMonth()) + 1) + '-' + date.getDate();
+            if (getParameterByName("id") != null) {
+                
             }
             else {
-                var strDate_ntn = '' + date.getFullYear() + '-' + (Number(date.getMonth()) + 1) + '-' + date.getDate();
-            }
+                var date = new Date();
+                var strDate = '' + date.getDate() + '/' + (Number(date.getMonth()) + 1) + '/' + date.getFullYear() + ' ' + date.getHours() + ':' + date.getMinutes() + ':' + date.getSeconds();
+                if (Number(date.getMonth()) + 1 < 10) {
+                    debugger
+                    var strDate_ntn = '' + date.getFullYear() + '-' + '0' + (Number(date.getMonth()) + 1) + '-' + date.getDate();
+                }
+                else {
+                    var strDate_ntn = '' + date.getFullYear() + '-' + (Number(date.getMonth()) + 1) + '-' + date.getDate();
+                }
 
-            var newShip = {
-                TTCOBAN: {
-                    SOHIEU: $("#addTTC-SOHIEU").val(),
-                    KYHIEU: $("#addTTC-KYHIEU").val(),
-                    NOISANXUAT: $("#addTTC-NOISANXUAT").val(),
-                    NAMHATHUY: $("#addTTC-NAMHATHUY").val(),
-                    NAMTIEPNHAN: $("#addTTC-NAMTIEPNHAN").val(),
-                    CHUCNANG: $("#addTTC-CHUCNANG").val()
-                },
-                GIANNUOC: {
-                    Dmax: $("#addLGN-Dmax").val(),
-                    Dmin: $("#addLGN-Dmin").val()
-                },
-                KT: {
-                    Lmax: $("#addKT-Lmax").val(),
-                    Ltk: $("#addKT-Ltk").val(),
-                    Bmax: $("#addKT-Bmax").val(),
-                    Htb: $("#addKT-Htb").val(),
-                    Hmax: $("#addKT-Hmax").val(),
-                    Dmax: $("#addKT-Dmax").val()
-                },
-                MN: {
-                    Tm: $("#addMN-Tm").val(),
-                    Ttb: $("#addMN-Ttb").val(),
-                    Td: $("#addMN-Td").val(),
-                    Tmax: $("#addMN-Tmax").val()
-                },
-                VT: {
-                    Vmax: $("#addVT-Vmax").val(),
-                    Vkt: $("#addVT-Vkt").val()
-                },
-                KNHD: {
-                    H1: $("#addKNHD-H1").val(),
-                    Tm: $("#addKNHD-Tm").val(),
-                    Wmax: $("#addKNHD-Wmax").val(),
-                },
-                LDT: {
-                    DCKH: $("#addLDT-DCKH").val(),
-                    DCSL: $("#addLDT-DCSL").val(),
-                    DNKH: $("#addLDT-DNKH").val(),
-                    DNSL: $("#addLDT-DNSL").val(),
-                    MN: $("#addLDT-MN").val(),
-                    MNSL: $("#addLDT-MNSL").val()
-                },
-                BC: {
-                    QS: String(Number($("#addBC-SQ").val()) + Number($("#addBC-VCQP").val()) + Number($("#addBC-QNCN").val()) + Number($("#addBC-HSQCS").val())),
-                    SQ: $("#addBC-SQ").val(),
-                    VCQP: $("#addBC-VCQP").val(),
-                    QNCN: $("#addBC-QNCN").val(),
-                    HSQCS: $("#addBC-HSQCS").val()
-                },
-                Meta: {
-                    Created: "",
-                    LastUpdated: ""
-                },
-                FlotID: $("#addTTC-HAIDOI").val()
-            };
-            console.log(newShip);
-            console.log(linkapi + "v2/insert_ship");
-            var form = document.getElementById("addTau");
-            console.log(form.checkValidity());
-            if (form.checkValidity() == true) {
-                $.ajax({
-                    type: "POST",
-                    url: linkapi + "v2/insert_ship",
-                    dataType: "json",
-                    data: JSON.stringify(newShip),
-                    contentType: "application/json",
-                    success: function (data) {
-                        toastSuccess("Thành công", "Thêm tàu thành công!");
-                        console.log("data: " + data);
-                        debugger
-                    }, error: function (ret) {
-                        toastError("Thất bại", ret.responseJSON.Message);
+                var newShip = {
+                    TTCOBAN: {
+                        SOHIEU: $("#addTTC-SOHIEU").val(),
+                        KYHIEU: $("#addTTC-KYHIEU").val(),
+                        NOISANXUAT: $("#addTTC-NOISANXUAT").val(),
+                        NAMHATHUY: $("#addTTC-NAMHATHUY").val(),
+                        NAMTIEPNHAN: $("#addTTC-NAMTIEPNHAN").val(),
+                        CHUCNANG: $("#addTTC-CHUCNANG").val()
                     },
-                });
+                    GIANNUOC: {
+                        Dmax: $("#addLGN-Dmax").val(),
+                        Dmin: $("#addLGN-Dmin").val()
+                    },
+                    KT: {
+                        Lmax: $("#addKT-Lmax").val(),
+                        Ltk: $("#addKT-Ltk").val(),
+                        Bmax: $("#addKT-Bmax").val(),
+                        Htb: $("#addKT-Htb").val(),
+                        Hmax: $("#addKT-Hmax").val(),
+                        Dmax: $("#addKT-Dmax").val()
+                    },
+                    MN: {
+                        Tm: $("#addMN-Tm").val(),
+                        Ttb: $("#addMN-Ttb").val(),
+                        Td: $("#addMN-Td").val(),
+                        Tmax: $("#addMN-Tmax").val()
+                    },
+                    VT: {
+                        Vmax: $("#addVT-Vmax").val(),
+                        Vkt: $("#addVT-Vkt").val()
+                    },
+                    KNHD: {
+                        H1: $("#addKNHD-H1").val(),
+                        Tm: $("#addKNHD-Tm").val(),
+                        Wmax: $("#addKNHD-Wmax").val(),
+                    },
+                    LDT: {
+                        DCKH: $("#addLDT-DCKH").val(),
+                        DCSL: $("#addLDT-DCSL").val(),
+                        DNKH: $("#addLDT-DNKH").val(),
+                        DNSL: $("#addLDT-DNSL").val(),
+                        MN: $("#addLDT-MN").val(),
+                        MNSL: $("#addLDT-MNSL").val()
+                    },
+                    BC: {
+                        QS: String(Number($("#addBC-SQ").val()) + Number($("#addBC-VCQP").val()) + Number($("#addBC-QNCN").val()) + Number($("#addBC-HSQCS").val())),
+                        SQ: $("#addBC-SQ").val(),
+                        VCQP: $("#addBC-VCQP").val(),
+                        QNCN: $("#addBC-QNCN").val(),
+                        HSQCS: $("#addBC-HSQCS").val()
+                    },
+                    Meta: {
+                        Created: "",
+                        LastUpdated: ""
+                    },
+                    FlotID: $("#addTTC-HAIDOI").val()
+                };
+                console.log(newShip);
+                console.log(linkapi + "v2/insert_ship");
+                var form = document.getElementById("addTau");
+                console.log(form.checkValidity());
+                if (form.checkValidity() == true) {
+                    $.ajax({
+                        type: "POST",
+                        url: linkapi + "v2/insert_ship",
+                        dataType: "json",
+                        data: JSON.stringify(newShip),
+                        contentType: "application/json",
+                        success: function (data) {
+                            toastSuccess("Thành công", "Thêm tàu thành công!");
+                            console.log("data: " + data);
+                            debugger
+                        }, error: function (ret) {
+                            toastError("Thất bại", ret.responseJSON.Message);
+                        },
+                    });
+                }
             }
         }
 
         function remove_input_add_ship() {
-            $("#addTTC-SOHIEU").val("");
-            $("#addTTC-KYHIEU").val("");
-            $("#addTTC-NOISANXUAT").val("");
-            $("#addTTC-NAMHATHUY").val("");
-            $("#addTTC-NAMTIEPNHAN").val("");
-            $("#addTTC-CHUCNANG").val("");
-            $("#addLGN-Dmax").val("");
-            $("#addLGN-Dmin").val("");
-            $("#addKT-Lmax").val("");
-            $("#addKT-Ltk").val("");
-            $("#addKT-Bmax").val("");
-            $("#addKT-Htb").val("");
-            $("#addKT-Hmax").val("");
-            $("#addKT-Dmax").val("");
-            $("#addMN-Tm").val("");
-            $("#addMN-Ttb").val("");
-            $("#addMN-Td").val("");
-            $("#addMN-Tmax").val("");
-            $("#addVT-Vmax").val("");
-            $("#addVT-Vkt").val("");
-            $("#addKNHD-H1").val("");
-            $("#addKNHD-Tm").val("");
-            $("#addKNHD-Wmax").val("");
-            $("#addLDT-DCKH").val("");
-            $("#addLDT-DCSL").val("");
-            $("#addLDT-DNKH").val("");
-            $("#addLDT-DNSL").val("");
-            $("#addLDT-MN").val("");
-            $("#addLDT-MNSL").val("");
-            $("#addBC-QS").val("");
-            $("#addBC-SQ").val("");
-            $("#addBC-VCQP").val("");
-            $("#addBC-QNCN").val("");
-            $("#addBC-HSQCS").val("");
-            $("#addTTC-SOHIEU").removeClass("need-validated");
-            $("#addTTC-KYHIEU").removeClass("need-validated");
-            $("#addTTC-NAMTIEPNHAN").removeClass("need-validated");
-            $("#addTTC-CHUCNANG").removeClass("need-validated");
+            if (getParameterByName("id") != null) {
+                loadDataShip(getParameterByName("id"));
+            }
+            else {
+                $("#addTTC-SOHIEU").val("");
+                $("#addTTC-KYHIEU").val("");
+                $("#addTTC-NOISANXUAT").val("");
+                $("#addTTC-NAMHATHUY").val("");
+                $("#addTTC-NAMTIEPNHAN").val("");
+                $("#addTTC-CHUCNANG").val("");
+                $("#addLGN-Dmax").val("");
+                $("#addLGN-Dmin").val("");
+                $("#addKT-Lmax").val("");
+                $("#addKT-Ltk").val("");
+                $("#addKT-Bmax").val("");
+                $("#addKT-Htb").val("");
+                $("#addKT-Hmax").val("");
+                $("#addKT-Dmax").val("");
+                $("#addMN-Tm").val("");
+                $("#addMN-Ttb").val("");
+                $("#addMN-Td").val("");
+                $("#addMN-Tmax").val("");
+                $("#addVT-Vmax").val("");
+                $("#addVT-Vkt").val("");
+                $("#addKNHD-H1").val("");
+                $("#addKNHD-Tm").val("");
+                $("#addKNHD-Wmax").val("");
+                $("#addLDT-DCKH").val("");
+                $("#addLDT-DCSL").val("");
+                $("#addLDT-DNKH").val("");
+                $("#addLDT-DNSL").val("");
+                $("#addLDT-MN").val("");
+                $("#addLDT-MNSL").val("");
+                $("#addBC-QS").val("");
+                $("#addBC-SQ").val("");
+                $("#addBC-VCQP").val("");
+                $("#addBC-QNCN").val("");
+                $("#addBC-HSQCS").val("");
+                $("#addTTC-SOHIEU").removeClass("need-validated");
+                $("#addTTC-KYHIEU").removeClass("need-validated");
+                $("#addTTC-NAMTIEPNHAN").removeClass("need-validated");
+                $("#addTTC-CHUCNANG").removeClass("need-validated");
+            }
         }
+
+        function loadDataShip(id) {
+            if (id != "") {
+                $.ajax({
+                    type: "GET",
+                    url: linkapi + "dacdiemchung?id=" + id,
+                    dataType: "json",
+                    success: function (data) {
+                        $("#addTTC-SOHIEU").val(data.THONGTIN.TTCOBAN.SOHIEU);
+                        $("#addTTC-KYHIEU").val(data.THONGTIN.TTCOBAN.KYHIEU);
+                        $("#addTTC-NOISANXUAT").val(data.THONGTIN.TTCOBAN.NOISANXUAT);
+                        $("#addTTC-NAMHATHUY").val(data.THONGTIN.TTCOBAN.NAMHATHUY);
+                        $("#addTTC-NAMTIEPNHAN").val(data.THONGTIN.TTCOBAN.NAMTIEPNHAN);
+                        $("#addTTC-CHUCNANG").val(data.THONGTIN.TTCOBAN.CHUCNANG);
+                        // Vùng, hải đoàn, hải đội
+                        // thông tin thay đổi số hiệu
+                        var tabletext = "<thead><tr><th>Tháng, năm</th><th>Số hiệu</th><th>Cấp quy định</th></thead><tbody>";
+                        var i = 1;
+                        $.each(data.TDSOHIEU, function (key, item) {
+                            tabletext += "<tr><td>" + i + "</td><td>" + item.THANGNAM + "</td><td>" + item.SOHIEU + "</td><td>" + item.CAPQUYDINH + "</td></tr>";
+                            i = i + 1;
+                        });
+                        tabletext += "</tbody>";
+                        $('#table-THAYDOISOHIEU').html(tabletext);
+                        loadTableTHAYDOISOHIEU();
+                        debugger
+                        $("#addLGN-Dmax").val(data.THONGTIN.GIANNUOC.Dmax);
+                        $("#addLGN-Dmin").val(data.THONGTIN.GIANNUOC.Dmin);
+                        $("#addKT-Lmax").val(data.THONGTIN.KT.Lmax);
+                        $("#addKT-Ltk").val(data.THONGTIN.KT.Ltk);
+                        $("#addKT-Bmax").val(data.THONGTIN.KT.Bmax);
+                        $("#addKT-Htb").val(data.THONGTIN.KT.Htb);
+                        $("#addKT-Hmax").val(data.THONGTIN.KT.Hmax);
+                        $("#addKT-Dmax").val(data.THONGTIN.KT.Dmax);
+                        $("#addMN-Tm").val(data.THONGTIN.MN.Tm);
+                        $("#addMN-Ttb").val(data.THONGTIN.MN.Ttb);
+                        $("#addMN-Td").val(data.THONGTIN.MN.Td);
+                        $("#addMN-Tmax").val(data.THONGTIN.MN.Tmax);
+                        $("#addVT-Vmax").val(data.THONGTIN.VT.Vmax);
+                        $("#addVT-Vkt").val(data.THONGTIN.VT.Vkt);
+                        $("#addKNHD-H1").val(data.THONGTIN.KNHD.H1);
+                        $("#addKNHD-Tm").val(data.THONGTIN.KNHD.Tm);
+                        $("#addKNHD-Wmax").val(data.THONGTIN.KNHD.Wmax);
+                        $("#addLDT-DCKH").val(data.THONGTIN.LDT.DCKH);
+                        $("#addLDT-DCSL").val(data.THONGTIN.LDT.DCSL);
+                        $("#addLDT-DNKH").val(data.THONGTIN.LDT.DNKH);
+                        $("#addLDT-DNSL").val(data.THONGTIN.LDT.DNSL);
+                        $("#addLDT-MN").val(data.THONGTIN.LDT.MN);
+                        $("#addLDT-MNSL").val(data.THONGTIN.LDT.MNSL);
+                        $("#addBC-QS").val(data.THONGTIN.BC.QS);
+                        $("#addBC-SQ").val(data.THONGTIN.BC.SQ);
+                        $("#addBC-VCQP").val(data.THONGTIN.BC.VCQP);
+                        $("#addBC-QNCN").val(data.THONGTIN.BC.QNCN);
+                        $("#addBC-HSQCS").val(data.THONGTIN.BC.HSQCS);
+                        $("#addTTC-SOHIEU").removeClass("need-validated");
+                        $("#addTTC-KYHIEU").removeClass("need-validated");
+                        $("#addTTC-NAMTIEPNHAN").removeClass("need-validated");
+                        $("#addTTC-CHUCNANG").removeClass("need-validated");
+                    }, error: function (ret) {
+                        console.log('errorGET');
+                    },
+                });
+            }
+            
+        }
+
+        function loadTableTHAYDOISOHIEU() {
+            $('table[id=table-THAYDOISOHIEU]').each(function () {
+                var table1 = $(this).DataTable({
+                    destroy: true,
+                    stateSave: true,
+                    searching: false,
+                    "columns": [
+                        { name: 'Tháng, năm', width: 40 },
+                        { name: 'Số hiệu', width: 160 },
+                        { name: 'Cấp quy định', width: 160 },
+                    ],
+                    lengthChange: false,
+                    "language": {
+                        "sProcessing": "Đang xử lý...",
+                        "sLengthMenu": "Xem _MENU_ mục",
+                        "sZeroRecords": "Không tìm thấy thông tin phù hợp",
+                        "sInfo": "Đang xem _START_ đến _END_ trong tổng số _TOTAL_ mục",
+                        "sInfoEmpty": "Đang xem 0 đến 0 trong tổng số 0 mục",
+                        "sInfoFiltered": "(được lọc từ _MAX_ mục)",
+                        "sInfoPostFix": "",
+                        "sSearch": "Tìm kiếm: ",
+                        "sUrl": "",
+                        "oPaginate": {
+                            "sFirst": "Đầu",
+                            "sPrevious": "Trước",
+                            "sNext": "Tiếp",
+                            "sLast": "Cuối"
+                        }
+                    }
+                });
+                table1.buttons().container()
+                    .appendTo('this_wrapper .col-md-6:eq(0)');
+            });
+        };
     </script>
 
 
