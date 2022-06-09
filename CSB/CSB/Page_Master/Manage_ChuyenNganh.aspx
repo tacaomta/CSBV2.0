@@ -174,7 +174,7 @@
                 });
                 table1.buttons().container()
                     .appendTo('this_wrapper .col-md-6:eq(0)');
-                $('.col-sm-12').first().html('<div class="btn-group"><button onclick="btn_Load_listmajor()" class="btn btn-lg btn-primary mb-3"><span class="glyphicon glyphicon-refresh"></span> &nbsp;Load dữ liệu</button><button id="btn_addmajor" onclick="btn_addmajor()" class="btn btn-lg btn-primary mb-3" data-toggle="modal" data-target="#model-add-major" style=" padding - top: 4px;margin - top: -4px;"><span class="glyphicon glyphicon-plus-sign"></span> Thêm chuyên ngành</button></div>');
+                $('.col-sm-12').first().html('<div class="btn-group"><button onclick="btn_Load_listmajor()" class="btn btn-lg btn-primary mb-3"><i class="bi-arrow-repeat"></i> Load dữ liệu</button><button id="btn_addmajor" onclick="btn_addmajor()" class="btn btn-lg btn-primary mb-3" data-toggle="modal" data-target="#model-add-major" style=" padding - top: 4px;margin - top: -4px;"><i class="bi bi-plus-circle"></i>  Thêm chuyên ngành</button></div>');
             });
         };
         function btn_Load_listmajor() {

@@ -35,7 +35,7 @@
                                 <div class="form-group row">
                                     <label class="col-lg-4 col-md-3 col-form-label">Năm sinh <span style="color: red;">(*)</span>: </label>
                                     <div class="col-lg-8 col-md-9">
-                                        <input type="number" id="add-staffBirthYear" class="form-control" required >
+                                        <input type="number" id="add-staffBirthYear" class="form-control" required>
                                     </div>
                                 </div>
                             </div>
@@ -174,14 +174,14 @@
 
                         <div class="form-footer">
                             <div class="left">
-                                <a href="javascript: history.go(-1)" style="float: left" class="btn btn-success"><i class="bi bi-arrow-left-circle"></i> Quay lại</a>
+                                <a href="javascript: history.go(-1)" style="float: left" class="btn btn-success"><i class="bi bi-arrow-left-circle"></i>&nbsp;Quay lại</a>
                             </div>
                             <div class="right">
                                 <div class="btn-group">
-                                    <button type="button" onclick="remove_input_add_ship()" class="btn btn-danger"><i class="bi bi-x-circle"></i> Xoá ô nhập</button>
-                                    <button type="button" class="btn btn-primary right" onclick="addStaff()"><i class="bi bi-plus-circle"></i> Lưu thông tin</button>
+                                    <button type="button" onclick="remove_input_add_ship()" class="btn btn-danger"><i class="bi bi-x-circle"></i>&nbsp;Xoá ô nhập</button>
+                                    <button type="button" class="btn btn-primary right" onclick="addStaff()"><i class="bi bi-plus-circle"></i>&nbsp;Lưu thông tin</button>
                                 </div>
-                                
+
                             </div>
 
                         </div>
@@ -511,7 +511,7 @@
             $("#add-staffLeave").val("");
             $("#add-staffLeaveDate").val("");
             $("#add-staffNote").val("");
-            
+
             $("#add-staffFullName").removeClass("need-validated");
             $("#add-staffBirthYear").removeClass("need-validated");
             $("#add-staffResidence").removeClass("need-validated");
