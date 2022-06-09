@@ -20,7 +20,7 @@
                             </div>
                         </div>
                         <div class="card-block">
-                            <form id="addTau">
+                            <form id="addTau" onsubmit="return false">
                                 <h4 class="sub-title">Thông tin cơ bản</h4>
                                 <div class="row">
                                     <div class="col-sm-6">
@@ -403,9 +403,9 @@
                                         <div onclick="remove_input_add_ship()" class="btn btn-danger" style="margin-right: 10px;"><i class="bi bi-arrow-counterclockwise"></i>
                                             <span id="text-remove-input">Xoá ô nhập</span>
                                         </div>
-                                        <div class="btn btn-primary right" onclick="addTau()"><i class="bi bi-plus-circle"></i>
+                                        <button type="submit" class="btn btn-primary right" onclick="addTau()"><i class="bi bi-plus-circle"></i>
                                             <span id="text-save">Lưu thông tin</span>
-                                        </div>
+                                        </button>
                                     </div>
                                 </div>
                             </form>

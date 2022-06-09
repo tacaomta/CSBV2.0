@@ -82,7 +82,7 @@
                 }
 
             .card .card-block {
-                padding: 20px;
+                padding: 18px;
             }
 
                 .card .card-block .sub-title {
@@ -187,9 +187,6 @@
             text-align: left;
             border-radius: unset;
             border: unset;
-        }
-        .btn-primary {
-            background-color: #1081ba;
         }
 
         #accordion {
@@ -946,7 +943,7 @@
                     <asp:ContentPlaceHolder ID="MainContent" runat="server"></asp:ContentPlaceHolder>
                 </div>
 
-                <div class="toast mt-3">
+                <div class="toast mt-3 hide">
                     <div class="toast-header">
                         <p id="toast-header" class="mr-auto toast-header-text">Toast Header</p>
                         <button type="button" class="ml-2 mb-3 close" data-dismiss="toast">×</button>

@@ -43,13 +43,13 @@
                         1. <a onclick="DS_CB_NV()" href="#">Danh sách đội ngũ cán bộ, nhân viên kỹ thuật</a>
                     </div>
                     <div class="profile-link">
-                        2. <a href="#">Đặc điểm chung của tàu</a>
+                        2. <a onclick="DacDiemChung()" href="#">Đặc điểm chung của tàu</a>
                     </div>
                     <div class="profile-link">
                         3. <a href="#">Tính năng chủ yếu của tàu</a>
                     </div>
                     <div class="profile-link">
-                        4. <a href="#">Tính năng các thiết bị</a>
+                        4. <a onclick="TinhNangThietBi()" href="#">Tính năng các thiết bị</a>
                     </div>
                     <div class="profile-link">
                         5. <a href="#">Theo dõi hoạt động của tàu</a>
@@ -123,6 +123,16 @@
 
         function DS_CB_NV() {
             var win = window.open(baseaddress + "Page_Master/Manage_Staff?Ship_ID=" + Ship_ID, '_blank');
+            win.focus();
+        }
+
+        function DacDiemChung() {
+            var win = window.open(baseaddress + "Page_Master/DacDiemChung?Ship_ID=" + Ship_ID, '_blank');
+            win.focus();
+        }
+
+        function TinhNangThietBi() {
+            var win = window.open(baseaddress + "Page_Master/TinhNangThietBi?Ship_ID=" + Ship_ID, '_blank');
             win.focus();
         }
     </script>
