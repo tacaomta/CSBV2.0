@@ -35,7 +35,7 @@
         $(document).ready(function () {
             Ship_ID = getParameterByName('Ship_ID');
             if (Ship_ID == null) {
-                window.location = baseaddress + "Page_Master/Manage_Tau?vung=1";
+                history.back();
             }
             else {
                 Load_Title(Ship_ID);
@@ -75,7 +75,7 @@
                         var tabletext = "<thead><tr><th>STT</th><th>HỌ VÀ TÊN</th><th>NĂM SINH</th><th>QUÊ QUÁN</th><th>GHI CHÚ</th><th>TÁC VỤ</th></tr></thead><tbody>";
                         var i = 1;
                         $.each(data, function (key, item) {
-                            tabletext += "<tr><td>" + i + "</td><td>" + item.FullName + "</td><td>" + item.BirthYear + "</td><td>" + item.Residence + "</td><td>" + item.Note + "</td>"+'<td><div style="width: max-content;"><a href="#" class="edit" onclick="editstaff(`' + item.ID + '`,`' + item.Name + '`,`' + item.Note + '`)"><i class="material-icons">&#xE254;</i></a><a href="#" class="delete" title="Xóa" onclick="delete_staff(`' + item.ID + '`)"><i class="material-icons">&#xE872;</i></a></div></td></tr>';
+                            tabletext += "<tr><td>" + i + "</td><td>" + item.FullName + "</td><td>" + item.BirthYear + "</td><td>" + item.Residence + "</td><td>" + item.Note + "</td>"+'<td><div style="width: max-content;"><a href="#" class="edit" onclick="editstaff(`' + item.ID + '`)"><i class="material-icons">&#xE254;</i></a><a href="#" class="delete" title="Xóa" onclick="delete_staff(`' + item.ID + '`)"><i class="material-icons">&#xE872;</i></a></div></td></tr>';
                             i = i + 1;
                         });
                         tabletext += "</tbody>";
@@ -145,5 +145,33 @@
 
             });
         };
+        function editstaff(Staff_ID) {
+            window.location = baseaddress + "Page_Master/Update_Staff?Staff_ID=" + Staff_ID;
+        }
+        function btn_addstaff() {
+            debugger
+            window.location = baseaddress + "Page_Master/Add_Staff?Ship_ID=" + Ship_ID;
+        }
+        function btn_Load_liststaff() {
+            location.reload(true);
+        }
+        function delete_staff(Staff_ID) {
+            let text = "Bạn có chắc muốn xóa cán bộ, nhân viên này?";
+            if (confirm(text) == true) {
+                $.ajax({
+                    url: linkapi + "delete_personnel?id=" + Staff_ID,
+                    type: "DELETE",
+
+                }).done(function (res) {
+                    Load_Title(Ship_ID);
+                    loadDataList_Staff(Ship_ID);
+                    toastSuccess("Thành công", "Xóa cán bộ, nhân viên thành công!");
+                }).fail(function (res) {
+                    toastError("Lỗi", "Xóa cán bộ, nhân viên không thành công!");
+                })
+            } else {
+
+            }
+        }
     </script>
 </asp:Content>
