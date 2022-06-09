@@ -736,6 +736,41 @@
             <param name="id">id của tàu</param>
             <returns></returns>
         </member>
+        <member name="T:DHSLAPI.Controllers.HETRUCCHANVITController">
+            <summary>
+            Hệ trục chân vịt: Trục + Chân vịt + Ổ đỡ
+            </summary>
+        </member>
+        <member name="M:DHSLAPI.Controllers.HETRUCCHANVITController.LAYTHONGTINHETRUCCHANVIT(System.String)">
+            <summary>
+            Lấy thông tin hệ trục chân vịt của tàu
+            </summary>
+            <param name="id">id tàu</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.HETRUCCHANVITController.InsertHTCV(System.String,DHSLAPI.Models.HETRUCCHANVIT)">
+            <summary>
+            Thêm thông tin hệ trục chân vịt cho tàu
+            </summary>
+            <param name="id">id tàu</param>
+            <param name="ht">Thông tin hệ trục chân vịt</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.HETRUCCHANVITController.UpdateHTCV(System.String,DHSLAPI.Models.HETRUCCHANVIT)">
+            <summary>
+            Sửa thông tin hệ trục chân vịt
+            </summary>
+            <param name="id">id hệ trục chân vịt</param>
+            <param name="ht">thông tin hệ trục chân vịt</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.HETRUCCHANVITController.DeleteHTCV(System.String)">
+            <summary>
+            Xoá thông tin hệ trục chân vịt
+            </summary>
+            <param name="id">id của hệ trục chân vịt</param>
+            <returns></returns>
+        </member>
         <member name="M:DHSLAPI.Controllers.InstitutionController.GetAll">
             <summary>
             Lấy toàn bộ danh mục trường đào tạo
@@ -1934,6 +1969,136 @@
         <member name="P:DHSLAPI.Models.Degree.Note">
             <summary>
             Ghi chú
+            </summary>
+        </member>
+        <member name="T:DHSLAPI.Models.HETRUCCHANVIT">
+            <summary>
+            Hệ trục chân vịt
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.HETRUCCHANVIT.ID">
+            <summary>
+            ID hệ trục
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.HETRUCCHANVIT.TRUC">
+            <summary>
+            Trục
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.HETRUCCHANVIT.CHANVIT">
+            <summary>
+            Chân vịt
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.HETRUCCHANVIT.ODO">
+            <summary>
+            Ổ đỡ
+            </summary>
+        </member>
+        <member name="T:DHSLAPI.Models.TRUC">
+            <summary>
+            Trục
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.TRUC.TONGCHIEUDAI">
+            <summary>
+            Tổng chiều dài
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.TRUC.VATLIEU">
+            <summary>
+            Vật liệu
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.TRUC.TONGTRONGLUONG">
+            <summary>
+            Tổng trọng lượng
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.TRUC.DUONGKINHTRUCGHEPCHANVIT">
+            <summary>
+            Đường kính trục ghép chân vịt (mm)
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.TRUC.DUONGKINHTRUCTRUNGGIAN">
+            <summary>
+            Đường kính trục trung gian (mm)
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.TRUC.DUONGKINHTRUCXOAN">
+            <summary>
+            Đường kính trục xoắn (mm)
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.TRUC.DUONGKINHTRUCCHAN">
+            <summary>
+            Đường kính trục chặn (mm)
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.TRUC.GOCNGIENGTRUC">
+            <summary>
+            Góc nghiêng trục (độ)
+            </summary>
+        </member>
+        <member name="T:DHSLAPI.Models.CHANVIT">
+            <summary>
+            Chân vịt
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.CHANVIT.LOAICHANVIT">
+            <summary>
+            Loại chân vịt
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.CHANVIT.DUONGKINH">
+            <summary>
+            Đường kính (mm)
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.CHANVIT.SOCANH">
+            <summary>
+            Số cánh
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.CHANVIT.VATLIEU">
+            <summary>
+            Vật liệu
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.CHANVIT.TRONGLUONG">
+            <summary>
+            Trọng lượng (kg)
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.CHANVIT.CHIEUQUAY">
+            <summary>
+            Chiều quay
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.CHANVIT.VONGQUAYDINHMUC">
+            <summary>
+            Vòng quay định mức (vòng/ph)
+            </summary>
+        </member>
+        <member name="T:DHSLAPI.Models.ODO">
+            <summary>
+            Ổ đỡ
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.ODO.SOLUONG">
+            <summary>
+            Số lượng
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.ODO.LOAI">
+            <summary>
+            Loại
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.ODO.MODAUBOITRON">
+            <summary>
+            Mỡ dầu bôi trơn
             </summary>
         </member>
         <member name="T:DHSLAPI.Models.Institution">
