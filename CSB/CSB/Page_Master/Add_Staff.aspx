@@ -35,7 +35,7 @@
                                 <div class="form-group row">
                                     <label class="col-lg-4 col-md-3 col-form-label">Năm sinh <span style="color: red;">(*)</span>: </label>
                                     <div class="col-lg-8 col-md-9">
-                                        <input type="text" id="add-staffBirthYear" class="form-control" placeholder="Ví dụ: 1982" required>
+                                        <input type="number" id="add-staffBirthYear" class="form-control" required >
                                     </div>
                                 </div>
                             </div>
@@ -128,7 +128,7 @@
                                 <div class="form-group row">
                                     <label class="col-sm-4 col-form-label">Từ đâu đến : </label>
                                     <div class="col-sm-8">
-                                        <input type="text" id="add-staffFrom" class="form-control" placeholder="Ví dụ: 9/2001" required>
+                                        <input type="text" id="add-staffFrom" class="form-control" placeholder="Ví dụ: Thái Nguyên" required>
                                     </div>
                                 </div>
                             </div>
@@ -147,7 +147,7 @@
                                 <div class="form-group row">
                                     <label class="col-sm-4 col-form-label">Đi đâu : </label>
                                     <div class="col-sm-8">
-                                        <input type="text" id="add-staffLeave" class="form-control" placeholder="Ví dụ: 9/2001" required>
+                                        <input type="text" id="add-staffLeave" class="form-control" placeholder="Ví dụ: Hà Nội" required>
                                     </div>
                                 </div>
                             </div>
@@ -179,7 +179,7 @@
                             <div class="right">
                                 <div class="btn-group">
                                     <button type="button" onclick="remove_input_add_ship()" class="btn btn-danger"><i class="bi bi-x-circle"></i> Xoá ô nhập</button>
-                                    <button type="button" class="btn btn-primary right" onclick="addStaff()"><i class="bi bi-plus-circle"></i>Lưu thông tin</button>
+                                    <button type="button" class="btn btn-primary right" onclick="addStaff()"><i class="bi bi-plus-circle"></i> Lưu thông tin</button>
                                 </div>
                                 
                             </div>

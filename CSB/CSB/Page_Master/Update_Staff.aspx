@@ -1,6 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Master/TrangChu.Master" AutoEventWireup="true" CodeBehind="Update_Staff.aspx.cs" Inherits="CSB.Page_Master.Update_Staff" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-        <div class="main-body">
+    <div class="main-body">
         <div class="page-wrapper">
             <div class="card">
                 <div class="card-header">
@@ -71,7 +72,6 @@
                                     <label class="col-sm-4 col-form-label">Chức vụ <span style="color: red;">(*)</span>: </label>
                                     <div class="col-sm-8">
                                         <select class="form-control" id="edit-staffPosition" onchange="onchangeChucVu(this.value)">
-                                            
                                         </select>
                                     </div>
                                 </div>
@@ -83,7 +83,6 @@
                                     <label class="col-sm-4 col-form-label">Chuyên ngành <span style="color: red;">(*)</span>: </label>
                                     <div class="col-sm-8">
                                         <select class="form-control" id="edit-staffMajoring" onchange="onchangeChuyenNganh(this.value)">
-                                            
                                         </select>
                                     </div>
                                 </div>
@@ -93,7 +92,6 @@
                                     <label class="col-sm-4 col-form-label">Trình độ <span style="color: red;">(*)</span>: </label>
                                     <div class="col-sm-8">
                                         <select class="form-control" id="edit-staffDegree" onchange="onchangeTrinhDo(this.value)">
-                                            
                                         </select>
                                     </div>
                                 </div>
@@ -105,7 +103,6 @@
                                     <label class="col-sm-4 col-form-label">Trường đào tạo <span style="color: red;">(*)</span>: </label>
                                     <div class="col-sm-8">
                                         <select class="form-control" id="edit-staffInstitution" onchange="onchangeTruong(this.value)">
-                                        
                                         </select>
                                     </div>
                                 </div>
@@ -171,14 +168,14 @@
 
                         <div class="form-footer">
                             <div class="left">
-                                <a href="javascript: history.go(-1)" style="float: left" class="btn btn-success"><i class="bi bi-arrow-left-circle"></i> Quay lại</a>
+                                <a href="javascript: history.go(-1)" style="float: left" class="btn btn-success"><i class="bi bi-arrow-left-circle"></i>Quay lại</a>
                             </div>
                             <div class="right">
                                 <div class="btn-group">
-                                    <button type="button" onclick="remove_input_edit_ship()" class="btn btn-danger"><i class="bi bi-x-circle"></i> Xoá ô nhập</button>
-                                    <button type="button" class="btn btn-primary right" onclick="editStaff()"><i class="bi bi-plus-circle"></i> Lưu thông tin</button>
+                                    <button type="button" onclick="remove_input_edit_ship()" class="btn btn-danger"><i class="bi bi-x-circle"></i>Xoá ô nhập</button>
+                                    <button type="button" class="btn btn-primary right" onclick="editStaff()"><i class="bi bi-plus-circle"></i>Lưu thông tin</button>
                                 </div>
-                                
+
                             </div>
 
                         </div>
@@ -229,7 +226,7 @@
                 dataType: "json",
                 contentType: "application/json",
                 beforeSend: function () { // Before we send the request, remove the .hidden class from the spinner and default to inline-block.
-                  
+
                 },
                 success: function (data) {
                     list_Ranking(data.Ranking.ID, 'edit-staffRanking');
@@ -547,6 +544,6 @@
             $("#edit-staffEnlist").removeClass("need-validated");
         }
 
-      
+
     </script>
 </asp:Content>

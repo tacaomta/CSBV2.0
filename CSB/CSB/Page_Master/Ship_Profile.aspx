@@ -29,7 +29,7 @@
     <div class="section" style="background-color: #fff; padding-bottom: 15px;">
                 <div class="section-header" style="background-color: #fff;">
                     <div class="title">
-                        <h4 id="title" style="color: black; margin: 0; text-align: center;">HỒ SƠ TÀU</h4>
+                        <h4 id="title_HoSoTau" style="color: black; margin: 0; text-align: center;">HỒ SƠ TÀU</h4>
                         <div class="blue-hr"></div>
                     </div>
                     <div class="section-header-breadcrumb">
@@ -101,6 +101,7 @@
 
         });
         function Load_Profile(Ship_ID) {
+            debugger
             $.ajax({
                 type: "GET",
                 url: linkapi + "v2/ship_detail?id=" + Ship_ID,
@@ -109,7 +110,7 @@
                     
                 },
                 success: function (data) {
-                    $("#title").html("HỒ SƠ TÀU " + data.TTCOBAN.SOHIEU);
+                    $("#title_HoSoTau").html("HỒ SƠ TÀU " + data.TTCOBAN.SOHIEU);
                 }, error: function (ret) {
                     console.log('errorGET');
                 },
