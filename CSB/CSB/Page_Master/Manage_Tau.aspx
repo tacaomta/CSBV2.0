@@ -161,5 +161,10 @@
         function btn_addship() {
             window.location = baseaddress + "Page_Master/DacDiemChung";
         }
+        function View_HoSoTau(Ship_ID) {
+            var win = window.open(baseaddress+"Page_Master/Manage_Staff?Ship_ID=" + Ship_ID, '_blank');
+            win.focus();
+            //window.location = baseaddress + "Page_Master/Manage_Staff?Ship_ID="+Ship_ID;
+        }
     </script>
 </asp:Content>

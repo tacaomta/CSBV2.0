@@ -150,6 +150,24 @@
     </Reference>
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.7\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.7\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Configuration" />
@@ -259,6 +277,7 @@
     <Content Include="Image\Ships\Tau1.jpg" />
     <Content Include="Page_Master\DacDiemChung.aspx" />
     <Content Include="Page_Master\Add_Ship.aspx" />
+    <Content Include="Page_Master\Add_Staff.aspx" />
     <Content Include="Page_Master\Change_Password.aspx" />
     <Content Include="Page_Master\Information_User.aspx" />
     <Content Include="Page_Master\Login.aspx" />
@@ -270,6 +289,7 @@
     <Content Include="Page_Master\Manage_Ranking.aspx" />
     <Content Include="Page_Master\Manage_ship.aspx" />
     <Content Include="Page_Master\Manage_squadron.aspx" />
+    <Content Include="Page_Master\Manage_Staff.aspx" />
     <Content Include="Page_Master\Manage_Tau.aspx" />
     <Content Include="Page_Master\Manage_user.aspx" />
     <Content Include="Page_Master\Null.aspx" />
@@ -278,6 +298,7 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Page_Master\Ship_equipment2.aspx" />
+    <Content Include="Page_Master\Ship_Profile.aspx" />
     <Content Include="Page_Master\TrangChu.aspx" />
     <Content Include="Page_Master\Update_Ship.aspx" />
     <Content Include="Page_Master\WebForm1.aspx" />
@@ -424,6 +445,13 @@
     <Compile Include="Page_Master\Add_Ship.aspx.designer.cs">
       <DependentUpon>Add_Ship.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Page_Master\Add_Staff.aspx.cs">
+      <DependentUpon>Add_Staff.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page_Master\Add_Staff.aspx.designer.cs">
+      <DependentUpon>Add_Staff.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Page_Master\Change_Password.aspx.cs">
       <DependentUpon>Change_Password.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -501,6 +529,13 @@
     <Compile Include="Page_Master\Manage_squadron.aspx.designer.cs">
       <DependentUpon>Manage_squadron.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Page_Master\Manage_Staff.aspx.cs">
+      <DependentUpon>Manage_Staff.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page_Master\Manage_Staff.aspx.designer.cs">
+      <DependentUpon>Manage_Staff.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Page_Master\Manage_Tau.aspx.cs">
       <DependentUpon>Manage_Tau.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -544,6 +579,13 @@
     </Compile>
     <Compile Include="Page_Master\Ship_equipment2.aspx.designer.cs">
       <DependentUpon>Ship_equipment2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Page_Master\Ship_Profile.aspx.cs">
+      <DependentUpon>Ship_Profile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page_Master\Ship_Profile.aspx.designer.cs">
+      <DependentUpon>Ship_Profile.aspx</DependentUpon>
     </Compile>
     <Compile Include="Page_Master\TrangChu.aspx.cs">
       <DependentUpon>TrangChu.aspx</DependentUpon>
