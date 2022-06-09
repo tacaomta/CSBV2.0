@@ -301,6 +301,7 @@
     <Content Include="Page_Master\Ship_Profile.aspx" />
     <Content Include="Page_Master\TrangChu.aspx" />
     <Content Include="Page_Master\Update_Ship.aspx" />
+    <Content Include="Page_Master\Update_Staff.aspx" />
     <Content Include="Page_Master\WebForm1.aspx" />
     <Content Include="reports\report.docx" />
     <Content Include="Master\TrangChu.Master" />
@@ -600,6 +601,13 @@
     </Compile>
     <Compile Include="Page_Master\Update_Ship.aspx.designer.cs">
       <DependentUpon>Update_Ship.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Page_Master\Update_Staff.aspx.cs">
+      <DependentUpon>Update_Staff.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page_Master\Update_Staff.aspx.designer.cs">
+      <DependentUpon>Update_Staff.aspx</DependentUpon>
     </Compile>
     <Compile Include="Page_Master\WebForm1.aspx.cs">
       <DependentUpon>WebForm1.aspx</DependentUpon>
