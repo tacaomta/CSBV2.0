@@ -121,7 +121,8 @@
         }
 
         function DS_CB_NV() {
-            window.location = baseaddress + "Page_Master/Add_Staff?Ship_ID=" + Ship_ID;
+            var win = window.open(baseaddress + "Page_Master/Manage_Staff?Ship_ID=" + Ship_ID, '_blank');
+            win.focus();
         }
     </script>
 </asp:Content>
