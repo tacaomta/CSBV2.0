@@ -159,7 +159,7 @@
         };
 
         function btn_addship() {
-            window.location = baseaddress + "Page_Master/AddShip";
+            window.location = baseaddress + "Page_Master/DacDiemChung";
         }
     </script>
 </asp:Content>

@@ -257,7 +257,7 @@
     <Content Include="Image\Ships\boat.jpg" />
     <Content Include="Image\Ships\default.jpg" />
     <Content Include="Image\Ships\Tau1.jpg" />
-    <Content Include="Page_Master\AddShip.aspx" />
+    <Content Include="Page_Master\DacDiemChung.aspx" />
     <Content Include="Page_Master\Add_Ship.aspx" />
     <Content Include="Page_Master\Change_Password.aspx" />
     <Content Include="Page_Master\Information_User.aspx" />
@@ -410,12 +410,12 @@
     </Compile>
     <Compile Include="Models\myclass.cs" />
     <Compile Include="Models\User.cs" />
-    <Compile Include="Page_Master\AddShip.aspx.cs">
-      <DependentUpon>AddShip.aspx</DependentUpon>
+    <Compile Include="Page_Master\DacDiemChung.aspx.cs">
+      <DependentUpon>DacDiemChung.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Page_Master\AddShip.aspx.designer.cs">
-      <DependentUpon>AddShip.aspx</DependentUpon>
+    <Compile Include="Page_Master\DacDiemChung.aspx.designer.cs">
+      <DependentUpon>DacDiemChung.aspx</DependentUpon>
     </Compile>
     <Compile Include="Page_Master\Add_Ship.aspx.cs">
       <DependentUpon>Add_Ship.aspx</DependentUpon>
