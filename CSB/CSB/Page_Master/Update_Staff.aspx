@@ -5,7 +5,7 @@
         <div class="page-wrapper">
             <div class="card">
                 <div class="card-header">
-                    <h5>THÔNG TIN CÁN BỘ, NHÂN VIÊN TÀU</h5>
+                    <h5 id="title_Update_Staff">THÔNG TIN CÁN BỘ, NHÂN VIÊN TÀU</h5>
                     <div class="page-header-breadcrumb">
                         <ul class="breadcrumb">
                             <li class="breadcrumb-item"><a href="Null.aspx" style="font-size: 14px;">Trang chủ</a>
@@ -168,12 +168,12 @@
 
                         <div class="form-footer">
                             <div class="left">
-                                <a href="javascript: history.go(-1)" style="float: left" class="btn btn-success"><i class="bi bi-arrow-left-circle"></i>Quay lại</a>
+                                <a href="javascript: history.go(-1)" style="float: left" class="btn btn-success"><i class="bi bi-arrow-left-circle"></i>&nbsp;Quay lại</a>
                             </div>
                             <div class="right">
                                 <div class="btn-group">
-                                    <button type="button" onclick="remove_input_edit_ship()" class="btn btn-danger"><i class="bi bi-x-circle"></i>Xoá ô nhập</button>
-                                    <button type="button" class="btn btn-primary right" onclick="editStaff()"><i class="bi bi-plus-circle"></i>Lưu thông tin</button>
+                                    <button type="button" onclick="remove_input_edit_ship()" class="btn btn-danger"><i class="bi bi-x-circle"></i>&nbsp;Xoá ô nhập</button>
+                                    <button type="button" class="btn btn-primary right" onclick="editStaff()"><i class="bi bi-plus-circle"></i>&nbsp;Lưu thông tin</button>
                                 </div>
 
                             </div>
@@ -187,6 +187,7 @@
     <script src="../Scripts/jquery-3.4.1.min.js"></script>
     <script>
         var Staff_ID;
+        var Ship_ID;
         function getParameterByName(name, url = window.location.href) {
             name = name.replace(/[\[\]]/g, '\\$&');
             var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
@@ -202,6 +203,7 @@
                 history.back();
             }
             else {
+               
                 Load_TT_Staff();
                 $("#edit-staffFullName").focusout(function () {
                     $("#edit-staffFullName").addClass("need-validated");
@@ -219,6 +221,7 @@
 
         });
 
+
         function Load_TT_Staff() {
             $.ajax({
                 type: "GET",
@@ -229,6 +232,9 @@
 
                 },
                 success: function (data) {
+                    debugger
+                    Load_Title(data.ShipID);
+
                     list_Ranking(data.Ranking.ID, 'edit-staffRanking');
                     list_Majoring(data.Majoring.ID, 'edit-staffMajoring');
                     list_Institution(data.Institution.ID, 'edit-staffInstitution');
@@ -245,6 +251,28 @@
                     $("#edit-staffLeave").val(data.Leave);
                     $("#edit-staffLeaveDate").val(data.LeaveDate);
                     $("#edit-staffNote").val(data.Note);
+                }, error: function (ret) {
+                    console.log('errorGET');
+                },
+                complete: function () { // Set our complete callback, adding the .hidden class and hiding the spinner.
+
+
+                },
+            });
+        }
+
+
+        function Load_Title(Ship_ID) {
+            debugger
+            $.ajax({
+                type: "GET",
+                url: linkapi + "v2/ship_detail?id=" + Ship_ID,
+                dataType: "json",
+                beforeSend: function () { // Before we send the request, remove the .hidden class from the spinner and default to inline-block.
+
+                },
+                success: function (data) {
+                    $("#title_Update_Staff").html("THÔNG TIN CÁN BỘ, NHÂN VIÊN TÀU " + data.TTCOBAN.SOHIEU);
                 }, error: function (ret) {
                     console.log('errorGET');
                 },
