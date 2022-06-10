@@ -76,6 +76,7 @@
 
         });
         function loadDataListShips(vung_id) {
+            debugger
             $.ajax({
                 type: "GET",
                 url: linkapi + "v2/ships_region?id=" + vung_id,
@@ -164,6 +165,40 @@
         function View_HoSoTau(Ship_ID) {
            
             window.location = baseaddress + "Page_Master/Ship_profile?Ship_ID="+Ship_ID;
+        }
+        function delete_ship(id) {
+            let text = "Bạn có chắc muốn xóa tàu này?";
+            if (confirm(text) == true) {
+                $.ajax({
+                    url: linkapi + "v2/delete_ship?id=" + id,
+                    type: "DELETE",
+                }).done(function (res) {
+                    var vung = getParameterByName("vung");
+                    var vung_id = "";
+                    if (vung == null | vung == 1) {
+                        vung_id = '5AEBB23FF45F3C235AFD86B510BF9E8C';
+                    }
+                    else if (vung == 2) {
+                        vung_id = '5AEBB23FF45F3C235AFD86B510BF9E8B';
+                    }
+                    else if (vung == 3) {
+                        vung_id = '5AEBB23FF45F3C235AFD86B510BF9E8D';
+                    }
+                    else if (vung == 4) {
+                        vung_id = '5AEBB23FF45F3C235AFD86B510BF9E8E';
+                    }
+                    loadDataListShips(vung_id);
+                    toastSuccess("Thành công", "Xóa thông tin tàu thành công!");
+                }).fail(function (res) {
+                    toastError("Lỗi", "Xóa thông tin tàu không thành công!");
+                })
+            } else {
+
+            }
+        }
+        function ViewInforShip(id) {
+            var win = window.open(baseaddress + "Page_Master/DacDiemChung?Ship_ID=" + id, '_blank');
+            win.focus();
         }
     </script>
 </asp:Content>
