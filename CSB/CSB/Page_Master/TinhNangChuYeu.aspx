@@ -19,144 +19,43 @@
                 </div>
                 <div class="card-block">
 
-                    <h4 class="sub-title">THÂN VỎ</h4>
                     <table id="table_ThanVo" class="table table-bordered" style="width: 100%">
-              
                     </table>
+                    <h4 class="sub-title"></h4>
                     <div class="row">
                         <div class="col-lg-6 col-md-12">
-                            <h4 class="sub-title">Máy chính</h4>
                             <div class="form-group row">
                                 <table id="table_MayChinh" class="table table-bordered" style="width: 100%">
                                 </table>
                             </div>
                         </div>
-                        <div class="col-lg-6 col-md-12">
-                            <h4 class="sub-title">Máy nén khí</h4>
+                        <div class="col-lg-6 col-md-12" style="padding-right: 30px;">
                             <div class="form-group row">
                                 <table id="table_MayNenKhi" class="table table-bordered" style="width: 100%">
                                 </table>
                             </div>
                         </div>
                     </div>
-                    <h4 class="sub-title">Máy phụ, phát điện</h4>
-                    <table class="table table-bordered">
-                        <thead>
-                            <tr>
-                                <th>Firstname</th>
-                                <th>Lastname</th>
-                                <th>Email</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>John</td>
-                                <td>Doe</td>
-                                <td>john@example.com</td>
-                            </tr>
-                            <tr>
-                                <td>Mary</td>
-                                <td>Moe</td>
-                                <td>mary@example.com</td>
-                            </tr>
-                            <tr>
-                                <td>July</td>
-                                <td>Dooley</td>
-                                <td>july@example.com</td>
-                            </tr>
-                        </tbody>
+                    <h4 class="sub-title"></h4>
+                    <table id="table_MayPhu_PhatDien" class="table table-bordered" style="width: 100%">
                     </table>
+                     <h4 class="sub-title"></h4>
                     <div class="row">
-                        <div class="col-lg-4 col-md-12">
-                            <h4 class="sub-title">Hàng hải</h4>
+                        <div class="col-lg-4 col-md-12" style="padding-left: 30px;">
                             <div class="form-group row">
-                                <table class="table table-bordered">
-                                    <thead>
-                                        <tr>
-                                            <th>Firstname</th>
-                                            <th>Lastname</th>
-                                            <th>Email</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>John</td>
-                                            <td>Doe</td>
-                                            <td>john@example.com</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Mary</td>
-                                            <td>Moe</td>
-                                            <td>mary@example.com</td>
-                                        </tr>
-                                        <tr>
-                                            <td>July</td>
-                                            <td>Dooley</td>
-                                            <td>july@example.com</td>
-                                        </tr>
-                                    </tbody>
+                                <table id="table_HangHai" class="table table-bordered" style="width: 100%">
                                 </table>
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-12">
-                            <h4 class="sub-title">Ra da</h4>
                             <div class="form-group row">
-                                <table class="table table-bordered">
-                                    <thead>
-                                        <tr>
-                                            <th>Firstname</th>
-                                            <th>Lastname</th>
-
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>John</td>
-                                            <td>Doe</td>
-                                            <td>john@example.com</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Mary</td>
-                                            <td>Moe</td>
-                                            <td>mary@example.com</td>
-                                        </tr>
-                                        <tr>
-                                            <td>July</td>
-                                            <td>Dooley</td>
-                                            <td>july@example.com</td>
-                                        </tr>
-                                    </tbody>
+                              <table id="table_RaDa" class="table table-bordered" style="width: 100%">
                                 </table>
                             </div>
                         </div>
-                        <div class="col-lg-4 col-md-12">
-                            <h4 class="sub-title">Vũ khí</h4>
+                        <div class="col-lg-4 col-md-12" style="padding-right: 30px;">
                             <div class="form-group row">
-                                <table class="table table-bordered">
-                                    <thead>
-                                        <tr>
-                                            <th>Firstname</th>
-                                            <th>Lastname</th>
-
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>John</td>
-                                            <td>Doe</td>
-                                            <td>john@example.com</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Mary</td>
-                                            <td>Moe</td>
-                                            <td>mary@example.com</td>
-                                        </tr>
-                                        <tr>
-                                            <td>July</td>
-                                            <td>Dooley</td>
-                                            <td>july@example.com</td>
-                                        </tr>
-                                    </tbody>
+                              <table id="table_VuKhi" class="table table-bordered" style="width: 100%">
                                 </table>
                             </div>
                         </div>
@@ -166,13 +65,7 @@
                         <div class="left">
                             <a href="javascript: history.go(-1)" style="float: left" class="btn btn-success"><i class="bi bi-arrow-left-circle"></i>&nbsp;Quay lại</a>
                         </div>
-                        <div class="right">
-                            <div class="btn-group">
-                                <button type="button" onclick="remove_input_edit_ship()" class="btn btn-danger"><i class="bi bi-x-circle"></i>&nbsp;Xoá ô nhập</button>
-                                <button type="button" class="btn btn-primary right" onclick="editThanVo()"><i class="bi bi-plus-circle"></i>&nbsp;Lưu thông tin</button>
-                            </div>
-
-                        </div>
+            
 
                     </div>
 
@@ -202,11 +95,16 @@
 
                 loadDataList_ThanVo(Ship_ID);
                 loadDataList_MayChinh(Ship_ID);
+                loadDataList_MayNenKhi(Ship_ID);
+                loadDataList_MayPhu_PhatDien(Ship_ID);
+                loadDataList_HangHai(Ship_ID);
+                loadDataList_RaDa(Ship_ID);
+                loadDataList_VuKhi(Ship_ID);
             }
 
         });
         function loadDataList_ThanVo(Ship_ID) {
-            {
+            
                 $.ajax({
                     type: "GET",
                     url: linkapi + "v2/thanvo?id=" + Ship_ID,
@@ -215,7 +113,7 @@
                         //$('#loader').removeClass('hidden');
                     },
                     success: function (data) {
-                        var tabletext = "<thead><tr><th>STT</th><th>KÝ HIỆU VẬT LIỆU</th><th>SỐ KHOANG KÍN NƯỚC</th><th>SỐ SƯỜN TÀU</th><th>SỐ KÉT DÀU CHÁY</th><th>SỐ KÉT DẦU NHỜN</th><th>SỐ KÉT NƯỚC</th></tr></thead><tbody>";
+                        var tabletext = '<thead><tr><th style="text-align: center;" colspan="7">THÂN VỎ</th></tr><tr><th>STT</th><th>KÝ HIỆU VẬT LIỆU</th><th>SỐ KHOANG KÍN NƯỚC</th><th>SỐ SƯỜN TÀU</th><th>SỐ KÉT DÀU CHÁY</th><th>SỐ KÉT DẦU NHỜN</th><th>SỐ KÉT NƯỚC</th></tr></thead><tbody>';
                         var i = 1;
                         $.each(data, function (key, item) {
                             tabletext += "<tr><td>" + i + "</td><td>" + item.KYHIEUVATLIEU + "</td><td>" + item.SOKHOANGKINNUOC + "</td><td>" + item.SOSUONTAU + "</td><td>" + item.SOKETDAUCHAY + "</td><td>" + item.SOKETDAUNHON + "</td><td>" + item.SOKETNUOC + "</td></tr>";
@@ -223,7 +121,7 @@
                         });
                         tabletext += "</tbody>";
                         $('#table_ThanVo').html(tabletext);
-                        loadTable('table_ThanVo');
+                        //loadTable('table_ThanVo');
                         //$('#tableship_wrapper .row .col-sm-12').first().html('<button onclick="btn_addship()" class="btn btn-info btn-lg col-md-6" /*data-toggle="modal" data-target="#model-add-ship"*/ style="height: 40px; margin-bottom: 8px; margin-top: -4px; font-size: 18px;"><span class="glyphicon glyphicon-plus"></span>Thêm tàu</button>');
 
                     }, error: function (ret) {
@@ -231,13 +129,13 @@
                     },
                     complete: function () { // Set our complete callback, adding the .hidden class and hiding the spinner.
                         //$('#loader').addClass('hidden');
-                       
+
                     },
                 });
-            }
+            
         }
         function loadDataList_MayChinh(Ship_ID) {
-            {
+            
                 $.ajax({
                     type: "GET",
                     url: linkapi + "v2/maychinh?id=" + Ship_ID,
@@ -246,15 +144,15 @@
                         //$('#loader').removeClass('hidden');
                     },
                     success: function (data) {
-                        var tabletext = "<thead><tr><th>STT(vị trí đặt)</th><th>KÝ HIỆU</th><th>CÔNG SUẤT(CV)</th><th>VÒNG QUAY(Vg/p)</th><th></tr></thead><tbody>";
+                        var tabletext = '<thead><tr><th style="text-align: center; " colspan="4">MÁY CHÍNH</th></tr><tr><th>STT(vị trí đặt)</th><th>KÝ HIỆU</th><th>CÔNG SUẤT(CV)</th><th>VÒNG QUAY(Vg/p)</th><th></tr></thead><tbody>';
 
                         $.each(data, function (key, item) {
-                            tabletext += "<tr><td>" + item.THONGSOCOBAN.VITRILAPRAP + "</td><td>" + item.THONGSOCOBAN.KYHIEU + "</td><td>" + item.THONGSOCOBAN.CONGSUAT + "</td><td>" + item.THONGSOCOBAN.VONGQUAY +  "</td></tr>";
-                          
+                            tabletext += "<tr><td>" + item.THONGSOCOBAN.VITRILAPRAP + "</td><td>" + item.THONGSOCOBAN.KYHIEU + "</td><td>" + item.THONGSOCOBAN.CONGSUAT + "</td><td>" + item.THONGSOCOBAN.VONGQUAY + "</td></tr>";
+
                         });
                         tabletext += "</tbody>";
                         $('#table_MayChinh').html(tabletext);
-                        loadTable('table_MayChinh');
+                        //loadTable('table_MayChinh');
                         //$('#tableship_wrapper .row .col-sm-12').first().html('<button onclick="btn_addship()" class="btn btn-info btn-lg col-md-6" /*data-toggle="modal" data-target="#model-add-ship"*/ style="height: 40px; margin-bottom: 8px; margin-top: -4px; font-size: 18px;"><span class="glyphicon glyphicon-plus"></span>Thêm tàu</button>');
 
                     }, error: function (ret) {
@@ -262,14 +160,168 @@
                     },
                     complete: function () { // Set our complete callback, adding the .hidden class and hiding the spinner.
                         //$('#loader').addClass('hidden');
-                       
+
+                    },
+                });
+            
+        }
+        function loadDataList_MayNenKhi(Ship_ID) 
+            {
+                $.ajax({
+                    type: "GET",
+                    url: linkapi + "v2/maynenkhi?id=" + Ship_ID,
+                    dataType: "json",
+                    beforeSend: function () { // Before we send the request, remove the .hidden class from the spinner and default to inline-block.
+                        //$('#loader').removeClass('hidden');
+                    },
+                    success: function (data) {
+                        var tabletext = '<thead><tr><th style="text-align: center; " colspan="3">MÁY NÉN KHÍ</th></tr><tr><th>KÝ HIỆU</th><th>SỐ LƯỢNG</th><th>ÁP SUẤT(KG/cm2)</th></tr></thead><tbody>';
+
+                        $.each(data, function (key, item) {
+                            tabletext += "<tr><td>" + item.KYHIEU + "</td><td>" + item.SOLUONG + "</td><td>" + item.APSUAT + "</td><tr>";
+
+                        });
+                        tabletext += "</tbody>";
+                        $('#table_MayNenKhi').html(tabletext);
+
+                        //$('#tableship_wrapper .row .col-sm-12').first().html('<button onclick="btn_addship()" class="btn btn-info btn-lg col-md-6" /*data-toggle="modal" data-target="#model-add-ship"*/ style="height: 40px; margin-bottom: 8px; margin-top: -4px; font-size: 18px;"><span class="glyphicon glyphicon-plus"></span>Thêm tàu</button>');
+
+                    }, error: function (ret) {
+                        console.log('errorGET');
+                    },
+                    complete: function () { // Set our complete callback, adding the .hidden class and hiding the spinner.
+                        //$('#loader').addClass('hidden');
+
                     },
                 });
             }
-        }
+        
+        function loadDataList_MayPhu_PhatDien(Ship_ID) {
+            
+                $.ajax({
+                    type: "GET",
+                    url: linkapi + "v2/mayphuphatdien?id=" + Ship_ID,
+                    dataType: "json",
+                    beforeSend: function () { // Before we send the request, remove the .hidden class from the spinner and default to inline-block.
+                        //$('#loader').removeClass('hidden');
+                    },
+                    success: function (data) {
+                        var tabletext = '<thead><tr><th style="text-align: center; " colspan="5">THÂN VỎ</th></tr><tr><th>STT(vị trí đặt)</th><th>KÝ HIỆU DIESEL</th><th>CÔNG SUẤT(CV/Kw)</th><th>VÒNG QUAY(Vg/p)</th><th></tr></thead><tbody>';
 
+                        $.each(data, function (key, item) {
+                            tabletext += "<tr><td>" + item.THONGSOCOBAN.VITRILAPRAP + "</td><td>" + item.THONGSOCOBAN.KYHIEU + "</td><td>" + item.THONGSOCOBAN.CONGSUAT + "</td><td>" + item.THONGSOCOBAN.VONGQUAY + "</td></tr>";
+
+                        });
+                        tabletext += "</tbody>";
+                        $('#table_MayPhu_PhatDien').html(tabletext);
+                        //loadTable('table_MayPhu_PhatDien');
+                        //$('#tableship_wrapper .row .col-sm-12').first().html('<button onclick="btn_addship()" class="btn btn-info btn-lg col-md-6" /*data-toggle="modal" data-target="#model-add-ship"*/ style="height: 40px; margin-bottom: 8px; margin-top: -4px; font-size: 18px;"><span class="glyphicon glyphicon-plus"></span>Thêm tàu</button>');
+
+                    }, error: function (ret) {
+                        console.log('errorGET');
+                    },
+                    complete: function () { // Set our complete callback, adding the .hidden class and hiding the spinner.
+                        //$('#loader').addClass('hidden');
+
+                    },
+                });
+            
+        }
+        function loadDataList_HangHai(Ship_ID) {
+            
+                $.ajax({
+                    type: "GET",
+                    url: linkapi + "v2/hanghai?id=" + Ship_ID,
+                    dataType: "json",
+                    beforeSend: function () { // Before we send the request, remove the .hidden class from the spinner and default to inline-block.
+                        //$('#loader').removeClass('hidden');
+                    },
+                    success: function (data) {
+                        var tabletext = '<thead><tr><th style="text-align: center; " colspan="2">HÀNG HẢI</th></tr><tr><th>KÝ HIỆU</th><th>SỐ LƯỢNG</th></tr></thead><tbody>';
+
+                        $.each(data, function (key, item) {
+                            tabletext += "<tr><td>" + item.KYHIEU + "</td><td>" + item.SOLUONG + "</td><td>";
+
+                        });
+                        tabletext += "</tbody>";
+                        $('#table_HangHai').html(tabletext);
+                        
+                        //$('#tableship_wrapper .row .col-sm-12').first().html('<button onclick="btn_addship()" class="btn btn-info btn-lg col-md-6" /*data-toggle="modal" data-target="#model-add-ship"*/ style="height: 40px; margin-bottom: 8px; margin-top: -4px; font-size: 18px;"><span class="glyphicon glyphicon-plus"></span>Thêm tàu</button>');
+
+                    }, error: function (ret) {
+                        console.log('errorGET');
+                    },
+                    complete: function () { // Set our complete callback, adding the .hidden class and hiding the spinner.
+                        //$('#loader').addClass('hidden');
+
+                    },
+                });
+            
+        }
+        function loadDataList_RaDa(Ship_ID) {
+            
+                $.ajax({
+                    type: "GET",
+                    url: linkapi + "v2/rada?id=" + Ship_ID,
+                    dataType: "json",
+                    beforeSend: function () { // Before we send the request, remove the .hidden class from the spinner and default to inline-block.
+                        //$('#loader').removeClass('hidden');
+                    },
+                    success: function (data) {
+                        var tabletext = '<thead><tr><th style="text-align: center; " colspan="2">RADA</th></tr><tr><th>KÝ HIỆU</th><th>SỐ LƯỢNG</th></tr></thead><tbody>';
+
+                        $.each(data, function (key, item) {
+                            tabletext += "<tr><td>" + item.KYHIEU + "</td><td>" + item.SOLUONG + "</td><td>";
+
+                        });
+                        tabletext += "</tbody>";
+                        $('#table_RaDa').html(tabletext);
+
+                        //$('#tableship_wrapper .row .col-sm-12').first().html('<button onclick="btn_addship()" class="btn btn-info btn-lg col-md-6" /*data-toggle="modal" data-target="#model-add-ship"*/ style="height: 40px; margin-bottom: 8px; margin-top: -4px; font-size: 18px;"><span class="glyphicon glyphicon-plus"></span>Thêm tàu</button>');
+
+                    }, error: function (ret) {
+                        console.log('errorGET');
+                    },
+                    complete: function () { // Set our complete callback, adding the .hidden class and hiding the spinner.
+                        //$('#loader').addClass('hidden');
+
+                    },
+                });
+            
+        }
+        function loadDataList_VuKhi(Ship_ID) {
+            
+                $.ajax({
+                    type: "GET",
+                    url: linkapi + "v2/vukhi?id=" + Ship_ID,
+                    dataType: "json",
+                    beforeSend: function () { // Before we send the request, remove the .hidden class from the spinner and default to inline-block.
+                        //$('#loader').removeClass('hidden');
+                    },
+                    success: function (data) {
+                        var tabletext = '<thead><tr><th style="text-align: center; " colspan="2">RADA</th></tr><tr><th>KÝ HIỆU</th><th>SỐ LƯỢNG</th></tr></thead><tbody>';
+
+                        $.each(data, function (key, item) {
+                            tabletext += "<tr><td>" + item.KYHIEU + "</td><td>" + item.SOLUONG + "</td><td>";
+
+                        });
+                        tabletext += "</tbody>";
+                        $('#table_VuKhi').html(tabletext);
+
+                        //$('#tableship_wrapper .row .col-sm-12').first().html('<button onclick="btn_addship()" class="btn btn-info btn-lg col-md-6" /*data-toggle="modal" data-target="#model-add-ship"*/ style="height: 40px; margin-bottom: 8px; margin-top: -4px; font-size: 18px;"><span class="glyphicon glyphicon-plus"></span>Thêm tàu</button>');
+
+                    }, error: function (ret) {
+                        console.log('errorGET');
+                    },
+                    complete: function () { // Set our complete callback, adding the .hidden class and hiding the spinner.
+                        //$('#loader').addClass('hidden');
+
+                    },
+                });
+            
+        }
         function loadTable(id_table) {
-            $('table[id=' + id_table +']').each(function () {
+            $('table[id=' + id_table + ']').each(function () {
                 var table1 = $(this).DataTable({
                     destroy: true,
                     stateSave: true,
