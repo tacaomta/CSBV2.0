@@ -46,7 +46,7 @@
                         2. <a onclick="DacDiemChung()" href="#">Đặc điểm chung của tàu</a>
                     </div>
                     <div class="profile-link">
-                        3. <a href="#">Tính năng chủ yếu của tàu</a>
+                        3. <a onclick="TinhNangChuYeu()"  href="#">Tính năng chủ yếu của tàu</a>
                     </div>
                     <div class="profile-link">
                         4. <a onclick="TinhNangThietBi()" href="#">Tính năng các thiết bị</a>
@@ -131,9 +131,15 @@
             win.focus();
         }
 
+        function TinhNangChuYeu() {
+            var win = window.open(baseaddress + "Page_Master/TinhNangChuYeu?Ship_ID=" + Ship_ID, '_blank');
+            win.focus();
+        }
+
         function TinhNangThietBi() {
             var win = window.open(baseaddress + "Page_Master/TinhNangThietBi?Ship_ID=" + Ship_ID, '_blank');
             win.focus();
         }
+       
     </script>
 </asp:Content>

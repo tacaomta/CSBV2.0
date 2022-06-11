@@ -7,11 +7,11 @@ using System.Web.UI.WebControls;
 
 namespace CSB.Page_Master
 {
-    public partial class TinhNangChuYeu : System.Web.UI.Page
-    {
-        protected void Page_Load(object sender, EventArgs e)
-        {
+	public partial class TinhNangChuYeu : System.Web.UI.Page
+	{
+		protected void Page_Load(object sender, EventArgs e)
+		{
 
-        }
-    }
+		}
+	}
 }

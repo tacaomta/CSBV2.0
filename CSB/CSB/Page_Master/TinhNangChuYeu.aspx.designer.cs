@@ -7,10 +7,9 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-
-namespace CSB.Page_Master
-{
-    public partial class TinhNangChuYeu
-    {
+namespace CSB.Page_Master {
+    
+    
+    public partial class TinhNangChuYeu {
     }
 }
