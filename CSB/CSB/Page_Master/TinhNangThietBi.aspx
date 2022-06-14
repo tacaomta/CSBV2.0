@@ -908,7 +908,7 @@
                                 </div>
                             </div>
                             <div class="modal-footer">
-                                <button type="submit" onclick="edit_MAYCHINH()" class="btn btn-info">Thêm</button>
+                                <button type="submit" onclick="edit_MAYCHINH()" class="btn btn-info">Lưu</button>
                                 <button type="button" class="btn btn-default" data-dismiss="modal">Đóng</button>
                             </div>
                         </div>
@@ -1433,7 +1433,7 @@
                                 </div>
                             </div>
                             <div class="modal-footer">
-                                <button type="submit" onclick="edit_MAYPHU()" class="btn btn-info">Thêm</button>
+                                <button type="submit" onclick="edit_MAYPHU()" class="btn btn-info">Lưu</button>
                                 <button type="button" class="btn btn-default" data-dismiss="modal">Đóng</button>
                             </div>
                         </div>
@@ -1958,7 +1958,7 @@
                                 </div>
                             </div>
                             <div class="modal-footer">
-                                <button type="submit" onclick="edit_MAYCHUYENDUNG()" class="btn btn-info">Thêm</button>
+                                <button type="submit" onclick="edit_MAYCHUYENDUNG()" class="btn btn-info">Lưu</button>
                                 <button type="button" class="btn btn-default" data-dismiss="modal">Đóng</button>
                             </div>
                         </div>
@@ -2155,7 +2155,7 @@
                         <input type="hidden" id="edit-HETRUCCHANVIT-ID" />
                         <div class="card auth_form" style="margin-bottom: 0px">
                             <div class="modal-header" style="padding: 10px 16px;">
-                                <h4 class="title-modal-banve font-weight-bold">Thêm hệ trục chân vịt của tàu</h4>
+                                <h4 class="title-modal-banve font-weight-bold">Sửa thông tin hệ trục chân vịt của tàu</h4>
                             </div>
                             <div class="modal-body" style="padding: 6px 16px;">
                                 <div class="">
@@ -2323,7 +2323,7 @@
                                 </div>
                             </div>
                             <div class="modal-footer" style="padding: 8px 16px;">
-                                <button type="submit" onclick="edit_HETRUCCHANVIT()" class="btn btn-info">Thêm</button>
+                                <button type="submit" onclick="edit_HETRUCCHANVIT()" class="btn btn-info">Lưu</button>
                                 <button type="button" class="btn btn-default" data-dismiss="modal">Đóng</button>
                             </div>
                         </div>
@@ -3618,7 +3618,7 @@
                 };
                 $.ajax({
                     type: "PUT",
-                    url: linkapi + "v2/update_maychinh?id=" + HETRUCCHANVIT.ID,
+                    url: linkapi + "v2/update_hetrucchanvit?id=" + HETRUCCHANVIT.ID,
                     dataType: "json",
                     data: JSON.stringify(HETRUCCHANVIT),
                     contentType: "application/json",
