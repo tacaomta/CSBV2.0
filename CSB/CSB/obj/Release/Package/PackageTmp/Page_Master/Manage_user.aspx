@@ -1,6 +1,6 @@
-﻿<%@ Page Title="Quản lý người dùng" Language="C#" MasterPageFile="~/Master/LayoutAdmin.Master" AutoEventWireup="true" CodeBehind="Manage_user.aspx.cs" Inherits="CSB.Page_Master.Manage_user" %>
+﻿<%@ Page Title="Quản lý người dùng" Language="C#" MasterPageFile="~/Master/TrangChu.Master" AutoEventWireup="true" CodeBehind="Manage_user.aspx.cs" Inherits="CSB.Page_Master.Manage_user" %>
 
-<asp:Content ID="Manage_User" ContentPlaceHolderID="MainContentAdmin" runat="server">
+<asp:Content ID="Manage_User" ContentPlaceHolderID="MainContent" runat="server">
     <link href="../css/manager_user.css" rel="stylesheet" />
     <div id="form1">
         <div class="section-header">
@@ -272,7 +272,7 @@
                 });
                 table1.buttons().container()
                     .appendTo('this_wrapper .col-md-6:eq(0)');
-                $('.col-sm-12').first().html('<button id="btn_adduser" onclick="btn_adduser()" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#model-add-user" style="height: 35px; padding - top: 4px;margin - top: -4px;"><span class="glyphicon glyphicon-plus-sign"></span> Thêm người dùng</button>');
+                $('.col-sm-12').first().html('<button id="btn_adduser" onclick="btn_adduser()" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#model-add-user" style="height: 35px; padding - top: 4px;margin - top: -4px;"><i class="bi bi-plus-circle"></i> Thêm người dùng</button>');
             });
         };
 
