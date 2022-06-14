@@ -1,7 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Master/TrangChu.Master" AutoEventWireup="true" CodeBehind="TinhNangChuYeu.aspx.cs" Inherits="CSB.Page_Master.TinhNangChuYeu" %>
-
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-    <div class="main-body">
+        <div class="main-body">
         <div class="page-wrapper">
             <div class="card">
                 <div class="card-header">
