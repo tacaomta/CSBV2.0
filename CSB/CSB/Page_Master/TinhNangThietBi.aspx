@@ -63,10 +63,10 @@
                                         <a class="nav-link" data-toggle="tab" onclick="loadDataList_NEOXICHNEO()" href="#NEOXICHNEO">Neo, xích neo</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" data-toggle="tab" href="#BOMDAU-NUOC-THONGGIO">Bơm dầu, nước, thông gió</a>
+                                        <a class="nav-link" data-toggle="tab" onclick="loadDataList_BOMDAUNUOCTHONGGIO()" href="#BOMDAU-NUOC-THONGGIO">Bơm dầu, nước, thông gió</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" data-toggle="tab" href="#TRANGBIKHAC">Trang bị khác</a>
+                                        <a class="nav-link" data-toggle="tab" onclick="loadDataList_TRANGBIKHAC()" href="#TRANGBIKHAC">Trang bị khác</a>
                                     </li>
                                 </ul>
 
@@ -151,12 +151,22 @@
                                     <div id="BOMDAU-NUOC-THONGGIO" class=" tab-pane">
                                         <br>
                                         <h5>BẢNG THỐNG KÊ CÁC BƠM DẦU, NƯỚC VÀ THÔNG GIÓ</h5>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                        <div class="btn-group">
+                                            <button onclick="loadDataList_BOMDAUNUOCTHONGGIO()" class="btn btn-primary mb-2"><span class="glyphicon glyphicon-refresh"></span>&nbsp;Load dữ liệu</button>
+                                            <button id="btn_add_BOMDAUNUOCTHONGGIO" class="btn btn-primary mb-2" data-toggle="modal" data-target="#model-add-BOMDAUNUOCTHONGGIO" style="padding-top: 4px;"><span class="glyphicon glyphicon-plus-sign"></span>Thêm bơm dầu, nước và thông gió</button>
+                                        </div>
+                                        <table id="table-BOMDAUNUOCTHONGGIO" class="table table-bordered table-striped table-md" style="width: 100%">
+                                        </table>   
                                     </div>
                                     <div id="TRANGBIKHAC" class=" tab-pane">
                                         <br>
                                         <h5>CÁC TRANG BỊ KHÁC</h5>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                        <div class="btn-group">
+                                            <button onclick="loadDataList_TRANGBIKHAC()" class="btn btn-primary mb-2"><span class="glyphicon glyphicon-refresh"></span>&nbsp;Load dữ liệu</button>
+                                            <button id="btn_add_TRANGBIKHAC" class="btn btn-primary mb-2" data-toggle="modal" data-target="#model-add-TRANGBIKHAC" style="padding-top: 4px;"><span class="glyphicon glyphicon-plus-sign"></span>Thêm trang bị khác</button>
+                                        </div>
+                                        <table id="table-TRANGBIKHAC" class="table table-bordered table-striped table-md" style="width: 100%">
+                                        </table>    
                                     </div>
                                 </div>
                             </div>
@@ -2601,6 +2611,220 @@
                 </div>
             </div>
         </div>
+        <div class="modal fade" id="model-add-BOMDAUNUOCTHONGGIO" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <form id="form-add-BOMDAUNUOCTHONGGIO" onsubmit="return false">
+                        <div class="card auth_form" style="margin-bottom: 0px">
+                            <div class="modal-header">
+                                <h4 class="title-modal-banve font-weight-bold">Thêm thông tin bơm dầu, nước và thông gió trên tàu</h4>
+                            </div>
+                            <div class="modal-body">
+                                <div class="row clearfix ">
+                                    <div style="width: 100%; float: left; padding: 10px">
+                                        <div class="form-group" style="display: flex">
+                                            <label class="col-md-5 control-label"><strong>Tên trang bị   : </strong></label>
+                                            <div class="col-md-7">
+                                                <input type="text" class="form-control" id="add-BOMDAUNUOCTHONGGIO-TENTB" placeholder="Nhập tên trang bị" required>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div style="width: 100%; float: left; padding: 10px">
+                                        <div class="form-group" style="display: flex">
+                                            <label class="col-md-5 control-label"><strong>Ký hiệu   : </strong></label>
+                                            <div class="col-md-7">
+                                                <input type="text" class="form-control" id="add-BOMDAUNUOCTHONGGIO-KYHIEU" placeholder="Nhập ký hiệu" required>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div style="width: 100%; float: left; padding: 10px">
+                                        <div class="form-group" style="display: flex">
+                                            <label class="col-md-5 control-label"><strong>Nước sản xuất   : </strong></label>
+                                            <div class="col-md-7">
+                                                <input type="text" class="form-control" id="add-BOMDAUNUOCTHONGGIO-NUOCSX">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div style="width: 100%; float: left; padding: 10px">
+                                        <div class="form-group" style="display: flex">
+                                            <label class="col-md-5 control-label"><strong>Lưu lượng   : </strong></label>
+                                            <div class="col-md-7">
+                                                <input type="text" class="form-control" id="add-BOMDAUNUOCTHONGGIO-LUULUONG" >
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div style="width: 100%; float: left; padding: 10px">
+                                        <div class="form-group" style="display: flex">
+                                            <label class="col-md-5 control-label"><strong>Số lượng  : </strong></label>
+                                            <div class="col-md-7">
+                                                <input type="number" step="any" class="form-control" id="add-BOMDAUNUOCTHONGGIO-SOLUONG" placeholder="Nhập số lượng" required min="0">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="submit" onclick="add_BOMDAUNUOCTHONGGIO()" class="btn btn-info">Thêm</button>
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Đóng</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="model-edit-BOMDAUNUOCTHONGGIO" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <form id="form-edit-BOMDAUNUOCTHONGGIO" onsubmit="return false">
+                        <input type="hidden" id="edit-BOMDAUNUOCTHONGGIO-ID" />
+                        <div class="card auth_form" style="margin-bottom: 0px">
+                            <div class="modal-header">
+                                <h4 class="title-modal-banve font-weight-bold">Sửa thông tin bơm dầu, nước và thông gió trên tàu</h4>
+                            </div>
+                            <div class="modal-body">
+                                <div class="row clearfix ">
+                                    <div style="width: 100%; float: left; padding: 10px">
+                                        <div class="form-group" style="display: flex">
+                                            <label class="col-md-5 control-label"><strong>Tên trang bị   : </strong></label>
+                                            <div class="col-md-7">
+                                                <input type="text" class="form-control" id="edit-BOMDAUNUOCTHONGGIO-TENTB" placeholder="Nhập tên trang bị" required>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div style="width: 100%; float: left; padding: 10px">
+                                        <div class="form-group" style="display: flex">
+                                            <label class="col-md-5 control-label"><strong>Ký hiệu   : </strong></label>
+                                            <div class="col-md-7">
+                                                <input type="text" class="form-control" id="edit-BOMDAUNUOCTHONGGIO-KYHIEU" placeholder="Nhập ký hiệu" required>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div style="width: 100%; float: left; padding: 10px">
+                                        <div class="form-group" style="display: flex">
+                                            <label class="col-md-5 control-label"><strong>Nước sản xuất   : </strong></label>
+                                            <div class="col-md-7">
+                                                <input type="text" class="form-control" id="edit-BOMDAUNUOCTHONGGIO-NUOCSX">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div style="width: 100%; float: left; padding: 10px">
+                                        <div class="form-group" style="display: flex">
+                                            <label class="col-md-5 control-label"><strong>Lưu lượng   : </strong></label>
+                                            <div class="col-md-7">
+                                                <input type="text" class="form-control" id="edit-BOMDAUNUOCTHONGGIO-LUULUONG" >
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div style="width: 100%; float: left; padding: 10px">
+                                        <div class="form-group" style="display: flex">
+                                            <label class="col-md-5 control-label"><strong>Số lượng  : </strong></label>
+                                            <div class="col-md-7">
+                                                <input type="number" step="any" class="form-control" id="edit-BOMDAUNUOCTHONGGIO-SOLUONG" placeholder="Nhập số lượng" required min="0">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="submit" onclick="edit_BOMDAUNUOCTHONGGIO()" class="btn btn-info">Lưu</button>
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Đóng</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="model-add-TRANGBIKHAC" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <form id="form-add-TRANGBIKHAC" onsubmit="return false">
+                        <div class="card auth_form" style="margin-bottom: 0px">
+                            <div class="modal-header">
+                                <h4 class="title-modal-banve font-weight-bold">Thêm thông tin trang bị khác tàu</h4>
+                            </div>
+                            <div class="modal-body">
+                                <div class="row clearfix ">
+                                    <div style="width: 100%; float: left; padding: 10px">
+                                        <div class="form-group" style="display: flex">
+                                            <label class="col-md-5 control-label"><strong>Tên trang thiết bị   : </strong></label>
+                                            <div class="col-md-7">
+                                                <input type="text" class="form-control" id="add-TRANGBIKHAC-TENTB" placeholder="Nhập tên trang thiết bị" required>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div style="width: 100%; float: left; padding: 10px">
+                                        <div class="form-group" style="display: flex">
+                                            <label class="col-md-5 control-label"><strong>Ký hiệu   : </strong></label>
+                                            <div class="col-md-7">
+                                                <input type="text" class="form-control" id="add-TRANGBIKHAC-KYHIEU" placeholder="Nhập ký hiệu" required>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div style="width: 100%; float: left; padding: 10px">
+                                        <div class="form-group" style="display: flex">
+                                            <label class="col-md-5 control-label"><strong>Số lượng  : </strong></label>
+                                            <div class="col-md-7">
+                                                <input type="number" step="any" class="form-control" id="add-TRANGBIKHAC-SOLUONG" placeholder="Nhập số lượng" required min="0">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="submit" onclick="add_TRANGBIKHAC()" class="btn btn-info">Thêm</button>
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Đóng</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="model-edit-TRANGBIKHAC" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <form id="form-edit-TRANGBIKHAC" onsubmit="return false">
+                        <input type="hidden" id="edit-TRANGBIKHAC-ID" />
+                        <div class="card auth_form" style="margin-bottom: 0px">
+                            <div class="modal-header">
+                                <h4 class="title-modal-banve font-weight-bold">Sửa thông tin trang bị khác tàu</h4>
+                            </div>
+                            <div class="modal-body">
+                                <div class="row clearfix ">
+                                    <div style="width: 100%; float: left; padding: 10px">
+                                        <div class="form-group" style="display: flex">
+                                            <label class="col-md-5 control-label"><strong>Tên trang thiết bị   : </strong></label>
+                                            <div class="col-md-7">
+                                                <input type="text" class="form-control" id="edit-TRANGBIKHAC-TENTB" placeholder="Nhập tên trang thiết bị" required>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div style="width: 100%; float: left; padding: 10px">
+                                        <div class="form-group" style="display: flex">
+                                            <label class="col-md-5 control-label"><strong>Ký hiệu   : </strong></label>
+                                            <div class="col-md-7">
+                                                <input type="text" class="form-control" id="edit-TRANGBIKHAC-KYHIEU" placeholder="Nhập ký hiệu" required>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div style="width: 100%; float: left; padding: 10px">
+                                        <div class="form-group" style="display: flex">
+                                            <label class="col-md-5 control-label"><strong>Số lượng  : </strong></label>
+                                            <div class="col-md-7">
+                                                <input type="number" step="any" class="form-control" id="edit-TRANGBIKHAC-SOLUONG" placeholder="Nhập số lượng" required min="0">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="submit" onclick="edit_TRANGBIKHAC()" class="btn btn-info">Lưu</button>
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Đóng</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
     </div>
     <script src="../Scripts/jquery-3.4.1.min.js"></script>
     <script>
@@ -4223,6 +4447,298 @@
                     toastSuccess("Thành công", "Xóa neo - xích neo thành công!");
                 }).fail(function (res) {
                     toastError("Lỗi", "Xóa neo - xích neo không thành công!");
+                })
+            } else {
+
+            }
+        }
+
+        // BƠM DẦU - NƯỚC - THÔNG GIÓ
+        function loadDataList_BOMDAUNUOCTHONGGIO() {
+            $.ajax({
+                type: "GET",
+                url: linkapi + "v2/bomnuocthonggio?id=" + getParameterByName("Ship_ID"),
+                dataType: "json",
+                success: function (data) {
+                    var tabletext = "<thead><tr><th>STT</th><th>Tên trang bị</th><th>Ký hiệu</th><th>Nước sản xuất</th><th>Lưu lượng</th><th>Số lượng</th><th>Tác vụ</th></tr></thead><tbody>";
+                    var i = 1;
+                    $.each(data, function (key, item) {
+                        tabletext += "<tr><td>" + i + "</td><td>" + item.TENTB + "</td><td>" + item.KYHIEU + "</td><td>" + item.NUOCSX + "</td><td>" + item.LUULUONG + "</td><td>" + item.SOLUONG + '</td><td><div style="width: max-content;"><a href="#" class="edit" title="Sửa" data-toggle="modal" data-target="#model-edit-BOMDAUNUOCTHONGGIO"  onclick="onclick_edit_BOMDAUNUOCTHONGGIO(`' + item.ID + '`,`' + item.TENTB + '`,`' + item.KYHIEU + '`,`' + item.NUOCSX + '`,`' + item.LUULUONG + '`,`' + item.SOLUONG + '`)"><i class="material-icons">&#xE254;</i></a><a href="#" class="delete" title="Xóa" onclick="delete_BOMDAUNUOCTHONGGIO(`' + item.ID + '`)"><i class="material-icons">&#xE872;</i></a></div></td></tr>';
+                        i = i + 1;
+                    });
+                    tabletext += "</tbody>";
+                    $('#table-BOMDAUNUOCTHONGGIO').html(tabletext);
+                    console.log("okGET");
+                    loadTableBOMDAUNUOCTHONGGIO();
+                }, error: function (ret) {
+                    console.log('errorGET');
+                },
+            });
+        };
+        function loadTableBOMDAUNUOCTHONGGIO() {
+            $('table[id=table-BOMDAUNUOCTHONGGIO]').each(function () {
+                var table1 = $(this).DataTable({
+                    destroy: true,
+                    searching: false,
+                    stateSave: true,
+                    "columns": [
+                        { name: 'STT', width: 90 },
+                        { name: 'Tên trang bị', width: 380 },
+                        { name: 'Ký hiệu', width: 200 },
+                        { name: 'Nước sản xuất', width: 280 },
+                        { name: 'Lưu lượng', width: 280 },
+                        { name: 'Số lượng', width: 200 },
+                        { name: 'Tác vụ', width: 150 },
+                    ],
+                    lengthChange: false,
+                    "language": {
+                        "sProcessing": "Đang xử lý...",
+                        "sLengthMenu": "Xem _MENU_ mục",
+                        "sZeroRecords": "Không tìm thấy thông tin phù hợp",
+                        "sInfo": "Đang xem _START_ đến _END_ trong tổng số _TOTAL_ mục",
+                        "sInfoEmpty": "Đang xem 0 đến 0 trong tổng số 0 mục",
+                        "sInfoFiltered": "(được lọc từ _MAX_ mục)",
+                        "sInfoPostFix": "",
+                        "sSearch": "Tìm kiếm: ",
+                        "sUrl": "",
+                        "oPaginate": {
+                            "sFirst": "Đầu",
+                            "sPrevious": "Trước",
+                            "sNext": "Tiếp",
+                            "sLast": "Cuối"
+                        }
+                    }
+                });
+            });
+        };
+        function add_BOMDAUNUOCTHONGGIO() {
+            var form = document.getElementById("form-add-BOMDAUNUOCTHONGGIO");
+            console.log(form.checkValidity());
+            if (form.checkValidity() == true) {
+                var BOMDAUNUOCTHONGGIO = {
+                    TENTB: $("#add-BOMDAUNUOCTHONGGIO-TENTB").val(),
+                    KYHIEU: $("#add-BOMDAUNUOCTHONGGIO-KYHIEU").val(),
+                    NUOCSX: $("#add-BOMDAUNUOCTHONGGIO-NUOCSX").val(),
+                    LUULUONG: $("#add-BOMDAUNUOCTHONGGIO-LUULUONG").val(),
+                    SOLUONG: $("#add-BOMDAUNUOCTHONGGIO-SOLUONG").val()
+                };
+                $.ajax({
+                    type: "POST",
+                    url: linkapi + "v2/thembomdaunuocthonggio?id=" + getParameterByName("Ship_ID"),
+                    dataType: "json",
+                    data: JSON.stringify(BOMDAUNUOCTHONGGIO),
+                    contentType: "application/json",
+                    success: function (data) {
+                        toastSuccess("Thành công", "Thêm thông tin bơm dầu, nước và thông gió thành công.");
+                        loadDataList_BOMDAUNUOCTHONGGIO();
+                    }, error: function (ret) {
+                        toastError("Thất bại", "");
+                    },
+                    complete: function () { // Set our complete callback, adding the .hidden class and hiding the spinner.
+                        $("#add-BOMDAUNUOCTHONGGIO-TENTB").val("");
+                        $("#add-BOMDAUNUOCTHONGGIO-NUOCSX").val("");
+                        $("#add-BOMDAUNUOCTHONGGIO-LUULUONG").val("");
+                        $("#add-BOMDAUNUOCTHONGGIO-KYHIEU").val("");
+                        $("#add-BOMDAUNUOCTHONGGIO-SOLUONG").val("");
+                        $('#model-add-BOMDAUNUOCTHONGGIO').modal("hide");
+                    },
+                });
+            }
+            return false;
+        }
+        function onclick_edit_BOMDAUNUOCTHONGGIO(ID, TENTB, KYHIEU, NUOCSX, LUULUONG, SOLUONG) {
+            $('#edit-BOMDAUNUOCTHONGGIO-ID').val(ID);
+            $("#edit-BOMDAUNUOCTHONGGIO-TENTB").val(TENTB);
+            $("#edit-BOMDAUNUOCTHONGGIO-KYHIEU").val(KYHIEU);
+            $("#edit-BOMDAUNUOCTHONGGIO-NUOCSX").val(NUOCSX);
+            $("#edit-BOMDAUNUOCTHONGGIO-LUULUONG").val(LUULUONG);
+            $("#edit-BOMDAUNUOCTHONGGIO-SOLUONG").val(SOLUONG);
+        }
+        function edit_BOMDAUNUOCTHONGGIO() {
+            var form = document.getElementById("form-edit-BOMDAUNUOCTHONGGIO");
+            console.log(form.checkValidity());
+            if (form.checkValidity() == true) {
+                var BOMDAUNUOCTHONGGIO = {
+                    ID: $("#edit-BOMDAUNUOCTHONGGIO-ID").val(),
+                    TENTB: $("#edit-BOMDAUNUOCTHONGGIO-TENTB").val(),
+                    KYHIEU: $("#edit-BOMDAUNUOCTHONGGIO-KYHIEU").val(),
+                    NUOCSX: $("#edit-BOMDAUNUOCTHONGGIO-NUOCSX").val(),
+                    LUULUONG: $("#edit-BOMDAUNUOCTHONGGIO-LUULUONG").val(),
+                    SOLUONG: $("#edit-BOMDAUNUOCTHONGGIO-SOLUONG").val()
+                };
+                console.log(BOMDAUNUOCTHONGGIO);
+                $.ajax({
+                    type: "PUT",
+                    url: linkapi + "v2/update_bomdaunuocthonggio?id=" + BOMDAUNUOCTHONGGIO.ID,
+                    dataType: "json",
+                    data: JSON.stringify(BOMDAUNUOCTHONGGIO),
+                    contentType: "application/json",
+                    success: function (data) {
+                        toastSuccess("Thành công", "Cập nhật thông tin bơm dầu, nước và thông gió thành công.");
+                        loadDataList_BOMDAUNUOCTHONGGIO();
+                    }, error: function (ret) {
+                        console.log(ret.responseJSON.Message);
+                        toastError("Thất bại", "");
+                    },
+                    complete: function () { // Set our complete callback, adding the .hidden class and hiding the spinner.
+                        $('#model-edit-BOMDAUNUOCTHONGGIO').modal("hide");
+                    },
+                });
+            }
+            return false;
+        }
+        function delete_BOMDAUNUOCTHONGGIO(id) {
+            let text = "Bạn có chắc muốn xóa bơm dầu, nước và thông gió này?";
+            if (confirm(text) == true) {
+                $.ajax({
+                    url: linkapi + "v2/xoabomdaunuocthongio?id=" + id,
+                    type: "DELETE",
+                }).done(function (res) {
+                    loadDataList_BOMDAUNUOCTHONGGIO();
+                    toastSuccess("Thành công", "Xóa thông tin bơm dầu, nước và thông gió thành công!");
+                }).fail(function (res) {
+                    toastError("Lỗi", "Xóa thông tin bơm dầu, nước và thông gió không thành công!");
+                })
+            } else {
+
+            }
+        }
+
+        // TRANG BỊ KHÁC
+        function loadDataList_TRANGBIKHAC() {
+            $.ajax({
+                type: "GET",
+                url: linkapi + "v2/thietbikhac?id=" + getParameterByName("Ship_ID"),
+                dataType: "json",
+                success: function (data) {
+                    var tabletext = "<thead><tr><th>STT</th><th>Tên trang thiết bị</th><th>Ký hiệu</th><th>Số lượng</th><th>Tác vụ</th></tr></thead><tbody>";
+                    var i = 1;
+                    $.each(data, function (key, item) {
+                        tabletext += "<tr><td>" + i + "</td><td>" + item.TENTB + "</td><td>" + item.KYHIEU + "</td><td>" + item.SOLUONG + '</td><td><div style="width: max-content;"><a href="#" class="edit" title="Sửa" data-toggle="modal" data-target="#model-edit-TRANGBIKHAC"  onclick="onclick_edit_TRANGBIKHAC(`' + item.ID + '`,`' + item.TENTB + '`,`' + item.KYHIEU + '`,`' + item.SOLUONG + '`)"><i class="material-icons">&#xE254;</i></a><a href="#" class="delete" title="Xóa" onclick="delete_TRANGBIKHAC(`' + item.ID + '`)"><i class="material-icons">&#xE872;</i></a></div></td></tr>';
+                        i = i + 1;
+                    });
+                    tabletext += "</tbody>";
+                    $('#table-TRANGBIKHAC').html(tabletext);
+                    console.log("okGET");
+                    loadTableTRANGBIKHAC();
+                }, error: function (ret) {
+                    console.log('errorGET');
+                },
+            });
+        };
+        function loadTableTRANGBIKHAC() {
+            $('table[id=table-TRANGBIKHAC]').each(function () {
+                var table1 = $(this).DataTable({
+                    destroy: true,
+                    searching: false,
+                    stateSave: true,
+                    "columns": [
+                        { name: 'STT', width: 90 },
+                        { name: 'Tên trang thiết bị', width: 380 },
+                        { name: 'Ký hiệu', width: 380 },
+                        { name: 'Số lượng', width: 380 },
+                        { name: 'Tác vụ', width: 150 },
+                    ],
+                    lengthChange: false,
+                    "language": {
+                        "sProcessing": "Đang xử lý...",
+                        "sLengthMenu": "Xem _MENU_ mục",
+                        "sZeroRecords": "Không tìm thấy thông tin phù hợp",
+                        "sInfo": "Đang xem _START_ đến _END_ trong tổng số _TOTAL_ mục",
+                        "sInfoEmpty": "Đang xem 0 đến 0 trong tổng số 0 mục",
+                        "sInfoFiltered": "(được lọc từ _MAX_ mục)",
+                        "sInfoPostFix": "",
+                        "sSearch": "Tìm kiếm: ",
+                        "sUrl": "",
+                        "oPaginate": {
+                            "sFirst": "Đầu",
+                            "sPrevious": "Trước",
+                            "sNext": "Tiếp",
+                            "sLast": "Cuối"
+                        }
+                    }
+                });
+            });
+        };
+        function add_TRANGBIKHAC() {
+            var form = document.getElementById("form-add-TRANGBIKHAC");
+            console.log(form.checkValidity());
+            if (form.checkValidity() == true) {
+                var TRANGBIKHAC = {
+                    TENTB: $("#add-TRANGBIKHAC-TENTB").val(),
+                    KYHIEU: $("#add-TRANGBIKHAC-KYHIEU").val(),
+                    SOLUONG: $("#add-TRANGBIKHAC-SOLUONG").val()
+                };
+                $.ajax({
+                    type: "POST",
+                    url: linkapi + "v2/themtrangthietbikhac?id=" + getParameterByName("Ship_ID"),
+                    dataType: "json",
+                    data: JSON.stringify(TRANGBIKHAC),
+                    contentType: "application/json",
+                    success: function (data) {
+                        toastSuccess("Thành công", "Thêm thông tin trang bị khác thành công.");
+                        loadDataList_TRANGBIKHAC();
+                    }, error: function (ret) {
+                        toastError("Thất bại", "");
+                    },
+                    complete: function () { // Set our complete callback, adding the .hidden class and hiding the spinner.
+                        $("#add-TRANGBIKHAC-TENTB").val("");
+                        $("#add-TRANGBIKHAC-KYHIEU").val("");
+                        $("#add-TRANGBIKHAC-SOLUONG").val("");
+                        $('#model-add-TRANGBIKHAC').modal("hide");
+                    },
+                });
+            }
+            return false;
+        }
+        function onclick_edit_TRANGBIKHAC(ID, TENTB, KYHIEU, SOLUONG) {
+            $('#edit-TRANGBIKHAC-ID').val(ID);
+            $("#edit-TRANGBIKHAC-TENTB").val(TENTB);
+            $("#edit-TRANGBIKHAC-KYHIEU").val(KYHIEU);
+            $("#edit-TRANGBIKHAC-SOLUONG").val(SOLUONG);
+        }
+        function edit_TRANGBIKHAC() {
+            var form = document.getElementById("form-edit-TRANGBIKHAC");
+            console.log(form.checkValidity());
+            if (form.checkValidity() == true) {
+                var TRANGBIKHAC = {
+                    ID: $("#edit-TRANGBIKHAC-ID").val(),
+                    TENTB: $("#edit-TRANGBIKHAC-TENTB").val(),
+                    KYHIEU: $("#edit-TRANGBIKHAC-KYHIEU").val(),
+                    SOLUONG: $("#edit-TRANGBIKHAC-SOLUONG").val()
+                };
+                console.log(TRANGBIKHAC);
+                $.ajax({
+                    type: "PUT",
+                    url: linkapi + "v2/update_trangthietbikhac?id=" + TRANGBIKHAC.ID,
+                    dataType: "json",
+                    data: JSON.stringify(TRANGBIKHAC),
+                    contentType: "application/json",
+                    success: function (data) {
+                        toastSuccess("Thành công", "Cập nhật thông tin trang bị khác thành công.");
+                        loadDataList_TRANGBIKHAC();
+                    }, error: function (ret) {
+                        console.log(ret.responseJSON.Message);
+                        toastError("Thất bại", "");
+                    },
+                    complete: function () { // Set our complete callback, adding the .hidden class and hiding the spinner.
+                        $('#model-edit-TRANGBIKHAC').modal("hide");
+                    },
+                });
+            }
+            return false;
+        }
+        function delete_TRANGBIKHAC(id) {
+            let text = "Bạn có chắc muốn xóa trang thiết bị này?";
+            if (confirm(text) == true) {
+                $.ajax({
+                    url: linkapi + "v2/xoatrangthietbikhac?id=" + id,
+                    type: "DELETE",
+                }).done(function (res) {
+                    loadDataList_TRANGBIKHAC();
+                    toastSuccess("Thành công", "Xóa thông tin trang thiết bị thành công!");
+                }).fail(function (res) {
+                    toastError("Lỗi", "Xóa thông tin trang thiết bị không thành công!");
                 })
             } else {
 
