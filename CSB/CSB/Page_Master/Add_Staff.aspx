@@ -22,7 +22,7 @@
                             </div>
                         </div>
                         <div class="card-block">
-                            <form>
+                            <form id="form_add_staff" onsubmit="return false">
                                 <h4 class="sub-title">Thông tin cơ bản</h4>
                                 <div class="row">
                                     <div class="col-lg-6 col-md-12">
@@ -181,7 +181,10 @@
                                     <div class="right">
                                         <div class="btn-group">
                                             <button type="button" onclick="remove_input_add_ship()" class="btn btn-danger"><i class="bi bi-x-circle"></i>&nbsp;Xoá ô nhập</button>
-                                            <button type="button" class="btn btn-primary right" onclick="addStaff()"><i class="bi bi-plus-circle"></i>&nbsp;Lưu thông tin</button>
+                                            <button type="submit" class="btn btn-primary right" onclick="addStaff()">
+                                                <i class="bi bi-plus-circle"></i>
+                                                <span id="text-save">Lưu thông tin</span>
+                                            </button>
                                         </div>
 
                                     </div>
@@ -441,19 +444,19 @@
         }
 
         function addStaff() {
-            if ($("#add-staffFullName").val() == "") {
-                alert("Vui lòng nhập họ tên của cán bộ, nhân viên!");
-            }
-            else if ($("#add-staffBirthYear").val() == "") {
-                alert("Vui lòng nhập ngày sinh của cán bộ, nhân viên!");
-            }
-            else if ($("#add-staffResidence").val() == "") {
-                alert("Vui lòng nhập quê quán của cán bộ, nhân viên!");
-            }
-            else if ($("#add-staffEnlist").val() == "") {
-                alert("Vui lòng nhập ngày nhập ngũ của cán bộ, nhân viên!");
-            }
-            else {
+            //if ($("#add-staffFullName").val() == "") {
+            //    alert("Vui lòng nhập họ tên của cán bộ, nhân viên!");
+            //}
+            //else if ($("#add-staffBirthYear").val() == "") {
+            //    alert("Vui lòng nhập ngày sinh của cán bộ, nhân viên!");
+            //}
+            //else if ($("#add-staffResidence").val() == "") {
+            //    alert("Vui lòng nhập quê quán của cán bộ, nhân viên!");
+            //}
+            //else if ($("#add-staffEnlist").val() == "") {
+            //    alert("Vui lòng nhập ngày nhập ngũ của cán bộ, nhân viên!");
+            //}
+            //else {
                 var Staff = {
                     FullName: $("#add-staffFullName").val(),
                     BirthYear: $("#add-staffBirthYear").val(),
@@ -482,7 +485,9 @@
                     Note: $("#add-staffNote").val(),
                     ShipID: Ship_ID,
                 };
-                console.log(Staff);
+            console.log(Staff);
+            var form = document.getElementById("form_add_staff");
+            if (form.checkValidity() == true) {
                 $.ajax({
                     type: "POST",
                     url: linkapi + "insert_personnel",
@@ -506,6 +511,8 @@
                     },
                 });
             }
+               
+            //}
 
         }
         function remove_input_add_ship() {

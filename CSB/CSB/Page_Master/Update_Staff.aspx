@@ -20,7 +20,7 @@
                             </div>
                         </div>
                         <div class="card-block">
-                            <form>
+                            <form id="form_edit_staff" onsubmit="return false">
                                 <h4 class="sub-title">Thông tin cơ bản</h4>
                                 <div class="row">
                                     <div class="col-lg-6 col-md-12">
@@ -175,7 +175,10 @@
                                     <div class="right">
                                         <div class="btn-group">
                                             <button type="button" onclick="remove_input_edit_ship()" class="btn btn-danger"><i class="bi bi-x-circle"></i>&nbsp;Xoá ô nhập</button>
-                                            <button type="button" class="btn btn-primary right" onclick="editStaff()"><i class="bi bi-plus-circle"></i>&nbsp;Lưu thông tin</button>
+                                            <button type="submit" class="btn btn-primary right" onclick="editStaff()">
+                                                <i class="bi bi-plus-circle"></i>
+                                                <span id="text-save">Lưu thông tin</span>
+                                            </button>
                                         </div>
 
                                     </div>
@@ -495,19 +498,19 @@
         }
 
         function editStaff() {
-            if ($("#edit-staffFullName").val() == "") {
-                alert("Vui lòng nhập họ tên của cán bộ, nhân viên!");
-            }
-            else if ($("#edit-staffBirthYear").val() == "") {
-                alert("Vui lòng nhập ngày sinh của cán bộ, nhân viên!");
-            }
-            else if ($("#edit-staffResidence").val() == "") {
-                alert("Vui lòng nhập quê quán của cán bộ, nhân viên!");
-            }
-            else if ($("#edit-staffEnlist").val() == "") {
-                alert("Vui lòng nhập ngày nhập ngũ của cán bộ, nhân viên!");
-            }
-            else {
+            //if ($("#edit-staffFullName").val() == "") {
+            //    alert("Vui lòng nhập họ tên của cán bộ, nhân viên!");
+            //}
+            //else if ($("#edit-staffBirthYear").val() == "") {
+            //    alert("Vui lòng nhập ngày sinh của cán bộ, nhân viên!");
+            //}
+            //else if ($("#edit-staffResidence").val() == "") {
+            //    alert("Vui lòng nhập quê quán của cán bộ, nhân viên!");
+            //}
+            //else if ($("#edit-staffEnlist").val() == "") {
+            //    alert("Vui lòng nhập ngày nhập ngũ của cán bộ, nhân viên!");
+            //}
+            //else {
                 var Staff = {
                     ID: Staff_ID,
                     FullName: $("#edit-staffFullName").val(),
@@ -537,7 +540,9 @@
                     Note: $("#edit-staffNote").val(),
                     ShipID: Ship_ID
                 };
-                console.log(Staff);
+            console.log(Staff);
+            var form = document.getElementById("form_edit_staff");
+            if (form.checkValidity() == true) {
                 $.ajax({
                     type: "PUT",
                     url: linkapi + "update_personnel?id=" + Staff_ID,
@@ -561,6 +566,8 @@
                     },
                 });
             }
+           
+            //}
 
         }
         function remove_input_edit_ship() {
