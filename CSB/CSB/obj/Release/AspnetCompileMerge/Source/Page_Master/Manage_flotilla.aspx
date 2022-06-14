@@ -1,6 +1,6 @@
-﻿<%@ Page Title="Quản lí hải đội" Language="C#" MasterPageFile="~/Master/LayoutAdmin.Master" AutoEventWireup="true" CodeBehind="Manage_flotilla.aspx.cs" Inherits="CSB.Page_Master.Manage_flotilla" %>
+﻿<%@ Page Title="Quản lí hải đội" Language="C#" MasterPageFile="~/Master/TrangChu.Master" AutoEventWireup="true" CodeBehind="Manage_flotilla.aspx.cs" Inherits="CSB.Page_Master.Manage_flotilla" %>
 
-<asp:Content ID="Content1" ContentPlaceHolderID="MainContentAdmin" runat="server">
+<asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <div id="form1">
         <div class="section-header">
             <div class="section">

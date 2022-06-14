@@ -1,6 +1,6 @@
-﻿<%@ Page Title="Thêm mới tàu" Language="C#" MasterPageFile="~/Master/LayoutAdmin.Master" AutoEventWireup="true" CodeBehind="Add_Ship.aspx.cs" Inherits="CSB.Page_Master.Add_Ship" %>
+﻿<%@ Page Title="Thêm mới tàu" Language="C#" MasterPageFile="~/Master/TrangChu.Master" AutoEventWireup="true" CodeBehind="Add_Ship.aspx.cs" Inherits="CSB.Page_Master.Add_Ship" %>
 
-<asp:Content ID="Content1" ContentPlaceHolderID="MainContentAdmin" runat="server">
+<asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <style type="text/css">
         .row {
             margin-bottom: 20px;
@@ -20,11 +20,11 @@
         <form id="form_add_ship" runat="server" style="background-color: #f4f6f9;">
             <div class="section">
                 <div class="section-header">
-                    <h4 id="title" style="color: black; margin: 0">THÊM MỚI TẦU</h4>
+                    <h4 id="title" style="color: black; margin: 0">THÊM MỚI TÀU</h4>
                     <div class="section-header-breadcrumb">
                         <div class="breadcrumb-item active"><a href="Null.aspx" style="color: #01b5f9; font-size: 18px;">Trang chủ</a></div>
                         /<div class="breadcrumb-item active"><a href="Manage_ship?vung=1" style="color: #01b5f9; font-size: 18px;">Quản lý tàu</a></div>
-                        /<div class="breadcrumb-item active"><a href="Add_Ship" style="color: #01b5f9; font-size: 18px;">Thêm mới tầu</a></div>
+                        /<div class="breadcrumb-item active"><a href="Add_Ship" style="color: #01b5f9; font-size: 18px;">Thêm mới tàu</a></div>
                     </div>
                 </div>
 
@@ -53,7 +53,7 @@
                                     <div class="col-md-8 input-group addTenTau">
                                         <span class="input-group-addon">ví dụ: 4008</span>
                                         <%--   <input type="text" class="form-control" placeholder="Tên tàu">--%>
-                                        <asp:TextBox ID="addTenTau" class="form-control" placeholder="Tên tầu" required="required" name="add_TenTau" runat="server"></asp:TextBox>
+                                        <asp:TextBox ID="addTenTau" class="form-control" placeholder="Tên tàu" required="required" name="add_TenTau" runat="server"></asp:TextBox>
 
                                     </div>
                                 </div>

@@ -1,6 +1,6 @@
-﻿<%@ Page Title="Quản lý tàu" Language="C#" MasterPageFile="~/Master/LayoutAdmin.Master" AutoEventWireup="true" CodeBehind="Manage_ship.aspx.cs" Inherits="CSB.Page_Master.Manage_ship" %>
+﻿<%@ Page Title="Quản lý tàu" Language="C#" MasterPageFile="~/Master/TrangChu.Master" AutoEventWireup="true" CodeBehind="Manage_ship.aspx.cs" Inherits="CSB.Page_Master.Manage_ship" %>
 
-<asp:Content ID="Content1" ContentPlaceHolderID="MainContentAdmin" runat="server">
+<asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <style>
         .panel {
             margin-bottom: 20px;
@@ -38,20 +38,21 @@
             justify-content: space-around;
             flex-wrap: wrap-reverse;
         }
+
     </style>
 
     <div id="form1">
-        <div class="section-header">
-            <div class="">
-                <div class="section">
-                    <div class="section-header">
-                        <h4 id="title" style="color: black; margin: 0">QUẢN LÝ TÀU - VÙNG 1</h4>
-                        <div class="section-header-breadcrumb">
-                            <div class="breadcrumb-item active"><a href="Null.aspx" style="color: #01b5f9; font-size: 18px;">Trang chủ </a></div>
-                            / <div class="breadcrumb-item active"><a href="Manage_ship?vung=1" style="color: #01b5f9; font-size: 18px;"> Quản lý tàu</a></div>
-                        </div>
+        
+            <div class="section" style="background-color: #fff; padding-bottom: 15px;">
+                <div class="section-header" style="background-color: #fff;">
+                    <h4 id="title" style="color: black; margin: 0">QUẢN LÝ TÀU - VÙNG 1</h4>
+                    <div class="section-header-breadcrumb">
+                        <div class="breadcrumb-item"><a href="Null.aspx" style="color: #01b5f9; font-size: 18px;">Trang chủ</a></div>
+                        <div class="breadcrumb-item"><a href="Manage_ship?vung=1" style="color: #01b5f9; font-size: 18px;">Quản lý tàu</a></div>
                     </div>
-                    <div class="mainMenu" style="justify-content: flex-start">
+                </div>
+                <div class="section-content">
+                    <div class="subMenu" style="justify-content: flex-start; background-color: #f06137;">
                         <ul class="mainMenu-list">
                             <li><a id="Vung1" class="a_menu" href="../Page_Master/Manage_ship?vung=1">VÙNG 1</a></li>
                             <li><a id="Vung2" class="a_menu" href="../Page_Master/Manage_ship?vung=2">VÙNG 2</a></li>
@@ -60,8 +61,7 @@
                             <li><a class="a_menu" href="../Page_Master/Null.aspx">CÁC ĐƠN VỊ TRỰC THUỘC</a></li>
                         </ul>
                     </div>
-                    <br />
-                    <div class="section-header">
+                    <div class="section-header" style="padding-bottom: 15px;">
                         <div class="col-md-12" style="padding: 0">
                             <table id="tableship" class="table table-bordered table-striped table-md" style="width: 100%">
                             </table>
@@ -69,7 +69,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        
     </div>
 
     <div class="modal fade" id="model-infordetail-ship" tabindex="-1" role="dialog">
@@ -1596,7 +1596,7 @@ TR&#7908;C CHÂN V&#7882;T</span></b></p>
                     $('#tableship').html(tabletext);
                     loadTableShip();
                     //$('#tableship_wrapper .row .col-sm-12').first().html('<button onclick="btn_addship()" class="btn btn-info btn-lg col-md-6" /*data-toggle="modal" data-target="#model-add-ship"*/ style="height: 40px; margin-bottom: 8px; margin-top: -4px; font-size: 18px;"><span class="glyphicon glyphicon-plus"></span>Thêm tàu</button>');
-                    $('#tableship_wrapper .row .col-sm-12').first().html('<div class="btn-group"><button onclick="btn_Load_listship()" class="btn btn-lg btn-primary mb-3"><span class="glyphicon glyphicon-refresh"></span> &nbsp;Load dữ liệu</button> <button onclick="btn_addship()" class="btn btn-lg btn-primary mb-3"><span class="glyphicon glyphicon-plus-sign"></span> &nbsp;Thêm mới tàu</button><div class="btn-group"><button type="button" class="btn btn-lg btn-primary mb-3 dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-file"></span> Xuất báo cáo </button><ul class="dropdown-menu" role="menu"><li><a href="#">In báo cáo</a></li><li><a href="#" >Xuất file Word</a></li><li><a href="#">Xuất file Excel</a></li><li><a href="#">Xuất file PDF</a></li></ul></div></div>');
+                    $('#tableship_wrapper .row .col-sm-12').first().html('<div class="btn-group"><button onclick="btn_Load_listship()" class="btn btn-lg btn-secondary mb-3"><span class="bi-arrow-clockwise"></span> &nbsp;Load dữ liệu</button> <button onclick="btn_addship()" class="btn btn-lg btn-secondary mb-3"><span class="bi-plus-circle-fill"></span> &nbsp;Thêm mới tàu</button><div class="btn-group"><button type="button" class="btn btn-lg btn-secondary mb-3 dropdown-toggle" data-toggle="dropdown"><span class="bi-file-earmark-text"></span> Xuất báo cáo </button><ul class="dropdown-menu" role="menu"><li><a href="#">In báo cáo</a></li><li><a href="#" >Xuất file Word</a></li><li><a href="#">Xuất file Excel</a></li><li><a href="#">Xuất file PDF</a></li></ul></div></div>');
                     $('#tableship_wrapper .row').first().next().children().css("overflow-x", "auto");
                 }, error: function (ret) {
                     console.log('errorGET');

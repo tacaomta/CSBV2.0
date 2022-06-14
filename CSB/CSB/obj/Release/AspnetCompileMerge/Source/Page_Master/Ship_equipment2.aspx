@@ -1,5 +1,5 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Master/LayoutAdmin.Master" AutoEventWireup="true" CodeBehind="Ship_equipment2.aspx.cs" Inherits="CSB.Page_Master.Ship_equipment2" %>
-<asp:Content ID="Content1" ContentPlaceHolderID="MainContentAdmin" runat="server">
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Master/TrangChu.Master" AutoEventWireup="true" CodeBehind="Ship_equipment2.aspx.cs" Inherits="CSB.Page_Master.Ship_equipment2" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <div id="form1">
         <div class="section-header">
             <div class="">

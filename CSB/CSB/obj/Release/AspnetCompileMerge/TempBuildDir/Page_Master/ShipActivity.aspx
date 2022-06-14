@@ -1,5 +1,5 @@
-﻿<%@ Page Title="Hoạt động tàu" Language="C#" MasterPageFile="~/Master/LayoutAdmin.Master" AutoEventWireup="true" CodeBehind="ShipActivity.aspx.cs" Inherits="CSB.Page_Master.ShipActivity" %>
-<asp:Content ID="ShipActivity" ContentPlaceHolderID="MainContentAdmin" runat="server">
+﻿<%@ Page Title="Hoạt động tàu" Language="C#" MasterPageFile="~/Master/TrangChu.Master" AutoEventWireup="true" CodeBehind="ShipActivity.aspx.cs" Inherits="CSB.Page_Master.ShipActivity" %>
+<asp:Content ID="ShipActivity" ContentPlaceHolderID="MainContent" runat="server">
     <style>
 
 .dropdown-menu {
