@@ -16,12 +16,12 @@
             padding-top: 0;
             padding-bottom: 0;
         }
-        .sub-title {
+        /*.sub-title {
             margin-bottom: 10px;
         }
         .form-group {
             margin-bottom: 10px;
-        }
+        }*/
     </style>
     <div class="main-body">
         <div class="page-wrapper">
@@ -60,7 +60,7 @@
                                         <a class="nav-link" data-toggle="tab" onclick="loadDataList_HETRUCCHANVIT()" href="#HETRUCHANVIT">Hệ trục chân vịt</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" data-toggle="tab" href="#NEO-XICHNEO">Neo, xích neo</a>
+                                        <a class="nav-link" data-toggle="tab" onclick="loadDataList_NEOXICHNEO()" href="#NEOXICHNEO">Neo, xích neo</a>
                                     </li>
                                     <li class="nav-item">
                                         <a class="nav-link" data-toggle="tab" href="#BOMDAU-NUOC-THONGGIO">Bơm dầu, nước, thông gió</a>
@@ -72,7 +72,7 @@
 
                                 <!-- Tab panes -->
                                 <div class="tab-content">
-                                    <div id="HANGHAI" class="container tab-pane active">
+                                    <div id="HANGHAI" class=" tab-pane active">
                                         <br>
                                         <h5>HÀNG HẢI</h5>
                                         <div class="btn-group">
@@ -82,7 +82,7 @@
                                         <table id="table-HANGHAI" class="table table-bordered table-striped table-md" style="width: 100%">
                                         </table>
                                     </div>
-                                    <div id="VUKHI" class="container tab-pane">
+                                    <div id="VUKHI" class=" tab-pane">
                                         <br>
                                         <h5>VŨ KHÍ</h5>
                                         <div class="btn-group">
@@ -92,7 +92,7 @@
                                         <table id="table-VUKHI" class="table table-bordered table-striped table-md" style="width: 100%">
                                         </table>
                                     </div>
-                                    <div id="RADA" class="container tab-pane">
+                                    <div id="RADA" class=" tab-pane">
                                         <br>
                                         <h5>THÔNG TIN - RA ĐA</h5>
                                         <div class="btn-group">
@@ -102,7 +102,7 @@
                                         <table id="table-RADA" class="table table-bordered table-striped table-md" style="width: 100%">
                                         </table>
                                     </div>
-                                    <div id="TOMAY" class="container tab-pane">
+                                    <div id="TOMAY" class=" tab-pane">
                                         <br>
                                         <h5>MÁY CHÍNH</h5>
                                         <div class="btn-group">
@@ -128,7 +128,7 @@
                                         <table id="table-MAYCHUYENDUNG" class="table table-bordered table-striped table-md" style="width: 100%">
                                         </table>
                                     </div>
-                                    <div id="HETRUCHANVIT" class="container tab-pane">
+                                    <div id="HETRUCHANVIT" class=" tab-pane">
                                         <br>
                                         <h5>HỆ TRỤC CHÂN VỊT</h5>
                                         <div class="btn-group">
@@ -138,17 +138,22 @@
                                         <table id="table-HETRUCCHANVIT" class="table table-bordered table-striped table-md" style="width: 100%">
                                         </table>
                                     </div>
-                                    <div id="NEO-XICHNEO" class="container tab-pane">
+                                    <div id="NEOXICHNEO" class=" tab-pane">
                                         <br>
                                         <h5>NEO, XÍCH NEO</h5>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                        <div class="btn-group">
+                                            <button onclick="loadDataList_NEOXICHNEO()" class="btn btn-primary mb-2"><span class="glyphicon glyphicon-refresh"></span>&nbsp;Load dữ liệu</button>
+                                            <button id="btn_add_NEOXICHNEO" class="btn btn-primary mb-2" data-toggle="modal" data-target="#model-add-NEOXICHNEO" style="padding-top: 4px;"><span class="glyphicon glyphicon-plus-sign"></span>Thêm neo - xích neo</button>
+                                        </div>
+                                        <table id="table-NEOXICHNEO" class="table table-bordered table-striped table-md" style="width: 100%">
+                                        </table>
                                     </div>
-                                    <div id="BOMDAU-NUOC-THONGGIO" class="container tab-pane">
+                                    <div id="BOMDAU-NUOC-THONGGIO" class=" tab-pane">
                                         <br>
                                         <h5>BẢNG THỐNG KÊ CÁC BƠM DẦU, NƯỚC VÀ THÔNG GIÓ</h5>
                                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                                     </div>
-                                    <div id="TRANGBIKHAC" class="container tab-pane">
+                                    <div id="TRANGBIKHAC" class=" tab-pane">
                                         <br>
                                         <h5>CÁC TRANG BỊ KHÁC</h5>
                                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
@@ -1982,7 +1987,7 @@
                                             <div class="form-group row">
                                                 <label class="col-sm-4 col-form-label">Tổng chiều dài: </label>
                                                 <div class="col-sm-8">
-                                                    <input type="number" min="0" step="any" id="add-HETRUCCHANVIT-TRUC-TONGCHIEUDAI" class="form-control">
+                                                    <input type="number" min="0" step="any" id="add-HETRUCCHANVIT-TRUC-TONGCHIEUDAI" class="form-control" required>
                                                 </div>
                                             </div>
                                         </div>
@@ -2053,7 +2058,7 @@
                                             <div class="form-group row">
                                                 <label class="col-sm-4 col-form-label">Loại chân vịt: </label>
                                                 <div class="col-sm-8">
-                                                    <input type="text" id="add-HETRUCCHANVIT-CHANVIT-LOAICHANVIT" class="form-control">
+                                                    <input type="text" id="add-HETRUCCHANVIT-CHANVIT-LOAICHANVIT" class="form-control" required>
                                                 </div>
                                             </div>
                                         </div>
@@ -2165,7 +2170,7 @@
                                             <div class="form-group row">
                                                 <label class="col-sm-4 col-form-label">Tổng chiều dài: </label>
                                                 <div class="col-sm-8">
-                                                    <input type="number" min="0" step="any" id="edit-HETRUCCHANVIT-TRUC-TONGCHIEUDAI" class="form-control">
+                                                    <input type="number" min="0" step="any" id="edit-HETRUCCHANVIT-TRUC-TONGCHIEUDAI" class="form-control" required>
                                                 </div>
                                             </div>
                                         </div>
@@ -2236,7 +2241,7 @@
                                             <div class="form-group row">
                                                 <label class="col-sm-4 col-form-label">Loại chân vịt: </label>
                                                 <div class="col-sm-8">
-                                                    <input type="text" id="edit-HETRUCCHANVIT-CHANVIT-LOAICHANVIT" class="form-control">
+                                                    <input type="text" id="edit-HETRUCCHANVIT-CHANVIT-LOAICHANVIT" class="form-control" required>
                                                 </div>
                                             </div>
                                         </div>
@@ -2324,6 +2329,271 @@
                             </div>
                             <div class="modal-footer" style="padding: 8px 16px;">
                                 <button type="submit" onclick="edit_HETRUCCHANVIT()" class="btn btn-info">Lưu</button>
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Đóng</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="model-add-NEOXICHNEO" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-xl" role="document">
+                <div class="modal-content">
+                    <form id="form-add-NEOXICHNEO" onsubmit="return false">
+                        <div class="card auth_form" style="margin-bottom: 0px">
+                            <div class="modal-header" style="padding: 10px 16px;">
+                                <h4 class="title-modal-banve font-weight-bold">Thêm neo - xích neo của tàu</h4>
+                            </div>
+                            <div class="modal-body" style="padding: 6px 16px;">
+                                <div class="">
+                                    <h4 class="sub-title">Neo phải</h4>
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <div class="form-group row">
+                                                <label class="col-sm-4 col-form-label">Ký hiệu: </label>
+                                                <div class="col-sm-8">
+                                                    <input type="text" id="add-NEOXICHNEO-NEOPHAI-KYHIEU" class="form-control" required>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="form-group row">
+                                                <label class="col-sm-4 col-form-label">Trọng lượng P: </label>
+                                                <div class="col-sm-8">
+                                                    <input type="number" min="0" step="any" id="add-NEOXICHNEO-NEOPHAI-TRONGLUONGP" class="form-control">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <div class="form-group row">
+                                                <label class="col-sm-4 col-form-label">Đường kính xích neo: </label>
+                                                <div class="col-sm-8">
+                                                    <input type="number" min="0" step="any" id="add-NEOXICHNEO-NEOPHAI-XICHNEO-DUONGKINH" class="form-control">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="form-group row">
+                                                <label class="col-sm-4 col-form-label">Độ dài xích neo: </label>
+                                                <div class="col-sm-8">
+                                                    <input type="number" min="0" step="any" id="add-NEOXICHNEO-NEOPHAI-XICHNEO-DODAI" class="form-control">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h4 class="sub-title">Neo trái</h4>
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <div class="form-group row">
+                                                <label class="col-sm-4 col-form-label">Ký hiệu: </label>
+                                                <div class="col-sm-8">
+                                                    <input type="text" id="add-NEOXICHNEO-NEOTRAI-KYHIEU" class="form-control" required>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="form-group row">
+                                                <label class="col-sm-4 col-form-label">Trọng lượng P: </label>
+                                                <div class="col-sm-8">
+                                                    <input type="number" min="0" step="any" id="add-NEOXICHNEO-NEOTRAI-TRONGLUONGP" class="form-control">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <div class="form-group row">
+                                                <label class="col-sm-4 col-form-label">Đường kính xích neo: </label>
+                                                <div class="col-sm-8">
+                                                    <input type="number" min="0" step="any" id="add-NEOXICHNEO-NEOTRAI-XICHNEO-DUONGKINH" class="form-control">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="form-group row">
+                                                <label class="col-sm-4 col-form-label">Độ dài xích neo: </label>
+                                                <div class="col-sm-8">
+                                                    <input type="number" min="0" step="any" id="add-NEOXICHNEO-NEOTRAI-XICHNEO-DODAI" class="form-control">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h4 class="sub-title">Neo sau</h4>
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <div class="form-group row">
+                                                <label class="col-sm-4 col-form-label">Ký hiệu: </label>
+                                                <div class="col-sm-8">
+                                                    <input type="text" id="add-NEOXICHNEO-NEOSAU-KYHIEU" class="form-control" required>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="form-group row">
+                                                <label class="col-sm-4 col-form-label">Trọng lượng P: </label>
+                                                <div class="col-sm-8">
+                                                    <input type="number" min="0" step="any" id="add-NEOXICHNEO-NEOSAU-TRONGLUONGP" class="form-control">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <div class="form-group row">
+                                                <label class="col-sm-4 col-form-label">Đường kính xích neo: </label>
+                                                <div class="col-sm-8">
+                                                    <input type="number" min="0" step="any" id="add-NEOXICHNEO-NEOSAU-XICHNEO-DUONGKINH" class="form-control">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="form-group row">
+                                                <label class="col-sm-4 col-form-label">Độ dài xích neo: </label>
+                                                <div class="col-sm-8">
+                                                    <input type="number" min="0" step="any" id="add-NEOXICHNEO-NEOSAU-XICHNEO-DODAI" class="form-control">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer" style="padding: 8px 16px;">
+                                <button type="submit" onclick="add_NEOXICHNEO()" class="btn btn-info">Thêm</button>
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Đóng</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="model-edit-NEOXICHNEO" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-xl" role="document">
+                <div class="modal-content">
+                    <form id="form-edit-NEOXICHNEO" onsubmit="return false">
+                        <input type="hidden" id="edit-NEOXICHNEO-ID" />
+                        <div class="card auth_form" style="margin-bottom: 0px">
+                            <div class="modal-header" style="padding: 10px 16px;">
+                                <h4 class="title-modal-banve font-weight-bold">Sửa thông tin neo - xích neo của tàu</h4>
+                            </div>
+                            <div class="modal-body" style="padding: 6px 16px;">
+                                <div class="">
+                                    <h4 class="sub-title">Neo phải</h4>
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <div class="form-group row">
+                                                <label class="col-sm-4 col-form-label">Ký hiệu: </label>
+                                                <div class="col-sm-8">
+                                                    <input type="text" id="edit-NEOXICHNEO-NEOPHAI-KYHIEU" class="form-control" required>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="form-group row">
+                                                <label class="col-sm-4 col-form-label">Trọng lượng P: </label>
+                                                <div class="col-sm-8">
+                                                    <input type="number" min="0" step="any" id="edit-NEOXICHNEO-NEOPHAI-TRONGLUONGP" class="form-control">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <div class="form-group row">
+                                                <label class="col-sm-4 col-form-label">Đường kính xích neo: </label>
+                                                <div class="col-sm-8">
+                                                    <input type="number" min="0" step="any" id="edit-NEOXICHNEO-NEOPHAI-XICHNEO-DUONGKINH" class="form-control">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="form-group row">
+                                                <label class="col-sm-4 col-form-label">Độ dài xích neo: </label>
+                                                <div class="col-sm-8">
+                                                    <input type="number" min="0" step="any" id="edit-NEOXICHNEO-NEOPHAI-XICHNEO-DODAI" class="form-control">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h4 class="sub-title">Neo trái</h4>
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <div class="form-group row">
+                                                <label class="col-sm-4 col-form-label">Ký hiệu: </label>
+                                                <div class="col-sm-8">
+                                                    <input type="text" id="edit-NEOXICHNEO-NEOTRAI-KYHIEU" class="form-control" required>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="form-group row">
+                                                <label class="col-sm-4 col-form-label">Trọng lượng P: </label>
+                                                <div class="col-sm-8">
+                                                    <input type="number" min="0" step="any" id="edit-NEOXICHNEO-NEOTRAI-TRONGLUONGP" class="form-control">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <div class="form-group row">
+                                                <label class="col-sm-4 col-form-label">Đường kính xích neo: </label>
+                                                <div class="col-sm-8">
+                                                    <input type="number" min="0" step="any" id="edit-NEOXICHNEO-NEOTRAI-XICHNEO-DUONGKINH" class="form-control">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="form-group row">
+                                                <label class="col-sm-4 col-form-label">Độ dài xích neo: </label>
+                                                <div class="col-sm-8">
+                                                    <input type="number" min="0" step="any" id="edit-NEOXICHNEO-NEOTRAI-XICHNEO-DODAI" class="form-control">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h4 class="sub-title">Neo sau</h4>
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <div class="form-group row">
+                                                <label class="col-sm-4 col-form-label">Ký hiệu: </label>
+                                                <div class="col-sm-8">
+                                                    <input type="text" id="edit-NEOXICHNEO-NEOSAU-KYHIEU" class="form-control" required>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="form-group row">
+                                                <label class="col-sm-4 col-form-label">Trọng lượng P: </label>
+                                                <div class="col-sm-8">
+                                                    <input type="number" min="0" step="any" id="edit-NEOXICHNEO-NEOSAU-TRONGLUONGP" class="form-control">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <div class="form-group row">
+                                                <label class="col-sm-4 col-form-label">Đường kính xích neo: </label>
+                                                <div class="col-sm-8">
+                                                    <input type="number" min="0" step="any" id="edit-NEOXICHNEO-NEOSAU-XICHNEO-DUONGKINH" class="form-control">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="form-group row">
+                                                <label class="col-sm-4 col-form-label">Độ dài xích neo: </label>
+                                                <div class="col-sm-8">
+                                                    <input type="number" min="0" step="any" id="edit-NEOXICHNEO-NEOSAU-XICHNEO-DODAI" class="form-control">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer" style="padding: 8px 16px;">
+                                <button type="submit" onclick="edit_NEOXICHNEO()" class="btn btn-info">Lưu</button>
                                 <button type="button" class="btn btn-default" data-dismiss="modal">Đóng</button>
                             </div>
                         </div>
@@ -2873,6 +3143,33 @@
                         toastError("Thất bại", ret.responseJSON.Message);
                     },
                     complete: function () { // Set our complete callback, adding the .hidden class and hiding the spinner.
+                        $("#add-MAYCHINH-THONGSOCOBAN-KYHIEU").val();
+                        $("#add-MAYCHINH-THONGSOCOBAN-NAMSANXUAT").val();
+                        $("#add-MAYCHINH-THONGSOCOBAN-NOISANXUAT").val();
+                        $("#add-MAYCHINH-THONGSOCOBAN-NAMLAPRAP").val();
+                        $("#add-MAYCHINH-THONGSOCOBAN-VITRILAPRAP").val();
+                        $("#add-MAYCHINH-THONGSOCOBAN-SOHIEUMAY").val();
+                        $("#add-MAYCHINH-THONGSOCOBAN-CONGSUAT").val();
+                        $("#add-MAYCHINH-THONGSOCOBAN-VONGQUAY").val();
+                        $("#add-MAYCHINH-THONGSOCOBAN-CHIEUQUAY").val();
+                        $("#add-MAYCHINH-THONGSOCOBAN-NGUONKHOIDONG").val();
+                        $("#add-MAYCHINH-THONGSOCOBAN-HETHONGDIEUKHIEN").val();
+                        $("#add-MAYCHINH-THONGSOCOBAN-KICHTHUOCMAY-DAI").val();
+                        $("#add-MAYCHINH-THONGSOCOBAN-KICHTHUOCMAY-RONG").val();
+                        $("#add-MAYCHINH-THONGSOCOBAN-KICHTHUOCMAY-CAO").val();
+                        $("#add-MAYCHINH-THONGSOCOBAN-TRONGLUONG").val();
+                        $("#add-MAYCHINH-THONGSOCOBAN-CHUKYSUACHUA-TIEUTU").val();
+                        $("#add-MAYCHINH-THONGSOCOBAN-CHUKYSUACHUA-TRUNGTU").val();
+                        $("#add-MAYCHINH-THONGSOCOBAN-CHUKYSUACHUA-DAITU").val();
+                        $("#add-MAYCHINH-THONGSOCOBAN-LOAIDIEN-DIENAP").val();
+                        $("#add-MAYCHINH-THONGSOCOBAN-LOAIDIEN-TANSO").val();
+                        $("#add-MAYCHINH-PHUONGPHAPTRUYENTAI-KYHIEULYHOP_BOGIAMVONG").val();
+                        $("#add-MAYCHINH-PHUONGPHAPTRUYENTAI-SOHIEULYHOP_BOGIAMVONG").val();
+                        $("#add-MAYCHINH-PHUONGPHAPTRUYENTAI-TYSOTRUYEN").val();
+                        $("#add-MAYCHINH-PHUONGPHAPTRUYENTAI-KHOPNOICUNG").val();
+                        $("#add-MAYCHINH-PHUONGPHAPTRUYENTAI-KHOPNOIMEM").val();
+                        $("#add-MAYCHINH-PHUONGPHAPTRUYENTAI-CUROA").val();
+                        $("#add-MAYCHINH-PHUONGPHAPTRUYENTAI-KYHIEUVONGBI").val();
                         $('#model-add-MAYCHINH').modal("hide");
                     },
                 });
@@ -3105,6 +3402,33 @@
                         toastError("Thất bại", ret.responseJSON.Message);
                     },
                     complete: function () { // Set our complete callback, adding the .hidden class and hiding the spinner.
+                        $("#add-MAYPHU-THONGSOCOBAN-KYHIEU").val();
+                        $("#add-MAYPHU-THONGSOCOBAN-NAMSANXUAT").val();
+                        $("#add-MAYPHU-THONGSOCOBAN-NOISANXUAT").val();
+                        $("#add-MAYPHU-THONGSOCOBAN-NAMLAPRAP").val();
+                        $("#add-MAYPHU-THONGSOCOBAN-VITRILAPRAP").val();
+                        $("#add-MAYPHU-THONGSOCOBAN-SOHIEUMAY").val();
+                        $("#add-MAYPHU-THONGSOCOBAN-CONGSUAT").val();
+                        $("#add-MAYPHU-THONGSOCOBAN-VONGQUAY").val();
+                        $("#add-MAYPHU-THONGSOCOBAN-CHIEUQUAY").val();
+                        $("#add-MAYPHU-THONGSOCOBAN-NGUONKHOIDONG").val();
+                        $("#add-MAYPHU-THONGSOCOBAN-HETHONGDIEUKHIEN").val();
+                        $("#add-MAYPHU-THONGSOCOBAN-KICHTHUOCMAY-DAI").val();
+                        $("#add-MAYPHU-THONGSOCOBAN-KICHTHUOCMAY-RONG").val();
+                        $("#add-MAYPHU-THONGSOCOBAN-KICHTHUOCMAY-CAO").val();
+                        $("#add-MAYPHU-THONGSOCOBAN-TRONGLUONG").val();
+                        $("#add-MAYPHU-THONGSOCOBAN-CHUKYSUACHUA-TIEUTU").val();
+                        $("#add-MAYPHU-THONGSOCOBAN-CHUKYSUACHUA-TRUNGTU").val();
+                        $("#add-MAYPHU-THONGSOCOBAN-CHUKYSUACHUA-DAITU").val();
+                        $("#add-MAYPHU-THONGSOCOBAN-LOAIDIEN-DIENAP").val();
+                        $("#add-MAYPHU-THONGSOCOBAN-LOAIDIEN-TANSO").val();
+                        $("#add-MAYPHU-PHUONGPHAPTRUYENTAI-KYHIEULYHOP_BOGIAMVONG").val();
+                        $("#add-MAYPHU-PHUONGPHAPTRUYENTAI-SOHIEULYHOP_BOGIAMVONG").val();
+                        $("#add-MAYPHU-PHUONGPHAPTRUYENTAI-TYSOTRUYEN").val();
+                        $("#add-MAYPHU-PHUONGPHAPTRUYENTAI-KHOPNOICUNG").val();
+                        $("#add-MAYPHU-PHUONGPHAPTRUYENTAI-KHOPNOIMEM").val();
+                        $("#add-MAYPHU-PHUONGPHAPTRUYENTAI-CUROA").val();
+                        $("#add-MAYPHU-PHUONGPHAPTRUYENTAI-KYHIEUVONGBI").val();
                         $('#model-add-MAYPHU').modal("hide");
                     },
                 });
@@ -3337,6 +3661,33 @@
                         toastError("Thất bại", ret.responseJSON.Message);
                     },
                     complete: function () { // Set our complete callback, adding the .hidden class and hiding the spinner.
+                        $("#add-MAYCHUYENDUNG-THONGSOCOBAN-KYHIEU").val();
+                        $("#add-MAYCHUYENDUNG-THONGSOCOBAN-NAMSANXUAT").val();
+                        $("#add-MAYCHUYENDUNG-THONGSOCOBAN-NOISANXUAT").val();
+                        $("#add-MAYCHUYENDUNG-THONGSOCOBAN-NAMLAPRAP").val();
+                        $("#add-MAYCHUYENDUNG-THONGSOCOBAN-VITRILAPRAP").val();
+                        $("#add-MAYCHUYENDUNG-THONGSOCOBAN-SOHIEUMAY").val();
+                        $("#add-MAYCHUYENDUNG-THONGSOCOBAN-CONGSUAT").val();
+                        $("#add-MAYCHUYENDUNG-THONGSOCOBAN-VONGQUAY").val();
+                        $("#add-MAYCHUYENDUNG-THONGSOCOBAN-CHIEUQUAY").val();
+                        $("#add-MAYCHUYENDUNG-THONGSOCOBAN-NGUONKHOIDONG").val();
+                        $("#add-MAYCHUYENDUNG-THONGSOCOBAN-HETHONGDIEUKHIEN").val();
+                        $("#add-MAYCHUYENDUNG-THONGSOCOBAN-KICHTHUOCMAY-DAI").val();
+                        $("#add-MAYCHUYENDUNG-THONGSOCOBAN-KICHTHUOCMAY-RONG").val();
+                        $("#add-MAYCHUYENDUNG-THONGSOCOBAN-KICHTHUOCMAY-CAO").val();
+                        $("#add-MAYCHUYENDUNG-THONGSOCOBAN-TRONGLUONG").val();
+                        $("#add-MAYCHUYENDUNG-THONGSOCOBAN-CHUKYSUACHUA-TIEUTU").val();
+                        $("#add-MAYCHUYENDUNG-THONGSOCOBAN-CHUKYSUACHUA-TRUNGTU").val();
+                        $("#add-MAYCHUYENDUNG-THONGSOCOBAN-CHUKYSUACHUA-DAITU").val();
+                        $("#add-MAYCHUYENDUNG-THONGSOCOBAN-LOAIDIEN-DIENAP").val();
+                        $("#add-MAYCHUYENDUNG-THONGSOCOBAN-LOAIDIEN-TANSO").val();
+                        $("#add-MAYCHUYENDUNG-PHUONGPHAPTRUYENTAI-KYHIEULYHOP_BOGIAMVONG").val();
+                        $("#add-MAYCHUYENDUNG-PHUONGPHAPTRUYENTAI-SOHIEULYHOP_BOGIAMVONG").val();
+                        $("#add-MAYCHUYENDUNG-PHUONGPHAPTRUYENTAI-TYSOTRUYEN").val();
+                        $("#add-MAYCHUYENDUNG-PHUONGPHAPTRUYENTAI-KHOPNOICUNG").val();
+                        $("#add-MAYCHUYENDUNG-PHUONGPHAPTRUYENTAI-KHOPNOIMEM").val();
+                        $("#add-MAYCHUYENDUNG-PHUONGPHAPTRUYENTAI-CUROA").val();
+                        $("#add-MAYCHUYENDUNG-PHUONGPHAPTRUYENTAI-KYHIEUVONGBI").val();
                         $('#model-add-MAYCHUYENDUNG').modal("hide");
                     },
                 });
@@ -3558,6 +3909,24 @@
                         toastError("Thất bại", ret.responseJSON.Message);
                     },
                     complete: function () { // Set our complete callback, adding the .hidden class and hiding the spinner.
+                        $("#add-HETRUCCHANVIT-TRUC-TONGCHIEUDAI").val();
+                        $("#add-HETRUCCHANVIT-TRUC-VATLIEU").val();
+                        $("#add-HETRUCCHANVIT-TRUC-TONGTRONGLUONG").val();
+                        $("#add-HETRUCCHANVIT-TRUC-DUONGKINHTRUCGHEPCHANVIT").val();
+                        $("#add-HETRUCCHANVIT-TRUC-DUONGKINHTRUCTRUNGGIAN").val();
+                        $("#add-HETRUCCHANVIT-TRUC-DUONGKINHTRUCXOAN").val();
+                        $("#add-HETRUCCHANVIT-TRUC-DUONGKINHTRUCCHAN").val();
+                        $("#add-HETRUCCHANVIT-TRUC-GOCNGIENGTRUC").val();
+                        $("#add-HETRUCCHANVIT-CHANVIT-LOAICHANVIT").val();
+                        $("#add-HETRUCCHANVIT-CHANVIT-DUONGKINH").val();
+                        $("#add-HETRUCCHANVIT-CHANVIT-SOCANH").val();
+                        $("#add-HETRUCCHANVIT-CHANVIT-VATLIEU").val();
+                        $("#add-HETRUCCHANVIT-CHANVIT-TRONGLUONG").val();
+                        $("#add-HETRUCCHANVIT-CHANVIT-CHIEUQUAY").val();
+                        $("#add-HETRUCCHANVIT-CHANVIT-VONGQUAYDINHMUC").val();
+                        $("#add-HETRUCCHANVIT-ODO-SOLUONG").val();
+                        $("#add-HETRUCCHANVIT-ODO-LOAI").val();
+                        $("#add-HETRUCCHANVIT-ODO-MODAUBOITRON").val();
                         $('#model-add-HETRUCCHANVIT').modal("hide");
                     },
                 });
@@ -3652,5 +4021,212 @@
             }
         }
 
+        // NEO - XÍCH NEO
+        function loadDataList_NEOXICHNEO() {
+            $.ajax({
+                type: "GET",
+                url: linkapi + "v2/neoxichneo?id=" + getParameterByName("Ship_ID"),
+                dataType: "json",
+                success: function (data) {
+                    var tabletext = "<thead><tr><th rowspan='2'>STT</th><th colspan='3'>Neo phải</th><th colspan='3'>Neo trái</th><th colspan='3'>Neo sau</th><th rowspan='2'>Tác vụ</th></tr><tr><th>Ký hiệu</th><th>Đường kính</th><th>Độ dài</th><th>Ký hiệu</th><th>Đường kính</th><th>Độ dài</th><th>Ký hiệu</th><th>Đường kính</th><th>Độ dài</th></tr></thead><tbody>";
+                    var i = 1;
+                    $.each(data, function (key, item) {
+                        tabletext += "<tr><td>" + i + "</td><td>" + item.NEOPHAI.KYHIEU + "</td><td>" + item.NEOPHAI.XICHNEO.DUONGKINH + "</td><td>" + item.NEOPHAI.XICHNEO.DODAI + "</td><td>" + item.NEOTRAI.KYHIEU + "</td><td>" + item.NEOTRAI.XICHNEO.DUONGKINH + "</td><td>" + item.NEOTRAI.XICHNEO.DODAI + "</td><td>" + item.NEOSAU.KYHIEU + "</td><td>" + item.NEOSAU.XICHNEO.DUONGKINH + "</td><td>" + item.NEOSAU.XICHNEO.DODAI + '</td><td><div style="width: max-content;"><a href="#" class="edit" title="Sửa" data-toggle="modal" data-target="#model-edit-NEOXICHNEO"  onclick="onclick_edit_NEOXICHNEO(`' + item.ID + '`,`' + item.NEOPHAI.KYHIEU + '`,`' + item.NEOPHAI.TRONGLUONGP + '`,`' + item.NEOPHAI.XICHNEO.DUONGKINH + '`,`' + item.NEOPHAI.XICHNEO.DODAI + '`,`' + item.NEOTRAI.KYHIEU + '`,`' + item.NEOTRAI.TRONGLUONGP + '`,`' + item.NEOTRAI.XICHNEO.DUONGKINH + '`,`' + item.NEOTRAI.XICHNEO.DODAI + '`,`' + item.NEOSAU.KYHIEU + '`,`' + item.NEOSAU.TRONGLUONGP + '`,`' + item.NEOSAU.XICHNEO.DUONGKINH + '`,`' + item.NEOSAU.XICHNEO.DODAI + '`)"><i class="material-icons">&#xE254;</i></a><a href="#" class="delete" title="Xóa" onclick="delete_NEOXICHNEO(`' + item.ID + '`)"><i class="material-icons">&#xE872;</i></a></div></td></tr>';
+                        i = i + 1;
+                    });
+                    tabletext += "</tbody>";
+                    $('#table-NEOXICHNEO').html(tabletext);
+                    console.log("okGET");
+                    loadTableNEOXICHNEO();
+                }, error: function (ret) {
+                    console.log('errorGET');
+                },
+            });
+        };
+        function loadTableNEOXICHNEO() {
+            $('table[id=table-NEOXICHNEO]').each(function () {
+                var table1 = $(this).DataTable({
+                    destroy: true,
+                    searching: false,
+                    stateSave: true,
+                    "columns": [
+                        { name: 'STT', width: 60 },
+                        { name: 'Ký hiệu', width: 100 },
+                        { name: 'Đường kính', width: 80 },
+                        { name: 'Độ dài', width: 80 },
+                        { name: 'Ký hiệu', width: 100 },
+                        { name: 'Đường kính', width: 80 },
+                        { name: 'Độ dài', width: 80 },
+                        { name: 'Ký hiệu', width: 100 },
+                        { name: 'Đường kính', width: 80 },
+                        { name: 'Độ dài', width: 80 },
+                        { name: 'Tác vụ', width: 80 }
+                    ],
+                    lengthChange: false,
+                    "language": {
+                        "sProcessing": "Đang xử lý...",
+                        "sLengthMenu": "Xem _MENU_ mục",
+                        "sZeroRecords": "Không tìm thấy thông tin phù hợp",
+                        "sInfo": "Đang xem _START_ đến _END_ trong tổng số _TOTAL_ mục",
+                        "sInfoEmpty": "Đang xem 0 đến 0 trong tổng số 0 mục",
+                        "sInfoFiltered": "(được lọc từ _MAX_ mục)",
+                        "sInfoPostFix": "",
+                        "sSearch": "Tìm kiếm: ",
+                        "sUrl": "",
+                        "oPaginate": {
+                            "sFirst": "Đầu",
+                            "sPrevious": "Trước",
+                            "sNext": "Tiếp",
+                            "sLast": "Cuối"
+                        }
+                    }
+                });
+            });
+        };
+        function add_NEOXICHNEO() {
+            var form = document.getElementById("form-add-NEOXICHNEO");
+            console.log(form.checkValidity());
+            if (form.checkValidity() == true) {
+                var NEOXICHNEO = {
+                    ID: "",
+                    NEOPHAI: {
+                        KYHIEU: $("#add-NEOXICHNEO-NEOPHAI-KYHIEU").val(),
+                        TRONGLUONGP: $("#add-NEOXICHNEO-NEOPHAI-TRONGLUONGP").val(),
+                        XICHNEO: {
+                            DUONGKINH: $("#add-NEOXICHNEO-NEOPHAI-XICHNEO-DUONGKINH").val(),
+                            DODAI: $("#add-NEOXICHNEO-NEOPHAI-XICHNEO-DODAI").val()
+                        }
+                    },
+                    NEOTRAI: {
+                        KYHIEU: $("#add-NEOXICHNEO-NEOTRAI-KYHIEU").val(),
+                        TRONGLUONGP: $("#add-NEOXICHNEO-NEOTRAI-TRONGLUONGP").val(),
+                        XICHNEO: {
+                            DUONGKINH: $("#add-NEOXICHNEO-NEOTRAI-XICHNEO-DUONGKINH").val(),
+                            DODAI: $("#add-NEOXICHNEO-NEOTRAI-XICHNEO-DODAI").val()
+                        }
+                    },
+                    NEOSAU: {
+                        KYHIEU: $("#add-NEOXICHNEO-NEOSAU-KYHIEU").val(),
+                        TRONGLUONGP: $("#add-NEOXICHNEO-NEOSAU-TRONGLUONGP").val(),
+                        XICHNEO: {
+                            DUONGKINH: $("#add-NEOXICHNEO-NEOSAU-XICHNEO-DUONGKINH").val(),
+                            DODAI: $("#add-NEOXICHNEO-NEOSAU-XICHNEO-DODAI").val()
+                        }
+                    }
+                };
+                console.log(NEOXICHNEO);
+                $.ajax({
+                    type: "POST",
+                    url: linkapi + "v2/insert_neoxichneo?id=" + getParameterByName("Ship_ID"),
+                    dataType: "json",
+                    data: JSON.stringify(NEOXICHNEO),
+                    contentType: "application/json",
+                    success: function (data) {
+                        toastSuccess("Thành công", "Thêm neo - xích neo thành công.");
+                        loadDataList_NEOXICHNEO();
+                    }, error: function (ret) {
+                        toastError("Thất bại", ret.responseJSON.Message);
+                    },
+                    complete: function () { // Set our complete callback, adding the .hidden class and hiding the spinner.
+                        $("#add-NEOXICHNEO-NEOPHAI-KYHIEU").val();
+                        $("#add-NEOXICHNEO-NEOPHAI-TRONGLUONGP").val();
+                        $("#add-NEOXICHNEO-NEOPHAI-XICHNEO-DUONGKINH").val();
+                        $("#add-NEOXICHNEO-NEOPHAI-XICHNEO-DODAI").val();
+                        $("#add-NEOXICHNEO-NEOTRAI-KYHIEU").val();
+                        $("#add-NEOXICHNEO-NEOTRAI-TRONGLUONGP").val();
+                        $("#add-NEOXICHNEO-NEOTRAI-XICHNEO-DUONGKINH").val();
+                        $("#add-NEOXICHNEO-NEOTRAI-XICHNEO-DODAI").val();
+                        $("#add-NEOXICHNEO-NEOSAU-KYHIEU").val();
+                        $("#add-NEOXICHNEO-NEOSAU-TRONGLUONGP").val();
+                        $("#add-NEOXICHNEO-NEOSAU-XICHNEO-DUONGKINH").val();
+                        $("#add-NEOXICHNEO-NEOSAU-XICHNEO-DODAI").val();
+                        $('#model-add-NEOXICHNEO').modal("hide");
+                    },
+                });
+            }
+            return false;
+        }
+        function onclick_edit_NEOXICHNEO(ID, KYHIEUPHAI, TRONGLUONGPPHAI, DUONGKINHPHAI, DODAIPHAI, KYHIEUTRAI, TRONGLUONGPTRAI, DUONGKINHTRAI, DODAITRAI, KYHIEUSAU, TRONGLUONGPSAU, DUONGKINHSAU, DODAISAU) {
+            $("#edit-NEOXICHNEO-ID").val(ID);
+            $("#edit-NEOXICHNEO-NEOPHAI-KYHIEU").val(KYHIEUPHAI);
+            $("#edit-NEOXICHNEO-NEOPHAI-TRONGLUONGP").val(TRONGLUONGPPHAI);
+            $("#edit-NEOXICHNEO-NEOPHAI-XICHNEO-DUONGKINH").val(DUONGKINHPHAI);
+            $("#edit-NEOXICHNEO-NEOPHAI-XICHNEO-DODAI").val(DODAIPHAI);
+            $("#edit-NEOXICHNEO-NEOTRAI-KYHIEU").val(KYHIEUTRAI);
+            $("#edit-NEOXICHNEO-NEOTRAI-TRONGLUONGP").val(TRONGLUONGPTRAI);
+            $("#edit-NEOXICHNEO-NEOTRAI-XICHNEO-DUONGKINH").val(DUONGKINHTRAI);
+            $("#edit-NEOXICHNEO-NEOTRAI-XICHNEO-DODAI").val(DODAITRAI);
+            $("#edit-NEOXICHNEO-NEOSAU-KYHIEU").val(KYHIEUSAU);
+            $("#edit-NEOXICHNEO-NEOSAU-TRONGLUONGP").val(TRONGLUONGPSAU);
+            $("#edit-NEOXICHNEO-NEOSAU-XICHNEO-DUONGKINH").val(DUONGKINHSAU);
+            $("#edit-NEOXICHNEO-NEOSAU-XICHNEO-DODAI").val(DODAISAU);
+        }
+        function edit_NEOXICHNEO() {
+            var form = document.getElementById("form-edit-NEOXICHNEO");
+            console.log(form.checkValidity());
+            if (form.checkValidity() == true) {
+                var NEOXICHNEO = {
+                    ID: $("#edit-NEOXICHNEO-ID").val(),
+                    NEOPHAI: {
+                        KYHIEU: $("#edit-NEOXICHNEO-NEOPHAI-KYHIEU").val(),
+                        TRONGLUONGP: $("#edit-NEOXICHNEO-NEOPHAI-TRONGLUONGP").val(),
+                        XICHNEO: {
+                            DUONGKINH: $("#edit-NEOXICHNEO-NEOPHAI-XICHNEO-DUONGKINH").val(),
+                            DODAI: $("#edit-NEOXICHNEO-NEOPHAI-XICHNEO-DODAI").val()
+                        }
+                    },
+                    NEOTRAI: {
+                        KYHIEU: $("#edit-NEOXICHNEO-NEOTRAI-KYHIEU").val(),
+                        TRONGLUONGP: $("#edit-NEOXICHNEO-NEOTRAI-TRONGLUONGP").val(),
+                        XICHNEO: {
+                            DUONGKINH: $("#edit-NEOXICHNEO-NEOTRAI-XICHNEO-DUONGKINH").val(),
+                            DODAI: $("#edit-NEOXICHNEO-NEOTRAI-XICHNEO-DODAI").val()
+                        }
+                    },
+                    NEOSAU: {
+                        KYHIEU: $("#edit-NEOXICHNEO-NEOSAU-KYHIEU").val(),
+                        TRONGLUONGP: $("#edit-NEOXICHNEO-NEOSAU-TRONGLUONGP").val(),
+                        XICHNEO: {
+                            DUONGKINH: $("#edit-NEOXICHNEO-NEOSAU-XICHNEO-DUONGKINH").val(),
+                            DODAI: $("#edit-NEOXICHNEO-NEOSAU-XICHNEO-DODAI").val()
+                        }
+                    }
+                };
+                console.log(NEOXICHNEO);
+                $.ajax({
+                    type: "PUT",
+                    url: linkapi + "v2/update_neoxichneo?id=" + NEOXICHNEO.ID,
+                    dataType: "json",
+                    data: JSON.stringify(NEOXICHNEO),
+                    contentType: "application/json",
+                    success: function (data) {
+                        toastSuccess("Thành công", "Cập nhật neo - xích neo thành công.");
+                        loadDataList_NEOXICHNEO();
+                    }, error: function (ret) {
+                        toastError("Thất bại", "");
+                    },
+                    complete: function () { // Set our complete callback, adding the .hidden class and hiding the spinner.
+                        $('#model-edit-NEOXICHNEO').modal("hide");
+                    },
+                });
+            }
+            return false;
+        }
+        function delete_NEOXICHNEO(id) {
+            let text = "Bạn có chắc muốn xóa neo - xích neo này?";
+            if (confirm(text) == true) {
+                $.ajax({
+                    url: linkapi + "v2/xoaneoxichneo?id=" + id,
+                    type: "DELETE",
+                }).done(function (res) {
+                    loadDataList_NEOXICHNEO();
+                    toastSuccess("Thành công", "Xóa neo - xích neo thành công!");
+                }).fail(function (res) {
+                    toastError("Lỗi", "Xóa neo - xích neo không thành công!");
+                })
+            } else {
+
+            }
+        }
     </script>
 </asp:Content>
