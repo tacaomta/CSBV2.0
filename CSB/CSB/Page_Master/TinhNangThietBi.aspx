@@ -93,9 +93,9 @@
                                     <li class="nav-item">
                                         <a class="nav-link" data-toggle="tab" onclick="loadDataList_TRANGBIKHAC()" href="#TRANGBIKHAC">Trang bị khác</a>
                                     </li>
-                                    <li class="nav-item">
+                                    <%--<li class="nav-item">
                                         <a class="nav-link" data-toggle="tab" onclick="loadDataList_THANVO()" href="#THANVO">Thân vỏ</a>
-                                    </li>
+                                    </li>--%>
                                     <li class="nav-item">
                                         <a class="nav-link" data-toggle="tab" onclick="loadDataList_MAYNENKHI()" href="#MAYNENKHI">Máy nén khí</a>
                                     </li>

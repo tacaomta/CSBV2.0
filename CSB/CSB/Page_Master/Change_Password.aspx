@@ -33,16 +33,17 @@
                 <div class="section-header" style="background-color: #fff;">
                     <div class="title">
                         <h4 id="title" style="color: black; margin: 0; text-align: center;">ĐỔI MẬT KHẨU</h4>
+                        <div class="blue-hr"></div>
                     </div>
                     <div class="section-header-breadcrumb">
-                        <div class="breadcrumb-item"><a href="Null.aspx" style="color: #01b5f9; font-size: 14px;">Trang chủ</a></div>
-                        <div class="breadcrumb-item"><a href="Change_Password" style="color: #01b5f9; font-size: 14px;">Đổi mật khẩu</a></div>
+                        <div class="breadcrumb-item"><a href="Null.aspx" style="color: #01b5f9; font-size: 18px;">Trang chủ</a></div>
+                        <div class="breadcrumb-item"><a href="Change_Password" style="color: #01b5f9; font-size: 18px;">Đổi mật khẩu</a></div>
                     </div>
                 </div>
                 <div class="row" style="justify-content: center;">
                     <div class="main-body col-lg-6">
-                        <div class="login-key" style="display: flex; justify-content: center; margin-bottom: 3rem;">
-                            <img class="ship-key" src="../Image/ic-login.png" />
+                        <div class="login-key" style="display: flex; justify-content: center;">
+                            <img class="ship-key" src="../Image/change_password.jpg" />
                         </div>
                         <div class="login-form">
                             <div class="form-group" style="display: flex; padding: 10px; align-items: center;">
@@ -66,7 +67,7 @@
                                     <div hidden="hidden" id="error-login-text">Đổi mật khẩu không thành công!</div>
                                 </div>
                                 <div class="login-btm login-button mt-3">
-                                    <a href="javascript: history.go(-1)" style="margin:0px 10px" class="btn btn-secondary"><span class="bi-arrow-return-left"></span>&nbsp;Quay lại</a>
+                                    <a href="javascript: history.go(-1)" style="margin:0px 10px" class="btn btn-secondary"><span class="bi-arrow-return-left"></span> Quay lại</a>
                                     <button class="btn btn-primary" onclick="Save_Change()"><span class="bi-save"></span> Lưu thay đổi</button>
                                 </div>
                             </div>

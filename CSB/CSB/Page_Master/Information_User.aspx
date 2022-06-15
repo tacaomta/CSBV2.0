@@ -44,10 +44,11 @@
                 <div class="section-header" style="background-color: #fff;">
                     <div class="title">
                         <h4 id="title" style="color: black; margin: 0; text-align: center;">THÔNG TIN TÀI KHOẢN</h4>
+                        <div class="blue-hr"></div>
                     </div>
                     <div class="section-header-breadcrumb">
-                        <div class="breadcrumb-item"><a href="Null.aspx" style="color: #01b5f9; font-size: 14px;">Trang chủ</a></div>
-                        <div class="breadcrumb-item"><a href="Information_User" style="color: #01b5f9; font-size: 14px;">Thông tin tài khoản</a></div>
+                        <div class="breadcrumb-item"><a href="Null.aspx" style="color: #01b5f9; font-size: 18px;">Trang chủ</a></div>
+                        <div class="breadcrumb-item"><a href="Information_User" style="color: #01b5f9; font-size: 18px;">Thông tin tài khoản</a></div>
                     </div>
                 </div>
                 <div class="main-body">
