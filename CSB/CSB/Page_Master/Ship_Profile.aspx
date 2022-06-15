@@ -48,7 +48,7 @@
                 5. <a href="#" onclick="THeoDoiHoatDongTau()">Theo dõi hoạt động của tàu</a>
             </div>
             <div class="profile-link">
-                6. <a href="#">Thời gian làm việc của máy chính, máy phụ, máy chuyên dụng</a>
+                6. <a href="#" onclick="ThoiGianLamViec()">Thời gian làm việc của máy chính, máy phụ, máy chuyên dụng</a>
             </div>
             <div class="profile-link">
                 7. <a href="#">Đăng ký tai nạn hư hỏng</a>
