@@ -52,7 +52,7 @@
                         4. <a onclick="TinhNangThietBi()" href="#">Tính năng các thiết bị</a>
                     </div>
                     <div class="profile-link">
-                        5. <a href="#">Theo dõi hoạt động của tàu</a>
+                        5. <a onclick="THeoDoiHoatDongTau()" href="#">Theo dõi hoạt động của tàu</a>
                     </div>
                     <div class="profile-link">
                         6. <a href="#">Thời gian làm việc của máy chính, máy phụ, máy chuyên dụng</a>
@@ -138,6 +138,11 @@
 
         function TinhNangThietBi() {
             var win = window.open(baseaddress + "Page_Master/TinhNangThietBi?Ship_ID=" + Ship_ID, '_blank');
+            win.focus();
+        }
+
+        function THeoDoiHoatDongTau() {
+            var win = window.open(baseaddress + "Page_Master/HoatDongTau?Ship_ID=" + Ship_ID, '_blank');
             win.focus();
         }
        
