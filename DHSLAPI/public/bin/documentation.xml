@@ -2598,6 +2598,66 @@
             ID của tàu
             </summary>
         </member>
+        <member name="T:DHSLAPI.Models.TAINANHUHONG">
+            <summary>
+            Tai nạn hư hỏng
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.TAINANHUHONG.ID">
+            <summary>
+            ID
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.TAINANHUHONG.THOIGIAN">
+            <summary>
+            Thời gian
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.TAINANHUHONG.DIADIEM">
+            <summary>
+            Địa điểm
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.TAINANHUHONG.LOAI">
+            <summary>
+            Loại tai nạn, hư hỏng
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.TAINANHUHONG.MUCDO">
+            <summary>
+            Mức độ hư hỏng
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.TAINANHUHONG.NGUYENNHAN">
+            <summary>
+            Nguyên nhân
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.TAINANHUHONG.GHICHU">
+            <summary>
+            Ghi chú
+            </summary>
+        </member>
+        <member name="T:DHSLAPI.Models.NGUYENNHAN">
+            <summary>
+            Nguyên nhân
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.NGUYENNHAN.KHACHQUAN">
+            <summary>
+            Khách quan
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.NGUYENNHAN.CHUQUAN">
+            <summary>
+            Chủ quan
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.NGUYENNHAN.TRINHDO">
+            <summary>
+            Trình độ
+            </summary>
+        </member>
         <member name="T:DHSLAPI.Models.THAYDOISOHIEU">
             <summary>
             Thay đổi số hiệu
