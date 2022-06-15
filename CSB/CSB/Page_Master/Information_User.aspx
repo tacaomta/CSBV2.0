@@ -7,9 +7,8 @@
             margin-top:15px;
         }
 
-
         .card {
-            min-height: 487px;
+            min-height: 513px;
             margin-top: 20px;
             position: relative;
             display: flex;
@@ -24,8 +23,8 @@
             box-shadow: 0 2px 6px 0 rgb(218 218 253 / 65%), 0 2px 6px 0 rgb(206 206 238 / 54%);
         }
 
-        .row {
-            margin-bottom: 20px;
+        .main-body {
+            display: flex;
         }
 
         .select-inform {
@@ -38,101 +37,102 @@
             color: #555;
         }
     </style>
-    <div id="form1">
-        <div class="section">
-            <div class="section-header">
-                <h4 id="title" style="color: black; margin: 0">THÔNG TIN TÀI KHOẢN</h4>
-                <div class="section-header-breadcrumb">
-                    <div class="breadcrumb-item active"><a href="Null.aspx" style="color: #01b5f9; font-size: 18px;">Trang chủ</a></div>
-                    /&nbsp;<div class="breadcrumb-item active"><a href="#" style="color: #01b5f9; font-size: 18px;">Thông tin tài khoản</a></div>
-                    
+    <div class="section" style="background-color: #fff; padding-bottom: 5px;">
+        <div id="form1">
+            <div class="section">
+                <div class="section-header" style="background-color: #fff;">
+                    <div class="title">
+                        <h4 id="title" style="color: black; margin: 0; text-align: center;">THÔNG TIN TÀI KHOẢN</h4>
+                        <div class="blue-hr"></div>
+                    </div>
+                    <div class="section-header-breadcrumb">
+                        <div class="breadcrumb-item"><a href="Null.aspx" style="color: #01b5f9; font-size: 14px;">Trang chủ</a></div>
+                        <div class="breadcrumb-item"><a href="Information_User" style="color: #01b5f9; font-size: 14px;">Thông tin tài khoản</a></div>
+                    </div>
                 </div>
-            </div>
-            <div class="container" style="border: none; background-color: #ffffff; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.03); width: 100%">
                 <div class="main-body">
-                    <div class="row">
-                        <div id="infor_left " class="col-lg-4">
-                            <div class="card">
-                                <div class="card-body">
-                                    <div class="d-flex flex-column align-items-center text-center" style="margin-top: 60px">
-                                        <img src="https://bootdey.com/img/Content/avatar/avatar6.png" alt="Admin" class="rounded-circle p-1 bg-primary" width="110">
-                                        <div class="mt-3">
-                                            <h4 id="title_fullname">Cao Cao</h4>
-                                            <p class="text-secondary mb-1">Thông tin tài khoản</p>
-                                            <p id="title_rolename" class="text-muted font-size-sm">Quản lí phần mềm</p>
-                                        </div>
+                    <div id="infor_left" class="col-lg-4 col-md-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="d-flex flex-column align-items-center text-center" style="margin-top: 60px">
+                                    <img src="https://bootdey.com/img/Content/avatar/avatar6.png" alt="Admin" class="rounded-circle p-1 bg-primary" width="110">
+                                    <div class="mt-3">
+                                        <h4 id="title_fullname">Cao Cao</h4>
+                                        <p class="text-secondary mb-1">Thông tin tài khoản</p>
+                                        <p id="title_rolename" class="text-muted font-size-sm">Quản lí phần mềm</p>
                                     </div>
-
                                 </div>
+
                             </div>
                         </div>
-                        <div id="infor_right " class="col-lg-8">
-                            <div class="card">
-                                <div class="card-body">
-                                    <div class="row clearfix ">
-                                        <div style="width: 100%; float: left; padding: 10px">
-                                            <div class="form-group">
-                                                <label class="col-md-5 control-label"><strong>Tên đầy đủ     : </strong></label>
-                                                <div class="col-md-7">
-                                                    <input type="text" class="form-control" id="TenDayDu_viewuser" name="TenDayDu" placeholder="Nhập tên đầy đủ" required value="">
-                                                </div>
+                    </div>
+                    <div id="infor_right " class="col-lg-8 col-md-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="row clearfix">
+                                    <div style="width: 100%; float: left; padding: 10px">
+                                        <div class="form-group">
+                                            <label class="col-md-5 control-label"><strong>Tên đầy đủ:</strong></label>
+                                            <div class="col-md-7">
+                                                <input type="text" class="form-control" id="TenDayDu_viewuser" name="TenDayDu" placeholder="Nhập tên đầy đủ" required value="">
                                             </div>
                                         </div>
-                                        <div style="width: 100%; float: left; padding: 10px">
-                                            <div class="form-group">
-                                                <label class="col-md-5 control-label"><strong>Tên đăng nhập     : </strong></label>
-                                                <div class="col-md-7">
-                                                    <input type="text" class="form-control" id="TenND_viewuser" name="TenND" readonly>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div style="width: 100%; float: left; padding: 10px">
-                                            <div class="form-group">
-                                                <label class="col-md-5 control-label"><strong>Ngày tạo     : </strong></label>
-                                                <div class="col-md-7">
-                                                    <input type="text" id="NgayTao_viewuser" class="form-control" readonly>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div style="width: 100%; float: left; padding: 10px">
-                                            <div class="form-group">
-                                                <label class="col-md-5 control-label"><strong>Ngày cập nhật    : </strong></label>
-                                                <div class="col-md-7">
-                                                    <input type="text" id="NgayCapNhat_viewuser" class="form-control" readonly>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div style="width: 100%; float: left; padding: 10px">
-                                            <div class="form-group">
-                                                <label class="col-md-5 control-label"><strong>Quyền    : </strong></label>
-                                                <div class="col-md-7">
-                                                    <input type="text" id="Quyen_viewuser" class="form-control" readonly>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div style="width: 100%; float: left; padding-top: 10px">
-                                            <div class="form-group">
-                                                <label class="col-md-5 control-label"><strong>Tình trạng    : </strong></label>
-                                                <div class="col-md-7">
-                                                    <input type="text" id="TinhTrang_viewuser" class="form-control" readonly>
-                                                </div>
+                                    </div>
+                                    <div style="width: 100%; float: left; padding: 10px">
+                                        <div class="form-group">
+                                            <label class="col-md-5 control-label"><strong>Tên đăng nhập:</strong></label>
+                                            <div class="col-md-7">
+                                                <input type="text" class="form-control" id="TenND_viewuser" name="TenND" readonly>
                                             </div>
                                         </div>
                                     </div>
 
+                                    <div style="width: 100%; float: left; padding: 10px">
+                                        <div class="form-group">
+                                            <label class="col-md-5 control-label"><strong>Ngày tạo:</strong></label>
+                                            <div class="col-md-7">
+                                                <input type="text" id="NgayTao_viewuser" class="form-control" readonly>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div style="width: 100%; float: left; padding: 10px">
+                                        <div class="form-group">
+                                            <label class="col-md-5 control-label"><strong>Ngày cập nhật:</strong></label>
+                                            <div class="col-md-7">
+                                                <input type="text" id="NgayCapNhat_viewuser" class="form-control" readonly>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div style="width: 100%; float: left; padding: 10px">
+                                        <div class="form-group">
+                                            <label class="col-md-5 control-label"><strong>Quyền:</strong></label>
+                                            <div class="col-md-7">
+                                                <input type="text" id="Quyen_viewuser" class="form-control" readonly>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div style="width: 100%; float: left; padding: 10px">
+                                        <div class="form-group">
+                                            <label class="col-md-5 control-label"><strong>Tình trạng:</strong></label>
+                                            <div class="col-md-7">
+                                                <input type="text" id="TinhTrang_viewuser" class="form-control" readonly>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="panel-footer text-right">
-                                    <a href="javascript: history.go(-1)" style="float: left" class="btn btn-success"><span class="glyphicon glyphicon-arrow-left"></span>&nbsp;Quay lại</a>
-                                    <button type="button" class="btn btn-info" onclick="updateUser_view()"><span class="glyphicon glyphicon-floppy-save"></span>&nbsp;Lưu thay đổi</button>
+                                <div class="panel-footer text-right" style="padding: 0 10px;">
+                                    <a href="javascript: history.go(-1)" style="float: left" class="btn btn-secondary"><span class="bi-arrow-return-left"></span>&nbsp;Quay lại</a>
+                                    <button type="button" class="btn btn-primary" onclick="updateUser_view()"><span class="bi-save"></span>&nbsp;Lưu thay đổi</button>
                                 </div>
                             </div>
+                            
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    
     <script src="../Scripts/jquery-3.4.1.min.js"></script>
     <script src="../Scripts/bootstrap.min.js"></script>
     <script>

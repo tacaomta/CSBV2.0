@@ -1,6 +1,15 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Master/TrangChu.Master" AutoEventWireup="true" CodeBehind="Manage_Tau.aspx.cs" Inherits="CSB.Page_Master.Manage_Tau" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-     <div id="form1">
+    <style>
+        .a_selected {
+            background-color: #c44824;
+        }
+
+        .subMenu ul li {
+            cursor: pointer;
+        }
+    </style>
+    <div id="form1">
         <div class="section" style="background-color: #fff; padding-bottom: 15px;">
             <div class="section-header" style="background-color: #fff;">
                 <h4 id="title" style="color: black; margin: 0">QUẢN LÝ TÀU - VÙNG 1</h4>
@@ -11,7 +20,7 @@
             </div>
             <div class="section-content">
                 <div class="subMenu" style="justify-content: flex-start; background-color: #f06137;">
-                    <ul class="mainMenu-list">
+                    <ul class="mainMenu-list" style="display: flex;">
                         <li><a id="Vung1" class="a_menu" href="../Page_Master/Manage_Tau?vung=1">VÙNG 1</a></li>
                         <li><a id="Vung2" class="a_menu" href="../Page_Master/Manage_Tau?vung=2">VÙNG 2</a></li>
                         <li><a id="Vung3" class="a_menu" href="../Page_Master/Manage_Tau?vung=3">VÙNG 3</a></li>
@@ -61,15 +70,31 @@
         $(document).ready(function () {
             if (vung == null | vung == 1) {
                 vung_id = '5AEBB23FF45F3C235AFD86B510BF9E8C';
+                document.getElementById("Vung1").classList.add("a_selected");
+                document.getElementById("Vung2").classList.remove("a_selected");
+                document.getElementById("Vung3").classList.remove("a_selected");
+                document.getElementById("Vung4").classList.remove("a_selected");
             }
             else if (vung == 2) {
                 vung_id = '5AEBB23FF45F3C235AFD86B510BF9E8B';
+                document.getElementById("Vung2").classList.add("a_selected");
+                document.getElementById("Vung1").classList.remove("a_selected");
+                document.getElementById("Vung3").classList.remove("a_selected");
+                document.getElementById("Vung4").classList.remove("a_selected");
             }
             else if (vung == 3) {
                 vung_id = '5AEBB23FF45F3C235AFD86B510BF9E8D';
+                document.getElementById("Vung3").classList.add("a_selected");
+                document.getElementById("Vung2").classList.remove("a_selected");
+                document.getElementById("Vung1").classList.remove("a_selected");
+                document.getElementById("Vung4").classList.remove("a_selected");
             }
             else if (vung == 4) {
                 vung_id = '5AEBB23FF45F3C235AFD86B510BF9E8E';
+                document.getElementById("Vung4").classList.add("a_selected");
+                document.getElementById("Vung2").classList.remove("a_selected");
+                document.getElementById("Vung3").classList.remove("a_selected");
+                document.getElementById("Vung1").classList.remove("a_selected");
             }
             $('#title').text('QUẢN LÝ TÀU - VÙNG ' + vung);
             loadDataListShips(vung_id);
@@ -88,13 +113,12 @@
                     var tabletext = "<thead><tr><th>STT</th><th>SỐ HIỆU</th><th>KÝ HIỆU</th><th>NƠI SẢN XUẤT</th><th>NĂM TIẾP NHẬN</th><th>CHỨC NĂNG, NHIỆM VỤ</th><th  title='Xem hồ sơ tầu'>HỒ SƠ TẦU</th><th>TÁC VỤ</th></tr></thead><tbody>";
                     var i = 1;
                     $.each(data, function (key, item) {
-                        tabletext += "<tr><td>" + i + "</td><td>" + item.TTCOBAN.SOHIEU + "</td><td>" + item.TTCOBAN.KYHIEU + "</td><td>" + item.TTCOBAN.NOISANXUAT + "</td><td>" + item.TTCOBAN.NAMTIEPNHAN + "</td><td>" + item.TTCOBAN.CHUCNANG + "</td>" + '<td style="text-align: center;"><a href="#" class="view"  title="Xem hồ sơ tàu" onclick="View_HoSoTau(`' + item.ID + '`)"><i class="material-icons">&#xE417;</i></a></td>' + '<td><div style="width: max-content;"><a href="#" style="color:blue" title="Xuất file Word" onclick="xuatWordTau(`' + item.ID + '`)"><i class="material-icons">text_snippet</i></a><a href="#" style="color:green" title="Xuất file Excel" onclick="xuatExcelTau(`' + item.ID + '`)"><i class="material-icons">description</i></a><a href="#" style="color:orange" title="Xuất file pdf" onclick="xuatPdfTau(`' + item.ID + '`)"><i class="material-icons">picture_as_pdf</i></a><a href="#" style="color:revert" title="In báo cáo" onclick="inBCTau(`' + item.ID + '`)"><i class="material-icons">print</i></a><a href="#" class="edit" title="Sửa" onclick="ViewInforShip(`' + item.ID + '`)" data-toggle="modal" ><i class="material-icons">&#xE254;</i></a><a href="#" class="delete" title="Xóa" onclick="delete_ship(`' + item.ID + '`)"><i class="material-icons">&#xE872;</i></a></div></td></tr>';
+                        tabletext += "<tr><td>" + i + "</td><td>" + item.TTCOBAN.SOHIEU + "</td><td>" + item.TTCOBAN.KYHIEU + "</td><td>" + item.TTCOBAN.NOISANXUAT + "</td><td>" + item.TTCOBAN.NAMTIEPNHAN + "</td><td>" + item.TTCOBAN.CHUCNANG + "</td>" + '<td style="text-align: center;"><a href="#" class="view"  title="Xem hồ sơ tàu" onclick="View_HoSoTau(`' + item.ID + '`)"><i class="material-icons">&#xE417;</i></a></td>' + '<td><div style="width: max-content;"><a href="#" style="color:blue" title="Xuất file Word" onclick="xuatWordTau(`' + item.ID + '`)"><i class="material-icons">text_snippet</i></a><a href="#" style="color:green" title="Xuất file Excel" onclick="xuatExcelTau(`' + item.ID + '`)"><i class="material-icons">description</i></a><a href="#" style="color:orange" title="Xuất file pdf" onclick="xuatPdfTau(`' + item.ID + '`)"><i class="material-icons">picture_as_pdf</i></a><a href="#" style="color:revert" title="In báo cáo" onclick="inBCTau(`' + item.ID + '`)"><i class="material-icons">print</i></a><a href="#" class="edit" title="Sửa" onclick="ViewInforShip(`' + item.ID + '`)"><i class="material-icons">&#xE254;</i></a><a href="#" class="delete" title="Xóa" onclick="delete_ship(`' + item.ID + '`)"><i class="material-icons">&#xE872;</i></a></div></td></tr>';
                         i = i + 1;
                     });
                     tabletext += "</tbody>";
                     $('#tableship').html(tabletext);
                     loadTableShip();
-                    //$('#tableship_wrapper .row .col-sm-12').first().html('<button onclick="btn_addship()" class="btn btn-info btn-lg col-md-6" /*data-toggle="modal" data-target="#model-add-ship"*/ style="height: 40px; margin-bottom: 8px; margin-top: -4px; font-size: 18px;"><span class="glyphicon glyphicon-plus"></span>Thêm tàu</button>');
                     $('#tableship_wrapper .row .col-sm-12').first().html('<div class="btn-group"><button onclick="btn_Load_listship()" class="btn btn-lg btn-secondary mb-3"><span class="bi-arrow-clockwise"></span> &nbsp;Load dữ liệu</button> <button onclick="btn_addship()" class="btn btn-lg btn-secondary mb-3"><span class="bi-plus-circle-fill"></span> &nbsp;Thêm mới tàu</button><div class="btn-group"><button type="button" class="btn btn-lg btn-secondary mb-3 dropdown-toggle" data-toggle="dropdown"><span class="bi-file-earmark-text"></span> Xuất báo cáo </button><ul class="dropdown-menu" role="menu"><li><a href="#">In báo cáo</a></li><li><a href="#" >Xuất file Word</a></li><li><a href="#">Xuất file Excel</a></li><li><a href="#">Xuất file PDF</a></li></ul></div></div>');
                     $('#tableship_wrapper .row').first().next().children().css("overflow-x", "auto");
                 }, error: function (ret) {
@@ -118,7 +142,7 @@
                         { name: 'NƠI SẢN XUẤT', width: 160 },
                         { name: 'NĂM TIẾP NHẬN', width: 160 },
                         { name: 'CHỨC NĂNG, NHIỆM VỤ', width:220 },
-                        { name: 'HỒ SƠ TÀU', width: 100 },
+                        { name: 'HỒ SƠ TÀU', width: 100 },
                         { name: 'TÁC VỤ' ,width:60},
                     ],
                     "columnDefs": [
