@@ -16,7 +16,7 @@
                 <div class="section-header">
                     <div class="col-md-12">
                         <div class="btn-group">
-                            <button onclick="loadDataList_NhatKy()" class="btn btn-secondary mb-2"><i class="bi-arrow-clockwise"></i>&nbsp;Load dữ liệu</button>
+                            <button onclick="btn_loadDataList_NhatKy()" class="btn btn-secondary mb-2"><i class="bi-arrow-clockwise"></i>&nbsp;Load dữ liệu</button>
                             <button id="btn_add_NhatKy" class="btn btn-secondary mb-2" data-toggle="modal" data-target="#model-add-NhatKy" style="padding-top: 4px;"><i class="bi bi-plus-circle"></i>&nbsp; Thêm mới</button>
                         </div>
                         <table id="table_NhatKyHoatDongCuaTau" class="table table-bordered table-striped table-md" style="width: 100%">
@@ -238,7 +238,7 @@
                         });
                         tabletext += "</tbody>";
                         $('#table_NhatKyHoatDongCuaTau').html(tabletext);
-                        loadDataList_NhatKy(Ship_ID);
+                        loadTableNhatKy();
                         //$('#tableship_wrapper .row .col-sm-12').first().html('<button onclick="btn_addship()" class="btn btn-info btn-lg col-md-6" /*data-toggle="modal" data-target="#model-add-ship"*/ style="height: 40px; margin-bottom: 8px; margin-top: -4px; font-size: 18px;"><span class="glyphicon glyphicon-plus"></span>Thêm tàu</button>');
 
                     }, error: function (ret) {
@@ -304,6 +304,9 @@
 
             });
         };
+        function btn_loadDataList_NhatKy() {
+            location.reload(true);
+        }
         function btn_add_NhatKy() {
             var form = document.getElementById("form-add-NhatKy");
             console.log(form.checkValidity());
@@ -339,12 +342,11 @@
                         $("#NhatKy_addNoiDen").val("");
                         $("#NhatKy_addSoNgayHD").val("");
                         $("#NhatKy_addTongHaiLy").val("");
-                        $("##NhatKy_addGhiChu").val("");
+                        $("#NhatKy_addGhiChu").val("");
                         $('#model-add-NhatKy').modal("hide");
                     },
                 });
             }
-            return false;
         }
 
         function edit_nhatky(ID, NGAYTHANG, NOIXUATPHAT, NOIDEN, SONGAYHD, HAILY, GHICHU) {
@@ -398,13 +400,11 @@
                     },
                 });
             }
-            return false;
         }
 
-        function delete_nhatky() {
+        function delete_nhatky(id_nhatky) {
             let text = "Bạn có chắc muốn xóa hoạt động này?";
             if (confirm(text) == true) {
-                var id_nhatky = $("#NhatKy_editID").val(ID);
                 $.ajax({
                     url: linkapi + "v2/xoanhatkyhoatdongtau?id=" + id_nhatky,
                     type: "DELETE",
