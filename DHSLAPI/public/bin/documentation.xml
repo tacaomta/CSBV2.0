@@ -1062,6 +1062,24 @@
             Thời gian làm việc của máy chính, máy phụ, máy chuyên dụng
             </summary>
         </member>
+        <member name="M:DHSLAPI.Controllers.NHATKYHOATDONGMAYController.XEMNHATKYHOATDONGCACMAY(System.String,System.Int32)">
+            <summary>
+            Xem thời gian làm việc tất cả
+            máy chính, máy phụ, máy chuyên dùng trên tàu trong năm hiện tại
+            </summary>
+            <param name="id">id tàu</param>
+            <param name="year">năm muốn xem chi tiết</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.NHATKYHOATDONGMAYController.XEMNHATKYHOATDONGMOIMAY(System.String,System.Int32)">
+            <summary>
+            Xem thời gian làm việc chi tiết của từng
+            máy chính, máy phụ, máy chuyên dùng trong năm hiện tại
+            </summary>
+            <param name="id">id máy</param>
+            <param name="year">năm muốn xem chi tiết</param>
+            <returns></returns>
+        </member>
         <member name="M:DHSLAPI.Controllers.NHATKYHOATDONGMAYController.THEMNHATKYHOATDONGMAY(System.String,DHSLAPI.Models.THOIGIANLAMVIECMAY)">
             <summary>
             Thêm thời gian làm việc của máy chính, máy phụ, máy chuyên dùng
@@ -2688,6 +2706,11 @@
         <member name="P:DHSLAPI.Models.THOIGIANLAMVIECMAY.TONG">
             <summary>
             Thời gian làm việc trong năm hiện tại + năm trước
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.THOIGIANLAMVIECMAY.THONGTINMAY">
+            <summary>
+            Thông tin máy
             </summary>
         </member>
         <member name="T:DHSLAPI.Models.THONGTINTAU">
