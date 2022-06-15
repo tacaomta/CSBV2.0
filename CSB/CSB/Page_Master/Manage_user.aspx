@@ -1,18 +1,36 @@
 ﻿<%@ Page Title="Quản lý người dùng" Language="C#" MasterPageFile="~/Master/TrangChu.Master" AutoEventWireup="true" CodeBehind="Manage_user.aspx.cs" Inherits="CSB.Page_Master.Manage_user" %>
 
 <asp:Content ID="Manage_User" ContentPlaceHolderID="MainContent" runat="server">
-    <link href="../css/manager_user.css" rel="stylesheet" />
+    <style>
+        #Error_Adduser {
+            padding-left: 23px;
+            color: red;
+        }
+        
+        #Error_Edituser {
+            padding-left: 13px;
+            color: red;
+        }
+
+        .icon_lock{
+            font-size:21px;
+        }
+
+        .icon_unlock {
+            font-size: 21px;
+        }
+    </style>
     <div id="form1">
-        <div class="section-header">
-            <div class="section">
-                <div class="section-header">
-                    <h4 style="color: black; margin: 0; margin-left: 15px;">QUẢN LÝ NGƯỜI DÙNG</h4>
-                    <div class="section-header-breadcrumb">
-                        <div class="breadcrumb-item active"><a href="TrangChu.aspx" style="color: #01b5f9">Trang chủ </a></div>
-                        /<div class="breadcrumb-item active"><a href="#" style="color: #01b5f9"> Quản lý người dùng</a></div>
-                    </div>
+        <div class="section" style="background-color: #fff; padding-bottom: 5px;">
+            <div class="section-header" style="background-color: #fff;">
+                <h4 style="color: black; margin: 0; margin-left: 15px;">QUẢN LÝ NGƯỜI DÙNG</h4>                        
+                <div class="section-header-breadcrumb">
+                    <div class="breadcrumb-item"><a href="Null.aspx" style="color: #01b5f9; font-size: 18px;">Trang chủ</a></div>
+                    <div class="breadcrumb-item"><a href="Manage_user" style="color: #01b5f9; font-size: 18px;">Quản lý người dùng</a></div>
                 </div>
-                <div class="section-header">
+            </div>
+            <div class="section-content">
+                <div class="section">
                     <div class="col-md-12">
                         <table id="tableuser" class="table table-bordered table-striped table-md" style="width: 100%">
                         </table>
@@ -20,8 +38,6 @@
                 </div>
             </div>
         </div>
-        <%--Xóa--%>
-        <%--<div id="loader" class="lds-dual-ring overlay"></div>--%>
     </div>
     <div class="modal fade" id="model-add-user" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog">
         <div class="modal-dialog" role="document">
@@ -31,7 +47,6 @@
                         <h4 class="title-modal-banve font-weight-bold" id="largeModalLabel">Thêm người dùng mới</h4>
                     </div>
                     <div class="modal-body">
-
                         <div class="row clearfix ">
                             <div style="width: 100%; float: left; padding: 10px">
                                 <div class="form-group">
@@ -49,7 +64,6 @@
                                     </div>
                                 </div>
                             </div>
-
                             <div style="width: 100%; float: left; padding: 10px">
                                 <div class="form-group">
                                     <label class="col-md-5 control-label"><strong>Mật khẩu     : </strong></label>
@@ -82,13 +96,12 @@
                     </div>
                     <div class="modal-footer">
                         <button onclick="Add_User()" type="submit" class="btn btn-info">Thêm</button>
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
     <div class="modal fade" id="model-edit-user" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -175,7 +188,7 @@
                     </div>
                     <div class="modal-footer">
                         <button type="submit" class="btn btn-info" onclick="updateUser()">Lưu thay đổi</button>
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Đóng</button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
                     </div>
                 </div>
             </div>
@@ -272,7 +285,7 @@
                 });
                 table1.buttons().container()
                     .appendTo('this_wrapper .col-md-6:eq(0)');
-                $('.col-sm-12').first().html('<button id="btn_adduser" onclick="btn_adduser()" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#model-add-user" style="height: 35px; padding - top: 4px;margin - top: -4px;"><i class="bi bi-plus-circle"></i> Thêm người dùng</button>');
+                $('.col-sm-12').first().html('<button id="btn_adduser" onclick="btn_adduser()" class="btn btn-secondary btn-lg" data-toggle="modal" data-target="#model-add-user"><i class="bi bi-plus-circle"></i> Thêm người dùng</button>');
             });
         };
 

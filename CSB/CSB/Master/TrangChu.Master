@@ -834,8 +834,14 @@
         text-align: center;
     }
     .btn {
-        font-size: 12px;
+        font-size: 14px;
     }
+        .blue-hr {
+            width: 50px;
+            height: 4px;
+            margin-top: 5px;
+            background-color: #0086db;
+        }
     </style>
 </head>
 

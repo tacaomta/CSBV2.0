@@ -245,7 +245,6 @@
     <Content Include="css\bootstrap.min.css" />
     <Content Include="css\bootstrap3.css" />
     <Content Include="css\login1.css" />
-    <Content Include="css\manager_user.css" />
     <Content Include="css\manage_ship.css" />
     <Content Include="css\Ship_equiment.css" />
     <Content Include="Default.aspx" />
@@ -262,6 +261,7 @@
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="Image\change_password.jpg" />
     <Content Include="Image\icon\exclamation-circle.svg" />
     <Content Include="Image\icon\i.svg" />
     <Content Include="Image\icon\v.svg" />
