@@ -1057,6 +1057,69 @@
             <param name="id">id của neo, xích neo</param>
             <returns></returns>
         </member>
+        <member name="T:DHSLAPI.Controllers.NHATKYHOATDONGMAYController">
+            <summary>
+            Thời gian làm việc của máy chính, máy phụ, máy chuyên dụng
+            </summary>
+        </member>
+        <member name="M:DHSLAPI.Controllers.NHATKYHOATDONGMAYController.THEMNHATKYHOATDONGMAY(System.String,DHSLAPI.Models.THOIGIANLAMVIECMAY)">
+            <summary>
+            Thêm thời gian làm việc của máy chính, máy phụ, máy chuyên dùng
+            </summary>
+            <param name="id">id của máy</param>
+            <param name="tg">nhật ký thời gian làm việc</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.NHATKYHOATDONGMAYController.SUANHATKYHOATDONGMAY(System.String,DHSLAPI.Models.THOIGIANLAMVIECMAY)">
+            <summary>
+            Cập nhật nhật ký hoạt động của máy chính, máy phụ, máy chuyên dùng
+            </summary>
+            <param name="id">id của máy</param>
+            <param name="tg">thông tin cập nhật</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.NHATKYHOATDONGMAYController.XOANHATKYHOATDONGMAY(System.String)">
+            <summary>
+            Xoá nhật ký hoạt động máy chính, máy phụ, máy chuyên dùng
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="T:DHSLAPI.Controllers.NHATKYHOATDONGTAUController">
+            <summary>
+            Nhật ký hoạt động tàu
+            </summary>
+        </member>
+        <member name="M:DHSLAPI.Controllers.NHATKYHOATDONGTAUController.LOADNHATKYHOATDONGTAU(System.String)">
+            <summary>
+            Lấy thông tin nhật ký hoạt động của tàu theo ID tàu
+            </summary>
+            <param name="id">id của tàu</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.NHATKYHOATDONGTAUController.THEMNHATKYHOATDONGTAU(System.String,DHSLAPI.Models.NHATKYHOATDONGTAU)">
+            <summary>
+            Thêm nhật ký hoạt động tàu
+            </summary>
+            <param name="nk">thông tin nhật ký hoạt động tàu</param>
+            <param name="id">id của tàu</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.NHATKYHOATDONGTAUController.SUANHATKYHOATDONGTAU(System.String,DHSLAPI.Models.NHATKYHOATDONGTAU)">
+            <summary>
+            Cập nhật nhật ký hoạt động tàu
+            </summary>
+            <param name="id">id của nhật ký hoạt động</param>
+            <param name="nk">thông tin nhật ký cập nhật</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.NHATKYHOATDONGTAUController.XOANHATKYHOATDONGTAU(System.String)">
+            <summary>
+            Xoá nhật ký hoạt động tàu
+            </summary>
+            <param name="id">id của nhật ký</param>
+            <returns></returns>
+        </member>
         <member name="T:DHSLAPI.Controllers.P2Controller">
             <summary>
             Phần 2: ĐẶC ĐIỂM CHUNG CỦA TÀU
@@ -2347,6 +2410,46 @@
             Độ dài Lxn (m)
             </summary>
         </member>
+        <member name="T:DHSLAPI.Models.NHATKYHOATDONGTAU">
+            <summary>
+            Nhật ký hoạt động tàu
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.NHATKYHOATDONGTAU.ID">
+            <summary>
+            ID
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.NHATKYHOATDONGTAU.NGAYTHANG">
+            <summary>
+            Ngày tháng năm
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.NHATKYHOATDONGTAU.NOIXUATPHAT">
+            <summary>
+            Nơi xuất phát
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.NHATKYHOATDONGTAU.NOIDEN">
+            <summary>
+            Nơi đến
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.NHATKYHOATDONGTAU.SONGAYHD">
+            <summary>
+            Số ngày hoạt động trong đợt
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.NHATKYHOATDONGTAU.HAILY">
+            <summary>
+            Tổng số hải lý hành trình
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.NHATKYHOATDONGTAU.GHICHU">
+            <summary>
+            Ghi chú
+            </summary>
+        </member>
         <member name="T:DHSLAPI.Models.Position">
             <summary>
             Chức vụ của cán bộ, nhân viên kỹ thuật trên tàu
@@ -2535,6 +2638,56 @@
         <member name="P:DHSLAPI.Models.THIETBIKHAC.SOLUONG">
             <summary>
             Số lượng
+            </summary>
+        </member>
+        <member name="T:DHSLAPI.Models.THOIGIANLAMVIECMAY">
+            <summary>
+            Thời gian làm việc của máy chính, máy phụ, máy chuyên dùng
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.THOIGIANLAMVIECMAY.ID">
+            <summary>
+            ID của nhật ký thời gian
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.THOIGIANLAMVIECMAY.NAM">
+            <summary>
+            Năm hiện tại
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.THOIGIANLAMVIECMAY.QUYI">
+            <summary>
+            Thời gian làm việc trong quý 1 trong năm
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.THOIGIANLAMVIECMAY.QUYII">
+            <summary>
+            Thời gian làm việc trong quý 2 trong năm
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.THOIGIANLAMVIECMAY.QUYIII">
+            <summary>
+            Thời gian làm việc trong quý 3 trong năm
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.THOIGIANLAMVIECMAY.QUYIV">
+            <summary>
+            Thời gian làm việc trong quý 4 trong năm
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.THOIGIANLAMVIECMAY.NAMTRUOC">
+            <summary>
+            Thời gian làm việc trong năm trước
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.THOIGIANLAMVIECMAY.TONGTRONGNAM">
+            <summary>
+            Thời gian làm việc trong năm hiện tại
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.THOIGIANLAMVIECMAY.TONG">
+            <summary>
+            Thời gian làm việc trong năm hiện tại + năm trước
             </summary>
         </member>
         <member name="T:DHSLAPI.Models.THONGTINTAU">
