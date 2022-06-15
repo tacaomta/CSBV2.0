@@ -40,46 +40,125 @@
                                     <div class="form-group" style="display: flex">
                                         <label class="col-md-5 control-label"><strong>Ngày, tháng, năm   : </strong></label>
                                         <div class="col-md-7">
-                                            <input type="text" class="form-control" id="NhatKy_addNgayThangNam" placeholder="Nhập ngày, tháng, năm" required>
+                                            <input type="date" class="form-control" id="NhatKy_addNgayThangNam" required>
                                         </div>
                                     </div>
                                 </div>
                                 <div style="width: 100%; float: left; padding: 10px">
                                     <div class="form-group" style="display: flex">
-                                        <label class="col-md-5 control-label"><strong>Ký hiệu   : </strong></label>
+                                        <label class="col-md-5 control-label"><strong>Nơi xuất phát  : </strong></label>
                                         <div class="col-md-7">
-                                            <input type="text" class="form-control" id="add-BOMDAUNUOCTHONGGIO-KYHIEU" placeholder="Nhập ký hiệu" required>
+                                            <input type="text" class="form-control" id="NhatKy_addNoiXuatPhat" placeholder="Nhập nơi xuất phát" required>
                                         </div>
                                     </div>
                                 </div>
                                 <div style="width: 100%; float: left; padding: 10px">
                                     <div class="form-group" style="display: flex">
-                                        <label class="col-md-5 control-label"><strong>Nước sản xuất   : </strong></label>
+                                        <label class="col-md-5 control-label"><strong>Nơi đến  : </strong></label>
                                         <div class="col-md-7">
-                                            <input type="text" class="form-control" id="add-BOMDAUNUOCTHONGGIO-NUOCSX">
+                                            <input type="text" class="form-control" id="NhatKy_addNoiDen"  placeholder="Nhập nơi đến">
                                         </div>
                                     </div>
                                 </div>
                                 <div style="width: 100%; float: left; padding: 10px">
                                     <div class="form-group" style="display: flex">
-                                        <label class="col-md-5 control-label"><strong>Lưu lượng   : </strong></label>
+                                        <label class="col-md-5 control-label"><strong>Số ngày hoạt động   : </strong></label>
                                         <div class="col-md-7">
-                                            <input type="text" class="form-control" id="add-BOMDAUNUOCTHONGGIO-LUULUONG">
+                                            <input type="number" step="any" class="form-control" id="NhatKy_addSoNgayHD"  required min="0">
                                         </div>
                                     </div>
                                 </div>
                                 <div style="width: 100%; float: left; padding: 10px">
                                     <div class="form-group" style="display: flex">
-                                        <label class="col-md-5 control-label"><strong>Số lượng  : </strong></label>
+                                        <label class="col-md-5 control-label"><strong>Tổng số HLHT  : </strong></label>
                                         <div class="col-md-7">
-                                            <input type="number" step="any" class="form-control" id="add-BOMDAUNUOCTHONGGIO-SOLUONG" placeholder="Nhập số lượng" required min="0">
+                                            <input type="number" step="any" class="form-control" id="NhatKy_addTongHaiLy"  required min="0">
+                                        </div>
+                                    </div>
+                                </div>
+                                 <div style="width: 100%; float: left; padding: 10px">
+                                    <div class="form-group" style="display: flex">
+                                        <label class="col-md-5 control-label"><strong>Ghi chú  : </strong></label>
+                                        <div class="col-md-7">
+                                            <input type="text" class="form-control" id="NhatKy_addGhiChu" placeholder="Nhập ghi chú">
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="modal-footer" style="padding: 8px 16px;">
-                            <button type="submit" onclick="add_HETRUCCHANVIT()" class="btn btn-info">Thêm</button>
+                            <button type="submit" onclick="btn_add_NhatKy()" class="btn btn-info">Thêm</button>
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Đóng</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+     <div class="modal fade" id="model-edit-NhatKy" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <form id="form-edit-NhatKy" onsubmit="return false">
+                    <input type="hidden" id="NhatKy_editID" />
+                    <div class="card auth_form" style="margin-bottom: 0px">
+                        <div class="modal-header" style="padding: 10px 16px;">
+                            <h4 class="title-modal-banve font-weight-bold">Sửa nhật ký hoạt động của tàu</h4>
+                        </div>
+                        <div class="modal-body" style="padding: 6px 16px;">
+                            <div class="row clearfix ">
+                                <div style="width: 100%; float: left; padding: 10px">
+                                    <div class="form-group" style="display: flex">
+                                        <label class="col-md-5 control-label"><strong>Ngày, tháng, năm   : </strong></label>
+                                        <div class="col-md-7">
+                                            <input type="date" class="form-control" id="NhatKy_editNgayThangNam" required>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div style="width: 100%; float: left; padding: 10px">
+                                    <div class="form-group" style="display: flex">
+                                        <label class="col-md-5 control-label"><strong>Nơi xuất phát  : </strong></label>
+                                        <div class="col-md-7">
+                                            <input type="text" class="form-control" id="NhatKy_editNoiXuatPhat" placeholder="Nhập nơi xuất phát" required>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div style="width: 100%; float: left; padding: 10px">
+                                    <div class="form-group" style="display: flex">
+                                        <label class="col-md-5 control-label"><strong>Nơi đến  : </strong></label>
+                                        <div class="col-md-7">
+                                            <input type="text" class="form-control" id="NhatKy_editNoiDen"  placeholder="Nhập nơi đến">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div style="width: 100%; float: left; padding: 10px">
+                                    <div class="form-group" style="display: flex">
+                                        <label class="col-md-5 control-label"><strong>Số ngày hoạt động   : </strong></label>
+                                        <div class="col-md-7">
+                                            <input type="number" step="any" class="form-control" id="NhatKy_editSoNgayHD"  required min="0">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div style="width: 100%; float: left; padding: 10px">
+                                    <div class="form-group" style="display: flex">
+                                        <label class="col-md-5 control-label"><strong>Tổng số HLHT  : </strong></label>
+                                        <div class="col-md-7">
+                                            <input type="number" step="any" class="form-control" id="NhatKy_editTongHaiLy"  required min="0">
+                                        </div>
+                                    </div>
+                                </div>
+                                 <div style="width: 100%; float: left; padding: 10px">
+                                    <div class="form-group" style="display: flex">
+                                        <label class="col-md-5 control-label"><strong>Ghi chú  : </strong></label>
+                                        <div class="col-md-7">
+                                            <input type="text" class="form-control" id="NhatKy_editGhiChu" placeholder="Nhập ghi chú">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer" style="padding: 8px 16px;">
+                            <button type="submit" onclick="btn_edit_NhatKy()" class="btn btn-info">Lưu</button>
                             <button type="button" class="btn btn-default" data-dismiss="modal">Đóng</button>
                         </div>
                     </div>
@@ -89,6 +168,14 @@
     </div>
     <script src="../Scripts/jquery-3.4.1.slim.min.js"></script>
     <script>
+        var date = new Date();
+        if (Number(date.getMonth()) + 1 < 10) {
+            debugger
+            var strDate_ntn = '' + date.getFullYear() + '-' + '0' + (Number(date.getMonth()) + 1) + '-' + date.getDate();
+        }
+        else {
+            var strDate_ntn = '' + date.getFullYear() + '-' + (Number(date.getMonth()) + 1) + '-' + date.getDate();
+        }
         var Ship_ID;
         var shipName;
         function getParameterByName(name, url = window.location.href) {
@@ -146,12 +233,12 @@
                         var tabletext = "<thead><tr><th>STT</th><th>NGÀY, THÁNG, NĂM</th><th>NƠI XUẤT PHÁT</th><th>NƠI ĐẾN</th><th>SỐ NGÀY HOẠT ĐỘNG</th><th>TỔNG SỐ HLHT</th><th>GHI CHÚ</th><th>TÁC VỤ</th></tr></thead><tbody>";
                         var i = 1;
                         $.each(data, function (key, item) {
-                            tabletext += "<tr><td>" + i + "</td><td>" + item.NGAYTHANG + "</td><td>" + item.NOIXUATPHAT + "</td><td>" + item.NOIDEN + "</td><td>" + item.SONGAYHD + "</td><td>" + item.HAILY + "</td><td>" + item.GHICHU + "</td>" + '<td><div style="width: max-content;"><a href="#" class="edit" onclick="editnhatky(`' + item.ID + '`)"><i class="material-icons">&#xE254;</i></a><a href="#" class="delete" title="Xóa" onclick="delete_nhatky(`' + item.ID + '`)"><i class="material-icons">&#xE872;</i></a></div></td></tr>';
+                            tabletext += "<tr><td>" + i + "</td><td>" + item.NGAYTHANG + "</td><td>" + item.NOIXUATPHAT + "</td><td>" + item.NOIDEN + "</td><td>" + item.SONGAYHD + "</td><td>" + item.HAILY + "</td><td>" + item.GHICHU + "</td>" + '<td><div style="width: max-content;"><a href="#" class="edit" title="Sửa" data-toggle="modal" data-target="#model-edit-NhatKy" onclick="edit_nhatky(`' + item.ID + '`,`' + item.NGAYTHANG + '`,`' + item.NOIXUATPHAT + '`,`' + item.NOIDEN + '`,`' + item.SONGAYHD + '`,`' + item.HAILY + '`,`' + item.GHICHU + '`)"><i class="material-icons">&#xE254;</i></a><a href="#" class="delete" title="Xóa" onclick="delete_nhatky(`' + item.ID + '`)"><i class="material-icons">&#xE872;</i></a></div></td></tr>';
                             i = i + 1;
                         });
                         tabletext += "</tbody>";
                         $('#table_NhatKyHoatDongCuaTau').html(tabletext);
-                        loadTableNhatKy();
+                        loadDataList_NhatKy(Ship_ID);
                         //$('#tableship_wrapper .row .col-sm-12').first().html('<button onclick="btn_addship()" class="btn btn-info btn-lg col-md-6" /*data-toggle="modal" data-target="#model-add-ship"*/ style="height: 40px; margin-bottom: 8px; margin-top: -4px; font-size: 18px;"><span class="glyphicon glyphicon-plus"></span>Thêm tàu</button>');
 
                     }, error: function (ret) {
@@ -217,5 +304,120 @@
 
             });
         };
+        function btn_add_NhatKy() {
+            var form = document.getElementById("form-add-NhatKy");
+            console.log(form.checkValidity());
+            if (form.checkValidity() == true) {
+                var date_ntn = new Date();
+                debugger
+                date_ntn = $("#NhatKy_addNgayThangNam").val();
+                var NhatKy = {
+                    
+                    NGAYTHANG: date_ntn,
+                    NOIXUATPHAT: $("#NhatKy_addNoiXuatPhat").val(),
+                    NOIDEN: $("#NhatKy_addNoiDen").val(),
+                    SONGAYHD: $("#NhatKy_addSoNgayHD").val(),
+                    HAILY: $("#NhatKy_addTongHaiLy").val(),
+                    GHICHU: $("#NhatKy_addGhiChu").val()
+                };
+                console.log(NhatKy);
+                $.ajax({
+                    type: "POST",
+                    url: linkapi + "v2/themnhatkyhoatdongtau?id=" + Ship_ID,
+                    dataType: "json",
+                    data: JSON.stringify(NhatKy),
+                    contentType: "application/json",
+                    success: function (data) {
+                        toastSuccess("Thành công", "Thêm nhật ký hoạt động thành công.");
+                        loadDataList_NhatKy(Ship_ID);
+                    }, error: function (ret) {
+                        toastError("Thất bại", "");
+                    },
+                    complete: function () { // Set our complete callback, adding the .hidden class and hiding the spinner.
+                        $("#NhatKy_addNgayThangNam").val("");
+                        $("#NhatKy_addNoiXuatPhat").val("");
+                        $("#NhatKy_addNoiDen").val("");
+                        $("#NhatKy_addSoNgayHD").val("");
+                        $("#NhatKy_addTongHaiLy").val("");
+                        $("##NhatKy_addGhiChu").val("");
+                        $('#model-add-NhatKy').modal("hide");
+                    },
+                });
+            }
+            return false;
+        }
+
+        function edit_nhatky(ID, NGAYTHANG, NOIXUATPHAT, NOIDEN, SONGAYHD, HAILY, GHICHU) {
+            $("#NhatKy_editID").val(ID);
+            $("#NhatKy_editNgayThangNam").val(NGAYTHANG);
+            $("#NhatKy_editNoiXuatPhat").val(NOIXUATPHAT);
+            $("#NhatKy_editNoiDen").val(NOIDEN);
+            $("#NhatKy_editSoNgayHD").val(SONGAYHD);
+            $("#NhatKy_editTongHaiLy").val(HAILY);
+            $("#NhatKy_editGhiChu").val(GHICHU);
+        }
+
+        function btn_edit_NhatKy() {
+            var form = document.getElementById("form-edit-NhatKy");
+            console.log(form.checkValidity());
+            if (form.checkValidity() == true) {
+                var date_ntn = new Date();
+                debugger
+                date_ntn = $("#NhatKy_editNgayThangNam").val();
+
+                var id_nhatky = $("#NhatKy_editID").val();
+                var NhatKy = {
+                    NGAYTHANG: date_ntn,
+                    NOIXUATPHAT: $("#NhatKy_editNoiXuatPhat").val(),
+                    NOIDEN: $("#NhatKy_editNoiDen").val(),
+                    SONGAYHD: $("#NhatKy_editSoNgayHD").val(),
+                    HAILY: $("#NhatKy_editTongHaiLy").val(),
+                    GHICHU: $("#NhatKy_editGhiChu").val()
+                };
+                console.log(NhatKy);
+                $.ajax({
+                    type: "PUT",
+                    url: linkapi + "v2/capnhatnhatkyhoatdongtau?id=" + id_nhatky,
+                    dataType: "json",
+                    data: JSON.stringify(NhatKy),
+                    contentType: "application/json",
+                    success: function (data) {
+                        toastSuccess("Thành công", "Sửa nhật ký hoạt động thành công.");
+                        loadDataList_NhatKy(Ship_ID);
+                    }, error: function (ret) {
+                        toastError("Thất bại", "");
+                    },
+                    complete: function () { // Set our complete callback, adding the .hidden class and hiding the spinner.
+                        $("#NhatKy_editNgayThangNam").val("");
+                        $("#NhatKy_editNoiXuatPhat").val("");
+                        $("#NhatKy_editNoiDen").val("");
+                        $("#NhatKy_editSoNgayHD").val("");
+                        $("#NhatKy_editTongHaiLy").val("");
+                        $("#NhatKy_editGhiChu").val("");
+                        $('#model-edit-NhatKy').modal("hide");
+                    },
+                });
+            }
+            return false;
+        }
+
+        function delete_nhatky() {
+            let text = "Bạn có chắc muốn xóa hoạt động này?";
+            if (confirm(text) == true) {
+                var id_nhatky = $("#NhatKy_editID").val(ID);
+                $.ajax({
+                    url: linkapi + "v2/xoanhatkyhoatdongtau?id=" + id_nhatky,
+                    type: "DELETE",
+
+                }).done(function (res) {
+                    loadDataList_NhatKy(Ship_ID);
+                    toastSuccess("Thành công", "Xóa hoạt động thành công!");
+                }).fail(function (res) {
+                    toastError("Lỗi", "Xóa hoạt động không thành công!");
+                })
+            } else {
+
+            }
+        }
     </script>
 </asp:Content>
