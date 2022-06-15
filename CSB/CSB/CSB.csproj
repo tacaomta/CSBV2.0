@@ -301,6 +301,8 @@
     </Content>
     <Content Include="Page_Master\Ship_equipment2.aspx" />
     <Content Include="Page_Master\Ship_Profile.aspx" />
+    <Content Include="Page_Master\ThanVo.aspx" />
+    <Content Include="Page_Master\ThoiGianLamViecMay.aspx" />
     <Content Include="Page_Master\TinhNangChuYeu.aspx" />
     <Content Include="Page_Master\TinhNangThietBi.aspx" />
     <Content Include="Page_Master\TrangChu.aspx" />
@@ -598,6 +600,20 @@
     </Compile>
     <Compile Include="Page_Master\Ship_Profile.aspx.designer.cs">
       <DependentUpon>Ship_Profile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Page_Master\ThanVo.aspx.cs">
+      <DependentUpon>ThanVo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page_Master\ThanVo.aspx.designer.cs">
+      <DependentUpon>ThanVo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Page_Master\ThoiGianLamViecMay.aspx.cs">
+      <DependentUpon>ThoiGianLamViecMay.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page_Master\ThoiGianLamViecMay.aspx.designer.cs">
+      <DependentUpon>ThoiGianLamViecMay.aspx</DependentUpon>
     </Compile>
     <Compile Include="Page_Master\TinhNangChuYeu.aspx.cs">
       <DependentUpon>TinhNangChuYeu.aspx</DependentUpon>

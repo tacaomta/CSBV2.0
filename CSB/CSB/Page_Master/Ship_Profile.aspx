@@ -55,7 +55,7 @@
                         5. <a onclick="THeoDoiHoatDongTau()" href="#">Theo dõi hoạt động của tàu</a>
                     </div>
                     <div class="profile-link">
-                        6. <a href="#">Thời gian làm việc của máy chính, máy phụ, máy chuyên dụng</a>
+                        6. <a onclick="ThoiGianLamViec()" href="#">Thời gian làm việc của máy chính, máy phụ, máy chuyên dụng</a>
                     </div>
                     <div class="profile-link">
                         7. <a href="#">Đăng ký tai nạn hư hỏng</a>
@@ -143,6 +143,11 @@
 
         function THeoDoiHoatDongTau() {
             var win = window.open(baseaddress + "Page_Master/HoatDongTau?Ship_ID=" + Ship_ID, '_blank');
+            win.focus();
+        }
+
+        function ThoiGianLamViec() {
+            var win = window.open(baseaddress + "Page_Master/ThoiGianLamViecMay?Ship_ID=" + Ship_ID, '_blank');
             win.focus();
         }
        
