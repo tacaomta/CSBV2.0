@@ -580,7 +580,7 @@
             background-color: #f1f1f1;
             min-width: 180px;
             box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-            z-index: 1;
+            z-index: 2;
         }
 
             .dropdown-content a {
@@ -939,9 +939,9 @@
                         <li id="li_infor_login">
                             <button id="btnID" onclick="dropdownFunction()" class="dropbtn"><i id="user-login-fullname" class="bi bi-person-circle icon_account"></i><i class="bi-caret-down-fill" style="font-size: 10px; margin-left: 5px; padding: 0;"></i></button>
                             <div id="myDropdown" class="dropdown-content">
-                                <a href="../Page_Master/Information_User"><i class="bi bi-info-circle icon_menu_account">Thông tin tài khoản</i></a>
-                                <a href="../Page_Master/Change_Password"><i class="bi bi-unlock-fill icon_menu_account">Đổi mật khẩu</i></a>
-                                <a href="#" onclick="clickDangXuat()"><i class="bi bi-box-arrow-in-left icon_menu_account " id="btnDangXuat">Đăng xuất</i></a>
+                                <a href="../Page_Master/Information_User"><i class="bi bi-info-circle icon_menu_account"> Thông tin tài khoản</i></a>
+                                <a href="../Page_Master/Change_Password"><i class="bi bi-unlock-fill icon_menu_account"> Đổi mật khẩu</i></a>
+                                <a href="#" onclick="clickDangXuat()"><i class="bi bi-box-arrow-in-left icon_menu_account" id="btnDangXuat"> Đăng xuất</i></a>
                             </div>
                         </li>
                     </ul>
