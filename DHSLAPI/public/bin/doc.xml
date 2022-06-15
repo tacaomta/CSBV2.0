@@ -1327,6 +1327,41 @@
             <param name="id"></param>
             <returns></returns>
         </member>
+        <member name="T:DHSLAPI.Controllers.TAINANHUHONGController">
+            <summary>
+            ĐĂNG KÝ TAI NẠN, HƯ HỎNG
+            </summary>
+        </member>
+        <member name="M:DHSLAPI.Controllers.TAINANHUHONGController.LOADTAINANHUHONG(System.String)">
+            <summary>
+            Xem danh mục tai nạn, hư hỏng trên tàu
+            </summary>
+            <param name="id">id của tàu</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.TAINANHUHONGController.THEMDANGKYTAINANHUHONG(System.String,DHSLAPI.Models.TAINANHUHONG)">
+            <summary>
+            Thêm đăng ký tai nạn, hư hỏng trên tàu
+            </summary>
+            <param name="id">id của tàu</param>
+            <param name="tn">thông tin tai nạn, hư hỏng</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.TAINANHUHONGController.SUADANGKYTAINANHUHONG(System.String,DHSLAPI.Models.TAINANHUHONG)">
+            <summary>
+            Cập nhật đăng ký tai nạn, hư hỏng trên tàu
+            </summary>
+            <param name="id">id tai nạn, hư hỏng</param>
+            <param name="tn">Thông tin cập nhật</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.TAINANHUHONGController.XOADANGKYTAINANHUHONG(System.String)">
+            <summary>
+            Xoá đăng ký tai nạn, hư hỏng trên tàu
+            </summary>
+            <param name="id">id tai nạn, hư hỏng</param>
+            <returns></returns>
+        </member>
         <member name="T:DHSLAPI.Controllers.TAUController">
             <summary>
             Các hàm dịch vụ API của TÀU v2.0
@@ -2596,6 +2631,66 @@
         <member name="P:DHSLAPI.Models.Personnel.ShipID">
             <summary>
             ID của tàu
+            </summary>
+        </member>
+        <member name="T:DHSLAPI.Models.TAINANHUHONG">
+            <summary>
+            Tai nạn hư hỏng
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.TAINANHUHONG.ID">
+            <summary>
+            ID
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.TAINANHUHONG.THOIGIAN">
+            <summary>
+            Thời gian
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.TAINANHUHONG.DIADIEM">
+            <summary>
+            Địa điểm
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.TAINANHUHONG.LOAI">
+            <summary>
+            Loại tai nạn, hư hỏng
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.TAINANHUHONG.MUCDO">
+            <summary>
+            Mức độ hư hỏng
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.TAINANHUHONG.NGUYENNHAN">
+            <summary>
+            Nguyên nhân
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.TAINANHUHONG.GHICHU">
+            <summary>
+            Ghi chú
+            </summary>
+        </member>
+        <member name="T:DHSLAPI.Models.NGUYENNHAN">
+            <summary>
+            Nguyên nhân
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.NGUYENNHAN.KHACHQUAN">
+            <summary>
+            Khách quan
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.NGUYENNHAN.CHUQUAN">
+            <summary>
+            Chủ quan
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.NGUYENNHAN.TRINHDO">
+            <summary>
+            Trình độ
             </summary>
         </member>
         <member name="T:DHSLAPI.Models.THAYDOISOHIEU">
