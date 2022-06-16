@@ -1452,6 +1452,41 @@
             <param name="id">id của tàu</param>
             <returns></returns>
         </member>
+        <member name="T:DHSLAPI.Controllers.THEODOISUACHUATAUController">
+            <summary>
+            Theo dõi sửa chữa tàu
+            </summary>
+        </member>
+        <member name="M:DHSLAPI.Controllers.THEODOISUACHUATAUController.XEMTHEODOISUACHUATAU(System.String)">
+            <summary>
+            Xem danh mục theo dõi sửa chữa trên tàu
+            </summary>
+            <param name="id">id của tàu</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.THEODOISUACHUATAUController.THEMTHEODOISUACHUATAU(System.String,DHSLAPI.Models.THEODOISUACHUATAU)">
+            <summary>
+            Thêm theo dõi sửa chữa tàu
+            </summary>
+            <param name="id">id tàu</param>
+            <param name="td">Thông tin theo dõi sửa chữa mới</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.THEODOISUACHUATAUController.SUATHEODOISUACHUATAU(System.String,DHSLAPI.Models.THEODOISUACHUATAU)">
+            <summary>
+            Cập nhật theo dõi sửa chữa tàu
+            </summary>
+            <param name="id">id sửa chữa</param>
+            <param name="td">Thông tin sửa chữa</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.THEODOISUACHUATAUController.XOATHEODOISUACHUATAU(System.String)">
+            <summary>
+            Xoá theo dõi sửa chữa tàu
+            </summary>
+            <param name="id">id sửa chữa</param>
+            <returns></returns>
+        </member>
         <member name="T:DHSLAPI.Controllers.THIETBIKHACController">
             <summary>
             Các trang thiết bị khác
@@ -2726,6 +2761,91 @@
         <member name="P:DHSLAPI.Models.THAYDOISOHIEU.LastUpdated">
             <summary>
             Lần cập nhật cuối cùng
+            </summary>
+        </member>
+        <member name="T:DHSLAPI.Models.THEODOISUACHUATAU">
+            <summary>
+            Theo dõi sữa chữa tàu
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.THEODOISUACHUATAU.ID">
+            <summary>
+            ID
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.THEODOISUACHUATAU.THOIGIAN">
+            <summary>
+            Thời gian
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.THEODOISUACHUATAU.NOISUACHUA">
+            <summary>
+            Nơi sửa chữa
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.THEODOISUACHUATAU.CAPSUACHUA">
+            <summary>
+            Cấp sửa chữa
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.THEODOISUACHUATAU.PHUONGANKEDA">
+            <summary>
+            Phương án kê đà
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.THEODOISUACHUATAU.GIATHANH">
+            <summary>
+            Giá thành (VNĐ)
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.THEODOISUACHUATAU.TOMTATNOIDUNG">
+            <summary>
+            Tóm tắt nội dung sửa chữa
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.THEODOISUACHUATAU.DANHGIACHATLUONG">
+            <summary>
+            Đánh giá chất lượng
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.THEODOISUACHUATAU.GHICHU">
+            <summary>
+            Ghi chú
+            </summary>
+        </member>
+        <member name="T:DHSLAPI.Models.THOIGIAN">
+            <summary>
+            Thời gian
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.THOIGIAN.BATDAU">
+            <summary>
+            Bắt đầu
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.THOIGIAN.KETTHUC">
+            <summary>
+            Kết thúc
+            </summary>
+        </member>
+        <member name="T:DHSLAPI.Models.CAPSUACHUA">
+            <summary>
+            Cấp sửa chữa
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.CAPSUACHUA.ID">
+            <summary>
+            Id
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.CAPSUACHUA.CAP">
+            <summary>
+            Cấp sửa chữa
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.CAPSUACHUA.GHICHU">
+            <summary>
+            Ghi chú
             </summary>
         </member>
         <member name="T:DHSLAPI.Models.THIETBIKHAC">
