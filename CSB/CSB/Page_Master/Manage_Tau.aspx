@@ -19,7 +19,7 @@
                 </div>
             </div>
             <div class="section-content">
-                <div class="subMenu" style="justify-content: flex-start; background-color: #f06137;">
+                <div class="subMenu" style="justify-content: flex-start;">
                     <ul class="mainMenu-list" style="display: flex;">
                         <li><a id="Vung1" class="a_menu" href="../Page_Master/Manage_Tau?vung=1">VÙNG 1</a></li>
                         <li><a id="Vung2" class="a_menu" href="../Page_Master/Manage_Tau?vung=2">VÙNG 2</a></li>
