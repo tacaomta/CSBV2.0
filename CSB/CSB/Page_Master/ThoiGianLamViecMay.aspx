@@ -7,14 +7,14 @@
                 <div class="col-sm-12" style="padding: 0px 5px;">
                     <div class="card">
                         <div class="card-header">
-                            <h5 id="name">THỜI GIAN LÀM VIỆC CỦA CÁC MÁY</h5>
+                            <h5 id="name">THỜI GIAN LÀM VIỆC CỦA CÁC MÁY TRÊN TÀU <span id="TENTAU"></span></h5>
                             <div class="page-header-breadcrumb">
                                 <ul class="breadcrumb">
-                                    <li class="breadcrumb-item"><a href="#!">Trang chủ</a>
+                                    <li class="breadcrumb-item"><a href="TrangChu.aspx">Trang chủ</a>
                                     </li>
-                                    <li class="breadcrumb-item"><a href="#!">Quản lý tàu</a>
+                                    <li class="breadcrumb-item"><a href="Manage_Tau?vung=1">Quản lý tàu</a>
                                     </li>
-                                    <li class="breadcrumb-item"><a href="#!">Hồ sơ tàu</a>
+                                    <li class="breadcrumb-item"><a href="#!" onclick="HoSoTau()">Hồ sơ tàu</a>
                                     </li>
                                 </ul>
                             </div>
@@ -23,7 +23,7 @@
                             <div class="" style="display: flex;align-items: center;">
                                 <div class="btn-group">
                                     <button onclick="loadDataList_THOIGIANLAMVIECMAY()" class="btn btn-secondary mb-2"><span class="bi-arrow-clockwise"></span>&nbsp;Load dữ liệu</button>
-                                    <button id="btn_add_THOIGIANLAMVIECMAY" class="btn btn-secondary mb-2" data-toggle="modal" data-target="#model-add-THOIGIANLAMVIECMAY" onclick="loadDSMay()" style="padding-top: 4px;"><span class="bi-plus-circle-fill"></span> Thêm mới</button>
+                                    <button id="btn_add_THOIGIANLAMVIECMAY" class="btn btn-secondary mb-2" data-toggle="modal" data-target="#model-add-THOIGIANLAMVIECMAY" onclick="loadDSMay()" style="padding-top: 4px;"><span class="bi bi-plus-circle"></span> Thêm mới</button>
                                 </div>
                                 <div class="col-md-4" style="position: relative;margin-left: auto;display: flex;">
                                     <span class="col-md-5" style="padding-top: 5px;">Chọn năm </span>
@@ -239,9 +239,31 @@
             if (!results[2]) return '';
             return decodeURIComponent(results[2].replace(/\+/g, ' '));
         };
+        function Load_Title(Ship_ID) {
+            $.ajax({
+                type: "GET",
+                url: linkapi + "v2/ship_detail?id=" + Ship_ID,
+                dataType: "json",
+                success: function (data) {
+                    $("#TENTAU").html(data.TTCOBAN.SOHIEU);
+                }, error: function (ret) {
+                    console.log('errorGET');
+                }
+            });
+        }
+        function HoSoTau() {
+            window.location = baseaddress + "Page_Master/Ship_profile?Ship_ID=" + getParameterByName('Ship_ID');
+        }
         $(document).ready(function () {
-            loadDSNam();
-            loadDSMay();
+            Ship_ID = getParameterByName('Ship_ID');
+            if (Ship_ID == null) {
+                history.back();
+            }
+            else {
+                Load_Title(Ship_ID);
+                loadDSNam();
+                loadDSMay();
+            }
         });
         function loadDSMay() {
             var textselect = '';

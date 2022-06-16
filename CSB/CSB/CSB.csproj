@@ -301,6 +301,7 @@
     </Content>
     <Content Include="Page_Master\Ship_equipment2.aspx" />
     <Content Include="Page_Master\Ship_Profile.aspx" />
+    <Content Include="Page_Master\TaiNanHuHong.aspx" />
     <Content Include="Page_Master\ThanVo.aspx" />
     <Content Include="Page_Master\ThoiGianLamViecMay.aspx" />
     <Content Include="Page_Master\TinhNangChuYeu.aspx" />
@@ -600,6 +601,13 @@
     </Compile>
     <Compile Include="Page_Master\Ship_Profile.aspx.designer.cs">
       <DependentUpon>Ship_Profile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Page_Master\TaiNanHuHong.aspx.cs">
+      <DependentUpon>TaiNanHuHong.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page_Master\TaiNanHuHong.aspx.designer.cs">
+      <DependentUpon>TaiNanHuHong.aspx</DependentUpon>
     </Compile>
     <Compile Include="Page_Master\ThanVo.aspx.cs">
       <DependentUpon>ThanVo.aspx</DependentUpon>

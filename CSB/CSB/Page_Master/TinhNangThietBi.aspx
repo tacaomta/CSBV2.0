@@ -53,14 +53,14 @@
                 <div class="col-sm-12" style="padding: 0px 5px;">
                     <div class="card">
                         <div class="card-header">
-                            <h5 id="name">TÍNH NĂNG CÁC THIẾT BỊ - <span id="tenTau">Tên tàu</span></h5>
+                            <h5 id="name">TÍNH NĂNG CÁC THIẾT BỊ TRÊN TÀU <span id="TENTAU"></span></h5>
                             <div class="page-header-breadcrumb">
                                 <ul class="breadcrumb">
-                                    <li class="breadcrumb-item"><a href="#!">Quản lý tàu</a>
+                                    <li class="breadcrumb-item"><a href="TrangChu.aspx">Trang chủ</a>
                                     </li>
-                                    <li class="breadcrumb-item"><a href="#!">Hồ sơ tàu</a>
+                                    <li class="breadcrumb-item"><a href="Manage_Tau?vung=1">Quản lý tàu</a>
                                     </li>
-                                    <li class="breadcrumb-item"><a href="#!">Tính năng thiết bị</a>
+                                    <li class="breadcrumb-item"><a href="#!" onclick="HoSoTau()">Hồ sơ tàu</a>
                                     </li>
                                 </ul>
                             </div>
@@ -108,7 +108,7 @@
                                         <h5>HÀNG HẢI</h5>
                                         <div class="btn-group">
                                             <button onclick="loadDataList_HANGHAI()" class="btn btn-secondary mb-2"><span class="bi-arrow-clockwise"></span>&nbsp;Load dữ liệu</button>
-                                            <button id="btn_add_HANGHAI" class="btn btn-secondary mb-2" data-toggle="modal" data-target="#model-add-HANGHAI" style="padding-top: 4px;"><span class="bi-plus-circle-fill"></span> Thêm hàng hải</button>
+                                            <button id="btn_add_HANGHAI" class="btn btn-secondary mb-2" data-toggle="modal" data-target="#model-add-HANGHAI" style="padding-top: 4px;"><span class="bi bi-plus-circle"></span> Thêm hàng hải</button>
                                         </div>
                                         <table id="table-HANGHAI" class="table table-bordered table-striped table-md" style="width: 100%">
                                         </table>
@@ -118,7 +118,7 @@
                                         <h5>VŨ KHÍ</h5>
                                         <div class="btn-group">
                                             <button onclick="loadDataList_VUKHI()" class="btn btn-secondary mb-2"><span class="bi-arrow-clockwise"></span>&nbsp;Load dữ liệu</button>
-                                            <button id="btn_add_VUKHI" class="btn btn-secondary mb-2" data-toggle="modal" data-target="#model-add-VUKHI" style="padding-top: 4px;"><span class="bi-plus-circle-fill"></span> Thêm vũ khí</button>
+                                            <button id="btn_add_VUKHI" class="btn btn-secondary mb-2" data-toggle="modal" data-target="#model-add-VUKHI" style="padding-top: 4px;"><span class="bi bi-plus-circle"></span> Thêm vũ khí</button>
                                         </div>
                                         <table id="table-VUKHI" class="table table-bordered table-striped table-md" style="width: 100%">
                                         </table>
@@ -128,7 +128,7 @@
                                         <h5>THÔNG TIN - RA ĐA</h5>
                                         <div class="btn-group">
                                             <button onclick="loadDataList_RADA()" class="btn btn-secondary mb-2"><span class="bi-arrow-clockwise"></span>&nbsp;Load dữ liệu</button>
-                                            <button id="btn_add_RADA" class="btn btn-secondary mb-2" data-toggle="modal" data-target="#model-add-RADA" style="padding-top: 4px;"><span class="bi-plus-circle-fill"></span> Thêm ra đa</button>
+                                            <button id="btn_add_RADA" class="btn btn-secondary mb-2" data-toggle="modal" data-target="#model-add-RADA" style="padding-top: 4px;"><span class="bi bi-plus-circle"></span> Thêm ra đa</button>
                                         </div>
                                         <table id="table-RADA" class="table table-bordered table-striped table-md" style="width: 100%">
                                         </table>
@@ -138,7 +138,7 @@
                                         <h5>MÁY CHÍNH</h5>
                                         <div class="btn-group">
                                             <button onclick="loadDataList_MAYCHINH()" class="btn btn-secondary mb-2"><span class="bi-arrow-clockwise"></span>&nbsp;Load dữ liệu</button>
-                                            <button class="btn btn-secondary mb-2" data-toggle="modal" data-target="#model-add-MAYCHINH" style="padding-top: 4px;"><span class="bi-plus-circle-fill"></span> Thêm máy chính</button>
+                                            <button class="btn btn-secondary mb-2" data-toggle="modal" data-target="#model-add-MAYCHINH" style="padding-top: 4px;"><span class="bi bi-plus-circle"></span> Thêm máy chính</button>
                                         </div>
                                         <table id="table-MAYCHINH" class="table table-bordered table-striped table-md" style="width: 100%">
                                         </table>
@@ -146,7 +146,7 @@
                                         <h5>MÁY PHỤ PHÁT ĐIỆN</h5>
                                         <div class="btn-group">
                                             <button onclick="loadDataList_MAYPHU()" class="btn btn-secondary mb-2"><span class="bi-arrow-clockwise"></span>&nbsp;Load dữ liệu</button>
-                                            <button id="btn_add_MAYPHU" class="btn btn-secondary mb-2" data-toggle="modal" data-target="#model-add-MAYPHU" style="padding-top: 4px;"><span class="bi-plus-circle-fill"></span> Thêm máy phụ</button>
+                                            <button id="btn_add_MAYPHU" class="btn btn-secondary mb-2" data-toggle="modal" data-target="#model-add-MAYPHU" style="padding-top: 4px;"><span class="bi bi-plus-circle"></span> Thêm máy phụ</button>
                                         </div>
                                         <table id="table-MAYPHU" class="table table-bordered table-striped table-md" style="width: 100%">
                                         </table>
@@ -154,7 +154,7 @@
                                         <h5>CÁC TỔ MÁY CHUYÊN DỤNG</h5>
                                         <div class="btn-group">
                                             <button onclick="loadDataList_MAYCHUYENDUNG()" class="btn btn-secondary mb-2"><span class="bi-arrow-clockwise"></span>&nbsp;Load dữ liệu</button>
-                                            <button id="btn_add_MAYCHUYENDUNG" class="btn btn-secondary mb-2" data-toggle="modal" data-target="#model-add-MAYCHUYENDUNG" style="padding-top: 4px;"><span class="bi-plus-circle-fill"></span> Thêm máy chuyên dụng</button>
+                                            <button id="btn_add_MAYCHUYENDUNG" class="btn btn-secondary mb-2" data-toggle="modal" data-target="#model-add-MAYCHUYENDUNG" style="padding-top: 4px;"><span class="bi bi-plus-circle"></span> Thêm máy chuyên dụng</button>
                                         </div>
                                         <table id="table-MAYCHUYENDUNG" class="table table-bordered table-striped table-md" style="width: 100%">
                                         </table>
@@ -164,7 +164,7 @@
                                         <h5>HỆ TRỤC CHÂN VỊT</h5>
                                         <div class="btn-group">
                                             <button onclick="loadDataList_HETRUCCHANVIT()" class="btn btn-secondary mb-2"><span class="bi-arrow-clockwise"></span>&nbsp;Load dữ liệu</button>
-                                            <button id="btn_add_HETRUCCHANVIT" class="btn btn-secondary mb-2" data-toggle="modal" data-target="#model-add-HETRUCCHANVIT" style="padding-top: 4px;"><span class="bi-plus-circle-fill"></span> Thêm hệ trục chân vịt</button>
+                                            <button id="btn_add_HETRUCCHANVIT" class="btn btn-secondary mb-2" data-toggle="modal" data-target="#model-add-HETRUCCHANVIT" style="padding-top: 4px;"><span class="bi bi-plus-circle"></span> Thêm hệ trục chân vịt</button>
                                         </div>
                                         <table id="table-HETRUCCHANVIT" class="table table-bordered table-striped table-md" style="width: 100%">
                                         </table>
@@ -174,7 +174,7 @@
                                         <h5>NEO, XÍCH NEO</h5>
                                         <div class="btn-group">
                                             <button onclick="loadDataList_NEOXICHNEO()" class="btn btn-secondary mb-2"><span class="bi-arrow-clockwise"></span>&nbsp;Load dữ liệu</button>
-                                            <button id="btn_add_NEOXICHNEO" class="btn btn-secondary mb-2" data-toggle="modal" data-target="#model-add-NEOXICHNEO" style="padding-top: 4px;"><span class="bi-plus-circle-fill"></span> Thêm neo - xích neo</button>
+                                            <button id="btn_add_NEOXICHNEO" class="btn btn-secondary mb-2" data-toggle="modal" data-target="#model-add-NEOXICHNEO" style="padding-top: 4px;"><span class="bi bi-plus-circle"></span> Thêm neo - xích neo</button>
                                         </div>
                                         <table id="table-NEOXICHNEO" class="table table-bordered table-striped table-md" style="width: 100%">
                                         </table>
@@ -184,7 +184,7 @@
                                         <h5>BẢNG THỐNG KÊ CÁC BƠM DẦU, NƯỚC VÀ THÔNG GIÓ</h5>
                                         <div class="btn-group">
                                             <button onclick="loadDataList_BOMDAUNUOCTHONGGIO()" class="btn btn-secondary mb-2"><span class="bi-arrow-clockwise"></span>&nbsp;Load dữ liệu</button>
-                                            <button id="btn_add_BOMDAUNUOCTHONGGIO" class="btn btn-secondary mb-2" data-toggle="modal" data-target="#model-add-BOMDAUNUOCTHONGGIO" style="padding-top: 4px;"><span class="bi-plus-circle-fill"></span> Thêm bơm dầu, nước và thông gió</button>
+                                            <button id="btn_add_BOMDAUNUOCTHONGGIO" class="btn btn-secondary mb-2" data-toggle="modal" data-target="#model-add-BOMDAUNUOCTHONGGIO" style="padding-top: 4px;"><span class="bi bi-plus-circle"></span> Thêm bơm dầu, nước và thông gió</button>
                                         </div>
                                         <table id="table-BOMDAUNUOCTHONGGIO" class="table table-bordered table-striped table-md" style="width: 100%">
                                         </table>
@@ -194,7 +194,7 @@
                                         <h5>CÁC TRANG BỊ KHÁC</h5>
                                         <div class="btn-group">
                                             <button onclick="loadDataList_TRANGBIKHAC()" class="btn btn-secondary mb-2"><span class="bi-arrow-clockwise"></span>&nbsp;Load dữ liệu</button>
-                                            <button id="btn_add_TRANGBIKHAC" class="btn btn-secondary mb-2" data-toggle="modal" data-target="#model-add-TRANGBIKHAC" style="padding-top: 4px;"><span class="bi-plus-circle-fill"></span> Thêm trang bị khác</button>
+                                            <button id="btn_add_TRANGBIKHAC" class="btn btn-secondary mb-2" data-toggle="modal" data-target="#model-add-TRANGBIKHAC" style="padding-top: 4px;"><span class="bi bi-plus-circle"></span> Thêm trang bị khác</button>
                                         </div>
                                         <table id="table-TRANGBIKHAC" class="table table-bordered table-striped table-md" style="width: 100%">
                                         </table>
@@ -204,7 +204,7 @@
                                         <h5>THÂN VỎ</h5>
                                         <div class="btn-group">
                                             <button onclick="loadDataList_THANVO()" class="btn btn-secondary mb-2"><span class="bi-arrow-clockwise"></span>&nbsp;Load dữ liệu</button>
-                                            <button id="btn_add_THANVO" class="btn btn-secondary mb-2" data-toggle="modal" data-target="#model-add-THANVO" style="padding-top: 4px;"><span class="bi-plus-circle-fill"></span> Thêm thân vỏ</button>
+                                            <button id="btn_add_THANVO" class="btn btn-secondary mb-2" data-toggle="modal" data-target="#model-add-THANVO" style="padding-top: 4px;"><span class="bi bi-plus-circle"></span> Thêm thân vỏ</button>
                                         </div>
                                         <table id="table-THANVO" class="table table-bordered table-striped table-md" style="width: 100%">
                                         </table>
@@ -214,7 +214,7 @@
                                         <h5>MÁY NÉN KHÍ</h5>
                                         <div class="btn-group">
                                             <button onclick="loadDataList_MAYNENKHI()" class="btn btn-secondary mb-2"><span class="bi-arrow-clockwise"></span>&nbsp;Load dữ liệu</button>
-                                            <button id="btn_add_MAYNENKHI" class="btn btn-secondary mb-2" data-toggle="modal" data-target="#model-add-MAYNENKHI" style="padding-top: 4px;"><span class="bi-plus-circle-fill"></span> Thêm máy nén khí</button>
+                                            <button id="btn_add_MAYNENKHI" class="btn btn-secondary mb-2" data-toggle="modal" data-target="#model-add-MAYNENKHI" style="padding-top: 4px;"><span class="bi bi-plus-circle"></span> Thêm máy nén khí</button>
                                         </div>
                                         <table id="table-MAYNENKHI" class="table table-bordered table-striped table-md" style="width: 100%">
                                         </table>
@@ -3117,8 +3117,30 @@
             if (!results[2]) return '';
             return decodeURIComponent(results[2].replace(/\+/g, ' '));
         }
+        function Load_Title(Ship_ID) {
+            $.ajax({
+                type: "GET",
+                url: linkapi + "v2/ship_detail?id=" + Ship_ID,
+                dataType: "json",
+                success: function (data) {
+                    $("#TENTAU").html(data.TTCOBAN.SOHIEU);
+                }, error: function (ret) {
+                    console.log('errorGET');
+                }
+            });
+        }
+        function HoSoTau() {
+            window.location = baseaddress + "Page_Master/Ship_profile?Ship_ID=" + getParameterByName('Ship_ID');
+        }
         $(document).ready(function () {
-            loadDataList_HANGHAI();
+            Ship_ID = getParameterByName('Ship_ID');
+            if (Ship_ID == null) {
+                history.back();
+            }
+            else {
+                Load_Title(Ship_ID);
+                loadDataList_HANGHAI();
+            }
         });
 
         // HÀNG HẢI

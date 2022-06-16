@@ -439,7 +439,7 @@
                 $("#addTTC-HAIDOAN").attr('disabled', '');
                 $("#addTTC-HAIDOI").attr('disabled', '');
                 $("#text-remove-input").text(" Đặt lại dữ liệu");
-                $("#text-save").text(" Sửa thông tin");
+                $("#text-save").text(" Cập nhật");
                 loadDataShip(Ship_ID);
             }
 

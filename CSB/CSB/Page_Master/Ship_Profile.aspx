@@ -51,7 +51,7 @@
                 6. <a href="#" onclick="ThoiGianLamViec()">Thời gian làm việc của máy chính, máy phụ, máy chuyên dụng</a>
             </div>
             <div class="profile-link">
-                7. <a href="#">Đăng ký tai nạn hư hỏng</a>
+                7. <a href="#" onclick="DangKyTaiNanHuHong()">Đăng ký tai nạn hư hỏng</a>
             </div>
             <div class="profile-link">
                 8. <a href="#">Theo dõi sửa chữa tàu</a>
@@ -141,6 +141,10 @@
             var win = window.open(baseaddress + "Page_Master/ThoiGianLamViecMay?Ship_ID=" + Ship_ID, '_blank');
             win.focus();
         }
-       
+        
+        function DangKyTaiNanHuHong() {
+            var win = window.open(baseaddress + "Page_Master/TaiNanHuHong?Ship_ID=" + Ship_ID, '_blank');
+            win.focus();
+        }
     </script>
 </asp:Content>
