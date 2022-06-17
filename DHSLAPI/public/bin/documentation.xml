@@ -1091,6 +1091,7 @@
         <member name="M:DHSLAPI.Controllers.NHATKYHOATDONGMAYController.SUANHATKYHOATDONGMAY(System.String,DHSLAPI.Models.THOIGIANLAMVIECMAY)">
             <summary>
             Cập nhật nhật ký hoạt động của máy chính, máy phụ, máy chuyên dùng
+            Chỉ cập nhật các thông tin năm, quý 1, quý 2, quý 3 và quý 4
             </summary>
             <param name="id">id của máy</param>
             <param name="tg">thông tin cập nhật</param>
@@ -1450,6 +1451,101 @@
             Xoá thông tin thân vỏ của tàu
             </summary>
             <param name="id">id của tàu</param>
+            <returns></returns>
+        </member>
+        <member name="T:DHSLAPI.Controllers.THEODOICAIHOANTHAYTHEController">
+            <summary>
+            Theo dõi cải hoán, thay thế, bổ sung các thiết bị trên tàu
+            </summary>
+        </member>
+        <member name="M:DHSLAPI.Controllers.THEODOICAIHOANTHAYTHEController.XEMTHEODOICAIHOANTHAYTHE(System.String)">
+            <summary>
+            Phần 9: Xem danh mục theo dõi, cải hoán, thay thế các thiết bị
+            trên tàu
+            </summary>
+            <param name="id">id của tàu</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.THEODOICAIHOANTHAYTHEController.THEMTHEODOICAIHOANTHAYTHEHANGHAI(System.String,DHSLAPI.Models.THEODOICAIHOANTHAYTHE)">
+            <summary>
+            Thêm theo dõi cải hoán, thay thế, bổ sung thiết bị hàng hải
+            </summary>
+            <param name="id">id hàng hải</param>
+            <param name="td">thông tin cải hoán, thay thế, bổ sung</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.THEODOICAIHOANTHAYTHEController.THEMTHEODOICAIHOANTHAYTHEVUKHI(System.String,DHSLAPI.Models.THEODOICAIHOANTHAYTHE)">
+            <summary>
+            Thêm theo dõi cải hoán, thay thế, bổ sung vũ khí
+            </summary>
+            <param name="id">id vũ khí</param>
+            <param name="td">thông tin cải hoán, thay thế, bổ sung</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.THEODOICAIHOANTHAYTHEController.THEMTHEODOICAIHOANTHAYTHERADA(System.String,DHSLAPI.Models.THEODOICAIHOANTHAYTHE)">
+            <summary>
+            Thêm theo dõi cải hoán, thay thế, bổ sung rada
+            </summary>
+            <param name="id">id rada</param>
+            <param name="td">thông tin cải hoán, thay thế, bổ sung</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.THEODOICAIHOANTHAYTHEController.THEMTHEODOICAIHOANTHAYTHEMAY(System.String,DHSLAPI.Models.THEODOICAIHOANTHAYTHE)">
+            <summary>
+            Thêm theo dõi cải hoán, thay thế, bổ sung máy chính, máy phát điện
+            máy chuyên dùng
+            </summary>
+            <param name="id">id máy</param>
+            <param name="td">thông tin cải hoán, thay thế, bổ sung</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.THEODOICAIHOANTHAYTHEController.THEMTHEODOICAIHOANTHAYTHEHETRUCCHANVIT(System.String,DHSLAPI.Models.THEODOICAIHOANTHAYTHE)">
+            <summary>
+            Thêm theo dõi cải hoán, thay thế, bổ sung hệ trục chân vịt
+            </summary>
+            <param name="id">id hệ trục chân vịt</param>
+            <param name="td">thông tin cải hoán, thay thế, bổ sung</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.THEODOICAIHOANTHAYTHEController.THEMTHEODOICAIHOANTHAYTHENEOXICHNEO(System.String,DHSLAPI.Models.THEODOICAIHOANTHAYTHE)">
+            <summary>
+            Thêm theo dõi cải hoán, thay thế, bổ sung neo xích neo
+            </summary>
+            <param name="id">id neo xích neo</param>
+            <param name="td">thông tin cải hoán, thay thế, bổ sung</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.THEODOICAIHOANTHAYTHEController.THEMTHEODOICAIHOANTHAYTHEBOMDAU(System.String,DHSLAPI.Models.THEODOICAIHOANTHAYTHE)">
+            <summary>
+            Thêm theo dõi cải hoán, thay thế, bổ sung bơm dầu, thông gió
+            </summary>
+            <param name="id">id bơm dầu, thông gió</param>
+            <param name="td">thông tin cải hoán, thay thế, bổ sung</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.THEODOICAIHOANTHAYTHEController.THEMTHEODOICAIHOANTHAYTHETHIETBIKHAC(System.String,DHSLAPI.Models.THEODOICAIHOANTHAYTHE)">
+            <summary>
+            Thêm theo dõi cải hoán, thay thế, bổ sung thiết bị khác
+            </summary>
+            <param name="id">id thiết bị khác</param>
+            <param name="td">thông tin cải hoán, thay thế, bổ sung</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.THEODOICAIHOANTHAYTHEController.SUATHEODOICAIHOANTHAYTHE(System.String,DHSLAPI.Models.THEODOICAIHOANTHAYTHE)">
+            <summary>
+            Sửa thông tin theo dõi cải hoán, thay thế, bổ sung thiết bị:
+            Chỉ sửa các thông tin số lượng, phương án, lý do,
+            không cập nhật ID thiết bị
+            </summary>
+            <param name="id">id cải hoán, thay thế, bổ sung</param>
+            <param name="td">Thông tin cải hoán, thay thế, bổ sung sẽ cập nhật</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.THEODOICAIHOANTHAYTHEController.XOATHEODOICAIHOANTHAYTHE(System.String)">
+            <summary>
+            Xoá theo dõi cải hoán, thay thế, bổ sung thiết bị trên tàu
+            </summary>
+            <param name="id">id của thông tin cải hoán...</param>
             <returns></returns>
         </member>
         <member name="T:DHSLAPI.Controllers.THEODOISUACHUATAUController">
@@ -2763,6 +2859,46 @@
             Lần cập nhật cuối cùng
             </summary>
         </member>
+        <member name="T:DHSLAPI.Models.THEODOICAIHOANTHAYTHE">
+            <summary>
+            Theo dõi cải hoán, thay thế, bổ sung
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.THEODOICAIHOANTHAYTHE.ID">
+            <summary>
+            ID
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.THEODOICAIHOANTHAYTHE.TENTHIETBI">
+            <summary>
+            Tên thiết bị
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.THEODOICAIHOANTHAYTHE.SOLUONG">
+            <summary>
+            Số lượng
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.THEODOICAIHOANTHAYTHE.PHUONGAN">
+            <summary>
+            Phương án giải quyết
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.THEODOICAIHOANTHAYTHE.LYDO">
+            <summary>
+            Lý do
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.THEODOICAIHOANTHAYTHE.GHICHU">
+            <summary>
+            Ghi chú
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.THEODOICAIHOANTHAYTHE.IDTHIETBI">
+            <summary>
+            ID thiết bị
+            </summary>
+        </member>
         <member name="T:DHSLAPI.Models.THEODOISUACHUATAU">
             <summary>
             Theo dõi sữa chữa tàu
@@ -3996,6 +4132,17 @@
             </summary>
             <param name="id">id thông tin vũ khí</param>
             <param name="vk">thông tin vũ khí</param>
+            <returns></returns>
+        </member>
+        <member name="M:ShipyardInfo.classes.Connection.THEMTHEODOICAIHOANTHAYTHE(System.String,DHSLAPI.Models.THEODOICAIHOANTHAYTHE,System.Int32)">
+            <summary>
+            Thêm theo dõi cải hoán, thay thế, bổ sung thiết bị
+            </summary>
+            <param name="id">Id của thiết bị</param>
+            <param name="td">Thông tin cải hoán, thay thế, bổ sung</param>
+            <param name="loaitb">loại thiết bị: 1 - hàng hải, 2 - vũ khí
+            3 - ra đa, 4 - các lại máy, 5 - hệ trục chân vịt, 6 - neo xích neo
+            7 - bơm dầu, 8 - các thiết bị khác</param>
             <returns></returns>
         </member>
         <member name="P:ShipyardInfo.classes.Flotilla.Squadron">
