@@ -356,6 +356,7 @@
                     tabletext += "</tbody>";
                     $('#table-THOIGIANLAMVIECMAY').html(tabletext);
                     loadTableTHOIGIANLAMVIECMAY();
+                    console.log(data);
                 }, error: function (ret) {
                     console.log('errorGET');
                 },
@@ -451,6 +452,7 @@
                 dataType: "json",
                 success: function (data) {
                     $('#edit-THOIGIANLAMVIECMAY-ID').val(data.ID);
+                    console.log(data);
                 }, error: function (ret) {
                     console.log('errorGET');
                 },
@@ -474,13 +476,13 @@
                 console.log(THOIGIANLAMVIECMAY);
                 $.ajax({
                     type: "PUT",
-                    url: linkapi + "v2/capnhatnhatkyhoatdongmay?id=" + THOIGIANLAMVIECMAY.THONGTINMAY.ID,
+                    url: linkapi + "v2/capnhatnhatkyhoatdongmay?id=" + THOIGIANLAMVIECMAY.ID,
                     dataType: "json",
                     data: JSON.stringify(THOIGIANLAMVIECMAY),
                     contentType: "application/json",
                     success: function (data) {
                         toastSuccess("Thành công", "Cập nhật nhật ký làm việc của máy thành công.");
-                        loadDataList_THOIGIANLAMVIECMAY();
+                        loadDataList_THOIGIANLAMVIECMAY($("#edit-THOIGIANLAMVIECMAY-NAM").val());
                     }, error: function (ret) {
                         console.log(ret.responseJSON.Message);
                         toastError("Thất bại", "");
@@ -499,7 +501,7 @@
                     url: linkapi + "v2/xoanhatkyhoatdongmay?id=" + id,
                     type: "DELETE",
                 }).done(function (res) {
-                    loadDataList_THOIGIANLAMVIECMAY();
+                    loadDataList_THOIGIANLAMVIECMAY($("#NAM").val());
                     toastSuccess("Thành công", "Xóa nhật ký làm việc của máy thành công!");
                 }).fail(function (res) {
                     toastError("Lỗi", "Xóa nhật ký làm việc của máy không thành công!");

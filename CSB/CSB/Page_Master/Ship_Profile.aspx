@@ -57,7 +57,7 @@
                 8. <a href="#">Theo dõi sửa chữa tàu</a>
             </div>
             <div class="profile-link">
-                9. <a href="#">Theo dõi cải hoán, thay thế, bổ sung</a>
+                9. <a href="#" onclick="TheoDoiCaiHoanThayThe()">Theo dõi cải hoán, thay thế, bổ sung</a>
             </div>
             <div class="profile-link">
                 10.<a href="#" style="margin-left: 5px;">Đăng ký các phương tiện bảo vệ sức sống tàu và cứu sinh</a>
@@ -144,6 +144,11 @@
         
         function DangKyTaiNanHuHong() {
             var win = window.open(baseaddress + "Page_Master/TaiNanHuHong?Ship_ID=" + Ship_ID, '_blank');
+            win.focus();
+        }
+
+        function TheoDoiCaiHoanThayThe() {
+            var win = window.open(baseaddress + "Page_Master/TheoDoiCaiHoanThayThe?Ship_ID=" + Ship_ID, '_blank');
             win.focus();
         }
     </script>
