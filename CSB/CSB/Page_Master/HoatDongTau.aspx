@@ -2,18 +2,18 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <div id="form1">
-        <div class="section-header">
-            <div class="section">
-                <div class="section-header">
-                    <h4 id="title_nhatkyhoatdongcuatau" style="color: black; margin: 0; margin-left: 15px;">NHẬT KÝ HOẠT ĐỘNG CỦA TÀU</h4>
-                    <div class="section-header-breadcrumb">
-                        <div class="breadcrumb-item active"><a href="TrangChu.aspx" style="color: #01b5f9">Trang chủ </a></div>
-                        <div class="breadcrumb-item active"><a href="Manage_Tau?vung=1" style="color: #01b5f9">Quản lý tàu</a></div>
-                        <div class="breadcrumb-item active"><a href="#" onclick="HoSoTau()" style="color: #01b5f9">Hồ sơ tàu</a></div>
-                        <div class="breadcrumb-item active"><a href="#" style="color: #01b5f9">Theo dõi hoạt động của tàu</a></div>
-                    </div>
+        <div class="section" style="background-color: #fff; padding-bottom: 5px;">
+            <div class="section-header" style="background-color: #fff;">
+                <h4 id="title_nhatkyhoatdongcuatau" style="color: black; margin: 0; margin-left: 15px;">NHẬT KÝ HOẠT ĐỘNG CỦA TÀU</h4>
+                <div class="section-header-breadcrumb">
+                    <div class="breadcrumb-item active"><a href="TrangChu.aspx" style="color: #01b5f9">Trang chủ </a></div>
+                    <div class="breadcrumb-item active"><a href="Manage_Tau?vung=1" style="color: #01b5f9">Quản lý tàu</a></div>
+                    <div class="breadcrumb-item active"><a href="#" onclick="HoSoTau()" style="color: #01b5f9">Hồ sơ tàu</a></div>
+                    <div class="breadcrumb-item active"><a href="#" style="color: #01b5f9">Theo dõi hoạt động của tàu</a></div>
                 </div>
-                <div class="section-header">
+            </div>
+            <div class="section-content">
+                <div class="section">
                     <div class="col-md-12">
                         <div class="btn-group">
                             <button onclick="btn_loadDataList_NhatKy()" class="btn btn-secondary mb-2"><i class="bi-arrow-clockwise"></i>&nbsp;Load dữ liệu</button>
@@ -56,7 +56,7 @@
                                     <div class="form-group" style="display: flex">
                                         <label class="col-md-5 control-label"><strong>Nơi đến  : </strong></label>
                                         <div class="col-md-7">
-                                            <input type="text" class="form-control" id="NhatKy_addNoiDen"  placeholder="Nhập nơi đến">
+                                            <input type="text" class="form-control" id="NhatKy_addNoiDen" placeholder="Nhập nơi đến">
                                         </div>
                                     </div>
                                 </div>
@@ -64,7 +64,7 @@
                                     <div class="form-group" style="display: flex">
                                         <label class="col-md-5 control-label"><strong>Số ngày hoạt động   : </strong></label>
                                         <div class="col-md-7">
-                                            <input type="number" step="any" class="form-control" id="NhatKy_addSoNgayHD"  required min="0">
+                                            <input type="number" step="any" class="form-control" id="NhatKy_addSoNgayHD" required min="0">
                                         </div>
                                     </div>
                                 </div>
@@ -72,11 +72,11 @@
                                     <div class="form-group" style="display: flex">
                                         <label class="col-md-5 control-label"><strong>Tổng số HLHT  : </strong></label>
                                         <div class="col-md-7">
-                                            <input type="number" step="any" class="form-control" id="NhatKy_addTongHaiLy"  required min="0">
+                                            <input type="number" step="any" class="form-control" id="NhatKy_addTongHaiLy" required min="0">
                                         </div>
                                     </div>
                                 </div>
-                                 <div style="width: 100%; float: left; padding: 10px">
+                                <div style="width: 100%; float: left; padding: 10px">
                                     <div class="form-group" style="display: flex">
                                         <label class="col-md-5 control-label"><strong>Ghi chú  : </strong></label>
                                         <div class="col-md-7">
@@ -87,7 +87,7 @@
                             </div>
                         </div>
                         <div class="modal-footer" style="padding: 8px 16px;">
-                            <button type="submit" onclick="btn_add_NhatKy()" class="btn btn-info">Thêm</button>
+                            <button type="submit" onclick="add_NhatKy()" class="btn btn-info">Thêm</button>
                             <button type="button" class="btn btn-default" data-dismiss="modal">Đóng</button>
                         </div>
                     </div>
@@ -96,7 +96,7 @@
         </div>
     </div>
 
-     <div class="modal fade" id="model-edit-NhatKy" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog">
+    <div class="modal fade" id="model-edit-NhatKy" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <form id="form-edit-NhatKy" onsubmit="return false">
@@ -127,7 +127,7 @@
                                     <div class="form-group" style="display: flex">
                                         <label class="col-md-5 control-label"><strong>Nơi đến  : </strong></label>
                                         <div class="col-md-7">
-                                            <input type="text" class="form-control" id="NhatKy_editNoiDen"  placeholder="Nhập nơi đến">
+                                            <input type="text" class="form-control" id="NhatKy_editNoiDen" placeholder="Nhập nơi đến">
                                         </div>
                                     </div>
                                 </div>
@@ -135,7 +135,7 @@
                                     <div class="form-group" style="display: flex">
                                         <label class="col-md-5 control-label"><strong>Số ngày hoạt động   : </strong></label>
                                         <div class="col-md-7">
-                                            <input type="number" step="any" class="form-control" id="NhatKy_editSoNgayHD"  required min="0">
+                                            <input type="number" step="any" class="form-control" id="NhatKy_editSoNgayHD" required min="0">
                                         </div>
                                     </div>
                                 </div>
@@ -143,11 +143,11 @@
                                     <div class="form-group" style="display: flex">
                                         <label class="col-md-5 control-label"><strong>Tổng số HLHT  : </strong></label>
                                         <div class="col-md-7">
-                                            <input type="number" step="any" class="form-control" id="NhatKy_editTongHaiLy"  required min="0">
+                                            <input type="number" step="any" class="form-control" id="NhatKy_editTongHaiLy" required min="0">
                                         </div>
                                     </div>
                                 </div>
-                                 <div style="width: 100%; float: left; padding: 10px">
+                                <div style="width: 100%; float: left; padding: 10px">
                                     <div class="form-group" style="display: flex">
                                         <label class="col-md-5 control-label"><strong>Ghi chú  : </strong></label>
                                         <div class="col-md-7">
@@ -307,7 +307,7 @@
         function btn_loadDataList_NhatKy() {
             location.reload(true);
         }
-        function btn_add_NhatKy() {
+        function add_NhatKy() {
             var form = document.getElementById("form-add-NhatKy");
             console.log(form.checkValidity());
             if (form.checkValidity() == true) {
@@ -315,7 +315,7 @@
                 debugger
                 date_ntn = $("#NhatKy_addNgayThangNam").val();
                 var NhatKy = {
-                    
+
                     NGAYTHANG: date_ntn,
                     NOIXUATPHAT: $("#NhatKy_addNoiXuatPhat").val(),
                     NOIDEN: $("#NhatKy_addNoiDen").val(),

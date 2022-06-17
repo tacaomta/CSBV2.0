@@ -147,7 +147,7 @@
                 });
                 table1.buttons().container()
                     .appendTo('this_wrapper .col-md-6:eq(0)');
-                $('.col-sm-12').first().html('<div class="btn-group"><button onclick="btn_Load_liststaff()" class="btn btn-lg btn-secondary mb-3"><i class="bi-arrow-repeat"></i> Load dữ liệu</button><button id="btn_addstaff" onclick="btn_addstaff()" class="btn btn-lg btn-secondary mb-3"><i class="bi bi-plus-circle"></i> Thêm mới</button></div>');
+                $('.col-sm-12').first().html('<div class="btn-group"><button onclick="btn_Load_liststaff()" class="btn btn-secondary mb-2"><i class="bi-arrow-repeat"></i> Load dữ liệu</button><button id="btn_addstaff" onclick="btn_addstaff()" class="btn btn-secondary mb-2"><i class="bi bi-plus-circle"></i> Thêm mới</button></div>');
 
             });
         };

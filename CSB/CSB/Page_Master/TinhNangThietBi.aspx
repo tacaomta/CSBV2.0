@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Tính năng các thiết bị trên tàu" Language="C#" MasterPageFile="~/Master/TrangChu.Master" AutoEventWireup="true" CodeBehind="TinhNangThietBi.aspx.cs" Inherits="CSB.Page_Master.TinhNangThietBi" %>
+﻿x<%@ Page Title="Tính năng các thiết bị trên tàu" Language="C#" MasterPageFile="~/Master/TrangChu.Master" AutoEventWireup="true" CodeBehind="TinhNangThietBi.aspx.cs" Inherits="CSB.Page_Master.TinhNangThietBi" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <style>

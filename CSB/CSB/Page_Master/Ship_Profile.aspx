@@ -54,7 +54,7 @@
                 7. <a href="#" onclick="DangKyTaiNanHuHong()">Đăng ký tai nạn hư hỏng</a>
             </div>
             <div class="profile-link">
-                8. <a href="#">Theo dõi sửa chữa tàu</a>
+                8. <a href="#" onclick="TheoDoiSuaChuaTau()">Theo dõi sửa chữa tàu</a>
             </div>
             <div class="profile-link">
                 9. <a href="#" onclick="TheoDoiCaiHoanThayThe()">Theo dõi cải hoán, thay thế, bổ sung</a>
@@ -146,7 +146,11 @@
             var win = window.open(baseaddress + "Page_Master/TaiNanHuHong?Ship_ID=" + Ship_ID, '_blank');
             win.focus();
         }
-
+      
+        function TheoDoiSuaChuaTau() {
+            var win = window.open(baseaddress + "Page_Master/TheoDoiSuaChuaTau?Ship_ID=" + Ship_ID, '_blank');
+            win.focus();
+        }
         function TheoDoiCaiHoanThayThe() {
             var win = window.open(baseaddress + "Page_Master/TheoDoiCaiHoanThayThe?Ship_ID=" + Ship_ID, '_blank');
             win.focus();

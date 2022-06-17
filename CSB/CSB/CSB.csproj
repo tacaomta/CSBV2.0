@@ -304,6 +304,7 @@
     <Content Include="Page_Master\TaiNanHuHong.aspx" />
     <Content Include="Page_Master\ThanVo.aspx" />
     <Content Include="Page_Master\TheoDoiCaiHoanThayThe.aspx" />
+    <Content Include="Page_Master\TheoDoiSuaChuaTau.aspx" />
     <Content Include="Page_Master\ThoiGianLamViecMay.aspx" />
     <Content Include="Page_Master\TinhNangChuYeu.aspx" />
     <Content Include="Page_Master\TinhNangThietBi.aspx" />
@@ -623,6 +624,13 @@
     </Compile>
     <Compile Include="Page_Master\TheoDoiCaiHoanThayThe.aspx.designer.cs">
       <DependentUpon>TheoDoiCaiHoanThayThe.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Page_Master\TheoDoiSuaChuaTau.aspx.cs">
+      <DependentUpon>TheoDoiSuaChuaTau.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page_Master\TheoDoiSuaChuaTau.aspx.designer.cs">
+      <DependentUpon>TheoDoiSuaChuaTau.aspx</DependentUpon>
     </Compile>
     <Compile Include="Page_Master\ThoiGianLamViecMay.aspx.cs">
       <DependentUpon>ThoiGianLamViecMay.aspx</DependentUpon>
