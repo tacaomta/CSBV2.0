@@ -1,7 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Master/TrangChu.Master" AutoEventWireup="true" CodeBehind="TheoDoiSuaChuaTau.aspx.cs" Inherits="CSB.Page_Master.TheoDoiSuaChuaTau" %>
-
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-    <div id="form1">
+        <div id="form1">
         <div class="section" style="background-color: #fff; padding-bottom: 5px;">
             <div class="section-header" style="background-color: #fff;">
                 <h4 id="title_suachuatau" style="color: black; margin: 0; margin-left: 15px;">THEO DÕI SỬA CHỮA TÀU</h4>
@@ -17,7 +16,7 @@
                     <div class="col-md-12">
                         <div class="btn-group">
                             <button onclick="btn_loadDataList_SuaChuaTau()" class="btn btn-secondary mb-2"><i class="bi-arrow-clockwise"></i>&nbsp;Load dữ liệu</button>
-                            <button id="btn_add_SuaChuaTau" class="btn btn-secondary mb-2" data-toggle="modal" data-target="#model-add-SuaChuaTau" style="padding-top: 4px;"><i class="bi bi-plus-circle"></i>&nbsp; Thêm mới</button>
+                            <button id="btn_add_SuaChuaTau" onclick="btn_add_SuaChuaTau()" class="btn btn-secondary mb-2" data-toggle="modal" data-target="#model-add-SuaChuaTau" style="padding-top: 4px;"><i class="bi bi-plus-circle"></i>&nbsp; Thêm mới</button>
                         </div>
                         <table id="table_SuaChuaTau" class="table table-bordered table-striped table-md" style="width: 100%">
                             <%--<thead><tr><th colspan='2'>TG SỬA CHỮA</th><th rowspan='2'>NƠI SỬA CHỮA</th><th rowspan='2'>CẤP SỬA CHỮA</th><th rowspan='2'>GIÁ THÀNH(VNĐ)</th><th rowspan='2'>NỘI DUNG SỬA CHỮA</th><th rowspan='2'>CHẤT LƯỢNG</th><th rowspan='2'>GHI CHÚ</th><th rowspan='2'>TÁC VỤ</th></tr><tr><th>Bắt đầu</th><th>Kết thúc</th></tr></thead><tbody>
@@ -282,10 +281,55 @@
             }
             else {
                 Load_Title(Ship_ID);
+                list_CapSuaChua('','SuaChua_addCapSuaChua');
                 loadDataList_SuaChuaTau(Ship_ID);
             }
 
         });
+        function list_CapSuaChua(id_cap, string_cap) {
+            debugger
+            $.ajax({
+                type: "GET",
+                url: linkapi + "v2/caccapsuachuatau",
+                dataType: "json",
+                success: function (data) {
+                    console.log(data);
+                    $('#' + string_cap).empty();
+                    $.each(data, function (key, item) {
+
+                        if (item.ID == id_cap) {
+                            $('#' + string_cap).append($('<option>', {
+                                selected: true,
+                                value: item.ID,
+                                text: item.CAP
+                            }));
+                        }
+                        else {
+                            $('#' + string_cap).append($('<option>', {
+                                selected: false,
+                                value: item.ID,
+                                text: item.CAP
+                            }));
+                        }
+
+                    });
+                    if (id_cap == '') {
+                        $('#' + string_cap + 'select').val(data[0].ID);
+
+                    }
+                }, error: function (ret) {
+                    console.log('errorGET');
+                },
+                complete: function () { // Set our complete callback, adding the .hidden class and hiding the spinner.
+
+                },
+            });
+
+        }
+
+        function btn_add_SuaChuaTau() {
+            list_CapSuaChua('', 'SuaChua_addCapSuaChua');
+        }
         function Load_Title(Ship_ID) {
             $.ajax({
                 type: "GET",
@@ -412,7 +456,7 @@
                     },
                     NOISUACHUA: $("#SuaChua_addNoiSuaChua").val(),
                     CAPSUACHUA: {
-                        ID:'1'
+                        ID: $("#SuaChua_addCapSuaChua").val()
                     },
                     PHUONGANKEDA: $("#SuaChua_addPhuongAn").val(),
                     GIATHANH: $("#SuaChua_addGiaThanh").val(),
@@ -453,7 +497,7 @@
             $("#SuaChua_editID").val(ID);
             $("#SuaChua_editTGbatdau").val(THOIGIANBD);
             $("#SuaChua_editTGketthuc").val(THOIGIANKT);
-             //Thiếu cấp bậc
+            list_CapSuaChua(CAPSUACHUA_ID, 'SuaChua_editCapSuaChua');
             $("#SuaChua_editNoiSuaChua").val(NOISUACHUA);
             $("#SuaChua_editPhuongAn").val(PHUONGANKEDA);
             $("#SuaChua_editGiaThanh").val(GIATHANH);
@@ -478,7 +522,7 @@
                     },
                     NOISUACHUA: $("#SuaChua_editNoiSuaChua").val(),
                     CAPSUACHUA: {
-                        ID: '1'
+                        ID: $("#SuaChua_editCapSuaChua").val()
                     },
                     PHUONGANKEDA: $("#SuaChua_editPhuongAn").val(),
                     GIATHANH: $("#SuaChua_editGiaThanh").val(),
