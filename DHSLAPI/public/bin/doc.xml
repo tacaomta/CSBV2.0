@@ -621,6 +621,17 @@
             <param name="id">id của bơm dầu, nước và thông gió</param>
             <returns></returns>
         </member>
+        <member name="T:DHSLAPI.Controllers.CAPSUACHUAController">
+            <summary>
+            Các cấp sửa chữa tàu
+            </summary>
+        </member>
+        <member name="M:DHSLAPI.Controllers.CAPSUACHUAController.XEMCAPSUACHUA">
+            <summary>
+            Lấy danh mục các cấp sửa chữa tàu
+            </summary>
+            <returns></returns>
+        </member>
         <member name="T:DHSLAPI.Controllers.CaptainController">
             <summary>
             Thuyền trưởng API
@@ -699,6 +710,321 @@
             Lấy thông tin chi tiết của xích neo
             </summary>
             <param name="id">id của xích neo</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.DANGKYCLBDNTGController.LAYTHONGTINDANGKYCLBDNTG(System.String)">
+            <summary>
+            Lấy thông tin đăng ký bơm dầu, nước và thông gió
+            </summary>
+            <param name="id">id tàu</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.DANGKYCLBDNTGController.InsertDKCLBDNTG(System.String,DHSLAPI.Models.DANGKYCLBDNTG)">
+            <summary>
+            Thêm thông tin đăng ký chất lượng bơm dầu, nước và thông gió cho tàu
+            </summary>
+            <param name="id">id tàu</param>
+            <param name="mc">Thông tin đăng ký chất lượng bơm dầu, nước và thông gió</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.DANGKYCLBDNTGController.UpdateDKCLBDNTG(System.String,DHSLAPI.Models.DANGKYCLBDNTG)">
+            <summary>
+            Sửa thông tin đăng ký chất lượng bơm dầu, nước và thông gió
+            </summary>
+            <param name="id">id thông tin đăng ký chất lượng bơm dầu, nước và thông gió</param>
+            <param name="mc">thông tin đăng ký chất lượng bơm dầu, nước và thông gió mới</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.DANGKYCLBDNTGController.DeleteDKCLBDNTG(System.String)">
+            <summary>
+            Xoá thông tin đăng ký chất lượng bơm dầu, nước và thông gió của tàu
+            </summary>
+            <param name="id">id của tàu</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.DANGKYCLHANGHAIController.LAYTHONGTINDANGKYCLHANGHAI(System.String)">
+            <summary>
+            Lấy thông tin đăng ký hàng hải
+            </summary>
+            <param name="id">id tàu</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.DANGKYCLHANGHAIController.InsertDKCLHANGHAI(System.String,DHSLAPI.Models.DANGKYCLHANGHAI)">
+            <summary>
+            Thêm thông tin đăng ký chất lượng hàng hải cho tàu
+            </summary>
+            <param name="id">id tàu</param>
+            <param name="mc">Thông tin đăng ký chất lượng hàng hải</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.DANGKYCLHANGHAIController.UpdateDKCLHANGHAI(System.String,DHSLAPI.Models.DANGKYCLHANGHAI)">
+            <summary>
+            Sửa thông tin đăng ký chất lượng hàng hải
+            </summary>
+            <param name="id">id thông tin đăng ký chất lượng hàng hải</param>
+            <param name="mc">thông tin đăng ký chất lượng hàng hải mới</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.DANGKYCLHANGHAIController.DeleteDKCLHANGHAI(System.String)">
+            <summary>
+            Xoá thông tin đăng ký chất lượng hàng hải của tàu
+            </summary>
+            <param name="id">id của tàu</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.DANGKYCLHTCVController.LAYTHONGTINDANGKYCLHTCV(System.String)">
+            <summary>
+            Lấy thông tin đăng ký hệ trục chân vịt
+            </summary>
+            <param name="id">id tàu</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.DANGKYCLHTCVController.InsertDKCLHTCV(System.String,DHSLAPI.Models.DANGKYCLHTCV)">
+            <summary>
+            Thêm thông tin đăng ký chất lượng hệ trục chân vịt cho tàu
+            </summary>
+            <param name="id">id tàu</param>
+            <param name="mc">Thông tin đăng ký chất lượng hệ trục chân vịt</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.DANGKYCLHTCVController.UpdateDKCLHTCV(System.String,DHSLAPI.Models.DANGKYCLHTCV)">
+            <summary>
+            Sửa thông tin đăng ký chất lượng hệ trục chân vịt
+            </summary>
+            <param name="id">id thông tin đăng ký chất lượng hệ trục chân vịt</param>
+            <param name="mc">thông tin đăng ký chất lượng hệ trục chân vịt mới</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.DANGKYCLHTCVController.DeleteDKCLHTCV(System.String)">
+            <summary>
+            Xoá thông tin đăng ký chất lượng hệ trục chân vịt của tàu
+            </summary>
+            <param name="id">id của tàu</param>
+            <returns></returns>
+        </member>
+        <member name="F:DHSLAPI.Controllers.DANGKYCLMAYCHINHController.con">
+            <summary>
+            Đăng ký chất lượng máy chính
+            </summary>
+        </member>
+        <member name="M:DHSLAPI.Controllers.DANGKYCLMAYCHINHController.LAYTHONGTINDANGKYCLMAYCHINH(System.String)">
+            <summary>
+            Lấy thông tin đăng ký máy chính
+            </summary>
+            <param name="id">id tàu</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.DANGKYCLMAYCHINHController.InsertDKCLMC(System.String,DHSLAPI.Models.DANGKYCLMAYCHUYENDUNG)">
+            <summary>
+            Thêm thông tin đăng ký chất lượng máy chính cho tàu
+            </summary>
+            <param name="id">id tàu</param>
+            <param name="mc">Thông tin đăng ký chất lượng máy chính</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.DANGKYCLMAYCHINHController.UpdateDKCLMC(System.String,DHSLAPI.Models.DANGKYCLMAYCHUYENDUNG)">
+            <summary>
+            Sửa thông tin đăng ký chất lượng máy chính
+            </summary>
+            <param name="id">id thông tin đăng ký chất lượng máy chính</param>
+            <param name="mc">thông tin đăng ký chất lượng máy chính mới</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.DANGKYCLMAYCHINHController.DeleteDKCLMC(System.String)">
+            <summary>
+            Xoá thông tin đăng ký chất lượng máy chính của tàu
+            </summary>
+            <param name="id">id của tàu</param>
+            <returns></returns>
+        </member>
+        <member name="T:DHSLAPI.Controllers.DANGKYCLMAYCHUYENDUNGController">
+            <summary>
+            Đăng ký chất lượng máy chuyên dụng
+            </summary>
+        </member>
+        <member name="M:DHSLAPI.Controllers.DANGKYCLMAYCHUYENDUNGController.LAYTHONGTINDANGKYCLMAYCHUYENDUNG(System.String)">
+            <summary>
+            Lấy thông tin đăng ký máy chuyên dụng
+            </summary>
+            <param name="id">id tàu</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.DANGKYCLMAYCHUYENDUNGController.InsertDKCLMCD(System.String,DHSLAPI.Models.DANGKYCLMAYCHUYENDUNG)">
+            <summary>
+            Thêm thông tin đăng ký chất lượng máy chuyên dụng cho tàu
+            </summary>
+            <param name="id">id máy chuyên dụng</param>
+            <param name="mc">Thông tin đăng ký chất lượng máy chuyên dụng</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.DANGKYCLMAYCHUYENDUNGController.UpdateDKCLMCD(System.String,DHSLAPI.Models.DANGKYCLMAYCHUYENDUNG)">
+            <summary>
+            Sửa thông tin đăng ký chất lượng máy chuyên dụng
+            </summary>
+            <param name="id">id thông tin đăng ký chất lượng máy chuyên dụng</param>
+            <param name="mc">thông tin đăng ký chất lượng máy chuyên dụng mới</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.DANGKYCLMAYCHUYENDUNGController.DeleteDKCLMCD(System.String)">
+            <summary>
+            Xoá thông tin đăng ký chất lượng máy chuyên dụng của tàu
+            </summary>
+            <param name="id">id của tàu</param>
+            <returns></returns>
+        </member>
+        <member name="F:DHSLAPI.Controllers.DANGKYCLMAYPHUController.con">
+            <summary>
+            Đăng ký chất lượng máy phụ phát điện
+            </summary>
+        </member>
+        <member name="M:DHSLAPI.Controllers.DANGKYCLMAYPHUController.LAYTHONGTINDANGKYCLMAYPHUPHATDIEN(System.String)">
+            <summary>
+            Lấy thông tin đăng ký máy phụ phát điện
+            </summary>
+            <param name="id">id tàu</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.DANGKYCLMAYPHUController.InsertDKCLMPPD(System.String,DHSLAPI.Models.DANGKYCLMAYCHUYENDUNG)">
+            <summary>
+            Thêm thông tin đăng ký chất lượng máy phụ phát điện cho tàu
+            </summary>
+            <param name="id">id máy phụ phát điện</param>
+            <param name="mc">Thông tin đăng ký chất lượng máy phụ phát điện</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.DANGKYCLMAYPHUController.UpdateDKCLMPPD(System.String,DHSLAPI.Models.DANGKYCLMAYCHUYENDUNG)">
+            <summary>
+            Sửa thông tin đăng ký chất lượng máy phụ phát điện
+            </summary>
+            <param name="id">id thông tin đăng ký chất lượng máy phụ phát điện</param>
+            <param name="mc">thông tin đăng ký chất lượng máy phụ phát điện mới</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.DANGKYCLMAYPHUController.DeleteDKCLMPPD(System.String)">
+            <summary>
+            Xoá thông tin đăng ký chất lượng máy phụ phát điện của tàu
+            </summary>
+            <param name="id">id của tàu</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.DANGKYCLRADAController.LAYTHONGTINDANGKYCLRADA(System.String)">
+            <summary>
+            xem đăng ký chất lượng rada của tàu đó
+            </summary>
+            <param name="id">id tàu</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.DANGKYCLRADAController.InsertDKCLRADA(System.String,DHSLAPI.Models.DANGKYCLRADA)">
+            <summary>
+            Thêm thông tin đăng ký chất lượng rada
+            </summary>
+            <param name="id">id tàu</param>
+            <param name="bd">Thông tin bơm dầu, nước và thông gió</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.DANGKYCLRADAController.UpdateDKCLRADA(System.String,DHSLAPI.Models.DANGKYCLRADA)">
+            <summary>
+            Sửa thông tin các bơm dầu, nước và thông gió
+            </summary>
+            <param name="id">id bơm dầu, nước và thông gió</param>
+            <param name="bd">thông tin bơm dầu, nước và thông gió</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.DANGKYCLRADAController.DeleteDKCLRADA(System.String)">
+            <summary>
+            Xoá thông tin bơm dầu, nước và thông gió
+            </summary>
+            <param name="id">id của bơm dầu, nước và thông gió</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.DANGKYCLTHIETBIKHACController.LAYTHONGTINDANGKYCLTHIETBIKHAC(System.String)">
+            <summary>
+            Lấy thông tin đăng ký thiết bị khác
+            </summary>
+            <param name="id">id tàu</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.DANGKYCLTHIETBIKHACController.InsertDKCLTHIETBIKHAC(System.String,DHSLAPI.Models.DANGKYCLTHIETBIKHAC)">
+            <summary>
+            Thêm thông tin đăng ký chất lượng thiết bị khác cho tàu
+            </summary>
+            <param name="id">id tàu</param>
+            <param name="mc">Thông tin đăng ký chất lượng thiết bị khác</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.DANGKYCLTHIETBIKHACController.UpdateDKCLTHIETBIKHAC(System.String,DHSLAPI.Models.DANGKYCLTHIETBIKHAC)">
+            <summary>
+            Sửa thông tin đăng ký chất lượng thiết bị khác
+            </summary>
+            <param name="id">id thông tin đăng ký chất lượng thiết bị khác</param>
+            <param name="mc">thông tin đăng ký chất lượng thiết bị khác mới</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.DANGKYCLTHIETBIKHACController.DeleteDKCLTHIETBIKHAC(System.String)">
+            <summary>
+            Xoá thông tin đăng ký chất lượng thiết bị khác của tàu
+            </summary>
+            <param name="id">id của tàu</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.DANGKYCLVUKHIController.LAYTHONGTINDANGKYCLVUKHI(System.String)">
+            <summary>
+            Lấy thông tin đăng ký chất lượng vũ khí
+            </summary>
+            <param name="id">id tàu</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.DANGKYCLVUKHIController.InsertDKCLVUKHI(System.String,DHSLAPI.Models.DANGKYCLVUKHI)">
+            <summary>
+            Thêm thông tin đăng ký chất lượng vũ khí cho tàu
+            </summary>
+            <param name="id">id tàu</param>
+            <param name="mc">Thông tin đăng ký chất lượng vũ khí</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.DANGKYCLVUKHIController.UpdateDKCLVUKHI(System.String,DHSLAPI.Models.DANGKYCLVUKHI)">
+            <summary>
+            Sửa thông tin đăng ký chất lượng vũ khí
+            </summary>
+            <param name="id">id thông tin đăng ký chất lượng vũ khí</param>
+            <param name="mc">thông tin đăng ký chất lượng vũ khí mới</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.DANGKYCLVUKHIController.DeleteDKCLVUKHI(System.String)">
+            <summary>
+            Xoá thông tin đăng ký chất lượng vũ khí của tàu
+            </summary>
+            <param name="id">id của tàu</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.DANGKYNEOXICHNEOController.LAYTHONGTINDANGKYNEOXICHNEO(System.String)">
+            <summary>
+            Lấy thông tin đăng ký thay đổi mất bổ sung neo xích neo
+            </summary>
+            <param name="id">id tàu</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.DANGKYNEOXICHNEOController.InsertDKNEOXICHNEO(System.String,DHSLAPI.Models.DANGKYNEOXICHNEO)">
+            <summary>
+            Thêm thông tin đăng ký thay đổi, mất, bổ sung neo, xích neo cho tàu
+            </summary>
+            <param name="id">id tàu</param>
+            <param name="mc">Thông tin đăng ký thay đổi, mất, bổ sung neo, xích neo</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.DANGKYNEOXICHNEOController.UpdateDKNEOXICHNEO(System.String,DHSLAPI.Models.DANGKYNEOXICHNEO)">
+            <summary>
+            Sửa thông tin đăng ký thay đổi, mất, bổ sung neo, xích neo
+            </summary>
+            <param name="id">id thông tin đăng ký thay đổi, mất, bổ sung neo, xích neo</param>
+            <param name="mc">thông tin đăng ký thay đổi, mất, bổ sung neo, xích neo mới</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.DANGKYNEOXICHNEOController.DeleteDKNEOXICHNEO(System.String)">
+            <summary>
+            Xoá thông tin đăng ký thay đổi, mất, bổ sung neo, xích neo của tàu
+            </summary>
+            <param name="id">id của tàu</param>
             <returns></returns>
         </member>
         <member name="M:DHSLAPI.Controllers.DegreeController.GetAll">
@@ -2342,6 +2668,252 @@
         <member name="P:DHSLAPI.Models.DACDIEMCHUNGTAU.HAIDOI">
             <summary>
             Hải đội
+            </summary>
+        </member>
+        <member name="T:DHSLAPI.Models.DANGKYCLBDNTG">
+            <summary>
+            Đăng ký chất lượng bơm dầu, nước và thông gió
+            </summary>
+            
+        </member>
+        <member name="P:DHSLAPI.Models.DANGKYCLBDNTG.IDBDNTG">
+            <summary>
+            ID thiết bị
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.DANGKYCLBDNTG.TENTHIETBI">
+            <summary>
+            Tên thiết bị
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.DANGKYCLBDNTG.KYHIEU">
+            <summary>
+            Ký hiệu
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.DANGKYCLBDNTG.NUOCSX">
+            <summary>
+            Nước sản xuất
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.DANGKYCLBDNTG.LUULUONG">
+            <summary>
+            Lưu lượng (m3/h)
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.DANGKYCLBDNTG.SOLUONG">
+            <summary>
+            Số lượng
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.DANGKYCLBDNTG.DANGKYCHATLUONG_ID">
+            <summary>
+            ID Đăng ký chất lượng bơm dầu, nước và thông gió
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.DANGKYCLBDNTG.DANGKYCHATLUONG_NAMDANGKY">
+            <summary>
+            Năm đăng ký
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.DANGKYCLBDNTG.DANGKYCHATLUONG_TRANGTHAI">
+            <summary>
+            Trạng thái
+            </summary>
+        </member>
+        <member name="T:DHSLAPI.Models.DANGKYCLHANGHAI">
+            <summary>
+            Đăng ký chất lượng hàng hải
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.DANGKYCLHANGHAI.IDHANGHAI">
+            <summary>
+            ID thiết bị
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.DANGKYCLHANGHAI.KYHIEU">
+            <summary>
+            Ký hiệu
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.DANGKYCLHANGHAI.SOLUONG">
+            <summary>
+            Số lượng
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.DANGKYCLHANGHAI.DANGKYCHATLUONG_ID">
+            <summary>
+            ID Đăng ký chất lượng bơm dầu, nước và thông gió
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.DANGKYCLHANGHAI.DANGKYCHATLUONG_NAMDANGKY">
+            <summary>
+            Năm đăng ký
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.DANGKYCLHANGHAI.DANGKYCHATLUONG_TRANGTHAI">
+            <summary>
+            Trạng thái
+            </summary>
+        </member>
+        <member name="T:DHSLAPI.Models.DANGKYCLHTCV">
+            <summary>
+            Đăng ký chất lượng hệ trục chân vịt
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.DANGKYCLHTCV.IDHTCV">
+            <summary>
+            ID thiết bị
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.DANGKYCLHTCV.DANGKYCHATLUONG_ID">
+            <summary>
+            ID Đăng ký chất lượng hệ trục chân vịt
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.DANGKYCLHTCV.DANGKYCHATLUONG_NAMDANGKY">
+            <summary>
+            Năm đăng ký
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.DANGKYCLHTCV.DANGKYCHATLUONG_TRANGTHAI">
+            <summary>
+            Trạng thái
+            </summary>
+        </member>
+        <member name="T:DHSLAPI.Models.DANGKYCLMAY">
+            <summary>
+            Đăng ký chất lượng máy chính, máy phụ, máy dự phòng và máy chuyên dụng
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.DANGKYCLMAY.IDMAY">
+            <summary>
+            ID Máy
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.DANGKYCLMAY.DANGKYCHATLUONG_ID">
+            <summary>
+            ID Đăng ký chất lượng máy
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.DANGKYCLMAY.DANGKYCHATLUONG_NAMDANGKY">
+            <summary>
+            Năm đăng ký
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.DANGKYCLMAY.DANGKYCHATLUONG_TRANGTHAI">
+            <summary>
+            Trạng thái
+            </summary>
+        </member>
+        <member name="T:DHSLAPI.Models.DANGKYCLRADA">
+            <summary>
+            Đăng ký chất lượng Rada
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.DANGKYCLRADA.IDRADA">
+            <summary>
+            ID thiết bị
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.DANGKYCLRADA.KYHIEU">
+            <summary>
+            Ký hiệu
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.DANGKYCLRADA.SOLUONG">
+            <summary>
+            Số lượng
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.DANGKYCLRADA.DANGKYCHATLUONG_ID">
+            <summary>
+            ID Đăng ký chất lượng Rada
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.DANGKYCLRADA.DANGKYCHATLUONG_NAMDANGKY">
+            <summary>
+            Năm đăng ký
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.DANGKYCLRADA.DANGKYCHATLUONG_TRANGTHAI">
+            <summary>
+            Trạng thái
+            </summary>
+        </member>
+        <member name="T:DHSLAPI.Models.DANGKYCLTHIETBIKHAC">
+            <summary>
+            Đăng ký chất lượng thiết bị khác
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.DANGKYCLTHIETBIKHAC.IDTHIETBIKHAC">
+            <summary>
+            ID thiết bị
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.DANGKYCLTHIETBIKHAC.TENTHIETBI">
+            <summary>
+            Tên thiết bị
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.DANGKYCLTHIETBIKHAC.KYHIEU">
+            <summary>
+            Ký hiệu
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.DANGKYCLTHIETBIKHAC.SOLUONG">
+            <summary>
+            Số lượng
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.DANGKYCLTHIETBIKHAC.DANGKYCHATLUONG_ID">
+            <summary>
+            ID Đăng ký chất lượng thiết bị khác
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.DANGKYCLTHIETBIKHAC.DANGKYCHATLUONG_NAMDANGKY">
+            <summary>
+            Năm đăng ký
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.DANGKYCLTHIETBIKHAC.DANGKYCHATLUONG_TRANGTHAI">
+            <summary>
+            Trạng thái
+            </summary>
+        </member>
+        <member name="T:DHSLAPI.Models.DANGKYCLVUKHI">
+            <summary>
+            Đăng ký chất lượng vũ khí
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.DANGKYCLVUKHI.IDVUKHI">
+            <summary>
+            ID thiết bị
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.DANGKYCLVUKHI.KYHIEU">
+            <summary>
+            Ký hiệu
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.DANGKYCLVUKHI.SOLUONG">
+            <summary>
+            Số lượng
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.DANGKYCLVUKHI.DANGKYCHATLUONG_ID">
+            <summary>
+            ID Đăng ký chất lượng vũ khí
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.DANGKYCLVUKHI.DANGKYCHATLUONG_NAMDANGKY">
+            <summary>
+            Năm đăng ký
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.DANGKYCLVUKHI.DANGKYCHATLUONG_TRANGTHAI">
+            <summary>
+            Trạng thái
             </summary>
         </member>
         <member name="T:DHSLAPI.Models.Degree">
@@ -4132,6 +4704,70 @@
             </summary>
             <param name="id">id thông tin vũ khí</param>
             <param name="vk">thông tin vũ khí</param>
+            <returns></returns>
+        </member>
+        <member name="M:ShipyardInfo.classes.Connection.SUATHONGTINDANGKYCLMAYTAU(System.String,DHSLAPI.Models.DANGKYCLMAY)">
+            <summary>
+            Sửa thông tin đăng ký chất lượng máy nói chung: máy chính, máy phụ, máy chuyên dụng
+            </summary>
+            <param name="id">id thông tin đăng ký chất lượng máy</param>
+            <param name="dm">thông tin đăng ký chất lượng máy</param>
+            <returns></returns>
+        </member>
+        <member name="M:ShipyardInfo.classes.Connection.SUATHONGTINDANGKYCLRADATAU(System.String,DHSLAPI.Models.DANGKYCLRADA)">
+            <summary>
+            Sửa thông tin đăng ký chất lượng RADA
+            </summary>
+            <param name="id">id thông tin đăng ký chất lượng RADA</param>
+            <param name="dm">thông tin đăng ký chất lượng RADA</param>
+            <returns></returns>
+        </member>
+        <member name="M:ShipyardInfo.classes.Connection.SUATHONGTINDANGKYCLHTCVTAU(System.String,DHSLAPI.Models.DANGKYCLHTCV)">
+            <summary>
+            Sửa thông tin đăng ký chất lượng HỆ TRỤC CHÂN VỊT nói chung: HỆ TRỤC CHÂN VỊT chính, HỆ TRỤC CHÂN VỊT phụ, HỆ TRỤC CHÂN VỊT chuyên dụng
+            </summary>
+            <param name="id">id thông tin đăng ký chất lượng HỆ TRỤC CHÂN VỊT</param>
+            <param name="dv">thông tin đăng ký chất lượng HỆ TRỤC CHÂN VỊT</param>
+            <returns></returns>
+        </member>
+        <member name="M:ShipyardInfo.classes.Connection.SUATHONGTINDANGKYCLHANGHAITAU(System.String,DHSLAPI.Models.DANGKYCLHANGHAI)">
+            <summary>
+            Sửa thông tin đăng ký chất lượng HÀNG HẢI 
+            </summary>
+            <param name="id">id thông tin đăng ký chất lượng HÀNG HẢI</param>
+            <param name="dv">thông tin đăng ký chất lượng HÀNG HẢI</param>
+            <returns></returns>
+        </member>
+        <member name="M:ShipyardInfo.classes.Connection.SUATHONGTINDANGKYCLTHIETBIKHACTAU(System.String,DHSLAPI.Models.DANGKYCLTHIETBIKHAC)">
+            <summary>
+            Sửa thông tin đăng ký chất lượng THIẾT BỊ KHÁC 
+            </summary>
+            <param name="id">id thông tin đăng ký chất lượng THIẾT BỊ KHÁC</param>
+            <param name="dv">thông tin đăng ký chất lượng THIẾT BỊ KHÁC</param>
+            <returns></returns>
+        </member>
+        <member name="M:ShipyardInfo.classes.Connection.SUATHONGTINDANGKYCLVUKHITAU(System.String,DHSLAPI.Models.DANGKYCLVUKHI)">
+            <summary>
+            Sửa thông tin đăng ký chất lượng VŨ KHÍ 
+            </summary>
+            <param name="id">id thông tin đăng ký chất lượng VŨ KHÍ</param>
+            <param name="dv">thông tin đăng ký chất lượng VŨ KHÍ</param>
+            <returns></returns>
+        </member>
+        <member name="M:ShipyardInfo.classes.Connection.SUATHONGTINDANGKYCLBDNTGTAU(System.String,DHSLAPI.Models.DANGKYCLBDNTG)">
+            <summary>
+            Sửa thông tin đăng ký chất lượng BƠM DẦU, NƯỚC VÀ THÔNG GIÓ 
+            </summary>
+            <param name="id">id thông tin đăng ký chất lượng BƠM DẦU, NƯỚC VÀ THÔNG GIÓ</param>
+            <param name="dv">thông tin đăng ký chất lượng BƠM DẦU, NƯỚC VÀ THÔNG GIÓ</param>
+            <returns></returns>
+        </member>
+        <member name="M:ShipyardInfo.classes.Connection.SUATHONGTINDANGKYNEOXICHNEOTAU(System.String,DHSLAPI.Models.DANGKYNEOXICHNEO)">
+            <summary>
+            Sửa thông tin đăng ký thay đổi, mất bổ sung neo, xích neo 
+            </summary>
+            <param name="id">id thông tin đăng ký thay đổi, mất bổ sung neo, xích neo </param>
+            <param name="dv">thông tin đăng ký thay đổi, mất bổ sung neo, xích neo </param>
             <returns></returns>
         </member>
         <member name="M:ShipyardInfo.classes.Connection.THEMTHEODOICAIHOANTHAYTHE(System.String,DHSLAPI.Models.THEODOICAIHOANTHAYTHE,System.Int32)">
