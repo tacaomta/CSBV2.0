@@ -437,7 +437,12 @@
 
             });
         };
-
+        function ChuyenThoiGian(date_in) {
+            var year = date_in.substring(0, 4);
+            var month = date_in.substring(5, 7);
+            var day = date_in.substring(8, 10);
+            date_in = day + '/' + month + '/' + year;
+        }
         function btn_loadDataList_SuaChuaTau() {
             location.reload(true);
         }
@@ -445,10 +450,19 @@
             var form = document.getElementById("form-add-SuaChuaTau");
             console.log(form.checkValidity());
             if (form.checkValidity() == true) {
-                var date_ntn = new Date();
-                debugger
+
                 date_bd = $("#SuaChua_addTGbatdau").val();
+                var year = date_bd.substring(0, 4);
+                var month = date_bd.substring(5, 7);
+                var day = date_bd.substring(8, 10);
+                date_bd = day + '/' + month + '/' + year;
+
                 date_kt = $("#SuaChua_addTGketthuc").val();
+                var year = date_kt.substring(0, 4);
+                var month = date_kt.substring(5, 7);
+                var day = date_kt.substring(8, 10);
+                date_kt = day + '/' + month + '/' + year;
+
                 var SuaChuaTau= {
                     THOIGIAN: {
                         BATDAU: date_bd,
@@ -494,6 +508,14 @@
         }
 
         function edit_suachuatau(ID, THOIGIANBD, THOIGIANKT, NOISUACHUA, CAPSUACHUA_ID, PHUONGANKEDA, GIATHANH, TOMTATNOIDUNG, DANHGIACHATLUONG, GHICHU) {
+            var day = THOIGIANBD.substring(0, 2);
+            var month = THOIGIANBD.substring(3, 5);
+            var year = THOIGIANBD.substring(6, 10);
+            THOIGIANBD = year + '-' + month + '-' + day;
+            var day = THOIGIANKT.substring(0, 2);
+            var month = THOIGIANKT.substring(3, 5);
+            var year = THOIGIANKT.substring(6, 10);
+            THOIGIANKT = year + '-' + month + '-' + day;
             $("#SuaChua_editID").val(ID);
             $("#SuaChua_editTGbatdau").val(THOIGIANBD);
             $("#SuaChua_editTGketthuc").val(THOIGIANKT);
@@ -513,7 +535,15 @@
                 var date_ntn = new Date();
                 debugger
                 date_bd = $("#SuaChua_editTGbatdau").val();
+                var year = date_bd.substring(0, 4);
+                var month = date_bd.substring(5, 7);
+                var day = date_bd.substring(8, 10);
+                date_bd = day + '/' + month + '/' + year;
                 date_kt = $("#SuaChua_editTGketthuc").val();
+                var year = date_kt.substring(0, 4);
+                var month = date_kt.substring(5, 7);
+                var day = date_kt.substring(8, 10);
+                date_kt = day + '/' + month + '/' + year;
                 var SuaChuaTau = {
                     ID: $("#SuaChua_editID").val(),
                     THOIGIAN: {

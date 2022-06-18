@@ -314,6 +314,10 @@
                 var date_ntn = new Date();
                 debugger
                 date_ntn = $("#NhatKy_addNgayThangNam").val();
+                var year = date_ntn.substring(0, 4);
+                var month = date_ntn.substring(5, 7);
+                var day = date_ntn.substring(8, 10);
+                date_ntn = day + '/' + month + '/' + year;
                 var NhatKy = {
 
                     NGAYTHANG: date_ntn,
@@ -350,6 +354,10 @@
         }
 
         function edit_nhatky(ID, NGAYTHANG, NOIXUATPHAT, NOIDEN, SONGAYHD, HAILY, GHICHU) {
+            var day = NGAYTHANG.substring(0, 2);
+            var month = NGAYTHANG.substring(3, 5);
+            var year = NGAYTHANG.substring(6, 10);
+            NGAYTHANG = year + '-' + month + '-' + day;
             $("#NhatKy_editID").val(ID);
             $("#NhatKy_editNgayThangNam").val(NGAYTHANG);
             $("#NhatKy_editNoiXuatPhat").val(NOIXUATPHAT);
@@ -366,7 +374,10 @@
                 var date_ntn = new Date();
                 debugger
                 date_ntn = $("#NhatKy_editNgayThangNam").val();
-
+                var year = date_ntn.substring(0, 4);
+                var month = date_ntn.substring(5, 7);
+                var day = date_ntn.substring(8, 10);
+                date_ntn = day + '/' + month + '/' + year;
                 var id_nhatky = $("#NhatKy_editID").val();
                 var NhatKy = {
                     NGAYTHANG: date_ntn,
