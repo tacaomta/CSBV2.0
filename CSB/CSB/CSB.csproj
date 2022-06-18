@@ -282,6 +282,7 @@
     <Content Include="Page_Master\Change_Password.aspx" />
     <Content Include="Page_Master\HoatDongTau.aspx" />
     <Content Include="Page_Master\Information_User.aspx" />
+    <Content Include="Page_Master\KiemTraKyThuat.aspx" />
     <Content Include="Page_Master\Login.aspx" />
     <Content Include="Page_Master\Manage_ChuyenNganh.aspx" />
     <Content Include="Page_Master\Manage_Degree.aspx" />
@@ -482,6 +483,13 @@
     </Compile>
     <Compile Include="Page_Master\Information_User.aspx.designer.cs">
       <DependentUpon>Information_User.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Page_Master\KiemTraKyThuat.aspx.cs">
+      <DependentUpon>KiemTraKyThuat.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page_Master\KiemTraKyThuat.aspx.designer.cs">
+      <DependentUpon>KiemTraKyThuat.aspx</DependentUpon>
     </Compile>
     <Compile Include="Page_Master\Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>

@@ -63,7 +63,7 @@
                 10.<a href="#" style="margin-left: 5px;">Đăng ký các phương tiện bảo vệ sức sống tàu và cứu sinh</a>
             </div>
             <div class="profile-link">
-                11.<a href="#" style="margin-left: 5px;">Kiểm tra kỹ thuật</a>
+                11.<a href="#" onclick="KiemTraKyThuat()" style="margin-left: 5px;">Kiểm tra kỹ thuật</a>
             </div>
             <a href="../Page_Master/Manage_Tau?vung=1" class="btn btn-secondary"><span class="bi-arrow-return-left"></span>&nbsp;Quay lại</a>
         </div>  
@@ -153,6 +153,11 @@
         }
         function TheoDoiCaiHoanThayThe() {
             var win = window.open(baseaddress + "Page_Master/TheoDoiCaiHoanThayThe?Ship_ID=" + Ship_ID, '_blank');
+            win.focus();
+        }
+
+        function KiemTraKyThuat() {
+            var win = window.open(baseaddress + "Page_Master/KiemTraKyThuat?Ship_ID=" + Ship_ID, '_blank');
             win.focus();
         }
     </script>
