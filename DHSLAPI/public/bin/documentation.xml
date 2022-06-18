@@ -1167,6 +1167,41 @@
             <param name="id"></param>
             <returns></returns>
         </member>
+        <member name="T:DHSLAPI.Controllers.KIEMTRAKYTHUATController">
+            <summary>
+            Kiểm tra kỹ thuật tàu
+            </summary>
+        </member>
+        <member name="M:DHSLAPI.Controllers.KIEMTRAKYTHUATController.XEMKIEMTRAKYTHUAT(System.String)">
+            <summary>
+            Xem danh mục kiểm tra kỹ thuật tàu
+            </summary>
+            <param name="id">id tàu</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.KIEMTRAKYTHUATController.THEMKIEMTRAKYTHUAT(System.String,DHSLAPI.Models.KIEMTRAKYTHUAT)">
+            <summary>
+            Thêm kiểm tra kỹ thuật tàu
+            </summary>
+            <param name="id">id tàu</param>
+            <param name="kt">Thông tin kiểm tra kỹ thuật tàu</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.KIEMTRAKYTHUATController.SUAKIEMTRAKYTHUAT(System.String,DHSLAPI.Models.KIEMTRAKYTHUAT)">
+            <summary>
+            Sửa thông tin kiểm tra kỹ thuật tàu
+            </summary>
+            <param name="id">id thông tin</param>
+            <param name="kt">thông tin sẽ cập nhật</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.KIEMTRAKYTHUATController.XOAKIEMTRAKYTHUAT(System.String)">
+            <summary>
+            Xoá thông tin kiểm tra kỹ thuật tàu
+            </summary>
+            <param name="id">id thông tin</param>
+            <returns></returns>
+        </member>
         <member name="T:DHSLAPI.Controllers.MajoringController">
             <summary>
             API Chuyên ngành
@@ -3084,6 +3119,46 @@
         <member name="P:DHSLAPI.Models.Institution.Note">
             <summary>
             Ghi chú
+            </summary>
+        </member>
+        <member name="T:DHSLAPI.Models.KIEMTRAKYTHUAT">
+            <summary>
+            Kiểm tra kỹ thuật
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.KIEMTRAKYTHUAT.ID">
+            <summary>
+            ID
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.KIEMTRAKYTHUAT.NGAYTHANG">
+            <summary>
+            Ngày tháng năm
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.KIEMTRAKYTHUAT.CAPKIEMTRA">
+            <summary>
+            Cơ quan, cấp kiểm tra kỹ thuật
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.KIEMTRAKYTHUAT.TOMTATTINHTRANG">
+            <summary>
+            Tóm tắt tình trạng kỹ thuật
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.KIEMTRAKYTHUAT.CHATLUONG">
+            <summary>
+            Chất lượng cấp kỹ thuật tàu
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.KIEMTRAKYTHUAT.KETLUAN">
+            <summary>
+            Kết luận cho phép mức độ khai tác tàu
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.KIEMTRAKYTHUAT.TRUONGDOAN">
+            <summary>
+            Trưởng đoàn (ký, ghi rõ họ tên)
             </summary>
         </member>
         <member name="T:DHSLAPI.Models.Majoring">
