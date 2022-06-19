@@ -90,18 +90,18 @@
                                         <input type="text" id="addTTC-CHUCNANG" class="form-control" placeholder="Ví dụ: Tuần tra" required>
                                     </div>
                                 </div>
+                                <a onclick="xemThanVo()"  href="#">Xem thông tin thân vỏ</a>
                                 <div id="divSoHieu" disabled="">
+                                    <h4 class="sub-title">Thay đổi số hiệu</h4>
                                     <div class="form-group row" style="margin-bottom: 5px;">
-                                        <label class="col-sm-2 col-form-label">Thay đổi số hiệu: </label>
-                                        <div class="col-sm-10">
+                                        <div class="col-sm-12">
                                             <div class="btn-group btn-group-right" role="group" aria-label="Basic example">
                                                 <button type="button" class="btn btn-primary"><i class="bi bi-plus-circle"></i> Thay đổi</button>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="form-group row">
-                                        <div class="col-sm-2"></div>
-                                        <div class="col-sm-10">
+                                        <div class="col-sm-12">
                                             <div class="table-responsive">
                                                 <table id="table-THAYDOISOHIEU" class="table table-bordered" style="width: 100%;">
                                                     
@@ -439,7 +439,7 @@
                 $("#addTTC-HAIDOAN").attr('disabled', '');
                 $("#addTTC-HAIDOI").attr('disabled', '');
                 $("#text-remove-input").text(" Đặt lại dữ liệu");
-                $("#text-save").text(" Sửa thông tin");
+                $("#text-save").text(" Cập nhật");
                 loadDataShip(Ship_ID);
             }
 
@@ -777,9 +777,12 @@
                         var tabletext = "<thead><tr><th>Tháng, năm</th><th>Số hiệu</th><th>Cấp quy định</th></thead><tbody>";
                         var i = 1;
                         $.each(data.TDSOHIEU, function (key, item) {
-                            tabletext += "<tr><td>" + i + "</td><td>" + item.THANGNAM + "</td><td>" + item.SOHIEU + "</td><td>" + item.CAPQUYDINH + "</td></tr>";
+                            tabletext += "<tr><td>" + item.THANGNAM + "</td><td>" + item.SOHIEU + "</td><td>" + item.CAPQUYDINH + "</td></tr>";
                             i = i + 1;
                         });
+                        if (i == 1) {
+                            tabletext += "<tr><td>" + data.THONGTIN.TTCOBAN.NAMHATHUY + "</td><td>" + data.THONGTIN.TTCOBAN.SOHIEU + "</td><td>" + "" + "</td></tr>";
+                        }
                         tabletext += "</tbody>";
                         $('#table-THAYDOISOHIEU').html(tabletext);
                         loadTableTHAYDOISOHIEU();
@@ -857,6 +860,10 @@
                     .appendTo('this_wrapper .col-md-6:eq(0)');
             });
         };
+
+        function xemThanVo() {
+            window.location = baseaddress + "Page_Master/ThanVo?Ship_ID=" + getParameterByName("Ship_ID");
+        }
     </script>
 
 

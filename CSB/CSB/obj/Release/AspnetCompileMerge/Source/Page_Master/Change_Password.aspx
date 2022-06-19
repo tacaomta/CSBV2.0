@@ -2,13 +2,18 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <style>
+        .ship-key {
+            width: 200px;
+        }
+        
         .login-text {
             text-align: left;
             padding-left: 0px;
             color: #ff0000;
           
         }
-                .row {
+        
+        .row {
             margin-bottom: 20px;
         }
 
@@ -22,36 +27,34 @@
             color: #555;
         }
     </style>
-    <div id="form1">
-        <div class="section">
-                        <div class="section-header">
-                <h4 id="title" style="color: black; margin: 0">ĐỔI MẬT KHẨU</h4>
-                <div class="section-header-breadcrumb">
-                    <div class="breadcrumb-item active"><a href="Null.aspx" style="color: #01b5f9; font-size: 18px;">Trang chủ </a></div>
-                    /&nbsp; <div class="breadcrumb-item active"><a href="#" style="color: #01b5f9; font-size: 18px;"> Đổi mật khẩu</a></div>
-                    
+    <div class="section" style="background-color: #fff; padding-bottom: 5px;">
+        <div id="form1">
+            <div class="section">
+                <div class="section-header" style="background-color: #fff;">
+                    <div class="title">
+                        <h4 id="title" style="color: black; margin: 0; text-align: center;">ĐỔI MẬT KHẨU</h4>
+                        <div class="blue-hr"></div>
+                    </div>
+                    <div class="section-header-breadcrumb">
+                        <div class="breadcrumb-item"><a href="Null.aspx" style="color: #01b5f9; font-size: 18px;">Trang chủ</a></div>
+                        <div class="breadcrumb-item"><a href="Change_Password" style="color: #01b5f9; font-size: 18px;">Đổi mật khẩu</a></div>
+                    </div>
                 </div>
-            </div>
-            <div class="container" style="margin-top:15px; border: none; background-color: #ffffff; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.03); width: 100%;">
-                <div class="row" style="padding: 3rem 0">
-                    <div class="login-box col-md-4 col-md-offset-4">
-                        <div class="login-key" style="display: flex; justify-content: center; margin-bottom: 3rem;">
-                            <img class="ship-key" src="../Image/ic-login.png" />
+                <div class="row" style="justify-content: center;">
+                    <div class="main-body col-lg-6">
+                        <div class="login-key" style="display: flex; justify-content: center;">
+                            <img class="ship-key" src="../Image/change_password.jpg" />
                         </div>
-                        <div class="login-title my-3" style="display: flex; justify-content: center; font-size: 20px;">
-                            ĐỔI MẬT KHẨU
-                        </div>
-
                         <div class="login-form">
-                            <div class="form-group mb-4" style="display: flex; padding: 10px; align-items: center;">
+                            <div class="form-group" style="display: flex; padding: 10px; align-items: center;">
                                 <i class="material-icons icon-name mr-2">person</i>
                                 <input type="text" class="form-control" id="username" placeholder="Tài khoản" readonly />
                             </div>
-                            <div class="form-group mb-4" style="display: flex; padding: 10px; align-items: center;">
+                            <div class="form-group" style="display: flex; padding: 10px; align-items: center;">
                                 <i class="material-icons icon-name mr-2">lock</i>
                                 <input type="password" pattern=".{6,}" title="Mật khẩu tối thiểu 6 kí tự" class="form-control" id="password_old" placeholder="Mật khẩu cũ" />
                             </div>
-                            <div class="form-group mb-4" style="display: flex; padding: 10px; align-items: center;">
+                            <div class="form-group" style="display: flex; padding: 10px; align-items: center;">
                                 <i class="material-icons icon-name mr-2">lock</i>
                                 <input type="password" pattern=".{6,}" title="Mật khẩu tối thiểu 6 kí tự" class="form-control" id="password_new" placeholder="Mật khẩu mới" />
                             </div>
@@ -60,22 +63,21 @@
                                 <input type="password" pattern=".{6,}" title="Mật khẩu tối thiểu 6 kí tự" class="form-control" id="password_confirm" placeholder="Xác nhận mật khẩu mới" />
                             </div>
                             <div class="loginbttm" style="display: flex; padding: 10px; justify-content: space-between;">
-                                
                                 <div class="login-btm login-text">
                                     <div hidden="hidden" id="error-login-text">Đổi mật khẩu không thành công!</div>
                                 </div>
-
                                 <div class="login-btm login-button mt-3">
-                                    <a href="javascript: history.go(-1)" style="margin:0px 10px" class="btn btn-success"><span class="glyphicon glyphicon-arrow-left"></span>&nbsp;Quay lại</a>
-                                    <button class="btn btn-info" onclick="Save_Change()">Lưu thay đổi</button>
+                                    <a href="javascript: history.go(-1)" style="margin:0px 10px" class="btn btn-secondary"><span class="bi-arrow-return-left"></span> Quay lại</a>
+                                    <button class="btn btn-primary" onclick="Save_Change()"><span class="bi-save"></span> Lưu thay đổi</button>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
+                </div>                
             </div>
         </div>
     </div>
+    
     <script src="../Scripts/jquery-3.4.1.min.js"></script>
     <script src="../Scripts/bootstrap.min.js"></script>
     <script>

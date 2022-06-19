@@ -2,16 +2,16 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <div id="form1">
-        <div class="section-header">
-            <div class="section">
-                <div class="section-header">
-                    <h4 style="color: black; margin: 0; margin-left: 15px;">QUẢN LÝ HẢI ĐỘI</h4>
-                    <div class="section-header-breadcrumb">
-                        <div class="breadcrumb-item active"><a href="TrangChu.aspx" style="color: #01b5f9">Trang chủ </a></div>
-                        /<div class="breadcrumb-item active"><a href="#" style="color: #01b5f9">Quản lý hải đội</a></div>
-                    </div>
+        <div class="section" style="background-color: #fff; padding-bottom: 5px;">
+            <div class="section-header" style="background-color: #fff;">
+                <h4 id="title_manage_staff" style="color: black; margin: 0; margin-left: 15px;">QUẢN LÝ HẢI ĐỘI</h4>                        
+                <div class="section-header-breadcrumb" style="margin-right: 15px;">
+                    <div class="breadcrumb-item active"><a href="TrangChu.aspx" style="color: #01b5f9; font-size: 16px;">Trang chủ </a></div>
+                    <div class="breadcrumb-item active"><a href="#" style="color: #01b5f9; font-size: 16px;">Quản lý hải đội</a></div>
                 </div>
-                <div class="section-header">
+            </div>
+            <div class="section-content">
+                <div class="section">
                     <div class="col-md-12">
                         <table id="table_flotilla" class="table table-bordered table-striped table-md" style="width: 100%">
                         </table>
@@ -61,7 +61,7 @@
                     </div>
                     <div class="modal-footer">
                         <button onclick="Add_Flotilla()" type="submit" class="btn btn-info">Thêm</button>
-                        <button onclick="Close_AddFlotilla()" type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button onclick="Close_AddFlotilla()" type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                     </div>
                 </div>
             </div>
@@ -110,7 +110,7 @@
                     </div>
                     <div class="modal-footer">
                         <button onclick="Edit_Flotilla()" type="submit" class="btn btn-info">Save</button>
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                     </div>
                 </div>
             </div>
@@ -205,7 +205,7 @@
                 });
                 table1.buttons().container()
                     .appendTo('this_wrapper .col-md-6:eq(0)');
-                $('.col-sm-12').first().html('<div class="btn-group"><button onclick="btn_Load_listflotilla()" class="btn btn-lg btn-primary mb-3"><span class="glyphicon glyphicon-refresh"></span> &nbsp;Load dữ liệu</button><button id="btn_addflotilla" onclick="btn_addflotilla()" class="btn btn-lg btn-primary mb-3" data-toggle="modal" data-target="#model-add-flotilla" style=" padding - top: 4px;margin - top: -4px;"><span class="glyphicon glyphicon-plus-sign"></span> Thêm hải đội</button></div>');
+                $('.col-sm-12').first().html('<div class="btn-group"><button onclick="btn_Load_listflotilla()" class="btn btn-lg btn-secondary mb-3"><span class="bi-arrow-repeat"></span> &nbsp;Load dữ liệu</button><button id="btn_addflotilla" onclick="btn_addflotilla()" class="btn btn-lg btn-secondary mb-3" data-toggle="modal" data-target="#model-add-flotilla"><span class="bi-plus-circle"></span> Thêm hải đội</button></div>');
             });
         };
 

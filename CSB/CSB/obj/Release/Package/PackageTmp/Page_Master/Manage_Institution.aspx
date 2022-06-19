@@ -2,16 +2,16 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <div id="form1">
-        <div class="section-header">
-            <div class="section">
-                <div class="section-header">
-                    <h4 style="color: black; margin: 0; margin-left: 15px;">QUẢN LÝ TRƯỜNG ĐÀO TẠO</h4>
-                    <div class="section-header-breadcrumb">
-                        <div class="breadcrumb-item active"><a href="TrangChu.aspx" style="color: #01b5f9">Trang chủ </a></div>
-                        <div class="breadcrumb-item active"><a href="#" style="color: #01b5f9">Quản lý trường đào tạo</a></div>
-                    </div>
+        <div class="section" style="background-color: #fff; padding-bottom: 5px;">
+            <div class="section-header" style="background-color: #fff;">
+                <h4 id="title_manage_staff" style="color: black; margin: 0; margin-left: 15px;">QUẢN LÝ TRƯỜNG ĐÀO TẠO</h4>                        
+                <div class="section-header-breadcrumb" style="margin-right: 15px;">
+                    <div class="breadcrumb-item active"><a href="TrangChu.aspx" style="color: #01b5f9; font-size: 16px;">Trang chủ </a></div>
+                    <div class="breadcrumb-item active"><a href="#" style="color: #01b5f9; font-size: 16px;">Quản lý trường đào tạo</a></div>
                 </div>
-                <div class="section-header">
+            </div>
+            <div class="section-content">
+                <div class="section">
                     <div class="col-md-12">
                         <table id="table_institution" class="table table-bordered table-striped table-md" style="width: 100%">
                         </table>
@@ -51,7 +51,7 @@
                     </div>
                     <div class="modal-footer">
                         <button onclick="Add_Institution()" type="submit" class="btn btn-info">Thêm</button>
-                        <button onclick="Close_AddInstitution()" type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button onclick="Close_AddInstitution()" type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                     </div>
                 </div>
             </div>
@@ -90,7 +90,7 @@
                     </div>
                     <div class="modal-footer">
                         <button onclick="Edit_Institution()" type="submit" class="btn btn-info">Save</button>
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                     </div>
                 </div>
             </div>
@@ -174,7 +174,7 @@
                 });
                 table1.buttons().container()
                     .appendTo('this_wrapper .col-md-6:eq(0)');
-                $('.col-sm-12').first().html('<div class="btn-group"><button onclick="btn_Load_listinstitution()" class="btn btn-lg btn-primary mb-3"><i class="bi-arrow-repeat"></i> Load dữ liệu</button><button id="btn_addinstitution" onclick="btn_addinstitution()" class="btn btn-lg btn-primary mb-3" data-toggle="modal" data-target="#model-add-institution" style=" padding - top: 4px;margin - top: -4px;"><i class="bi bi-plus-circle"></i> Thêm trường đào tạo</button></div>');
+                $('.col-sm-12').first().html('<div class="btn-group"><button onclick="btn_Load_listinstitution()" class="btn btn-lg btn-secondary mb-3"><i class="bi-arrow-repeat"></i> Load dữ liệu</button><button id="btn_addinstitution" onclick="btn_addinstitution()" class="btn btn-lg btn-secondary mb-3" data-toggle="modal" data-target="#model-add-institution"><i class="bi bi-plus-circle"></i> Thêm trường đào tạo</button></div>');
             });
         };
         function btn_Load_listinstitution() {

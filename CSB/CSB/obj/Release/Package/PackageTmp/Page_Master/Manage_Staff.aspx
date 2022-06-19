@@ -2,18 +2,18 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <div id="form1">
-        <div class="section-header">
-            <div class="section">
-                <div class="section-header">
-                    <h4 id="title_manage_staff" style="color: black; margin: 0; margin-left: 15px;">QUẢN LÝ CÁN BỘ, NHÂN VIÊN TÀU </h4>
-                    <div class="section-header-breadcrumb">
-                        <div class="breadcrumb-item active"><a href="TrangChu.aspx" style="color: #01b5f9">Trang chủ </a></div>
-                        <div class="breadcrumb-item active"><a href="Manage_Tau?vung=1" style="color: #01b5f9">Quản lý tàu</a></div>
-                        <div class="breadcrumb-item active"><a  href="#" onclick="HoSoTau()" style="color: #01b5f9">Hồ sơ tàu</a></div>
-                        <div class="breadcrumb-item active"><a href="#" style="color: #01b5f9">Quản lí nhân viên</a></div>
-                    </div>
+        <div class="section" style="background-color: #fff; padding-bottom: 5px;">
+            <div class="section-header" style="background-color: #fff;">
+                <h4 id="title_manage_staff" style="color: black; margin: 0; margin-left: 15px;">QUẢN LÝ CÁN BỘ, NHÂN VIÊN TÀU</h4>                        
+                <div class="section-header-breadcrumb" style="margin-right: 15px;">
+                    <div class="breadcrumb-item active"><a href="TrangChu.aspx" style="color: #01b5f9; font-size: 14px;">Trang chủ </a></div>
+                    <div class="breadcrumb-item active"><a href="Manage_Tau?vung=1" style="color: #01b5f9; font-size: 14px;">Quản lý tàu</a></div>
+                    <div class="breadcrumb-item active"><a  href="#" onclick="HoSoTau()" style="color: #01b5f9; font-size: 14px;">Hồ sơ tàu</a></div>
+                    <div class="breadcrumb-item active"><a href="#" style="color: #01b5f9; font-size: 14px;">Quản lí nhân viên</a></div>
                 </div>
-                <div class="section-header">
+            </div>
+            <div class="section-content">
+                <div class="section">
                     <div class="col-md-12">
                         <table id="table_Staff" class="table table-bordered table-striped table-md" style="width: 100%">
                         </table>
@@ -106,7 +106,7 @@
                     stateSave: true,
                     "columns": [
                         { name: 'STT', width: 40 },
-                        { name: 'HỌ VÀ TÊN<', width: 160 },
+                        { name: 'HỌ VÀ TÊN', width: 160 },
                         { name: 'NĂM SINH', width: 160 },
                         { name: 'QUÊ QUÁN', width: 160 },
                         { name: 'GHI CHÚ', width: 160 },
@@ -147,7 +147,7 @@
                 });
                 table1.buttons().container()
                     .appendTo('this_wrapper .col-md-6:eq(0)');
-                $('.col-sm-12').first().html('<div class="btn-group"><button onclick="btn_Load_liststaff()" class="btn btn-lg btn-primary mb-3"><i class="bi-arrow-repeat"></i> Load dữ liệu</button><button id="btn_addstaff" onclick="btn_addstaff()" class="btn btn-lg btn-primary mb-3" style=" padding - top: 4px;margin - top: -4px;"><i class="bi bi-plus-circle"></i> Thêm mới</button></div>');
+                $('.col-sm-12').first().html('<div class="btn-group"><button onclick="btn_Load_liststaff()" class="btn btn-secondary mb-2"><i class="bi-arrow-repeat"></i> Load dữ liệu</button><button id="btn_addstaff" onclick="btn_addstaff()" class="btn btn-secondary mb-2"><i class="bi bi-plus-circle"></i> Thêm mới</button></div>');
 
             });
         };

@@ -1,16 +1,16 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Master/TrangChu.Master" AutoEventWireup="true" CodeBehind="Manage_Ranking.aspx.cs" Inherits="CSB.Page_Master.Manage_Ranking" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-            <div id="form1">
-        <div class="section-header">
-            <div class="section">
-                <div class="section-header">
-                    <h4 style="color: black; margin: 0; margin-left: 15px;">QUẢN LÝ CẤP BẬC</h4>
-                    <div class="section-header-breadcrumb">
-                        <div class="breadcrumb-item active"><a href="TrangChu.aspx" style="color: #01b5f9">Trang chủ </a></div>
-                        <div class="breadcrumb-item active"><a href="#" style="color: #01b5f9">Quản lý cấp bậc</a></div>
-                    </div>
+    <div id="form1">
+        <div class="section" style="background-color: #fff; padding-bottom: 5px;">
+            <div class="section-header" style="background-color: #fff;">
+                <h4 id="title_manage_staff" style="color: black; margin: 0; margin-left: 15px;">QUẢN LÝ CẤP BẬC</h4>                        
+                <div class="section-header-breadcrumb" style="margin-right: 15px;">
+                    <div class="breadcrumb-item active"><a href="TrangChu.aspx" style="color: #01b5f9; font-size: 16px;">Trang chủ </a></div>
+                    <div class="breadcrumb-item active"><a href="#" style="color: #01b5f9; font-size: 16px;">Quản lý cấp bậc</a></div>
                 </div>
-                <div class="section-header">
+            </div>
+            <div class="section-content">
+                <div class="section">
                     <div class="col-md-12">
                         <table id="table_rank" class="table table-bordered table-striped table-md" style="width: 100%">
                         </table>
@@ -27,7 +27,6 @@
                         <h4 class="title-modal-banve font-weight-bold" id="largeModalLabel">Thêm cấp bậc mới</h4>
                     </div>
                     <div class="modal-body">
-
                         <div class="row clearfix ">
                             <div style="width: 100%; float: left; padding: 10px">
                                 <div class="form-group" style="display: flex">
@@ -50,7 +49,7 @@
                     </div>
                     <div class="modal-footer">
                         <button onclick="Add_Rank()" type="submit" class="btn btn-info">Thêm</button>
-                        <button onclick="Close_AddRank()" type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button onclick="Close_AddRank()" type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                     </div>
                 </div>
             </div>
@@ -89,7 +88,7 @@
                     </div>
                     <div class="modal-footer">
                         <button onclick="Edit_Rank()" type="submit" class="btn btn-info">Save</button>
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                     </div>
                 </div>
             </div>
@@ -106,7 +105,6 @@
                 url: linkapi + "ranks",
                 dataType: "json",
                 beforeSend: function () { // Before we send the request, remove the .hidden class from the spinner and default to inline-block.
-
                 },
                 success: function (data) {
                     var tabletext = "<thead><tr><th>STT</th><th>Tên cấp bậc</th><th>Ghi chú</th><th>Tác vụ</th></tr></thead><tbody>";
@@ -173,7 +171,7 @@
                 });
                 table1.buttons().container()
                     .appendTo('this_wrapper .col-md-6:eq(0)');
-                $('.col-sm-12').first().html('<div class="btn-group"><button onclick="btn_Load_listrank()" class="btn btn-lg btn-primary mb-3"><i class="bi-arrow-repeat"></i> Load dữ liệu</button><button id="btn_addrank" onclick="btn_addrank()" class="btn btn-lg btn-primary mb-3" data-toggle="modal" data-target="#model-add-rank" style=" padding - top: 4px;margin - top: -4px;"><i class="bi bi-plus-circle"></i> Thêm cấp bậc</button></div>');
+                $('.col-sm-12').first().html('<div class="btn-group"><button onclick="btn_Load_listrank()" class="btn btn-lg btn-secondary mb-3"><i class="bi-arrow-repeat"></i> Load dữ liệu</button><button id="btn_addrank" onclick="btn_addrank()" class="btn btn-lg btn-secondary mb-3" data-toggle="modal" data-target="#model-add-rank"><i class="bi bi-plus-circle"></i> Thêm cấp bậc</button></div>');
             });
         };
         function btn_Load_listrank() {
