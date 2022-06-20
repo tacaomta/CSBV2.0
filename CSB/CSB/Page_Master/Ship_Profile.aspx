@@ -2,22 +2,23 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <style>
         .profile-link {
+            background-color: #d2edf9;
             color: #0086db;
-            margin: 10px 0;
+            margin: 5px 0;
+            padding: 10px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            width: 100%;
+            text-align: left;
+            transition: all 0.3s;
         }
 
-        .profile-link a {
-            color: #4d4d4d;
-            margin-left: 10px;
-        }
-
-            .profile-link a:hover {
-                color: black;
+            .profile-link:hover {
+                background-color: #2070cc;
+                color: white;
             }
 
-            .profile-link a span:hover {
-                text-decoration: none;
-            }
     </style>
     <div class="section" style="background-color: #fff; padding-bottom: 5px;">
         <div class="section-header" style="background-color: #fff;">
@@ -32,40 +33,40 @@
             </div>
         </div>
         <div class="section-content">
-            <div class="profile-link">
-                1. <a onclick="DS_CB_NV()" href="#">Danh sách đội ngũ cán bộ, nhân viên kỹ thuật</a>
-            </div>
-            <div class="profile-link">
-                2. <a onclick="DacDiemChung()" href="#">Đặc điểm chung của tàu</a>
-            </div>
-            <div class="profile-link">
-                3. <a onclick="TinhNangChuYeu()"  href="#">Tính năng chủ yếu của tàu</a>
-            </div>
-            <div class="profile-link">
-                4. <a onclick="TinhNangThietBi()" href="#">Tính năng các thiết bị</a>
-            </div>
-            <div class="profile-link">
-                5. <a href="#" onclick="THeoDoiHoatDongTau()">Theo dõi hoạt động của tàu</a>
-            </div>
-            <div class="profile-link">
-                6. <a href="#" onclick="ThoiGianLamViec()">Thời gian làm việc của máy chính, máy phụ, máy chuyên dụng</a>
-            </div>
-            <div class="profile-link">
-                7. <a href="#" onclick="DangKyTaiNanHuHong()">Đăng ký tai nạn hư hỏng</a>
-            </div>
-            <div class="profile-link">
-                8. <a href="#" onclick="TheoDoiSuaChuaTau()">Theo dõi sửa chữa tàu</a>
-            </div>
-            <div class="profile-link">
-                9. <a href="#" onclick="TheoDoiCaiHoanThayThe()">Theo dõi cải hoán, thay thế, bổ sung</a>
-            </div>
-            <div class="profile-link">
-                10.<a href="#" onclick="DangKyPhuongTien()" style="margin-left: 5px;">Đăng ký các phương tiện bảo vệ sức sống tàu và cứu sinh</a>
-            </div>
-            <div class="profile-link">
-                11.<a href="#" onclick="KiemTraKyThuat()" style="margin-left: 5px;">Kiểm tra kỹ thuật</a>
-            </div>
-            <a href="../Page_Master/Manage_Tau?vung=1" class="btn btn-secondary"><span class="bi-arrow-return-left"></span>&nbsp;Quay lại</a>
+            <button onclick="DS_CB_NV()" class="profile-link">
+                1. Danh sách đội ngũ cán bộ, nhân viên kỹ thuật
+            </button>
+            <button onclick="DacDiemChung()" class="profile-link">
+                2. Đặc điểm chung của tàu
+            </button>
+            <button onclick="TinhNangChuYeu()" class="profile-link">
+                3. Tính năng chủ yếu của tàu
+            </button>
+            <button onclick="TinhNangThietBi()" class="profile-link">
+                4. Tính năng các thiết bị
+            </button>
+            <button onclick="THeoDoiHoatDongTau()" class="profile-link">
+                5. Theo dõi hoạt động của tàu
+            </button>
+            <button onclick="ThoiGianLamViec()" class="profile-link">
+                6. Thời gian làm việc của máy chính, máy phụ, máy chuyên dụng
+            </button>
+            <button onclick="DangKyTaiNanHuHong()" class="profile-link">
+                7. Đăng ký tai nạn hư hỏng
+            </button>
+            <button onclick="TheoDoiSuaChuaTau()" class="profile-link">
+                8. Theo dõi sửa chữa tàu
+            </button>
+            <button onclick="TheoDoiCaiHoanThayThe()" class="profile-link">
+                9. Theo dõi cải hoán, thay thế, bổ sung
+            </button>
+            <button onclick="DangKyPhuongTien()" class="profile-link">
+                10. Đăng ký các phương tiện bảo vệ sức sống tàu và cứu sinh
+            </button>
+            <button onclick="KiemTraKyThuat()" class="profile-link">
+                11. Kiểm tra kỹ thuật
+            </button>
+            <a href="../Page_Master/Manage_Tau?vung=1" class="btn btn-secondary mt-3"><span class="bi-arrow-return-left"></span>&nbsp;Quay lại</a>
         </div>  
     </div>
     <script src="../Scripts/jquery-3.4.1.slim.min.js"></script>
