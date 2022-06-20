@@ -3153,7 +3153,7 @@
                     var tabletext = "<thead><tr><th>STT</th><th>Ký hiệu</th><th>Số lượng</th><th>Tác vụ</th></tr></thead><tbody>";
                     var i = 1;
                     $.each(data, function (key, item) {
-                        tabletext += "<tr><td>" + i + "</td><td>" + item.KYHIEU + "</td><td>" + item.SOLUONG + '</td><td><div style="width: max-content;"><a href="#" class="edit" title="Sửa" data-toggle="modal" data-target="#model-edit-HANGHAI"  onclick="onclick_edit_HANGHAI(`' + item.ID + '`,`' + item.KYHIEU + '`,`' + item.SOLUONG + '`)"><i class="material-icons">&#xE254;</i></a><a href="#" class="delete" title="Xóa" onclick="delete_HANGHAI(`' + item.ID + '`)"><i class="material-icons">&#xE872;</i></a></div></td></tr>';
+                        tabletext += "<tr><td style='text-align: center;'>" + i + "</td><td>" + item.KYHIEU + "</td><td style='text-align: center;'>" + item.SOLUONG + '</td><td><div style="display: flex; justify-content: space-around;"><a href="#" class="edit" title="Sửa" data-toggle="modal" data-target="#model-edit-HANGHAI"  onclick="onclick_edit_HANGHAI(`' + item.ID + '`,`' + item.KYHIEU + '`,`' + item.SOLUONG + '`)"><i class="material-icons">&#xE254;</i></a><a href="#" class="delete" title="Xóa" onclick="delete_HANGHAI(`' + item.ID + '`)"><i class="material-icons">&#xE872;</i></a></div></td></tr>';
                         i = i + 1;
                     });
                     tabletext += "</tbody>";
@@ -3172,10 +3172,10 @@
                     searching: false,
                     stateSave: true,
                     "columns": [
-                        { name: 'STT', width: 90 },
-                        { name: 'Ký hiệu', width: 380 },
-                        { name: 'Số lượng', width: 380 },
-                        { name: 'Tác vụ', width: 150 },
+                        { name: 'STT', width: 40 },
+                        { name: 'Ký hiệu', width: 700 },
+                        { name: 'Số lượng', width: 100 },
+                        { name: 'Tác vụ', width: 40 },
                     ],
                     lengthChange: false,
                     "language": {
@@ -3288,7 +3288,7 @@
                     var tabletext = "<thead><tr><th>STT</th><th>Ký hiệu</th><th>Số lượng</th><th>Tác vụ</th></tr></thead><tbody>";
                     var i = 1;
                     $.each(data, function (key, item) {
-                        tabletext += "<tr><td>" + i + "</td><td>" + item.KYHIEU + "</td><td>" + item.SOLUONG + '</td><td><div style="width: max-content;"><a href="#" class="edit" title="Sửa" data-toggle="modal" data-target="#model-edit-VUKHI"  onclick="onclick_edit_VUKHI(`' + item.ID + '`,`' + item.KYHIEU + '`,`' + item.SOLUONG + '`)"><i class="material-icons">&#xE254;</i></a><a href="#" class="delete" title="Xóa" onclick="delete_VUKHI(`' + item.ID + '`)"><i class="material-icons">&#xE872;</i></a></div></td></tr>';
+                        tabletext += "<tr><td style='text-align: center;'>" + i + "</td><td>" + item.KYHIEU + "</td><td style='text-align: center;'>" + item.SOLUONG + '</td><td><div style="display: flex; justify-content: space-around;"><a href="#" class="edit" title="Sửa" data-toggle="modal" data-target="#model-edit-VUKHI"  onclick="onclick_edit_VUKHI(`' + item.ID + '`,`' + item.KYHIEU + '`,`' + item.SOLUONG + '`)"><i class="material-icons">&#xE254;</i></a><a href="#" class="delete" title="Xóa" onclick="delete_VUKHI(`' + item.ID + '`)"><i class="material-icons">&#xE872;</i></a></div></td></tr>';
                         i = i + 1;
                     });
                     tabletext += "</tbody>";
@@ -3307,10 +3307,10 @@
                     searching: false,
                     stateSave: true,
                     "columns": [
-                        { name: 'STT', width: 90 },
-                        { name: 'Ký hiệu', width: 380 },
-                        { name: 'Số lượng', width: 380 },
-                        { name: 'Tác vụ', width: 150 },
+                        { name: 'STT', width: 40 },
+                        { name: 'Ký hiệu', width: 700 },
+                        { name: 'Số lượng', width: 100 },
+                        { name: 'Tác vụ', width: 40 },
                     ],
                     lengthChange: false,
                     "language": {
@@ -3422,7 +3422,7 @@
                     var tabletext = "<thead><tr><th>STT</th><th>Ký hiệu</th><th>Số lượng</th><th>Tác vụ</th></tr></thead><tbody>";
                     var i = 1;
                     $.each(data, function (key, item) {
-                        tabletext += "<tr><td>" + i + "</td><td>" + item.KYHIEU + "</td><td>" + item.SOLUONG + '</td><td><div style="width: max-content;"><a href="#" class="edit" title="Sửa" data-toggle="modal" data-target="#model-edit-RADA"  onclick="onclick_edit_RADA(`' + item.ID + '`,`' + item.KYHIEU + '`,`' + item.SOLUONG + '`)"><i class="material-icons">&#xE254;</i></a><a href="#" class="delete" title="Xóa" onclick="delete_RADA(`' + item.ID + '`)"><i class="material-icons">&#xE872;</i></a></div></td></tr>';
+                        tabletext += "<tr><td style='text-align: center;'>" + i + "</td><td>" + item.KYHIEU + "</td><td style='text-align: center;'>" + item.SOLUONG + '</td><td><div style="display: flex; justify-content: space-around;"><a href="#" class="edit" title="Sửa" data-toggle="modal" data-target="#model-edit-RADA"  onclick="onclick_edit_RADA(`' + item.ID + '`,`' + item.KYHIEU + '`,`' + item.SOLUONG + '`)"><i class="material-icons">&#xE254;</i></a><a href="#" class="delete" title="Xóa" onclick="delete_RADA(`' + item.ID + '`)"><i class="material-icons">&#xE872;</i></a></div></td></tr>';
                         i = i + 1;
                     });
                     tabletext += "</tbody>";
@@ -3563,7 +3563,7 @@
                     var tabletext = "<thead><tr><th>STT</th><th>Ký hiệu</th><th>Số hiệu</th><th>Năm sản xuất</th><th>Nơi sản xuất</th><th>Công suất</th><th>Hệ thống điều khiển</th><th>Tác vụ</th></tr></thead><tbody>";
                     var i = 1;
                     $.each(data, function (key, item) {
-                        tabletext += "<tr><td>" + i + "</td><td>" + item.THONGSOCOBAN.KYHIEU + "</td><td>" + item.THONGSOCOBAN.SOHIEUMAY + "</td><td>" + item.THONGSOCOBAN.NAMSANXUAT + "</td><td>" + item.THONGSOCOBAN.NOISANXUAT + "</td><td>" + item.THONGSOCOBAN.CONGSUAT + "</td><td>" + item.THONGSOCOBAN.HETHONGDIEUKHIEN + '</td><td><div style="width: max-content;"><a href="#" class="edit" title="Sửa" data-toggle="modal" data-target="#model-edit-MAYCHINH"  onclick="onclick_edit_MAYCHINH(`' + item.ID + '`,`' + item.THONGSOCOBAN.KYHIEU + '`,`' + item.THONGSOCOBAN.NAMSANXUAT + '`,`' + item.THONGSOCOBAN.NOISANXUAT + '`,`' + item.THONGSOCOBAN.NAMLAPRAP + '`,`' + item.THONGSOCOBAN.VITRILAPRAP + '`,`' + item.THONGSOCOBAN.SOHIEUMAY + '`,`' + item.THONGSOCOBAN.CONGSUAT + '`,`' + item.THONGSOCOBAN.VONGQUAY + '`,`' + item.THONGSOCOBAN.CHIEUQUAY + '`,`' + item.THONGSOCOBAN.NGUONKHOIDONG + '`,`' + item.THONGSOCOBAN.HETHONGDIEUKHIEN + '`,`' + item.THONGSOCOBAN.TRONGLUONG + '`,`' + item.THONGSOCOBAN.KICHTHUOCMAY.DAI + '`,`' + item.THONGSOCOBAN.KICHTHUOCMAY.RONG + '`,`' + item.THONGSOCOBAN.KICHTHUOCMAY.CAO + '`,`' + item.THONGSOCOBAN.CHUKYSUACHUA.TIEUTU + '`,`' + item.THONGSOCOBAN.CHUKYSUACHUA.TRUNGTU + '`,`' + item.THONGSOCOBAN.CHUKYSUACHUA.DAITU + '`,`' + item.THONGSOCOBAN.LOAIDIEN.DIENAP + '`,`' + item.THONGSOCOBAN.LOAIDIEN.TANSO + '`,`' + item.PHUONGPHAPTRUYENTAI.KYHIEULYHOP_BOGIAMVONG + '`,`' + item.PHUONGPHAPTRUYENTAI.SOHIEULYHOP_BOGIAMVONG + '`,`' + item.PHUONGPHAPTRUYENTAI.TYSOTRUYEN + '`,`' + item.PHUONGPHAPTRUYENTAI.KHOPNOICUNG + '`,`' + item.PHUONGPHAPTRUYENTAI.KHOPNOIMEM + '`,`' + item.PHUONGPHAPTRUYENTAI.CUROA + '`,`' + item.PHUONGPHAPTRUYENTAI.KYHIEUVONGBI + '`)"><i class="material-icons">&#xE254;</i></a><a href="#" class="delete" title="Xóa" onclick="delete_MAYCHINH(`' + item.ID + '`)"><i class="material-icons">&#xE872;</i></a></div></td></tr>';
+                        tabletext += "<tr><td style='text-align: center;'>" + i + "</td><td>" + item.THONGSOCOBAN.KYHIEU + "</td><td>" + item.THONGSOCOBAN.SOHIEUMAY + "</td><td style='text-align: center;'>" + item.THONGSOCOBAN.NAMSANXUAT + "</td><td>" + item.THONGSOCOBAN.NOISANXUAT + "</td><td>" + item.THONGSOCOBAN.CONGSUAT + "</td><td>" + item.THONGSOCOBAN.HETHONGDIEUKHIEN + '</td><td><div style="display: flex; justify-content: space-around;"><a href="#" class="edit" title="Sửa" data-toggle="modal" data-target="#model-edit-MAYCHINH"  onclick="onclick_edit_MAYCHINH(`' + item.ID + '`,`' + item.THONGSOCOBAN.KYHIEU + '`,`' + item.THONGSOCOBAN.NAMSANXUAT + '`,`' + item.THONGSOCOBAN.NOISANXUAT + '`,`' + item.THONGSOCOBAN.NAMLAPRAP + '`,`' + item.THONGSOCOBAN.VITRILAPRAP + '`,`' + item.THONGSOCOBAN.SOHIEUMAY + '`,`' + item.THONGSOCOBAN.CONGSUAT + '`,`' + item.THONGSOCOBAN.VONGQUAY + '`,`' + item.THONGSOCOBAN.CHIEUQUAY + '`,`' + item.THONGSOCOBAN.NGUONKHOIDONG + '`,`' + item.THONGSOCOBAN.HETHONGDIEUKHIEN + '`,`' + item.THONGSOCOBAN.TRONGLUONG + '`,`' + item.THONGSOCOBAN.KICHTHUOCMAY.DAI + '`,`' + item.THONGSOCOBAN.KICHTHUOCMAY.RONG + '`,`' + item.THONGSOCOBAN.KICHTHUOCMAY.CAO + '`,`' + item.THONGSOCOBAN.CHUKYSUACHUA.TIEUTU + '`,`' + item.THONGSOCOBAN.CHUKYSUACHUA.TRUNGTU + '`,`' + item.THONGSOCOBAN.CHUKYSUACHUA.DAITU + '`,`' + item.THONGSOCOBAN.LOAIDIEN.DIENAP + '`,`' + item.THONGSOCOBAN.LOAIDIEN.TANSO + '`,`' + item.PHUONGPHAPTRUYENTAI.KYHIEULYHOP_BOGIAMVONG + '`,`' + item.PHUONGPHAPTRUYENTAI.SOHIEULYHOP_BOGIAMVONG + '`,`' + item.PHUONGPHAPTRUYENTAI.TYSOTRUYEN + '`,`' + item.PHUONGPHAPTRUYENTAI.KHOPNOICUNG + '`,`' + item.PHUONGPHAPTRUYENTAI.KHOPNOIMEM + '`,`' + item.PHUONGPHAPTRUYENTAI.CUROA + '`,`' + item.PHUONGPHAPTRUYENTAI.KYHIEUVONGBI + '`)"><i class="material-icons">&#xE254;</i></a><a href="#" class="delete" title="Xóa" onclick="delete_MAYCHINH(`' + item.ID + '`)"><i class="material-icons">&#xE872;</i></a></div></td></tr>';
                         i = i + 1;
                     });
                     tabletext += "</tbody>";
@@ -3583,13 +3583,13 @@
                     stateSave: true,
                     "columns": [
                         { name: 'STT', width: 60 },
-                        { name: 'Ký hiệu', width: 180 },
-                        { name: 'Số hiệu', width: 180 },
+                        { name: 'Ký hiệu', width: 160 },
+                        { name: 'Số hiệu', width: 160 },
                         { name: 'Năm sản xuất', width: 180 },
                         { name: 'Nơi sản xuất', width: 180 },
-                        { name: 'Công suất', width: 180 },
-                        { name: 'Hệ thống điều khiển', width: 180 },
-                        { name: 'Tác vụ', width: 80 },
+                        { name: 'Công suất', width: 140 },
+                        { name: 'Hệ thống điều khiển', width: 240 },
+                        { name: 'Tác vụ', width: 60 },
                     ],
                     lengthChange: false,
                     "language": {
@@ -3823,7 +3823,7 @@
                     var tabletext = "<thead><tr><th>STT</th><th>Ký hiệu</th><th>Số hiệu</th><th>Năm sản xuất</th><th>Nơi sản xuất</th><th>Công suất</th><th>Hệ thống điều khiển</th><th>Tác vụ</th></tr></thead><tbody>";
                     var i = 1;
                     $.each(data, function (key, item) {
-                        tabletext += "<tr><td>" + i + "</td><td>" + item.THONGSOCOBAN.KYHIEU + "</td><td>" + item.THONGSOCOBAN.SOHIEUMAY + "</td><td>" + item.THONGSOCOBAN.NAMSANXUAT + "</td><td>" + item.THONGSOCOBAN.NOISANXUAT + "</td><td>" + item.THONGSOCOBAN.CONGSUAT + "</td><td>" + item.THONGSOCOBAN.HETHONGDIEUKHIEN + '</td><td><div style="width: max-content;"><a href="#" class="edit" title="Sửa" data-toggle="modal" data-target="#model-edit-MAYPHU"  onclick="onclick_edit_MAYPHU(`' + item.ID + '`,`' + item.THONGSOCOBAN.KYHIEU + '`,`' + item.THONGSOCOBAN.NAMSANXUAT + '`,`' + item.THONGSOCOBAN.NOISANXUAT + '`,`' + item.THONGSOCOBAN.NAMLAPRAP + '`,`' + item.THONGSOCOBAN.VITRILAPRAP + '`,`' + item.THONGSOCOBAN.SOHIEUMAY + '`,`' + item.THONGSOCOBAN.CONGSUAT + '`,`' + item.THONGSOCOBAN.VONGQUAY + '`,`' + item.THONGSOCOBAN.CHIEUQUAY + '`,`' + item.THONGSOCOBAN.NGUONKHOIDONG + '`,`' + item.THONGSOCOBAN.HETHONGDIEUKHIEN + '`,`' + item.THONGSOCOBAN.TRONGLUONG + '`,`' + item.THONGSOCOBAN.KICHTHUOCMAY.DAI + '`,`' + item.THONGSOCOBAN.KICHTHUOCMAY.RONG + '`,`' + item.THONGSOCOBAN.KICHTHUOCMAY.CAO + '`,`' + item.THONGSOCOBAN.CHUKYSUACHUA.TIEUTU + '`,`' + item.THONGSOCOBAN.CHUKYSUACHUA.TRUNGTU + '`,`' + item.THONGSOCOBAN.CHUKYSUACHUA.DAITU + '`,`' + item.THONGSOCOBAN.LOAIDIEN.DIENAP + '`,`' + item.THONGSOCOBAN.LOAIDIEN.TANSO + '`,`' + item.PHUONGPHAPTRUYENTAI.KYHIEULYHOP_BOGIAMVONG + '`,`' + item.PHUONGPHAPTRUYENTAI.SOHIEULYHOP_BOGIAMVONG + '`,`' + item.PHUONGPHAPTRUYENTAI.TYSOTRUYEN + '`,`' + item.PHUONGPHAPTRUYENTAI.KHOPNOICUNG + '`,`' + item.PHUONGPHAPTRUYENTAI.KHOPNOIMEM + '`,`' + item.PHUONGPHAPTRUYENTAI.CUROA + '`,`' + item.PHUONGPHAPTRUYENTAI.KYHIEUVONGBI + '`)"><i class="material-icons">&#xE254;</i></a><a href="#" class="delete" title="Xóa" onclick="delete_MAYPHU(`' + item.ID + '`)"><i class="material-icons">&#xE872;</i></a></div></td></tr>';
+                        tabletext += "<tr><td style='text-align: center;'>" + i + "</td><td>" + item.THONGSOCOBAN.KYHIEU + "</td><td>" + item.THONGSOCOBAN.SOHIEUMAY + "</td><td style='text-align: center;'>" + item.THONGSOCOBAN.NAMSANXUAT + "</td><td>" + item.THONGSOCOBAN.NOISANXUAT + "</td><td>" + item.THONGSOCOBAN.CONGSUAT + "</td><td>" + item.THONGSOCOBAN.HETHONGDIEUKHIEN + '</td><td><div style="display: flex; jusitfy-content: space-around;"><a href="#" class="edit" title="Sửa" data-toggle="modal" data-target="#model-edit-MAYPHU"  onclick="onclick_edit_MAYPHU(`' + item.ID + '`,`' + item.THONGSOCOBAN.KYHIEU + '`,`' + item.THONGSOCOBAN.NAMSANXUAT + '`,`' + item.THONGSOCOBAN.NOISANXUAT + '`,`' + item.THONGSOCOBAN.NAMLAPRAP + '`,`' + item.THONGSOCOBAN.VITRILAPRAP + '`,`' + item.THONGSOCOBAN.SOHIEUMAY + '`,`' + item.THONGSOCOBAN.CONGSUAT + '`,`' + item.THONGSOCOBAN.VONGQUAY + '`,`' + item.THONGSOCOBAN.CHIEUQUAY + '`,`' + item.THONGSOCOBAN.NGUONKHOIDONG + '`,`' + item.THONGSOCOBAN.HETHONGDIEUKHIEN + '`,`' + item.THONGSOCOBAN.TRONGLUONG + '`,`' + item.THONGSOCOBAN.KICHTHUOCMAY.DAI + '`,`' + item.THONGSOCOBAN.KICHTHUOCMAY.RONG + '`,`' + item.THONGSOCOBAN.KICHTHUOCMAY.CAO + '`,`' + item.THONGSOCOBAN.CHUKYSUACHUA.TIEUTU + '`,`' + item.THONGSOCOBAN.CHUKYSUACHUA.TRUNGTU + '`,`' + item.THONGSOCOBAN.CHUKYSUACHUA.DAITU + '`,`' + item.THONGSOCOBAN.LOAIDIEN.DIENAP + '`,`' + item.THONGSOCOBAN.LOAIDIEN.TANSO + '`,`' + item.PHUONGPHAPTRUYENTAI.KYHIEULYHOP_BOGIAMVONG + '`,`' + item.PHUONGPHAPTRUYENTAI.SOHIEULYHOP_BOGIAMVONG + '`,`' + item.PHUONGPHAPTRUYENTAI.TYSOTRUYEN + '`,`' + item.PHUONGPHAPTRUYENTAI.KHOPNOICUNG + '`,`' + item.PHUONGPHAPTRUYENTAI.KHOPNOIMEM + '`,`' + item.PHUONGPHAPTRUYENTAI.CUROA + '`,`' + item.PHUONGPHAPTRUYENTAI.KYHIEUVONGBI + '`)"><i class="material-icons">&#xE254;</i></a><a href="#" class="delete" title="Xóa" onclick="delete_MAYPHU(`' + item.ID + '`)"><i class="material-icons">&#xE872;</i></a></div></td></tr>';
                         i = i + 1;
                     });
                     tabletext += "</tbody>";
@@ -3843,13 +3843,13 @@
                     stateSave: true,
                     "columns": [
                         { name: 'STT', width: 60 },
-                        { name: 'Ký hiệu', width: 180 },
-                        { name: 'Số hiệu', width: 180 },
+                        { name: 'Ký hiệu', width: 160 },
+                        { name: 'Số hiệu', width: 160 },
                         { name: 'Năm sản xuất', width: 180 },
                         { name: 'Nơi sản xuất', width: 180 },
-                        { name: 'Công suất', width: 180 },
-                        { name: 'Hệ thống điều khiển', width: 180 },
-                        { name: 'Tác vụ', width: 80 },
+                        { name: 'Công suất', width: 140 },
+                        { name: 'Hệ thống điều khiển', width: 240 },
+                        { name: 'Tác vụ', width: 60 },
                     ],
                     lengthChange: false,
                     "language": {
@@ -4082,7 +4082,7 @@
                     var tabletext = "<thead><tr><th>STT</th><th>Ký hiệu</th><th>Số hiệu</th><th>Năm sản xuất</th><th>Nơi sản xuất</th><th>Công suất</th><th>Hệ thống điều khiển</th><th>Tác vụ</th></tr></thead><tbody>";
                     var i = 1;
                     $.each(data, function (key, item) {
-                        tabletext += "<tr><td>" + i + "</td><td>" + item.THONGSOCOBAN.KYHIEU + "</td><td>" + item.THONGSOCOBAN.SOHIEUMAY + "</td><td>" + item.THONGSOCOBAN.NAMSANXUAT + "</td><td>" + item.THONGSOCOBAN.NOISANXUAT + "</td><td>" + item.THONGSOCOBAN.CONGSUAT + "</td><td>" + item.THONGSOCOBAN.HETHONGDIEUKHIEN + '</td><td><div style="width: max-content;"><a href="#" class="edit" title="Sửa" data-toggle="modal" data-target="#model-edit-MAYCHUYENDUNG"  onclick="onclick_edit_MAYCHUYENDUNG(`' + item.ID + '`,`' + item.THONGSOCOBAN.KYHIEU + '`,`' + item.THONGSOCOBAN.NAMSANXUAT + '`,`' + item.THONGSOCOBAN.NOISANXUAT + '`,`' + item.THONGSOCOBAN.NAMLAPRAP + '`,`' + item.THONGSOCOBAN.VITRILAPRAP + '`,`' + item.THONGSOCOBAN.SOHIEUMAY + '`,`' + item.THONGSOCOBAN.CONGSUAT + '`,`' + item.THONGSOCOBAN.VONGQUAY + '`,`' + item.THONGSOCOBAN.CHIEUQUAY + '`,`' + item.THONGSOCOBAN.NGUONKHOIDONG + '`,`' + item.THONGSOCOBAN.HETHONGDIEUKHIEN + '`,`' + item.THONGSOCOBAN.TRONGLUONG + '`,`' + item.THONGSOCOBAN.KICHTHUOCMAY.DAI + '`,`' + item.THONGSOCOBAN.KICHTHUOCMAY.RONG + '`,`' + item.THONGSOCOBAN.KICHTHUOCMAY.CAO + '`,`' + item.THONGSOCOBAN.CHUKYSUACHUA.TIEUTU + '`,`' + item.THONGSOCOBAN.CHUKYSUACHUA.TRUNGTU + '`,`' + item.THONGSOCOBAN.CHUKYSUACHUA.DAITU + '`,`' + item.THONGSOCOBAN.LOAIDIEN.DIENAP + '`,`' + item.THONGSOCOBAN.LOAIDIEN.TANSO + '`,`' + item.PHUONGPHAPTRUYENTAI.KYHIEULYHOP_BOGIAMVONG + '`,`' + item.PHUONGPHAPTRUYENTAI.SOHIEULYHOP_BOGIAMVONG + '`,`' + item.PHUONGPHAPTRUYENTAI.TYSOTRUYEN + '`,`' + item.PHUONGPHAPTRUYENTAI.KHOPNOICUNG + '`,`' + item.PHUONGPHAPTRUYENTAI.KHOPNOIMEM + '`,`' + item.PHUONGPHAPTRUYENTAI.CUROA + '`,`' + item.PHUONGPHAPTRUYENTAI.KYHIEUVONGBI + '`)"><i class="material-icons">&#xE254;</i></a><a href="#" class="delete" title="Xóa" onclick="delete_MAYCHUYENDUNG(`' + item.ID + '`)"><i class="material-icons">&#xE872;</i></a></div></td></tr>';
+                        tabletext += "<tr><td style='text-align: center;'>" + i + "</td><td>" + item.THONGSOCOBAN.KYHIEU + "</td><td>" + item.THONGSOCOBAN.SOHIEUMAY + "</td><td style='text-align: center;'>" + item.THONGSOCOBAN.NAMSANXUAT + "</td><td>" + item.THONGSOCOBAN.NOISANXUAT + "</td><td>" + item.THONGSOCOBAN.CONGSUAT + "</td><td>" + item.THONGSOCOBAN.HETHONGDIEUKHIEN + '</td><td><div style="display: flex; justify-content: space-around;"><a href="#" class="edit" title="Sửa" data-toggle="modal" data-target="#model-edit-MAYCHUYENDUNG"  onclick="onclick_edit_MAYCHUYENDUNG(`' + item.ID + '`,`' + item.THONGSOCOBAN.KYHIEU + '`,`' + item.THONGSOCOBAN.NAMSANXUAT + '`,`' + item.THONGSOCOBAN.NOISANXUAT + '`,`' + item.THONGSOCOBAN.NAMLAPRAP + '`,`' + item.THONGSOCOBAN.VITRILAPRAP + '`,`' + item.THONGSOCOBAN.SOHIEUMAY + '`,`' + item.THONGSOCOBAN.CONGSUAT + '`,`' + item.THONGSOCOBAN.VONGQUAY + '`,`' + item.THONGSOCOBAN.CHIEUQUAY + '`,`' + item.THONGSOCOBAN.NGUONKHOIDONG + '`,`' + item.THONGSOCOBAN.HETHONGDIEUKHIEN + '`,`' + item.THONGSOCOBAN.TRONGLUONG + '`,`' + item.THONGSOCOBAN.KICHTHUOCMAY.DAI + '`,`' + item.THONGSOCOBAN.KICHTHUOCMAY.RONG + '`,`' + item.THONGSOCOBAN.KICHTHUOCMAY.CAO + '`,`' + item.THONGSOCOBAN.CHUKYSUACHUA.TIEUTU + '`,`' + item.THONGSOCOBAN.CHUKYSUACHUA.TRUNGTU + '`,`' + item.THONGSOCOBAN.CHUKYSUACHUA.DAITU + '`,`' + item.THONGSOCOBAN.LOAIDIEN.DIENAP + '`,`' + item.THONGSOCOBAN.LOAIDIEN.TANSO + '`,`' + item.PHUONGPHAPTRUYENTAI.KYHIEULYHOP_BOGIAMVONG + '`,`' + item.PHUONGPHAPTRUYENTAI.SOHIEULYHOP_BOGIAMVONG + '`,`' + item.PHUONGPHAPTRUYENTAI.TYSOTRUYEN + '`,`' + item.PHUONGPHAPTRUYENTAI.KHOPNOICUNG + '`,`' + item.PHUONGPHAPTRUYENTAI.KHOPNOIMEM + '`,`' + item.PHUONGPHAPTRUYENTAI.CUROA + '`,`' + item.PHUONGPHAPTRUYENTAI.KYHIEUVONGBI + '`)"><i class="material-icons">&#xE254;</i></a><a href="#" class="delete" title="Xóa" onclick="delete_MAYCHUYENDUNG(`' + item.ID + '`)"><i class="material-icons">&#xE872;</i></a></div></td></tr>';
                         i = i + 1;
                     });
                     tabletext += "</tbody>";
@@ -4102,13 +4102,13 @@
                     stateSave: true,
                     "columns": [
                         { name: 'STT', width: 60 },
-                        { name: 'Ký hiệu', width: 180 },
-                        { name: 'Số hiệu', width: 180 },
+                        { name: 'Ký hiệu', width: 160 },
+                        { name: 'Số hiệu', width: 160 },
                         { name: 'Năm sản xuất', width: 180 },
                         { name: 'Nơi sản xuất', width: 180 },
-                        { name: 'Công suất', width: 180 },
-                        { name: 'Hệ thống điều khiển', width: 180 },
-                        { name: 'Tác vụ', width: 80 },
+                        { name: 'Công suất', width: 140 },
+                        { name: 'Hệ thống điều khiển', width: 240 },
+                        { name: 'Tác vụ', width: 60 },
                     ],
                     lengthChange: false,
                     "language": {
@@ -4341,7 +4341,7 @@
                     var tabletext = "<thead><tr><th rowspan='2'>STT</th><th colspan='2'>Trục</th><th colspan='3'>Chân vịt</th><th colspan='2'>Ổ đỡ</th><th rowspan='2'>Tác vụ</th></tr><tr><th>Tổng chiều dài</th><th>Vật liệu</th><th>Loại vật liệu</th><th>Đường kính (mm)</th><th>Số cánh</th><th>Số lượng</th><th>Loại</th></tr></thead><tbody>";
                     var i = 1;
                     $.each(data, function (key, item) {
-                        tabletext += "<tr><td>" + i + "</td><td>" + item.TRUC.TONGCHIEUDAI + "</td><td>" + item.TRUC.VATLIEU + "</td><td>" + item.CHANVIT.LOAICHANVIT + "</td><td>" + item.CHANVIT.DUONGKINH + "</td><td>" + item.CHANVIT.SOCANH + "</td><td>" + item.ODO.SOLUONG + "</td><td>" + item.ODO.LOAI + '</td><td><div style="width: max-content;"><a href="#" class="edit" title="Sửa" data-toggle="modal" data-target="#model-edit-HETRUCCHANVIT"  onclick="onclick_edit_HETRUCCHANVIT(`' + item.ID + '`,`' + item.TRUC.TONGCHIEUDAI + '`,`' + item.TRUC.VATLIEU + '`,`' + item.TRUC.TONGTRONGLUONG + '`,`' + item.TRUC.DUONGKINHTRUCGHEPCHANVIT + '`,`' + item.TRUC.DUONGKINHTRUCTRUNGGIAN + '`,`' + item.TRUC.DUONGKINHTRUCXOAN + '`,`' + item.TRUC.DUONGKINHTRUCCHAN + '`,`' + item.TRUC.GOCNGIENGTRUC + '`,`' + item.CHANVIT.LOAICHANVIT + '`,`' + item.CHANVIT.DUONGKINH + '`,`' + item.CHANVIT.SOCANH + '`,`' + item.CHANVIT.VATLIEU + '`,`' + item.CHANVIT.TRONGLUONG + '`,`' + item.CHANVIT.CHIEUQUAY + '`,`' + item.CHANVIT.VONGQUAYDINHMUC + '`,`' + item.ODO.SOLUONG + '`,`' + item.ODO.LOAI + '`,`' + item.ODO.MODAUBOITRON + '`)"><i class="material-icons">&#xE254;</i></a><a href="#" class="delete" title="Xóa" onclick="delete_HETRUCCHANVIT(`' + item.ID + '`)"><i class="material-icons">&#xE872;</i></a></div></td></tr>';
+                        tabletext += "<tr><td style='text-align: center;'>" + i + "</td><td>" + item.TRUC.TONGCHIEUDAI + "</td><td>" + item.TRUC.VATLIEU + "</td><td>" + item.CHANVIT.LOAICHANVIT + "</td><td>" + item.CHANVIT.DUONGKINH + "</td><td>" + item.CHANVIT.SOCANH + "</td><td>" + item.ODO.SOLUONG + "</td><td>" + item.ODO.LOAI + '</td><td><div style="display: flex; justify-content: space-around;"><a href="#" class="edit" title="Sửa" data-toggle="modal" data-target="#model-edit-HETRUCCHANVIT"  onclick="onclick_edit_HETRUCCHANVIT(`' + item.ID + '`,`' + item.TRUC.TONGCHIEUDAI + '`,`' + item.TRUC.VATLIEU + '`,`' + item.TRUC.TONGTRONGLUONG + '`,`' + item.TRUC.DUONGKINHTRUCGHEPCHANVIT + '`,`' + item.TRUC.DUONGKINHTRUCTRUNGGIAN + '`,`' + item.TRUC.DUONGKINHTRUCXOAN + '`,`' + item.TRUC.DUONGKINHTRUCCHAN + '`,`' + item.TRUC.GOCNGIENGTRUC + '`,`' + item.CHANVIT.LOAICHANVIT + '`,`' + item.CHANVIT.DUONGKINH + '`,`' + item.CHANVIT.SOCANH + '`,`' + item.CHANVIT.VATLIEU + '`,`' + item.CHANVIT.TRONGLUONG + '`,`' + item.CHANVIT.CHIEUQUAY + '`,`' + item.CHANVIT.VONGQUAYDINHMUC + '`,`' + item.ODO.SOLUONG + '`,`' + item.ODO.LOAI + '`,`' + item.ODO.MODAUBOITRON + '`)"><i class="material-icons">&#xE254;</i></a><a href="#" class="delete" title="Xóa" onclick="delete_HETRUCCHANVIT(`' + item.ID + '`)"><i class="material-icons">&#xE872;</i></a></div></td></tr>';
                         i = i + 1;
                     });
                     tabletext += "</tbody>";
@@ -4558,7 +4558,7 @@
                     var tabletext = "<thead><tr><th rowspan='2'>STT</th><th colspan='3'>Neo phải</th><th colspan='3'>Neo trái</th><th colspan='3'>Neo sau</th><th rowspan='2'>Tác vụ</th></tr><tr><th>Ký hiệu</th><th>Đường kính</th><th>Độ dài</th><th>Ký hiệu</th><th>Đường kính</th><th>Độ dài</th><th>Ký hiệu</th><th>Đường kính</th><th>Độ dài</th></tr></thead><tbody>";
                     var i = 1;
                     $.each(data, function (key, item) {
-                        tabletext += "<tr><td>" + i + "</td><td>" + item.NEOPHAI.KYHIEU + "</td><td>" + item.NEOPHAI.XICHNEO.DUONGKINH + "</td><td>" + item.NEOPHAI.XICHNEO.DODAI + "</td><td>" + item.NEOTRAI.KYHIEU + "</td><td>" + item.NEOTRAI.XICHNEO.DUONGKINH + "</td><td>" + item.NEOTRAI.XICHNEO.DODAI + "</td><td>" + item.NEOSAU.KYHIEU + "</td><td>" + item.NEOSAU.XICHNEO.DUONGKINH + "</td><td>" + item.NEOSAU.XICHNEO.DODAI + '</td><td><div style="width: max-content;"><a href="#" class="edit" title="Sửa" data-toggle="modal" data-target="#model-edit-NEOXICHNEO"  onclick="onclick_edit_NEOXICHNEO(`' + item.ID + '`,`' + item.NEOPHAI.KYHIEU + '`,`' + item.NEOPHAI.TRONGLUONGP + '`,`' + item.NEOPHAI.XICHNEO.DUONGKINH + '`,`' + item.NEOPHAI.XICHNEO.DODAI + '`,`' + item.NEOTRAI.KYHIEU + '`,`' + item.NEOTRAI.TRONGLUONGP + '`,`' + item.NEOTRAI.XICHNEO.DUONGKINH + '`,`' + item.NEOTRAI.XICHNEO.DODAI + '`,`' + item.NEOSAU.KYHIEU + '`,`' + item.NEOSAU.TRONGLUONGP + '`,`' + item.NEOSAU.XICHNEO.DUONGKINH + '`,`' + item.NEOSAU.XICHNEO.DODAI + '`)"><i class="material-icons">&#xE254;</i></a><a href="#" class="delete" title="Xóa" onclick="delete_NEOXICHNEO(`' + item.ID + '`)"><i class="material-icons">&#xE872;</i></a></div></td></tr>';
+                        tabletext += "<tr><td style='text-align: center;'>" + i + "</td><td>" + item.NEOPHAI.KYHIEU + "</td><td>" + item.NEOPHAI.XICHNEO.DUONGKINH + "</td><td>" + item.NEOPHAI.XICHNEO.DODAI + "</td><td>" + item.NEOTRAI.KYHIEU + "</td><td>" + item.NEOTRAI.XICHNEO.DUONGKINH + "</td><td>" + item.NEOTRAI.XICHNEO.DODAI + "</td><td>" + item.NEOSAU.KYHIEU + "</td><td>" + item.NEOSAU.XICHNEO.DUONGKINH + "</td><td>" + item.NEOSAU.XICHNEO.DODAI + '</td><td><div style="display: flex; justify-content: space-around;"><a href="#" class="edit" title="Sửa" data-toggle="modal" data-target="#model-edit-NEOXICHNEO"  onclick="onclick_edit_NEOXICHNEO(`' + item.ID + '`,`' + item.NEOPHAI.KYHIEU + '`,`' + item.NEOPHAI.TRONGLUONGP + '`,`' + item.NEOPHAI.XICHNEO.DUONGKINH + '`,`' + item.NEOPHAI.XICHNEO.DODAI + '`,`' + item.NEOTRAI.KYHIEU + '`,`' + item.NEOTRAI.TRONGLUONGP + '`,`' + item.NEOTRAI.XICHNEO.DUONGKINH + '`,`' + item.NEOTRAI.XICHNEO.DODAI + '`,`' + item.NEOSAU.KYHIEU + '`,`' + item.NEOSAU.TRONGLUONGP + '`,`' + item.NEOSAU.XICHNEO.DUONGKINH + '`,`' + item.NEOSAU.XICHNEO.DODAI + '`)"><i class="material-icons">&#xE254;</i></a><a href="#" class="delete" title="Xóa" onclick="delete_NEOXICHNEO(`' + item.ID + '`)"><i class="material-icons">&#xE872;</i></a></div></td></tr>';
                         i = i + 1;
                     });
                     tabletext += "</tbody>";
@@ -4766,7 +4766,7 @@
                     var tabletext = "<thead><tr><th>STT</th><th>Tên trang bị</th><th>Ký hiệu</th><th>Nước sản xuất</th><th>Lưu lượng</th><th>Số lượng</th><th>Tác vụ</th></tr></thead><tbody>";
                     var i = 1;
                     $.each(data, function (key, item) {
-                        tabletext += "<tr><td>" + i + "</td><td>" + item.TENTB + "</td><td>" + item.KYHIEU + "</td><td>" + item.NUOCSX + "</td><td>" + item.LUULUONG + "</td><td>" + item.SOLUONG + '</td><td><div style="width: max-content;"><a href="#" class="edit" title="Sửa" data-toggle="modal" data-target="#model-edit-BOMDAUNUOCTHONGGIO"  onclick="onclick_edit_BOMDAUNUOCTHONGGIO(`' + item.ID + '`,`' + item.TENTB + '`,`' + item.KYHIEU + '`,`' + item.NUOCSX + '`,`' + item.LUULUONG + '`,`' + item.SOLUONG + '`)"><i class="material-icons">&#xE254;</i></a><a href="#" class="delete" title="Xóa" onclick="delete_BOMDAUNUOCTHONGGIO(`' + item.ID + '`)"><i class="material-icons">&#xE872;</i></a></div></td></tr>';
+                        tabletext += "<tr><td style='text-align: center;'>" + i + "</td><td>" + item.TENTB + "</td><td>" + item.KYHIEU + "</td><td>" + item.NUOCSX + "</td><td>" + item.LUULUONG + "</td><td>" + item.SOLUONG + '</td><td><div style="display: flex; justify-content: space-around;"><a href="#" class="edit" title="Sửa" data-toggle="modal" data-target="#model-edit-BOMDAUNUOCTHONGGIO"  onclick="onclick_edit_BOMDAUNUOCTHONGGIO(`' + item.ID + '`,`' + item.TENTB + '`,`' + item.KYHIEU + '`,`' + item.NUOCSX + '`,`' + item.LUULUONG + '`,`' + item.SOLUONG + '`)"><i class="material-icons">&#xE254;</i></a><a href="#" class="delete" title="Xóa" onclick="delete_BOMDAUNUOCTHONGGIO(`' + item.ID + '`)"><i class="material-icons">&#xE872;</i></a></div></td></tr>';
                         i = i + 1;
                     });
                     tabletext += "</tbody>";
@@ -4785,13 +4785,13 @@
                     searching: false,
                     stateSave: true,
                     "columns": [
-                        { name: 'STT', width: 90 },
-                        { name: 'Tên trang bị', width: 380 },
+                        { name: 'STT', width: 80 },
+                        { name: 'Tên trang bị', width: 420 },
                         { name: 'Ký hiệu', width: 200 },
                         { name: 'Nước sản xuất', width: 280 },
                         { name: 'Lưu lượng', width: 280 },
                         { name: 'Số lượng', width: 200 },
-                        { name: 'Tác vụ', width: 150 },
+                        { name: 'Tác vụ', width: 80 },
                     ],
                     lengthChange: false,
                     "language": {
@@ -4917,7 +4917,7 @@
                     var tabletext = "<thead><tr><th>STT</th><th>Tên trang thiết bị</th><th>Ký hiệu</th><th>Số lượng</th><th>Tác vụ</th></tr></thead><tbody>";
                     var i = 1;
                     $.each(data, function (key, item) {
-                        tabletext += "<tr><td>" + i + "</td><td>" + item.TENTB + "</td><td>" + item.KYHIEU + "</td><td>" + item.SOLUONG + '</td><td><div style="width: max-content;"><a href="#" class="edit" title="Sửa" data-toggle="modal" data-target="#model-edit-TRANGBIKHAC"  onclick="onclick_edit_TRANGBIKHAC(`' + item.ID + '`,`' + item.TENTB + '`,`' + item.KYHIEU + '`,`' + item.SOLUONG + '`)"><i class="material-icons">&#xE254;</i></a><a href="#" class="delete" title="Xóa" onclick="delete_TRANGBIKHAC(`' + item.ID + '`)"><i class="material-icons">&#xE872;</i></a></div></td></tr>';
+                        tabletext += "<tr><td style='text-align: center;'>" + i + "</td><td>" + item.TENTB + "</td><td>" + item.KYHIEU + "</td><td>" + item.SOLUONG + '</td><td><div style="display: flex; justify-content: space-around;"><a href="#" class="edit" title="Sửa" data-toggle="modal" data-target="#model-edit-TRANGBIKHAC"  onclick="onclick_edit_TRANGBIKHAC(`' + item.ID + '`,`' + item.TENTB + '`,`' + item.KYHIEU + '`,`' + item.SOLUONG + '`)"><i class="material-icons">&#xE254;</i></a><a href="#" class="delete" title="Xóa" onclick="delete_TRANGBIKHAC(`' + item.ID + '`)"><i class="material-icons">&#xE872;</i></a></div></td></tr>';
                         i = i + 1;
                     });
                     tabletext += "</tbody>";
@@ -4936,11 +4936,11 @@
                     searching: false,
                     stateSave: true,
                     "columns": [
-                        { name: 'STT', width: 90 },
-                        { name: 'Tên trang thiết bị', width: 380 },
+                        { name: 'STT', width: 80 },
+                        { name: 'Tên trang thiết bị', width: 420 },
                         { name: 'Ký hiệu', width: 380 },
                         { name: 'Số lượng', width: 380 },
-                        { name: 'Tác vụ', width: 150 },
+                        { name: 'Tác vụ', width: 80 },
                     ],
                     lengthChange: false,
                     "language": {
@@ -5058,7 +5058,7 @@
                     var tabletext = "<thead><tr><th>STT</th><th>Ký hiệu vật liệu</th><th>Số khoang kín nước</th><th>Số sườn tàu</th><th>Số két dầu cháy</th><th>Số két dầu nhờn</th><th>Số két nước</th><th>Tác vụ</th></tr></thead><tbody>";
                     var i = 1;
                     $.each(data, function (key, item) {
-                        tabletext += "<tr><td>" + i + "</td><td>" + item.KYHIEUVATLIEU + "</td><td>" + item.SOKHOANGKINNUOC + "</td><td>" + item.SOSUONTAU + "</td><td>" + item.SOKETDAUCHAY + "</td><td>" + item.SOKETDAUNHON + "</td><td>" + item.SOKETNUOC + '</td><td><div style="width: max-content;"><a href="#" class="edit" title="Sửa" data-toggle="modal" data-target="#model-edit-THANVO"  onclick="onclick_edit_THANVO(`' + item.ID + '`,`' + item.KYHIEUVATLIEU + '`,`' + item.SOKHOANGKINNUOC + '`,`' + item.SOSUONTAU + '`,`' + item.SOKETDAUCHAY + '`,`' + item.SOKETDAUNHON + '`,`' + item.SOKETNUOC + '`)"><i class="material-icons">&#xE254;</i></a><a href="#" class="delete" title="Xóa" onclick="delete_THANVO(`' + item.ID + '`)"><i class="material-icons">&#xE872;</i></a></div></td></tr>';
+                        tabletext += "<tr><td style='text-align: center;'>" + i + "</td><td>" + item.KYHIEUVATLIEU + "</td><td>" + item.SOKHOANGKINNUOC + "</td><td>" + item.SOSUONTAU + "</td><td>" + item.SOKETDAUCHAY + "</td><td>" + item.SOKETDAUNHON + "</td><td>" + item.SOKETNUOC + '</td><td><div style="display: flex; justify-content: space-around;"><a href="#" class="edit" title="Sửa" data-toggle="modal" data-target="#model-edit-THANVO"  onclick="onclick_edit_THANVO(`' + item.ID + '`,`' + item.KYHIEUVATLIEU + '`,`' + item.SOKHOANGKINNUOC + '`,`' + item.SOSUONTAU + '`,`' + item.SOKETDAUCHAY + '`,`' + item.SOKETDAUNHON + '`,`' + item.SOKETNUOC + '`)"><i class="material-icons">&#xE254;</i></a><a href="#" class="delete" title="Xóa" onclick="delete_THANVO(`' + item.ID + '`)"><i class="material-icons">&#xE872;</i></a></div></td></tr>';
                         i = i + 1;
                     });
                     tabletext += "</tbody>";
@@ -5077,14 +5077,14 @@
                     searching: false,
                     stateSave: true,
                     "columns": [
-                        { name: 'STT', width: 90 },
+                        { name: 'STT', width: 80 },
                         { name: 'Ký hiệu vật liệu', width: 380 },
                         { name: 'Số khoang kín nước', width: 200 },
                         { name: 'Số sườn tàu', width: 180 },
                         { name: 'Số két dầu cháy', width: 180 },
                         { name: 'Số két dầu nhờn', width: 180 },
                         { name: 'Số két nước', width: 180 },
-                        { name: 'Tác vụ', width: 150 },
+                        { name: 'Tác vụ', width: 80 },
                     ],
                     lengthChange: false,
                     "language": {
@@ -5214,7 +5214,7 @@
                     var tabletext = "<thead><tr><th>STT</th><th>Ký hiệu</th><th>Số lượng</th><th>Áp suất (Kg/cm3)</th><th>Tác vụ</th></tr></thead><tbody>";
                     var i = 1;
                     $.each(data, function (key, item) {
-                        tabletext += "<tr><td>" + i + "</td><td>" + item.KYHIEU + "</td><td>" + item.SOLUONG + "</td><td>" + item.APSUAT + '</td><td><div style="width: max-content;"><a href="#" class="edit" title="Sửa" data-toggle="modal" data-target="#model-edit-MAYNENKHI"  onclick="onclick_edit_MAYNENKHI(`' + item.ID + '`,`' + item.KYHIEU + '`,`' + item.SOLUONG + '`,`' + item.APSUAT + '`)"><i class="material-icons">&#xE254;</i></a><a href="#" class="delete" title="Xóa" onclick="delete_MAYNENKHI(`' + item.ID + '`)"><i class="material-icons">&#xE872;</i></a></div></td></tr>';
+                        tabletext += "<tr><td style='text-align: center;'>" + i + "</td><td>" + item.KYHIEU + "</td><td>" + item.SOLUONG + "</td><td>" + item.APSUAT + '</td><td><div style="display: flex; justify-content: space-around;"><a href="#" class="edit" title="Sửa" data-toggle="modal" data-target="#model-edit-MAYNENKHI"  onclick="onclick_edit_MAYNENKHI(`' + item.ID + '`,`' + item.KYHIEU + '`,`' + item.SOLUONG + '`,`' + item.APSUAT + '`)"><i class="material-icons">&#xE254;</i></a><a href="#" class="delete" title="Xóa" onclick="delete_MAYNENKHI(`' + item.ID + '`)"><i class="material-icons">&#xE872;</i></a></div></td></tr>';
                         i = i + 1;
                     });
                     tabletext += "</tbody>";
@@ -5233,11 +5233,11 @@
                     searching: false,
                     stateSave: true,
                     "columns": [
-                        { name: 'STT', width: 90 },
+                        { name: 'STT', width: 80 },
                         { name: 'Ký hiệu', width: 380 },
                         { name: 'Số lượng', width: 380 },
                         { name: 'Áp suất (Kg/cm3)', width: 380 },
-                        { name: 'Tác vụ', width: 150 },
+                        { name: 'Tác vụ', width: 80 },
                     ],
                     lengthChange: false,
                     "language": {

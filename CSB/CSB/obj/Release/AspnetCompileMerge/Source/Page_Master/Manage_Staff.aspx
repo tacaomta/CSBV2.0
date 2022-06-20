@@ -81,7 +81,7 @@
                         var tabletext = "<thead><tr><th>STT</th><th>HỌ VÀ TÊN</th><th>NĂM SINH</th><th>QUÊ QUÁN</th><th>GHI CHÚ</th><th>TÁC VỤ</th></tr></thead><tbody>";
                         var i = 1;
                         $.each(data, function (key, item) {
-                            tabletext += "<tr><td>" + i + "</td><td>" + item.FullName + "</td><td>" + item.BirthYear + "</td><td>" + item.Residence + "</td><td>" + item.Note + "</td>"+'<td><div style="width: max-content;"><a href="#" class="edit" onclick="editstaff(`' + item.ID + '`)"><i class="material-icons">&#xE254;</i></a><a href="#" class="delete" title="Xóa" onclick="delete_staff(`' + item.ID + '`)"><i class="material-icons">&#xE872;</i></a></div></td></tr>';
+                            tabletext += "<tr><td style='text-align: center;'>" + i + "</td><td>" + item.FullName + "</td><td>" + item.BirthYear + "</td><td>" + item.Residence + "</td><td>" + item.Note + "</td>"+'<td><div style="display: flex; justify-content: space-around;"><a href="#" class="edit" onclick="editstaff(`' + item.ID + '`)"><i class="material-icons">&#xE254;</i></a><a href="#" class="delete" title="Xóa" onclick="delete_staff(`' + item.ID + '`)"><i class="material-icons">&#xE872;</i></a></div></td></tr>';
                             i = i + 1;
                         });
                         tabletext += "</tbody>";
@@ -110,7 +110,7 @@
                         { name: 'NĂM SINH', width: 160 },
                         { name: 'QUÊ QUÁN', width: 160 },
                         { name: 'GHI CHÚ', width: 160 },
-                        { name: 'TÁC VỤ', width: 60 },
+                        { name: 'TÁC VỤ', width: 40 },
                     ],
                     "columnDefs": [
                         {

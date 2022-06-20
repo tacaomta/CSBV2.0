@@ -234,28 +234,28 @@
                     var tabletext = "<thead><tr><th rowspan='2'>STT</th><th rowspan='2'>Thời gian</th><th rowspan='2'>Địa điểm</th><th rowspan='2'>Loại tai nạn, hư hỏng</th><th rowspan='2'>Mức độ</th><th colspan='3'>Nguyên nhân</th><th rowspan='2'>Tác vụ</th></tr><tr><th>Khách quan</th><th>Chủ quan</th><th>Trình độ</th></tr></thead><tbody>";
                     var i = 1;
                     $.each(data, function (key, item) {
-                        tabletext += "<tr><td>" + i + "</td><td>" + item.THOIGIAN + "</td><td>" + item.DIADIEM + "</td><td>" + item.LOAI + "</td><td>" + item.MUCDO + "</td><td>";
+                        tabletext += "<tr><td style='text-align: center;'>" + i + "</td><td>" + item.THOIGIAN + "</td><td>" + item.DIADIEM + "</td><td>" + item.LOAI + "</td><td>" + item.MUCDO + "</td><td style='text-align: center;'>";
                         if (item.NGUYENNHAN.KHACHQUAN == true) {
                             tabletext += '<i class="bi bi-check-square"></i>';
                         }
                         else {
                             tabletext += '<i class="bi bi-square"></i>';
                         }
-                        tabletext += "</td><td>";
+                        tabletext += "</td><td style='text-align: center;'>";
                         if (item.NGUYENNHAN.CHUQUAN == true) {
                             tabletext += '<i class="bi bi-check-square"></i>';
                         }
                         else {
                             tabletext += '<i class="bi bi-square"></i>';
                         }
-                        tabletext += "</td><td>";
+                        tabletext += "</td><td style='text-align: center;'>";
                         if (item.NGUYENNHAN.TRINHDO == true) {
                             tabletext += '<i class="bi bi-check-square"></i>';
                         }
                         else {
                             tabletext += '<i class="bi bi-square"></i>';
                         }
-                        tabletext += '</td><td><div style="width: max-content;"><a href="#" class="edit" title="Sửa" data-toggle="modal" data-target="#model-edit-DANGKYTAINANHUHONG"  onclick="onclick_edit_DANGKYTAINANHUHONG(`' + item.ID + '`,`' + item.THOIGIAN + '`,`' + item.DIADIEM + '`,`' + item.LOAI + '`,`' + item.MUCDO + '`,`' + item.NGUYENNHAN.KHACHQUAN + '`,`' + item.NGUYENNHAN.CHUQUAN + '`,`' + item.NGUYENNHAN.TRINHDO + '`,`' + item.GHICHU + '`)"><i class="material-icons">&#xE254;</i></a><a href="#" class="delete" title="Xóa" onclick="delete_DANGKYTAINANHUHONG(`' + item.ID + '`)"><i class="material-icons">&#xE872;</i></a></div></td></tr>';
+                        tabletext += '</td><td><div style="display: flex; justify-content: space-around;"><a href="#" class="edit" title="Sửa" data-toggle="modal" data-target="#model-edit-DANGKYTAINANHUHONG"  onclick="onclick_edit_DANGKYTAINANHUHONG(`' + item.ID + '`,`' + item.THOIGIAN + '`,`' + item.DIADIEM + '`,`' + item.LOAI + '`,`' + item.MUCDO + '`,`' + item.NGUYENNHAN.KHACHQUAN + '`,`' + item.NGUYENNHAN.CHUQUAN + '`,`' + item.NGUYENNHAN.TRINHDO + '`,`' + item.GHICHU + '`)"><i class="material-icons">&#xE254;</i></a><a href="#" class="delete" title="Xóa" onclick="delete_DANGKYTAINANHUHONG(`' + item.ID + '`)"><i class="material-icons">&#xE872;</i></a></div></td></tr>';
                         i = i + 1;
                     });
                     tabletext += "</tbody>";

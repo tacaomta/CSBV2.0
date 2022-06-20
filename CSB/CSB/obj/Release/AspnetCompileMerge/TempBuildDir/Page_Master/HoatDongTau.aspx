@@ -233,7 +233,7 @@
                         var tabletext = "<thead><tr><th>STT</th><th>NGÀY, THÁNG, NĂM</th><th>NƠI XUẤT PHÁT</th><th>NƠI ĐẾN</th><th>SỐ NGÀY HOẠT ĐỘNG</th><th>TỔNG SỐ HLHT</th><th>GHI CHÚ</th><th>TÁC VỤ</th></tr></thead><tbody>";
                         var i = 1;
                         $.each(data, function (key, item) {
-                            tabletext += "<tr><td>" + i + "</td><td>" + item.NGAYTHANG + "</td><td>" + item.NOIXUATPHAT + "</td><td>" + item.NOIDEN + "</td><td>" + item.SONGAYHD + "</td><td>" + item.HAILY + "</td><td>" + item.GHICHU + "</td>" + '<td><div style="width: max-content;"><a href="#" class="edit" title="Sửa" data-toggle="modal" data-target="#model-edit-NhatKy" onclick="edit_nhatky(`' + item.ID + '`,`' + item.NGAYTHANG + '`,`' + item.NOIXUATPHAT + '`,`' + item.NOIDEN + '`,`' + item.SONGAYHD + '`,`' + item.HAILY + '`,`' + item.GHICHU + '`)"><i class="material-icons">&#xE254;</i></a><a href="#" class="delete" title="Xóa" onclick="delete_nhatky(`' + item.ID + '`)"><i class="material-icons">&#xE872;</i></a></div></td></tr>';
+                            tabletext += "<tr><td style='text-align: center;'>" + i + "</td><td>" + item.NGAYTHANG + "</td><td>" + item.NOIXUATPHAT + "</td><td>" + item.NOIDEN + "</td><td>" + item.SONGAYHD + "</td><td>" + item.HAILY + "</td><td>" + item.GHICHU + "</td>" + '<td><div style="display: flex; justify-content: space-around;"><a href="#" class="edit" title="Sửa" data-toggle="modal" data-target="#model-edit-NhatKy" onclick="edit_nhatky(`' + item.ID + '`,`' + item.NGAYTHANG + '`,`' + item.NOIXUATPHAT + '`,`' + item.NOIDEN + '`,`' + item.SONGAYHD + '`,`' + item.HAILY + '`,`' + item.GHICHU + '`)"><i class="material-icons">&#xE254;</i></a><a href="#" class="delete" title="Xóa" onclick="delete_nhatky(`' + item.ID + '`)"><i class="material-icons">&#xE872;</i></a></div></td></tr>';
                             i = i + 1;
                         });
                         tabletext += "</tbody>";
@@ -311,12 +311,17 @@
             var form = document.getElementById("form-add-NhatKy");
             console.log(form.checkValidity());
             if (form.checkValidity() == true) {
-                var date_ntn = new Date();
-                debugger
-                date_ntn = $("#NhatKy_addNgayThangNam").val();
-                var year = date_ntn.substring(0, 4);
-                var month = date_ntn.substring(5, 7);
-                var day = date_ntn.substring(8, 10);
+                var date_ntn = new Date($("#NhatKy_addNgayThangNam").val());
+                var day = date_ntn.getDate();
+                var month = date_ntn.getMonth();
+                month++;
+                var year = date_ntn.getFullYear();
+                if (day < 10) {
+                    day = '0' + day;
+                }
+                if (month < 10) {
+                    month = '0' + month;
+                }
                 date_ntn = day + '/' + month + '/' + year;
                 var NhatKy = {
 
@@ -371,12 +376,17 @@
             var form = document.getElementById("form-edit-NhatKy");
             console.log(form.checkValidity());
             if (form.checkValidity() == true) {
-                var date_ntn = new Date();
-                debugger
-                date_ntn = $("#NhatKy_editNgayThangNam").val();
-                var year = date_ntn.substring(0, 4);
-                var month = date_ntn.substring(5, 7);
-                var day = date_ntn.substring(8, 10);
+                var date_ntn = new Date($("#NhatKy_editNgayThangNam").val());
+                var day = date_ntn.getDate();
+                var month = date_ntn.getMonth();
+                month++;
+                var year = date_ntn.getFullYear();
+                if (day < 10) {
+                    day = '0' + day;
+                }
+                if (month < 10) {
+                    month = '0' + month;
+                }
                 date_ntn = day + '/' + month + '/' + year;
                 var id_nhatky = $("#NhatKy_editID").val();
                 var NhatKy = {
