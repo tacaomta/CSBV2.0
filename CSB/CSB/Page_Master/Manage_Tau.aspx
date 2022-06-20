@@ -15,7 +15,7 @@
                 <h4 id="title" style="color: black; margin: 0">QUẢN LÝ TÀU - VÙNG 1</h4>
                 <div class="section-header-breadcrumb">
                     <div class="breadcrumb-item"><a href="Null.aspx" style="color: #01b5f9; font-size: 18px;">Trang chủ</a></div>
-                    <div class="breadcrumb-item"><a href="Manage_ship?vung=1" style="color: #01b5f9; font-size: 18px;">Quản lý tàu</a></div>
+                    <div class="breadcrumb-item"><a href="Manage_Tau?vung=1" style="color: #01b5f9; font-size: 18px;">Quản lý tàu</a></div>
                 </div>
             </div>
             <div class="section-content">
@@ -31,26 +31,11 @@
                 <div class="section-header" style="padding-bottom: 15px;">
                     <div class="col-md-12" style="padding: 0">
                         <table id="tableship" class="table table-bordered table-striped table-md" style="width: 100%">
-                            <tbody>
-                            <thead>
-                                <tr>
-                                    <th>STT</th>
-                                    <th>SỐ HIỆU</th>
-                                    <th>KÝ HIỆU</th>
-                                    <th>NƠI SẢN XUẤT</th>
-                                    <th>NĂM TIẾP NHẬN</th>
-                                    <th>CHỨC NĂNG, NHIỆM VỤ</th>
-                                    <th>HỒ SƠ TẦU</th>
-                                    <th>TÁC VỤ</th>
-                                </tr>
-                            </thead>
-                            <tbody>
                         </table>
                     </div>
                 </div>
             </div>
         </div>
-
     </div>
     <script src="../Scripts/jquery-3.4.1.slim.min.js"></script>
     <script src="../Scripts/jquery-3.4.1.min.js"></script>
@@ -98,7 +83,6 @@
             }
             $('#title').text('QUẢN LÝ TÀU - VÙNG ' + vung);
             loadDataListShips(vung_id);
-
         });
         function loadDataListShips(vung_id) {
             debugger
@@ -182,7 +166,6 @@
                     .appendTo('this_wrapper .col-md-6:eq(0)');
             });
         };
-
         function btn_addship() {
             window.location = baseaddress + "Page_Master/DacDiemChung";
         }

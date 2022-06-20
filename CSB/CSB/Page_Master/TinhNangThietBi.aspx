@@ -3442,10 +3442,10 @@
                     searching: false,
                     stateSave: true,
                     "columns": [
-                        { name: 'STT', width: 90 },
-                        { name: 'KÝ HIỆU', width: 380 },
-                        { name: 'SỐ LƯỢNG', width: 380 },
-                        { name: 'TÁC VỤ', width: 150 },
+                        { name: 'STT', width: 60 },
+                        { name: 'KÝ HIỆU', width: 700 },
+                        { name: 'SỐ LƯỢNG', width: 100 },
+                        { name: 'TÁC VỤ', width: 100 },
                     ],
                     lengthChange: false,
                     "language": {
