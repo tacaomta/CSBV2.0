@@ -26,7 +26,7 @@
             </div>
         </div>
     </div>
-        <div class="modal fade" id="model-add-KiemTraKT" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog">
+    <div class="modal fade" id="model-add-KiemTraKT" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <form id="form-add-KiemTraKT" onsubmit="return false">
@@ -64,7 +64,7 @@
                                     <div class="form-group" style="display: flex">
                                         <label class="col-md-5 control-label"><strong>Chất lượng cấp kiểm tra   : </strong></label>
                                         <div class="col-md-7">
-                                            <input type="text"  class="form-control" id="KiemTraKT_addChatLuongCapKT"  placeholder="Nhập chất lượng cấp kiểm tra" required >
+                                            <input type="text" class="form-control" id="KiemTraKT_addChatLuongCapKT" placeholder="Nhập chất lượng cấp kiểm tra" required>
                                         </div>
                                     </div>
                                 </div>
@@ -72,7 +72,7 @@
                                     <div class="form-group" style="display: flex">
                                         <label class="col-md-5 control-label"><strong>Kết luận : </strong></label>
                                         <div class="col-md-7">
-                                            <input type="text"  class="form-control" id="KiemTraKT_addKetLuanKT" placeholder="Nhập kết luận kiểm tra " required>
+                                            <input type="text" class="form-control" id="KiemTraKT_addKetLuanKT" placeholder="Nhập kết luận kiểm tra " required>
                                         </div>
                                     </div>
                                 </div>
@@ -105,7 +105,7 @@
                         <div class="modal-header" style="padding: 10px 16px;">
                             <h4 class="title-modal-banve font-weight-bold">Sửa kiểm tra kỹ thuật của tàu</h4>
                         </div>
-                              <div class="modal-body" style="padding: 6px 16px;">
+                        <div class="modal-body" style="padding: 6px 16px;">
                             <div class="row clearfix ">
                                 <div style="width: 100%; float: left; padding: 10px">
                                     <div class="form-group" style="display: flex">
@@ -135,7 +135,7 @@
                                     <div class="form-group" style="display: flex">
                                         <label class="col-md-5 control-label"><strong>Chất lượng cấp kiểm tra   : </strong></label>
                                         <div class="col-md-7">
-                                            <input type="text"  class="form-control" id="KiemTraKT_editChatLuongCapKT"  placeholder="Nhập chất lượng cấp kiểm tra" required >
+                                            <input type="text" class="form-control" id="KiemTraKT_editChatLuongCapKT" placeholder="Nhập chất lượng cấp kiểm tra" required>
                                         </div>
                                     </div>
                                 </div>
@@ -143,7 +143,7 @@
                                     <div class="form-group" style="display: flex">
                                         <label class="col-md-5 control-label"><strong>Kết luận : </strong></label>
                                         <div class="col-md-7">
-                                            <input type="text"  class="form-control" id="KiemTraKT_editKetLuanKT" placeholder="Nhập kết luận kiểm tra " required>
+                                            <input type="text" class="form-control" id="KiemTraKT_editKetLuanKT" placeholder="Nhập kết luận kiểm tra " required>
                                         </div>
                                     </div>
                                 </div>
@@ -166,7 +166,7 @@
             </div>
         </div>
     </div>
-     <script src="../Scripts/jquery-3.4.1.slim.min.js"></script>
+    <script src="../Scripts/jquery-3.4.1.slim.min.js"></script>
     <script>
         var date = new Date();
         if (Number(date.getMonth()) + 1 < 10) {
@@ -311,12 +311,21 @@
             var form = document.getElementById("form-add-KiemTraKT");
             console.log(form.checkValidity());
             if (form.checkValidity() == true) {
-                var date_ntn = new Date();
-                debugger
-                date_ntn = $("#KiemTraKT_addNgayThangNam").val();
-                var year = date_ntn.substring(0, 4);
-                var month = date_ntn.substring(5, 7);
-                var day = date_ntn.substring(8, 10);
+                var date_ntn = new Date($("#KiemTraKT_addNgayThangNam").val());
+                var day = date_ntn.getDate();
+                var month = date_ntn.getMonth();
+                month++;
+                var year = date_ntn.getFullYear();
+                //date_ntn = $("#KiemTraKT_addNgayThangNam").val();
+                //var year = date_ntn.substring(0, 4);
+                //var month = date_ntn.substring(5, 7);
+                //var day = date_ntn.substring(8, 10);
+                if (day < 10) {
+                    day = '0' + day;
+                }
+                if (month < 10) {
+                    month = '0' + month;
+                }
                 date_ntn = day + '/' + month + '/' + year;
                 var KiemTraKT = {
 
@@ -353,6 +362,7 @@
             }
         }
         function editKiemTraKT(ID, NGAYTHANG, CAPKIEMTRA, TOMTATTINHTRANG, CHATLUONG, KETLUAN, TRUONGDOAN) {
+            debugger
             var day = NGAYTHANG.substring(0, 2);
             var month = NGAYTHANG.substring(3, 5);
             var year = NGAYTHANG.substring(6, 10);
@@ -370,13 +380,20 @@
             var form = document.getElementById("form-edit-KiemTraKT");
             console.log(form.checkValidity());
             if (form.checkValidity() == true) {
-                var date_ntn = new Date();
-                debugger
-                date_ntn = $("#KiemTraKT_editNgayThangNam").val();
-                var year = date_ntn.substring(0, 4);
-                var month = date_ntn.substring(5, 7);
-                var day = date_ntn.substring(8, 10);
+                var date_ntn = new Date($("#KiemTraKT_editNgayThangNam").val());
+                var day = date_ntn.getDate();
+                var month = date_ntn.getMonth();
+                month++;
+                var year = date_ntn.getFullYear();
+                if (day < 10) {
+                    day = '0' + day;
+                }
+                if (month < 10) {
+                    month = '0' + month;
+                }
                 date_ntn = day + '/' + month + '/' + year;
+                date_ntn = day + '/' + month + '/' + year;
+
                 var id_kiemtra = $("#KiemTraKT_editID").val();
                 var KiemTraKT = {
                     ID: id_kiemtra,
