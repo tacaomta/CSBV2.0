@@ -410,7 +410,7 @@
                     var tabletext = "<thead><tr><th>STT</th><th>Tên thiết bị</th><th>Số lượng</th><th>Phương án giải quyết</th><th>Lý do</th><th>Ghi chú</th><th>Tác vụ</th></tr></thead><tbody>";
                     var i = 1;
                     $.each(data, function (key, item) {
-                        tabletext += "<tr><td>" + i + "</td><td>" + item.TENTHIETBI + "</td><td>" + item.SOLUONG + "</td><td>" + item.PHUONGAN + "</td><td>" + item.LYDO + "</td><td>" + item.GHICHU + '</td><td><div style="width: max-content;"><a href="#" class="edit" title="Sửa" data-toggle="modal" data-target="#model-edit-THEODOICAIHOANTHAYTHE"  onclick="onclick_edit_THEODOICAIHOANTHAYTHE(`' + item.ID + '`,`' + item.TENTHIETBI + '`,`' + item.SOLUONG + '`,`' + item.PHUONGAN + '`,`' + item.LYDO + '`,`' + item.GHICHU + '`,`' + item.IDTHIETBI + '`)"><i class="material-icons">&#xE254;</i></a><a href="#" class="delete" title="Xóa" onclick="delete_THEODOICAIHOANTHAYTHE(`' + item.ID + '`)"><i class="material-icons">&#xE872;</i></a></div></td></tr>';
+                        tabletext += "<tr><td style='text-align: center;'>" + i + "</td><td>" + item.TENTHIETBI + "</td><td>" + item.SOLUONG + "</td><td>" + item.PHUONGAN + "</td><td>" + item.LYDO + "</td><td>" + item.GHICHU + '</td><td><div style="display: flex; justify-content: space-around;"><a href="#" class="edit" title="Sửa" data-toggle="modal" data-target="#model-edit-THEODOICAIHOANTHAYTHE"  onclick="onclick_edit_THEODOICAIHOANTHAYTHE(`' + item.ID + '`,`' + item.TENTHIETBI + '`,`' + item.SOLUONG + '`,`' + item.PHUONGAN + '`,`' + item.LYDO + '`,`' + item.GHICHU + '`,`' + item.IDTHIETBI + '`)"><i class="material-icons">&#xE254;</i></a><a href="#" class="delete" title="Xóa" onclick="delete_THEODOICAIHOANTHAYTHE(`' + item.ID + '`)"><i class="material-icons">&#xE872;</i></a></div></td></tr>';
                         i = i + 1;
                     });
                     tabletext += "</tbody>";
@@ -429,13 +429,13 @@
                     searching: false,
                     stateSave: true,
                     "columns": [
-                        { name: 'STT', width: 50 },
-                        { name: 'Tên thiết bị', width: 180 },
+                        { name: 'STT', width: 60 },
+                        { name: 'Tên thiết bị', width: 260 },
                         { name: 'Số lượng', width: 100 },
                         { name: 'Phương án giải quyết', width: 350 },
                         { name: 'Lý do', width: 300 },
                         { name: 'Ghi chú', width: 300 },
-                        { name: 'Tác vụ', width: 150 },
+                        { name: 'Tác vụ', width: 80 },
                     ],
                     lengthChange: false,
                     "language": {

@@ -451,16 +451,30 @@
             console.log(form.checkValidity());
             if (form.checkValidity() == true) {
 
-                date_bd = $("#SuaChua_addTGbatdau").val();
-                var year = date_bd.substring(0, 4);
-                var month = date_bd.substring(5, 7);
-                var day = date_bd.substring(8, 10);
+                var date_bd = new Date($("#SuaChua_addTGbatdau").val());
+                var day = date_bd.getDate();
+                var month = date_bd.getMonth();
+                month++;
+                var year = date_bd.getFullYear();
+                if (day < 10) {
+                    day = '0' + day;
+                }
+                if (month < 10) {
+                    month = '0' + month;
+                }
                 date_bd = day + '/' + month + '/' + year;
 
-                date_kt = $("#SuaChua_addTGketthuc").val();
-                var year = date_kt.substring(0, 4);
-                var month = date_kt.substring(5, 7);
-                var day = date_kt.substring(8, 10);
+                var date_kt = new Date($("#SuaChua_addTGketthuc").val());
+                var day = date_kt.getDate();
+                var month = date_kt.getMonth();
+                month++;
+                var year = date_kt.getFullYear();
+                if (day < 10) {
+                    day = '0' + day;
+                }
+                if (month < 10) {
+                    month = '0' + month;
+                }
                 date_kt = day + '/' + month + '/' + year;
 
                 var SuaChuaTau= {
@@ -532,17 +546,31 @@
             var form = document.getElementById("form-edit-SuaChuaTau");
             console.log(form.checkValidity());
             if (form.checkValidity() == true) {
-                var date_ntn = new Date();
                 debugger
-                date_bd = $("#SuaChua_editTGbatdau").val();
-                var year = date_bd.substring(0, 4);
-                var month = date_bd.substring(5, 7);
-                var day = date_bd.substring(8, 10);
+                var date_bd = new Date($("#SuaChua_editTGbatdau").val());
+                var day = date_bd.getDate();
+                var month = date_bd.getMonth();
+                month++;
+                var year = date_bd.getFullYear();
+                if (day < 10) {
+                    day = '0' + day;
+                }
+                if (month < 10) {
+                    month = '0' + month;
+                }
                 date_bd = day + '/' + month + '/' + year;
-                date_kt = $("#SuaChua_editTGketthuc").val();
-                var year = date_kt.substring(0, 4);
-                var month = date_kt.substring(5, 7);
-                var day = date_kt.substring(8, 10);
+
+                var date_kt = new Date($("#SuaChua_editTGketthuc").val());
+                var day = date_kt.getDate();
+                var month = date_kt.getMonth();
+                month++;
+                var year = date_kt.getFullYear();
+                if (day < 10) {
+                    day = '0' + day;
+                }
+                if (month < 10) {
+                    month = '0' + month;
+                }
                 date_kt = day + '/' + month + '/' + year;
                 var SuaChuaTau = {
                     ID: $("#SuaChua_editID").val(),

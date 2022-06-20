@@ -311,12 +311,17 @@
             var form = document.getElementById("form-add-NhatKy");
             console.log(form.checkValidity());
             if (form.checkValidity() == true) {
-                var date_ntn = new Date();
-                debugger
-                date_ntn = $("#NhatKy_addNgayThangNam").val();
-                var year = date_ntn.substring(0, 4);
-                var month = date_ntn.substring(5, 7);
-                var day = date_ntn.substring(8, 10);
+                var date_ntn = new Date($("#NhatKy_addNgayThangNam").val());
+                var day = date_ntn.getDate();
+                var month = date_ntn.getMonth();
+                month++;
+                var year = date_ntn.getFullYear();
+                if (day < 10) {
+                    day = '0' + day;
+                }
+                if (month < 10) {
+                    month = '0' + month;
+                }
                 date_ntn = day + '/' + month + '/' + year;
                 var NhatKy = {
 
@@ -371,12 +376,17 @@
             var form = document.getElementById("form-edit-NhatKy");
             console.log(form.checkValidity());
             if (form.checkValidity() == true) {
-                var date_ntn = new Date();
-                debugger
-                date_ntn = $("#NhatKy_editNgayThangNam").val();
-                var year = date_ntn.substring(0, 4);
-                var month = date_ntn.substring(5, 7);
-                var day = date_ntn.substring(8, 10);
+                var date_ntn = new Date($("#NhatKy_editNgayThangNam").val());
+                var day = date_ntn.getDate();
+                var month = date_ntn.getMonth();
+                month++;
+                var year = date_ntn.getFullYear();
+                if (day < 10) {
+                    day = '0' + day;
+                }
+                if (month < 10) {
+                    month = '0' + month;
+                }
                 date_ntn = day + '/' + month + '/' + year;
                 var id_nhatky = $("#NhatKy_editID").val();
                 var NhatKy = {

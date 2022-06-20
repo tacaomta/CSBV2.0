@@ -392,7 +392,6 @@
                     month = '0' + month;
                 }
                 date_ntn = day + '/' + month + '/' + year;
-                date_ntn = day + '/' + month + '/' + year;
 
                 var id_kiemtra = $("#KiemTraKT_editID").val();
                 var KiemTraKT = {

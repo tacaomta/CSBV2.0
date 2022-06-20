@@ -366,7 +366,7 @@
                         var tabletext = "<thead><tr><th rowspan='2'>STT</th><th colspan='2'>TG SỬA CHỮA</th><th rowspan='2'>NƠI SỬA CHỮA</th><th rowspan='2'>CẤP SỬA CHỮA</th><th rowspan='2'>GIÁ THÀNH(VNĐ)</th><th rowspan='2'>NỘI DUNG SỬA CHỮA</th><th rowspan='2'>CHẤT LƯỢNG</th><th rowspan='2'>GHI CHÚ</th><th rowspan='2'>TÁC VỤ</th></tr><tr><th>Bắt đầu</th><th>Kết thúc</th></tr></thead><tbody>";
                         var i = 1;
                         $.each(data, function (key, item) {
-                            tabletext += "<tr><td>" + i + "</td><td>" + item.THOIGIAN.BATDAU + "</td><td>" + item.THOIGIAN.KETTHUC + "</td><td>" + item.NOISUACHUA + "</td><td>" + item.CAPSUACHUA.CAP + "</td><td>" + item.GIATHANH + "</td><td>" + item.TOMTATNOIDUNG + "</td><td>" + item.DANHGIACHATLUONG + "</td><td>" + item.GHICHU + "</td>" + '<td><div style="width: max-content;"><a href="#" class="edit" title="Sửa" data-toggle="modal" data-target="#model-edit-SuaChuaTau" onclick="edit_suachuatau(`' + item.ID + '`,`' + item.THOIGIAN.BATDAU + '`,`' + item.THOIGIAN.KETTHUC + '`,`' + item.NOISUACHUA + '`,`' + item.CAPSUACHUA.ID + '`,`' + item.PHUONGANKEDA + '`,`' + item.GIATHANH + '`,`' + item.TOMTATNOIDUNG + '`,`' + item.DANHGIACHATLUONG + '`,`' + item.GHICHU + '`)"><i class="material-icons">&#xE254;</i></a><a href="#" class="delete" title="Xóa" onclick="delete_suachuatau(`' + item.ID + '`)"><i class="material-icons">&#xE872;</i></a></div></td></tr>';
+                            tabletext += "<tr><td style='text-align: center;'>" + i + "</td><td>" + item.THOIGIAN.BATDAU + "</td><td>" + item.THOIGIAN.KETTHUC + "</td><td>" + item.NOISUACHUA + "</td><td>" + item.CAPSUACHUA.CAP + "</td><td>" + item.GIATHANH + "</td><td>" + item.TOMTATNOIDUNG + "</td><td>" + item.DANHGIACHATLUONG + "</td><td>" + item.GHICHU + "</td>" + '<td><div style="display: flex; justify-content: space-around;"><a href="#" class="edit" title="Sửa" data-toggle="modal" data-target="#model-edit-SuaChuaTau" onclick="edit_suachuatau(`' + item.ID + '`,`' + item.THOIGIAN.BATDAU + '`,`' + item.THOIGIAN.KETTHUC + '`,`' + item.NOISUACHUA + '`,`' + item.CAPSUACHUA.ID + '`,`' + item.PHUONGANKEDA + '`,`' + item.GIATHANH + '`,`' + item.TOMTATNOIDUNG + '`,`' + item.DANHGIACHATLUONG + '`,`' + item.GHICHU + '`)"><i class="material-icons">&#xE254;</i></a><a href="#" class="delete" title="Xóa" onclick="delete_suachuatau(`' + item.ID + '`)"><i class="material-icons">&#xE872;</i></a></div></td></tr>';
                             i = i + 1;
                         });
                         tabletext += "</tbody>";
@@ -451,16 +451,30 @@
             console.log(form.checkValidity());
             if (form.checkValidity() == true) {
 
-                date_bd = $("#SuaChua_addTGbatdau").val();
-                var year = date_bd.substring(0, 4);
-                var month = date_bd.substring(5, 7);
-                var day = date_bd.substring(8, 10);
+                var date_bd = new Date($("#SuaChua_addTGbatdau").val());
+                var day = date_bd.getDate();
+                var month = date_bd.getMonth();
+                month++;
+                var year = date_bd.getFullYear();
+                if (day < 10) {
+                    day = '0' + day;
+                }
+                if (month < 10) {
+                    month = '0' + month;
+                }
                 date_bd = day + '/' + month + '/' + year;
 
-                date_kt = $("#SuaChua_addTGketthuc").val();
-                var year = date_kt.substring(0, 4);
-                var month = date_kt.substring(5, 7);
-                var day = date_kt.substring(8, 10);
+                var date_kt = new Date($("#SuaChua_addTGketthuc").val());
+                var day = date_kt.getDate();
+                var month = date_kt.getMonth();
+                month++;
+                var year = date_kt.getFullYear();
+                if (day < 10) {
+                    day = '0' + day;
+                }
+                if (month < 10) {
+                    month = '0' + month;
+                }
                 date_kt = day + '/' + month + '/' + year;
 
                 var SuaChuaTau= {
@@ -532,17 +546,31 @@
             var form = document.getElementById("form-edit-SuaChuaTau");
             console.log(form.checkValidity());
             if (form.checkValidity() == true) {
-                var date_ntn = new Date();
                 debugger
-                date_bd = $("#SuaChua_editTGbatdau").val();
-                var year = date_bd.substring(0, 4);
-                var month = date_bd.substring(5, 7);
-                var day = date_bd.substring(8, 10);
+                var date_bd = new Date($("#SuaChua_editTGbatdau").val());
+                var day = date_bd.getDate();
+                var month = date_bd.getMonth();
+                month++;
+                var year = date_bd.getFullYear();
+                if (day < 10) {
+                    day = '0' + day;
+                }
+                if (month < 10) {
+                    month = '0' + month;
+                }
                 date_bd = day + '/' + month + '/' + year;
-                date_kt = $("#SuaChua_editTGketthuc").val();
-                var year = date_kt.substring(0, 4);
-                var month = date_kt.substring(5, 7);
-                var day = date_kt.substring(8, 10);
+
+                var date_kt = new Date($("#SuaChua_editTGketthuc").val());
+                var day = date_kt.getDate();
+                var month = date_kt.getMonth();
+                month++;
+                var year = date_kt.getFullYear();
+                if (day < 10) {
+                    day = '0' + day;
+                }
+                if (month < 10) {
+                    month = '0' + month;
+                }
                 date_kt = day + '/' + month + '/' + year;
                 var SuaChuaTau = {
                     ID: $("#SuaChua_editID").val(),
