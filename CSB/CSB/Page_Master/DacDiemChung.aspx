@@ -487,9 +487,6 @@
                 $("#addTTC-HAIDOI").attr('disabled', '');
                 $("#text-remove-input").text(" Đặt lại dữ liệu");
                 $("#text-save").text(" Cập nhật");
-                $("#chonVung").css("display", "none");
-                $("#chonHaiDoan").css("display", "none");
-                $("#chonHaiDoi").css("display", "none");
                 loadDataShip(Ship_ID);
             }
 
@@ -815,6 +812,7 @@
                     url: linkapi + "dacdiemchung?id=" + id,
                     dataType: "json",
                     success: function (data) {
+                        console.log(data.HAIDOI);
                         $("#name").text("ĐẶC ĐIỂM CHUNG - TÀU " + data.THONGTIN.TTCOBAN.SOHIEU);
                         $("#addTTC-ID").val(data.THONGTIN.ID);
                         $("#addMeta-Created").val(data.THONGTIN.Meta.Created);
@@ -824,7 +822,9 @@
                         $("#addTTC-NAMHATHUY").val(data.THONGTIN.TTCOBAN.NAMHATHUY);
                         $("#addTTC-NAMTIEPNHAN").val(data.THONGTIN.TTCOBAN.NAMTIEPNHAN);
                         $("#addTTC-CHUCNANG").val(data.THONGTIN.TTCOBAN.CHUCNANG);
-                        // Vùng, hải đoàn, hải đội
+                        $("#addTTC-HAIDOI").html("<option selected>" + data.HAIDOI.Name + '</option>');
+                        $("#addTTC-HAIDOAN").html("<option selected>" + data.HAIDOI.Squadron.Name + '</option>');
+                        $("#addTTC-VUNG").html("<option selected>" + data.HAIDOI.NavalRegion.ShortName + '</option>');
                         // thông tin thay đổi số hiệu
                         var tabletext = "<thead><tr><th>Tháng, năm</th><th>Số hiệu</th><th>Cấp quy định</th></thead><tbody>";
                         var i = 1;

@@ -8,6 +8,34 @@
         .subMenu ul li {
             cursor: pointer;
         }
+        
+        .blue-color:hover {
+            color: blue;
+        }
+
+        .green-color:hover {
+            color: green;
+        }
+
+        .orange-color:hover {
+            color: orange;
+        }
+
+        .revert-color:hover {
+            color: #551A8B;
+        }
+
+        .edit-color:hover {
+            color: #FFC107;
+        }
+
+        .red-color:hover {
+            color: red;
+        }
+
+        .bnw {
+            color: #bababa;
+        }
     </style>
     <div id="form1">
         <div class="section" style="background-color: #fff; padding-bottom: 15px;">
@@ -15,7 +43,7 @@
                 <h4 id="title" style="color: black; margin: 0">QUẢN LÝ TÀU - VÙNG 1</h4>
                 <div class="section-header-breadcrumb">
                     <div class="breadcrumb-item"><a href="Null.aspx" style="color: #01b5f9; font-size: 18px;">Trang chủ</a></div>
-                    <div class="breadcrumb-item"><a href="Manage_ship?vung=1" style="color: #01b5f9; font-size: 18px;">Quản lý tàu</a></div>
+                    <div class="breadcrumb-item"><a href="Manage_Tau?vung=1" style="color: #01b5f9; font-size: 18px;">Quản lý tàu</a></div>
                 </div>
             </div>
             <div class="section-content">
@@ -31,26 +59,11 @@
                 <div class="section-header" style="padding-bottom: 15px;">
                     <div class="col-md-12" style="padding: 0">
                         <table id="tableship" class="table table-bordered table-striped table-md" style="width: 100%">
-                            <tbody>
-                            <thead>
-                                <tr>
-                                    <th>STT</th>
-                                    <th>SỐ HIỆU</th>
-                                    <th>KÝ HIỆU</th>
-                                    <th>NƠI SẢN XUẤT</th>
-                                    <th>NĂM TIẾP NHẬN</th>
-                                    <th>CHỨC NĂNG, NHIỆM VỤ</th>
-                                    <th>HỒ SƠ TẦU</th>
-                                    <th>TÁC VỤ</th>
-                                </tr>
-                            </thead>
-                            <tbody>
                         </table>
                     </div>
                 </div>
             </div>
         </div>
-
     </div>
     <script src="../Scripts/jquery-3.4.1.slim.min.js"></script>
     <script src="../Scripts/jquery-3.4.1.min.js"></script>
@@ -67,6 +80,7 @@
             if (!results[2]) return '';
             return decodeURIComponent(results[2].replace(/\+/g, ' '));
         }
+        
         $(document).ready(function () {
             if (vung == null | vung == 1) {
                 vung_id = '5AEBB23FF45F3C235AFD86B510BF9E8C';
@@ -98,6 +112,9 @@
             }
             $('#title').text('QUẢN LÝ TÀU - VÙNG ' + vung);
             loadDataListShips(vung_id);
+            $(".view").hover(function () {
+                $(this).toggleClass("bnw");
+            });
 
         });
         function loadDataListShips(vung_id) {
@@ -113,7 +130,7 @@
                     var tabletext = "<thead><tr><th>STT</th><th>SỐ HIỆU</th><th>KÝ HIỆU</th><th>NƠI SẢN XUẤT</th><th>NĂM TIẾP NHẬN</th><th>CHỨC NĂNG, NHIỆM VỤ</th><th  title='Xem hồ sơ tầu'>HỒ SƠ TÀU</th><th>TÁC VỤ</th></tr></thead><tbody>";
                     var i = 1;
                     $.each(data, function (key, item) {
-                        tabletext += "<tr><td style='text-align: center;'>" + i + "</td><td>" + item.TTCOBAN.SOHIEU + "</td><td>" + item.TTCOBAN.KYHIEU + "</td><td>" + item.TTCOBAN.NOISANXUAT + "</td><td>" + item.TTCOBAN.NAMTIEPNHAN + "</td><td>" + item.TTCOBAN.CHUCNANG + "</td>" + '<td style="text-align: center;"><a href="#" class="view"  title="Xem hồ sơ tàu" onclick="View_HoSoTau(`' + item.ID + '`)"><i class="material-icons">&#xE417;</i></a></td>' + '<td><div style="width: max-content;"><a href="#" style="color:blue" title="Xuất file Word" onclick="xuatWordTau(`' + item.ID + '`)"><i class="material-icons">text_snippet</i></a><a href="#" style="color:green" title="Xuất file Excel" onclick="xuatExcelTau(`' + item.ID + '`)"><i class="material-icons">description</i></a><a href="#" style="color:orange" title="Xuất file pdf" onclick="xuatPdfTau(`' + item.ID + '`)"><i class="material-icons">picture_as_pdf</i></a><a href="#" style="color:revert" title="In báo cáo" onclick="inBCTau(`' + item.ID + '`)"><i class="material-icons">print</i></a><a href="#" class="edit" title="Sửa" onclick="ViewInforShip(`' + item.ID + '`)"><i class="material-icons">&#xE254;</i></a><a href="#" class="delete" title="Xóa" onclick="delete_ship(`' + item.ID + '`)"><i class="material-icons">&#xE872;</i></a></div></td></tr>';
+                        tabletext += "<tr><td style='text-align: center;'>" + i + "</td><td>" + item.TTCOBAN.SOHIEU + "</td><td>" + item.TTCOBAN.KYHIEU + "</td><td>" + item.TTCOBAN.NOISANXUAT + "</td><td>" + item.TTCOBAN.NAMTIEPNHAN + "</td><td>" + item.TTCOBAN.CHUCNANG + "</td>" + '<td style="text-align: center;"><a href="#" class="view bnw"  title="Xem hồ sơ tàu" onclick="View_HoSoTau(`' + item.ID + '`)"><i class="material-icons">&#xE417;</i></a></td>' + '<td><div style="width: max-content;"><a href="#" class="view blue-color bnw" title="Xuất file Word" onclick="xuatWordTau(`' + item.ID + '`)"><i class="material-icons">text_snippet</i></a><a href="#" class="view green-color bnw" title="Xuất file Excel" onclick="xuatExcelTau(`' + item.ID + '`)"><i class="material-icons">description</i></a><a href="#" class="view orange-color bnw" title="Xuất file pdf" onclick="xuatPdfTau(`' + item.ID + '`)"><i class="material-icons">picture_as_pdf</i></a><a href="#" class="view revert-color bnw" title="In báo cáo" onclick="inBCTau(`' + item.ID + '`)"><i class="material-icons">print</i></a><a href="#" class="view edit-color bnw" title="Sửa" onclick="ViewInforShip(`' + item.ID + '`)"><i class="material-icons">&#xE254;</i></a><a href="#" class="view red-color bnw" title="Xóa" onclick="delete_ship(`' + item.ID + '`)"><i class="material-icons">&#xE872;</i></a></div></td></tr>';
                         i = i + 1;
                     });
                     tabletext += "</tbody>";
@@ -182,7 +199,6 @@
                     .appendTo('this_wrapper .col-md-6:eq(0)');
             });
         };
-
         function btn_addship() {
             window.location = baseaddress + "Page_Master/DacDiemChung";
         }

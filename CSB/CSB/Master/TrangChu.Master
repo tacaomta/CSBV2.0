@@ -1048,7 +1048,7 @@
                 sessionStorage.removeItem("userLoginFullname");
                 sessionStorage.removeItem("userLoginID");
             }
-            window.location = "http://localhost:44347/Page_Master/Login";
+            window.location = baseaddress + "Page_Master/Login";
         }
         /* sidebar */
         var dropdown = document.getElementsByClassName("dropdown-btn");
