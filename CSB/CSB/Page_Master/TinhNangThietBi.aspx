@@ -109,7 +109,7 @@
                                         <h5>HÀNG HẢI</h5>
                                         <div class="btn-group">
                                             <button onclick="loadDataList_HANGHAI()" class="btn btn-secondary mb-2"><span class="bi-arrow-clockwise"></span>&nbsp;Load dữ liệu</button>
-                                            <button id="btn_add_HANGHAI" class="btn btn-secondary mb-2" data-toggle="modal" data-target="#model-add-HANGHAI" style="padding-top: 4px;"><span class="bi bi-plus-circle"></span>Thêm hàng hải</button>
+                                            <button id="btn_add_HANGHAI" class="btn btn-secondary mb-2" data-toggle="modal" data-target="#model-add-HANGHAI" style="padding-top: 4px;"><span class="bi bi-plus-circle"></span> Thêm hàng hải</button>
                                         </div>
                                         <table id="table-HANGHAI" class="table table-bordered table-striped table-md" style="width: 100%">
                                         </table>
@@ -119,7 +119,7 @@
                                         <h5>VŨ KHÍ</h5>
                                         <div class="btn-group">
                                             <button onclick="loadDataList_VUKHI()" class="btn btn-secondary mb-2"><span class="bi-arrow-clockwise"></span>&nbsp;Load dữ liệu</button>
-                                            <button id="btn_add_VUKHI" class="btn btn-secondary mb-2" data-toggle="modal" data-target="#model-add-VUKHI" style="padding-top: 4px;"><span class="bi bi-plus-circle"></span>Thêm vũ khí</button>
+                                            <button id="btn_add_VUKHI" class="btn btn-secondary mb-2" data-toggle="modal" data-target="#model-add-VUKHI" style="padding-top: 4px;"><span class="bi bi-plus-circle"></span> Thêm vũ khí</button>
                                         </div>
                                         <table id="table-VUKHI" class="table table-bordered table-striped table-md" style="width: 100%">
                                         </table>
@@ -129,7 +129,7 @@
                                         <h5>THÔNG TIN - RA ĐA</h5>
                                         <div class="btn-group">
                                             <button onclick="loadDataList_RADA()" class="btn btn-secondary mb-2"><span class="bi-arrow-clockwise"></span>&nbsp;Load dữ liệu</button>
-                                            <button id="btn_add_RADA" class="btn btn-secondary mb-2" data-toggle="modal" data-target="#model-add-RADA" style="padding-top: 4px;"><span class="bi bi-plus-circle"></span>Thêm ra đa</button>
+                                            <button id="btn_add_RADA" class="btn btn-secondary mb-2" data-toggle="modal" data-target="#model-add-RADA" style="padding-top: 4px;"><span class="bi bi-plus-circle"></span> Thêm ra đa</button>
                                         </div>
                                         <table id="table-RADA" class="table table-bordered table-striped table-md" style="width: 100%">
                                         </table>
@@ -139,7 +139,7 @@
                                         <h5>MÁY CHÍNH</h5>
                                         <div class="btn-group">
                                             <button onclick="loadDataList_MAYCHINH()" class="btn btn-secondary mb-2"><span class="bi-arrow-clockwise"></span>&nbsp;Load dữ liệu</button>
-                                            <button class="btn btn-secondary mb-2" data-toggle="modal" data-target="#model-add-MAYCHINH" style="padding-top: 4px;"><span class="bi bi-plus-circle"></span>Thêm máy chính</button>
+                                            <button class="btn btn-secondary mb-2" data-toggle="modal" data-target="#model-add-MAYCHINH" style="padding-top: 4px;"><span class="bi bi-plus-circle"></span> Thêm máy chính</button>
                                         </div>
                                         <table id="table-MAYCHINH" class="table table-bordered table-striped table-md" style="width: 100%">
                                         </table>
@@ -147,7 +147,7 @@
                                         <h5>MÁY PHỤ PHÁT ĐIỆN</h5>
                                         <div class="btn-group">
                                             <button onclick="loadDataList_MAYPHU()" class="btn btn-secondary mb-2"><span class="bi-arrow-clockwise"></span>&nbsp;Load dữ liệu</button>
-                                            <button id="btn_add_MAYPHU" class="btn btn-secondary mb-2" data-toggle="modal" data-target="#model-add-MAYPHU" style="padding-top: 4px;"><span class="bi bi-plus-circle"></span>Thêm máy phụ</button>
+                                            <button id="btn_add_MAYPHU" class="btn btn-secondary mb-2" data-toggle="modal" data-target="#model-add-MAYPHU" style="padding-top: 4px;"><span class="bi bi-plus-circle"></span> Thêm máy phụ</button>
                                         </div>
                                         <table id="table-MAYPHU" class="table table-bordered table-striped table-md" style="width: 100%">
                                         </table>
@@ -155,7 +155,7 @@
                                         <h5>CÁC TỔ MÁY CHUYÊN DỤNG</h5>
                                         <div class="btn-group">
                                             <button onclick="loadDataList_MAYCHUYENDUNG()" class="btn btn-secondary mb-2"><span class="bi-arrow-clockwise"></span>&nbsp;Load dữ liệu</button>
-                                            <button id="btn_add_MAYCHUYENDUNG" class="btn btn-secondary mb-2" data-toggle="modal" data-target="#model-add-MAYCHUYENDUNG" style="padding-top: 4px;"><span class="bi bi-plus-circle"></span>Thêm máy chuyên dụng</button>
+                                            <button id="btn_add_MAYCHUYENDUNG" class="btn btn-secondary mb-2" data-toggle="modal" data-target="#model-add-MAYCHUYENDUNG" style="padding-top: 4px;"><span class="bi bi-plus-circle"></span> Thêm máy chuyên dụng</button>
                                         </div>
                                         <table id="table-MAYCHUYENDUNG" class="table table-bordered table-striped table-md" style="width: 100%">
                                         </table>
@@ -165,7 +165,7 @@
                                         <h5>HỆ TRỤC CHÂN VỊT</h5>
                                         <div class="btn-group">
                                             <button onclick="loadDataList_HETRUCCHANVIT()" class="btn btn-secondary mb-2"><span class="bi-arrow-clockwise"></span>&nbsp;Load dữ liệu</button>
-                                            <button id="btn_add_HETRUCCHANVIT" class="btn btn-secondary mb-2" data-toggle="modal" data-target="#model-add-HETRUCCHANVIT" style="padding-top: 4px;"><span class="bi bi-plus-circle"></span>Thêm hệ trục chân vịt</button>
+                                            <button id="btn_add_HETRUCCHANVIT" class="btn btn-secondary mb-2" data-toggle="modal" data-target="#model-add-HETRUCCHANVIT" style="padding-top: 4px;"><span class="bi bi-plus-circle"></span> Thêm hệ trục chân vịt</button>
                                         </div>
                                         <table id="table-HETRUCCHANVIT" class="table table-bordered table-striped table-md" style="width: 100%">
                                         </table>
@@ -175,7 +175,7 @@
                                         <h5>NEO, XÍCH NEO</h5>
                                         <div class="btn-group">
                                             <button onclick="loadDataList_NEOXICHNEO()" class="btn btn-secondary mb-2"><span class="bi-arrow-clockwise"></span>&nbsp;Load dữ liệu</button>
-                                            <button id="btn_add_NEOXICHNEO" class="btn btn-secondary mb-2" data-toggle="modal" data-target="#model-add-NEOXICHNEO" style="padding-top: 4px;"><span class="bi bi-plus-circle"></span>Thêm neo - xích neo</button>
+                                            <button id="btn_add_NEOXICHNEO" class="btn btn-secondary mb-2" data-toggle="modal" data-target="#model-add-NEOXICHNEO" style="padding-top: 4px;"><span class="bi bi-plus-circle"></span> Thêm neo - xích neo</button>
                                         </div>
                                         <table id="table-NEOXICHNEO" class="table table-bordered table-striped table-md" style="width: 100%">
                                         </table>
@@ -185,7 +185,7 @@
                                         <h5>BẢNG THỐNG KÊ CÁC BƠM DẦU, NƯỚC VÀ THÔNG GIÓ</h5>
                                         <div class="btn-group">
                                             <button onclick="loadDataList_BOMDAUNUOCTHONGGIO()" class="btn btn-secondary mb-2"><span class="bi-arrow-clockwise"></span>&nbsp;Load dữ liệu</button>
-                                            <button id="btn_add_BOMDAUNUOCTHONGGIO" class="btn btn-secondary mb-2" data-toggle="modal" data-target="#model-add-BOMDAUNUOCTHONGGIO" style="padding-top: 4px;"><span class="bi bi-plus-circle"></span>Thêm bơm dầu, nước và thông gió</button>
+                                            <button id="btn_add_BOMDAUNUOCTHONGGIO" class="btn btn-secondary mb-2" data-toggle="modal" data-target="#model-add-BOMDAUNUOCTHONGGIO" style="padding-top: 4px;"><span class="bi bi-plus-circle"></span> Thêm bơm dầu, nước và thông gió</button>
                                         </div>
                                         <table id="table-BOMDAUNUOCTHONGGIO" class="table table-bordered table-striped table-md" style="width: 100%">
                                         </table>
@@ -195,7 +195,7 @@
                                         <h5>CÁC TRANG BỊ KHÁC</h5>
                                         <div class="btn-group">
                                             <button onclick="loadDataList_TRANGBIKHAC()" class="btn btn-secondary mb-2"><span class="bi-arrow-clockwise"></span>&nbsp;Load dữ liệu</button>
-                                            <button id="btn_add_TRANGBIKHAC" class="btn btn-secondary mb-2" data-toggle="modal" data-target="#model-add-TRANGBIKHAC" style="padding-top: 4px;"><span class="bi bi-plus-circle"></span>Thêm trang bị khác</button>
+                                            <button id="btn_add_TRANGBIKHAC" class="btn btn-secondary mb-2" data-toggle="modal" data-target="#model-add-TRANGBIKHAC" style="padding-top: 4px;"><span class="bi bi-plus-circle"></span> Thêm trang bị khác</button>
                                         </div>
                                         <table id="table-TRANGBIKHAC" class="table table-bordered table-striped table-md" style="width: 100%">
                                         </table>
@@ -215,7 +215,7 @@
                                         <h5>MÁY NÉN KHÍ</h5>
                                         <div class="btn-group">
                                             <button onclick="loadDataList_MAYNENKHI()" class="btn btn-secondary mb-2"><span class="bi-arrow-clockwise"></span>&nbsp;Load dữ liệu</button>
-                                            <button id="btn_add_MAYNENKHI" class="btn btn-secondary mb-2" data-toggle="modal" data-target="#model-add-MAYNENKHI" style="padding-top: 4px;"><span class="bi bi-plus-circle"></span>Thêm máy nén khí</button>
+                                            <button id="btn_add_MAYNENKHI" class="btn btn-secondary mb-2" data-toggle="modal" data-target="#model-add-MAYNENKHI" style="padding-top: 4px;"><span class="bi bi-plus-circle"></span> Thêm máy nén khí</button>
                                         </div>
                                         <table id="table-MAYNENKHI" class="table table-bordered table-striped table-md" style="width: 100%">
                                         </table>
@@ -237,7 +237,7 @@
                     <form id="form-add-HANGHAI" onsubmit="return false">
                         <div class="card auth_form" style="margin-bottom: 0px">
                             <div class="modal-header">
-                                <h4 class="title-modal-banve font-weight-bold">Thêm thông tin hàng hải của tàu</h4>
+                                <h4 class="title-modal-banve font-weight-bold"> Thêm thông tin hàng hải của tàu</h4>
                             </div>
                             <div class="modal-body">
                                 <div class="row clearfix ">
@@ -260,7 +260,7 @@
                                 </div>
                             </div>
                             <div class="modal-footer">
-                                <button type="submit" onclick="add_HANGHAI()" class="btn btn-info">Thêm</button>
+                                <button type="submit" onclick="add_HANGHAI()" class="btn btn-info"> Thêm</button>
                                 <button type="button" class="btn btn-default" data-dismiss="modal">Đóng</button>
                             </div>
                         </div>
@@ -314,7 +314,7 @@
                     <form id="form-add-VUKHI" onsubmit="return false">
                         <div class="card auth_form" style="margin-bottom: 0px">
                             <div class="modal-header">
-                                <h4 class="title-modal-banve font-weight-bold">Thêm thông tin vũ khí của tàu</h4>
+                                <h4 class="title-modal-banve font-weight-bold"> Thêm thông tin vũ khí của tàu</h4>
                             </div>
                             <div class="modal-body">
                                 <div class="row clearfix ">
@@ -337,7 +337,7 @@
                                 </div>
                             </div>
                             <div class="modal-footer">
-                                <button type="submit" onclick="add_VUKHI()" class="btn btn-info">Thêm</button>
+                                <button type="submit" onclick="add_VUKHI()" class="btn btn-info"> Thêm</button>
                                 <button type="button" class="btn btn-default" data-dismiss="modal">Đóng</button>
                             </div>
                         </div>
@@ -389,7 +389,7 @@
                     <form id="form-add-RADA" onsubmit="return false">
                         <div class="card auth_form" style="margin-bottom: 0px">
                             <div class="modal-header">
-                                <h4 class="title-modal-banve font-weight-bold">Thêm thông tin - ra đa của tàu</h4>
+                                <h4 class="title-modal-banve font-weight-bold"> Thêm thông tin - ra đa của tàu</h4>
                             </div>
                             <div class="modal-body">
                                 <div class="row clearfix ">
@@ -412,7 +412,7 @@
                                 </div>
                             </div>
                             <div class="modal-footer">
-                                <button type="submit" onclick="add_RADA()" class="btn btn-info">Thêm</button>
+                                <button type="submit" onclick="add_RADA()" class="btn btn-info"> Thêm</button>
                                 <button type="button" class="btn btn-default" data-dismiss="modal">Đóng</button>
                             </div>
                         </div>
@@ -464,7 +464,7 @@
                     <form id="form-add-MAYCHINH" onsubmit="return false">
                         <div class="card auth_form" style="margin-bottom: 0px">
                             <div class="modal-header">
-                                <h4 class="title-modal-banve font-weight-bold">Thêm máy chính của tàu</h4>
+                                <h4 class="title-modal-banve font-weight-bold"> Thêm máy chính của tàu</h4>
                             </div>
                             <div class="modal-body">
                                 <div class="">
@@ -712,7 +712,7 @@
                                 </div>
                             </div>
                             <div class="modal-footer">
-                                <button type="submit" onclick="add_MAYCHINH()" class="btn btn-info">Thêm</button>
+                                <button type="submit" onclick="add_MAYCHINH()" class="btn btn-info"> Thêm</button>
                                 <button type="button" class="btn btn-default" data-dismiss="modal">Đóng</button>
                             </div>
                         </div>
@@ -989,7 +989,7 @@
                     <form id="form-add-MAYPHU" onsubmit="return false">
                         <div class="card auth_form" style="margin-bottom: 0px">
                             <div class="modal-header">
-                                <h4 class="title-modal-banve font-weight-bold">Thêm máy phụ của tàu</h4>
+                                <h4 class="title-modal-banve font-weight-bold"> Thêm máy phụ của tàu</h4>
                             </div>
                             <div class="modal-body">
                                 <div class="">
@@ -1237,7 +1237,7 @@
                                 </div>
                             </div>
                             <div class="modal-footer">
-                                <button type="submit" onclick="add_MAYPHU()" class="btn btn-info">Thêm</button>
+                                <button type="submit" onclick="add_MAYPHU()" class="btn btn-info"> Thêm</button>
                                 <button type="button" class="btn btn-default" data-dismiss="modal">Đóng</button>
                             </div>
                         </div>
@@ -1514,7 +1514,7 @@
                     <form id="form-add-MAYCHUYENDUNG" onsubmit="return false">
                         <div class="card auth_form" style="margin-bottom: 0px">
                             <div class="modal-header">
-                                <h4 class="title-modal-banve font-weight-bold">Thêm tổ máy chuyên dụng của tàu</h4>
+                                <h4 class="title-modal-banve font-weight-bold"> Thêm tổ máy chuyên dụng của tàu</h4>
                             </div>
                             <div class="modal-body">
                                 <div class="">
@@ -1762,7 +1762,7 @@
                                 </div>
                             </div>
                             <div class="modal-footer">
-                                <button type="submit" onclick="add_MAYCHUYENDUNG()" class="btn btn-info">Thêm</button>
+                                <button type="submit" onclick="add_MAYCHUYENDUNG()" class="btn btn-info"> Thêm</button>
                                 <button type="button" class="btn btn-default" data-dismiss="modal">Đóng</button>
                             </div>
                         </div>
@@ -2039,7 +2039,7 @@
                     <form id="form-add-HETRUCCHANVIT" onsubmit="return false">
                         <div class="card auth_form" style="margin-bottom: 0px">
                             <div class="modal-header" style="padding: 10px 16px;">
-                                <h4 class="title-modal-banve font-weight-bold">Thêm hệ trục chân vịt của tàu</h4>
+                                <h4 class="title-modal-banve font-weight-bold"> Thêm hệ trục chân vịt của tàu</h4>
                             </div>
                             <div class="modal-body" style="padding: 6px 16px;">
                                 <div class="">
@@ -2207,7 +2207,7 @@
                                 </div>
                             </div>
                             <div class="modal-footer" style="padding: 8px 16px;">
-                                <button type="submit" onclick="add_HETRUCCHANVIT()" class="btn btn-info">Thêm</button>
+                                <button type="submit" onclick="add_HETRUCCHANVIT()" class="btn btn-info"> Thêm</button>
                                 <button type="button" class="btn btn-default" data-dismiss="modal">Đóng</button>
                             </div>
                         </div>
@@ -2404,7 +2404,7 @@
                     <form id="form-add-NEOXICHNEO" onsubmit="return false">
                         <div class="card auth_form" style="margin-bottom: 0px">
                             <div class="modal-header" style="padding: 10px 16px;">
-                                <h4 class="title-modal-banve font-weight-bold">Thêm neo - xích neo của tàu</h4>
+                                <h4 class="title-modal-banve font-weight-bold"> Thêm neo - xích neo của tàu</h4>
                             </div>
                             <div class="modal-body" style="padding: 6px 16px;">
                                 <div class="">
@@ -2522,7 +2522,7 @@
                                 </div>
                             </div>
                             <div class="modal-footer" style="padding: 8px 16px;">
-                                <button type="submit" onclick="add_NEOXICHNEO()" class="btn btn-info">Thêm</button>
+                                <button type="submit" onclick="add_NEOXICHNEO()" class="btn btn-info"> Thêm</button>
                                 <button type="button" class="btn btn-default" data-dismiss="modal">Đóng</button>
                             </div>
                         </div>
@@ -2669,7 +2669,7 @@
                     <form id="form-add-BOMDAUNUOCTHONGGIO" onsubmit="return false">
                         <div class="card auth_form" style="margin-bottom: 0px">
                             <div class="modal-header">
-                                <h4 class="title-modal-banve font-weight-bold">Thêm thông tin bơm dầu, nước và thông gió trên tàu</h4>
+                                <h4 class="title-modal-banve font-weight-bold"> Thêm thông tin bơm dầu, nước và thông gió trên tàu</h4>
                             </div>
                             <div class="modal-body">
                                 <div class="row clearfix ">
@@ -2716,7 +2716,7 @@
                                 </div>
                             </div>
                             <div class="modal-footer">
-                                <button type="submit" onclick="add_BOMDAUNUOCTHONGGIO()" class="btn btn-info">Thêm</button>
+                                <button type="submit" onclick="add_BOMDAUNUOCTHONGGIO()" class="btn btn-info"> Thêm</button>
                                 <button type="button" class="btn btn-default" data-dismiss="modal">Đóng</button>
                             </div>
                         </div>
@@ -2792,7 +2792,7 @@
                     <form id="form-add-TRANGBIKHAC" onsubmit="return false">
                         <div class="card auth_form" style="margin-bottom: 0px">
                             <div class="modal-header">
-                                <h4 class="title-modal-banve font-weight-bold">Thêm thông tin trang bị khác tàu</h4>
+                                <h4 class="title-modal-banve font-weight-bold"> Thêm thông tin trang bị khác tàu</h4>
                             </div>
                             <div class="modal-body">
                                 <div class="row clearfix ">
@@ -2823,7 +2823,7 @@
                                 </div>
                             </div>
                             <div class="modal-footer">
-                                <button type="submit" onclick="add_TRANGBIKHAC()" class="btn btn-info">Thêm</button>
+                                <button type="submit" onclick="add_TRANGBIKHAC()" class="btn btn-info"> Thêm</button>
                                 <button type="button" class="btn btn-default" data-dismiss="modal">Đóng</button>
                             </div>
                         </div>
@@ -3022,7 +3022,7 @@
                     <form id="form-add-MAYNENKHI" onsubmit="return false">
                         <div class="card auth_form" style="margin-bottom: 0px">
                             <div class="modal-header">
-                                <h4 class="title-modal-banve font-weight-bold">Thêm thông tin trang bị khác tàu</h4>
+                                <h4 class="title-modal-banve font-weight-bold"> Thêm thông tin trang bị khác tàu</h4>
                             </div>
                             <div class="modal-body">
                                 <div class="row clearfix ">
@@ -3053,7 +3053,7 @@
                                 </div>
                             </div>
                             <div class="modal-footer">
-                                <button type="submit" onclick="add_MAYNENKHI()" class="btn btn-info">Thêm</button>
+                                <button type="submit" onclick="add_MAYNENKHI()" class="btn btn-info"> Thêm</button>
                                 <button type="button" class="btn btn-default" data-dismiss="modal">Đóng</button>
                             </div>
                         </div>
@@ -3173,10 +3173,10 @@
                     searching: false,
                     stateSave: true,
                     "columns": [
-                        { name: 'STT', width: 90 },
-                        { name: 'KÝ HIỆU', width: 380 },
-                        { name: 'SỐ LƯỢNG', width: 380 },
-                        { name: 'TÁC VỤ', width: 150 },
+                        { name: 'STT', width: 40 },
+                        { name: 'KÝ HIỆU', width: 700 },
+                        { name: 'SỐ LƯỢNG', width: 100 },
+                        { name: 'TÁC VỤ', width: 40 },
                     ],
                     lengthChange: false,
                     "language": {
@@ -3844,13 +3844,13 @@
                     stateSave: true,
                     "columns": [
                         { name: 'STT', width: 60 },
-                        { name: 'KÝ HIỆU', width: 180 },
-                        { name: 'Số hiệu', width: 180 },
+                        { name: 'KÝ HIỆU', width: 160 },
+                        { name: 'Số hiệu', width: 160 },
                         { name: 'NĂM SẢN XUẤT', width: 180 },
                         { name: 'NƠI SẢN XUẤT', width: 180 },
-                        { name: 'CÔNG SUẤT', width: 180 },
-                        { name: 'HỆ THỐNG ĐIỀU KHIỂN', width: 180 },
-                        { name: 'TÁC VỤ', width: 80 },
+                        { name: 'CÔNG SUẤT', width: 140 },
+                        { name: 'HỆ THỐNG ĐIỀU KHIỂN', width: 240 },
+                        { name: 'TÁC VỤ', width: 60 },
                     ],
                     lengthChange: false,
                     "language": {
@@ -4103,13 +4103,13 @@
                     stateSave: true,
                     "columns": [
                         { name: 'STT', width: 60 },
-                        { name: 'KÝ HIỆU', width: 180 },
-                        { name: 'Số hiệu', width: 180 },
+                        { name: 'KÝ HIỆU', width: 160 },
+                        { name: 'Số hiệu', width: 160 },
                         { name: 'NĂM SẢN XUẤT', width: 180 },
                         { name: 'NƠI SẢN XUẤT', width: 180 },
-                        { name: 'CÔNG SUẤT', width: 180 },
-                        { name: 'HỆ THỐNG ĐIỀU KHIỂN', width: 180 },
-                        { name: 'TÁC VỤ', width: 80 },
+                        { name: 'CÔNG SUẤT', width: 140 },
+                        { name: 'HỆ THỐNG ĐIỀU KHIỂN', width: 240 },
+                        { name: 'TÁC VỤ', width: 60 },
                     ],
                     lengthChange: false,
                     "language": {
@@ -4786,13 +4786,13 @@
                     searching: false,
                     stateSave: true,
                     "columns": [
-                        { name: 'STT', width: 90 },
-                        { name: 'TÊN TRANG BỊ', width: 380 },
+                        { name: 'STT', width: 80 },
+                        { name: 'TÊN TRANG BỊ', width: 420 },
                         { name: 'KÝ HIỆU', width: 200 },
                         { name: 'NƯỚC SẢN XUẤT', width: 280 },
                         { name: 'LƯU LƯỢNG', width: 280 },
                         { name: 'SỐ LƯỢNG', width: 200 },
-                        { name: 'TÁC VỤ', width: 150 },
+                        { name: 'TÁC VỤ', width: 80 },
                     ],
                     lengthChange: false,
                     "language": {
@@ -4937,11 +4937,11 @@
                     searching: false,
                     stateSave: true,
                     "columns": [
-                        { name: 'STT', width: 90 },
-                        { name: 'TÊN TRANG THIẾT BỊ', width: 380 },
+                        { name: 'STT', width: 80 },
+                        { name: 'TÊN TRANG THIẾT BỊ', width: 420 },
                         { name: 'KÝ HIỆU', width: 380 },
                         { name: 'SỐ LƯỢNG', width: 380 },
-                        { name: 'TÁC VỤ', width: 150 },
+                        { name: 'TÁC VỤ', width: 80 },
                     ],
                     lengthChange: false,
                     "language": {
@@ -5234,11 +5234,11 @@
                     searching: false,
                     stateSave: true,
                     "columns": [
-                        { name: 'STT', width: 90 },
+                        { name: 'STT', width: 80 },
                         { name: 'KÝ HIỆU', width: 380 },
                         { name: 'SỐ LƯỢNG', width: 380 },
                         { name: 'ÁP SUẤT (Kg/cm3)', width: 380 },
-                        { name: 'TÁC VỤ', width: 150 },
+                        { name: 'TÁC VỤ', width: 80 },
                     ],
                     lengthChange: false,
                     "language": {

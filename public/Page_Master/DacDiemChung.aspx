@@ -52,7 +52,7 @@
                                         </div>
                                     </div>
                                     <div class="col-sm-6">
-                                        <div class="form-group row">
+                                        <div class="form-group row" id="chonVung">
                                             <label class="col-sm-4 col-form-label">Vùng <span style="color: red;">(*)</span>: </label>
                                             <div class="col-sm-8">
                                                 <select class="form-control" id="addTTC-VUNG" onchange="onchangeVung(this.value)">
@@ -60,7 +60,7 @@
                                                 </select>
                                             </div>
                                         </div>
-                                        <div class="form-group row">
+                                        <div class="form-group row" id="chonHaiDoan">
                                             <label class="col-sm-4 col-form-label">Hải đoàn <span style="color: red;">(*)</span>: </label>
                                             <div class="col-sm-8">
                                                 <select class="form-control" id="addTTC-HAIDOAN" onchange="onchangeHaiDoan(this.value)">
@@ -68,7 +68,7 @@
                                                 </select>
                                             </div>
                                         </div>
-                                        <div class="form-group row">
+                                        <div class="form-group row" id="chonHaiDoi">
                                             <label class="col-sm-4 col-form-label">Hải đội <span style="color: red;">(*)</span>: </label>
                                             <div class="col-sm-8">
                                                 <select class="form-control" id="addTTC-HAIDOI">
@@ -90,13 +90,13 @@
                                         <input type="text" id="addTTC-CHUCNANG" class="form-control" placeholder="Ví dụ: Tuần tra" required>
                                     </div>
                                 </div>
-                                <a onclick="xemThanVo()"  href="#">Xem thông tin thân vỏ</a>
+                                <a id="xemThanVo" onclick="xemThanVo()" href="#">Xem thông tin thân vỏ</a>
                                 <div id="divSoHieu" disabled="">
                                     <h4 class="sub-title">Thay đổi số hiệu</h4>
                                     <div class="form-group row" style="margin-bottom: 5px;">
                                         <div class="col-sm-12">
                                             <div class="btn-group btn-group-right" role="group" aria-label="Basic example">
-                                                <button type="button" class="btn btn-primary"><i class="bi bi-plus-circle"></i> Thay đổi</button>
+                                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#model-add-THAYDOISOHIEU"><i class="bi bi-plus-circle"></i>Thay đổi</button>
                                             </div>
                                         </div>
                                     </div>
@@ -104,7 +104,6 @@
                                         <div class="col-sm-12">
                                             <div class="table-responsive">
                                                 <table id="table-THAYDOISOHIEU" class="table table-bordered" style="width: 100%;">
-                                                    
                                                 </table>
                                             </div>
                                         </div>
@@ -351,7 +350,7 @@
                                         <div class="form-group row">
                                             <label class="col-sm-4 col-form-label">VCQP: </label>
                                             <div class="col-sm-8">
-                                                <input type="number"  id="addBC-VCQP" onchange="changeQS()" min="0" class="form-control">
+                                                <input type="number" id="addBC-VCQP" onchange="changeQS()" min="0" class="form-control">
                                             </div>
                                         </div>
                                     </div>
@@ -376,13 +375,15 @@
                                 </div>
                                 <div class="form-footer">
                                     <div class="left">
-                                        <a onclick="quayLai()" style="float: left" class="btn btn-success"><i class="bi bi-arrow-left-circle"></i> Quay lại</a>
+                                        <a onclick="quayLai()" style="float: left" class="btn btn-success"><i class="bi bi-arrow-left-circle"></i>Quay lại</a>
                                     </div>
                                     <div class="right">
-                                        <div onclick="remove_input_add_ship()" class="btn btn-danger" style="margin-right: 10px;"><i class="bi bi-arrow-counterclockwise"></i>
+                                        <div onclick="remove_input_add_ship()" class="btn btn-danger" style="margin-right: 10px;">
+                                            <i class="bi bi-arrow-counterclockwise"></i>
                                             <span id="text-remove-input">Xoá ô nhập</span>
                                         </div>
-                                        <button type="submit" class="btn btn-primary right" onclick="addTau()"><i class="bi bi-plus-circle"></i>
+                                        <button type="submit" class="btn btn-primary right" onclick="addTau()">
+                                            <i class="bi bi-plus-circle"></i>
                                             <span id="text-save">Lưu thông tin</span>
                                         </button>
                                     </div>
@@ -397,6 +398,51 @@
             </div>
         </div>
     </div>
+    <div class="modal fade" id="model-add-THAYDOISOHIEU" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <form id="form-add-THAYDOISOHIEU" onsubmit="return false">
+                        <div class="card auth_form" style="margin-bottom: 0px">
+                            <div class="modal-header">
+                                <h4 class="title-modal-banve font-weight-bold">Thêm thông tin thay đổi số hiệu</h4>
+                            </div>
+                            <div class="modal-body">
+                                <div class="row clearfix ">
+                                    <div style="width: 100%; float: left; padding: 10px">
+                                        <div class="form-group" style="display: flex">
+                                            <label class="col-md-5 control-label"><strong>Tháng, năm   : </strong></label>
+                                            <div class="col-md-7">
+                                                <input type="date" class="form-control" id="add-THAYDOISOHIEU-THANGNAM"  required>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div style="width: 100%; float: left; padding: 10px">
+                                        <div class="form-group" style="display: flex">
+                                            <label class="col-md-5 control-label"><strong>Số hiệu  : </strong></label>
+                                            <div class="col-md-7">
+                                                <input type="text" class="form-control" id="add-THAYDOISOHIEU-SOHIEU" required>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div style="width: 100%; float: left; padding: 10px">
+                                        <div class="form-group" style="display: flex">
+                                            <label class="col-md-5 control-label"><strong>Cấp quy định  : </strong></label>
+                                            <div class="col-md-7">
+                                                <input type="text" class="form-control" id="add-THAYDOISOHIEU-CAPQUYDINH">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="submit" onclick="add_THAYDOISOHIEU()" class="btn btn-info">Thêm</button>
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Đóng</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
     <script src="../Scripts/jquery-3.4.1.min.js"></script>
     <script>
         function getParameterByName(name, url = window.location.href) {
@@ -430,6 +476,7 @@
                 $("#text-remove-input").text(" Xóa ô nhập");
                 $("#text-save").text(" Lưu thông tin");
                 $("#divSoHieu").css("display", "none");
+                $("#xemThanVo").css("display", "none");
                 loadVung();
             }
             else {
@@ -440,6 +487,9 @@
                 $("#addTTC-HAIDOI").attr('disabled', '');
                 $("#text-remove-input").text(" Đặt lại dữ liệu");
                 $("#text-save").text(" Cập nhật");
+                $("#chonVung").css("display", "none");
+                $("#chonHaiDoan").css("display", "none");
+                $("#chonHaiDoi").css("display", "none");
                 loadDataShip(Ship_ID);
             }
 
@@ -541,9 +591,10 @@
         }
 
         function addTau() {
+            debugger
             if (getParameterByName("Ship_ID") != null) {
                 var newShip = {
-                    ID: $("#addTTC-ID").val(),
+                    ID: getParameterByName("Ship_ID"),
                     TTCOBAN: {
                         SOHIEU: $("#addTTC-SOHIEU").val(),
                         KYHIEU: $("#addTTC-KYHIEU").val(),
@@ -603,9 +654,10 @@
                 console.log(newShip);
                 var form = document.getElementById("addTau");
                 if (form.checkValidity() == true) {
+                    console.log(getParameterByName("Ship_ID"));
                     $.ajax({
                         type: "PUT",
-                        url: linkapi + "v2/update_ship?id=" + newShip.ID,
+                        url: linkapi + "v2/update_ship?id=" + getParameterByName("Ship_ID"),
                         dataType: "json",
                         data: JSON.stringify(newShip),
                         contentType: "application/json",
@@ -763,7 +815,7 @@
                     url: linkapi + "dacdiemchung?id=" + id,
                     dataType: "json",
                     success: function (data) {
-                        $("#name").text("ĐẶC ĐIỂM CHUNG - TÀU " + data.THONGTIN.TTCOBAN.SOHIEU) ;
+                        $("#name").text("ĐẶC ĐIỂM CHUNG - TÀU " + data.THONGTIN.TTCOBAN.SOHIEU);
                         $("#addTTC-ID").val(data.THONGTIN.ID);
                         $("#addMeta-Created").val(data.THONGTIN.Meta.Created);
                         $("#addTTC-SOHIEU").val(data.THONGTIN.TTCOBAN.SOHIEU);
@@ -823,7 +875,7 @@
                     },
                 });
             }
-            
+
         }
 
         function loadTableTHAYDOISOHIEU() {
@@ -862,7 +914,45 @@
         };
 
         function xemThanVo() {
-            window.location = baseaddress + "Page_Master/ThanVo?Ship_ID=" + getParameterByName("Ship_ID");
+            if (getParameterByName("Ship_ID") != null && getParameterByName("Ship_ID") != "") {
+                window.location = baseaddress + "Page_Master/ThanVo?Ship_ID=" + getParameterByName("Ship_ID");
+            }
+        }
+        function add_THAYDOISOHIEU() {
+            var form = document.getElementById("form-add-THAYDOISOHIEU");
+            console.log(form.checkValidity());
+            if (form.checkValidity() == true) {
+                var date_ntn = $("#add-THAYDOISOHIEU-THANGNAM").val();
+                var year = date_ntn.substring(0, 4);
+                var month = date_ntn.substring(5, 7);
+                var day = date_ntn.substring(8, 10);
+                date_ntn = month + '/' + year;
+                var THAYDOISOHIEU = {
+                    THANGNAM: date_ntn,
+                    SOHIEU: $("#add-THAYDOISOHIEU-SOHIEU").val(),
+                    CAPQUYDINH: $("#add-THAYDOISOHIEU-CAPQUYDINH").val()
+                };
+                $.ajax({
+                    type: "PUT",
+                    url: linkapi + "v2/change_serialnumber?id=" + getParameterByName("Ship_ID"),
+                    dataType: "json",
+                    data: JSON.stringify(THAYDOISOHIEU),
+                    contentType: "application/json",
+                    success: function (data) {
+                        toastSuccess("Thành công", "Thay đổi số hiệu tàu thành công.");
+                        loadDataShip(getParameterByName("Ship_ID"));
+                    }, error: function (ret) {
+                        toastError("Thất bại", "");
+                    },
+                    complete: function () { // Set our complete callback, adding the .hidden class and hiding the spinner.
+                        $("#add-THAYDOISOHIEU-THANGNAM").val("");
+                        $("#add-THAYDOISOHIEU-SOHIEU").val("");
+                        $("#add-THAYDOISOHIEU-CAPQUYDINH").val("");
+                        $('#model-add-THAYDOISOHIEU').modal("hide");
+                    },
+                });
+            }
+            return false;
         }
     </script>
 

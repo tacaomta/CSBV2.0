@@ -346,8 +346,7 @@
                 url: linkapi + "v2/xemthoigianhoatdongmaytrentau?id=" + getParameterByName("Ship_ID") + "&year=" + nam,
                 dataType: "json",
                 success: function (data) {
-                    var tabletext = "<thead><tr><th>STT</th><th>KÝ HIỆU MÁY</th><th>CHUYỂN NĂM TRƯỚC</th><th>QUÝ I</th><th>QUÝ II</th><th>QUÝ III</th><th>QUÝ IV</th><th>TỔNG (4 QUÝ + NĂM TRƯỚC)</th><th>TÁC VỤ</th></tr></thead><tbody>";
-                    var i = 1;
+                    var tabletext = "<thead><tr><th>STT</th><th>KÝ HIỆU MÁY</th><th>CHUYỂN NĂM TRƯỚC</th><th>QUÝ I</th><th>QUÝ II</th><th>QUÝ III</th><th>QUÝ IV</th><th>TỔNG (4 QUÝ + NĂM TRƯỚC)</th><th>TÁC VỤ</th></tr></thead><tbody>";                    var i = 1;
                     $.each(data, function (key, item) {
                         tabletext += "<tr><td style='text-align: center;>" + i + "</td><td>" + item.THONGTINMAY.THONGSOCOBAN.KYHIEU + "</td><td>" + item.NAMTRUOC + "</td><td>" + item.QUYI + "</td><td>" + item.QUYII + "</td><td>" + item.QUYIII + "</td><td>" + item.QUYIV + "</td><td>" + item.TONG + '</td><td><div style="display: flex; justify-content: center;"><a href="#" class="edit" title="Sửa" data-toggle="modal" data-target="#model-edit-THOIGIANLAMVIECMAY"  onclick="onclick_edit_THOIGIANLAMVIECMAY(`' + item.ID + '`,`' + item.THONGTINMAY.ID + '`,`' + item.THONGTINMAY.THONGSOCOBAN.KYHIEU + '`,`' + item.QUYI + '`,`' + item.QUYII + '`,`' + item.QUYIII + '`,`' + item.QUYIV + '`,`' + item.NAMTRUOC + '`,`' + item.TONGTRONGNAM + '`,`' + item.TONG + '`)"><i class="material-icons">&#xE254;</i></a><a href="#" class="delete" title="Xóa" onclick="delete_THOIGIANLAMVIECMAY(`' + item.ID + '`)"><i class="material-icons">&#xE872;</i></a></div></td></tr>';
                         i = i + 1;
@@ -383,8 +382,8 @@
                         "sProcessing": "Đang xử lý...",
                         "sLengthMenu": "Xem _MENU_ mục",
                         "sZeroRecords": "Không tìm thấy thông tin phù hợp",
-                        "sInfo": "Đang xem _START_ đến _END_ trong TỔNG số _TOTAL_ mục",
-                        "sInfoEmpty": "Đang xem 0 đến 0 trong TỔNG số 0 mục",
+                        "sInfo": "Đang xem _START_ đến _END_ trong tổng số _TOTAL_ mục",
+                        "sInfoEmpty": "Đang xem 0 đến 0 trong tổng số 0 mục",
                         "sInfoFiltered": "(được lọc từ _MAX_ mục)",
                         "sInfoPostFix": "",
                         "sSearch": "Tìm kiếm: ",

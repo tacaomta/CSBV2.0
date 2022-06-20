@@ -429,13 +429,13 @@
                     searching: false,
                     stateSave: true,
                     "columns": [
-                        { name: 'STT', width: 50 },
-                        { name: 'TÊN THIẾT BỊ', width: 180 },
+                        { name: 'STT', width: 60 },
+                        { name: 'TÊN THIẾT BỊ', width: 260 },
                         { name: 'SỐ LƯỢNG', width: 100 },
                         { name: 'PHƯƠNG ÁN GIẢI QUYẾT', width: 350 },
                         { name: 'LÝ DO', width: 300 },
                         { name: 'GHI CHÚ', width: 300 },
-                        { name: 'TÁC VỤ', width: 150 },
+                        { name: 'TÁC VỤ', width: 80 },
                     ],
                     lengthChange: false,
                     "language": {

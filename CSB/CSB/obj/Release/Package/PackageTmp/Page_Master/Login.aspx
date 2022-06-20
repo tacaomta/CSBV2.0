@@ -165,7 +165,7 @@
                     sessionStorage.setItem("userLoginFullname", data.Fullname);
                     sessionStorage.setItem("userLoginID", data.ID);
                     //44347
-                    window.location = "http://localhost:8080/Page_Master/Manage_Tau?vung=1";
+                    window.location = "http://localhost:8080/Page_Master/Null";
                 }, error: function (ret) {
                     console.log(ret);
                     $('#error-login-text').text('Tài khoản hoặc mật khẩu không đúng');

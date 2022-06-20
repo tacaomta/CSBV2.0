@@ -913,16 +913,16 @@
                         <a href="../Page_Master/Null.aspx">Cải hoán, cải tiến trang bị</a>
                         <a href="../Page_Master/Null.aspx">Quản lý ngân sách bảo đảm kỹ thuật tại đơn vị</a>
                     </div>
-                    <button class="dropdown-btn">
-                        <i class="bi-folder"></i>Hồ sơ tàu 
-                      <i class="bi-caret-down-fill"></i>
+                    <button  onclick="btn_QuanLyTau()" class="dropdown-btn">
+                        <i class="bi-folder"></i>Quản lý tàu
+                     <%-- <i class="bi-caret-down-fill"></i>--%>
                     </button>
                     <div class="dropdown-container">
-                        <a href="../Page_Master/Manage_Tau?vung=1">Tính năng chiến, kỹ thuật tàu, trang bị</a>
+                       <%-- <a href="../Page_Master/Manage_Tau?vung=1">Tính năng chiến, kỹ thuật tàu, trang bị</a>
                         <a href="../Page_Master/ShipActivity.aspx">Theo dõi thống kê hoạt động tàu</a>
                         <a href="../Page_Master/Null.aspx">Quản lý tai nạn hư hỏng</a>
                         <a href="../Page_Master/Null.aspx">Quản lý tình trạng kỹ thuật - khả năng hoạt động</a>
-                        <a href="../Page_Master/Null.aspx">Hồ sơ xuất xưởng sau đóng mới, cải hoán</a>
+                        <a href="../Page_Master/Null.aspx">Hồ sơ xuất xưởng sau đóng mới, cải hoán</a>--%>
                     </div>
                     <button class="dropdown-btn">
                         <i class="bi-cart3"></i>QL vật tư, mua sắm 
@@ -1150,6 +1150,11 @@
                 jsPDF: { unit: 'in', format: 'A4', orientation: 'landscape' }
             };
             html2pdf(ele, opt);
+        }
+
+        function btn_QuanLyTau() {
+            debugger
+            window.location = baseaddress + "Page_Master/Manage_Tau?vung=1";
         }
     </script>
 </body>

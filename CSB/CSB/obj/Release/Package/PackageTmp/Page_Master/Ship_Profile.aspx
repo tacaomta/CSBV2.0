@@ -60,7 +60,7 @@
                 9. <a href="#" onclick="TheoDoiCaiHoanThayThe()">Theo dõi cải hoán, thay thế, bổ sung</a>
             </div>
             <div class="profile-link">
-                10.<a href="#" style="margin-left: 5px;">Đăng ký các phương tiện bảo vệ sức sống tàu và cứu sinh</a>
+                10.<a href="#" onclick="DangKyPhuongTien()" style="margin-left: 5px;">Đăng ký các phương tiện bảo vệ sức sống tàu và cứu sinh</a>
             </div>
             <div class="profile-link">
                 11.<a href="#" onclick="KiemTraKyThuat()" style="margin-left: 5px;">Kiểm tra kỹ thuật</a>
@@ -158,6 +158,11 @@
 
         function KiemTraKyThuat() {
             var win = window.open(baseaddress + "Page_Master/KiemTraKyThuat?Ship_ID=" + Ship_ID, '_blank');
+            win.focus();
+        }
+
+        function DangKyPhuongTien() {
+            var win = window.open(baseaddress + "Page_Master/DangKyPhuongTien?Ship_ID=" + Ship_ID, '_blank');
             win.focus();
         }
     </script>
