@@ -231,7 +231,7 @@
                 dataType: "json",
                 success: function (data) {
                     console.log(data);
-                    var tabletext = "<thead><tr><th rowspan='2'>STT</th><th rowspan='2'>Thời gian</th><th rowspan='2'>Địa điểm</th><th rowspan='2'>Loại tai nạn, hư hỏng</th><th rowspan='2'>Mức độ</th><th colspan='3'>Nguyên nhân</th><th rowspan='2'>Tác vụ</th></tr><tr><th>Khách quan</th><th>Chủ quan</th><th>Trình độ</th></tr></thead><tbody>";
+                    var tabletext = "<thead><tr><th rowspan='2'>STT</th><th rowspan='2'>THỜI GIAN</th><th rowspan='2'>ĐỊA ĐIỂM</th><th rowspan='2'>LOẠI TAI NẠN, HƯ HỎNG</th><th rowspan='2'>MỨC ĐỘ</th><th colspan='3'>NGUYÊN NHÂN</th><th rowspan='2'>TÁC VỤ</th></tr><tr><th>KHÁCH QUAN</th><th>CHỦ QUAN</th><th>TRÌNH ĐỘ</th></tr></thead><tbody>";
                     var i = 1;
                     $.each(data, function (key, item) {
                         tabletext += "<tr><td>" + i + "</td><td>" + item.THOIGIAN + "</td><td>" + item.DIADIEM + "</td><td>" + item.LOAI + "</td><td>" + item.MUCDO + "</td><td>";
@@ -275,14 +275,14 @@
                     stateSave: true,
                     "columns": [
                         { name: 'STT', width: 90 },
-                        { name: 'Thời gian', width: 380 },
-                        { name: 'Địa điểm', width: 200 },
-                        { name: 'Loại tai nạn, hư hỏng', width: 280 },
-                        { name: 'Mức độ', width: 280 },
-                        { name: 'Khách quan', width: 200 },
+                        { name: 'THỜI GIAN', width: 380 },
+                        { name: 'ĐỊA ĐIỂM', width: 200 },
+                        { name: 'LOẠI TAI NẠN, HƯ HỎNG', width: 280 },
+                        { name: 'MỨC ĐỘ', width: 280 },
+                        { name: 'KHÁCH QUAN', width: 200 },
                         { name: 'Chủ quan', width: 200 },
-                        { name: 'Trình độ', width: 200 },
-                        { name: 'Tác vụ', width: 150 },
+                        { name: 'TRÌNH ĐỘ', width: 200 },
+                        { name: 'TÁC VỤ', width: 150 },
                     ],
                     lengthChange: false,
                     "language": {
@@ -309,8 +309,13 @@
             var form = document.getElementById("form-add-DANGKYTAINANHUHONG");
             console.log(form.checkValidity());
             if (form.checkValidity() == true) {
+                var date_ntn = $("#add-DANGKYTAINANHUHONG-THOIGIAN").val();
+                var year = date_ntn.substring(0, 4);
+                var month = date_ntn.substring(5, 7);
+                var day = date_ntn.substring(8, 10);
+                date_ntn = day + '/' + month + '/' + year;
                 var DANGKYTAINANHUHONG = {
-                    THOIGIAN: $("#add-DANGKYTAINANHUHONG-THOIGIAN").val(),
+                    THOIGIAN: date_ntn,
                     DIADIEM: $("#add-DANGKYTAINANHUHONG-DIADIEM").val(),
                     LOAI: $("#add-DANGKYTAINANHUHONG-LOAI").val(),
                     MUCDO: $("#add-DANGKYTAINANHUHONG-MUCDO").val(),
@@ -347,23 +352,38 @@
             return false;
         }
         function onclick_edit_DANGKYTAINANHUHONG(ID, THOIGIAN, DIADIEM, LOAI, MUCDO, KHACHQUAN, CHUQUAN, TRINHDO, GHICHU) {
+            console.log(new Date(THOIGIAN));
             $('#edit-DANGKYTAINANHUHONG-ID').val(ID);
-            $("#edit-DANGKYTAINANHUHONG-THOIGIAN").val(THOIGIAN);
+            $("#edit-DANGKYTAINANHUHONG-THOIGIAN").val(stringToDate(THOIGIAN));
             $("#edit-DANGKYTAINANHUHONG-DIADIEM").val(DIADIEM);
             $("#edit-DANGKYTAINANHUHONG-LOAI").val(LOAI);
             $("#edit-DANGKYTAINANHUHONG-MUCDO").val(MUCDO);
-            $('#edit-DANGKYTAINANHUHONG-NGUYENNHAN-KHACHQUAN').prop('checked', KHACHQUAN);
-            $('#edit-DANGKYTAINANHUHONG-NGUYENNHAN-CHUQUAN').prop('checked', KHACHQUAN);
-            $('#edit-DANGKYTAINANHUHONG-NGUYENNHAN-TRINHDO').prop('checked', KHACHQUAN);
+            $('#edit-DANGKYTAINANHUHONG-NGUYENNHAN-KHACHQUAN').prop('checked', false);
+            $('#edit-DANGKYTAINANHUHONG-NGUYENNHAN-CHUQUAN').prop('checked', false);
+            $('#edit-DANGKYTAINANHUHONG-NGUYENNHAN-TRINHDO').prop('checked', false);
+            if (KHACHQUAN == "true") {
+                $('#edit-DANGKYTAINANHUHONG-NGUYENNHAN-KHACHQUAN').prop('checked', true);
+            }
+            if (CHUQUAN == "true") {
+                $('#edit-DANGKYTAINANHUHONG-NGUYENNHAN-CHUQUAN').prop('checked', true);
+            }
+            if (TRINHDO == "true") {
+                $('#edit-DANGKYTAINANHUHONG-NGUYENNHAN-TRINHDO').prop('checked', true);
+            }
             $('#edit-DANGKYTAINANHUHONG-GHICHU').val(GHICHU);
         }
         function edit_DANGKYTAINANHUHONG() {
             var form = document.getElementById("form-edit-DANGKYTAINANHUHONG");
             console.log(form.checkValidity());
             if (form.checkValidity() == true) {
+                var date_ntn = $("#edit-DANGKYTAINANHUHONG-THOIGIAN").val();
+                var year = date_ntn.substring(0, 4);
+                var month = date_ntn.substring(5, 7);
+                var day = date_ntn.substring(8, 10);
+                date_ntn = day + '/' + month + '/' + year;
                 var DANGKYTAINANHUHONG = {
                     ID: $("#edit-DANGKYTAINANHUHONG-ID").val(),
-                    THOIGIAN: $("#edit-DANGKYTAINANHUHONG-THOIGIAN").val(),
+                    THOIGIAN: date_ntn,
                     DIADIEM: $("#edit-DANGKYTAINANHUHONG-DIADIEM").val(),
                     LOAI: $("#edit-DANGKYTAINANHUHONG-LOAI").val(),
                     MUCDO: $("#edit-DANGKYTAINANHUHONG-MUCDO").val(),
@@ -410,6 +430,26 @@
             } else {
 
             }
+        }
+        function stringToDate(str) {
+            console.log(str.length);
+            var date_ntn = $("#add-DANGKYTAINANHUHONG-THOIGIAN").val();
+            var year = date_ntn.substring(0, 4);
+            var month = date_ntn.substring(5, 7);
+            var day = date_ntn.substring(8, 10);
+            date_ntn = day + '/' + month + '/' + year;
+            var ng, t, n;
+            if (str.length == 7) {
+                ng = '01';
+                t = str.substring(0, 2);
+                n = str.substring(3, 7);
+            }
+            else {
+                ng = str.substring(0, 2);
+                t = str.substring(3, 5);
+                n = str.substring(6, 10);
+            }
+            return (n + "-" + t + "-" + ng);
         }
     </script>
 </asp:Content>
