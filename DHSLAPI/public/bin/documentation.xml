@@ -598,6 +598,13 @@
             <param name="id">id tàu</param>
             <returns></returns>
         </member>
+        <member name="M:DHSLAPI.Controllers.BOMDAUNUOCTHONGGIOController.SOLUONGBOMDAU(System.String)">
+            <summary>
+            Lấy số lượng các bơm dầu, nước và thông gió
+            </summary>
+            <param name="id">id tàu</param>
+            <returns></returns>
+        </member>
         <member name="M:DHSLAPI.Controllers.BOMDAUNUOCTHONGGIOController.InsertBDNTD(System.String,DHSLAPI.Models.BOMDAUNUOCTHONGGIO)">
             <summary>
             Thêm thông tin các bơm dầu, nước và thông gió
@@ -1074,6 +1081,13 @@
             <param name="id">id tàu</param>
             <returns></returns>
         </member>
+        <member name="M:DHSLAPI.Controllers.HANGHAIController.SOLUONGHANGHAI(System.String)">
+            <summary>
+            Lấy số lượng hàng hải của tàu
+            </summary>
+            <param name="id">id tàu</param>
+            <returns></returns>
+        </member>
         <member name="M:DHSLAPI.Controllers.HANGHAIController.InsertMC(System.String,DHSLAPI.Models.HANGHAI)">
             <summary>
             Thêm thông tin hàng hải cho tàu
@@ -1105,6 +1119,13 @@
         <member name="M:DHSLAPI.Controllers.HETRUCCHANVITController.LAYTHONGTINHETRUCCHANVIT(System.String)">
             <summary>
             Lấy thông tin hệ trục chân vịt của tàu
+            </summary>
+            <param name="id">id tàu</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.HETRUCCHANVITController.SOLUONGCHANVIT(System.String)">
+            <summary>
+            Lấy số lượng hệ trục chân vịt của tàu
             </summary>
             <param name="id">id tàu</param>
             <returns></returns>
@@ -1254,6 +1275,13 @@
             <param name="id">id tàu</param>
             <returns></returns>
         </member>
+        <member name="M:DHSLAPI.Controllers.MAYCHINHController.SOLUONGMAY(System.String)">
+            <summary>
+            Lấy số lượng máy chính của tàu
+            </summary>
+            <param name="id">id tàu</param>
+            <returns></returns>
+        </member>
         <member name="M:DHSLAPI.Controllers.MAYCHINHController.InsertMC(System.String,DHSLAPI.Models.THONGTINMAY)">
             <summary>
             Thêm thông tin máy chính cho tàu
@@ -1285,6 +1313,13 @@
         <member name="M:DHSLAPI.Controllers.MAYCHUYENDUNGController.LAYTHONGTINMAYCHUYENDUNG(System.String)">
             <summary>
             Lấy thông tin máy chuyên dụng
+            </summary>
+            <param name="id">id tàu</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.MAYCHUYENDUNGController.SOLUONGMAYCHUYENDUNG(System.String)">
+            <summary>
+            Lấy số lượng máy chuyên dụng
             </summary>
             <param name="id">id tàu</param>
             <returns></returns>
@@ -1324,6 +1359,13 @@
             <param name="id">id tàu</param>
             <returns></returns>
         </member>
+        <member name="M:DHSLAPI.Controllers.MAYNENKHIController.SOLUONGMAYNENKHI(System.String)">
+            <summary>
+            Lấy số lượng máy nén khí của tàu
+            </summary>
+            <param name="id">id tàu</param>
+            <returns></returns>
+        </member>
         <member name="M:DHSLAPI.Controllers.MAYNENKHIController.InsertMN(System.String,DHSLAPI.Models.MAYNENKHI)">
             <summary>
             Thêm thông tin máy nén khí cho tàu
@@ -1355,6 +1397,13 @@
         <member name="M:DHSLAPI.Controllers.MAYPHUPHATDIENController.LAYTHONGTINMAYPHUPHATDIEN(System.String)">
             <summary>
             Lấy thông tin máy phụ phát điện của tàu
+            </summary>
+            <param name="id">id tàu</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.MAYPHUPHATDIENController.SOLUONGMAYPHU(System.String)">
+            <summary>
+            Lấy số lượng máy phụ phát điện
             </summary>
             <param name="id">id tàu</param>
             <returns></returns>
@@ -1391,6 +1440,13 @@
         <member name="M:DHSLAPI.Controllers.NEOXICHNEOController.LAYTHONGTINNEOXICHNEO(System.String)">
             <summary>
             Lấy thông tin neo, xích neo của tàu
+            </summary>
+            <param name="id">id tàu</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.NEOXICHNEOController.SOLUONGNEOXICHNEO(System.String)">
+            <summary>
+            Lấy số lượng neo, xích neo của tàu
             </summary>
             <param name="id">id tàu</param>
             <returns></returns>
@@ -1622,6 +1678,13 @@
         <member name="M:DHSLAPI.Controllers.RADAController.LAYTHONGTINRADA(System.String)">
             <summary>
             Lấy thông tin ra đa của tàu
+            </summary>
+            <param name="id">id tàu</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.RADAController.SOLUONGRADA(System.String)">
+            <summary>
+            Lấy số lượng ra đa của tàu
             </summary>
             <param name="id">id tàu</param>
             <returns></returns>
@@ -1956,6 +2019,13 @@
             <param name="id">id tàu</param>
             <returns></returns>
         </member>
+        <member name="M:DHSLAPI.Controllers.THIETBIKHACController.SOLUONGTHIETBIKHAC(System.String)">
+            <summary>
+            Lấy số lượng các trang thiết bị khác
+            </summary>
+            <param name="id">id tàu</param>
+            <returns></returns>
+        </member>
         <member name="M:DHSLAPI.Controllers.THIETBIKHACController.InsertTTBK(System.String,DHSLAPI.Models.THIETBIKHAC)">
             <summary>
             Thêm thông tin các trang thiết bị khác
@@ -1987,6 +2057,13 @@
         <member name="M:DHSLAPI.Controllers.VUKHIController.LAYTHONGTINVUKHI(System.String)">
             <summary>
             Lấy thông tin Vũ khí của tàu
+            </summary>
+            <param name="id">id tàu</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.VUKHIController.SOLUONGVUKHI(System.String)">
+            <summary>
+            Lấy số lượng Vũ khí của tàu
             </summary>
             <param name="id">id tàu</param>
             <returns></returns>
