@@ -1069,6 +1069,11 @@
             <param name="id"></param>
             <returns></returns>
         </member>
+        <member name="T:DHSLAPI.Controllers.EmployeeTestController">
+            <summary>
+            Test controller
+            </summary>
+        </member>
         <member name="T:DHSLAPI.Controllers.HANGHAIController">
             <summary>
             Hàng hải
@@ -1633,13 +1638,6 @@
             Xoá thông tin cán bộ, nhân viên kỹ thuật trên tàu
             </summary>
             <param name="id"></param>
-            <returns></returns>
-        </member>
-        <member name="M:DHSLAPI.Controllers.PersonnelController.GetEmployees(System.String)">
-            <summary>
-            Cái này để test, không dùng trong project này
-            </summary>
-            <param name="id">id của tàu</param>
             <returns></returns>
         </member>
         <member name="M:DHSLAPI.Controllers.PositionController.GetAll">
