@@ -281,6 +281,7 @@
     <Content Include="Page_Master\Add_Staff.aspx" />
     <Content Include="Page_Master\Change_Password.aspx" />
     <Content Include="Page_Master\DangKyPhuongTien.aspx" />
+    <Content Include="Page_Master\FormBaoCao.aspx" />
     <Content Include="Page_Master\HoatDongTau.aspx" />
     <Content Include="Page_Master\Information_User.aspx" />
     <Content Include="Page_Master\KiemTraKyThuat.aspx" />
@@ -477,6 +478,13 @@
     </Compile>
     <Compile Include="Page_Master\DangKyPhuongTien.aspx.designer.cs">
       <DependentUpon>DangKyPhuongTien.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Page_Master\FormBaoCao.aspx.cs">
+      <DependentUpon>FormBaoCao.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page_Master\FormBaoCao.aspx.designer.cs">
+      <DependentUpon>FormBaoCao.aspx</DependentUpon>
     </Compile>
     <Compile Include="Page_Master\HoatDongTau.aspx.cs">
       <DependentUpon>HoatDongTau.aspx</DependentUpon>

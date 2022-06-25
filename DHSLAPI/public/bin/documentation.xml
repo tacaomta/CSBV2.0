@@ -1635,6 +1635,13 @@
             <param name="id"></param>
             <returns></returns>
         </member>
+        <member name="M:DHSLAPI.Controllers.PersonnelController.GetEmployees(System.String)">
+            <summary>
+            Cái này để test, không dùng trong project này
+            </summary>
+            <param name="id">id của tàu</param>
+            <returns></returns>
+        </member>
         <member name="M:DHSLAPI.Controllers.PositionController.GetAll">
             <summary>
             Lấy toàn bộ danh mục chức vụ
@@ -2047,6 +2054,17 @@
             Xoá thông tin trang thiết bị
             </summary>
             <param name="id">id của trang thiết b ị</param>
+            <returns></returns>
+        </member>
+        <member name="T:DHSLAPI.Controllers.TRANGTHAIController">
+            <summary>
+            Trạng thái của trang thiết bị trên tàu
+            </summary>
+        </member>
+        <member name="M:DHSLAPI.Controllers.TRANGTHAIController.DANHMUCTRANGTHAI">
+            <summary>
+            Thấy danh mục trạng thái
+            </summary>
             <returns></returns>
         </member>
         <member name="T:DHSLAPI.Controllers.VUKHIController">
@@ -4416,6 +4434,21 @@
         <member name="T:DHSLAPI.Models.VUKHI">
             <summary>
             Vũ khí
+            </summary>
+        </member>
+        <member name="T:DHSLAPI.Models.TRANGTHAI">
+            <summary>
+            Trạng thái
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.TRANGTHAI.ID">
+            <summary>
+            ID
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.TRANGTHAI.TEN">
+            <summary>
+            Tên trạng thái
             </summary>
         </member>
         <member name="P:ShipyardInfo.classes.Anchor.Ship">
