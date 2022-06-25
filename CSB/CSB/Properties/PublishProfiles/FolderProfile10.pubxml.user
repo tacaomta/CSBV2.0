@@ -17,10 +17,10 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>03/27/2022 20:38:38</publishTime>
     </File>
     <File Include="bin/App_global.asax.compiled">
-      <publishTime>05/16/2022 15:26:49</publishTime>
+      <publishTime>06/25/2022 09:40:39</publishTime>
     </File>
     <File Include="bin/App_global.asax.dll">
-      <publishTime>05/16/2022 15:26:49</publishTime>
+      <publishTime>06/25/2022 09:40:39</publishTime>
     </File>
     <File Include="bin/AspNet.ScriptManager.bootstrap.dll">
       <publishTime>03/27/2022 20:38:38</publishTime>
@@ -89,10 +89,10 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>02/04/2021 21:27:12</publishTime>
     </File>
     <File Include="bin/CSB.dll">
-      <publishTime>05/16/2022 15:26:40</publishTime>
+      <publishTime>06/25/2022 09:40:29</publishTime>
     </File>
     <File Include="bin/CSB.pdb">
-      <publishTime>05/16/2022 15:26:40</publishTime>
+      <publishTime>06/25/2022 09:40:29</publishTime>
     </File>
     <File Include="bin/Microsoft.AspNet.FriendlyUrls.dll">
       <publishTime>03/27/2022 20:38:38</publishTime>
@@ -125,7 +125,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>03/27/2022 20:38:39</publishTime>
     </File>
     <File Include="bin/Page_Master/Ship_equiment.aspx">
-      <publishTime>05/14/2022 22:11:22</publishTime>
+      <publishTime>06/06/2022 13:47:29</publishTime>
     </File>
     <File Include="bin/reports/rpMayChinh.rpt">
       <publishTime>05/14/2022 22:11:22</publishTime>
@@ -409,6 +409,9 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
     <File Include="css/login.css">
       <publishTime>04/18/2022 11:38:56</publishTime>
     </File>
+    <File Include="css/login1.css">
+      <publishTime>06/06/2022 13:47:29</publishTime>
+    </File>
     <File Include="css/manager_user.css">
       <publishTime>04/06/2022 14:51:08</publishTime>
     </File>
@@ -451,6 +454,9 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
     <File Include="Image/bg-bien.jpg">
       <publishTime>03/27/2022 20:38:37</publishTime>
     </File>
+    <File Include="Image/change_password.jpg">
+      <publishTime>06/15/2022 16:46:51</publishTime>
+    </File>
     <File Include="Image/footer.png">
       <publishTime>03/27/2022 20:38:37</publishTime>
     </File>
@@ -459,6 +465,15 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
     </File>
     <File Include="Image/ic-login.png">
       <publishTime>03/27/2022 20:38:37</publishTime>
+    </File>
+    <File Include="Image/icon/exclamation-circle.svg">
+      <publishTime>06/07/2022 11:15:29</publishTime>
+    </File>
+    <File Include="Image/icon/i.svg">
+      <publishTime>06/07/2022 11:15:29</publishTime>
+    </File>
+    <File Include="Image/icon/v.svg">
+      <publishTime>06/07/2022 11:15:29</publishTime>
     </File>
     <File Include="Image/login.jpg">
       <publishTime>03/27/2022 20:38:37</publishTime>
@@ -482,52 +497,124 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>04/06/2022 14:51:08</publishTime>
     </File>
     <File Include="Master/LayoutAdmin.Master">
-      <publishTime>05/16/2022 15:25:29</publishTime>
+      <publishTime>05/24/2022 14:54:03</publishTime>
     </File>
     <File Include="Master/TrangChu.Master">
-      <publishTime>05/16/2022 14:54:22</publishTime>
+      <publishTime>06/25/2022 09:40:27</publishTime>
     </File>
     <File Include="Page_Master/Add_Ship.aspx">
-      <publishTime>05/16/2022 14:54:22</publishTime>
+      <publishTime>06/06/2022 13:47:28</publishTime>
+    </File>
+    <File Include="Page_Master/Add_Staff.aspx">
+      <publishTime>06/14/2022 15:18:03</publishTime>
     </File>
     <File Include="Page_Master/Change_Password.aspx">
-      <publishTime>05/16/2022 15:22:16</publishTime>
+      <publishTime>06/15/2022 16:46:52</publishTime>
+    </File>
+    <File Include="Page_Master/DacDiemChung.aspx">
+      <publishTime>06/25/2022 09:37:57</publishTime>
+    </File>
+    <File Include="Page_Master/DangKyPhuongTien.aspx">
+      <publishTime>06/22/2022 14:29:36</publishTime>
+    </File>
+    <File Include="Page_Master/FormBaoCao.aspx">
+      <publishTime>06/25/2022 08:31:48</publishTime>
+    </File>
+    <File Include="Page_Master/HoatDongTau.aspx">
+      <publishTime>06/20/2022 16:17:25</publishTime>
     </File>
     <File Include="Page_Master/Information_User.aspx">
-      <publishTime>05/16/2022 15:22:17</publishTime>
+      <publishTime>06/15/2022 16:46:52</publishTime>
+    </File>
+    <File Include="Page_Master/KiemTraKyThuat.aspx">
+      <publishTime>06/20/2022 21:37:58</publishTime>
     </File>
     <File Include="Page_Master/Login.aspx">
-      <publishTime>05/16/2022 15:25:37</publishTime>
+      <publishTime>06/25/2022 09:39:23</publishTime>
+    </File>
+    <File Include="Page_Master/Manage_ChuyenNganh.aspx">
+      <publishTime>06/20/2022 21:37:58</publishTime>
+    </File>
+    <File Include="Page_Master/Manage_Degree.aspx">
+      <publishTime>06/20/2022 21:37:58</publishTime>
+    </File>
+    <File Include="Page_Master/Manage_flotilla.aspx">
+      <publishTime>06/20/2022 21:37:58</publishTime>
+    </File>
+    <File Include="Page_Master/Manage_Institution.aspx">
+      <publishTime>06/20/2022 21:37:58</publishTime>
+    </File>
+    <File Include="Page_Master/Manage_Position.aspx">
+      <publishTime>06/20/2022 21:37:58</publishTime>
+    </File>
+    <File Include="Page_Master/Manage_Ranking.aspx">
+      <publishTime>06/20/2022 21:37:58</publishTime>
     </File>
     <File Include="Page_Master/Manage_ship.aspx">
-      <publishTime>05/16/2022 14:54:22</publishTime>
+      <publishTime>06/06/2022 13:47:29</publishTime>
+    </File>
+    <File Include="Page_Master/Manage_squadron.aspx">
+      <publishTime>06/20/2022 21:37:58</publishTime>
+    </File>
+    <File Include="Page_Master/Manage_Staff.aspx">
+      <publishTime>06/20/2022 16:00:25</publishTime>
+    </File>
+    <File Include="Page_Master/Manage_Tau.aspx">
+      <publishTime>06/25/2022 09:32:04</publishTime>
     </File>
     <File Include="Page_Master/Manage_user.aspx">
-      <publishTime>05/16/2022 14:54:22</publishTime>
+      <publishTime>06/20/2022 21:37:58</publishTime>
     </File>
     <File Include="Page_Master/Null.aspx">
-      <publishTime>05/16/2022 14:54:22</publishTime>
+      <publishTime>06/06/2022 13:47:29</publishTime>
     </File>
     <File Include="Page_Master/ShipActivity.aspx">
-      <publishTime>05/12/2022 15:41:32</publishTime>
+      <publishTime>06/06/2022 13:47:29</publishTime>
     </File>
     <File Include="Page_Master/Ship_equiment.aspx">
-      <publishTime>05/14/2022 22:11:22</publishTime>
+      <publishTime>06/06/2022 13:47:29</publishTime>
     </File>
     <File Include="Page_Master/Ship_equipment2.aspx">
-      <publishTime>05/16/2022 15:24:51</publishTime>
+      <publishTime>06/06/2022 13:47:29</publishTime>
+    </File>
+    <File Include="Page_Master/Ship_Profile.aspx">
+      <publishTime>06/21/2022 23:00:24</publishTime>
+    </File>
+    <File Include="Page_Master/TaiNanHuHong.aspx">
+      <publishTime>06/20/2022 21:37:59</publishTime>
+    </File>
+    <File Include="Page_Master/ThanVo.aspx">
+      <publishTime>06/15/2022 16:46:52</publishTime>
+    </File>
+    <File Include="Page_Master/TheoDoiCaiHoanThayThe.aspx">
+      <publishTime>06/20/2022 21:37:59</publishTime>
+    </File>
+    <File Include="Page_Master/TheoDoiSuaChuaTau.aspx">
+      <publishTime>06/20/2022 16:13:17</publishTime>
+    </File>
+    <File Include="Page_Master/ThoiGianLamViecMay.aspx">
+      <publishTime>06/20/2022 21:37:59</publishTime>
+    </File>
+    <File Include="Page_Master/TinhNangChuYeu.aspx">
+      <publishTime>06/22/2022 16:11:41</publishTime>
+    </File>
+    <File Include="Page_Master/TinhNangThietBi.aspx">
+      <publishTime>06/20/2022 21:37:59</publishTime>
     </File>
     <File Include="Page_Master/TrangChu.aspx">
       <publishTime>03/27/2022 21:47:30</publishTime>
     </File>
     <File Include="Page_Master/Update_Ship.aspx">
-      <publishTime>05/16/2022 14:54:22</publishTime>
+      <publishTime>06/06/2022 13:47:29</publishTime>
+    </File>
+    <File Include="Page_Master/Update_Staff.aspx">
+      <publishTime>06/14/2022 15:18:53</publishTime>
     </File>
     <File Include="Page_Master/WebForm1.aspx">
-      <publishTime>05/12/2022 10:37:47</publishTime>
+      <publishTime>06/06/2022 13:47:29</publishTime>
     </File>
     <File Include="PrecompiledApp.config">
-      <publishTime>05/16/2022 15:26:44</publishTime>
+      <publishTime>06/25/2022 09:40:34</publishTime>
     </File>
     <File Include="reports/MayChinh.xsc">
       <publishTime>05/12/2022 10:37:47</publishTime>
@@ -640,6 +727,9 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
     <File Include="Scripts/vendor/echarts.min.js">
       <publishTime>04/14/2022 14:23:08</publishTime>
     </File>
+    <File Include="Scripts/vendor/html2pdf.bundle.js">
+      <publishTime>05/21/2022 22:15:41</publishTime>
+    </File>
     <File Include="Scripts/vendor/jquery.dataTables.min.js">
       <publishTime>04/15/2022 07:32:13</publishTime>
     </File>
@@ -743,7 +833,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>03/27/2022 20:38:37</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>05/16/2022 15:26:41</publishTime>
+      <publishTime>06/25/2022 09:40:31</publishTime>
     </File>
   </ItemGroup>
 </Project>

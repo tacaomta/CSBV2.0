@@ -139,10 +139,10 @@
                     $.each(data, function (key, item) {
 
                         if (item.Squadron == null) {
-                            tabletext += "<tr><td>" + i + "</td><td>" + item.Name + "</td><td>" + item.NavalRegion.Name + '</td><td><div style="width: max-content;"><a href="#" class="edit" title="Sửa" data-toggle="modal" data-target="#model-edit-flotilla"  onclick="editflotilla(`' + item.Id + '`,`' + item.Name + '`,`' + item.NavalRegion.ID + '`,`' + item.Squadron + '`)"><i class="material-icons">&#xE254;</i></a><a href="#" class="delete" title="Xóa" onclick="delete_flotilla(`' + item.Id + '`)"><i class="material-icons">&#xE872;</i></a></div></td></tr>';
+                            tabletext += "<tr><td style='text-align: center;'>" + i + "</td><td>" + item.Name + "</td><td>" + item.NavalRegion.Name + '</td><td><div style="display: flex; justify-content: space-around;"><a href="#" class="edit" title="Sửa" data-toggle="modal" data-target="#model-edit-flotilla"  onclick="editflotilla(`' + item.Id + '`,`' + item.Name + '`,`' + item.NavalRegion.ID + '`,`' + item.Squadron + '`)"><i class="material-icons">&#xE254;</i></a><a href="#" class="delete" title="Xóa" onclick="delete_flotilla(`' + item.Id + '`)"><i class="material-icons">&#xE872;</i></a></div></td></tr>';
                         }
                         else {
-                            tabletext += "<tr><td>" + i + "</td><td>" + item.Name + "</td><td>" + item.Squadron.Name + '</td><td><div style="width: max-content;"><a href="#" class="edit" title="Sửa" data-toggle="modal" data-target="#model-edit-flotilla"  onclick="editflotilla(`' + item.Id + '`,`' + item.Name + '`,`' +item.NavalRegion.ID + '`,`' + item.Squadron + '`)"><i class="material-icons">&#xE254;</i></a><a href="#" class="delete" title="Xóa" onclick="delete_flotilla(`' + item.Id + '`)"><i class="material-icons">&#xE872;</i></a></div></td></tr>';
+                            tabletext += "<tr><td style='text-align: center;'>" + i + "</td><td>" + item.Name + "</td><td>" + item.Squadron.Name + '</td><td><div style="display: flex; justify-content: space-around;"><a href="#" class="edit" title="Sửa" data-toggle="modal" data-target="#model-edit-flotilla"  onclick="editflotilla(`' + item.Id + '`,`' + item.Name + '`,`' +item.NavalRegion.ID + '`,`' + item.Squadron + '`)"><i class="material-icons">&#xE254;</i></a><a href="#" class="delete" title="Xóa" onclick="delete_flotilla(`' + item.Id + '`)"><i class="material-icons">&#xE872;</i></a></div></td></tr>';
                         }
                         i = i + 1;
                     });
@@ -165,10 +165,10 @@
                     destroy: true,
                     stateSave: true,
                     "columns": [
-                        { name: 'STT', width: 90 },
+                        { name: 'STT', width: 60 },
                         { name: 'Tên hải đội' },
                         { name: 'Trưc thuộc' },
-                        { name: 'Tác vụ', width: 90 },
+                        { name: 'Tác vụ', width: 80 },
                     ],
                     "columnDefs": [
                         {

@@ -346,8 +346,7 @@
                 url: linkapi + "v2/xemthoigianhoatdongmaytrentau?id=" + getParameterByName("Ship_ID") + "&year=" + nam,
                 dataType: "json",
                 success: function (data) {
-                    var tabletext = "<thead><tr><th>STT</th><th>Ký hiệu máy</th><th>Chuyển năm trước</th><th>Quý I</th><th>Quý II</th><th>Quý III</th><th>Quý IV</th><th>Tổng (4 quý + năm trước)</th><th>Tác vụ</th></tr></thead><tbody>";
-                    var i = 1;
+                    var tabletext = "<thead><tr><th>STT</th><th>KÝ HIỆU MÁY</th><th>CHUYỂN NĂM TRƯỚC</th><th>QUÝ I</th><th>QUÝ II</th><th>QUÝ III</th><th>QUÝ IV</th><th>TỔNG (4 QUÝ + NĂM TRƯỚC)</th><th>TÁC VỤ</th></tr></thead><tbody>";                    var i = 1;
                     $.each(data, function (key, item) {
                         tabletext += "<tr><td style='text-align: center;>" + i + "</td><td>" + item.THONGTINMAY.THONGSOCOBAN.KYHIEU + "</td><td>" + item.NAMTRUOC + "</td><td>" + item.QUYI + "</td><td>" + item.QUYII + "</td><td>" + item.QUYIII + "</td><td>" + item.QUYIV + "</td><td>" + item.TONG + '</td><td><div style="display: flex; justify-content: center;"><a href="#" class="edit" title="Sửa" data-toggle="modal" data-target="#model-edit-THOIGIANLAMVIECMAY"  onclick="onclick_edit_THOIGIANLAMVIECMAY(`' + item.ID + '`,`' + item.THONGTINMAY.ID + '`,`' + item.THONGTINMAY.THONGSOCOBAN.KYHIEU + '`,`' + item.QUYI + '`,`' + item.QUYII + '`,`' + item.QUYIII + '`,`' + item.QUYIV + '`,`' + item.NAMTRUOC + '`,`' + item.TONGTRONGNAM + '`,`' + item.TONG + '`)"><i class="material-icons">&#xE254;</i></a><a href="#" class="delete" title="Xóa" onclick="delete_THOIGIANLAMVIECMAY(`' + item.ID + '`)"><i class="material-icons">&#xE872;</i></a></div></td></tr>';
                         i = i + 1;
@@ -369,14 +368,14 @@
                     stateSave: true,
                     "columns": [
                         { name: 'STT', width: 50 },
-                        { name: 'Ký hiệu máy', width: 380 },
-                        { name: 'Chuyển năm trước', width: 200 },
-                        { name: 'Quý I', width: 200 },
-                        { name: 'Quý II', width: 200 },
-                        { name: 'Quý III', width: 200 },
-                        { name: 'Quý IV', width: 200 },
-                        { name: 'Tổng (4 quý + năm trước)', width: 400 },
-                        { name: 'Tác vụ', width: 150 },
+                        { name: 'KÝ HIỆU MÁY', width: 380 },
+                        { name: 'CHUYỂN NĂM TRƯỚC', width: 200 },
+                        { name: 'QUÝ I', width: 200 },
+                        { name: 'QUÝ II', width: 200 },
+                        { name: 'QUÝ III', width: 200 },
+                        { name: 'QUÝ IV', width: 200 },
+                        { name: 'TỔNG (4 QUÝ + NĂM TRƯỚC)', width: 400 },
+                        { name: 'TÁC VỤ', width: 150 },
                     ],
                     lengthChange: false,
                     "language": {
