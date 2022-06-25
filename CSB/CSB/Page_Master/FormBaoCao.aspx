@@ -31,6 +31,15 @@
             vertical-align: baseline;
             font-size: smaller;
         }
+        .btn-rp {
+            width: 100%;
+            border-radius: 5px;
+            font-size: 16px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+            .btn-rp span {
+                margin-right: 5px;
+            }
     </style>
     <div id="form1">
         <div class="section" style="background-color: #fff; padding-bottom: 15px;">
@@ -231,6 +240,14 @@
                                     <br />
                                     <br />
                                     <textarea placeholder="(Cấp bậc, Ký tên)" rows="1" form="rpform" required style="width: 100%; text-align: center; padding: 5px; resize: none;"></textarea>
+                                </div>
+                            </div>
+                            <div class="row mt-5">
+                                <div class="col-6">
+                                    <button class="btn-rp btn btn-secondary"><span class="bi-eye"></span>Xem trước</button>
+                                </div>
+                                <div class="col-6">
+                                    <button class="btn-rp btn btn-primary"><span class="bi-download"></span>Xuất báo cáo</button>
                                 </div>
                             </div>
                         </div>
