@@ -10,9 +10,13 @@
     <link href="../Content/MaterialIcons.css" rel="stylesheet" />
     <link href="../Content/font-awesome.min.css" rel="stylesheet" />
     <link href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css" rel="stylesheet" />
-    <script src="../Scripts/js/Master.js"></script>
-    <script src="../Scripts/js/Master.js"></script>
+    <link href="../css/boxicons.min.css" rel="stylesheet" />
+
     <style>
+        @font-face{
+            font-family: 'boxicons';
+            src: url(../fonts/boxicons.woff2) format('woff2');
+        }
         * {
             padding: 0;
             margin-right: 0;
@@ -234,11 +238,6 @@
         }
 
         .toast {
-            background-color: rgb(17, 165,42);
-            box-shadow: 0 2px 6px #2e933a;
-            color: white;
-            padding: 6px 10px;
-            border: none;
             cursor: pointer;
             position: fixed;
             bottom: 10px;
@@ -246,60 +245,6 @@
             width: 280px;
             z-index: 100;
         }
-
-        .toast-header {
-            background-color: rgb(17, 165,42);
-        }
-
-        .close {
-            color: #fff;
-            opacity: 0.8;
-        }
-
-        .toast-header-text {
-            color: white;
-            font-weight: bold;
-            font-size: 16px;
-            margin-top: 5px;
-        }
-
-        .toast-body {
-            background-color: rgb(17,165, 42);
-            color: white;
-            font-size: 14px;
-        }
-
-        .toastError {
-            background-color: rgb(183, 22,22);
-            box-shadow: 0 2px 6px #c95e5e;
-            color: white;
-            padding: 6px 10px;
-            border: none;
-            cursor: pointer;
-            position: fixed;
-            bottom: 23px;
-            right: 28px;
-            width: 280px;
-            z-index: 100;
-        }
-
-        .toastError-header {
-            background-color: rgb(183, 22, 22);
-        }
-
-        .toastError-header-text {
-            color: white;
-            font-weight: bold;
-            font-size: 16px;
-            margin-top: 5px;
-        }
-
-        .toastError-body {
-            background-color: rgb(183,22, 22);
-            color: white;
-            font-size: 14px;
-        }
-
         ::-webkit-scrollbar {
             width: 10px;
         }
@@ -986,15 +931,18 @@
                     <asp:ContentPlaceHolder ID="MainContent" runat="server"></asp:ContentPlaceHolder>
                 </div>
 
-                <div class="toast mt-3 hide">
+                <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
                     <div class="toast-header">
-                        <p id="toast-header" class="mr-auto toast-header-text">Toast Header</p>
-                        <button type="button" class="ml-2 mb-3 close" data-dismiss="toast">×</button>
+                        <i class="bi bi-square-fill " id="toast-icon"></i>
+                        <strong class="mr-auto" id="toast-header" style="padding-left: 7px;">Bootstrap</strong>
+                        <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
                     </div>
-                    <div class="toast-body toast-body" id="toast-body">
-                        Some text inside the toast body
-                    </div>
+                    <div class="toast-body" id="toast-body">
+                        Hello, world! This is a toast message.
                 </div>
+            </div>
 
                 <footer class="main-footer">
                     <div class="footer-left">
@@ -1029,8 +977,8 @@
     <script src="../Scripts/vendor/jquery.nicescroll.min.js"></script>
     <script>
         var linkapi = "http://localhost:8082/api/";
-        //var baseaddress = "http://localhost:44347/";
-        var baseaddress = "http://localhost:8080/";
+        var baseaddress = "http://localhost:44347/";
+        //var baseaddress = "http://localhost:8080/";
         $(document).ready(function () {
             if (sessionStorage.getItem("userLoginUsername") != null) {
                 $('#user-login-fullname').text(" " + sessionStorage.getItem("userLoginFullname"));
@@ -1156,6 +1104,24 @@
         function btn_QuanLyTau() {
             debugger
             window.location = baseaddress + "Page_Master/Manage_Tau?vung=1";
+        }
+        function toastSuccess(_header, _body) {
+            $('#toast-header').text(" " + _header);
+            $('#toast-body').text(_body);
+            $("#toast-icon").css("color", "#198754");
+            $('.toast').toast({ delay: 2500 });
+            $('.toast').toast('show');
+        }
+
+        function toastError(_header, _body) {
+            $('#toast-header').text(" " + _header);
+            $('#toast-body').text(_body);
+            $("#toast-icon").css("color", "#DC3545");
+            $('.toast').toast({ delay: 2500 });
+            $('.toast').toast('show');
+        }
+        function closeToast() {
+            $('.toast').toast('hide');
         }
     </script>
 </body>

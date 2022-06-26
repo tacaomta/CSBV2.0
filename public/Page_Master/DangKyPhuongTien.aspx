@@ -1,4 +1,5 @@
 ﻿<%@ Page Title="Đăng ký các phương tiện bảo vệ sức sống tàu và cứu sinh" Language="C#" MasterPageFile="~/Master/TrangChu.Master" AutoEventWireup="true" CodeBehind="DangKyPhuongTien.aspx.cs" Inherits="CSB.Page_Master.DangKyPhuongTien" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <div class="main-body">
         <div class="page-wrapper">
@@ -55,7 +56,7 @@
                                         <h5>ĐĂNG KÝ CHẤT LƯỢNG HÀNG HẢI</h5>
                                         <div class="btn-group">
                                             <button onclick="loadDataList_DANGKYCLHANGHAI()" class="btn btn-secondary mb-2"><span class="bi-arrow-clockwise"></span>&nbsp;Load dữ liệu</button>
-                                            <button id="btn_add_DANGKYCLHANGHAI" class="btn btn-secondary mb-2" data-toggle="modal" data-target="#model-add-DANGKYCLHANGHAI" style="padding-top: 4px;"><span class="bi bi-plus-circle"></span> Thêm</button>
+                                            <button id="btn_add_DANGKYCLHANGHAI" class="btn btn-secondary mb-2" data-toggle="modal" data-target="#model-add-DANGKYCLHANGHAI" style="padding-top: 4px;"><span class="bi bi-plus-circle"></span>Thêm</button>
                                         </div>
                                         <table id="table-DANGKYCLHANGHAI" class="table table-bordered table-striped table-md" style="width: 100%">
                                         </table>
@@ -65,7 +66,7 @@
                                         <h5>VŨ KHÍ</h5>
                                         <div class="btn-group">
                                             <button onclick="loadDataList_VUKHI()" class="btn btn-secondary mb-2"><span class="bi-arrow-clockwise"></span>&nbsp;Load dữ liệu</button>
-                                            <button id="btn_add_VUKHI" class="btn btn-secondary mb-2" data-toggle="modal" data-target="#model-add-VUKHI" style="padding-top: 4px;"><span class="bi bi-plus-circle"></span> Thêm</button>
+                                            <button id="btn_add_VUKHI" class="btn btn-secondary mb-2" data-toggle="modal" data-target="#model-add-VUKHI" style="padding-top: 4px;"><span class="bi bi-plus-circle"></span>Thêm</button>
                                         </div>
                                         <table id="table-VUKHI" class="table table-bordered table-striped table-md" style="width: 100%">
                                         </table>
@@ -75,7 +76,7 @@
                                         <h5>ĐĂNG KÝ CHẤT LƯỢNG RA ĐA</h5>
                                         <div class="btn-group">
                                             <button onclick="loadDataList_DANGKYCLRADA()" class="btn btn-secondary mb-2"><span class="bi-arrow-clockwise"></span>&nbsp;Load dữ liệu</button>
-                                            <button id="btn_add_DANGKYCLRADA" class="btn btn-secondary mb-2" data-toggle="modal" data-target="#model-add-DANGKYCLRADA"  style="padding-top: 4px;"><span class="bi bi-plus-circle"></span> Thêm</button>
+                                            <button id="btn_add_DANGKYCLRADA" class="btn btn-secondary mb-2" data-toggle="modal" data-target="#model-add-DANGKYCLRADA" style="padding-top: 4px;"><span class="bi bi-plus-circle"></span>Thêm</button>
                                         </div>
                                         <table id="table-DANGKYCLRADA" class="table table-bordered table-striped table-md" style="width: 100%">
                                         </table>
@@ -161,7 +162,7 @@
                     <form id="form-add-DANGKYCLRADA" onsubmit="return false">
                         <div class="card auth_form" style="margin-bottom: 0px">
                             <div class="modal-header">
-                                <h4 class="title-modal-banve font-weight-bold"> Thêm đăng ký chất lượng rada</h4>
+                                <h4 class="title-modal-banve font-weight-bold">Thêm đăng ký chất lượng rada</h4>
                             </div>
                             <div class="modal-body">
                                 <div class="row clearfix ">
@@ -170,7 +171,6 @@
                                             <label class="col-md-5 control-label"><strong>Ký hiệu rada   : </strong></label>
                                             <div class="col-md-7">
                                                 <select class="form-control" id="add-DANGKYCLRADA-IDRADA" required>
-
                                                 </select>
                                             </div>
                                         </div>
@@ -195,14 +195,14 @@
                                         <div class="form-group" style="display: flex">
                                             <label class="col-md-5 control-label"><strong>Trạng thái  : </strong></label>
                                             <div class="col-md-7">
-                                                <input type="text"  class="form-control" id="add-DANGKYCLRADA-DANGKYCHATLUONG-TRANGTHAI" >
+                                                <input type="text" class="form-control" id="add-DANGKYCLRADA-DANGKYCHATLUONG-TRANGTHAI">
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="modal-footer">
-                                <button type="submit" onclick="add_DANGKYCLRADA()" class="btn btn-info"> Thêm</button>
+                                <button type="submit" onclick="add_DANGKYCLRADA()" class="btn btn-info">Thêm</button>
                                 <button type="button" class="btn btn-default" data-dismiss="modal">Đóng</button>
                             </div>
                         </div>
@@ -217,7 +217,7 @@
                         <input type="hidden" id="edit-DANGKYCLRADA-DANGKYCHATLUONG_ID" />
                         <div class="card auth_form" style="margin-bottom: 0px">
                             <div class="modal-header">
-                                <h4 class="title-modal-banve font-weight-bold"> Thêm đăng ký chất lượng rada</h4>
+                                <h4 class="title-modal-banve font-weight-bold">Thêm đăng ký chất lượng rada</h4>
                             </div>
                             <div class="modal-body">
                                 <div class="row clearfix ">
@@ -225,7 +225,7 @@
                                         <div class="form-group" style="display: flex">
                                             <label class="col-md-5 control-label"><strong>Ký hiệu rada   : </strong></label>
                                             <div class="col-md-7">
-                                                <input type="hidden" id="edit-DANGKYCLRADA-IDRADA" >
+                                                <input type="hidden" id="edit-DANGKYCLRADA-IDRADA">
                                                 <input type="text" class="form-control" id="edit-DANGKYCLRADA-KYHIEU" disabled required>
                                             </div>
                                         </div>
@@ -250,14 +250,14 @@
                                         <div class="form-group" style="display: flex">
                                             <label class="col-md-5 control-label"><strong>Trạng thái  : </strong></label>
                                             <div class="col-md-7">
-                                                <input type="text"  class="form-control" id="edit-DANGKYCLRADA-APSUAT" >
+                                                <input type="text" class="form-control" id="edit-DANGKYCLRADA-APSUAT">
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="modal-footer">
-                                <button type="submit" onclick="edit_DANGKYCLRADA()" class="btn btn-info"> Thêm</button>
+                                <button type="submit" onclick="edit_DANGKYCLRADA()" class="btn btn-info">Thêm</button>
                                 <button type="button" class="btn btn-default" data-dismiss="modal">Đóng</button>
                             </div>
                         </div>
@@ -295,7 +295,7 @@
             }
             else {
                 Load_Title(Ship_ID);
-                
+
             }
         });
 
@@ -305,7 +305,6 @@
 
         // RADA
         function loadRada() {
-            debugger
             var textselect = '';
             $.ajax({
                 type: "GET",
@@ -381,96 +380,96 @@
             });
         };
         // Chưa được
-        //function add_DANGKYCLRADA() {
-        //    var form = document.getElementById("form-add-DANGKYCLRADA");
-        //    console.log(form.checkValidity());
-        //    if (form.checkValidity() == true) {
-        //        var DANGKYCLRADA = {
-        //            IDRADA: $("#add-DANGKYCLRADA-IDRADA").val(),
-        //            KYHIEU: $("#add-DANGKYCLRADA-IDRADA").find("option:selected").first().attr("text"),
-        //            SOLUONG: $("#add-DANGKYCLRADA-SOLUONG").val(),
-        //            DANGKYCHATLUONG_NAMDANGKY: $("#add-DANGKYCLRADA-DANGKYCHATLUONG-NAMDANGKY").val(),
-        //            DANGKYCHATLUONG_TRANGTHAI: $("#add-DANGKYCLRADA-DANGKYCHATLUONG-TRANGTHAI").val()
-        //        };
-        //        console.log(DANGKYCLRADA);
-        //        $.ajax({
-        //            type: "POST",
-        //            url: linkapi + "v2/themdangkyclrada?id=" + getParameterByName("Ship_ID"),
-        //            dataType: "json",
-        //            data: JSON.stringify(DANGKYCLRADA),
-        //            contentType: "application/json",
-        //            success: function (data) {
-        //                toastSuccess("Thành công", "Thêm thông tin đăng ký chất lượng rada thành công.");
-        //                loadDataList_DANGKYCLRADA();
-        //            }, error: function (ret) {
-        //                toastError("Thất bại", "");
-        //            },
-        //            complete: function () { // Set our complete callback, adding the .hidden class and hiding the spinner.
-        //                $("#add-DANGKYCLRADA-SOLUONG").val("");
-        //                $("#add-DANGKYCLRADA-DANGKYCHATLUONG-NAMDANGKY").val("");
-        //                $("#add-DANGKYCLRADA-DANGKYCHATLUONG-TRANGTHAI").val("");
-        //                $('#model-add-DANGKYCLRADA').modal("hide");
-        //            },
-        //        });
-        //    }
-        //    return false;
-        //}
-        //function onclick_edit_DANGKYCLRADA(ID, TENTB, KYHIEU, NUOCSX, LUULUONG, SOLUONG) {
-        //    $('#edit-DANGKYCLRADA-ID').val(ID);
-        //    $("#edit-DANGKYCLRADA-TENTB").val(TENTB);
-        //    $("#edit-DANGKYCLRADA-KYHIEU").val(KYHIEU);
-        //    $("#edit-DANGKYCLRADA-NUOCSX").val(NUOCSX);
-        //    $("#edit-DANGKYCLRADA-LUULUONG").val(LUULUONG);
-        //    $("#edit-DANGKYCLRADA-SOLUONG").val(SOLUONG);
-        //}
-        //function edit_DANGKYCLRADA() {
-        //    var form = document.getElementById("form-edit-DANGKYCLRADA");
-        //    console.log(form.checkValidity());
-        //    if (form.checkValidity() == true) {
-        //        var DANGKYCLRADA = {
-        //            ID: $("#edit-DANGKYCLRADA-ID").val(),
-        //            TENTB: $("#edit-DANGKYCLRADA-TENTB").val(),
-        //            KYHIEU: $("#edit-DANGKYCLRADA-KYHIEU").val(),
-        //            NUOCSX: $("#edit-DANGKYCLRADA-NUOCSX").val(),
-        //            LUULUONG: $("#edit-DANGKYCLRADA-LUULUONG").val(),
-        //            SOLUONG: $("#edit-DANGKYCLRADA-SOLUONG").val()
-        //        };
-        //        console.log(DANGKYCLRADA);
-        //        $.ajax({
-        //            type: "PUT",
-        //            url: linkapi + "v2/update_DANGKYCLRADA?id=" + DANGKYCLRADA.ID,
-        //            dataType: "json",
-        //            data: JSON.stringify(DANGKYCLRADA),
-        //            contentType: "application/json",
-        //            success: function (data) {
-        //                toastSuccess("Thành công", "Cập nhật thông tin bơm dầu, nước và thông gió thành công.");
-        //                loadDataList_DANGKYCLRADA();
-        //            }, error: function (ret) {
-        //                console.log(ret.responseJSON.Message);
-        //                toastError("Thất bại", "");
-        //            },
-        //            complete: function () { // Set our complete callback, adding the .hidden class and hiding the spinner.
-        //                $('#model-edit-DANGKYCLRADA').modal("hide");
-        //            },
-        //        });
-        //    }
-        //    return false;
-        //}
-        //function delete_DANGKYCLRADA(id) {
-        //    let text = "Bạn có chắc muốn xóa bơm dầu, nước và thông gió này?";
-        //    if (confirm(text) == true) {
-        //        $.ajax({
-        //            url: linkapi + "v2/xoabomdaunuocthongio?id=" + id,
-        //            type: "DELETE",
-        //        }).done(function (res) {
-        //            loadDataList_DANGKYCLRADA();
-        //            toastSuccess("Thành công", "Xóa thông tin bơm dầu, nước và thông gió thành công!");
-        //        }).fail(function (res) {
-        //            toastError("Lỗi", "Xóa thông tin bơm dầu, nước và thông gió không thành công!");
-        //        })
-        //    } else {
+        function add_DANGKYCLRADA() {
+            var form = document.getElementById("form-add-DANGKYCLRADA");
+            console.log(form.checkValidity());
+            if (form.checkValidity() == true) {
+                var DANGKYCLRADA = {
+                    IDRADA: $("#add-DANGKYCLRADA-IDRADA").val(),
+                    KYHIEU: $("#add-DANGKYCLRADA-IDRADA").find("option:selected").first().attr("text"),
+                    SOLUONG: $("#add-DANGKYCLRADA-SOLUONG").val(),
+                    DANGKYCHATLUONG_NAMDANGKY: $("#add-DANGKYCLRADA-DANGKYCHATLUONG-NAMDANGKY").val(),
+                    DANGKYCHATLUONG_TRANGTHAI: $("#add-DANGKYCLRADA-DANGKYCHATLUONG-TRANGTHAI").val()
+                };
+                console.log(DANGKYCLRADA);
+                $.ajax({
+                    type: "POST",
+                    url: linkapi + "v2/themdangkyclrada?id=" + getParameterByName("Ship_ID"),
+                    dataType: "json",
+                    data: JSON.stringify(DANGKYCLRADA),
+                    contentType: "application/json",
+                    success: function (data) {
+                        toastSuccess("Thành công", "Thêm thông tin đăng ký chất lượng rada thành công.");
+                        loadDataList_DANGKYCLRADA();
+                    }, error: function (ret) {
+                        toastError("Thất bại", "");
+                    },
+                    complete: function () { // Set our complete callback, adding the .hidden class and hiding the spinner.
+                        $("#add-DANGKYCLRADA-SOLUONG").val("");
+                        $("#add-DANGKYCLRADA-DANGKYCHATLUONG-NAMDANGKY").val("");
+                        $("#add-DANGKYCLRADA-DANGKYCHATLUONG-TRANGTHAI").val("");
+                        $('#model-add-DANGKYCLRADA').modal("hide");
+                    },
+                });
+            }
+            return false;
+        }
+        function onclick_edit_DANGKYCLRADA(IDRADA ,KYHIEU ,SOLUONG ,DANGKYCHATLUONG_ID ,DANGKYCHATLUONG_NAMDANGKY ,DANGKYCHATLUONG_TRANGTHAI) {
+            $('#edit-DANGKYCLRADA-IDRADA').val(IDRADA);
+            $("#edit-DANGKYCLRADA-KYHIEU").val(KYHIEU);
+            $("#edit-DANGKYCLRADA-SOLUONG").val(SOLUONG);
+            $("#edit-DANGKYCLRADA-DANGKYCHATLUONG_ID").val(DANGKYCHATLUONG_ID);
+            $("#edit-DANGKYCLRADA-DANGKYCHATLUONG_NAMDANGKY").val(DANGKYCHATLUONG_NAMDANGKY);
+            $("#edit-DANGKYCLRADA-DANGKYCHATLUONG_TRANGTHAI").val(DANGKYCHATLUONG_TRANGTHAI);
+        }
+        function edit_DANGKYCLRADA() {
+            var form = document.getElementById("form-edit-DANGKYCLRADA");
+            console.log(form.checkValidity());
+            if (form.checkValidity() == true) {
+                var DANGKYCLRADA = {
+                    ID: $("#edit-DANGKYCLRADA-ID").val(),
+                    TENTB: $("#edit-DANGKYCLRADA-TENTB").val(),
+                    KYHIEU: $("#edit-DANGKYCLRADA-KYHIEU").val(),
+                    NUOCSX: $("#edit-DANGKYCLRADA-NUOCSX").val(),
+                    LUULUONG: $("#edit-DANGKYCLRADA-LUULUONG").val(),
+                    SOLUONG: $("#edit-DANGKYCLRADA-SOLUONG").val()
+                };
+                console.log(DANGKYCLRADA);
+                $.ajax({
+                    type: "PUT",
+                    url: linkapi + "v2/update_DANGKYCLRADA?id=" + DANGKYCLRADA.ID,
+                    dataType: "json",
+                    data: JSON.stringify(DANGKYCLRADA),
+                    contentType: "application/json",
+                    success: function (data) {
+                        toastSuccess("Thành công", "Cập nhật thông tin bơm dầu, nước và thông gió thành công.");
+                        loadDataList_DANGKYCLRADA();
+                    }, error: function (ret) {
+                        console.log(ret.responseJSON.Message);
+                        toastError("Thất bại", "");
+                    },
+                    complete: function () { // Set our complete callback, adding the .hidden class and hiding the spinner.
+                        $('#model-edit-DANGKYCLRADA').modal("hide");
+                    },
+                });
+            }
+            return false;
+        }
+        function delete_DANGKYCLRADA(id) {
+            let text = "Bạn có chắc muốn xóa thông tin đăng ký này?";
+            if (confirm(text) == true) {
+                $.ajax({
+                    url: linkapi + "v2/xoadangkyclrada?id=" + id,
+                    type: "DELETE",
+                }).done(function (res) {
+                    loadDataList_DANGKYCLRADA();
+                    toastSuccess("Thành công", "Xóa thông tin đăng ký thành công!");
+                }).fail(function (res) {
+                    toastError("Lỗi", "Xóa thông tin đăng ký không thành công!");
+                })
+            } else {
 
-        //    }
-        //}
+            }
+        }
     </script>
 </asp:Content>

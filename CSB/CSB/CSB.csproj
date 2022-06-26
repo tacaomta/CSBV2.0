@@ -242,11 +242,14 @@
     <Content Include="Content\responsive.bootstrap4.min.css" />
     <Content Include="Content\Site.css" />
     <Content Include="Content\use.fontawesome.com_releases_v5.7.2_css_all.css" />
+    <Content Include="css\animations.css" />
     <Content Include="css\bootstrap.min.css" />
     <Content Include="css\bootstrap3.css" />
+    <Content Include="css\boxicons.min.css" />
     <Content Include="css\login1.css" />
     <Content Include="css\manage_ship.css" />
     <Content Include="css\Ship_equiment.css" />
+    <Content Include="css\transformations.css" />
     <Content Include="Default.aspx" />
     <Content Include="Demos\Detail.html" />
     <Content Include="Demos\ShipAction.html" />
@@ -328,6 +331,7 @@
     <Content Include="reports\MayChinh.xsc">
       <DependentUpon>MayChinh.xsd</DependentUpon>
     </Content>
+    <Content Include="fonts\boxicons.woff2" />
     <None Include="reports\MayChinh.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>

@@ -199,6 +199,7 @@
             });
         };
         function btn_addship() {
+            sessionStorage.setItem("vung", getParameterByName('vung'));
             window.location = baseaddress + "Page_Master/DacDiemChung";
         }
         function View_HoSoTau(Ship_ID) {
