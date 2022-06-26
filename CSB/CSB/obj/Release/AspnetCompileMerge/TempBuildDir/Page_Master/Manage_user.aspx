@@ -216,10 +216,10 @@
                     $.each(data, function (key, item) {
 
                         if (item.LOCKED == true) {
-                            tabletext += "<tr><td>" + i + "</td><td>" + item.Fullname + "</td><td>" + item.UserName + "</td><td>" + item.Role.RoleName + "</td><td>" + item.LastUpdate + "</td><td>" + '<a href="#" class="lock" data-toggle="tooltip"><i class="material-icons">lock</i ></a>' + '</td><td><div style="width: max-content;"><a href="#" class="edit" title="Sửa" data-toggle="modal" data-target="#model-edit-user"  onclick="edituser(`' + item.Fullname + '`,`' + item.UserName + '`,`' + item.Password + '`,`' + item.Role.RoleId + '`,`' + item.Role.RoleName + '`,`' + item.Created + '`,`' + item.LOCKED + '`,`' + item.ID + '`)"><i class="material-icons">&#xE254;</i></a><a href="#" class="delete" title="Xóa" onclick="delete_user(`' + item.ID + '`)"><i class="material-icons">&#xE872;</i></a></div></td></tr>';
+                            tabletext += "<tr><td style='text-align: center;'>" + i + "</td><td>" + item.Fullname + "</td><td>" + item.UserName + "</td><td>" + item.Role.RoleName + "</td><td>" + item.LastUpdate + "</td><td>" + '<a href="#" class="lock" data-toggle="tooltip"><i class="material-icons">lock</i ></a>' + '</td><td><div style="display: flex; justify-content: space-around;"><a href="#" class="edit" title="Sửa" data-toggle="modal" data-target="#model-edit-user"  onclick="edituser(`' + item.Fullname + '`,`' + item.UserName + '`,`' + item.Password + '`,`' + item.Role.RoleId + '`,`' + item.Role.RoleName + '`,`' + item.Created + '`,`' + item.LOCKED + '`,`' + item.ID + '`)"><i class="material-icons">&#xE254;</i></a><a href="#" class="delete" title="Xóa" onclick="delete_user(`' + item.ID + '`)"><i class="material-icons">&#xE872;</i></a></div></td></tr>';
                         }
                         else {
-                            tabletext += "<tr><td>" + i + "</td><td>" + item.Fullname + "</td><td>" + item.UserName + "</td><td>" + item.Role.RoleName + "</td><td>" + item.LastUpdate + "</td><td>" + '<a href="#" class="lock" data-toggle="tooltip"><i class="material-icons">lock_open</i ></a>' + '</td><td><div style="width: max-content;"><a href="#" class="edit" title="Sửa" data-toggle="modal" data-target="#model-edit-user"  onclick="edituser(`' + item.Fullname + '`,`' + item.UserName + '`,`' + item.Password + '`,`' + item.Role.RoleId + '`,`' + item.Role.RoleName + '`,`' + item.Created + '`,`' + item.LOCKED + '`,`' + item.ID + '`)"><i class="material-icons">&#xE254;</i></a><a href="#" class="delete" title="Xóa" onclick="delete_user(`' + item.ID + '`)"><i class="material-icons">&#xE872;</i></a></div></td></tr>';
+                            tabletext += "<tr><td style='text-align: center;'>" + i + "</td><td>" + item.Fullname + "</td><td>" + item.UserName + "</td><td>" + item.Role.RoleName + "</td><td>" + item.LastUpdate + "</td><td style='text-align: center;'>" + '<a href="#" class="lock" data-toggle="tooltip"><i class="material-icons">lock_open</i ></a>' + '</td><td><div style="display: flex; justify-content: space-around;"><a href="#" class="edit" title="Sửa" data-toggle="modal" data-target="#model-edit-user"  onclick="edituser(`' + item.Fullname + '`,`' + item.UserName + '`,`' + item.Password + '`,`' + item.Role.RoleId + '`,`' + item.Role.RoleName + '`,`' + item.Created + '`,`' + item.LOCKED + '`,`' + item.ID + '`)"><i class="material-icons">&#xE254;</i></a><a href="#" class="delete" title="Xóa" onclick="delete_user(`' + item.ID + '`)"><i class="material-icons">&#xE872;</i></a></div></td></tr>';
                         }
                         i = i + 1;
                     });
@@ -242,13 +242,13 @@
                     destroy: true,
                     stateSave: true,
                     "columns": [
-                        { name: 'STT' },
-                        { name: 'Họ tên', width: 140 },
+                        { name: 'STT', width: 60 },
+                        { name: 'Họ tên', width: 240 },
                         { name: 'Tên DN', width: 140 },
                         { name: 'Quyền', width: 140 },
                         { name: 'Cập nhật gần đây', width: 200 },
-                        { name: 'Khóa' },
-                        { name: 'Tác vụ' },
+                        { name: 'Khóa', width: 80 },
+                        { name: 'Tác vụ', width: 80 },
                     ],
                     "columnDefs": [
                         {

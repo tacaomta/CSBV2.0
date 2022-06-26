@@ -2,6 +2,11 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <div class="main-body">
+        <input type="hidden" id="Count_MC" />
+        <input type="hidden" id="Count_MNK" />
+        <input type="hidden" id="Count_HH" />
+        <input type="hidden" id="Count_RD" />
+        <input type="hidden" id="Count_VK" />
         <div class="page-wrapper">
             <div class="row">
                 <div class="col-sm-12" style="padding: 0px 5px;">
@@ -94,6 +99,7 @@
             if (!results[2]) return '';
             return decodeURIComponent(results[2].replace(/\+/g, ' '));
         }
+      
         $(document).ready(function () {
             Ship_ID = getParameterByName('Ship_ID');
             if (Ship_ID == null) {
@@ -108,9 +114,11 @@
                 loadDataList_HangHai(Ship_ID);
                 loadDataList_RaDa(Ship_ID);
                 loadDataList_VuKhi(Ship_ID);
+                nhap();
             }
-
+           
         });
+
         function Load_Title(Ship_ID) {
             debugger
             $.ajax({
@@ -151,10 +159,24 @@
                 success: function (data) {
                     var tabletext = '<thead><tr><th style="text-align: center;" colspan="7">THÂN VỎ</th></tr><tr><th>STT</th><th>KÝ HIỆU VẬT LIỆU</th><th>SỐ KHOANG KÍN NƯỚC</th><th>SỐ SƯỜN TÀU</th><th>SỐ KÉT DÀU CHÁY</th><th>SỐ KÉT DẦU NHỜN</th><th>SỐ KÉT NƯỚC</th></tr></thead><tbody>';
                     var i = 1;
-                    $.each(data, function (key, item) {
-                        tabletext += "<tr><td>" + i + "</td><td>" + item.KYHIEUVATLIEU + "</td><td>" + item.SOKHOANGKINNUOC + "</td><td>" + item.SOSUONTAU + "</td><td>" + item.SOKETDAUCHAY + "</td><td>" + item.SOKETDAUNHON + "</td><td>" + item.SOKETNUOC + "</td></tr>";
+                    if (data == null) {
+                        tabletext += "<tr><td>" + '1' + "</td><td>" + ' ' + "</td><td>" + ' ' + "</td><td>" + ' ' + "</td><td>" + ' ' + "</td><td>" + ' ' + "</td><td>" + ' ' + "</td></tr>";
                         i = i + 1;
-                    });
+                    }
+                    else {
+                        $.each(data, function (key, item) {
+                            tabletext += "<tr><td>" + i + "</td><td>" + item.KYHIEUVATLIEU + "</td><td>" + item.SOKHOANGKINNUOC + "</td><td>" + item.SOSUONTAU + "</td><td>" + item.SOKETDAUCHAY + "</td><td>" + item.SOKETDAUNHON + "</td><td>" + item.SOKETNUOC + "</td></tr>";
+                            i = i + 1;
+                        });
+                       
+                    }
+                    var k = 5 - i;
+                    if (i < 5) {
+                        for (var j = 0; j <=k; j++) {
+                            tabletext += "<tr><td>" + i + "</td><td>" + ' ' + "</td><td>" + ' ' + "</td><td>" + ' ' + "</td><td>" + ' ' + "</td><td>" + ' ' + "</td><td>" + ' ' + "</td></tr>";
+                            i++;
+                        }
+                    }
                     tabletext += "</tbody>";
                     $('#table_ThanVo').html(tabletext);
                     //loadTable('table_ThanVo');
@@ -181,11 +203,25 @@
                 },
                 success: function (data) {
                     var tabletext = '<thead><tr><th style="text-align: center; " colspan="4">MÁY CHÍNH</th></tr><tr><th>STT(vị trí đặt)</th><th>KÝ HIỆU</th><th>CÔNG SUẤT(CV)</th><th>VÒNG QUAY(Vg/p)</th></tr></thead><tbody>';
-
-                    $.each(data, function (key, item) {
-                        tabletext += "<tr><td>" + item.THONGSOCOBAN.VITRILAPRAP + "</td><td>" + item.THONGSOCOBAN.KYHIEU + "</td><td>" + item.THONGSOCOBAN.CONGSUAT + "</td><td>" + item.THONGSOCOBAN.VONGQUAY + "</td></tr>";
-
-                    });
+                    var i = 1;
+                    debugger
+                    if (data == null) {
+                        tabletext += "<tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>";
+                        i = i + 1;
+                    }
+                    else {
+                        $.each(data, function (key, item) {
+                            tabletext += "<tr><td>" + item.THONGSOCOBAN.VITRILAPRAP + "</td><td>" + item.THONGSOCOBAN.KYHIEU + "</td><td>" + item.THONGSOCOBAN.CONGSUAT + "</td><td>" + item.THONGSOCOBAN.VONGQUAY + "</td></tr>";
+                            i = i + 1;
+                        });
+                    }
+                    var k = 5 - i;
+                    if (i < 5) {
+                        for (var j = 0; j <= k; j++) {
+                            tabletext += "<tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>";
+                            i++;
+                        }
+                    }
                     tabletext += "</tbody>";
                     $('#table_MayChinh').html(tabletext);
                     //loadTable('table_MayChinh');
@@ -211,14 +247,27 @@
                 },
                 success: function (data) {
                     var tabletext = '<thead><tr><th style="text-align: center; " colspan="3">MÁY NÉN KHÍ</th></tr><tr><th>KÝ HIỆU</th><th>SỐ LƯỢNG</th><th>ÁP SUẤT(KG/cm2)</th></tr></thead><tbody>';
-
-                    $.each(data, function (key, item) {
-                        tabletext += "<tr><td>" + item.KYHIEU + "</td><td>" + item.SOLUONG + "</td><td>" + item.APSUAT + "</td><tr>";
-
-                    });
+                    var i = 1;
+                    if (data == null) {
+                        tabletext += "<tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><tr>";
+                        i++;
+                    }
+                    else {
+                        $.each(data, function (key, item) {
+                            tabletext += "<tr><td>" + item.KYHIEU + "</td><td>" + item.SOLUONG + "</td><td>" + item.APSUAT + "</td><tr>";
+                            i++;
+                        });
+                    }
+                    var k = 5 - i;
+                    if (i < 5) {
+                        for (var j = 0; j <= k; j++) {
+                            tabletext += "<tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><tr>";
+                            i++;
+                        }
+                    }
                     tabletext += "</tbody>";
                     $('#table_MayNenKhi').html(tabletext);
-
+                    //loadTable('table_MayNenKhi');
                     //$('#tableship_wrapper .row .col-sm-12').first().html('<button onclick="btn_addship()" class="btn btn-info btn-lg col-md-6" /*data-toggle="modal" data-target="#model-add-ship"*/ style="height: 40px; margin-bottom: 8px; margin-top: -4px; font-size: 18px;"><span class="glyphicon glyphicon-plus"></span>Thêm tàu</button>');
 
                 }, error: function (ret) {
@@ -230,7 +279,6 @@
                 },
             });
         }
-
         function loadDataList_MayPhu_PhatDien(Ship_ID) {
 
             $.ajax({
@@ -242,11 +290,25 @@
                 },
                 success: function (data) {
                     var tabletext = '<thead><tr><th style="text-align: center; " colspan="5">MÁY PHỤ, PHÁT ĐIỆN</th></tr><tr><th>STT(vị trí đặt)</th><th>KÝ HIỆU DIESEL</th><th>CÔNG SUẤT(CV/Kw)</th><th>VÒNG QUAY(Vg/p)</th></tr></thead><tbody>';
+                    var i = 1;
+                    if (data == null) {
+                        tabletext += "<tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>";
 
-                    $.each(data, function (key, item) {
-                        tabletext += "<tr><td>" + item.THONGSOCOBAN.VITRILAPRAP + "</td><td>" + item.THONGSOCOBAN.KYHIEU + "</td><td>" + item.THONGSOCOBAN.CONGSUAT + "</td><td>" + item.THONGSOCOBAN.VONGQUAY + "</td></tr>";
-
-                    });
+                        i++;
+                    }
+                    else {
+                        $.each(data, function (key, item) {
+                            tabletext += "<tr><td>" + item.THONGSOCOBAN.VITRILAPRAP + "</td><td>" + item.THONGSOCOBAN.KYHIEU + "</td><td>" + item.THONGSOCOBAN.CONGSUAT + "</td><td>" + item.THONGSOCOBAN.VONGQUAY + "</td></tr>";
+                            i++;
+                        });
+                    }
+                    var k = 5 - i;
+                    if (i < 5) {
+                        for (var j = 0; j <= k; j++) {
+                            tabletext += "<tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>";
+                            i++;
+                        }
+                    }
                     tabletext += "</tbody>";
                     $('#table_MayPhu_PhatDien').html(tabletext);
                     //loadTable('table_MayPhu_PhatDien');
@@ -273,11 +335,24 @@
                 },
                 success: function (data) {
                     var tabletext = '<thead><tr><th style="text-align: center; " colspan="2">HÀNG HẢI</th></tr><tr><th>KÝ HIỆU</th><th>SỐ LƯỢNG</th></tr></thead><tbody>';
-
-                    $.each(data, function (key, item) {
-                        tabletext += "<tr><td>" + item.KYHIEU + "</td><td>" + item.SOLUONG + "</td><tr>";
-
-                    });
+                    var i = 1;
+                    if (data == null) {
+                        tabletext += "<tr><td>&nbsp;</td><td>&nbsp;</td><tr>";
+                        i++;
+                    }
+                    else {
+                        $.each(data, function (key, item) {
+                            tabletext += "<tr><td>" + item.KYHIEU + "</td><td>" + item.SOLUONG + "</td><tr>";
+                            i++;
+                        });
+                    }
+                    var k = 5 - i;
+                    if (i < 5) {
+                        for (var j = 0; j <= k; j++) {
+                            tabletext += "<tr><td>&nbsp;</td><td>&nbsp;</td><tr>";
+                            i++;
+                        }
+                    }
                     tabletext += "</tbody>";
                     $('#table_HangHai').html(tabletext);
 
@@ -304,11 +379,24 @@
                 },
                 success: function (data) {
                     var tabletext = '<thead><tr><th style="text-align: center; " colspan="2">RADA</th></tr><tr><th>KÝ HIỆU</th><th>SỐ LƯỢNG</th></tr></thead><tbody>';
-
-                    $.each(data, function (key, item) {
-                        tabletext += "<tr><td>" + item.KYHIEU + "</td><td>" + item.SOLUONG + "</td><tr>";
-
-                    });
+                    var i = 1;
+                    if (data == null) {
+                        tabletext += "<tr><td>&nbsp;</td><td>&nbsp;</td><tr>";
+                        i++;
+                    }
+                    else {
+                        $.each(data, function (key, item) {
+                            tabletext += "<tr><td>" + item.KYHIEU + "</td><td>" + item.SOLUONG + "</td><tr>";
+                            i++;
+                        });
+                    }
+                    var k = 5 - i;
+                    if (i < 5) {
+                        for (var j = 0; j <= k; j++) {
+                            tabletext += "<tr><td>&nbsp;</td><td>&nbsp;</td><tr>";
+                            i++;
+                        }
+                    }
                     tabletext += "</tbody>";
                     $('#table_RaDa').html(tabletext);
 
@@ -335,11 +423,24 @@
                 },
                 success: function (data) {
                     var tabletext = '<thead><tr><th style="text-align: center; " colspan="2">VŨ KHÍ</th></tr><tr><th>KÝ HIỆU</th><th>SỐ LƯỢNG</th></tr></thead><tbody>';
-
-                    $.each(data, function (key, item) {
-                        tabletext += "<tr><td>" + item.KYHIEU + "</td><td>" + item.SOLUONG + "</td><tr>";
-
-                    });
+                    var i = 1;
+                    if (data == null) {
+                        tabletext += "<tr><td>&nbsp;</td><td>&nbsp;</td><tr>";
+                        i++;
+                    }
+                    else {
+                        $.each(data, function (key, item) {
+                            tabletext += "<tr><td>" + item.KYHIEU + "</td><td>" + item.SOLUONG + "</td><tr>";
+                            i++;
+                        });
+                    }
+                    var k = 5 - i;
+                    if (i < 5) {
+                        for (var j = 0; j <= k; j++) {
+                            tabletext += "<tr><td>&nbsp;</td><td>&nbsp;</td><tr>";
+                            i++;
+                        }
+                    }
                     tabletext += "</tbody>";
                     $('#table_VuKhi').html(tabletext);
 
@@ -360,29 +461,6 @@
                 var table1 = $(this).DataTable({
                     destroy: true,
                     stateSave: true,
-                    "columns": [
-                        { name: 'STT', width: 30 },
-                        { name: 'KÝ HIỆU VẬT LIỆU', width: 120 },
-                        { name: 'SỐ KHOANG KÍN NƯỚC', width: 120 },
-                        { name: 'SỐ SƯỜN TÀU', width: 80 },
-                        { name: 'SỐ KÉT DÀU CHÁY', width: 80 },
-                        { name: 'SỐ KÉT DẦU NHỜN', width: 100 },
-                        { name: 'SỐ KÉT NƯỚC', width: 80 }
-                    ],
-                    "columnDefs": [
-                        {
-                            "targets": [0, 3, 4, 5],
-                            "searchable": false,
-                        },
-                        {
-                            "targets": [5],
-                            "orderable": false
-                        },
-                        {
-                            "targets": [0, 1, 2, 3, 4],
-                            "orderable": true
-                        }
-                    ],
                     lengthChange: false,
                     lengthMenu: false,
                     searching: false,
@@ -409,6 +487,20 @@
 
             });
         };
-
+        function nhap() {
+            debugger
+           
+        }
+        //var count_mc = $("#Count_MC").val();
+       
+        //var count_mnk = $("#Count_MNK").val();
+        //if (count_mc > count_mnk) {
+        //    var i = count_mc - count_mnk;
+        //    alert(i);
+        //}
+        //else if (count_mc < count_mnk) {
+        //    var i = count_mnk - count_mc;
+        //    alert(i);
+        //}
     </script>
 </asp:Content>

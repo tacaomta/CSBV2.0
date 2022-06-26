@@ -27,58 +27,58 @@
                                 <div class="row">
                                     <div class="col-sm-6">
                                         <div class="form-group row">
-                                            <label class="col-sm-4 col-form-label">Số hiệu tàu <span style="color: red;">(*)</span>: </label>
-                                            <div class="col-sm-8">
+                                            <label class="col-sm-5 col-form-label">Số hiệu tàu <span style="color: red;">(*)</span>: </label>
+                                            <div class="col-sm-7">
                                                 <input type="text" id="addTTC-SOHIEU" class="form-control" placeholder="Ví dụ: CSB 1234" required>
                                             </div>
                                         </div>
                                         <div class="form-group row">
-                                            <label class="col-sm-4 col-form-label">Ký hiệu tàu <span style="color: red;">(*)</span>: </label>
-                                            <div class="col-sm-8">
+                                            <label class="col-sm-5 col-form-label">Ký hiệu tàu <span style="color: red;">(*)</span>: </label>
+                                            <div class="col-sm-7">
                                                 <input type="text" id="addTTC-KYHIEU" class="form-control" placeholder="Ví dụ: K123" required>
                                             </div>
                                         </div>
                                         <div class="form-group row">
-                                            <label class="col-sm-4 col-form-label">Năm tiếp nhận <span style="color: red;">(*)</span>: </label>
-                                            <div class="col-sm-8">
+                                            <label class="col-sm-5 col-form-label">Năm tiếp nhận <span style="color: red;">(*)</span>: </label>
+                                            <div class="col-sm-7">
                                                 <input type="number" id="addTTC-NAMTIEPNHAN" min="0" class="form-control" required>
                                             </div>
                                         </div>
                                         <div class="form-group row">
-                                            <label class="col-sm-4 col-form-label">Năm hạ thủy:</label>
-                                            <div class="col-sm-8">
+                                            <label class="col-sm-5 col-form-label">Năm hạ thủy:</label>
+                                            <div class="col-sm-7">
                                                 <input type="number" id="addTTC-NAMHATHUY" min="0" class="form-control">
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-sm-6">
                                         <div class="form-group row" id="chonVung">
-                                            <label class="col-sm-4 col-form-label">Vùng <span style="color: red;">(*)</span>: </label>
-                                            <div class="col-sm-8">
+                                            <label class="col-sm-5 col-form-label">Vùng <span style="color: red;">(*)</span>: </label>
+                                            <div class="col-sm-7">
                                                 <select class="form-control" id="addTTC-VUNG" onchange="onchangeVung(this.value)">
                                                     <option selected="" disabled="" value="">Chưa chọn...</option>
                                                 </select>
                                             </div>
                                         </div>
                                         <div class="form-group row" id="chonHaiDoan">
-                                            <label class="col-sm-4 col-form-label">Hải đoàn <span style="color: red;">(*)</span>: </label>
-                                            <div class="col-sm-8">
+                                            <label class="col-sm-5 col-form-label">Hải đoàn <span style="color: red;">(*)</span>: </label>
+                                            <div class="col-sm-7">
                                                 <select class="form-control" id="addTTC-HAIDOAN" onchange="onchangeHaiDoan(this.value)">
                                                     <option selected="" disabled="" value="">Chưa chọn...</option>
                                                 </select>
                                             </div>
                                         </div>
                                         <div class="form-group row" id="chonHaiDoi">
-                                            <label class="col-sm-4 col-form-label">Hải đội <span style="color: red;">(*)</span>: </label>
-                                            <div class="col-sm-8">
+                                            <label class="col-sm-5 col-form-label">Hải đội <span style="color: red;">(*)</span>: </label>
+                                            <div class="col-sm-7">
                                                 <select class="form-control" id="addTTC-HAIDOI">
                                                     <option selected="" disabled="" value="">Chưa chọn...</option>
                                                 </select>
                                             </div>
                                         </div>
                                         <div class="form-group row">
-                                            <label class="col-sm-4 col-form-label">Nơi sản xuất:</label>
-                                            <div class="col-sm-8">
+                                            <label class="col-sm-5 col-form-label">Nơi sản xuất:</label>
+                                            <div class="col-sm-7">
                                                 <input type="text" id="addTTC-NOISANXUAT" class="form-control" placeholder="Ví dụ: Liên Xô">
                                             </div>
                                         </div>
@@ -114,16 +114,16 @@
                                 <div class="row">
                                     <div class="col-sm-6">
                                         <div class="form-group row">
-                                            <label class="col-sm-4 col-form-label">Dmax: </label>
-                                            <div class="col-sm-8">
+                                            <label class="col-sm-5 col-form-label">Dmax: </label>
+                                            <div class="col-sm-7">
                                                 <input type="number" step="any" id="addLGN-Dmax" min="0" class="form-control">
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-sm-6">
                                         <div class="form-group row">
-                                            <label class="col-sm-4 col-form-label">Dmin: </label>
-                                            <div class="col-sm-8">
+                                            <label class="col-sm-5 col-form-label">Dmin: </label>
+                                            <div class="col-sm-7">
                                                 <input type="number" step="any" id="addLGN-Dmin" min="0" class="form-control">
                                             </div>
                                         </div>
@@ -133,16 +133,16 @@
                                 <div class="row">
                                     <div class="col-sm-6">
                                         <div class="form-group row">
-                                            <label class="col-sm-4 col-form-label">Dài nhất (Lmax): </label>
-                                            <div class="col-sm-8">
+                                            <label class="col-sm-5 col-form-label">Dài nhất (Lmax): </label>
+                                            <div class="col-sm-7">
                                                 <input type="number" step="any" id="addKT-Lmax" min="0" class="form-control">
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-sm-6">
                                         <div class="form-group row">
-                                            <label class="col-sm-4 col-form-label">Dài thiết kế (Ltk): </label>
-                                            <div class="col-sm-8">
+                                            <label class="col-sm-5 col-form-label">Dài thiết kế (Ltk): </label>
+                                            <div class="col-sm-7">
                                                 <input type="number" step="any" id="addKT-Ltk" min="0" class="form-control">
                                             </div>
                                         </div>
@@ -151,16 +151,16 @@
                                 <div class="row">
                                     <div class="col-sm-6">
                                         <div class="form-group row">
-                                            <label class="col-sm-4 col-form-label">Rộng nhất (Bmax): </label>
-                                            <div class="col-sm-8">
+                                            <label class="col-sm-5 col-form-label">Rộng nhất (Bmax): </label>
+                                            <div class="col-sm-7">
                                                 <input type="number" step="any" id="addKT-Bmax" min="0" class="form-control">
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-sm-6">
                                         <div class="form-group row">
-                                            <label class="col-sm-4 col-form-label">Cao mạn (Htb): </label>
-                                            <div class="col-sm-8">
+                                            <label class="col-sm-5 col-form-label">Cao mạn (Htb): </label>
+                                            <div class="col-sm-7">
                                                 <input type="number" step="any" id="addKT-Htb" min="0" class="form-control">
                                             </div>
                                         </div>
@@ -169,16 +169,16 @@
                                 <div class="row">
                                     <div class="col-sm-6">
                                         <div class="form-group row">
-                                            <label class="col-sm-4 col-form-label">Chiều cao nhất của tàu: </label>
-                                            <div class="col-sm-8">
+                                            <label class="col-sm-5 col-form-label">Chiều cao nhất của tàu: </label>
+                                            <div class="col-sm-7">
                                                 <input type="number" step="any" id="addKT-Hmax" min="0" class="form-control">
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-sm-6">
                                         <div class="form-group row">
-                                            <label class="col-sm-4 col-form-label">Chiều sâu nhất của tàu: </label>
-                                            <div class="col-sm-8">
+                                            <label class="col-sm-5 col-form-label">Chiều sâu nhất của tàu: </label>
+                                            <div class="col-sm-7">
                                                 <input type="number" step="any" id="addKT-Dmax" min="0" class="form-control">
                                             </div>
                                         </div>
@@ -188,16 +188,16 @@
                                 <div class="row">
                                     <div class="col-sm-6">
                                         <div class="form-group row">
-                                            <label class="col-sm-4 col-form-label">Mũi tàu (Tm): </label>
-                                            <div class="col-sm-8">
+                                            <label class="col-sm-5 col-form-label">Mũi tàu (Tm): </label>
+                                            <div class="col-sm-7">
                                                 <input type="number" step="any" id="addMN-Tm" min="0" class="form-control">
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-sm-6">
                                         <div class="form-group row">
-                                            <label class="col-sm-4 col-form-label">Giữa tàu (Ttb): </label>
-                                            <div class="col-sm-8">
+                                            <label class="col-sm-5 col-form-label">Giữa tàu (Ttb): </label>
+                                            <div class="col-sm-7">
                                                 <input type="number" step="any" id="addMN-Ttb" min="0" class="form-control">
                                             </div>
                                         </div>
@@ -206,16 +206,16 @@
                                 <div class="row">
                                     <div class="col-sm-6">
                                         <div class="form-group row">
-                                            <label class="col-sm-4 col-form-label">Đuôi tàu (tđ): </label>
-                                            <div class="col-sm-8">
+                                            <label class="col-sm-5 col-form-label">Đuôi tàu (tđ): </label>
+                                            <div class="col-sm-7">
                                                 <input type="number" step="any" id="addMN-Td" min="0" class="form-control">
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-sm-6">
                                         <div class="form-group row">
-                                            <label class="col-sm-4 col-form-label">Lớn nhất (Tmax): </label>
-                                            <div class="col-sm-8">
+                                            <label class="col-sm-5 col-form-label">Lớn nhất (Tmax): </label>
+                                            <div class="col-sm-7">
                                                 <input type="number" step="any" id="addMN-Tmax" min="0" class="form-control">
                                             </div>
                                         </div>
@@ -225,16 +225,16 @@
                                 <div class="row">
                                     <div class="col-sm-6">
                                         <div class="form-group row">
-                                            <label class="col-sm-4 col-form-label">Lớn nhất (Vmax): </label>
-                                            <div class="col-sm-8">
+                                            <label class="col-sm-5 col-form-label">Lớn nhất (Vmax): </label>
+                                            <div class="col-sm-7">
                                                 <input type="number" step="any" id="addVT-Vmax" min="0" class="form-control">
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-sm-6">
                                         <div class="form-group row">
-                                            <label class="col-sm-4 col-form-label">Kinh tế (Vkt): </label>
-                                            <div class="col-sm-8">
+                                            <label class="col-sm-5 col-form-label">Kinh tế (Vkt): </label>
+                                            <div class="col-sm-7">
                                                 <input type="number" step="any" id="addVT-Vkt" min="0" class="form-control">
                                             </div>
                                         </div>
@@ -244,16 +244,16 @@
                                 <div class="row">
                                     <div class="col-sm-6">
                                         <div class="form-group row">
-                                            <label class="col-sm-4 col-form-label">Bán kính hoạt động (H1): </label>
-                                            <div class="col-sm-8">
+                                            <label class="col-sm-5 col-form-label">Bán kính hoạt động (H1): </label>
+                                            <div class="col-sm-7">
                                                 <input type="number" step="any" id="addKNHD-H1" min="0" class="form-control">
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-sm-6">
                                         <div class="form-group row">
-                                            <label class="col-sm-4 col-form-label">Thời gian HĐ tối đa (ngày đêm): </label>
-                                            <div class="col-sm-8">
+                                            <label class="col-sm-5 col-form-label">Thời gian HĐ tối đa (ngày đêm): </label>
+                                            <div class="col-sm-7">
                                                 <input type="number" step="any" id="addKNHD-Tm" min="0" class="form-control">
                                             </div>
                                         </div>
@@ -262,8 +262,8 @@
                                 <div class="row">
                                     <div class="col-sm-6">
                                         <div class="form-group row">
-                                            <label class="col-sm-4 col-form-label">Cấp chịu đựng sóng gió (max): </label>
-                                            <div class="col-sm-8">
+                                            <label class="col-sm-5 col-form-label">Cấp chịu đựng sóng gió (max): </label>
+                                            <div class="col-sm-7">
                                                 <input type="number" step="any" id="addKNHD-Wmax" min="0" class="form-control">
                                             </div>
                                         </div>
@@ -275,16 +275,16 @@
                                 <div class="row">
                                     <div class="col-sm-6">
                                         <div class="form-group row">
-                                            <label class="col-sm-4 col-form-label">Dầu cháy: Ký hiệu: </label>
-                                            <div class="col-sm-8">
+                                            <label class="col-sm-5 col-form-label">Dầu cháy: Ký hiệu: </label>
+                                            <div class="col-sm-7">
                                                 <input type="text" id="addLDT-DCKH" class="form-control">
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-sm-6">
                                         <div class="form-group row">
-                                            <label class="col-sm-4 col-form-label">Số lượng (Tấn): </label>
-                                            <div class="col-sm-8">
+                                            <label class="col-sm-5 col-form-label">Số lượng (Tấn): </label>
+                                            <div class="col-sm-7">
                                                 <input type="number" step="any" id="addLDT-DCSL" min="0" class="form-control">
                                             </div>
                                         </div>
@@ -293,16 +293,16 @@
                                 <div class="row">
                                     <div class="col-sm-6">
                                         <div class="form-group row">
-                                            <label class="col-sm-4 col-form-label">Dầu nhờn: Ký hiệu: </label>
-                                            <div class="col-sm-8">
+                                            <label class="col-sm-5 col-form-label">Dầu nhờn: Ký hiệu: </label>
+                                            <div class="col-sm-7">
                                                 <input type="text" id="addLDT-DNKH" class="form-control">
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-sm-6">
                                         <div class="form-group row">
-                                            <label class="col-sm-4 col-form-label">Số lượng (Tấn): </label>
-                                            <div class="col-sm-8">
+                                            <label class="col-sm-5 col-form-label">Số lượng (Tấn): </label>
+                                            <div class="col-sm-7">
                                                 <input type="number" step="any" id="addLDT-DNSL" min="0" class="form-control">
                                             </div>
                                         </div>
@@ -311,16 +311,16 @@
                                 <div class="row">
                                     <div class="col-sm-6">
                                         <div class="form-group row">
-                                            <label class="col-sm-4 col-form-label">Nước ngọt: </label>
-                                            <div class="col-sm-8">
+                                            <label class="col-sm-5 col-form-label">Nước ngọt: </label>
+                                            <div class="col-sm-7">
                                                 <input type="number" step="any" id="addLDT-MN" min="0" class="form-control">
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-sm-6">
                                         <div class="form-group row">
-                                            <label class="col-sm-4 col-form-label">Số lượng (Tấn): </label>
-                                            <div class="col-sm-8">
+                                            <label class="col-sm-5 col-form-label">Số lượng (Tấn): </label>
+                                            <div class="col-sm-7">
                                                 <input type="number" step="any" id="addLDT-MNSL" min="0" class="form-control">
                                             </div>
                                         </div>
@@ -330,8 +330,8 @@
                                 <div class="row">
                                     <div class="col-sm-6">
                                         <div class="form-group row">
-                                            <label class="col-sm-4 col-form-label">Tổng quân số: </label>
-                                            <div class="col-sm-8">
+                                            <label class="col-sm-5 col-form-label">Tổng quân số: </label>
+                                            <div class="col-sm-7">
                                                 <input type="number" id="addBC-QS" min="0" class="form-control" disabled>
                                             </div>
                                         </div>
@@ -340,16 +340,16 @@
                                 <div class="row">
                                     <div class="col-sm-6">
                                         <div class="form-group row">
-                                            <label class="col-sm-4 col-form-label">Sĩ quan: </label>
-                                            <div class="col-sm-8">
+                                            <label class="col-sm-5 col-form-label">Sĩ quan: </label>
+                                            <div class="col-sm-7">
                                                 <input type="number" id="addBC-SQ" onchange="changeQS()" min="0" class="form-control">
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-sm-6">
                                         <div class="form-group row">
-                                            <label class="col-sm-4 col-form-label">VCQP: </label>
-                                            <div class="col-sm-8">
+                                            <label class="col-sm-5 col-form-label">VCQP: </label>
+                                            <div class="col-sm-7">
                                                 <input type="number" id="addBC-VCQP" onchange="changeQS()" min="0" class="form-control">
                                             </div>
                                         </div>
@@ -358,16 +358,16 @@
                                 <div class="row">
                                     <div class="col-sm-6">
                                         <div class="form-group row">
-                                            <label class="col-sm-4 col-form-label">QNCN: </label>
-                                            <div class="col-sm-8">
+                                            <label class="col-sm-5 col-form-label">QNCN: </label>
+                                            <div class="col-sm-7">
                                                 <input type="number" id="addBC-QNCN" min="0" onchange="changeQS()" class="form-control">
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-sm-6">
                                         <div class="form-group row">
-                                            <label class="col-sm-4 col-form-label">HSQ, CS: </label>
-                                            <div class="col-sm-8">
+                                            <label class="col-sm-5 col-form-label">HSQ, CS: </label>
+                                            <div class="col-sm-7">
                                                 <input type="number" id="addBC-HSQCS" onchange="changeQS()" min="0" class="form-control">
                                             </div>
                                         </div>

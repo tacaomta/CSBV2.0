@@ -154,13 +154,12 @@
                     stateSave: true,
                     "columns": [
                         { name: 'STT', width: 40 },
-                        { name: 'SỐ HIỆU', width: 160 },
-                        { name: 'KÝ HIỆU', width: 160 },
-                        { name: 'NƠI SẢN XUẤT', width: 160 },
-                        { name: 'NĂM TIẾP NHẬN', width: 160 },
-                        { name: 'CHỨC NĂNG, NHIỆM VỤ', width:220 },
-                        { name: 'HỒ SƠ TÀU', width: 100 },
-                        { name: 'TÁC VỤ' ,width:60},
+                        { name: 'SỐ HIỆU', width: 350 },
+                        { name: 'KÝ HIỆU', width: 350 },
+                        { name: 'NƠI SẢN XUẤT', width: 350 },
+                        { name: 'NĂM TIẾP NHẬN', width: 350 },
+                        { name: 'CHỨC NĂNG, NHIỆM VỤ', width: 350 },
+                        { name: 'HỒ SƠ TÀU', width: 350 }
                     ],
                     "columnDefs": [
                         {
@@ -239,6 +238,42 @@
         function ViewInforShip(id) {
             var win = window.open(baseaddress + "Page_Master/DacDiemChung?Ship_ID=" + id, '_blank');
             win.focus();
+        }
+
+        function btn_Load_listship() {
+            if (vung == null | vung == 1) {
+                vung_id = '5AEBB23FF45F3C235AFD86B510BF9E8C';
+                document.getElementById("Vung1").classList.add("a_selected");
+                document.getElementById("Vung2").classList.remove("a_selected");
+                document.getElementById("Vung3").classList.remove("a_selected");
+                document.getElementById("Vung4").classList.remove("a_selected");
+            }
+            else if (vung == 2) {
+                vung_id = '5AEBB23FF45F3C235AFD86B510BF9E8B';
+                document.getElementById("Vung2").classList.add("a_selected");
+                document.getElementById("Vung1").classList.remove("a_selected");
+                document.getElementById("Vung3").classList.remove("a_selected");
+                document.getElementById("Vung4").classList.remove("a_selected");
+            }
+            else if (vung == 3) {
+                vung_id = '5AEBB23FF45F3C235AFD86B510BF9E8D';
+                document.getElementById("Vung3").classList.add("a_selected");
+                document.getElementById("Vung2").classList.remove("a_selected");
+                document.getElementById("Vung1").classList.remove("a_selected");
+                document.getElementById("Vung4").classList.remove("a_selected");
+            }
+            else if (vung == 4) {
+                vung_id = '5AEBB23FF45F3C235AFD86B510BF9E8E';
+                document.getElementById("Vung4").classList.add("a_selected");
+                document.getElementById("Vung2").classList.remove("a_selected");
+                document.getElementById("Vung3").classList.remove("a_selected");
+                document.getElementById("Vung1").classList.remove("a_selected");
+            }
+            $('#title').text('QUẢN LÝ TÀU - VÙNG ' + vung);
+            loadDataListShips(vung_id);
+            $(".view").hover(function () {
+                $(this).toggleClass("bnw");
+            });
         }
     </script>
 </asp:Content>
