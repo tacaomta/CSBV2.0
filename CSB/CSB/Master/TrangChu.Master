@@ -17,6 +17,9 @@
             font-family: 'boxicons';
             src: url(../fonts/boxicons.woff2) format('woff2');
         }
+        .dataTables_wrapper {
+            overflow-y: auto;
+        }
         * {
             padding: 0;
             margin-right: 0;
@@ -931,7 +934,7 @@
                     <asp:ContentPlaceHolder ID="MainContent" runat="server"></asp:ContentPlaceHolder>
                 </div>
 
-                <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+                <div class="toast hide" role="alert" aria-live="assertive" aria-atomic="true">
                     <div class="toast-header">
                         <i class="bi bi-square-fill " id="toast-icon"></i>
                         <strong class="mr-auto" id="toast-header" style="padding-left: 7px;">Bootstrap</strong>
