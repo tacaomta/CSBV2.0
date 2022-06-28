@@ -914,6 +914,11 @@
             <param name="id">id của tàu</param>
             <returns></returns>
         </member>
+        <member name="T:DHSLAPI.Controllers.DANGKYCLRADAController">
+            <summary>
+            Đăng ký chất lượng thông tin - ra đa
+            </summary>
+        </member>
         <member name="M:DHSLAPI.Controllers.DANGKYCLRADAController.LAYTHONGTINDANGKYCLRADA(System.String)">
             <summary>
             xem đăng ký chất lượng rada của tàu đó
