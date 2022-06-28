@@ -1293,6 +1293,7 @@
                             listIDPT.push(item.IDRADA);
                         }
                     });
+                    console.log(listPt);
                     listlen = listNam.length;
                     var tabletext = "<thead><tr><th rowspan='2'>STT</th><th rowspan='2'>KÝ HIỆU</th><th rowspan='2'>SỐ LƯỢNG</th><th colspan='" + listlen + "'>ĐĂNG KÝ CHẤT LƯỢNG HÀNG NĂM</th><th rowspan='2'>TÁC VỤ</th></tr><tr>";
                     for (i = 0; i < listlen; i++) {
@@ -1308,7 +1309,6 @@
                         for (j = 0; j < listlen; j++) {
                             TRANGTHAI = '';
                             $.each(data, function (key, item) {
-                                debugger
                                 if (item.KYHIEU == listPt[i] && item.DANGKYCHATLUONG_NAMDANGKY == listNam[j]) {
                                     TRANGTHAI = item.DANGKYCHATLUONG_TRANGTHAI;
                                     ID = item.DANGKYCHATLUONG_ID;
@@ -1320,11 +1320,10 @@
                             }
                             tabletext += "</td>";
                         }
-                        tabletext += '<td><div style="display: flex; justify-content: space-around;"><a href="#" class="edit" title="Thêm đăng ký" data-toggle="modal" data-target="#model-add-DANGKYCLRADA"><i class="bi bi-plus-circle-fill"></i></a></div></td></tr>';
+                        tabletext += '<td><div style="display: flex; justify-content: space-around;"><a href="#" class="edit" title="Thêm đăng ký" data-toggle="modal" data-target="#model-add-DANGKYCLRADA" onclick="click_add_DANGKYCLRADA(`' + listIDPT[i] + '`)"><i class="bi bi-plus-circle-fill"></i></a></div></td></tr>';
                     }
                     tabletext += "</tbody>";
                     $('#table-DANGKYCLRADA').html(tabletext);
-                    console.log("okGET");
                     loadTable('table-DANGKYCLRADA');
                 }, error: function (ret) {
                     console.log('errorGET');
@@ -1380,6 +1379,7 @@
                             listIDPT.push(item.IDRADA);
                         }
                     });
+                    console.log(listPt);
                     listlen = listNam.length;
                     var tabletext = "<thead><tr><th rowspan='2'>STT</th><th rowspan='2'>KÝ HIỆU</th><th rowspan='2'>SỐ LƯỢNG</th><th colspan='" + listlen + "'>ĐĂNG KÝ CHẤT LƯỢNG HÀNG NĂM</th><th rowspan='2'>TÁC VỤ</th></tr><tr>";
                     for (i = 0; i < listlen; i++) {
@@ -1395,7 +1395,6 @@
                         for (j = 0; j < listlen; j++) {
                             TRANGTHAI = '';
                             $.each(data, function (key, item) {
-                                debugger
                                 if (item.KYHIEU == listPt[i] && item.DANGKYCHATLUONG_NAMDANGKY == listNam[j]) {
                                     TRANGTHAI = item.DANGKYCHATLUONG_TRANGTHAI;
                                     ID = item.DANGKYCHATLUONG_ID;
@@ -1407,11 +1406,10 @@
                             }
                             tabletext += "</td>";
                         }
-                        tabletext += '<td><div style="display: flex; justify-content: space-around;"><a href="#" class="edit" title="Thêm đăng ký" data-toggle="modal" data-target="#model-add-DANGKYCLRADA"><i class="bi bi-plus-circle-fill"></i></a></div></td></tr>';
+                        tabletext += '<td><div style="display: flex; justify-content: space-around;"><a href="#" class="edit" title="Thêm đăng ký" data-toggle="modal" data-target="#model-add-DANGKYCLRADA" onclick="click_add_DANGKYCLRADA(`' + listIDPT[i] + '`)"><i class="bi bi-plus-circle-fill"></i></a></div></td></tr>';
                     }
                     tabletext += "</tbody>";
                     $('#table-DANGKYCLRADA').html(tabletext);
-                    console.log("okGET");
                 }, error: function (ret) {
                     console.log('errorGET');
                 },
@@ -1424,6 +1422,7 @@
             debugger
             if (id != null) {
                 $('#add-DANGKYCLRADA-IDRADA').attr('disabled', '');
+                $('#add-DANGKYCLRADA-IDRADA').val(id);
             }
             else {
                 $('#add-DANGKYCLRADA-IDRADA').removeAttr('disabled', '');
@@ -1443,13 +1442,14 @@
                 console.log(DANGKYCLRADA);
                 $.ajax({
                     type: "POST",
-                    url: linkapi + "v2/themdangkyclrada?id=" + getParameterByName("Ship_ID"),
+                    url: linkapi + "v2/themdangkyclrada?id=" + DANGKYCLRADA.IDRADA,
                     dataType: "json",
                     data: JSON.stringify(DANGKYCLRADA),
                     contentType: "application/json",
                     success: function (data) {
                         toastSuccess("Thành công", "Thêm thông tin đăng ký chất lượng rada thành công.");
                         loadDataList_DANGKYCLRADA2();
+
                     }, error: function (ret) {
                         toastError("Thất bại", "");
                     },
@@ -1465,7 +1465,6 @@
         }
         function onclick_edit_DANGKYCLRADA(IDRADA, KYHIEU, SOLUONG, DANGKYCHATLUONG_ID, DANGKYCHATLUONG_NAMDANGKY, DANGKYCHATLUONG_TRANGTHAI) {
             loadTrangThai('edit-DANGKYCLRADA-DANGKYCHATLUONG_TRANGTHAI', DANGKYCHATLUONG_TRANGTHAI);
-            console.log(IDRADA, KYHIEU, SOLUONG, DANGKYCHATLUONG_ID, DANGKYCHATLUONG_NAMDANGKY, DANGKYCHATLUONG_TRANGTHAI);
             $('#edit-DANGKYCLRADA-IDRADA').val(IDRADA);
             $("#edit-DANGKYCLRADA-KYHIEU").val(KYHIEU);
             $("#edit-DANGKYCLRADA-DANGKYCHATLUONG_ID").val(DANGKYCHATLUONG_ID);
@@ -1511,8 +1510,8 @@
                     url: linkapi + "v2/xoadangkyclrada?id=" + id,
                     type: "DELETE",
                 }).done(function (res) {
-                    loadDataList_DANGKYCLRADA();
                     toastSuccess("Thành công", "Xóa thông tin đăng ký thành công!");
+                    loadDataList_DANGKYCLRADA2();
                     loadTable('table-DANGKYCLRADA');
                 }).fail(function (res) {
                     toastError("Lỗi", "Xóa thông tin đăng ký không thành công!");
