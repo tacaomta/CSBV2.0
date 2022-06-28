@@ -24,10 +24,10 @@
                                 <div class="scroll" style="overflow-y: auto;">
                                     <ul class="nav nav-tabs" style="inline-size: max-content;">
                                         <li class="nav-item">
-                                            <a class="nav-link active" id="tabDANGKYCLHANGHAI" data-toggle="tab" href="#DANGKYCLHANGHAI">Hàng hải</a>
+                                            <a class="nav-link active" id="tabDANGKYCLHANGHAI" data-toggle="tab" onclick="loadDataList_DANGKYCLHANGHAI()" href="#DANGKYCLHANGHAI">Hàng hải</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" id="tabVUKHI" data-toggle="tab" onclick="loadDataList_VUKHI()" href="#VUKHI">Vũ khí</a>
+                                            <a class="nav-link" id="tabDANGKYCLVUKHI" data-toggle="tab" onclick="loadDataList_DANGKYCLVUKHI()" href="#DANGKYCLVUKHI">Vũ khí</a>
                                         </li>
                                         <li class="nav-item">
                                             <a class="nav-link" id="tabDANGKYCLRADA" data-toggle="tab" onclick="loadDataList_DANGKYCLRADA()" href="#DANGKYCLRADA">Rada</a>
@@ -45,7 +45,7 @@
                                             <a class="nav-link" id="tabBOMDAU-NUOC-THONGGIO" data-toggle="tab" onclick="loadDataList_BOMDAUNUOCTHONGGIO()" href="#BOMDAU-NUOC-THONGGIO">Bơm dầu, nước, thông gió</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" id="tabTRANGBIKHAC" data-toggle="tab" onclick="loadDataList_TRANGBIKHAC()" href="#TRANGBIKHAC">Trang bị khác</a>
+                                            <a class="nav-link" id="tabDANGKYCLTHIETBIKHAC" data-toggle="tab" onclick="loadDataList_DANGKYCLTHIETBIKHAC()" href="#DANGKYCLTHIETBIKHAC">Trang bị khác</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -56,19 +56,19 @@
                                         <h5>ĐĂNG KÝ CHẤT LƯỢNG HÀNG HẢI</h5>
                                         <div class="btn-group">
                                             <button onclick="loadDataList_DANGKYCLHANGHAI()" class="btn btn-secondary mb-2"><span class="bi-arrow-clockwise"></span>&nbsp;Load dữ liệu</button>
-                                            <button id="btn_add_DANGKYCLHANGHAI" class="btn btn-secondary mb-2" data-toggle="modal" data-target="#model-add-DANGKYCLHANGHAI" style="padding-top: 4px;"><span class="bi bi-plus-circle"></span> Thêm</button>
+                                            <button id="btn_add_DANGKYCLHANGHAI" onclick="click_add_DANGKYCLHANGHAI(null)" class="btn btn-secondary mb-2" data-toggle="modal" data-target="#model-add-DANGKYCLHANGHAI" style="padding-top: 4px;"><span class="bi bi-plus-circle"></span> Thêm</button>
                                         </div>
                                         <table id="table-DANGKYCLHANGHAI" class="table table-bordered table-striped table-md" style="width: 100%">
                                         </table>
                                     </div>
-                                    <div id="VUKHI" class=" tab-pane">
+                                    <div id="DANGKYCLVUKHI" class=" tab-pane">
                                         <br>
                                         <h5>VŨ KHÍ</h5>
                                         <div class="btn-group">
-                                            <button onclick="loadDataList_VUKHI()" class="btn btn-secondary mb-2"><span class="bi-arrow-clockwise"></span>&nbsp;Load dữ liệu</button>
-                                            <button id="btn_add_VUKHI" class="btn btn-secondary mb-2" data-toggle="modal" data-target="#model-add-VUKHI" style="padding-top: 4px;"><span class="bi bi-plus-circle"></span> Thêm</button>
+                                            <button onclick="loadDataList_DANGKYCLVUKHI()" class="btn btn-secondary mb-2"><span class="bi-arrow-clockwise"></span>&nbsp;Load dữ liệu</button>
+                                            <button id="btn_add_DANGKYCLVUKHI" onclick="click_add_DANGKYCLVUKHI(null)" class="btn btn-secondary mb-2" data-toggle="modal" data-target="#model-add-DANGKYCLVUKHI" style="padding-top: 4px;"><span class="bi bi-plus-circle"></span> Thêm</button>
                                         </div>
-                                        <table id="table-VUKHI" class="table table-bordered table-striped table-md" style="width: 100%">
+                                        <table id="table-DANGKYCLVUKHI" class="table table-bordered table-striped table-md" style="width: 100%">
                                         </table>
                                     </div>
                                     <div id="DANGKYCLRADA" class=" tab-pane">   
@@ -137,14 +137,14 @@
                                         <table id="table-BOMDAUNUOCTHONGGIO" class="table table-bordered table-striped table-md" style="width: 100%">
                                         </table>
                                     </div>
-                                    <div id="TRANGBIKHAC" class=" tab-pane">
+                                    <div id="DANGKYCLTHIETBIKHAC" class=" tab-pane">
                                         <br>
                                         <h5>CÁC TRANG BỊ KHÁC</h5>
                                         <div class="btn-group">
-                                            <button onclick="loadDataList_TRANGBIKHAC()" class="btn btn-secondary mb-2"><span class="bi-arrow-clockwise"></span>&nbsp;Load dữ liệu</button>
-                                            <button id="btn_add_TRANGBIKHAC" class="btn btn-secondary mb-2" data-toggle="modal" data-target="#model-add-TRANGBIKHAC" style="padding-top: 4px;"><span class="bi bi-plus-circle"></span> Thêm trang bị khác</button>
+                                            <button onclick="loadDataList_DANGKYCLTHIETBIKHAC()" class="btn btn-secondary mb-2"><span class="bi-arrow-clockwise"></span>&nbsp;Load dữ liệu</button>
+                                            <button id="btn_add_DANGKYCLTHIETBIKHAC" onclick="click_add_DANGKYCLTHIETBIKHAC(null)" class="btn btn-secondary mb-2" data-toggle="modal" data-target="#model-add-DANGKYCLTHIETBIKHAC" style="padding-top: 4px;"><span class="bi bi-plus-circle"></span> Thêm trang bị khác</button>
                                         </div>
-                                        <table id="table-TRANGBIKHAC" class="table table-bordered table-striped table-md" style="width: 100%">
+                                        <table id="table-DANGKYCLTHIETBIKHAC" class="table table-bordered table-striped table-md" style="width: 100%">
                                         </table>
                                     </div>
                                 </div>
@@ -156,6 +156,285 @@
         </div>
     </div>
     <div>
+        <div class="modal fade" id="model-add-DANGKYCLHANGHAI" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <form id="form-add-DANGKYCLHANGHAI" onsubmit="return false">
+                        <div class="card auth_form" style="margin-bottom: 0px">
+                            <div class="modal-header">
+                                <h4 class="title-modal-banve font-weight-bold">Thêm đăng ký chất lượng hàng hải</h4>
+                            </div>
+                            <div class="modal-body">
+                                <div class="row clearfix ">
+                                    <div style="width: 100%; float: left; padding: 10px">
+                                        <div class="form-group" style="display: flex">
+                                            <label class="col-md-5 control-label"><strong>Ký hiệu hàng hải   : </strong></label>
+                                            <div class="col-md-7">
+                                                <select class="form-control" id="add-DANGKYCLHANGHAI-IDHANGHAI" required>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div style="width: 100%; float: left; padding: 10px">
+                                        <div class="form-group" style="display: flex">
+                                            <label class="col-md-5 control-label"><strong>Năm đăng ký   : </strong></label>
+                                            <div class="col-md-7">
+                                                <input type="number" min="0" step="1" class="form-control" id="add-DANGKYCLHANGHAI-DANGKYCHATLUONG-NAMDANGKY" required>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div style="width: 100%; float: left; padding: 10px">
+                                        <div class="form-group" style="display: flex">
+                                            <label class="col-md-5 control-label"><strong>Trạng thái  : </strong></label>
+                                            <div class="col-md-7">
+                                                <select class="form-control" id="add-DANGKYCLHANGHAI-DANGKYCHATLUONG-TRANGTHAI" required></select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="submit" onclick="add_DANGKYCLHANGHAI()" class="btn btn-info">Thêm</button>
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Đóng</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="model-edit-DANGKYCLHANGHAI" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <form id="form-edit-DANGKYCLHANGHAI" onsubmit="return false">
+                        <input type="hidden" id="edit-DANGKYCLHANGHAI-DANGKYCHATLUONG_ID" />
+                        <div class="card auth_form" style="margin-bottom: 0px">
+                            <div class="modal-header">
+                                <h4 class="title-modal-banve font-weight-bold">Sửa thông tin đăng ký chất lượng hàng hải</h4>
+                            </div>
+                            <div class="modal-body">
+                                <div class="row clearfix ">
+                                    <div style="width: 100%; float: left; padding: 10px">
+                                        <div class="form-group" style="display: flex">
+                                            <label class="col-md-5 control-label"><strong>Ký hiệu hàng hải   : </strong></label>
+                                            <div class="col-md-7">
+                                                <input type="hidden" id="edit-DANGKYCLHANGHAI-IDHANGHAI">
+                                                <input type="text" class="form-control" id="edit-DANGKYCLHANGHAI-KYHIEU" disabled required>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div style="width: 100%; float: left; padding: 10px">
+                                        <div class="form-group" style="display: flex">
+                                            <label class="col-md-5 control-label"><strong>Năm đăng ký   : </strong></label>
+                                            <div class="col-md-7">
+                                                <input type="number" min="0" step="1" class="form-control" id="edit-DANGKYCLHANGHAI-DANGKYCHATLUONG_NAMDANGKY" required>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div style="width: 100%; float: left; padding: 10px">
+                                        <div class="form-group" style="display: flex">
+                                            <label class="col-md-5 control-label"><strong>Trạng thái  : </strong></label>
+                                            <div class="col-md-7">
+                                                <select class="form-control" id="edit-DANGKYCLHANGHAI-DANGKYCHATLUONG_TRANGTHAI" required></select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="submit" onclick="edit_DANGKYCLHANGHAI()" class="btn btn-info">Lưu</button>
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Đóng</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="model-add-DANGKYCLVUKHI" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <form id="form-add-DANGKYCLVUKHI" onsubmit="return false">
+                        <div class="card auth_form" style="margin-bottom: 0px">
+                            <div class="modal-header">
+                                <h4 class="title-modal-banve font-weight-bold">Thêm đăng ký chất lượng vũ khí</h4>
+                            </div>
+                            <div class="modal-body">
+                                <div class="row clearfix ">
+                                    <div style="width: 100%; float: left; padding: 10px">
+                                        <div class="form-group" style="display: flex">
+                                            <label class="col-md-5 control-label"><strong>Ký hiệu   : </strong></label>
+                                            <div class="col-md-7">
+                                                <select class="form-control" id="add-DANGKYCLVUKHI-IDVUKHI" required>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div style="width: 100%; float: left; padding: 10px">
+                                        <div class="form-group" style="display: flex">
+                                            <label class="col-md-5 control-label"><strong>Năm đăng ký   : </strong></label>
+                                            <div class="col-md-7">
+                                                <input type="number" min="0" step="1" class="form-control" id="add-DANGKYCLVUKHI-DANGKYCHATLUONG-NAMDANGKY" required>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div style="width: 100%; float: left; padding: 10px">
+                                        <div class="form-group" style="display: flex">
+                                            <label class="col-md-5 control-label"><strong>Trạng thái  : </strong></label>
+                                            <div class="col-md-7">
+                                                <select class="form-control" id="add-DANGKYCLVUKHI-DANGKYCHATLUONG-TRANGTHAI" required></select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="submit" onclick="add_DANGKYCLVUKHI()" class="btn btn-info">Thêm</button>
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Đóng</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="model-edit-DANGKYCLVUKHI" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <form id="form-edit-DANGKYCLVUKHI" onsubmit="return false">
+                        <input type="hidden" id="edit-DANGKYCLVUKHI-DANGKYCHATLUONG_ID" />
+                        <div class="card auth_form" style="margin-bottom: 0px">
+                            <div class="modal-header">
+                                <h4 class="title-modal-banve font-weight-bold">Sửa thông tin đăng ký chất lượng vũ khí</h4>
+                            </div>
+                            <div class="modal-body">
+                                <div class="row clearfix ">
+                                    <div style="width: 100%; float: left; padding: 10px">
+                                        <div class="form-group" style="display: flex">
+                                            <label class="col-md-5 control-label"><strong>Ký hiệu   : </strong></label>
+                                            <div class="col-md-7">
+                                                <input type="hidden" id="edit-DANGKYCLVUKHI-IDVUKHI">
+                                                <input type="text" class="form-control" id="edit-DANGKYCLVUKHI-KYHIEU" disabled required>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div style="width: 100%; float: left; padding: 10px">
+                                        <div class="form-group" style="display: flex">
+                                            <label class="col-md-5 control-label"><strong>Năm đăng ký   : </strong></label>
+                                            <div class="col-md-7">
+                                                <input type="number" min="0" step="1" class="form-control" id="edit-DANGKYCLVUKHI-DANGKYCHATLUONG_NAMDANGKY" required>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div style="width: 100%; float: left; padding: 10px">
+                                        <div class="form-group" style="display: flex">
+                                            <label class="col-md-5 control-label"><strong>Trạng thái  : </strong></label>
+                                            <div class="col-md-7">
+                                                <select class="form-control" id="edit-DANGKYCLVUKHI-DANGKYCHATLUONG_TRANGTHAI" required></select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="submit" onclick="edit_DANGKYCLVUKHI()" class="btn btn-info">Lưu</button>
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Đóng</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="model-add-DANGKYCLTHIETBIKHAC" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <form id="form-add-DANGKYCLTHIETBIKHAC" onsubmit="return false">
+                        <div class="card auth_form" style="margin-bottom: 0px">
+                            <div class="modal-header">
+                                <h4 class="title-modal-banve font-weight-bold">Thêm đăng ký chất lượng trang bị khác</h4>
+                            </div>
+                            <div class="modal-body">
+                                <div class="row clearfix ">
+                                    <div style="width: 100%; float: left; padding: 10px">
+                                        <div class="form-group" style="display: flex">
+                                            <label class="col-md-5 control-label"><strong>Ký hiệu   : </strong></label>
+                                            <div class="col-md-7">
+                                                <select class="form-control" id="add-DANGKYCLTHIETBIKHAC-IDTHIETBIKHAC" required>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div style="width: 100%; float: left; padding: 10px">
+                                        <div class="form-group" style="display: flex">
+                                            <label class="col-md-5 control-label"><strong>Năm đăng ký   : </strong></label>
+                                            <div class="col-md-7">
+                                                <input type="number" min="0" step="1" class="form-control" id="add-DANGKYCLTHIETBIKHAC-DANGKYCHATLUONG-NAMDANGKY" required>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div style="width: 100%; float: left; padding: 10px">
+                                        <div class="form-group" style="display: flex">
+                                            <label class="col-md-5 control-label"><strong>Trạng thái  : </strong></label>
+                                            <div class="col-md-7">
+                                                <select class="form-control" id="add-DANGKYCLTHIETBIKHAC-DANGKYCHATLUONG-TRANGTHAI" required></select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="submit" onclick="add_DANGKYCLTHIETBIKHAC()" class="btn btn-info">Thêm</button>
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Đóng</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="model-edit-DANGKYCLTHIETBIKHAC" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <form id="form-edit-DANGKYCLTHIETBIKHAC" onsubmit="return false">
+                        <input type="hidden" id="edit-DANGKYCLTHIETBIKHAC-DANGKYCHATLUONG_ID" />
+                        <div class="card auth_form" style="margin-bottom: 0px">
+                            <div class="modal-header">
+                                <h4 class="title-modal-banve font-weight-bold">Sửa thông tin đăng ký chất lượng trang bị khác</h4>
+                            </div>
+                            <div class="modal-body">
+                                <div class="row clearfix ">
+                                    <div style="width: 100%; float: left; padding: 10px">
+                                        <div class="form-group" style="display: flex">
+                                            <label class="col-md-5 control-label"><strong>Ký hiệu   : </strong></label>
+                                            <div class="col-md-7">
+                                                <input type="hidden" id="edit-DANGKYCLTHIETBIKHAC-IDTHIETBIKHAC">
+                                                <input type="text" class="form-control" id="edit-DANGKYCLTHIETBIKHAC-KYHIEU" disabled required>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div style="width: 100%; float: left; padding: 10px">
+                                        <div class="form-group" style="display: flex">
+                                            <label class="col-md-5 control-label"><strong>Năm đăng ký   : </strong></label>
+                                            <div class="col-md-7">
+                                                <input type="number" min="0" step="1" class="form-control" id="edit-DANGKYCLTHIETBIKHAC-DANGKYCHATLUONG_NAMDANGKY" required>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div style="width: 100%; float: left; padding: 10px">
+                                        <div class="form-group" style="display: flex">
+                                            <label class="col-md-5 control-label"><strong>Trạng thái  : </strong></label>
+                                            <div class="col-md-7">
+                                                <select class="form-control" id="edit-DANGKYCLTHIETBIKHAC-DANGKYCHATLUONG_TRANGTHAI" required></select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="submit" onclick="edit_DANGKYCLTHIETBIKHAC()" class="btn btn-info">Lưu</button>
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Đóng</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
         <div class="modal fade" id="model-add-DANGKYCLRADA" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
@@ -273,24 +552,31 @@
             });
         }
         function Active(i) {
-            if (i == 1)
+            if (i == 1) {
                 $("#tabDANGKYCLHANGHAI").tab('show');
-            else if (i == 2)
-                $("#tabVUKHI").tab('show');
+                loadDataList_DANGKYCLHANGHAI();
+            }
+            else if (i == 2) {
+                $("#tabDANGKYCLVUKHI").tab('show');
+                loadDataList_DANGKYCLVUKHI();
+            }
             else if (i == 3) {
                 $("#tabDANGKYCLRADA").tab('show');
                 loadDataList_DANGKYCLRADA();
             }
-            else if(i==4)
+            else if (i == 4)
                 $("#tabTOMAY").tab('show');
-            else if(i==5)
+            else if (i == 5)
                 $("#tabHETRUCHANVIT").tab('show');
-            else if(i==6)
+            else if (i == 6)
                 $("#tabNEOXICHNEO").tab('show');
-            else if(i==7)
+            else if (i == 7)
                 $("#tabBOMDAU-NUOC-THONGGIO").tab('show');
-            else if (i == 8)
-                $("#tabTRANGBIKHAC").tab('show');
+            else if (i == 8) {
+                $("#tabDANGKYCLTHIETBIKHAC").tab('show');
+                loadDataList_DANGKYCLTHIETBIKHAC();
+            }
+                
         }
         $(document).ready(function () {
             Ship_ID = getParameterByName('Ship_ID');
@@ -303,16 +589,647 @@
                 console.log(i);
                 if (i >= 1 && i <= 8) {
                     Active(i);
+                } else {
+                    loadDataList_DANGKYCLHANGHAI();
                 }
             }
         });
+        function loadTable(tablename) {
+            $('table[id=' + tablename + ']').each(function () {
+                var table1 = $(this).DataTable({
+                    destroy: true,
+                    searching: false,
+                    stateSave: false,
+                    lengthChange: false,
+                    "language": {
+                        "sProcessing": "Đang xử lý...",
+                        "sLengthMenu": "Xem _MENU_ mục",
+                        "sZeroRecords": "Không tìm thấy thông tin phù hợp",
+                        "sInfo": "Đang xem _START_ đến _END_ trong tổng số _TOTAL_ mục",
+                        "sInfoEmpty": "Đang xem 0 đến 0 trong tổng số 0 mục",
+                        "sInfoFiltered": "(được lọc từ _MAX_ mục)",
+                        "sInfoPostFix": "",
+                        "sSearch": "Tìm kiếm: ",
+                        "sUrl": "",
+                        "oPaginate": {
+                            "sFirst": "Đầu",
+                            "sPrevious": "Trước",
+                            "sNext": "Tiếp",
+                            "sLast": "Cuối"
+                        }
+                    }
+                });
+            });
+        };
+        function loadTrangThai(input, trangthai) {
+            $.ajax({
+                type: "GET",
+                url: linkapi + "v2/dmtrangthai",
+                dataType: "json",
+                success: function (data) {
+                    var selRegion = '';
+                    $.each(data, function (key, item) {
+                        if (trangthai == item.TEN) {
+                            selRegion += "<option value='" + item.ID + "' selected>" + item.TEN + "</option>";
+                        }
+                        else {
+                            selRegion += "<option value='" + item.ID + "'>" + item.TEN + "</option>";
+                        }
+                    });
+                    $('#' + input).html(selRegion);
+                }, error: function (ret) {
+                },
+            });
+        }
 
         // HÀNG HẢI
+        function loadHANGHAI() {
+            var textselect = '';
+            $.ajax({
+                type: "GET",
+                url: linkapi + "v2/hanghai?id=" + getParameterByName("Ship_ID"),
+                dataType: "json",
+                success: function (data) {
+                    console.log(data);
+                    $.each(data, function (key, item) {
+                        textselect += "<option value=" + item.ID + ">" + item.KYHIEU + "</option>";
+                    });
+                    console.log("okGET");
+                    $("#add-DANGKYCLHANGHAI-IDHANGHAI").html(textselect);
+                }, error: function (ret) {
+                    console.log('errorGET');
+                }
+            });
+        }
+        function loadDataList_DANGKYCLHANGHAI() {
+            loadHANGHAI();
+            $.ajax({
+                type: "GET",
+                url: linkapi + "v2/dangkyclhanghai?id=" + getParameterByName("Ship_ID"),
+                dataType: "json",
+                beforeSend: function () { // Before we send the request, remove the .hidden class from the spinner and default to inline-block.
+                    $('#loader').removeClass('hidden');
+                },
+                success: function (data) {
+                    var listNam = new Array();
+                    var i;
+                    var listlen;
+                    $.each(data, function (key, item) {
+                        listlen = listNam.length;
+                        var i = 0;
+                        for (i = 0; i < listlen; i++) {
+                            if (Number(item.DANGKYCHATLUONG_NAMDANGKY) == listNam[i]) break;
+                        }
+                        if (i == listlen) {
+                            var j = 0;
+                            for (j = 0; j < listlen; j++) {
+                                if (Number(item.DANGKYCHATLUONG_NAMDANGKY) < listNam[j]) break;
+                            }
+                            listNam.splice(j, 0, Number(item.DANGKYCHATLUONG_NAMDANGKY));
+                        }
+                    });
+                    listlen = listNam.length;
+                    for (i = 0; i < listlen; i++) {
+                        listNam[i] = String(listNam[i]);
+                    }
+                    var listPt = new Array();
+                    var listSL = new Array();
+                    var listIDPT = new Array();
+                    $.each(data, function (key, item) {
+                        var listlen = listPt.length;
+                        var i = 0;
+                        for (i = 0; i < listlen; i++) {
+                            if (item.KYHIEU == listPt[i]) break;
+                        }
+                        if (i == listlen) {
+                            listPt.push(item.KYHIEU);
+                            listSL.push(item.SOLUONG);
+                            listIDPT.push(item.IDHANGHAI);
+                        }
+                    });
+                    console.log(listPt);
+                    listlen = listNam.length;
+                    var tabletext = "<thead><tr><th rowspan='2'>STT</th><th rowspan='2'>KÝ HIỆU</th><th rowspan='2'>SỐ LƯỢNG</th><th colspan='" + listlen + "'>ĐĂNG KÝ CHẤT LƯỢNG HÀNG NĂM</th><th rowspan='2'>TÁC VỤ</th></tr><tr>";
+                    for (i = 0; i < listlen; i++) {
+                        tabletext += "<th>" + listNam[i] + "</th>";
+                    }
+                    tabletext += "</tr></thead><tbody>";
+                    var i = 1;
+                    var lenPt = listPt.length;
+                    var TRANGTHAI;
+                    var ID;
+                    for (i = 0; i < lenPt; i++) {
+                        tabletext += "<tr><td style='text-align: center;'>" + (i + 1) + "</td><td>" + listPt[i] + "</td><td>" + listSL[i] + "</td>";
+                        for (j = 0; j < listlen; j++) {
+                            TRANGTHAI = '';
+                            $.each(data, function (key, item) {
+                                if (item.KYHIEU == listPt[i] && item.DANGKYCHATLUONG_NAMDANGKY == listNam[j]) {
+                                    TRANGTHAI = item.DANGKYCHATLUONG_TRANGTHAI;
+                                    ID = item.DANGKYCHATLUONG_ID;
+                                }
+                            });
+                            tabletext += "<td>";
+                            if (TRANGTHAI != "") {
+                                tabletext += '<a href="#" title="Sửa" data-toggle="modal" data-target="#model-edit-DANGKYCLHANGHAI"  onclick="onclick_edit_DANGKYCLHANGHAI(`' + listIDPT[i] + '`,`' + listPt[i] + '`,`' + listSL[i] + '`,`' + ID + '`,`' + listNam[j] + '`,`' + TRANGTHAI + '`)">' + TRANGTHAI + '</a><a href="#" class="delete" title="Xóa" onclick="delete_DANGKYCLHANGHAI(`' + ID + '`)" style="float: right;"><i class="bi bi-x"></i></a>' + "</td>";
+                            }
+                            tabletext += "</td>";
+                        }
+                        tabletext += '<td><div style="display: flex; justify-content: space-around;"><a href="#" class="edit" title="Thêm đăng ký" data-toggle="modal" data-target="#model-add-DANGKYCLHANGHAI" onclick="click_add_DANGKYCLHANGHAI(`' + listIDPT[i] + '`)"><i class="bi bi-plus-circle-fill"></i></a></div></td></tr>';
+                    }
+                    tabletext += "</tbody>";
+                    $('#table-DANGKYCLHANGHAI').html(tabletext);
+                    loadTable('table-DANGKYCLHANGHAI');
+                }, error: function (ret) {
+                    console.log('errorGET');
+                },
+                complete: function () { // Set our complete callback, adding the .hidden class and hiding the spinner.
+                    $('#loader').addClass('hidden');
+                },
+            });
+        };
+        function loadDataList_DANGKYCLHANGHAI2() {
+            loadHANGHAI();
+            $.ajax({
+                type: "GET",
+                url: linkapi + "v2/dangkyclhanghai?id=" + getParameterByName("Ship_ID"),
+                dataType: "json",
+                beforeSend: function () { // Before we send the request, remove the .hidden class from the spinner and default to inline-block.
+                    $('#loader').removeClass('hidden');
+                },
+                success: function (data) {
+                    var listNam = new Array();
+                    var i;
+                    var listlen;
+                    $.each(data, function (key, item) {
+                        listlen = listNam.length;
+                        var i = 0;
+                        for (i = 0; i < listlen; i++) {
+                            if (Number(item.DANGKYCHATLUONG_NAMDANGKY) == listNam[i]) break;
+                        }
+                        if (i == listlen) {
+                            var j = 0;
+                            for (j = 0; j < listlen; j++) {
+                                if (Number(item.DANGKYCHATLUONG_NAMDANGKY) < listNam[j]) break;
+                            }
+                            listNam.splice(j, 0, Number(item.DANGKYCHATLUONG_NAMDANGKY));
+                        }
+                    });
+                    listlen = listNam.length;
+                    for (i = 0; i < listlen; i++) {
+                        listNam[i] = String(listNam[i]);
+                    }
+                    var listPt = new Array();
+                    var listSL = new Array();
+                    var listIDPT = new Array();
+                    $.each(data, function (key, item) {
+                        var listlen = listPt.length;
+                        var i = 0;
+                        for (i = 0; i < listlen; i++) {
+                            if (item.KYHIEU == listPt[i]) break;
+                        }
+                        if (i == listlen) {
+                            listPt.push(item.KYHIEU);
+                            listSL.push(item.SOLUONG);
+                            listIDPT.push(item.IDHANGHAI);
+                        }
+                    });
+                    console.log(listPt);
+                    listlen = listNam.length;
+                    var tabletext = "<thead><tr><th rowspan='2'>STT</th><th rowspan='2'>KÝ HIỆU</th><th rowspan='2'>SỐ LƯỢNG</th><th colspan='" + listlen + "'>ĐĂNG KÝ CHẤT LƯỢNG HÀNG NĂM</th><th rowspan='2'>TÁC VỤ</th></tr><tr>";
+                    for (i = 0; i < listlen; i++) {
+                        tabletext += "<th>" + listNam[i] + "</th>";
+                    }
+                    tabletext += "</tr></thead><tbody>";
+                    var i = 1;
+                    var lenPt = listPt.length;
+                    var TRANGTHAI;
+                    var ID;
+                    for (i = 0; i < lenPt; i++) {
+                        tabletext += "<tr><td style='text-align: center;'>" + (i + 1) + "</td><td>" + listPt[i] + "</td><td>" + listSL[i] + "</td>";
+                        for (j = 0; j < listlen; j++) {
+                            TRANGTHAI = '';
+                            $.each(data, function (key, item) {
+                                if (item.KYHIEU == listPt[i] && item.DANGKYCHATLUONG_NAMDANGKY == listNam[j]) {
+                                    TRANGTHAI = item.DANGKYCHATLUONG_TRANGTHAI;
+                                    ID = item.DANGKYCHATLUONG_ID;
+                                }
+                            });
+                            tabletext += "<td>";
+                            if (TRANGTHAI != "") {
+                                tabletext += '<a href="#" title="Sửa" data-toggle="modal" data-target="#model-edit-DANGKYCLHANGHAI"  onclick="onclick_edit_DANGKYCLHANGHAI(`' + listIDPT[i] + '`,`' + listPt[i] + '`,`' + listSL[i] + '`,`' + ID + '`,`' + listNam[j] + '`,`' + TRANGTHAI + '`)">' + TRANGTHAI + '</a><a href="#" class="delete" title="Xóa" onclick="delete_DANGKYCLHANGHAI(`' + ID + '`)" style="float: right;"><i class="bi bi-x"></i></a>' + "</td>";
+                            }
+                            tabletext += "</td>";
+                        }
+                        tabletext += '<td><div style="display: flex; justify-content: space-around;"><a href="#" class="edit" title="Thêm đăng ký" data-toggle="modal" data-target="#model-add-DANGKYCLHANGHAI" onclick="click_add_DANGKYCLHANGHAI(`' + listIDPT[i] + '`)"><i class="bi bi-plus-circle-fill"></i></a></div></td></tr>';
+                    }
+                    tabletext += "</tbody>";
+                    $('#table-DANGKYCLHANGHAI').html(tabletext);
+                }, error: function (ret) {
+                    console.log('errorGET');
+                },
+                complete: function () { // Set our complete callback, adding the .hidden class and hiding the spinner.
+                    $('#loader').addClass('hidden');
+                },
+            });
+        };
+        function click_add_DANGKYCLHANGHAI(id = null) {
+            debugger
+            if (id != null) {
+                $('#add-DANGKYCLHANGHAI-IDHANGHAI').attr('disabled', '');
+                $('#add-DANGKYCLHANGHAI-IDHANGHAI').val(id);
+            }
+            else {
+                $('#add-DANGKYCLHANGHAI-IDHANGHAI').removeAttr('disabled', '');
+            }
+            loadTrangThai('add-DANGKYCLHANGHAI-DANGKYCHATLUONG-TRANGTHAI', '');
+        }
+        function add_DANGKYCLHANGHAI() {
+            var form = document.getElementById("form-add-DANGKYCLHANGHAI");
+            console.log(form.checkValidity());
+            if (form.checkValidity() == true) {
+                var DANGKYCLHANGHAI = {
+                    IDHANGHAI: $("#add-DANGKYCLHANGHAI-IDHANGHAI").val(),
+                    //KYHIEU: $("#add-DANGKYCLHANGHAI-IDHANGHAI").find("option:selected").first().attr("text"),
+                    DANGKYCHATLUONG_NAMDANGKY: $("#add-DANGKYCLHANGHAI-DANGKYCHATLUONG-NAMDANGKY").val(),
+                    DANGKYCHATLUONG_TRANGTHAI: $("#add-DANGKYCLHANGHAI-DANGKYCHATLUONG-TRANGTHAI").val()
+                };
+                console.log(DANGKYCLHANGHAI);
+                $.ajax({
+                    type: "POST",
+                    url: linkapi + "v2/insert_dangkyclhanghai?id=" + DANGKYCLHANGHAI.IDHANGHAI,
+                    dataType: "json",
+                    data: JSON.stringify(DANGKYCLHANGHAI),
+                    contentType: "application/json",
+                    success: function (data) {
+                        toastSuccess("Thành công", "Thêm thông tin đăng ký chất lượng hàng hải thành công.");
+                        loadDataList_DANGKYCLHANGHAI2();
+                        
+                    }, error: function (ret) {
+                        toastError("Thất bại", "");
+                    },
+                    complete: function () { // Set our complete callback, adding the .hidden class and hiding the spinner.
+                        $("#add-DANGKYCLHANGHAI-DANGKYCHATLUONG-NAMDANGKY").val("");
+                        $("#add-DANGKYCLHANGHAI-DANGKYCHATLUONG-TRANGTHAI").val("");
+                        $('#model-add-DANGKYCLHANGHAI').modal("hide");
+                        loadTable('table-DANGKYCLHANGHAI');
+                    },
+                });
+            }
+            return false;
+        }
+        function onclick_edit_DANGKYCLHANGHAI(IDHANGHAI, KYHIEU, SOLUONG, DANGKYCHATLUONG_ID, DANGKYCHATLUONG_NAMDANGKY, DANGKYCHATLUONG_TRANGTHAI) {
+            loadTrangThai('edit-DANGKYCLHANGHAI-DANGKYCHATLUONG_TRANGTHAI', DANGKYCHATLUONG_TRANGTHAI);
+            $('#edit-DANGKYCLHANGHAI-IDHANGHAI').val(IDHANGHAI);
+            $("#edit-DANGKYCLHANGHAI-KYHIEU").val(KYHIEU);
+            $("#edit-DANGKYCLHANGHAI-DANGKYCHATLUONG_ID").val(DANGKYCHATLUONG_ID);
+            $("#edit-DANGKYCLHANGHAI-DANGKYCHATLUONG_NAMDANGKY").val(Number(DANGKYCHATLUONG_NAMDANGKY));
+        }
+        function edit_DANGKYCLHANGHAI() {
+            var form = document.getElementById("form-edit-DANGKYCLHANGHAI");
+            console.log(form.checkValidity());
+            if (form.checkValidity() == true) {
+                var DANGKYCLHANGHAI = {
+                    ID: $("#edit-DANGKYCLHANGHAI-DANGKYCHATLUONG_ID").val(),
+                    IDHANGHAI: $("#edit-DANGKYCLHANGHAI-IDHANGHAI").val(),
+                    //KYHIEU: $("#add-DANGKYCLHANGHAI-IDHANGHAI").find("option:selected").first().attr("text"),
+                    DANGKYCHATLUONG_NAMDANGKY: $("#edit-DANGKYCLHANGHAI-DANGKYCHATLUONG_NAMDANGKY").val(),
+                    DANGKYCHATLUONG_TRANGTHAI: $("#edit-DANGKYCLHANGHAI-DANGKYCHATLUONG_TRANGTHAI").val()
+                };
+                console.log(DANGKYCLHANGHAI);
+                $.ajax({
+                    type: "PUT",
+                    url: linkapi + "v2/update_dangkyclhanghai?id=" + DANGKYCLHANGHAI.ID,
+                    dataType: "json",
+                    data: JSON.stringify(DANGKYCLHANGHAI),
+                    contentType: "application/json",
+                    success: function (data) {
+                        toastSuccess("Thành công", "Cập nhật thông tin đăng ký chất lượng thành công.");
+                        loadDataList_DANGKYCLHANGHAI2();
+                    }, error: function (ret) {
+                        console.log(ret.responseJSON.Message);
+                        toastError("Thất bại", "");
+                    },
+                    complete: function () { // Set our complete callback, adding the .hidden class and hiding the spinner.
+                        $('#model-edit-DANGKYCLHANGHAI').modal("hide");
+                        loadTable('table-DANGKYCLHANGHAI');
+                    },
+                });
+            }
+            return false;
+        }
+        function delete_DANGKYCLHANGHAI(id) {
+            let text = "Bạn có chắc muốn xóa thông tin đăng ký này?";
+            if (confirm(text) == true) {
+                $.ajax({
+                    url: linkapi + "v2/delete_dangkyclhanghai?id=" + id,
+                    type: "DELETE",
+                }).done(function (res) {
+                    toastSuccess("Thành công", "Xóa thông tin đăng ký thành công!");
+                    loadDataList_DANGKYCLHANGHAI2();
+                    loadTable('table-DANGKYCLHANGHAI');
+                }).fail(function (res) {
+                    toastError("Lỗi", "Xóa thông tin đăng ký không thành công!");
+                })
+            } else {
+
+            }
+        }
 
         // VŨ KHÍ
+        function loadVUKHI() {
+            var textselect = '';
+            $.ajax({
+                type: "GET",
+                url: linkapi + "v2/vukhi?id=" + getParameterByName("Ship_ID"),
+                dataType: "json",
+                success: function (data) {
+                    console.log(data);
+                    $.each(data, function (key, item) {
+                        textselect += "<option value=" + item.ID + ">" + item.KYHIEU + "</option>";
+                    });
+                    console.log("okGET");
+                    $("#add-DANGKYCLVUKHI-IDVUKHI").html(textselect);
+                }, error: function (ret) {
+                    console.log('errorGET');
+                }
+            });
+        }
+        function loadDataList_DANGKYCLVUKHI() {
+            loadVUKHI();
+            $.ajax({
+                type: "GET",
+                url: linkapi + "v2/dangkyclvukhi?id=" + getParameterByName("Ship_ID"),
+                dataType: "json",
+                beforeSend: function () { // Before we send the request, remove the .hidden class from the spinner and default to inline-block.
+                    $('#loader').removeClass('hidden');
+                },
+                success: function (data) {
+                    var listNam = new Array();
+                    var i;
+                    var listlen;
+                    $.each(data, function (key, item) {
+                        listlen = listNam.length;
+                        var i = 0;
+                        for (i = 0; i < listlen; i++) {
+                            if (Number(item.DANGKYCHATLUONG_NAMDANGKY) == listNam[i]) break;
+                        }
+                        if (i == listlen) {
+                            var j = 0;
+                            for (j = 0; j < listlen; j++) {
+                                if (Number(item.DANGKYCHATLUONG_NAMDANGKY) < listNam[j]) break;
+                            }
+                            listNam.splice(j, 0, Number(item.DANGKYCHATLUONG_NAMDANGKY));
+                        }
+                    });
+                    listlen = listNam.length;
+                    for (i = 0; i < listlen; i++) {
+                        listNam[i] = String(listNam[i]);
+                    }
+                    var listPt = new Array();
+                    var listSL = new Array();
+                    var listIDPT = new Array();
+                    $.each(data, function (key, item) {
+                        var listlen = listPt.length;
+                        var i = 0;
+                        for (i = 0; i < listlen; i++) {
+                            if (item.KYHIEU == listPt[i]) break;
+                        }
+                        if (i == listlen) {
+                            listPt.push(item.KYHIEU);
+                            listSL.push(item.SOLUONG);
+                            listIDPT.push(item.IDVUKHI);
+                        }
+                    });
+                    console.log(listPt);
+                    listlen = listNam.length;
+                    var tabletext = "<thead><tr><th rowspan='2'>STT</th><th rowspan='2'>KÝ HIỆU</th><th rowspan='2'>SỐ LƯỢNG</th><th colspan='" + listlen + "'>ĐĂNG KÝ CHẤT LƯỢNG HÀNG NĂM</th><th rowspan='2'>TÁC VỤ</th></tr><tr>";
+                    for (i = 0; i < listlen; i++) {
+                        tabletext += "<th>" + listNam[i] + "</th>";
+                    }
+                    tabletext += "</tr></thead><tbody>";
+                    var i = 1;
+                    var lenPt = listPt.length;
+                    var TRANGTHAI;
+                    var ID;
+                    for (i = 0; i < lenPt; i++) {
+                        tabletext += "<tr><td style='text-align: center;'>" + (i + 1) + "</td><td>" + listPt[i] + "</td><td>" + listSL[i] + "</td>";
+                        for (j = 0; j < listlen; j++) {
+                            TRANGTHAI = '';
+                            $.each(data, function (key, item) {
+                                if (item.KYHIEU == listPt[i] && item.DANGKYCHATLUONG_NAMDANGKY == listNam[j]) {
+                                    TRANGTHAI = item.DANGKYCHATLUONG_TRANGTHAI;
+                                    ID = item.DANGKYCHATLUONG_ID;
+                                }
+                            });
+                            tabletext += "<td>";
+                            if (TRANGTHAI != "") {
+                                tabletext += '<a href="#" title="Sửa" data-toggle="modal" data-target="#model-edit-DANGKYCLVUKHI"  onclick="onclick_edit_DANGKYCLVUKHI(`' + listIDPT[i] + '`,`' + listPt[i] + '`,`' + listSL[i] + '`,`' + ID + '`,`' + listNam[j] + '`,`' + TRANGTHAI + '`)">' + TRANGTHAI + '</a><a href="#" class="delete" title="Xóa" onclick="delete_DANGKYCLVUKHI(`' + ID + '`)" style="float: right;"><i class="bi bi-x"></i></a>' + "</td>";
+                            }
+                            tabletext += "</td>";
+                        }
+                        tabletext += '<td><div style="display: flex; justify-content: space-around;"><a href="#" class="edit" title="Thêm đăng ký" data-toggle="modal" data-target="#model-add-DANGKYCLVUKHI" onclick="click_add_DANGKYCLVUKHI(`' + listIDPT[i] + '`)"><i class="bi bi-plus-circle-fill"></i></a></div></td></tr>';
+                    }
+                    tabletext += "</tbody>";
+                    $('#table-DANGKYCLVUKHI').html(tabletext);
+                    loadTable('table-DANGKYCLVUKHI');
+                }, error: function (ret) {
+                    console.log('errorGET');
+                },
+                complete: function () { // Set our complete callback, adding the .hidden class and hiding the spinner.
+                    $('#loader').addClass('hidden');
+                },
+            });
+        };
+        function loadDataList_DANGKYCLVUKHI2() {
+            loadVUKHI();
+            $.ajax({
+                type: "GET",
+                url: linkapi + "v2/dangkyclvukhi?id=" + getParameterByName("Ship_ID"),
+                dataType: "json",
+                beforeSend: function () { // Before we send the request, remove the .hidden class from the spinner and default to inline-block.
+                    $('#loader').removeClass('hidden');
+                },
+                success: function (data) {
+                    var listNam = new Array();
+                    var i;
+                    var listlen;
+                    $.each(data, function (key, item) {
+                        listlen = listNam.length;
+                        var i = 0;
+                        for (i = 0; i < listlen; i++) {
+                            if (Number(item.DANGKYCHATLUONG_NAMDANGKY) == listNam[i]) break;
+                        }
+                        if (i == listlen) {
+                            var j = 0;
+                            for (j = 0; j < listlen; j++) {
+                                if (Number(item.DANGKYCHATLUONG_NAMDANGKY) < listNam[j]) break;
+                            }
+                            listNam.splice(j, 0, Number(item.DANGKYCHATLUONG_NAMDANGKY));
+                        }
+                    });
+                    listlen = listNam.length;
+                    for (i = 0; i < listlen; i++) {
+                        listNam[i] = String(listNam[i]);
+                    }
+                    var listPt = new Array();
+                    var listSL = new Array();
+                    var listIDPT = new Array();
+                    $.each(data, function (key, item) {
+                        var listlen = listPt.length;
+                        var i = 0;
+                        for (i = 0; i < listlen; i++) {
+                            if (item.KYHIEU == listPt[i]) break;
+                        }
+                        if (i == listlen) {
+                            listPt.push(item.KYHIEU);
+                            listSL.push(item.SOLUONG);
+                            listIDPT.push(item.IDVUKHI);
+                        }
+                    });
+                    console.log(listPt);
+                    listlen = listNam.length;
+                    var tabletext = "<thead><tr><th rowspan='2'>STT</th><th rowspan='2'>KÝ HIỆU</th><th rowspan='2'>SỐ LƯỢNG</th><th colspan='" + listlen + "'>ĐĂNG KÝ CHẤT LƯỢNG HÀNG NĂM</th><th rowspan='2'>TÁC VỤ</th></tr><tr>";
+                    for (i = 0; i < listlen; i++) {
+                        tabletext += "<th>" + listNam[i] + "</th>";
+                    }
+                    tabletext += "</tr></thead><tbody>";
+                    var i = 1;
+                    var lenPt = listPt.length;
+                    var TRANGTHAI;
+                    var ID;
+                    for (i = 0; i < lenPt; i++) {
+                        tabletext += "<tr><td style='text-align: center;'>" + (i + 1) + "</td><td>" + listPt[i] + "</td><td>" + listSL[i] + "</td>";
+                        for (j = 0; j < listlen; j++) {
+                            TRANGTHAI = '';
+                            $.each(data, function (key, item) {
+                                if (item.KYHIEU == listPt[i] && item.DANGKYCHATLUONG_NAMDANGKY == listNam[j]) {
+                                    TRANGTHAI = item.DANGKYCHATLUONG_TRANGTHAI;
+                                    ID = item.DANGKYCHATLUONG_ID;
+                                }
+                            });
+                            tabletext += "<td>";
+                            if (TRANGTHAI != "") {
+                                tabletext += '<a href="#" title="Sửa" data-toggle="modal" data-target="#model-edit-DANGKYCLVUKHI"  onclick="onclick_edit_DANGKYCLVUKHI(`' + listIDPT[i] + '`,`' + listPt[i] + '`,`' + listSL[i] + '`,`' + ID + '`,`' + listNam[j] + '`,`' + TRANGTHAI + '`)">' + TRANGTHAI + '</a><a href="#" class="delete" title="Xóa" onclick="delete_DANGKYCLVUKHI(`' + ID + '`)" style="float: right;"><i class="bi bi-x"></i></a>' + "</td>";
+                            }
+                            tabletext += "</td>";
+                        }
+                        tabletext += '<td><div style="display: flex; justify-content: space-around;"><a href="#" class="edit" title="Thêm đăng ký" data-toggle="modal" data-target="#model-add-DANGKYCLVUKHI" onclick="click_add_DANGKYCLVUKHI(`' + listIDPT[i] + '`)"><i class="bi bi-plus-circle-fill"></i></a></div></td></tr>';
+                    }
+                    tabletext += "</tbody>";
+                    $('#table-DANGKYCLVUKHI').html(tabletext);
+                }, error: function (ret) {
+                    console.log('errorGET');
+                },
+                complete: function () { // Set our complete callback, adding the .hidden class and hiding the spinner.
+                    $('#loader').addClass('hidden');
+                },
+            });
+        };
+        function click_add_DANGKYCLVUKHI(id = null) {
+            debugger
+            if (id != null) {
+                $('#add-DANGKYCLVUKHI-IDVUKHI').attr('disabled', '');
+                $('#add-DANGKYCLVUKHI-IDVUKHI').val(id);
+            }
+            else {
+                $('#add-DANGKYCLVUKHI-IDVUKHI').removeAttr('disabled', '');
+            }
+            loadTrangThai('add-DANGKYCLVUKHI-DANGKYCHATLUONG-TRANGTHAI', '');
+        }
+        function add_DANGKYCLVUKHI() {
+            var form = document.getElementById("form-add-DANGKYCLVUKHI");
+            console.log(form.checkValidity());
+            if (form.checkValidity() == true) {
+                var DANGKYCLVUKHI = {
+                    IDVUKHI: $("#add-DANGKYCLVUKHI-IDVUKHI").val(),
+                    //KYHIEU: $("#add-DANGKYCLVUKHI-IDVUKHI").find("option:selected").first().attr("text"),
+                    DANGKYCHATLUONG_NAMDANGKY: $("#add-DANGKYCLVUKHI-DANGKYCHATLUONG-NAMDANGKY").val(),
+                    DANGKYCHATLUONG_TRANGTHAI: $("#add-DANGKYCLVUKHI-DANGKYCHATLUONG-TRANGTHAI").val()
+                };
+                console.log(DANGKYCLVUKHI);
+                $.ajax({
+                    type: "POST",
+                    url: linkapi + "v2/insert_dangkyclvukhi?id=" + DANGKYCLVUKHI.IDVUKHI,
+                    dataType: "json",
+                    data: JSON.stringify(DANGKYCLVUKHI),
+                    contentType: "application/json",
+                    success: function (data) {
+                        toastSuccess("Thành công", "Thêm thông tin đăng ký chất lượng vũ khí thành công.");
+                        loadDataList_DANGKYCLVUKHI2();
+
+                    }, error: function (ret) {
+                        toastError("Thất bại", "");
+                    },
+                    complete: function () { // Set our complete callback, adding the .hidden class and hiding the spinner.
+                        $("#add-DANGKYCLVUKHI-DANGKYCHATLUONG-NAMDANGKY").val("");
+                        $("#add-DANGKYCLVUKHI-DANGKYCHATLUONG-TRANGTHAI").val("");
+                        $('#model-add-DANGKYCLVUKHI').modal("hide");
+                        loadTable('table-DANGKYCLVUKHI');
+                    },
+                });
+            }
+            return false;
+        }
+        function onclick_edit_DANGKYCLVUKHI(IDVUKHI, KYHIEU, SOLUONG, DANGKYCHATLUONG_ID, DANGKYCHATLUONG_NAMDANGKY, DANGKYCHATLUONG_TRANGTHAI) {
+            loadTrangThai('edit-DANGKYCLVUKHI-DANGKYCHATLUONG_TRANGTHAI', DANGKYCHATLUONG_TRANGTHAI);
+            $('#edit-DANGKYCLVUKHI-IDVUKHI').val(IDVUKHI);
+            $("#edit-DANGKYCLVUKHI-KYHIEU").val(KYHIEU);
+            $("#edit-DANGKYCLVUKHI-DANGKYCHATLUONG_ID").val(DANGKYCHATLUONG_ID);
+            $("#edit-DANGKYCLVUKHI-DANGKYCHATLUONG_NAMDANGKY").val(Number(DANGKYCHATLUONG_NAMDANGKY));
+        }
+        function edit_DANGKYCLVUKHI() {
+            var form = document.getElementById("form-edit-DANGKYCLVUKHI");
+            console.log(form.checkValidity());
+            if (form.checkValidity() == true) {
+                var DANGKYCLVUKHI = {
+                    ID: $("#edit-DANGKYCLVUKHI-DANGKYCHATLUONG_ID").val(),
+                    IDVUKHI: $("#edit-DANGKYCLVUKHI-IDVUKHI").val(),
+                    //KYHIEU: $("#add-DANGKYCLVUKHI-IDVUKHI").find("option:selected").first().attr("text"),
+                    DANGKYCHATLUONG_NAMDANGKY: $("#edit-DANGKYCLVUKHI-DANGKYCHATLUONG_NAMDANGKY").val(),
+                    DANGKYCHATLUONG_TRANGTHAI: $("#edit-DANGKYCLVUKHI-DANGKYCHATLUONG_TRANGTHAI").val()
+                };
+                console.log(DANGKYCLVUKHI);
+                $.ajax({
+                    type: "PUT",
+                    url: linkapi + "v2/update_dangkyclvukhi?id=" + DANGKYCLVUKHI.ID,
+                    dataType: "json",
+                    data: JSON.stringify(DANGKYCLVUKHI),
+                    contentType: "application/json",
+                    success: function (data) {
+                        toastSuccess("Thành công", "Cập nhật thông tin đăng ký chất lượng thành công.");
+                        loadDataList_DANGKYCLVUKHI2();
+                    }, error: function (ret) {
+                        console.log(ret.responseJSON.Message);
+                        toastError("Thất bại", "");
+                    },
+                    complete: function () { // Set our complete callback, adding the .hidden class and hiding the spinner.
+                        $('#model-edit-DANGKYCLVUKHI').modal("hide");
+                        loadTable('table-DANGKYCLVUKHI');
+                    },
+                });
+            }
+            return false;
+        }
+        function delete_DANGKYCLVUKHI(id) {
+            let text = "Bạn có chắc muốn xóa thông tin đăng ký này?";
+            if (confirm(text) == true) {
+                $.ajax({
+                    url: linkapi + "v2/delete_dangkyclvukhi?id=" + id,
+                    type: "DELETE",
+                }).done(function (res) {
+                    toastSuccess("Thành công", "Xóa thông tin đăng ký thành công!");
+                    loadDataList_DANGKYCLVUKHI2();
+                    loadTable('table-DANGKYCLVUKHI');
+                }).fail(function (res) {
+                    toastError("Lỗi", "Xóa thông tin đăng ký không thành công!");
+                })
+            } else {
+
+            }
+        }
 
         // RADA
-        function loadRada() {
+        function loadRADA() {
             var textselect = '';
             $.ajax({
                 type: "GET",
@@ -331,11 +1248,14 @@
             });
         }
         function loadDataList_DANGKYCLRADA() {
-            loadRada();
+            loadRADA();
             $.ajax({
                 type: "GET",
                 url: linkapi + "v2/dangkyclrada?id=" + getParameterByName("Ship_ID"),
                 dataType: "json",
+                beforeSend: function () { // Before we send the request, remove the .hidden class from the spinner and default to inline-block.
+                    $('#loader').removeClass('hidden');
+                },
                 success: function (data) {
                     var listNam = new Array();
                     var i;
@@ -373,7 +1293,6 @@
                             listIDPT.push(item.IDRADA);
                         }
                     });
-                    console.log(listPt);
                     listlen = listNam.length;
                     var tabletext = "<thead><tr><th rowspan='2'>STT</th><th rowspan='2'>KÝ HIỆU</th><th rowspan='2'>SỐ LƯỢNG</th><th colspan='" + listlen + "'>ĐĂNG KÝ CHẤT LƯỢNG HÀNG NĂM</th><th rowspan='2'>TÁC VỤ</th></tr><tr>";
                     for (i = 0; i < listlen; i++) {
@@ -384,7 +1303,6 @@
                     var lenPt = listPt.length;
                     var TRANGTHAI;
                     var ID;
-                    var IDPT;
                     for (i = 0; i < lenPt; i++) {
                         tabletext += "<tr><td style='text-align: center;'>" + (i + 1) + "</td><td>" + listPt[i] + "</td><td>" + listSL[i] + "</td>";
                         for (j = 0; j < listlen; j++) {
@@ -407,69 +1325,110 @@
                     tabletext += "</tbody>";
                     $('#table-DANGKYCLRADA').html(tabletext);
                     console.log("okGET");
-                    loadTableDANGKYCLRADA();
+                    loadTable('table-DANGKYCLRADA');
                 }, error: function (ret) {
                     console.log('errorGET');
                 },
-            });
-        };
-        function loadTableDANGKYCLRADA() {
-            $('table[id=table-DANGKYCLRADA]').each(function () {
-                var table1 = $(this).DataTable({
-                    destroy: true,
-                    searching: false,
-                    stateSave: true,
-                    lengthChange: false,
-                    "language": {
-                        "sProcessing": "Đang xử lý...",
-                        "sLengthMenu": "Xem _MENU_ mục",
-                        "sZeroRecords": "Không tìm thấy thông tin phù hợp",
-                        "sInfo": "Đang xem _START_ đến _END_ trong tổng số _TOTAL_ mục",
-                        "sInfoEmpty": "Đang xem 0 đến 0 trong tổng số 0 mục",
-                        "sInfoFiltered": "(được lọc từ _MAX_ mục)",
-                        "sInfoPostFix": "",
-                        "sSearch": "Tìm kiếm: ",
-                        "sUrl": "",
-                        "oPaginate": {
-                            "sFirst": "Đầu",
-                            "sPrevious": "Trước",
-                            "sNext": "Tiếp",
-                            "sLast": "Cuối"
-                        }
-                    }
-                });
-            });
-        };
-        // Chưa được
-        function loadTrangThai(input, trangthai) {
-            $.ajax({
-                type: "GET",
-                url: linkapi + "v2/dmtrangthai",
-                dataType: "json",
-                success: function (data) {
-                    var selRegion = '';
-                    $.each(data, function (key, item) {
-                        if (trangthai == item.TEN) {
-                            selRegion += "<option value='" + item.ID + "' selected>" + item.TEN + "</option>";
-                        }
-                        else {
-                            selRegion += "<option value='" + item.ID + "'>" + item.TEN + "</option>";
-                        }
-                    });
-                    $('#' + input ).html(selRegion);
-                }, error: function (ret) {
+                complete: function () { // Set our complete callback, adding the .hidden class and hiding the spinner.
+                    $('#loader').addClass('hidden');
                 },
             });
-        }
+        };
+        function loadDataList_DANGKYCLRADA2() {
+            loadRADA();
+            $.ajax({
+                type: "GET",
+                url: linkapi + "v2/dangkyclrada?id=" + getParameterByName("Ship_ID"),
+                dataType: "json",
+                beforeSend: function () { // Before we send the request, remove the .hidden class from the spinner and default to inline-block.
+                    $('#loader').removeClass('hidden');
+                },
+                success: function (data) {
+                    var listNam = new Array();
+                    var i;
+                    var listlen;
+                    $.each(data, function (key, item) {
+                        listlen = listNam.length;
+                        var i = 0;
+                        for (i = 0; i < listlen; i++) {
+                            if (Number(item.DANGKYCHATLUONG_NAMDANGKY) == listNam[i]) break;
+                        }
+                        if (i == listlen) {
+                            var j = 0;
+                            for (j = 0; j < listlen; j++) {
+                                if (Number(item.DANGKYCHATLUONG_NAMDANGKY) < listNam[j]) break;
+                            }
+                            listNam.splice(j, 0, Number(item.DANGKYCHATLUONG_NAMDANGKY));
+                        }
+                    });
+                    listlen = listNam.length;
+                    for (i = 0; i < listlen; i++) {
+                        listNam[i] = String(listNam[i]);
+                    }
+                    var listPt = new Array();
+                    var listSL = new Array();
+                    var listIDPT = new Array();
+                    $.each(data, function (key, item) {
+                        var listlen = listPt.length;
+                        var i = 0;
+                        for (i = 0; i < listlen; i++) {
+                            if (item.KYHIEU == listPt[i]) break;
+                        }
+                        if (i == listlen) {
+                            listPt.push(item.KYHIEU);
+                            listSL.push(item.SOLUONG);
+                            listIDPT.push(item.IDRADA);
+                        }
+                    });
+                    listlen = listNam.length;
+                    var tabletext = "<thead><tr><th rowspan='2'>STT</th><th rowspan='2'>KÝ HIỆU</th><th rowspan='2'>SỐ LƯỢNG</th><th colspan='" + listlen + "'>ĐĂNG KÝ CHẤT LƯỢNG HÀNG NĂM</th><th rowspan='2'>TÁC VỤ</th></tr><tr>";
+                    for (i = 0; i < listlen; i++) {
+                        tabletext += "<th>" + listNam[i] + "</th>";
+                    }
+                    tabletext += "</tr></thead><tbody>";
+                    var i = 1;
+                    var lenPt = listPt.length;
+                    var TRANGTHAI;
+                    var ID;
+                    for (i = 0; i < lenPt; i++) {
+                        tabletext += "<tr><td style='text-align: center;'>" + (i + 1) + "</td><td>" + listPt[i] + "</td><td>" + listSL[i] + "</td>";
+                        for (j = 0; j < listlen; j++) {
+                            TRANGTHAI = '';
+                            $.each(data, function (key, item) {
+                                debugger
+                                if (item.KYHIEU == listPt[i] && item.DANGKYCHATLUONG_NAMDANGKY == listNam[j]) {
+                                    TRANGTHAI = item.DANGKYCHATLUONG_TRANGTHAI;
+                                    ID = item.DANGKYCHATLUONG_ID;
+                                }
+                            });
+                            tabletext += "<td>";
+                            if (TRANGTHAI != "") {
+                                tabletext += '<a href="#" title="Sửa" data-toggle="modal" data-target="#model-edit-DANGKYCLRADA"  onclick="onclick_edit_DANGKYCLRADA(`' + listIDPT[i] + '`,`' + listPt[i] + '`,`' + listSL[i] + '`,`' + ID + '`,`' + listNam[j] + '`,`' + TRANGTHAI + '`)">' + TRANGTHAI + '</a><a href="#" class="delete" title="Xóa" onclick="delete_DANGKYCLRADA(`' + ID + '`)" style="float: right;"><i class="bi bi-x"></i></a>' + "</td>";
+                            }
+                            tabletext += "</td>";
+                        }
+                        tabletext += '<td><div style="display: flex; justify-content: space-around;"><a href="#" class="edit" title="Thêm đăng ký" data-toggle="modal" data-target="#model-add-DANGKYCLRADA"><i class="bi bi-plus-circle-fill"></i></a></div></td></tr>';
+                    }
+                    tabletext += "</tbody>";
+                    $('#table-DANGKYCLRADA').html(tabletext);
+                    console.log("okGET");
+                }, error: function (ret) {
+                    console.log('errorGET');
+                },
+                complete: function () { // Set our complete callback, adding the .hidden class and hiding the spinner.
+                    $('#loader').addClass('hidden');
+                },
+            });
+        };
         function click_add_DANGKYCLRADA(id = null) {
             debugger
             if (id != null) {
-                $('#add-DANGKYCLRADA-DANGKYCHATLUONG-TRANGTHAI').attr('disabled', '');
+                $('#add-DANGKYCLRADA-IDRADA').attr('disabled', '');
             }
             else {
-                $('#add-DANGKYCLRADA-DANGKYCHATLUONG-TRANGTHAI').removeAttr('disabled', '');
+                $('#add-DANGKYCLRADA-IDRADA').removeAttr('disabled', '');
             }
-            loadTrangThai('add-DANGKYCLRADA-DANGKYCHATLUONG_TRANGTHAI', '');
+            loadTrangThai('add-DANGKYCLRADA-DANGKYCHATLUONG-TRANGTHAI', '');
         }
         function add_DANGKYCLRADA() {
             var form = document.getElementById("form-add-DANGKYCLRADA");
@@ -490,7 +1449,7 @@
                     contentType: "application/json",
                     success: function (data) {
                         toastSuccess("Thành công", "Thêm thông tin đăng ký chất lượng rada thành công.");
-                        loadDataList_DANGKYCLRADA();
+                        loadDataList_DANGKYCLRADA2();
                     }, error: function (ret) {
                         toastError("Thất bại", "");
                     },
@@ -498,6 +1457,7 @@
                         $("#add-DANGKYCLRADA-DANGKYCHATLUONG-NAMDANGKY").val("");
                         $("#add-DANGKYCLRADA-DANGKYCHATLUONG-TRANGTHAI").val("");
                         $('#model-add-DANGKYCLRADA').modal("hide");
+                        loadTable('table-DANGKYCLRADA');
                     },
                 });
             }
@@ -531,13 +1491,14 @@
                     contentType: "application/json",
                     success: function (data) {
                         toastSuccess("Thành công", "Cập nhật thông tin đăng ký chất lượng thành công.");
-                        loadDataList_DANGKYCLRADA();
+                        loadDataList_DANGKYCLRADA2();
                     }, error: function (ret) {
                         console.log(ret.responseJSON.Message);
                         toastError("Thất bại", "");
                     },
                     complete: function () { // Set our complete callback, adding the .hidden class and hiding the spinner.
                         $('#model-edit-DANGKYCLRADA').modal("hide");
+                        loadTable('table-DANGKYCLRADA');
                     },
                 });
             }
@@ -552,6 +1513,302 @@
                 }).done(function (res) {
                     loadDataList_DANGKYCLRADA();
                     toastSuccess("Thành công", "Xóa thông tin đăng ký thành công!");
+                    loadTable('table-DANGKYCLRADA');
+                }).fail(function (res) {
+                    toastError("Lỗi", "Xóa thông tin đăng ký không thành công!");
+                })
+            } else {
+
+            }
+        }
+
+        // trang bị khác
+        function loadTHIETBIKHAC() {
+            var textselect = '';
+            $.ajax({
+                type: "GET",
+                url: linkapi + "v2/thietbikhac?id=" + getParameterByName("Ship_ID"),
+                dataType: "json",
+                success: function (data) {
+                    console.log(data);
+                    $.each(data, function (key, item) {
+                        textselect += "<option value=" + item.ID + ">" + item.KYHIEU + "</option>";
+                    });
+                    console.log("okGET");
+                    $("#add-DANGKYCLTHIETBIKHAC-IDTHIETBIKHAC").html(textselect);
+                }, error: function (ret) {
+                    console.log('errorGET');
+                }
+            });
+        }
+        function loadDataList_DANGKYCLTHIETBIKHAC() {
+            loadTHIETBIKHAC();
+            $.ajax({
+                type: "GET",
+                url: linkapi + "v2/dangkyclthietbikhac?id=" + getParameterByName("Ship_ID"),
+                dataType: "json",
+                beforeSend: function () { // Before we send the request, remove the .hidden class from the spinner and default to inline-block.
+                    $('#loader').removeClass('hidden');
+                },
+                success: function (data) {
+                    var listNam = new Array();
+                    var i;
+                    var listlen;
+                    $.each(data, function (key, item) {
+                        listlen = listNam.length;
+                        var i = 0;
+                        for (i = 0; i < listlen; i++) {
+                            if (Number(item.DANGKYCHATLUONG_NAMDANGKY) == listNam[i]) break;
+                        }
+                        if (i == listlen) {
+                            var j = 0;
+                            for (j = 0; j < listlen; j++) {
+                                if (Number(item.DANGKYCHATLUONG_NAMDANGKY) < listNam[j]) break;
+                            }
+                            listNam.splice(j, 0, Number(item.DANGKYCHATLUONG_NAMDANGKY));
+                        }
+                    });
+                    listlen = listNam.length;
+                    for (i = 0; i < listlen; i++) {
+                        listNam[i] = String(listNam[i]);
+                    }
+                    var listPt = new Array();
+                    var listSL = new Array();
+                    var listIDPT = new Array();
+                    var listTTB = new Array();
+                    $.each(data, function (key, item) {
+                        var listlen = listPt.length;
+                        var i = 0;
+                        for (i = 0; i < listlen; i++) {
+                            if (item.KYHIEU == listPt[i]) break;
+                        }
+                        if (i == listlen) {
+                            listPt.push(item.KYHIEU);
+                            listSL.push(item.SOLUONG);
+                            listIDPT.push(item.IDTHIETBIKHAC);
+                            listTTB.push(item.TENTHIETBI);
+                        }
+                    });
+                    console.log(listPt);
+                    listlen = listNam.length;
+                    var tabletext = "<thead><tr><th rowspan='2'>STT</th><th rowspan='2'>TÊN THIẾT BỊ</th><th rowspan='2'>KÝ HIỆU</th><th rowspan='2'>SỐ LƯỢNG</th><th colspan='" + listlen + "'>ĐĂNG KÝ CHẤT LƯỢNG HÀNG NĂM</th><th rowspan='2'>TÁC VỤ</th></tr><tr>";
+                    for (i = 0; i < listlen; i++) {
+                        tabletext += "<th>" + listNam[i] + "</th>";
+                    }
+                    tabletext += "</tr></thead><tbody>";
+                    var i = 1;
+                    var lenPt = listPt.length;
+                    var TRANGTHAI;
+                    var ID;
+                    for (i = 0; i < lenPt; i++) {
+                        tabletext += "<tr><td style='text-align: center;'>" + (i + 1) + "</td><td>" + listTTB[i] + "</td><td>" + listPt[i] + "</td><td>" + listSL[i] + "</td>";
+                        for (j = 0; j < listlen; j++) {
+                            TRANGTHAI = '';
+                            $.each(data, function (key, item) {
+                                if (item.KYHIEU == listPt[i] && item.DANGKYCHATLUONG_NAMDANGKY == listNam[j]) {
+                                    TRANGTHAI = item.DANGKYCHATLUONG_TRANGTHAI;
+                                    ID = item.DANGKYCHATLUONG_ID;
+                                }
+                            });
+                            tabletext += "<td>";
+                            if (TRANGTHAI != "") {
+                                tabletext += '<a href="#" title="Sửa" data-toggle="modal" data-target="#model-edit-DANGKYCLTHIETBIKHAC"  onclick="onclick_edit_DANGKYCLTHIETBIKHAC(`' + listIDPT[i] + '`,`' + listPt[i] + '`,`' + listSL[i] + '`,`' + ID + '`,`' + listNam[j] + '`,`' + TRANGTHAI + '`)">' + TRANGTHAI + '</a><a href="#" class="delete" title="Xóa" onclick="delete_DANGKYCLTHIETBIKHAC(`' + ID + '`)" style="float: right;"><i class="bi bi-x"></i></a>' + "</td>";
+                            }
+                            tabletext += "</td>";
+                        }
+                        tabletext += '<td><div style="display: flex; justify-content: space-around;"><a href="#" class="edit" title="Thêm đăng ký" data-toggle="modal" data-target="#model-add-DANGKYCLTHIETBIKHAC" onclick="click_add_DANGKYCLTHIETBIKHAC(`' + listIDPT[i] + '`)"><i class="bi bi-plus-circle-fill"></i></a></div></td></tr>';
+                    }
+                    tabletext += "</tbody>";
+                    $('#table-DANGKYCLTHIETBIKHAC').html(tabletext);
+                    loadTable('table-DANGKYCLTHIETBIKHAC');
+                }, error: function (ret) {
+                    console.log('errorGET');
+                },
+                complete: function () { // Set our complete callback, adding the .hidden class and hiding the spinner.
+                    $('#loader').addClass('hidden');
+                },
+            });
+        };
+        function loadDataList_DANGKYCLTHIETBIKHAC2() {
+            loadTHIETBIKHAC();
+            $.ajax({
+                type: "GET",
+                url: linkapi + "v2/dangkyclthietbikhac?id=" + getParameterByName("Ship_ID"),
+                dataType: "json",
+                beforeSend: function () { // Before we send the request, remove the .hidden class from the spinner and default to inline-block.
+                    $('#loader').removeClass('hidden');
+                },
+                success: function (data) {
+                    var listNam = new Array();
+                    var i;
+                    var listlen;
+                    $.each(data, function (key, item) {
+                        listlen = listNam.length;
+                        var i = 0;
+                        for (i = 0; i < listlen; i++) {
+                            if (Number(item.DANGKYCHATLUONG_NAMDANGKY) == listNam[i]) break;
+                        }
+                        if (i == listlen) {
+                            var j = 0;
+                            for (j = 0; j < listlen; j++) {
+                                if (Number(item.DANGKYCHATLUONG_NAMDANGKY) < listNam[j]) break;
+                            }
+                            listNam.splice(j, 0, Number(item.DANGKYCHATLUONG_NAMDANGKY));
+                        }
+                    });
+                    listlen = listNam.length;
+                    for (i = 0; i < listlen; i++) {
+                        listNam[i] = String(listNam[i]);
+                    }
+                    var listPt = new Array();
+                    var listSL = new Array();
+                    var listIDPT = new Array();
+                    $.each(data, function (key, item) {
+                        var listlen = listPt.length;
+                        var i = 0;
+                        for (i = 0; i < listlen; i++) {
+                            if (item.KYHIEU == listPt[i]) break;
+                        }
+                        if (i == listlen) {
+                            listPt.push(item.KYHIEU);
+                            listSL.push(item.SOLUONG);
+                            listIDPT.push(item.IDTHIETBIKHAC);
+                        }
+                    });
+                    console.log(listPt);
+                    listlen = listNam.length;
+                    var tabletext = "<thead><tr><th rowspan='2'>STT</th><th rowspan='2'>KÝ HIỆU</th><th rowspan='2'>SỐ LƯỢNG</th><th colspan='" + listlen + "'>ĐĂNG KÝ CHẤT LƯỢNG HÀNG NĂM</th><th rowspan='2'>TÁC VỤ</th></tr><tr>";
+                    for (i = 0; i < listlen; i++) {
+                        tabletext += "<th>" + listNam[i] + "</th>";
+                    }
+                    tabletext += "</tr></thead><tbody>";
+                    var i = 1;
+                    var lenPt = listPt.length;
+                    var TRANGTHAI;
+                    var ID;
+                    for (i = 0; i < lenPt; i++) {
+                        tabletext += "<tr><td style='text-align: center;'>" + (i + 1) + "</td><td>" + listPt[i] + "</td><td>" + listSL[i] + "</td>";
+                        for (j = 0; j < listlen; j++) {
+                            TRANGTHAI = '';
+                            $.each(data, function (key, item) {
+                                if (item.KYHIEU == listPt[i] && item.DANGKYCHATLUONG_NAMDANGKY == listNam[j]) {
+                                    TRANGTHAI = item.DANGKYCHATLUONG_TRANGTHAI;
+                                    ID = item.DANGKYCHATLUONG_ID;
+                                }
+                            });
+                            tabletext += "<td>";
+                            if (TRANGTHAI != "") {
+                                tabletext += '<a href="#" title="Sửa" data-toggle="modal" data-target="#model-edit-DANGKYCLTHIETBIKHAC"  onclick="onclick_edit_DANGKYCLTHIETBIKHAC(`' + listIDPT[i] + '`,`' + listPt[i] + '`,`' + listSL[i] + '`,`' + ID + '`,`' + listNam[j] + '`,`' + TRANGTHAI + '`)">' + TRANGTHAI + '</a><a href="#" class="delete" title="Xóa" onclick="delete_DANGKYCLTHIETBIKHAC(`' + ID + '`)" style="float: right;"><i class="bi bi-x"></i></a>' + "</td>";
+                            }
+                            tabletext += "</td>";
+                        }
+                        tabletext += '<td><div style="display: flex; justify-content: space-around;"><a href="#" class="edit" title="Thêm đăng ký" data-toggle="modal" data-target="#model-add-DANGKYCLTHIETBIKHAC" onclick="click_add_DANGKYCLTHIETBIKHAC(`' + listIDPT[i] + '`)"><i class="bi bi-plus-circle-fill"></i></a></div></td></tr>';
+                    }
+                    tabletext += "</tbody>";
+                    $('#table-DANGKYCLTHIETBIKHAC').html(tabletext);
+                }, error: function (ret) {
+                    console.log('errorGET');
+                },
+                complete: function () { // Set our complete callback, adding the .hidden class and hiding the spinner.
+                    $('#loader').addClass('hidden');
+                },
+            });
+        };
+        function click_add_DANGKYCLTHIETBIKHAC(id = null) {
+            debugger
+            if (id != null) {
+                $('#add-DANGKYCLTHIETBIKHAC-IDTHIETBIKHAC').attr('disabled', '');
+                $('#add-DANGKYCLTHIETBIKHAC-IDTHIETBIKHAC').val(id);
+            }
+            else {
+                $('#add-DANGKYCLTHIETBIKHAC-IDTHIETBIKHAC').removeAttr('disabled', '');
+            }
+            loadTrangThai('add-DANGKYCLTHIETBIKHAC-DANGKYCHATLUONG-TRANGTHAI', '');
+        }
+        function add_DANGKYCLTHIETBIKHAC() {
+            var form = document.getElementById("form-add-DANGKYCLTHIETBIKHAC");
+            console.log(form.checkValidity());
+            if (form.checkValidity() == true) {
+                var DANGKYCLTHIETBIKHAC = {
+                    IDTHIETBIKHAC: $("#add-DANGKYCLTHIETBIKHAC-IDTHIETBIKHAC").val(),
+                    //KYHIEU: $("#add-DANGKYCLTHIETBIKHAC-IDTHIETBIKHAC").find("option:selected").first().attr("text"),
+                    DANGKYCHATLUONG_NAMDANGKY: $("#add-DANGKYCLTHIETBIKHAC-DANGKYCHATLUONG-NAMDANGKY").val(),
+                    DANGKYCHATLUONG_TRANGTHAI: $("#add-DANGKYCLTHIETBIKHAC-DANGKYCHATLUONG-TRANGTHAI").val()
+                };
+                console.log(DANGKYCLTHIETBIKHAC);
+                $.ajax({
+                    type: "POST",
+                    url: linkapi + "v2/insert_dangkyclthietbikhac?id=" + DANGKYCLTHIETBIKHAC.IDTHIETBIKHAC,
+                    dataType: "json",
+                    data: JSON.stringify(DANGKYCLTHIETBIKHAC),
+                    contentType: "application/json",
+                    success: function (data) {
+                        toastSuccess("Thành công", "Thêm thông tin đăng ký chất lượng thiết bị khác thành công.");
+                        loadDataList_DANGKYCLTHIETBIKHAC2();
+
+                    }, error: function (ret) {
+                        toastError("Thất bại", "");
+                    },
+                    complete: function () { // Set our complete callback, adding the .hidden class and hiding the spinner.
+                        $("#add-DANGKYCLTHIETBIKHAC-DANGKYCHATLUONG-NAMDANGKY").val("");
+                        $("#add-DANGKYCLTHIETBIKHAC-DANGKYCHATLUONG-TRANGTHAI").val("");
+                        $('#model-add-DANGKYCLTHIETBIKHAC').modal("hide");
+                        loadTable('table-DANGKYCLTHIETBIKHAC');
+                    },
+                });
+            }
+            return false;
+        }
+        function onclick_edit_DANGKYCLTHIETBIKHAC(IDTHIETBIKHAC, KYHIEU, SOLUONG, DANGKYCHATLUONG_ID, DANGKYCHATLUONG_NAMDANGKY, DANGKYCHATLUONG_TRANGTHAI) {
+            loadTrangThai('edit-DANGKYCLTHIETBIKHAC-DANGKYCHATLUONG_TRANGTHAI', DANGKYCHATLUONG_TRANGTHAI);
+            $('#edit-DANGKYCLTHIETBIKHAC-IDTHIETBIKHAC').val(IDTHIETBIKHAC);
+            $("#edit-DANGKYCLTHIETBIKHAC-KYHIEU").val(KYHIEU);
+            $("#edit-DANGKYCLTHIETBIKHAC-DANGKYCHATLUONG_ID").val(DANGKYCHATLUONG_ID);
+            $("#edit-DANGKYCLTHIETBIKHAC-DANGKYCHATLUONG_NAMDANGKY").val(Number(DANGKYCHATLUONG_NAMDANGKY));
+        }
+        function edit_DANGKYCLTHIETBIKHAC() {
+            var form = document.getElementById("form-edit-DANGKYCLTHIETBIKHAC");
+            console.log(form.checkValidity());
+            if (form.checkValidity() == true) {
+                var DANGKYCLTHIETBIKHAC = {
+                    ID: $("#edit-DANGKYCLTHIETBIKHAC-DANGKYCHATLUONG_ID").val(),
+                    IDTHIETBIKHAC: $("#edit-DANGKYCLTHIETBIKHAC-IDTHIETBIKHAC").val(),
+                    //KYHIEU: $("#add-DANGKYCLTHIETBIKHAC-IDTHIETBIKHAC").find("option:selected").first().attr("text"),
+                    DANGKYCHATLUONG_NAMDANGKY: $("#edit-DANGKYCLTHIETBIKHAC-DANGKYCHATLUONG_NAMDANGKY").val(),
+                    DANGKYCHATLUONG_TRANGTHAI: $("#edit-DANGKYCLTHIETBIKHAC-DANGKYCHATLUONG_TRANGTHAI").val()
+                };
+                console.log(DANGKYCLTHIETBIKHAC);
+                $.ajax({
+                    type: "PUT",
+                    url: linkapi + "v2/update_dangkyclthietbikhac?id=" + DANGKYCLTHIETBIKHAC.ID,
+                    dataType: "json",
+                    data: JSON.stringify(DANGKYCLTHIETBIKHAC),
+                    contentType: "application/json",
+                    success: function (data) {
+                        toastSuccess("Thành công", "Cập nhật thông tin đăng ký chất lượng thành công.");
+                        loadDataList_DANGKYCLTHIETBIKHAC2();
+                    }, error: function (ret) {
+                        console.log(ret.responseJSON.Message);
+                        toastError("Thất bại", "");
+                    },
+                    complete: function () { // Set our complete callback, adding the .hidden class and hiding the spinner.
+                        $('#model-edit-DANGKYCLTHIETBIKHAC').modal("hide");
+                        loadTable('table-DANGKYCLTHIETBIKHAC');
+                    },
+                });
+            }
+            return false;
+        }
+        function delete_DANGKYCLTHIETBIKHAC(id) {
+            let text = "Bạn có chắc muốn xóa thông tin đăng ký này?";
+            if (confirm(text) == true) {
+                $.ajax({
+                    url: linkapi + "v2/delete_dangkyclthietbikhac?id=" + id,
+                    type: "DELETE",
+                }).done(function (res) {
+                    toastSuccess("Thành công", "Xóa thông tin đăng ký thành công!");
+                    loadDataList_DANGKYCLTHIETBIKHAC2();
+                    loadTable('table-DANGKYCLTHIETBIKHAC');
                 }).fail(function (res) {
                     toastError("Lỗi", "Xóa thông tin đăng ký không thành công!");
                 })

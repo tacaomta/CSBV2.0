@@ -957,3 +957,4 @@ D:\Documents\CSB\CSB\CSB\CSB\obj\Debug\CSB.csproj.CoreCompileInputs.cache
 D:\Documents\CSB\CSB\CSB\CSB\obj\Debug\CSB.csproj.CopyComplete
 D:\Documents\CSB\CSB\CSB\CSB\obj\Debug\CSB.dll
 D:\Documents\CSB\CSB\CSB\CSB\obj\Debug\CSB.pdb
+C:\Users\Linh\Documents\GitHub\CSBV2.0\CSB\CSB\obj\Debug\CSB.csproj.CopyComplete
