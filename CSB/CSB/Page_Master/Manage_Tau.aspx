@@ -1,4 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Master/TrangChu.Master" AutoEventWireup="true" CodeBehind="Manage_Tau.aspx.cs" Inherits="CSB.Page_Master.Manage_Tau" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <style>
         .a_selected {
@@ -8,7 +9,7 @@
         .subMenu ul li {
             cursor: pointer;
         }
-        
+
         .blue-color:hover {
             color: blue;
         }
@@ -65,6 +66,7 @@
             </div>
         </div>
     </div>
+    <div id="loader" class="spinner-border text-primary" role="status"></div>
     <script src="../Scripts/jquery-3.4.1.slim.min.js"></script>
     <script src="../Scripts/jquery-3.4.1.min.js"></script>
     <script>
@@ -80,7 +82,7 @@
             if (!results[2]) return '';
             return decodeURIComponent(results[2].replace(/\+/g, ' '));
         }
-        
+
         $(document).ready(function () {
             if (vung == null | vung == 1) {
                 vung_id = '5AEBB23FF45F3C235AFD86B510BF9E8C';
@@ -125,6 +127,7 @@
                 dataType: "json",
                 beforeSend: function () { // Before we send the request, remove the .hidden class from the spinner and default to inline-block.
                     //$('#loader').removeClass('hidden');
+                    $('#loader').removeClass('hidden');
                 },
                 success: function (data) {
                     var tabletext = "<thead><tr><th>STT</th><th>SỐ HIỆU</th><th>KÝ HIỆU</th><th>NƠI SẢN XUẤT</th><th>NĂM TIẾP NHẬN</th><th>CHỨC NĂNG, NHIỆM VỤ</th><th  title='Xem hồ sơ tầu'>HỒ SƠ TÀU</th><th>TÁC VỤ</th></tr></thead><tbody>";
@@ -143,6 +146,7 @@
                 },
                 complete: function () { // Set our complete callback, adding the .hidden class and hiding the spinner.
                     //$('#loader').addClass('hidden');
+                    $('#loader').addClass('hidden');
                     $('#model-edit-user').addClass('hidden');
                 },
             });
@@ -203,8 +207,8 @@
             window.location = baseaddress + "Page_Master/DacDiemChung";
         }
         function View_HoSoTau(Ship_ID) {
-           
-            window.location = baseaddress + "Page_Master/Ship_profile?Ship_ID="+Ship_ID;
+
+            window.location = baseaddress + "Page_Master/Ship_profile?Ship_ID=" + Ship_ID;
         }
         function delete_ship(id) {
             let text = "Bạn có chắc muốn xóa tàu này?";

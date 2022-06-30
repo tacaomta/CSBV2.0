@@ -527,7 +527,6 @@ D:\Code Visual 2019\CanhSatBien\CSB\CSB\CSB\bin\Newtonsoft.Json.xml
 D:\Code Visual 2019\CanhSatBien\CSB\CSB\CSB\bin\Antlr3.Runtime.pdb
 D:\Code Visual 2019\CanhSatBien\CSB\CSB\CSB\bin\Microsoft.AspNet.FriendlyUrls.xml
 D:\Code Visual 2019\CanhSatBien\CSB\CSB\CSB\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-D:\Code Visual 2019\CanhSatBien\CSB\CSB\CSB\obj\Debug\CSB.csprojAssemblyReference.cache
 D:\Code Visual 2019\CanhSatBien\CSB\CSB\CSB\obj\Debug\CSB.csproj.CoreCompileInputs.cache
 D:\Code Visual 2019\CanhSatBien\CSB\CSB\CSB\obj\Debug\CSB.csproj.CopyComplete
 D:\Code Visual 2019\CanhSatBien\CSB\CSB\CSB\obj\Debug\CSB.dll
@@ -958,3 +957,4 @@ D:\Documents\CSB\CSB\CSB\CSB\obj\Debug\CSB.csproj.CopyComplete
 D:\Documents\CSB\CSB\CSB\CSB\obj\Debug\CSB.dll
 D:\Documents\CSB\CSB\CSB\CSB\obj\Debug\CSB.pdb
 C:\Users\Linh\Documents\GitHub\CSBV2.0\CSB\CSB\obj\Debug\CSB.csproj.CopyComplete
+D:\Code Visual 2019\CanhSatBien\CSB\CSB\CSB\obj\Debug\CSB.csproj.AssemblyReference.cache
