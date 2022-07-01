@@ -895,9 +895,9 @@
   list-style: none;
   transition: all 0.4s ease;
 }
-.sidebar .nav-links li:hover{
+/*.sidebar .nav-links li:hover{
   background: #e0e0e0;
-}
+}*/
 .sidebar .nav-links li .iocn-link{
   display: flex;
   align-items: center;
@@ -942,7 +942,6 @@
   pointer-events: none;
 }
 .sidebar .nav-links li .sub-menu{
-  margin-top: -10px;
   background: #f5f6fa;
   display: none;
 }
@@ -1088,10 +1087,10 @@
       <li>
         <div class="iocn-link arro">
           <a class="arrow" href="#">
-            <i class='bx bx-collection arroww' ></i>
+            <i class='bi-ui-checks-grid arroww' ></i>
             <span class="link_name arroww">Nghiệp vụ PQLKTT </span>
           </a>
-          <i class='bx bxs-chevron-down arrow' ></i>
+          <i class='bi bi-caret-down-fill arrow' ></i>
         </div>
         <ul class="sub-menu">
           <li><a class="link_name" href="#">Nghiệp vụ PQLKTT </a></li>
@@ -1107,10 +1106,10 @@
       <li>
         <div class="iocn-link arro">
           <a class="arrow" href="#">
-            <i class='bx bx-collection arroww' ></i>
+            <i class='bi-gear-fill arroww' ></i>
             <span class="link_name arroww">Sửa chữa tàu </span>
           </a>
-          <i class='bx bxs-chevron-down arrow' ></i>
+          <i class='bi bi-caret-down-fill arrow' ></i>
         </div>
         <ul class="sub-menu">
           <li><a class="link_name" href="#">Sửa chữa tàu </a></li>
@@ -1126,10 +1125,10 @@
       <li>
         <div class="iocn-link arro">
           <a class="arrow" href="#">
-            <i class='bx bx-collection arroww' ></i>
+            <i class='bi-file-earmark-fill arroww' ></i>
             <span class="link_name arroww">ĐBKT ngành tàu </span>
           </a>
-          <i class='bx bxs-chevron-down arrow' ></i>
+          <i class='bi bi-caret-down-fill arrow' ></i>
         </div>
         <ul class="sub-menu">
           <li><a class="link_name" href="#">ĐBKT ngành tàu </a></li>
@@ -1140,21 +1139,21 @@
         </ul>
       </li>
       <li>
-        <a href="#">
-          <i class='bx bx-line-chart' ></i>
+        <a href="../Page_Master/Manage_Tau?vung=1#">
+          <i class='bi-folder' ></i>
           <span class="link_name">Quản lý tàu</span>
         </a>
         <ul class="sub-menu blank">
-          <li><a class="link_name" href="#">Quản lý tàu</a></li>
+          <li><a class="link_name" href="../Page_Master/Manage_Tau?vung=1#">Quản lý tàu</a></li>
         </ul>
       </li>
       <li>
         <div class="iocn-link arro">
           <a class="arrow" href="#">
-            <i class='bx bx-collection arroww' ></i>
+            <i class='bi-cart3 arroww' ></i>
             <span class="link_name arrowww">QL vật tư, mua sắm </span>
           </a>
-          <i class='bx bxs-chevron-down arrow' ></i>
+          <i class='bi bi-caret-down-fill arrow' ></i>
         </div>
         <ul class="sub-menu">
           <li><a class="link_name" href="#">QL vật tư, mua sắm </a></li>
@@ -1169,10 +1168,10 @@
       <li>
         <div class="iocn-link arro">
           <a class="arrow" href="#">
-            <i class='bx bx-collection arroww' ></i>
+            <i class='bi-person-fill arroww' ></i>
             <span class="link_name arroww">QL danh mục </span>
           </a>
-          <i class='bx bxs-chevron-down arrow' ></i>
+          <i class='bi bi-caret-down-fill arrow' ></i>
         </div>
         <ul class="sub-menu">
           <li><a class="link_name" href="#">QL danh mục </a></li>
