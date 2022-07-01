@@ -813,6 +813,33 @@
         .btn {
             font-size: 12px;
         }
+                .row .form-group {
+            display: flex;
+        }
+
+        table.dataTable thead th, table.dataTable tfoot th {
+            font-weight: 500;
+            text-align: center;
+        }
+
+        .btn {
+            font-size: 14px;
+        }
+
+
+
+
+
+        #loader{
+            z-index: 999;
+            position:fixed;
+            top:50%;
+            left:50%;
+        }
+
+        .hidden{
+            display:none;
+        }
     </style>
 </head>
 
@@ -961,7 +988,7 @@
             </div>
         </div>
     </div>
-
+    <div id="loader" class="spinner-border text-primary hidden" role="status"></div>
     <script src="../Scripts/jquery-3.4.1.min.js"></script>
     <script src="../Scripts/vendor/popper.min.js"></script>
     <script src="../Scripts/bootstrap-4.6.1/bootstrap.bundle.min.js"></script>

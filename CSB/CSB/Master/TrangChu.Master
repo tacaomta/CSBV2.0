@@ -988,7 +988,7 @@
             </div>
         </div>
     </div>
-
+    <div id="loader" class="spinner-border text-primary hidden" role="status"></div>
     <script src="../Scripts/jquery-3.4.1.min.js"></script>
     <script src="../Scripts/vendor/popper.min.js"></script>
     <script src="../Scripts/bootstrap-4.6.1/bootstrap.bundle.min.js"></script>

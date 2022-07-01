@@ -22,7 +22,7 @@
                         <div class="card-block">
                             <div class="">
                                 <div class="scroll" style="overflow-y: auto;">
-                                    <ul class="nav nav-tabs" style="inline-size: max-content;">
+                                    <ul class="nav nav-tabs nav-fill" >
                                         <li class="nav-item">
                                             <a class="nav-link active" id="tabDANGKYCLHANGHAI" data-toggle="tab" onclick="loadDataList_DANGKYCLHANGHAI()" href="#DANGKYCLHANGHAI">Hàng hải</a>
                                         </li>
@@ -694,7 +694,7 @@
                 var table1 = $(this).DataTable({
                     destroy: true,
                     searching: false,
-                    stateSave: false,
+                    stateSave: true,
                     lengthChange: false,
                     "language": {
                         "sProcessing": "Đang xử lý...",
@@ -714,6 +714,9 @@
                         }
                     }
                 });
+                table1.buttons().container()
+                    .appendTo('this_wrapper .col-md-6:eq(0)');
+
             });
         };
         function loadTrangThai(input, trangthai) {
@@ -1636,7 +1639,10 @@
             });
         }
         function loadDataList_DANGKYCLBDNTG() {
+            
+            console.log(1);
             loadBDNTG();
+            console.log(2);
             $.ajax({
                 type: "GET",
                 url: linkapi + "v2/dangkyclbdntg?id=" + getParameterByName("Ship_ID"),
@@ -1912,6 +1918,7 @@
                     url: linkapi + "v2/delete_dangkyclbdntg?id=" + id,
                     type: "DELETE",
                 }).done(function (res) {
+                    debugger
                     toastSuccess("Thành công", "Xóa thông tin đăng ký thành công!");
                     loadDataList_DANGKYCLBDNTG2();
                     loadTable('table-DANGKYCLBDNTG');
