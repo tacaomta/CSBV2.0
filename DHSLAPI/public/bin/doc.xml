@@ -914,6 +914,11 @@
             <param name="id">id của tàu</param>
             <returns></returns>
         </member>
+        <member name="T:DHSLAPI.Controllers.DANGKYCLRADAController">
+            <summary>
+            Đăng ký chất lượng thông tin - ra đa
+            </summary>
+        </member>
         <member name="M:DHSLAPI.Controllers.DANGKYCLRADAController.LAYTHONGTINDANGKYCLRADA(System.String)">
             <summary>
             xem đăng ký chất lượng rada của tàu đó
@@ -1068,6 +1073,11 @@
             </summary>
             <param name="id"></param>
             <returns></returns>
+        </member>
+        <member name="T:DHSLAPI.Controllers.EmployeeTestController">
+            <summary>
+            Test controller
+            </summary>
         </member>
         <member name="T:DHSLAPI.Controllers.HANGHAIController">
             <summary>
@@ -1635,13 +1645,6 @@
             <param name="id"></param>
             <returns></returns>
         </member>
-        <member name="M:DHSLAPI.Controllers.PersonnelController.GetEmployees(System.String)">
-            <summary>
-            Cái này để test, không dùng trong project này
-            </summary>
-            <param name="id">id của tàu</param>
-            <returns></returns>
-        </member>
         <member name="M:DHSLAPI.Controllers.PositionController.GetAll">
             <summary>
             Lấy toàn bộ danh mục chức vụ
@@ -2054,6 +2057,20 @@
             Xoá thông tin trang thiết bị
             </summary>
             <param name="id">id của trang thiết b ị</param>
+            <returns></returns>
+        </member>
+        <member name="T:DHSLAPI.Controllers.THONGKEController">
+            <summary>
+            Các hàm dịch vụ thống kê
+            </summary>
+        </member>
+        <member name="M:DHSLAPI.Controllers.THONGKEController.GetTHONGBAOTHOIGIANMAY(System.String,System.Int32,System.Int32)">
+            <summary>
+            Lấy danh mục các thiết bị trên tàu, có cảnh báo
+            </summary>
+            <param name="id">Id tàu</param>
+            <param name="SOGIOTHONGBAO">số giờ thông báo</param>
+            <param name="SOGIODINHMUC">số giờ định mức</param>
             <returns></returns>
         </member>
         <member name="T:DHSLAPI.Controllers.TRANGTHAIController">
@@ -3804,6 +3821,43 @@
         <member name="P:DHSLAPI.Models.THOIGIANLAMVIECMAY.THONGTINMAY">
             <summary>
             Thông tin máy
+            </summary>
+        </member>
+        <member name="T:DHSLAPI.Models.THONGBAOTHOIGIANDINHMUC">
+            <summary>
+            Cảnh báo định mức giờ hoạt động của các thiết bị trên tàu
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.THONGBAOTHOIGIANDINHMUC.IDMAY">
+            <summary>
+            Id thiết bị
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.THONGBAOTHOIGIANDINHMUC.TENMAY">
+            <summary>
+            Tên thiết bị
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.THONGBAOTHOIGIANDINHMUC.LOAIMAY">
+            <summary>
+            Loại máy
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.THONGBAOTHOIGIANDINHMUC.THOIGIANSUACHUACUOI">
+            <summary>
+            Thời gian sửa chữa lần cuối cùng
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.THONGBAOTHOIGIANDINHMUC.THONGBAOTHOIHAN">
+            <summary>
+            Dấu hiệu cảnh báo đến hạn hay chưa
+            true: nhận dấu hiệu cảnh báo
+            false: chưa đến mức cảnh báo
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.THONGBAOTHOIGIANDINHMUC.THOIGIANCONLAI">
+            <summary>
+            Thời gian còn lại đến mốc bảo dưỡng tiếp theo
             </summary>
         </member>
         <member name="T:DHSLAPI.Models.THONGTINTAU">
