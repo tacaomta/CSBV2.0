@@ -57,7 +57,7 @@
                             <div class="card">
                                 <div class="card-body">
                                     <div class="d-flex flex-column align-items-center text-center" style="margin-top: 60px">
-                                        <img src="https://bootdey.com/img/Content/avatar/avatar6.png" alt="Admin" class="rounded-circle p-1 bg-primary" width="110">
+                                        <img src="../Image/User/avatar.png"  alt="Admin" class="rounded-circle p-1 bg-primary" width="110">
                                         <div class="mt-3">
                                             <h4 id="title_fullname">Cao Cao</h4>
                                             <p class="text-secondary mb-1">Thông tin tài khoản</p>

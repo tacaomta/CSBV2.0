@@ -279,6 +279,7 @@
     <Content Include="Image\Ships\boat.jpg" />
     <Content Include="Image\Ships\default.jpg" />
     <Content Include="Image\Ships\Tau1.jpg" />
+    <Content Include="Image\User\avatar.png" />
     <Content Include="Page_Master\DacDiemChung.aspx" />
     <Content Include="Page_Master\Add_Ship.aspx" />
     <Content Include="Page_Master\Add_Staff.aspx" />

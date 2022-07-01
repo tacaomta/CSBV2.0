@@ -247,7 +247,6 @@ D:\Code Visual 2019\CanhSatBien\CSB\CSB\CSB\bin\Newtonsoft.Json.xml
 D:\Code Visual 2019\CanhSatBien\CSB\CSB\CSB\bin\Antlr3.Runtime.pdb
 D:\Code Visual 2019\CanhSatBien\CSB\CSB\CSB\bin\Microsoft.AspNet.FriendlyUrls.xml
 D:\Code Visual 2019\CanhSatBien\CSB\CSB\CSB\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-D:\Code Visual 2019\CanhSatBien\CSB\CSB\CSB\obj\Release\CSB.csprojAssemblyReference.cache
 D:\Code Visual 2019\CanhSatBien\CSB\CSB\CSB\obj\Release\CSB.csproj.CoreCompileInputs.cache
 D:\Code Visual 2019\CanhSatBien\CSB\CSB\CSB\obj\Release\CSB.csproj.CopyComplete
 D:\Code Visual 2019\CanhSatBien\CSB\CSB\CSB\obj\Release\CSB.dll
@@ -605,3 +604,4 @@ D:\Code Visual 2019\CanhSatBien\CSB\CSB\CSB\bin\CrystalDecisions.ReportAppServer
 D:\Code Visual 2019\CanhSatBien\CSB\CSB\CSB\bin\stdole.dll
 D:\Code Visual 2019\CanhSatBien\CSB\CSB\CSB\bin\RestSharp.xml
 C:\Users\Linh\Documents\GitHub\CSBV2.0\CSB\CSB\obj\Release\CSB.csproj.CopyComplete
+D:\Code Visual 2019\CanhSatBien\CSB\CSB\CSB\obj\Release\CSB.csproj.AssemblyReference.cache

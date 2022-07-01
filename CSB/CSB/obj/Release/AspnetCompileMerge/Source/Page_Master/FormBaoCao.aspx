@@ -23,10 +23,6 @@
         p {
             margin: 0;
         }
-        #left-rp p {
-            margin-top: 20px;
-            margin-bottom: 20px;
-        }
         sup {
             vertical-align: baseline;
             font-size: smaller;
@@ -56,170 +52,184 @@
             <form action="#" id="rpform">
                 <div class="section-content" style="font-family:'Times New Roman', Times, serif";>
                     <div class="row" style="justify-content: center;">
-                        <div class="col-3">
+                        <div class="col-5">
                             <div class="rp-header text-center" style="display: flex; flex-direction: column">
                                 <p>BỘ TƯ LỆNH CẢNH SÁT BIỂN</p>
                                 <p class="text-bold">CỤC KỸ THUẬT</p>
                                 <div class="horizontal-line" style="width: 20%;"></div>
-                                <p>Số: <span>2224</span>/BC-KT</p>
+                                <div class="mt-2" style="display: flex; flex-direction: row; justify-content: center;">
+                                    <p>Số:</p>
+                                    <input class="ml-2 mr-1 text-bold" style="width: 50px;"/>
+                                    <p>/BC-KT</p>
+                                </div>
                             </div>
                         </div>
-                        <div class="col-4">
+                        <div class="col-7">
                             <div class="rp-header text-center" style="display: flex; flex-direction: column">
                                 <p class="text-bold">CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM</p>
                                 <p class="text-bold">Độc lập - Tự do - Hạnh phúc</p>
                                 <div class="horizontal-line" style="width: 30%;"></div>
-                                <p class="text-italic">Hà Nội, ngày <span>19</span> tháng <span>03</span> năm <span>2022</span></p>
+                                <p class="text-italic">Hà Nội, ngày <span id="header-date">19</span> tháng <span id="header-month">03</span> năm <span id="header-year">2022</span></p>
                             </div>
                         </div>
                     </div>
                     <div class="row" style="justify-content: center;">
-                        <div class="text-center col-7">
+                        <div class="text-center col-10">
                             <p class="text-bold">BÁO CÁO</p>
-                            <textarea rows="3" cols="70" form="rpform" required style="text-align: center; padding: 5px; resize: none;"></textarea>
+                            <textarea rows="3" form="rpform" required style="font-weight: bold; width: 100%; text-align: center; padding: 5px; resize: none;"></textarea>
                             <div class="horizontal-line" style="width: 25%;"></div>
                             <div class="my-2" style="display: flex; flex-direction: row; justify-content: center;">
                                 <p>Kính gửi:</p>
                                 <input class="ml-2"/>
                             </div>
                             <div class="my-2" style="display: flex; flex-direction: row;">
-                                <p>Căn cứ:</p>
-                                <textarea class="ml-2" rows="3" cols="70" form="rpform" required style="padding: 5px; resize: none;"></textarea>
+                                <p style="white-space: nowrap;">Căn cứ:</p>
+                                <textarea class="ml-2" rows="3" form="rpform" required style="width: 100%; padding: 5px; resize: none;"></textarea>
                             </div>
                             <div class="my-2" style="display: flex; flex-direction: row;">
-                                <p>Căn cứ:</p>
-                                <textarea class="ml-2" rows="3" cols="70" form="rpform" required style="padding: 5px; resize: none;"></textarea>
+                                <p style="white-space: nowrap;">Căn cứ:</p>
+                                <textarea class="ml-2" rows="3" form="rpform" required style="width: 100%; padding: 5px; resize: none;"></textarea>
                             </div>
                             <p style="text-align: left;">Cục Kỹ thuật báo cáo như sau:</p>
                             <div class="row">
-                                <p class="mr-2" style="font-weight: bold; text-align: left;">1. Thông số cơ bản của tàu</p>
-                                <input class="px-2" style="width: 100px;"/>
+                                <p style="font-weight: bold; text-align: left;">1. Thông số cơ bản của tàu </p>
+                                <span class="text-bold ml-1" id="ship_name">TT400</span>
                             </div>
                             <div class="row">
                                 <div id="left-rp" class="col-6" style="text-align: left;">
-                                    <p>- Chiều dài lớn nhất</p>
-                                    <p>- Chiều rộng lớn nhất</p>
-                                    <p>- Chiều cao mạn</p>
-                                    <p>- Mớn nước</p>
-                                    <p>- Máy chính</p>
-                                    <p>- Vận tốc lớn nhất theo thiết kế</p>
-                                    <p>- Vận tốc kinh tế theo thiết kế</p>
-                                    <p>- Lượng chiếm nước đầy tải</p>
-                                    <p>- Số hệ trục chân vịt</p>
-                                    <p>- Tầm hoạt động</p>
-                                    <p>- Thời gian hoạt động liên tục trên biển</p>
-                                    <p>- Lượng dự trữ dầu cháy</p>
-                                    <p>- Lượng dự trữ dầu nhờn</p>
+                                    <p class="my-3">- Chiều dài lớn nhất</p>
+                                    <p class="my-3">- Chiều rộng lớn nhất</p>
+                                    <p class="my-3">- Chiều cao mạn</p>
+                                    <p class="my-3">- Mớn nước</p>
+                                    <p class="my-3">- Máy chính</p>
+                                    <p class="my-3">- Vận tốc lớn nhất theo thiết kế</p>
+                                    <p class="my-3">- Vận tốc kinh tế theo thiết kế</p>
+                                    <p class="my-3">- Lượng chiếm nước đầy tải</p>
+                                    <p class="my-3">- Số hệ trục chân vịt</p>
+                                    <p class="my-3">- Tầm hoạt động</p>
+                                    <p class="my-3">- Thời gian hoạt động liên tục trên biển</p>
+                                    <p class="my-3">- Lượng dự trữ dầu cháy</p>
+                                    <p class="my-3">- Lượng dự trữ dầu nhờn</p>
                                 </div>
                                 <div class="col-6">
                                     <div class="row my-3">
-                                        <p class="mr-2" style="font-weight: bold; text-align: left;">L<sup style="vertical-align: text-bottom;">max</sup> = </p>
-                                        <input class="px-2" style="width: 100px;"/>
-                                        <p class="ml-2" style="font-weight: bold; text-align: left;">m;</p>
+                                        <p class="mr-2" style="text-align: left;">L<sup style="vertical-align: text-bottom;">max</sup> = </p>
+                                        <span id="Lmax">54,7</span>
+                                        <p class="ml-2" style="text-align: left;">m;</p>
                                     </div>
                                     <div class="row my-3">
-                                        <p class="mr-2" style="font-weight: bold; text-align: left;">B<sup style="vertical-align: text-bottom;">max</sup> = </p>
-                                        <input class="px-2" style="width: 100px;"/>
-                                        <p class="ml-2" style="font-weight: bold; text-align: left;">m;</p>
+                                        <p class="mr-2" style="text-align: left;">B<sup style="vertical-align: text-bottom;">max</sup> = </p>
+                                        <span id="Bmax">9,16</span>
+                                        <p class="ml-2" style="text-align: left;">m;</p>
                                     </div>
                                     <div class="row my-3">
-                                        <p class="mr-2" style="font-weight: bold; text-align: left;">H = </p>
-                                        <input class="px-2" style="width: 100px;"/>
-                                        <p class="ml-2" style="font-weight: bold; text-align: left;">m;</p>
+                                        <p class="mr-2" style="text-align: left;">H = </p>
+                                        <span id="H">5,2</span>
+                                        <p class="ml-2" style="text-align: left;">m;</p>
                                     </div>
                                     <div class="row my-3">
-                                        <p class="mr-2" style="font-weight: bold; text-align: left;">T<sup style="vertical-align: text-bottom;">m</sup> = </p>
-                                        <input class="px-2" style="width: 100px;"/>
-                                        <p class="ml-2" style="font-weight: bold; text-align: left;">m;</p>
+                                        <p class="mr-2" style="text-align: left;">T<sup style="vertical-align: text-bottom;">m</sup> = </p>
+                                        <span id="Tm">2,58</span>
+                                        <p class="ml-2" style="text-align: left;">m;</p>
                                     </div>
                                     <div class="row my-3">
-                                        <input class="px-2" style="width: 250px;"/>
+                                        <span id="maychinh_list">Paxman18VP8185; 5400 HP (x3)</span>
                                     </div>
                                     <div class="row my-3">
-                                        <p class="mr-2" style="font-weight: bold; text-align: left;">v<sup style="vertical-align: text-bottom;">max</sup> = </p>
-                                        <input class="px-2" style="width: 100px;"/>
-                                        <p class="ml-2" style="font-weight: bold; text-align: left;">hải lý/giờ;</p>
+                                        <p class="mr-2" style="text-align: left;">v<sup style="vertical-align: text-bottom;">max</sup> = </p>
+                                        <span id="vmax">36</span>
+                                        <p class="ml-2" style="text-align: left;">hải lý/giờ;</p>
                                     </div>
                                     <div class="row my-3">
-                                        <p class="mr-2" style="font-weight: bold; text-align: left;">v<sup style="vertical-align: text-bottom;">kt</sup> = </p>
-                                        <input class="px-2" style="width: 100px;"/>
-                                        <p class="ml-2" style="font-weight: bold; text-align: left;">hải lý/giờ;</p>
+                                        <p class="mr-2" style="text-align: left;">v<sup style="vertical-align: text-bottom;">kt</sup> = </p>
+                                        <span id="vkt">15</span>
+                                        <p class="ml-2" style="text-align: left;">hải lý/giờ;</p>
                                     </div>
                                     <div class="row my-3">
-                                        <p class="mr-2" style="font-weight: bold; text-align: left;">D<sup style="vertical-align: text-bottom;">dt</sup> = </p>
-                                        <input class="px-2" style="width: 100px;"/>
-                                        <p class="ml-2" style="font-weight: bold; text-align: left;">tấn;</p>
+                                        <p class="mr-2" style="text-align: left;">D<sup style="vertical-align: text-bottom;">dt</sup> = </p>
+                                        <span id="Ddt">429</span>
+                                        <p class="ml-2" style="text-align: left;">tấn;</p>
                                     </div>
                                     <div class="row my-3">
-                                        <input class="px-2" style="width: 100px;"/>
-                                        <p class="ml-2" style="font-weight: bold; text-align: left;">hệ trục;</p>
+                                        <span id="sohetruc">03</span>
+                                        <p class="ml-2" style="text-align: left;">hệ trục;</p>
                                     </div>
                                     <div class="row my-3">
-                                        <input class="px-2" style="width: 100px;"/>
-                                        <p class="ml-2" style="font-weight: bold; text-align: left;">hải lý;</p>
+                                        <span id="sohaily">2500</span>
+                                        <p class="ml-2" style="text-align: left;">hải lý;</p>
                                     </div>
                                     <div class="row my-3">
-                                        <input class="px-2" style="width: 100px;"/>
-                                        <p class="ml-2" style="font-weight: bold; text-align: left;">ngày đêm;</p>
+                                        <span id="songaydem">30</span>
+                                        <p class="ml-2" style="text-align: left;">ngày đêm;</p>
                                     </div>
                                     <div class="row my-3">
-                                        <input class="px-2" style="width: 100px;"/>
-                                        <p class="ml-2" style="font-weight: bold; text-align: left;">m<sup>3</sup>;</p>
+                                        <span id="dauchay">86,5</span>
+                                        <p class="ml-2" style="text-align: left;">m<sup>3</sup>;</p>
                                     </div>
                                     <div class="row my-3">
-                                        <input class="px-2" style="width: 100px;"/>
-                                        <p class="ml-2" style="font-weight: bold; text-align: left;">m<sup>3</sup>;</p>
+                                        <span id="daunhon">1,5</span>
+                                        <p class="ml-2" style="text-align: left;">m<sup>3</sup>;</p>
                                     </div>
                                 </div>
                             </div>
                             <div class="row">
-                                <p class="mr-2" style="font-weight: bold; text-align: left;">2. Tình trạng kỹ thuật hiện nay của các tàu</p>
-                                <input class="px-2" style="width: 300px;"/>
+                                <p class="mr-1" style="font-weight: bold; text-align: left;">2. Tình trạng kỹ thuật hiện nay của các tàu</p>
+                                <span class="text-bold">CSB 4031, CSB 4035, CSB 4039</span>
                             </div>
                             <p class="mr-2" style="font-weight: bold; text-align: left;">a) Hệ động lực</p>
                             <div class="row">
-                                <p class="mr-2 my-1" style="text-align: left; padding-left: 15px;">- 03 máy chính</p>
-                                <input class="px-2 my-1" style="width: 100px;"/>
-                                <p class="mx-2 my-1" style="text-align: left;">và hộp số đang hoạt động</p>
-                                <input class="px-2 my-1" style="width: 100px;"/>
-                                <p class="mr-2 my-1" style="text-align: left;">, tốc độ các tàu đạt từ</p>
-                                <input class="px-2 my-1" style="width: 100px;"/>
-                                <p class="mx-2 my-1" style="text-align: left;">đến</p>
-                                <input class="px-2 my-1" style="width: 100px;"/>
-                                <p class="mx-2 my-1" style="text-align: left;">M/h trong điều kiện sóng cấp</p>
-                                <input class="px-2 my-1" style="width: 100px;"/>
+                                <p class="mr-2 my-1" style="text-align: left; padding-left: 15px;">-</p>
+                                <span class="my-1">03</span>
+                                <p class="mr-2 my-1" style="text-align: left; padding-left: 5px">máy chính</p>
+                                <span class="my-1">Paxman18VP8185</span>
+                                <p class="mx-1 my-1" style="text-align: left;">và hộp số đang hoạt động</p>
+                                <span class="my-1">bình thường</span>
+                                <p class="mx-1 my-1" style="text-align: left;">, tốc độ các tàu đạt từ</p>
+                                <span class="my-1">24</span>
+                                <p class="mx-1 my-1" style="text-align: left;">đến</p>
+                                <span class="my-1">28</span>
+                                <p class="mx-1 my-1" style="text-align: left;">M/h trong điều kiện sóng cấp</p>
+                                <span class="my-1">3;</span>
+                                <a class="mx-1" href="#" style="text-decoration: none;">(Xem tình trạng)</a>
                             </div>
                             <div class="row">
-                                <p class="mr-2 my-1" style="text-align: left; padding-left: 15px;">- Máy phát điện, hệ thống điện, hệ thống cứu hộ hoạt động</p>
-                                <input class="px-2 my-1" style="width: 100px;"/>
+                                <p class="mr-1 my-1" style="text-align: left; padding-left: 15px;">- Máy phát điện, hệ thống điện, hệ thống cứu hộ hoạt động</p>
+                                <span class="my-1">bình thường;</span>
+                                <a class="ml-2" href="#" style="text-decoration: none;">(Xem tình trạng)</a>
                             </div>
                             <div class="row">
-                                <p class="mr-2 my-1" style="text-align: left; padding-left: 15px;">- Các hệ thống và thiết bị bổ trợ đang hoạt động</p>
-                                <input class="px-2 my-1" style="width: 100px;"/>
+                                <p class="mr-1 my-1" style="text-align: left; padding-left: 15px;">- Các hệ thống và thiết bị bổ trợ đang hoạt động</p>
+                                <span class="my-1">bình thường;</span>
+                                <a class="ml-2" href="#" style="text-decoration: none;">(Xem tình trạng)</a>
                             </div>
                             <div class="row">
-                                <p class="mr-2 my-1" style="text-align: left; padding-left: 15px;">- Thân vỏ</p>
-                                <input class="px-2 my-1" style="width: 100px;"/>
+                                <p class="mr-1 my-1" style="text-align: left; padding-left: 15px;">- Thân vỏ</p>
+                                <span class="my-1">vẫn kín nước;</span>
+                                <a class="ml-2" href="#" style="text-decoration: none;">(Xem tình trạng)</a>
                             </div>
                             <div class="row">
-                                <p class="mr-2 my-1" style="text-align: left; padding-left: 15px;">- Hệ trục chân vịt</p>
-                                <input class="px-2 my-1" style="width: 100px;"/>
+                                <p class="mr-1 my-1" style="text-align: left; padding-left: 15px;">- Hệ trục chân vịt</p>
+                                <span class="my-1">đảm bảo.</span>
+                                <a class="ml-2" href="#" style="text-decoration: none;">(Xem tình trạng)</a>
                             </div>
                             <p class="mr-2" style="font-weight: bold; text-align: left;">b) Trang bị Vũ khí, khí tài</p>                            
                             <div class="row">
-                                <p class="mr-2 my-1" style="text-align: left; padding-left: 15px;">- Vũ khí: Hệ thống vũ khí trên tàu</p>
-                                <input class="px-2 my-1" style="width: 100px;"/>
+                                <p class="mr-1 my-1" style="text-align: left; padding-left: 15px;">- Vũ khí: Hệ thống vũ khí trên tàu</p>                     
+                                <span class="my-1">đầy đủ cơ số, hoạt động bình thường;</span>
+                                <a class="ml-2" href="#" style="text-decoration: none;">(Xem tình trạng)</a>
                             </div>
                             <p class="mr-2" style="text-align: left;">- Khí tài:</p>                            
                             <div class="row">
-                                <p class="mr-2 my-1" style="text-align: left; padding-left: 15px;">+ Thiết bị Hàng hải: Các thiết bị khí tài Hàng hải</p>
-                                <input class="px-2 my-1" style="width: 100px;"/>
-                                <p class="mr-2 my-1" style="text-align: left;">, hệ thống VSAT</p>
-                                <input class="px-2 my-1" style="width: 100px;"/>
+                                <p class="mr-1 my-1" style="text-align: left; padding-left: 15px;">+ Thiết bị Hàng hải: Các thiết bị khí tài Hàng hải</p>
+                                <span class="my-1">hoạt động bình thường;</span>
+                                <p class="mr-1 my-1" style="text-align: left;">, hệ thống VSAT</p>
+                                <span class="my-1">hoạt động ổn định, đường truyền thông suốt;</span>
+                                <a class="ml-2" href="#" style="text-decoration: none;">(Xem tình trạng)</a>
                             </div>
                             <div class="row">
-                                <p class="mr-2 my-1" style="text-align: left; padding-left: 15px;">+ Thiết bị Thông tin liên lạc</p>
-                                <input class="px-2 my-1" style="width: 100px;"/>
+                                <p class="mr-2 my-1" style="text-align: left; padding-left: 15px;">+ Thiết bị Thông tin liên lạc: Hoạt động</p>
+                                <span class="my-1">bình thường, đảm bảo thông tin liên lạc.</span>
+                                <a class="ml-2" href="#" style="text-decoration: none;">(Xem tình trạng)</a>
                             </div>
                             <p class="mr-2" style="font-weight: bold; text-align: left;">3. Kiến nghị, đề nghị</p>                            
                             <textarea rows="3" form="rpform" required style="width: 100%; padding: 5px; resize: none;"></textarea>
@@ -227,19 +237,16 @@
                             <div class="row mt-3">
                                 <div class="col-6" style="text-align: left;">
                                     <p class="text-italic text-bold">Nơi nhận:</p>
-                                    <p>- Như trên;</p>
-                                    <p>- Bộ Tham mưu;</p>
-                                    <p>- Lưu: VT, CKT, Q04.</p>
-                                    <p class="text-bold" style="font-size: 18px;">M</p>
+                                    <textarea rows="5" form="rpform" required style="width: 100%; padding: 5px; resize: none;"></textarea>
                                 </div>
                                 <div class="col-6">
-                                    <textarea placeholder="(CHỨC VỤ)" rows="2" form="rpform" required style="width: 100%; text-align: center; padding: 5px; resize: none;"></textarea>
+                                    <textarea placeholder="(CHỨC VỤ)" rows="2" form="rpform" required style="font-weight: bold; width: 100%; text-align: center; padding: 5px; resize: none;"></textarea>
                                     <br />
                                     <br />
                                     <br />
                                     <br />
                                     <br />
-                                    <textarea placeholder="(Cấp bậc, Ký tên)" rows="1" form="rpform" required style="width: 100%; text-align: center; padding: 5px; resize: none;"></textarea>
+                                    <textarea placeholder="(Cấp bậc, Ký tên)" rows="1" form="rpform" required style="font-weight: bold; width: 100%; text-align: center; padding: 5px; resize: none;"></textarea>
                                 </div>
                             </div>
                             <div class="row mt-5">

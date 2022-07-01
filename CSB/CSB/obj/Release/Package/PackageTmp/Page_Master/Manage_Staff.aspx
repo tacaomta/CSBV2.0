@@ -22,6 +22,7 @@
             </div>
         </div>
     </div>
+    <div id="loader" class="spinner-border text-primary" role="status"></div>
     <script src="../Scripts/jquery-3.4.1.slim.min.js"></script>
     <script>
         var Ship_ID;
@@ -75,7 +76,7 @@
                     url: linkapi + "personnels?id=" + Ship_ID,
                     dataType: "json",
                     beforeSend: function () { // Before we send the request, remove the .hidden class from the spinner and default to inline-block.
-                        //$('#loader').removeClass('hidden');
+                        $('#loader').removeClass('hidden');
                     },
                     success: function (data) {
                         var tabletext = "<thead><tr><th>STT</th><th>HỌ VÀ TÊN</th><th>NĂM SINH</th><th>QUÊ QUÁN</th><th>GHI CHÚ</th><th>TÁC VỤ</th></tr></thead><tbody>";
@@ -93,8 +94,7 @@
                         console.log('errorGET');
                     },
                     complete: function () { // Set our complete callback, adding the .hidden class and hiding the spinner.
-                        //$('#loader').addClass('hidden');
-                        $('#model-edit-user').addClass('hidden');
+                        $('#loader').addClass('hidden');
                     },
                 });
             }
@@ -159,7 +159,8 @@
             window.location = baseaddress + "Page_Master/Add_Staff?Ship_ID=" + Ship_ID;
         }
         function btn_Load_liststaff() {
-            location.reload(true);
+            Load_Title(Ship_ID);
+            loadDataList_Staff(Ship_ID);
         }
         function delete_staff(Staff_ID) {
             let text = "Bạn có chắc muốn xóa cán bộ, nhân viên này?";

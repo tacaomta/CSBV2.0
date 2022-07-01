@@ -9,33 +9,66 @@
             cursor: pointer;
         }
         
-        .blue-color:hover {
+        .blue-color {
             color: blue;
         }
-
-        .green-color:hover {
+            .blue-color:hover {
+                color: blue;
+            }
+            
+        .green-color {
             color: green;
         }
-
-        .orange-color:hover {
+            .green-color:hover {
+                color: green;
+            }
+        
+        .orange-color {
             color: orange;
         }
-
-        .revert-color:hover {
+            .orange-color:hover {
+                color: orange;
+            }
+        
+        .revert-color {
             color: #551A8B;
         }
-
-        .edit-color:hover {
+            .revert-color:hover {
+                color: #551A8B;
+            }
+        
+        .edit-color {
             color: #FFC107;
         }
-
-        .red-color:hover {
+            .edit-color:hover {
+                color: #FFC107;
+            }
+        
+        .red-color {
             color: red;
         }
-
-        .bnw {
-            color: #bababa;
+            .red-color:hover {
+                color: red;
+            }
+/*
+        tbody tr:hover {
+            background-color: #cfcfcf !important;
         }
+            
+        .hidden-cell {
+           visibility: hidden;
+        }*/
+
+    .dropdown-menu a {
+        padding: 10px 20px;
+        font-size: 14px;
+    }    
+
+    .dropdown-menu a i {
+        vertical-align: bottom;
+        margin-right: .5rem;
+    }
+
     </style>
     <div id="form1">
         <div class="section" style="background-color: #fff; padding-bottom: 15px;">
@@ -58,13 +91,14 @@
                 </div>
                 <div class="section-header" style="padding-bottom: 15px;">
                     <div class="col-md-12" style="padding: 0">
-                        <table id="tableship" class="table table-bordered table-striped table-md" style="width: 100%">
+                        <table id="tableship" class="table table-bordered table-md" style="width: 100%; overflow-x: hidden;">
                         </table>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <div id="loader" class="spinner-border text-primary" role="status"></div>
     <script src="../Scripts/jquery-3.4.1.slim.min.js"></script>
     <script src="../Scripts/jquery-3.4.1.min.js"></script>
     <script>
@@ -80,7 +114,7 @@
             if (!results[2]) return '';
             return decodeURIComponent(results[2].replace(/\+/g, ' '));
         }
-        
+
         $(document).ready(function () {
             if (vung == null | vung == 1) {
                 vung_id = '5AEBB23FF45F3C235AFD86B510BF9E8C';
@@ -112,11 +146,10 @@
             }
             $('#title').text('QUẢN LÝ TÀU - VÙNG ' + vung);
             loadDataListShips(vung_id);
-            $(".view").hover(function () {
-                $(this).toggleClass("bnw");
-            });
 
         });
+
+
         function loadDataListShips(vung_id) {
             debugger
             $.ajax({
@@ -124,13 +157,13 @@
                 url: linkapi + "v2/ships_region?id=" + vung_id,
                 dataType: "json",
                 beforeSend: function () { // Before we send the request, remove the .hidden class from the spinner and default to inline-block.
-                    //$('#loader').removeClass('hidden');
+                    $('#loader').removeClass('hidden');
                 },
                 success: function (data) {
                     var tabletext = "<thead><tr><th>STT</th><th>SỐ HIỆU</th><th>KÝ HIỆU</th><th>NƠI SẢN XUẤT</th><th>NĂM TIẾP NHẬN</th><th>CHỨC NĂNG, NHIỆM VỤ</th><th  title='Xem hồ sơ tầu'>HỒ SƠ TÀU</th><th>TÁC VỤ</th></tr></thead><tbody>";
                     var i = 1;
                     $.each(data, function (key, item) {
-                        tabletext += "<tr><td style='text-align: center;'>" + i + "</td><td>" + item.TTCOBAN.SOHIEU + "</td><td>" + item.TTCOBAN.KYHIEU + "</td><td>" + item.TTCOBAN.NOISANXUAT + "</td><td>" + item.TTCOBAN.NAMTIEPNHAN + "</td><td>" + item.TTCOBAN.CHUCNANG + "</td>" + '<td style="text-align: center;"><a href="#" class="view bnw"  title="Xem hồ sơ tàu" onclick="View_HoSoTau(`' + item.ID + '`)"><i class="material-icons">&#xE417;</i></a></td>' + '<td><div style="width: max-content;"><a href="#" class="view blue-color bnw" title="Xuất file Word" onclick="xuatWordTau(`' + item.ID + '`)"><i class="material-icons">text_snippet</i></a><a href="#" class="view green-color bnw" title="Xuất file Excel" onclick="xuatExcelTau(`' + item.ID + '`)"><i class="material-icons">description</i></a><a href="#" class="view orange-color bnw" title="Xuất file pdf" onclick="xuatPdfTau(`' + item.ID + '`)"><i class="material-icons">picture_as_pdf</i></a><a href="#" class="view revert-color bnw" title="In báo cáo" onclick="inBCTau(`' + item.ID + '`)"><i class="material-icons">print</i></a><a href="#" class="view edit-color bnw" title="Sửa" onclick="ViewInforShip(`' + item.ID + '`)"><i class="material-icons">&#xE254;</i></a><a href="#" class="view red-color bnw" title="Xóa" onclick="delete_ship(`' + item.ID + '`)"><i class="material-icons">&#xE872;</i></a></div></td></tr>';
+                        tabletext += "<tr><td style='text-align: center;'>" + i + "</td><td>" + item.TTCOBAN.SOHIEU + "</td><td>" + item.TTCOBAN.KYHIEU + "</td><td>" + item.TTCOBAN.NOISANXUAT + "</td><td>" + item.TTCOBAN.NAMTIEPNHAN + "</td><td>" + item.TTCOBAN.CHUCNANG + "</td>" + '<td style="text-align: center;"><a href="#" class="view"  title="Xem hồ sơ tàu" onclick="View_HoSoTau(`' + item.ID + '`)"><i class="material-icons">&#xE417;</i></a></td>' + '<td style="text-align: center;"><div class="dropdown"><button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button><div class="dropdown-menu" aria-labelledby="dropdownMenuButton"><a href="#" class="view dropdown-item" title="Xuất file Word" onclick="xuatWordTau(`' + item.ID + '`)"><i class="material-icons blue-color">text_snippet</i>Xuất file word</a><a href="#" class="view dropdown-item" title="Xuất file Excel" onclick="xuatExcelTau(`' + item.ID + '`)"><i class="material-icons green-color">description</i>Xuất file excel</a><a href="#" class="view dropdown-item" title="Xuất file pdf" onclick="xuatPdfTau(`' + item.ID + '`)"><i class="material-icons orange-color">picture_as_pdf</i>Xuất file pdf</a><a href="#" class="view dropdown-item" title="In báo cáo" onclick="inBCTau(`' + item.ID + '`)"><i class="material-icons revert-color">print</i>In báo cáo</a><a href="#" class="view dropdown-item" title="Sửa" onclick="ViewInforShip(`' + item.ID + '`)"><i class="material-icons edit-color ">&#xE254;</i>Sửa</a><a href="#" class="view dropdown-item" title="Xóa" onclick="delete_ship(`' + item.ID + '`)"><i class="material-icons red-color ">&#xE872;</i>Xóa</a></div></div></td></tr>';
                         i = i + 1;
                     });
                     tabletext += "</tbody>";
@@ -138,12 +171,18 @@
                     loadTableShip();
                     $('#tableship_wrapper .row .col-sm-12').first().html('<div class="btn-group"><button onclick="btn_Load_listship()" class="btn btn-lg btn-secondary mb-3"><span class="bi-arrow-clockwise"></span> &nbsp;Load dữ liệu</button> <button onclick="btn_addship()" class="btn btn-lg btn-secondary mb-3"><span class="bi-plus-circle-fill"></span> &nbsp;Thêm mới tàu</button><div class="btn-group"><button type="button" class="btn btn-lg btn-secondary mb-3 dropdown-toggle" data-toggle="dropdown"><span class="bi-file-earmark-text"></span> Xuất báo cáo </button><ul class="dropdown-menu" role="menu"><li><a href="#">In báo cáo</a></li><li><a href="#" >Xuất file Word</a></li><li><a href="#">Xuất file Excel</a></li><li><a href="#">Xuất file PDF</a></li></ul></div></div>');
                     $('#tableship_wrapper .row').first().next().children().css("overflow-x", "auto");
+                    $('#tableship_wrapper').css("overflow-x", "hidden");
+                    $('#tableship_wrapper').css("overflow-y", "inherit");
                 }, error: function (ret) {
                     console.log('errorGET');
                 },
                 complete: function () { // Set our complete callback, adding the .hidden class and hiding the spinner.
-                    //$('#loader').addClass('hidden');
-                    $('#model-edit-user').addClass('hidden');
+                    $('#loader').addClass('hidden');
+                    /*$('tbody tr').hover(function () {
+                        $(this).children().last().children().first().removeClass('hidden-cell');
+                    }, function () {
+                        $(this).children().last().children().first().addClass('hidden-cell');
+                    })*/
                 },
             });
         };
@@ -155,11 +194,12 @@
                     "columns": [
                         { name: 'STT', width: 40 },
                         { name: 'SỐ HIỆU', width: 350 },
-                        { name: 'KÝ HIỆU', width: 350 },
+                        { name: 'KÝ HIỆU', width: 200 },
                         { name: 'NƠI SẢN XUẤT', width: 350 },
                         { name: 'NĂM TIẾP NHẬN', width: 350 },
                         { name: 'CHỨC NĂNG, NHIỆM VỤ', width: 350 },
-                        { name: 'HỒ SƠ TÀU', width: 350 }
+                        { name: 'HỒ SƠ TÀU', width: 250 },
+                        { name: 'TÁC VỤ', width: 130 }
                     ],
                     "columnDefs": [
                         {
@@ -199,11 +239,12 @@
             });
         };
         function btn_addship() {
+            sessionStorage.setItem("vung", getParameterByName('vung'));
             window.location = baseaddress + "Page_Master/DacDiemChung";
         }
         function View_HoSoTau(Ship_ID) {
-           
-            window.location = baseaddress + "Page_Master/Ship_profile?Ship_ID="+Ship_ID;
+
+            window.location = baseaddress + "Page_Master/Ship_profile?Ship_ID=" + Ship_ID;
         }
         function delete_ship(id) {
             let text = "Bạn có chắc muốn xóa tàu này?";
@@ -271,9 +312,7 @@
             }
             $('#title').text('QUẢN LÝ TÀU - VÙNG ' + vung);
             loadDataListShips(vung_id);
-            $(".view").hover(function () {
-                $(this).toggleClass("bnw");
-            });
+
         }
     </script>
 </asp:Content>

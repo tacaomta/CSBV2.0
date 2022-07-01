@@ -108,7 +108,7 @@
                                         <br>
                                         <h5>HÀNG HẢI</h5>
                                         <div class="btn-group">
-                                            <button onclick="loadDataList_HANGHAI()" class="btn btn-secondary mb-2"><span class="bi-arrow-clockwise"></span>&nbsp;Load dữ liệu</button>
+                                            <button onclick="btn_loadDataList_HANGHAI()" class="btn btn-secondary mb-2"><span class="bi-arrow-clockwise"></span>&nbsp;Load dữ liệu</button>
                                             <button id="btn_add_HANGHAI" class="btn btn-secondary mb-2" data-toggle="modal" data-target="#model-add-HANGHAI" style="padding-top: 4px;"><span class="bi bi-plus-circle"></span> Thêm hàng hải</button>
                                             <button onclick="DangKyChatLuong(1)" class="btn btn-secondary mb-2"><i class="bi bi-x-diamond-fill"></i>&nbsp; Thêm đăng ký chất lượng</button>
                                         </div>
@@ -3113,6 +3113,7 @@
             </div>
         </div>
     </div>
+    <div id="loader" class="spinner-border text-primary" role="status"></div>
     <script src="../Scripts/jquery-3.4.1.min.js"></script>
     <script>
         function getParameterByName(name, url = window.location.href) {
@@ -3155,6 +3156,9 @@
                 type: "GET",
                 url: linkapi + "v2/hanghai?id=" + getParameterByName("Ship_ID"),
                 dataType: "json",
+                beforeSend: function () { // Before we send the request, remove the .hidden class from the spinner and default to inline-block.
+                    $('#loader').removeClass('hidden');
+                },
                 success: function (data) {
                     var tabletext = "<thead><tr><th>STT</th><th>KÝ HIỆU</th><th>SỐ LƯỢNG</th><th>TÁC VỤ</th></tr></thead><tbody>";
                     var i = 1;
@@ -3168,6 +3172,9 @@
                     loadTableHANGHAI();
                 }, error: function (ret) {
                     console.log('errorGET');
+                },
+                complete: function () { // Set our complete callback, adding the .hidden class and hiding the spinner.
+                    $('#loader').addClass('hidden');
                 },
             });
         };
@@ -3284,12 +3291,20 @@
             }
         }
 
+        function btn_loadDataList_HANGHAI() {
+            Load_Title(Ship_ID);
+            loadDataList_HANGHAI();
+        }
+
         // VŨ KHÍ
         function loadDataList_VUKHI() {
             $.ajax({
                 type: "GET",
                 url: linkapi + "v2/vukhi?id=" + getParameterByName("Ship_ID"),
                 dataType: "json",
+                beforeSend: function () { // Before we send the request, remove the .hidden class from the spinner and default to inline-block.
+                    $('#loader').removeClass('hidden');
+                },
                 success: function (data) {
                     var tabletext = "<thead><tr><th>STT</th><th>KÝ HIỆU</th><th>SỐ LƯỢNG</th><th>TÁC VỤ</th></tr></thead><tbody>";
                     var i = 1;
@@ -3303,6 +3318,9 @@
                     loadTableVUKHI();
                 }, error: function (ret) {
                     console.log('errorGET');
+                },
+                complete: function () { // Set our complete callback, adding the .hidden class and hiding the spinner.
+                    $('#loader').addClass('hidden');
                 },
             });
         };
@@ -3424,6 +3442,9 @@
                 type: "GET",
                 url: linkapi + "v2/rada?id=" + getParameterByName("Ship_ID"),
                 dataType: "json",
+                beforeSend: function () { // Before we send the request, remove the .hidden class from the spinner and default to inline-block.
+                    $('#loader').removeClass('hidden');
+                },
                 success: function (data) {
                     var tabletext = "<thead><tr><th>STT</th><th>KÝ HIỆU</th><th>SỐ LƯỢNG</th><th>TÁC VỤ</th></tr></thead><tbody>";
                     var i = 1;
@@ -3437,6 +3458,9 @@
                     loadTableRADA();
                 }, error: function (ret) {
                     console.log('errorGET');
+                },
+                complete: function () { // Set our complete callback, adding the .hidden class and hiding the spinner.
+                    $('#loader').addClass('hidden');
                 },
             });
         };
@@ -3565,6 +3589,9 @@
                 type: "GET",
                 url: linkapi + "v2/maychinh?id=" + getParameterByName("Ship_ID"),
                 dataType: "json",
+                beforeSend: function () { // Before we send the request, remove the .hidden class from the spinner and default to inline-block.
+                    $('#loader').removeClass('hidden');
+                },
                 success: function (data) {
                     var tabletext = "<thead><tr><th>STT</th><th>KÝ HIỆU</th><th>Số hiệu</th><th>NĂM SẢN XUẤT</th><th>NƠI SẢN XUẤT</th><th>CÔNG SUẤT</th><th>HỆ THỐNG ĐIỀU KHIỂN</th><th>TÁC VỤ</th></tr></thead><tbody>";
                     var i = 1;
@@ -3578,6 +3605,9 @@
                     loadTableMAYCHINH();
                 }, error: function (ret) {
                     console.log('errorGET');
+                },
+                complete: function () { // Set our complete callback, adding the .hidden class and hiding the spinner.
+                    $('#loader').addClass('hidden');
                 },
             });
         };
@@ -3825,6 +3855,9 @@
                 type: "GET",
                 url: linkapi + "v2/mayphuphatdien?id=" + getParameterByName("Ship_ID"),
                 dataType: "json",
+                beforeSend: function () { // Before we send the request, remove the .hidden class from the spinner and default to inline-block.
+                    $('#loader').removeClass('hidden');
+                },
                 success: function (data) {
                     var tabletext = "<thead><tr><th>STT</th><th>KÝ HIỆU</th><th>Số hiệu</th><th>NĂM SẢN XUẤT</th><th>NƠI SẢN XUẤT</th><th>CÔNG SUẤT</th><th>HỆ THỐNG ĐIỀU KHIỂN</th><th>TÁC VỤ</th></tr></thead><tbody>";
                     var i = 1;
@@ -3838,6 +3871,9 @@
                     loadTableMAYPHU();
                 }, error: function (ret) {
                     console.log('errorGET');
+                },
+                complete: function () { // Set our complete callback, adding the .hidden class and hiding the spinner.
+                    $('#loader').addClass('hidden');
                 },
             });
         };
@@ -4084,6 +4120,9 @@
                 type: "GET",
                 url: linkapi + "v2/maychuyendung?id=" + getParameterByName("Ship_ID"),
                 dataType: "json",
+                beforeSend: function () { // Before we send the request, remove the .hidden class from the spinner and default to inline-block.
+                    $('#loader').removeClass('hidden');
+                },
                 success: function (data) {
                     var tabletext = "<thead><tr><th>STT</th><th>KÝ HIỆU</th><th>Số hiệu</th><th>NĂM SẢN XUẤT</th><th>NƠI SẢN XUẤT</th><th>CÔNG SUẤT</th><th>HỆ THỐNG ĐIỀU KHIỂN</th><th>TÁC VỤ</th></tr></thead><tbody>";
                     var i = 1;
@@ -4097,6 +4136,9 @@
                     loadTableMAYCHUYENDUNG();
                 }, error: function (ret) {
                     console.log('errorGET');
+                },
+                complete: function () { // Set our complete callback, adding the .hidden class and hiding the spinner.
+                    $('#loader').addClass('hidden');
                 },
             });
         };
@@ -4343,6 +4385,9 @@
                 type: "GET",
                 url: linkapi + "v2/hetrucchanvit?id=" + getParameterByName("Ship_ID"),
                 dataType: "json",
+                beforeSend: function () { // Before we send the request, remove the .hidden class from the spinner and default to inline-block.
+                    $('#loader').removeClass('hidden');
+                },
                 success: function (data) {
                     var tabletext = "<thead><tr><th rowspan='2'>STT</th><th colspan='2'>TRỤC</th><th colspan='3'>CHÂN VỊT</th><th colspan='2'>Ổ ĐỠ</th><th rowspan='2'>TÁC VỤ</th></tr><tr><th>TỔNG CHIỀU DÀI</th><th>VẬT LIỆU</th><th>LOẠI VẬT LIỆU</th><th>ĐƯỜNG KÍNH (mm)</th><th>SỐ CÁNH</th><th>SỐ LƯỢNG</th><th>LOẠI</th></tr></thead><tbody>";
                     var i = 1;
@@ -4356,6 +4401,9 @@
                     loadTableHETRUCCHANVIT();
                 }, error: function (ret) {
                     console.log('errorGET');
+                },
+                complete: function () { // Set our complete callback, adding the .hidden class and hiding the spinner.
+                    $('#loader').addClass('hidden');
                 },
             });
         };
@@ -4560,6 +4608,9 @@
                 type: "GET",
                 url: linkapi + "v2/neoxichneo?id=" + getParameterByName("Ship_ID"),
                 dataType: "json",
+                beforeSend: function () { // Before we send the request, remove the .hidden class from the spinner and default to inline-block.
+                    $('#loader').removeClass('hidden');
+                },
                 success: function (data) {
                     var tabletext = "<thead><tr><th rowspan='2'>STT</th><th colspan='3'>NEO PHẢI</th><th colspan='3'>NEO TRÁI</th><th colspan='3'>NEO SAU</th><th rowspan='2'>TÁC VỤ</th></tr><tr><th>KÝ HIỆU</th><th>ĐƯỜNG KÍNH</th><th>ĐỘ DÀI</th><th>KÝ HIỆU</th><th>ĐƯỜNG KÍNH</th><th>ĐỘ DÀI</th><th>KÝ HIỆU</th><th>ĐƯỜNG KÍNH</th><th>ĐỘ DÀI</th></tr></thead><tbody>";
                     var i = 1;
@@ -4573,6 +4624,9 @@
                     loadTableNEOXICHNEO();
                 }, error: function (ret) {
                     console.log('errorGET');
+                },
+                complete: function () { // Set our complete callback, adding the .hidden class and hiding the spinner.
+                    $('#loader').addClass('hidden');
                 },
             });
         };
@@ -4768,6 +4822,9 @@
                 type: "GET",
                 url: linkapi + "v2/bomnuocthonggio?id=" + getParameterByName("Ship_ID"),
                 dataType: "json",
+                beforeSend: function () { // Before we send the request, remove the .hidden class from the spinner and default to inline-block.
+                    $('#loader').removeClass('hidden');
+                },
                 success: function (data) {
                     var tabletext = "<thead><tr><th>STT</th><th>TÊN TRANG BỊ</th><th>KÝ HIỆU</th><th>NƯỚC SẢN XUẤT</th><th>LƯU LƯỢNG</th><th>SỐ LƯỢNG</th><th>TÁC VỤ</th></tr></thead><tbody>";
                     var i = 1;
@@ -4781,6 +4838,9 @@
                     loadTableBOMDAUNUOCTHONGGIO();
                 }, error: function (ret) {
                     console.log('errorGET');
+                },
+                complete: function () { // Set our complete callback, adding the .hidden class and hiding the spinner.
+                    $('#loader').addClass('hidden');
                 },
             });
         };
@@ -4919,6 +4979,9 @@
                 type: "GET",
                 url: linkapi + "v2/thietbikhac?id=" + getParameterByName("Ship_ID"),
                 dataType: "json",
+                beforeSend: function () { // Before we send the request, remove the .hidden class from the spinner and default to inline-block.
+                    $('#loader').removeClass('hidden');
+                },
                 success: function (data) {
                     var tabletext = "<thead><tr><th>STT</th><th>TÊN TRANG THIẾT BỊ</th><th>KÝ HIỆU</th><th>SỐ LƯỢNG</th><th>TÁC VỤ</th></tr></thead><tbody>";
                     var i = 1;
@@ -4932,6 +4995,9 @@
                     loadTableTRANGBIKHAC();
                 }, error: function (ret) {
                     console.log('errorGET');
+                },
+                complete: function () { // Set our complete callback, adding the .hidden class and hiding the spinner.
+                    $('#loader').addClass('hidden');
                 },
             });
         };
@@ -5216,6 +5282,9 @@
                 type: "GET",
                 url: linkapi + "v2/maynenkhi?id=" + getParameterByName("Ship_ID"),
                 dataType: "json",
+                beforeSend: function () { // Before we send the request, remove the .hidden class from the spinner and default to inline-block.
+                    $('#loader').removeClass('hidden');
+                },
                 success: function (data) {
                     var tabletext = "<thead><tr><th>STT</th><th>KÝ HIỆU</th><th>SỐ LƯỢNG</th><th>ÁP SUẤT (Kg/cm3)</th><th>TÁC VỤ</th></tr></thead><tbody>";
                     var i = 1;
@@ -5229,6 +5298,9 @@
                     loadTableMAYNENKHI();
                 }, error: function (ret) {
                     console.log('errorGET');
+                },
+                complete: function () { // Set our complete callback, adding the .hidden class and hiding the spinner.
+                    $('#loader').addClass('hidden');
                 },
             });
         };

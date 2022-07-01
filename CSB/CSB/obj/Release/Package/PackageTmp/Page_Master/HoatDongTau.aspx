@@ -166,6 +166,7 @@
             </div>
         </div>
     </div>
+    <div id="loader" class="spinner-border text-primary" role="status"></div>
     <script src="../Scripts/jquery-3.4.1.slim.min.js"></script>
     <script>
         var date = new Date();
@@ -227,7 +228,7 @@
                     url: linkapi + "v2/nhatkyhoatdongtau?id=" + Ship_ID,
                     dataType: "json",
                     beforeSend: function () { // Before we send the request, remove the .hidden class from the spinner and default to inline-block.
-                        //$('#loader').removeClass('hidden');
+                        $('#loader').removeClass('hidden');
                     },
                     success: function (data) {
                         var tabletext = "<thead><tr><th>STT</th><th>NGÀY, THÁNG, NĂM</th><th>NƠI XUẤT PHÁT</th><th>NƠI ĐẾN</th><th>SỐ NGÀY HOẠT ĐỘNG</th><th>TỔNG SỐ HLHT</th><th>GHI CHÚ</th><th>TÁC VỤ</th></tr></thead><tbody>";
@@ -245,8 +246,8 @@
                         console.log('errorGET');
                     },
                     complete: function () { // Set our complete callback, adding the .hidden class and hiding the spinner.
-                        //$('#loader').addClass('hidden');
-                        $('#model-edit-user').addClass('hidden');
+                        $('#loader').addClass('hidden');
+       /*                 $('#model-edit-user').addClass('hidden');*/
                     },
                 });
             }
@@ -305,7 +306,8 @@
             });
         };
         function btn_loadDataList_NhatKy() {
-            location.reload(true);
+            Load_Title(Ship_ID);
+            loadDataList_NhatKy(Ship_ID);
         }
         function add_NhatKy() {
             var form = document.getElementById("form-add-NhatKy");
