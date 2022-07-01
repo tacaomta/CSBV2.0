@@ -110,7 +110,7 @@
                                         <div class="btn-group">
                                             <button onclick="loadDataList_HANGHAI()" class="btn btn-secondary mb-2"><span class="bi-arrow-clockwise"></span>&nbsp;Load dữ liệu</button>
                                             <button id="btn_add_HANGHAI" class="btn btn-secondary mb-2" data-toggle="modal" data-target="#model-add-HANGHAI" style="padding-top: 4px;"><span class="bi bi-plus-circle"></span> Thêm hàng hải</button>
-                                            <button onclick="DangKyChatLuong(1)" class="btn btn-secondary mb-2"><i class="bi bi-x-diamond-fill"></i>&nbsp; Đăng ký chất lượng</button>
+                                            <button onclick="DangKyChatLuong(1)" class="btn btn-secondary mb-2"><i class="bi bi-x-diamond-fill"></i>&nbsp; Thêm đăng ký chất lượng</button>
                                         </div>
                                         <table id="table-HANGHAI" class="table table-bordered table-striped table-md" style="width: 100%">
                                         </table>
@@ -121,7 +121,7 @@
                                         <div class="btn-group">
                                             <button onclick="loadDataList_VUKHI()" class="btn btn-secondary mb-2"><span class="bi-arrow-clockwise"></span>&nbsp;Load dữ liệu</button>
                                             <button id="btn_add_VUKHI" class="btn btn-secondary mb-2" data-toggle="modal" data-target="#model-add-VUKHI" style="padding-top: 4px;"><span class="bi bi-plus-circle"></span> Thêm vũ khí</button>
-                                            <button onclick="DangKyChatLuong(2)" class="btn btn-secondary mb-2"><i class="bi bi-x-diamond-fill"></i>&nbsp; Đăng ký chất lượng</button>
+                                            <button onclick="DangKyChatLuong(2)" class="btn btn-secondary mb-2"><i class="bi bi-x-diamond-fill"></i>&nbsp; Thêm đăng ký chất lượng</button>
                                         </div>
                                         <table id="table-VUKHI" class="table table-bordered table-striped table-md" style="width: 100%">
                                         </table>
@@ -132,7 +132,7 @@
                                         <div class="btn-group">
                                             <button onclick="loadDataList_RADA()" class="btn btn-secondary mb-2"><span class="bi-arrow-clockwise"></span>&nbsp;Load dữ liệu</button>
                                             <button id="btn_add_RADA" class="btn btn-secondary mb-2" data-toggle="modal" data-target="#model-add-RADA" style="padding-top: 4px;"><span class="bi bi-plus-circle"></span> Thêm ra đa</button>
-                                            <button onclick="DangKyChatLuong(3)" class="btn btn-secondary mb-2"><i class="bi bi-x-diamond-fill"></i>&nbsp; Đăng ký chất lượng</button>
+                                            <button onclick="DangKyChatLuong(3)" class="btn btn-secondary mb-2"><i class="bi bi-x-diamond-fill"></i>&nbsp; Thêm đăng ký chất lượng</button>
                                         </div>
                                         <table id="table-RADA" class="table table-bordered table-striped table-md" style="width: 100%">
                                         </table>
@@ -143,7 +143,6 @@
                                         <div class="btn-group">
                                             <button onclick="loadDataList_MAYCHINH()" class="btn btn-secondary mb-2"><span class="bi-arrow-clockwise"></span>&nbsp;Load dữ liệu</button>
                                             <button class="btn btn-secondary mb-2" data-toggle="modal" data-target="#model-add-MAYCHINH" style="padding-top: 4px;"><span class="bi bi-plus-circle"></span> Thêm máy chính</button>
-                                            <button onclick="DangKyChatLuong(4)" class="btn btn-secondary mb-2"><i class="bi bi-x-diamond-fill"></i>&nbsp; Đăng ký chất lượng</button>
                                         </div>
                                         <table id="table-MAYCHINH" class="table table-bordered table-striped table-md" style="width: 100%">
                                         </table>
@@ -152,7 +151,6 @@
                                         <div class="btn-group">
                                             <button onclick="loadDataList_MAYPHU()" class="btn btn-secondary mb-2"><span class="bi-arrow-clockwise"></span>&nbsp;Load dữ liệu</button>
                                             <button id="btn_add_MAYPHU" class="btn btn-secondary mb-2" data-toggle="modal" data-target="#model-add-MAYPHU" style="padding-top: 4px;"><span class="bi bi-plus-circle"></span> Thêm máy phụ</button>
-                                            <button onclick="DangKyChatLuong(4)" class="btn btn-secondary mb-2"><i class="bi bi-x-diamond-fill"></i>&nbsp; Đăng ký chất lượng</button>
                                         </div>
                                         <table id="table-MAYPHU" class="table table-bordered table-striped table-md" style="width: 100%">
                                         </table>
@@ -161,7 +159,6 @@
                                         <div class="btn-group">
                                             <button onclick="loadDataList_MAYCHUYENDUNG()" class="btn btn-secondary mb-2"><span class="bi-arrow-clockwise"></span>&nbsp;Load dữ liệu</button>
                                             <button id="btn_add_MAYCHUYENDUNG" class="btn btn-secondary mb-2" data-toggle="modal" data-target="#model-add-MAYCHUYENDUNG" style="padding-top: 4px;"><span class="bi bi-plus-circle"></span> Thêm máy chuyên dụng</button>
-                                            <button onclick="DangKyChatLuong(4)" class="btn btn-secondary mb-2"><i class="bi bi-x-diamond-fill"></i>&nbsp; Đăng ký chất lượng</button>
                                         </div>
                                         <table id="table-MAYCHUYENDUNG" class="table table-bordered table-striped table-md" style="width: 100%">
                                         </table>
@@ -172,7 +169,6 @@
                                         <div class="btn-group">
                                             <button onclick="loadDataList_HETRUCCHANVIT()" class="btn btn-secondary mb-2"><span class="bi-arrow-clockwise"></span>&nbsp;Load dữ liệu</button>
                                             <button id="btn_add_HETRUCCHANVIT" class="btn btn-secondary mb-2" data-toggle="modal" data-target="#model-add-HETRUCCHANVIT" style="padding-top: 4px;"><span class="bi bi-plus-circle"></span> Thêm hệ trục chân vịt</button>
-                                            <button onclick="DangKyChatLuong(5)" class="btn btn-secondary mb-2"><i class="bi bi-x-diamond-fill"></i>&nbsp; Đăng ký chất lượng</button>
                                         </div>
                                         <table id="table-HETRUCCHANVIT" class="table table-bordered table-striped table-md" style="width: 100%">
                                         </table>
@@ -183,7 +179,6 @@
                                         <div class="btn-group">
                                             <button onclick="loadDataList_NEOXICHNEO()" class="btn btn-secondary mb-2"><span class="bi-arrow-clockwise"></span>&nbsp;Load dữ liệu</button>
                                             <button id="btn_add_NEOXICHNEO" class="btn btn-secondary mb-2" data-toggle="modal" data-target="#model-add-NEOXICHNEO" style="padding-top: 4px;"><span class="bi bi-plus-circle"></span> Thêm neo - xích neo</button>
-                                            <button onclick="DangKyChatLuong(6)" class="btn btn-secondary mb-2"><i class="bi bi-x-diamond-fill"></i>&nbsp; Đăng ký chất lượng</button>
                                         </div>
                                         <table id="table-NEOXICHNEO" class="table table-bordered table-striped table-md" style="width: 100%">
                                         </table>
@@ -194,7 +189,7 @@
                                         <div class="btn-group">
                                             <button onclick="loadDataList_BOMDAUNUOCTHONGGIO()" class="btn btn-secondary mb-2"><span class="bi-arrow-clockwise"></span>&nbsp;Load dữ liệu</button>
                                             <button id="btn_add_BOMDAUNUOCTHONGGIO" class="btn btn-secondary mb-2" data-toggle="modal" data-target="#model-add-BOMDAUNUOCTHONGGIO" style="padding-top: 4px;"><span class="bi bi-plus-circle"></span> Thêm bơm dầu, nước và thông gió</button>
-                                            <button onclick="DangKyChatLuong(7)" class="btn btn-secondary mb-2"><i class="bi bi-x-diamond-fill"></i>&nbsp; Đăng ký chất lượng</button>
+                                            <button onclick="DangKyChatLuong(7)" class="btn btn-secondary mb-2"><i class="bi bi-x-diamond-fill"></i>&nbsp; Thêm đăng ký chất lượng</button>
                                         </div>
                                         <table id="table-BOMDAUNUOCTHONGGIO" class="table table-bordered table-striped table-md" style="width: 100%">
                                         </table>
@@ -205,7 +200,7 @@
                                         <div class="btn-group">
                                             <button onclick="loadDataList_TRANGBIKHAC()" class="btn btn-secondary mb-2"><span class="bi-arrow-clockwise"></span>&nbsp;Load dữ liệu</button>
                                             <button id="btn_add_TRANGBIKHAC" class="btn btn-secondary mb-2" data-toggle="modal" data-target="#model-add-TRANGBIKHAC" style="padding-top: 4px;"><span class="bi bi-plus-circle"></span> Thêm trang bị khác</button>
-                                            <button onclick="DangKyChatLuong(8)" class="btn btn-secondary mb-2"><i class="bi bi-x-diamond-fill"></i>&nbsp; Đăng ký chất lượng</button>
+                                            <button onclick="DangKyChatLuong(8)" class="btn btn-secondary mb-2"><i class="bi bi-x-diamond-fill"></i>&nbsp; Thêm đăng ký chất lượng</button>
                                         </div>
                                         <table id="table-TRANGBIKHAC" class="table table-bordered table-striped table-md" style="width: 100%">
                                         </table>

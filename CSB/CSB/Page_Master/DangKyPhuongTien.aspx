@@ -32,7 +32,7 @@
                                         <li class="nav-item">
                                             <a class="nav-link" id="tabDANGKYCLRADA" data-toggle="tab" onclick="loadDataList_DANGKYCLRADA()" href="#DANGKYCLRADA">Rada</a>
                                         </li>
-                                        <li class="nav-item">
+                                        <%--<li class="nav-item">
                                             <a class="nav-link" id="tabTOMAY" data-toggle="tab" onclick="loadDataList_TOMAY()" href="#TOMAY">Các tổ máy</a>
                                         </li>
                                         <li class="nav-item">
@@ -40,9 +40,9 @@
                                         </li>
                                         <li class="nav-item">
                                             <a class="nav-link" id="tabNEOXICHNEO" data-toggle="tab" onclick="loadDataList_NEOXICHNEO()" href="#NEOXICHNEO">Neo, xích neo</a>
-                                        </li>
+                                        </li>--%>
                                         <li class="nav-item">
-                                            <a class="nav-link" id="tabBOMDAU-NUOC-THONGGIO" data-toggle="tab" onclick="loadDataList_BOMDAUNUOCTHONGGIO()" href="#BOMDAU-NUOC-THONGGIO">Bơm dầu, nước, thông gió</a>
+                                            <a class="nav-link" id="tabBOMDAU-NUOC-THONGGIO" data-toggle="tab" onclick="loadDataList_DANGKYCLBDNTG()" href="#BOMDAU-NUOC-THONGGIO">Bơm dầu, nước, thông gió</a>
                                         </li>
                                         <li class="nav-item">
                                             <a class="nav-link" id="tabDANGKYCLTHIETBIKHAC" data-toggle="tab" onclick="loadDataList_DANGKYCLTHIETBIKHAC()" href="#DANGKYCLTHIETBIKHAC">Trang bị khác</a>
@@ -81,7 +81,7 @@
                                         <table id="table-DANGKYCLRADA" class="table table-bordered table-striped table-md" style="width: 100%">
                                         </table>
                                     </div>
-                                    <div id="TOMAY" class=" tab-pane">
+                                    <%--<div id="TOMAY" class=" tab-pane">
                                         <br>
                                         <h5>MÁY CHÍNH</h5>
                                         <div class="btn-group">
@@ -126,15 +126,15 @@
                                         </div>
                                         <table id="table-NEOXICHNEO" class="table table-bordered table-striped table-md" style="width: 100%">
                                         </table>
-                                    </div>
+                                    </div>--%>
                                     <div id="BOMDAU-NUOC-THONGGIO" class=" tab-pane">
                                         <br>
                                         <h5>BẢNG THỐNG KÊ CÁC BƠM DẦU, NƯỚC VÀ THÔNG GIÓ</h5>
                                         <div class="btn-group">
-                                            <button onclick="loadDataList_BOMDAUNUOCTHONGGIO()" class="btn btn-secondary mb-2"><span class="bi-arrow-clockwise"></span>&nbsp;Load dữ liệu</button>
-                                            <button id="btn_add_BOMDAUNUOCTHONGGIO" class="btn btn-secondary mb-2" data-toggle="modal" data-target="#model-add-BOMDAUNUOCTHONGGIO" style="padding-top: 4px;"><span class="bi bi-plus-circle"></span> Thêm bơm dầu, nước và thông gió</button>
+                                            <button onclick="loadDataList_DANGKYCLBDNTG()" class="btn btn-secondary mb-2"><span class="bi-arrow-clockwise"></span>&nbsp;Load dữ liệu</button>
+                                            <button id="btn_add_DANGKYCLBDNTG" onclick="click_add_DANGKYCLBDNTG(null)" class="btn btn-secondary mb-2" data-toggle="modal" data-target="#model-add-DANGKYCLBDNTG" style="padding-top: 4px;"><span class="bi bi-plus-circle"></span> Thêm bơm dầu, nước và thông gió</button>
                                         </div>
-                                        <table id="table-BOMDAUNUOCTHONGGIO" class="table table-bordered table-striped table-md" style="width: 100%">
+                                        <table id="table-DANGKYCLBDNTG" class="table table-bordered table-striped table-md" style="width: 100%">
                                         </table>
                                     </div>
                                     <div id="DANGKYCLTHIETBIKHAC" class=" tab-pane">
@@ -335,6 +335,99 @@
                             </div>
                             <div class="modal-footer">
                                 <button type="submit" onclick="edit_DANGKYCLVUKHI()" class="btn btn-info">Lưu</button>
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Đóng</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="model-add-DANGKYCLBDNTG" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <form id="form-add-DANGKYCLBDNTG" onsubmit="return false">
+                        <div class="card auth_form" style="margin-bottom: 0px">
+                            <div class="modal-header">
+                                <h4 class="title-modal-banve font-weight-bold">Thêm đăng ký chất lượng bơm dầu, nước, thông gió</h4>
+                            </div>
+                            <div class="modal-body">
+                                <div class="row clearfix ">
+                                    <div style="width: 100%; float: left; padding: 10px">
+                                        <div class="form-group" style="display: flex">
+                                            <label class="col-md-5 control-label"><strong>Tên TB - Ký hiệu   : </strong></label>
+                                            <div class="col-md-7">
+                                                <select class="form-control" id="add-DANGKYCLBDNTG-IDBDNTG" required>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div style="width: 100%; float: left; padding: 10px">
+                                        <div class="form-group" style="display: flex">
+                                            <label class="col-md-5 control-label"><strong>Năm đăng ký   : </strong></label>
+                                            <div class="col-md-7">
+                                                <input type="number" min="0" step="1" class="form-control" id="add-DANGKYCLBDNTG-DANGKYCHATLUONG-NAMDANGKY" required>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div style="width: 100%; float: left; padding: 10px">
+                                        <div class="form-group" style="display: flex">
+                                            <label class="col-md-5 control-label"><strong>Trạng thái  : </strong></label>
+                                            <div class="col-md-7">
+                                                <select class="form-control" id="add-DANGKYCLBDNTG-DANGKYCHATLUONG-TRANGTHAI" required></select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="submit" onclick="add_DANGKYCLBDNTG()" class="btn btn-info">Thêm</button>
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Đóng</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="model-edit-DANGKYCLBDNTG" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <form id="form-edit-DANGKYCLBDNTG" onsubmit="return false">
+                        <input type="hidden" id="edit-DANGKYCLBDNTG-DANGKYCHATLUONG_ID" />
+                        <div class="card auth_form" style="margin-bottom: 0px">
+                            <div class="modal-header">
+                                <h4 class="title-modal-banve font-weight-bold">Sửa thông tin đăng ký chất lượng bơm dầu, nước, thông gió</h4>
+                            </div>
+                            <div class="modal-body">
+                                <div class="row clearfix ">
+                                    <div style="width: 100%; float: left; padding: 10px">
+                                        <div class="form-group" style="display: flex">
+                                            <label class="col-md-5 control-label"><strong>Tên TB - Ký hiệu   : </strong></label>
+                                            <div class="col-md-7">
+                                                <input type="hidden" id="edit-DANGKYCLBDNTG-IDBDNTG">
+                                                <input type="text" class="form-control" id="edit-DANGKYCLBDNTG-TENTHIETBI" disabled required>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div style="width: 100%; float: left; padding: 10px">
+                                        <div class="form-group" style="display: flex">
+                                            <label class="col-md-5 control-label"><strong>Năm đăng ký   : </strong></label>
+                                            <div class="col-md-7">
+                                                <input type="number" min="0" step="1" class="form-control" id="edit-DANGKYCLBDNTG-DANGKYCHATLUONG_NAMDANGKY" required>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div style="width: 100%; float: left; padding: 10px">
+                                        <div class="form-group" style="display: flex">
+                                            <label class="col-md-5 control-label"><strong>Trạng thái  : </strong></label>
+                                            <div class="col-md-7">
+                                                <select class="form-control" id="edit-DANGKYCLBDNTG-DANGKYCHATLUONG_TRANGTHAI" required></select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="submit" onclick="edit_DANGKYCLBDNTG()" class="btn btn-info">Lưu</button>
                                 <button type="button" class="btn btn-default" data-dismiss="modal">Đóng</button>
                             </div>
                         </div>
@@ -564,14 +657,16 @@
                 $("#tabDANGKYCLRADA").tab('show');
                 loadDataList_DANGKYCLRADA();
             }
-            else if (i == 4)
-                $("#tabTOMAY").tab('show');
-            else if (i == 5)
-                $("#tabHETRUCHANVIT").tab('show');
-            else if (i == 6)
-                $("#tabNEOXICHNEO").tab('show');
-            else if (i == 7)
+            //else if (i == 4)
+            //    $("#tabTOMAY").tab('show');
+            //else if (i == 5)
+            //    $("#tabHETRUCHANVIT").tab('show');
+            //else if (i == 6)
+            //    $("#tabNEOXICHNEO").tab('show');
+            else if (i == 7) {
                 $("#tabBOMDAU-NUOC-THONGGIO").tab('show');
+                loadDataList_DANGKYCLBDNTG();
+            }
             else if (i == 8) {
                 $("#tabDANGKYCLTHIETBIKHAC").tab('show');
                 loadDataList_DANGKYCLTHIETBIKHAC();
@@ -1513,6 +1608,313 @@
                     toastSuccess("Thành công", "Xóa thông tin đăng ký thành công!");
                     loadDataList_DANGKYCLRADA2();
                     loadTable('table-DANGKYCLRADA');
+                }).fail(function (res) {
+                    toastError("Lỗi", "Xóa thông tin đăng ký không thành công!");
+                })
+            } else {
+
+            }
+        }
+
+        // bơm dầu, nước, thông gió
+        function loadBDNTG() {
+            var textselect = '';
+            $.ajax({
+                type: "GET",
+                url: linkapi + "v2/bomnuocthonggio?id=" + getParameterByName("Ship_ID"),
+                dataType: "json",
+                success: function (data) {
+                    console.log(data);
+                    $.each(data, function (key, item) {
+                        textselect += "<option value=" + item.ID + ">" + item.TENTB + " - "+ item.KYHIEU + "</option>";
+                    });
+                    console.log("okGET");
+                    $("#add-DANGKYCLBDNTG-IDBDNTG").html(textselect);
+                }, error: function (ret) {
+                    console.log('errorGET');
+                }
+            });
+        }
+        function loadDataList_DANGKYCLBDNTG() {
+            loadBDNTG();
+            $.ajax({
+                type: "GET",
+                url: linkapi + "v2/dangkyclbdntg?id=" + getParameterByName("Ship_ID"),
+                dataType: "json",
+                beforeSend: function () { // Before we send the request, remove the .hidden class from the spinner and default to inline-block.
+                    $('#loader').removeClass('hidden');
+                },
+                success: function (data) {
+                    console.log(data);
+                    var listNam = new Array();
+                    var i;
+                    var listlen;
+                    $.each(data, function (key, item) {
+                        listlen = listNam.length;
+                        var i = 0;
+                        for (i = 0; i < listlen; i++) {
+                            if (Number(item.DANGKYCHATLUONG_NAMDANGKY) == listNam[i]) break;
+                        }
+                        if (i == listlen) {
+                            var j = 0;
+                            for (j = 0; j < listlen; j++) {
+                                if (Number(item.DANGKYCHATLUONG_NAMDANGKY) < listNam[j]) break;
+                            }
+                            listNam.splice(j, 0, Number(item.DANGKYCHATLUONG_NAMDANGKY));
+                        }
+                    });
+                    listlen = listNam.length;
+                    for (i = 0; i < listlen; i++) {
+                        listNam[i] = String(listNam[i]);
+                    }
+                    var listPt = new Array();   //ky hieu
+                    var listSL = new Array();
+                    var listIDPT = new Array();
+                    var listTTB = new Array();  // ten tb
+                    var listNSX = new Array();
+                    var listLL = new Array();
+                    $.each(data, function (key, item) {
+                        var listlen = listPt.length;
+                        var i = 0;
+                        for (i = 0; i < listlen; i++) {
+                            if (item.IDBDNTG == listIDPT[i]) break;
+                        }
+                        if (i == listlen) {
+                            listPt.push(item.KYHIEU);
+                            listSL.push(item.SOLUONG);
+                            listIDPT.push(item.IDBDNTG);
+                            listTTB.push(item.TENTHIETBI);
+                            listNSX.push(item.NUOCSX);
+                            listLL.push(item.LUULUONG);
+                        }
+                    });
+                    console.log(listPt);
+                    listlen = listNam.length;
+                    var tabletext = "<thead><tr><th rowspan='2'>STT</th><th rowspan='2'>TÊN THIẾT BỊ</th><th rowspan='2'>KÝ HIỆU</th><th rowspan='2'>NƯỚC SẢN XUẤT</th><th rowspan='2'>LƯU LƯỢNG (m3/h)</th><th rowspan='2'>SỐ LƯỢNG</th><th colspan='" + listlen + "'>ĐĂNG KÝ CHẤT LƯỢNG HÀNG NĂM</th><th rowspan='2'>TÁC VỤ</th></tr><tr>";
+                    for (i = 0; i < listlen; i++) {
+                        tabletext += "<th>" + listNam[i] + "</th>";
+                    }
+                    tabletext += "</tr></thead><tbody>";
+                    var i = 1;
+                    var lenPt = listPt.length;
+                    var TRANGTHAI;
+                    var ID;
+                    for (i = 0; i < lenPt; i++) {
+                        tabletext += "<tr><td style='text-align: center;'>" + (i + 1) + "</td><td>" + listTTB[i] + "</td><td>" + listPt[i] + "</td><td>" + listNSX[i] + "</td><td>" + listLL[i] + "</td><td>" + listSL[i] + "</td>";
+                        for (j = 0; j < listlen; j++) {
+                            TRANGTHAI = '';
+                            $.each(data, function (key, item) {
+                                if (item.KYHIEU == listPt[i] && item.DANGKYCHATLUONG_NAMDANGKY == listNam[j]) {
+                                    TRANGTHAI = item.DANGKYCHATLUONG_TRANGTHAI;
+                                    ID = item.DANGKYCHATLUONG_ID;
+                                }
+                            });
+                            tabletext += "<td>";
+                            if (TRANGTHAI != "") {
+                                tabletext += '<a href="#" title="Sửa" data-toggle="modal" data-target="#model-edit-DANGKYCLBDNTG"  onclick="onclick_edit_DANGKYCLBDNTG(`' + listIDPT[i] + '`,`' + listTTB[i] + '`,`' + listPt[i] + '`,`' + listSL[i] + '`,`' + ID + '`,`' + listNam[j] + '`,`' + TRANGTHAI + '`)">' + TRANGTHAI + '</a><a href="#" class="delete" title="Xóa" onclick="delete_DANGKYCLBDNTG(`' + ID + '`)" style="float: right;"><i class="bi bi-x"></i></a>' + "</td>";
+                            }
+                            tabletext += "</td>";
+                        }
+                        tabletext += '<td><div style="display: flex; justify-content: space-around;"><a href="#" class="edit" title="Thêm đăng ký" data-toggle="modal" data-target="#model-add-DANGKYCLBDNTG" onclick="click_add_DANGKYCLBDNTG(`' + listIDPT[i] + '`)"><i class="bi bi-plus-circle-fill"></i></a></div></td></tr>';
+                    }
+                    tabletext += "</tbody>";
+                    $('#table-DANGKYCLBDNTG').html(tabletext);
+                    loadTable('table-DANGKYCLBDNTG');
+                }, error: function (ret) {
+                    console.log('errorGET');
+                },
+                complete: function () { // Set our complete callback, adding the .hidden class and hiding the spinner.
+                    $('#loader').addClass('hidden');
+                },
+            });
+        };
+        function loadDataList_DANGKYCLBDNTG2() {
+            loadBDNTG();
+            $.ajax({
+                type: "GET",
+                url: linkapi + "v2/dangkyclbdntg?id=" + getParameterByName("Ship_ID"),
+                dataType: "json",
+                beforeSend: function () { // Before we send the request, remove the .hidden class from the spinner and default to inline-block.
+                    $('#loader').removeClass('hidden');
+                },
+                success: function (data) {
+                    console.log(data);
+                    var listNam = new Array();
+                    var i;
+                    var listlen;
+                    $.each(data, function (key, item) {
+                        listlen = listNam.length;
+                        var i = 0;
+                        for (i = 0; i < listlen; i++) {
+                            if (Number(item.DANGKYCHATLUONG_NAMDANGKY) == listNam[i]) break;
+                        }
+                        if (i == listlen) {
+                            var j = 0;
+                            for (j = 0; j < listlen; j++) {
+                                if (Number(item.DANGKYCHATLUONG_NAMDANGKY) < listNam[j]) break;
+                            }
+                            listNam.splice(j, 0, Number(item.DANGKYCHATLUONG_NAMDANGKY));
+                        }
+                    });
+                    listlen = listNam.length;
+                    for (i = 0; i < listlen; i++) {
+                        listNam[i] = String(listNam[i]);
+                    }
+                    var listPt = new Array();   //ky hieu
+                    var listSL = new Array();
+                    var listIDPT = new Array();
+                    var listTTB = new Array();  // ten tb
+                    var listNSX = new Array();
+                    var listLL = new Array();
+                    $.each(data, function (key, item) {
+                        var listlen = listPt.length;
+                        var i = 0;
+                        for (i = 0; i < listlen; i++) {
+                            if (item.IDBDNTG == listIDPT[i]) break;
+                        }
+                        if (i == listlen) {
+                            listPt.push(item.KYHIEU);
+                            listSL.push(item.SOLUONG);
+                            listIDPT.push(item.IDBDNTG);
+                            listTTB.push(item.TENTHIETBI);
+                            listNSX.push(item.NUOCSX);
+                            listLL.push(item.LUULUONG);
+                        }
+                    });
+                    console.log(listPt);
+                    listlen = listNam.length;
+                    var tabletext = "<thead><tr><th rowspan='2'>STT</th><th rowspan='2'>TÊN THIẾT BỊ</th><th rowspan='2'>KÝ HIỆU</th><th rowspan='2'>NƯỚC SẢN XUẤT</th><th rowspan='2'>LƯU LƯỢNG (m3/h)</th><th rowspan='2'>SỐ LƯỢNG</th><th colspan='" + listlen + "'>ĐĂNG KÝ CHẤT LƯỢNG HÀNG NĂM</th><th rowspan='2'>TÁC VỤ</th></tr><tr>";
+                    for (i = 0; i < listlen; i++) {
+                        tabletext += "<th>" + listNam[i] + "</th>";
+                    }
+                    tabletext += "</tr></thead><tbody>";
+                    var i = 1;
+                    var lenPt = listPt.length;
+                    var TRANGTHAI;
+                    var ID;
+                    for (i = 0; i < lenPt; i++) {
+                        tabletext += "<tr><td style='text-align: center;'>" + (i + 1) + "</td><td>" + listTTB[i] + "</td><td>" + listPt[i] + "</td><td>" + listNSX[i] + "</td><td>" + listLL[i] + "</td><td>" + listSL[i] + "</td>";
+                        for (j = 0; j < listlen; j++) {
+                            TRANGTHAI = '';
+                            $.each(data, function (key, item) {
+                                if (item.KYHIEU == listPt[i] && item.DANGKYCHATLUONG_NAMDANGKY == listNam[j]) {
+                                    TRANGTHAI = item.DANGKYCHATLUONG_TRANGTHAI;
+                                    ID = item.DANGKYCHATLUONG_ID;
+                                }
+                            });
+                            tabletext += "<td>";
+                            if (TRANGTHAI != "") {
+                                tabletext += '<a href="#" title="Sửa" data-toggle="modal" data-target="#model-edit-DANGKYCLBDNTG"  onclick="onclick_edit_DANGKYCLBDNTG(`' + listIDPT[i] + '`,`' + listTTB[i] + '`,`' + listPt[i] + '`,`' + listSL[i] + '`,`' + ID + '`,`' + listNam[j] + '`,`' + TRANGTHAI + '`)">' + TRANGTHAI + '</a><a href="#" class="delete" title="Xóa" onclick="delete_DANGKYCLBDNTG(`' + ID + '`)" style="float: right;"><i class="bi bi-x"></i></a>' + "</td>";
+                            }
+                            tabletext += "</td>";
+                        }
+                        tabletext += '<td><div style="display: flex; justify-content: space-around;"><a href="#" class="edit" title="Thêm đăng ký" data-toggle="modal" data-target="#model-add-DANGKYCLBDNTG" onclick="click_add_DANGKYCLBDNTG(`' + listIDPT[i] + '`)"><i class="bi bi-plus-circle-fill"></i></a></div></td></tr>';
+                    }
+                    tabletext += "</tbody>";
+                    $('#table-DANGKYCLBDNTG').html(tabletext);
+                }, error: function (ret) {
+                    console.log('errorGET');
+                },
+                complete: function () { // Set our complete callback, adding the .hidden class and hiding the spinner.
+                    $('#loader').addClass('hidden');
+                },
+            });
+        };
+        function click_add_DANGKYCLBDNTG(id = null) {
+            debugger
+            if (id != null) {
+                $('#add-DANGKYCLBDNTG-IDBDNTG').attr('disabled', '');
+                $('#add-DANGKYCLBDNTG-IDBDNTG').val(id);
+            }
+            else {
+                $('#add-DANGKYCLBDNTG-IDBDNTG').removeAttr('disabled', '');
+            }
+            loadTrangThai('add-DANGKYCLBDNTG-DANGKYCHATLUONG-TRANGTHAI', '');
+        }
+        function add_DANGKYCLBDNTG() {
+            var form = document.getElementById("form-add-DANGKYCLBDNTG");
+            console.log(form.checkValidity());
+            if (form.checkValidity() == true) {
+                var DANGKYCLBDNTG = {
+                    IDBDNTG: $("#add-DANGKYCLBDNTG-IDBDNTG").val(),
+                    //KYHIEU: $("#add-DANGKYCLBDNTG-IDBDNTG").find("option:selected").first().attr("text"),
+                    DANGKYCHATLUONG_NAMDANGKY: $("#add-DANGKYCLBDNTG-DANGKYCHATLUONG-NAMDANGKY").val(),
+                    DANGKYCHATLUONG_TRANGTHAI: $("#add-DANGKYCLBDNTG-DANGKYCHATLUONG-TRANGTHAI").val()
+                };
+                console.log(DANGKYCLBDNTG);
+                $.ajax({
+                    type: "POST",
+                    url: linkapi + "v2/insert_dangkyclbdntg?id=" + DANGKYCLBDNTG.IDBDNTG,
+                    dataType: "json",
+                    data: JSON.stringify(DANGKYCLBDNTG),
+                    contentType: "application/json",
+                    success: function (data) {
+                        toastSuccess("Thành công", "Thêm thông tin đăng ký chất lượng bơm dầu, nước, thông gió thành công.");
+                        loadDataList_DANGKYCLBDNTG2();
+
+                    }, error: function (ret) {
+                        toastError("Thất bại", "");
+                    },
+                    complete: function () { // Set our complete callback, adding the .hidden class and hiding the spinner.
+                        $("#add-DANGKYCLBDNTG-DANGKYCHATLUONG-NAMDANGKY").val("");
+                        $("#add-DANGKYCLBDNTG-DANGKYCHATLUONG-TRANGTHAI").val("");
+                        $('#model-add-DANGKYCLBDNTG').modal("hide");
+                        loadTable('table-DANGKYCLBDNTG');
+                    },
+                });
+            }
+            return false;
+        }
+        function onclick_edit_DANGKYCLBDNTG(IDBDNTG, TENTHIETBI, KYHIEU, SOLUONG, DANGKYCHATLUONG_ID, DANGKYCHATLUONG_NAMDANGKY, DANGKYCHATLUONG_TRANGTHAI) {
+            loadTrangThai('edit-DANGKYCLBDNTG-DANGKYCHATLUONG_TRANGTHAI', DANGKYCHATLUONG_TRANGTHAI);
+            $('#edit-DANGKYCLBDNTG-IDBDNTG').val(IDBDNTG);
+            $("#edit-DANGKYCLBDNTG-TENTHIETBI").val(TENTHIETBI + " - " + KYHIEU);
+            $("#edit-DANGKYCLBDNTG-DANGKYCHATLUONG_ID").val(DANGKYCHATLUONG_ID);
+            $("#edit-DANGKYCLBDNTG-DANGKYCHATLUONG_NAMDANGKY").val(Number(DANGKYCHATLUONG_NAMDANGKY));
+        }
+        function edit_DANGKYCLBDNTG() {
+            var form = document.getElementById("form-edit-DANGKYCLBDNTG");
+            console.log(form.checkValidity());
+            if (form.checkValidity() == true) {
+                var DANGKYCLBDNTG = {
+                    ID: $("#edit-DANGKYCLBDNTG-DANGKYCHATLUONG_ID").val(),
+                    IDBDNTG: $("#edit-DANGKYCLBDNTG-IDBDNTG").val(),
+                    //KYHIEU: $("#add-DANGKYCLBDNTG-IDBDNTG").find("option:selected").first().attr("text"),
+                    DANGKYCHATLUONG_NAMDANGKY: $("#edit-DANGKYCLBDNTG-DANGKYCHATLUONG_NAMDANGKY").val(),
+                    DANGKYCHATLUONG_TRANGTHAI: $("#edit-DANGKYCLBDNTG-DANGKYCHATLUONG_TRANGTHAI").val()
+                };
+                console.log(DANGKYCLBDNTG);
+                $.ajax({
+                    type: "PUT",
+                    url: linkapi + "v2/update_dangkyclbdntg?id=" + DANGKYCLBDNTG.ID,
+                    dataType: "json",
+                    data: JSON.stringify(DANGKYCLBDNTG),
+                    contentType: "application/json",
+                    success: function (data) {
+                        toastSuccess("Thành công", "Cập nhật thông tin đăng ký chất lượng thành công.");
+                        loadDataList_DANGKYCLBDNTG2();
+                    }, error: function (ret) {
+                        console.log(ret.responseJSON.Message);
+                        toastError("Thất bại", "");
+                    },
+                    complete: function () { // Set our complete callback, adding the .hidden class and hiding the spinner.
+                        $('#model-edit-DANGKYCLBDNTG').modal("hide");
+                        loadTable('table-DANGKYCLBDNTG');
+                    },
+                });
+            }
+            return false;
+        }
+        function delete_DANGKYCLBDNTG(id) {
+            let text = "Bạn có chắc muốn xóa thông tin đăng ký này?";
+            if (confirm(text) == true) {
+                $.ajax({
+                    url: linkapi + "v2/delete_dangkyclbdntg?id=" + id,
+                    type: "DELETE",
+                }).done(function (res) {
+                    toastSuccess("Thành công", "Xóa thông tin đăng ký thành công!");
+                    loadDataList_DANGKYCLBDNTG2();
+                    loadTable('table-DANGKYCLBDNTG');
                 }).fail(function (res) {
                     toastError("Lỗi", "Xóa thông tin đăng ký không thành công!");
                 })
