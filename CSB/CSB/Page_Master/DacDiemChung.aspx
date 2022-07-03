@@ -96,7 +96,7 @@
                                     <div class="form-group row" style="margin-bottom: 5px;">
                                         <div class="col-sm-12">
                                             <div class="btn-group btn-group-right" role="group" aria-label="Basic example">
-                                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#model-add-THAYDOISOHIEU"><i class="bi bi-plus-circle"></i>Thay đổi</button>
+                                                <a class="btn btn-primary" data-toggle="modal" data-target="#model-add-THAYDOISOHIEU"><i class="bi bi-plus-circle"></i> Thay đổi</a>
                                             </div>
                                         </div>
                                     </div>
@@ -380,11 +380,11 @@
                                     <div class="right">
                                         <div onclick="remove_input_add_ship()" class="btn btn-danger" style="margin-right: 10px;">
                                             <i class="bi bi-eraser-fill"></i>
-                                            <span id="text-remove-input">Xoá ô nhập</span>
+                                            <span id="text-remove-input"> Xoá ô nhập</span>
                                         </div>
                                         <button type="submit" class="btn btn-primary right" onclick="addTau()">
                                             <i class='bx bxs-save' style="font-size: 13px;"></i>
-                                            <span id="text-save">Lưu thông tin</span>
+                                            <span id="text-save"> Lưu thông tin</span>
                                         </button>
                                     </div>
                                 </div>
