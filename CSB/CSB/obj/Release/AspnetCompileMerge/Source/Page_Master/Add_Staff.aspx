@@ -180,9 +180,9 @@
                                     </div>
                                     <div class="right">
                                         <div class="btn-group">
-                                            <button type="button" onclick="remove_input_add_ship()" class="btn btn-danger"><i class="bi bi-x-circle"></i>&nbsp;Xoá ô nhập</button>
+                                            <button type="button" onclick="remove_input_add_ship()" class="btn btn-danger"><i class="bi bi-eraser-fill"></i>&nbsp;Xoá ô nhập</button>
                                             <button type="submit" class="btn btn-primary right" onclick="addStaff()">
-                                                <i class="bi bi-plus-circle"></i>
+                                                <i class='bx bxs-save' style="font-size: 13px;"></i>
                                                 <span id="text-save">Lưu thông tin</span>
                                             </button>
                                         </div>
