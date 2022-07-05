@@ -160,8 +160,7 @@
                     var tabletext = '<thead><tr><th style="text-align: center;" colspan="7">THÂN VỎ</th></tr><tr><th>STT</th><th>KÝ HIỆU VẬT LIỆU</th><th>SỐ KHOANG KÍN NƯỚC</th><th>SỐ SƯỜN TÀU</th><th>SỐ KÉT DÀU CHÁY</th><th>SỐ KÉT DẦU NHỜN</th><th>SỐ KÉT NƯỚC</th></tr></thead><tbody>';
                     var i = 1;
                     if (data == null) {
-                        tabletext += "<tr><td>" + '1' + "</td><td>" + ' ' + "</td><td>" + ' ' + "</td><td>" + ' ' + "</td><td>" + ' ' + "</td><td>" + ' ' + "</td><td>" + ' ' + "</td></tr>";
-                        i = i + 1;
+                        tabletext += '<tr><td colspan="7" style="text-align: center;" >Không có dữ liệu !</td></tr>';
                     }
                     else {
                         $.each(data, function (key, item) {
@@ -170,13 +169,7 @@
                         });
                        
                     }
-                    var k = 5 - i;
-                    if (i < 5) {
-                        for (var j = 0; j <=k; j++) {
-                            tabletext += "<tr><td>" + i + "</td><td>" + ' ' + "</td><td>" + ' ' + "</td><td>" + ' ' + "</td><td>" + ' ' + "</td><td>" + ' ' + "</td><td>" + ' ' + "</td></tr>";
-                            i++;
-                        }
-                    }
+                  
                     tabletext += "</tbody>";
                     $('#table_ThanVo').html(tabletext);
                     //loadTable('table_ThanVo');
@@ -204,23 +197,14 @@
                 success: function (data) {
                     var tabletext = '<thead><tr><th style="text-align: center; " colspan="4">MÁY CHÍNH</th></tr><tr><th>STT(vị trí đặt)</th><th>KÝ HIỆU</th><th>CÔNG SUẤT(CV)</th><th>VÒNG QUAY(Vg/p)</th></tr></thead><tbody>';
                     var i = 1;
-                    debugger
                     if (data == null) {
-                        tabletext += "<tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>";
-                        i = i + 1;
+                        tabletext += '<tr><td colspan="4" style="text-align: center;" >Không có dữ liệu !</td></tr>';
                     }
                     else {
                         $.each(data, function (key, item) {
                             tabletext += "<tr><td>" + item.THONGSOCOBAN.VITRILAPRAP + "</td><td>" + item.THONGSOCOBAN.KYHIEU + "</td><td>" + item.THONGSOCOBAN.CONGSUAT + "</td><td>" + item.THONGSOCOBAN.VONGQUAY + "</td></tr>";
                             i = i + 1;
                         });
-                    }
-                    var k = 5 - i;
-                    if (i < 5) {
-                        for (var j = 0; j <= k; j++) {
-                            tabletext += "<tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>";
-                            i++;
-                        }
                     }
                     tabletext += "</tbody>";
                     $('#table_MayChinh').html(tabletext);
@@ -249,21 +233,13 @@
                     var tabletext = '<thead><tr><th style="text-align: center; " colspan="3">MÁY NÉN KHÍ</th></tr><tr><th>KÝ HIỆU</th><th>SỐ LƯỢNG</th><th>ÁP SUẤT(KG/cm2)</th></tr></thead><tbody>';
                     var i = 1;
                     if (data == null) {
-                        tabletext += "<tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><tr>";
-                        i++;
+                        tabletext += '<tr><td colspan="3" style="text-align: center;" >Không có dữ liệu !</td></tr>';
                     }
                     else {
                         $.each(data, function (key, item) {
                             tabletext += "<tr><td>" + item.KYHIEU + "</td><td>" + item.SOLUONG + "</td><td>" + item.APSUAT + "</td><tr>";
                             i++;
                         });
-                    }
-                    var k = 5 - i;
-                    if (i < 5) {
-                        for (var j = 0; j <= k; j++) {
-                            tabletext += "<tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><tr>";
-                            i++;
-                        }
                     }
                     tabletext += "</tbody>";
                     $('#table_MayNenKhi').html(tabletext);
@@ -292,9 +268,7 @@
                     var tabletext = '<thead><tr><th style="text-align: center; " colspan="5">MÁY PHỤ, PHÁT ĐIỆN</th></tr><tr><th>STT(vị trí đặt)</th><th>KÝ HIỆU DIESEL</th><th>CÔNG SUẤT(CV/Kw)</th><th>VÒNG QUAY(Vg/p)</th></tr></thead><tbody>';
                     var i = 1;
                     if (data == null) {
-                        tabletext += "<tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>";
-
-                        i++;
+                        tabletext += '<tr><td colspan="4" style="text-align: center;" >Không có dữ liệu !</td></tr>';
                     }
                     else {
                         $.each(data, function (key, item) {
@@ -302,13 +276,7 @@
                             i++;
                         });
                     }
-                    var k = 5 - i;
-                    if (i < 5) {
-                        for (var j = 0; j <= k; j++) {
-                            tabletext += "<tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>";
-                            i++;
-                        }
-                    }
+                  
                     tabletext += "</tbody>";
                     $('#table_MayPhu_PhatDien').html(tabletext);
                     //loadTable('table_MayPhu_PhatDien');
@@ -337,8 +305,7 @@
                     var tabletext = '<thead><tr><th style="text-align: center; " colspan="2">HÀNG HẢI</th></tr><tr><th>KÝ HIỆU</th><th>SỐ LƯỢNG</th></tr></thead><tbody>';
                     var i = 1;
                     if (data == null) {
-                        tabletext += "<tr><td>&nbsp;</td><td>&nbsp;</td><tr>";
-                        i++;
+                        tabletext += '<tr><td colspan="2" style="text-align: center;" >Không có dữ liệu !</td></tr>';
                     }
                     else {
                         $.each(data, function (key, item) {
@@ -346,13 +313,7 @@
                             i++;
                         });
                     }
-                    var k = 5 - i;
-                    if (i < 5) {
-                        for (var j = 0; j <= k; j++) {
-                            tabletext += "<tr><td>&nbsp;</td><td>&nbsp;</td><tr>";
-                            i++;
-                        }
-                    }
+                  
                     tabletext += "</tbody>";
                     $('#table_HangHai').html(tabletext);
 
@@ -381,8 +342,7 @@
                     var tabletext = '<thead><tr><th style="text-align: center; " colspan="2">RADA</th></tr><tr><th>KÝ HIỆU</th><th>SỐ LƯỢNG</th></tr></thead><tbody>';
                     var i = 1;
                     if (data == null) {
-                        tabletext += "<tr><td>&nbsp;</td><td>&nbsp;</td><tr>";
-                        i++;
+                        tabletext += '<tr><td colspan="2" style="text-align: center;" >Không có dữ liệu !</td></tr>';
                     }
                     else {
                         $.each(data, function (key, item) {
@@ -390,13 +350,7 @@
                             i++;
                         });
                     }
-                    var k = 5 - i;
-                    if (i < 5) {
-                        for (var j = 0; j <= k; j++) {
-                            tabletext += "<tr><td>&nbsp;</td><td>&nbsp;</td><tr>";
-                            i++;
-                        }
-                    }
+                 
                     tabletext += "</tbody>";
                     $('#table_RaDa').html(tabletext);
 
@@ -425,8 +379,7 @@
                     var tabletext = '<thead><tr><th style="text-align: center; " colspan="2">VŨ KHÍ</th></tr><tr><th>KÝ HIỆU</th><th>SỐ LƯỢNG</th></tr></thead><tbody>';
                     var i = 1;
                     if (data == null) {
-                        tabletext += "<tr><td>&nbsp;</td><td>&nbsp;</td><tr>";
-                        i++;
+                        tabletext += '<tr><td colspan="2" style="text-align: center;" >Không có dữ liệu !</td></tr>';
                     }
                     else {
                         $.each(data, function (key, item) {
@@ -434,13 +387,7 @@
                             i++;
                         });
                     }
-                    var k = 5 - i;
-                    if (i < 5) {
-                        for (var j = 0; j <= k; j++) {
-                            tabletext += "<tr><td>&nbsp;</td><td>&nbsp;</td><tr>";
-                            i++;
-                        }
-                    }
+                  
                     tabletext += "</tbody>";
                     $('#table_VuKhi').html(tabletext);
 

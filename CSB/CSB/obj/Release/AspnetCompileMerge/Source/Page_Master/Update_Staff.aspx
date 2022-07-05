@@ -174,9 +174,9 @@
                                     </div>
                                     <div class="right">
                                         <div class="btn-group">
-                                            <button type="button" onclick="remove_input_edit_ship()" class="btn btn-danger"><i class="bi bi-x-circle"></i>&nbsp;Xoá ô nhập</button>
+                                            <button type="button" onclick="remove_input_edit_ship()" class="btn btn-danger"><i class="bi bi-eraser-fill"></i>&nbsp;Xoá ô nhập</button>
                                             <button type="submit" class="btn btn-primary right" onclick="editStaff()">
-                                                <i class="bi bi-plus-circle"></i>
+                                                <i class='bx bxs-save' style="font-size: 13px;"></i>
                                                 <span id="text-save">Lưu thông tin</span>
                                             </button>
                                         </div>
@@ -555,7 +555,7 @@
                     },
                     success: function (data) {
                         debugger
-                        toastSuccess("Thành công", "Sửa cán bộ, nhân viên mới thành công.");
+                        toastSuccess("Thành công", "Cập nhật thông tin cán bộ, nhân viên thành công.");
                     }, error: function (ret) {
                         console.log(ret.responseJSON.Message);
                         toastError("Thất bại", ret.responseJSON.Message);
