@@ -91,6 +91,7 @@
     <script>
         var Ship_ID;
         var shipName;
+        let count_mc = {values:0};
         function getParameterByName(name, url = window.location.href) {
             name = name.replace(/[\[\]]/g, '\\$&');
             var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
@@ -106,6 +107,7 @@
                 history.back();
             }
             else {
+               
                 Load_Title(Ship_ID);
                 loadDataList_ThanVo(Ship_ID);
                 loadDataList_MayChinh(Ship_ID);
@@ -114,7 +116,8 @@
                 loadDataList_HangHai(Ship_ID);
                 loadDataList_RaDa(Ship_ID);
                 loadDataList_VuKhi(Ship_ID);
-                nhap();
+               
+               
             }
            
         });
@@ -186,7 +189,6 @@
 
         }
         function loadDataList_MayChinh(Ship_ID) {
-
             $.ajax({
                 type: "GET",
                 url: linkapi + "v2/maychinh?id=" + Ship_ID,
@@ -206,8 +208,10 @@
                             i = i + 1;
                         });
                     }
+                
                     tabletext += "</tbody>";
                     $('#table_MayChinh').html(tabletext);
+                
                     //loadTable('table_MayChinh');
                     //$('#tableship_wrapper .row .col-sm-12').first().html('<button onclick="btn_addship()" class="btn btn-info btn-lg col-md-6" /*data-toggle="modal" data-target="#model-add-ship"*/ style="height: 40px; margin-bottom: 8px; margin-top: -4px; font-size: 18px;"><span class="glyphicon glyphicon-plus"></span>Thêm tàu</button>');
 
@@ -216,12 +220,14 @@
                 },
                 complete: function () { // Set our complete callback, adding the .hidden class and hiding the spinner.
                     //$('#loader').addClass('hidden');
-
+                  
+                  
                 },
             });
-
+            
         }
-        function loadDataList_MayNenKhi(Ship_ID) {
+
+        function loadDataList_MayNenKhi(Ship_ID) {           
             $.ajax({
                 type: "GET",
                 url: linkapi + "v2/maynenkhi?id=" + Ship_ID,
@@ -237,12 +243,14 @@
                     }
                     else {
                         $.each(data, function (key, item) {
-                            tabletext += "<tr><td>" + item.KYHIEU + "</td><td>" + item.SOLUONG + "</td><td>" + item.APSUAT + "</td><tr>";
+                            tabletext += "<tr><td>" + item.KYHIEU + "</td><td>" + item.SOLUONG + "</td><td>" + item.APSUAT + "</td></tr>";
                             i++;
                         });
                     }
                     tabletext += "</tbody>";
                     $('#table_MayNenKhi').html(tabletext);
+
+                   
                     //loadTable('table_MayNenKhi');
                     //$('#tableship_wrapper .row .col-sm-12').first().html('<button onclick="btn_addship()" class="btn btn-info btn-lg col-md-6" /*data-toggle="modal" data-target="#model-add-ship"*/ style="height: 40px; margin-bottom: 8px; margin-top: -4px; font-size: 18px;"><span class="glyphicon glyphicon-plus"></span>Thêm tàu</button>');
 
@@ -251,7 +259,25 @@
                 },
                 complete: function () { // Set our complete callback, adding the .hidden class and hiding the spinner.
                     //$('#loader').addClass('hidden');
-
+                    var count_mc = $('#table_MayChinh tr').length;
+                    var count_mnk = $('#table_MayNenKhi tr').length;
+                    //alert($('#table_MayChinh tr').length);
+                    //alert($('#table_MayNenKhi tr').length);
+                    if (count_mc < count_mnk) {
+                        debugger
+                        var count = count_mnk - count_mc;
+                        for (var i = 0; i < count; i++) {
+                            $("#table_MayChinh > tbody").append(' <tr> <td colspan="4" >&nbsp;</td></tr>');
+                        }
+                    }
+                    else if (count_mc > count_mnk) {
+                        debugger
+                        var count = count_mc - count_mnk;
+                        for (var i = 1; i < count; i++) {
+                            $("#table_MayNenKhi > tbody").append('<tr> <td colspan="3" >&nbsp;</td></tr>');
+                        }
+                       
+                    }
                 },
             });
         }
@@ -309,7 +335,7 @@
                     }
                     else {
                         $.each(data, function (key, item) {
-                            tabletext += "<tr><td>" + item.KYHIEU + "</td><td>" + item.SOLUONG + "</td><tr>";
+                            tabletext += "<tr><td>" + item.KYHIEU + "</td><td>" + item.SOLUONG + "</td></tr>";
                             i++;
                         });
                     }
@@ -346,7 +372,7 @@
                     }
                     else {
                         $.each(data, function (key, item) {
-                            tabletext += "<tr><td>" + item.KYHIEU + "</td><td>" + item.SOLUONG + "</td><tr>";
+                            tabletext += "<tr><td>" + item.KYHIEU + "</td><td>" + item.SOLUONG + "</td></tr>";
                             i++;
                         });
                     }
@@ -383,7 +409,7 @@
                     }
                     else {
                         $.each(data, function (key, item) {
-                            tabletext += "<tr><td>" + item.KYHIEU + "</td><td>" + item.SOLUONG + "</td><tr>";
+                            tabletext += "<tr><td>" + item.KYHIEU + "</td><td>" + item.SOLUONG + "</td></tr>";
                             i++;
                         });
                     }
@@ -397,7 +423,41 @@
                     console.log('errorGET');
                 },
                 complete: function () { // Set our complete callback, adding the .hidden class and hiding the spinner.
-                    //$('#loader').addClass('hidden');
+                    var count_hh = $('#table_HangHai tr').length;
+                    var count_rada = $('#table_RaDa tr').length;
+                    var count_vukhi = $('#table_VuKhi tr').length;
+                    var max = count_hh;
+                    if (count_rada > max) {
+                        max = count_rada;
+                    }
+                    if (count_vukhi > max) {
+                        max = count_vukhi;
+                    }
+                    if (count_hh < max) {
+                        debugger
+                        var count = max - count_hh;
+                        for (var i = 0; i < count; i++) {
+                            $("#table_HangHai > tbody").append(' <tr> <td colspan="2" >&nbsp;</td></tr>');
+                        }
+              
+                    }
+                    if (count_rada < max) {
+                        debugger
+                        var count = max - count_rada;
+                        for (var i = 0; i < count; i++) {
+                            $("#table_RaDa > tbody").append(' <tr> <td colspan="2" >&nbsp;</td></tr>');
+                        }
+                       
+                    }
+                    if (count_vukhi < max) {
+                        debugger
+                        var count = max - count_vukhi;
+                        for (var i = 0; i < count; i++) {
+                            $("#table_VuKhi > tbody").append(' <tr> <td colspan="2" >&nbsp;</td></tr>');
+                        }
+                       
+                    }
+                  
 
                 },
             });
@@ -434,10 +494,7 @@
 
             });
         };
-        function nhap() {
-            debugger
-           
-        }
+        
         //var count_mc = $("#Count_MC").val();
        
         //var count_mnk = $("#Count_MNK").val();
@@ -449,5 +506,6 @@
         //    var i = count_mnk - count_mc;
         //    alert(i);
         //}
+     
     </script>
 </asp:Content>

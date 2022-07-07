@@ -1580,7 +1580,7 @@ TR&#7908;C CHÂN V&#7882;T</span></b></p>
         function loadDataListShips(vung_id) {
             $.ajax({
                 type: "GET",
-                url: linkapi + "ships_region?id=" + vung_id,
+                url: linkapi + "v1/ships_region?id=" + vung_id,
                 dataType: "json",
                 beforeSend: function () { // Before we send the request, remove the .hidden class from the spinner and default to inline-block.
                     //$('#loader').removeClass('hidden');
