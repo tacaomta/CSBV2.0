@@ -2,6 +2,12 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <style>
+        .breadcrumb {
+            background-color: #ffffff !important;
+        }
+        .page-wrapper {
+            padding-top: 0 !important;
+        }
         .container {
             padding-right: 0px;
             padding-left: 0px;

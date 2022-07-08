@@ -1,6 +1,11 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Master/TrangChu.Master" AutoEventWireup="true" CodeBehind="Manage_Staff.aspx.cs" Inherits="CSB.Page_Master.Manage_Staff" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
+    <style>
+        #table_Staff_wrapper {
+            overflow-x: hidden;
+        }
+    </style>
     <div id="form1">
         <div class="section" style="background-color: #fff; padding-bottom: 5px;">
             <div class="section-header" style="background-color: #fff;">
@@ -147,7 +152,7 @@
                 });
                 table1.buttons().container()
                     .appendTo('this_wrapper .col-md-6:eq(0)');
-                $('.col-sm-12').first().html('<div class="btn-group"><button onclick="btn_Load_liststaff()" class="btn btn-secondary mb-2"><i class="bi-arrow-repeat"></i> Load dữ liệu</button><button id="btn_addstaff" onclick="btn_addstaff()" class="btn btn-secondary mb-2"><i class="bi bi-plus-circle"></i> Thêm mới</button></div>');
+                $('.col-sm-12').first().html('<div class="btn-group"><button onclick="btn_Load_liststaff()" class="btn btn-secondary mb-2"><i class="bi-arrow-clockwise"></i> Load dữ liệu</button><button id="btn_addstaff" onclick="btn_addstaff()" class="btn btn-secondary mb-2"><i class="bi bi-plus-circle"></i> Thêm mới</button></div>');
 
             });
         };
