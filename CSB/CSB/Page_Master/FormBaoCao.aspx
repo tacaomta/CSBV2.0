@@ -45,6 +45,10 @@
             .btn-rp span {
                 margin-right: 5px;
             }
+
+        .form-s2 input {
+            margin-bottom: .5rem;
+        }
     </style>
     <div id="form1">
         <div class="section" style="background-color: #fff; padding-bottom: 15px;">
@@ -85,19 +89,19 @@
                     <div class="row" style="justify-content: center;">
                         <div class="text-center col-10">
                             <p class="text-bold">BÁO CÁO</p>
-                            <textarea rows="3" form="rpform" required style="font-weight: bold; width: 100%; text-align: center; padding: 5px; resize: none;"></textarea>
+                            <textarea rows="3" form="rpform" required style="font-weight: bold; width: 100%; text-align: center; padding: 5px; resize: none;">Tình trạng kỹ thuật tàu CSB 4031, CSB 4035, CSB 4039 phục vụ kiểm tra công tác triển khai thực hiện nhiệm vụ IUU khu vực giáp ranh Việt Nam - Thái Lan - Malaixia kết hợp kiểm tra các đơn vị tại Đảo Thổ Chu, Côn Đảo</textarea>
                             <div class="horizontal-line" style="width: 25%;"></div>
                             <div class="my-2" style="display: flex; flex-direction: row; justify-content: center;">
                                 <p>Kính gửi:</p>
-                                <input class="ml-2" />
+                                <input class="ml-2"/>
                             </div>
                             <div class="my-2" style="display: flex; flex-direction: row;">
                                 <p style="white-space: nowrap;">Căn cứ:</p>
-                                <textarea class="ml-2" rows="3" form="rpform" required style="width: 100%; padding: 5px; resize: none;"></textarea>
+                                <textarea class="ml-2" rows="3" form="rpform" required style="width: 100%; padding: 5px; resize: none;">Kế hoạch số 1986/KH-BTL ngày 11/3/2022 của BTL CSB về kiểm tra công tác triển khai thực hiện nhiệm vụ IUU khu vực giáp ranh Việt Nam - Thái Lan - Malaixia kết hợp kiểm tra các đơn vị tại Đảo Thổ Chu, Côn Đảo</textarea>
                             </div>
                             <div class="my-2" style="display: flex; flex-direction: row;">
                                 <p style="white-space: nowrap;">Căn cứ:</p>
-                                <textarea class="ml-2" rows="3" form="rpform" required style="width: 100%; padding: 5px; resize: none;"></textarea>
+                                <textarea class="ml-2" rows="3" form="rpform" required style="width: 100%; padding: 5px; resize: none;">Tình trạng kỹ thuật của các tàu CSB 4031/BTL Vùng CSB 3, CSB 4039, CSB 4035/BTL Vùng CSB 4</textarea>
                             </div>
                             <p style="text-align: left;">Cục Kỹ thuật báo cáo như sau:</p>
                             <div class="row">
@@ -186,7 +190,7 @@
                                 <span id="ship_name_tt" class="text-bold"></span>
                             </div>
                             <p class="mr-2" style="font-weight: bold; text-align: left;">a) Hệ động lực</p>
-                            <div class="row">
+                            <div class="row" class="form-s2">
                                 <p class="mr-2 my-1" style="text-align: left; padding-left: 15px;">-</p>
                                 <span id="count_mc" class="my-1">03</span>
                                 <p class="mr-2 my-1" style="text-align: left; padding-left: 5px">máy chính và hộp số đang hoạt động</p>
@@ -206,39 +210,39 @@
                                 <input class="ml-2" style="width: 50px;">
                                 <a class="mx-1" onclick="XTT_MayChinh()" href="#" style="text-decoration: none;">(Xem tình trạng)</a>
                             </div>
-                            <div class="row">
+                            <div class="row form-s2">
                                 <p class="mr-1 my-1" style="text-align: left; padding-left: 15px;">- Máy phát điện, hệ thống điện, hệ thống cứu hộ hoạt động</p>
                               <%--  <span class="my-1">bình thường;</span>--%>
                                 <input class="ml-2">
                                 <a class="ml-2" onclick="XTT_MayPhatDien()" href="#" style="text-decoration: none;">(Xem tình trạng)</a>
                             </div>
-                            <div class="row">
+                            <div class="row form-s2">
                                 <p class="mr-1 my-1" style="text-align: left; padding-left: 15px;">- Các hệ thống và thiết bị bổ trợ đang hoạt động</p>
                                <%-- <span class="my-1">bình thường;</span>--%>
                                  <input class="ml-2">
                                 <a class="ml-2" onclick="XTT_CacHeThongVaThietBiBoTro()" href="#" style="text-decoration: none;">(Xem tình trạng)</a>
                             </div>
-                            <div class="row">
+                            <div class="row form-s2">
                                 <p class="mr-1 my-1" style="text-align: left; padding-left: 15px;">- Thân vỏ</p>
                                <%-- <span class="my-1">vẫn kín nước;</span>--%>
                                  <input class="ml-2">
                                 <a class="ml-2" onclick="XTT_ThanVo()" href="#" style="text-decoration: none;">(Xem tình trạng)</a>
                             </div>
-                            <div class="row">
+                            <div class="row form-s2">
                                 <p class="mr-1 my-1" style="text-align: left; padding-left: 15px;">- Hệ trục chân vịt</p>
                                 <%--<span class="my-1">đảm bảo.</span>--%>
                                  <input class="ml-2">
                                 <a class="ml-2"  onclick="XTT_HeTrucChanVit()" href="#" style="text-decoration: none;">(Xem tình trạng)</a>
                             </div>
                             <p class="mr-2" style="font-weight: bold; text-align: left;">b) Trang bị Vũ khí, khí tài</p>
-                            <div class="row">
+                            <div class="row form-s2">
                                 <p class="mr-1 my-1" style="text-align: left; padding-left: 15px;">- Vũ khí: Hệ thống vũ khí trên tàu</p>
                                 <%--<span class="my-1">đầy đủ cơ số, hoạt động bình thường;</span>--%>
                                  <input class="ml-2">
                                 <a class="ml-2" onclick="XTT_VuKhi()"  href="#" style="text-decoration: none;">(Xem tình trạng)</a>
                             </div>
                             <p class="mr-2" style="text-align: left;">- Khí tài:</p>
-                            <div class="row">
+                            <div class="row form-s2">
                                 <p class="mr-1 my-1" style="text-align: left; padding-left: 15px;">+ Thiết bị Hàng hải: Các thiết bị khí tài Hàng hải</p>
                                <%-- <span class="my-1">hoạt động bình thường</span>--%>
                                  <input class="ml-2">
@@ -247,7 +251,7 @@
                                  <input class="ml-2">
                                 <a class="ml-2" onclick="XTT_HeThongVSAT()" href="#" style="text-decoration: none;">(Xem tình trạng)</a>
                             </div>
-                            <div class="row">
+                            <div class="row form-s2">
                                 <p class="mr-2 my-1" style="text-align: left; padding-left: 15px;">+ Thiết bị Thông tin liên lạc: Hoạt động</p>
                                 <%--<span class="my-1">bình thường, đảm bảo thông tin liên lạc.</span>--%>
                                  <input class="ml-2">
