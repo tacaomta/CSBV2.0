@@ -210,32 +210,32 @@
                                 <p class="mr-1 my-1" style="text-align: left; padding-left: 15px;">- Máy phát điện, hệ thống điện, hệ thống cứu hộ hoạt động</p>
                               <%--  <span class="my-1">bình thường;</span>--%>
                                 <input class="ml-2">
-                                <a class="ml-2" href="#" style="text-decoration: none;">(Xem tình trạng)</a>
+                                <a class="ml-2" onclick="XTT_MayPhatDien()" href="#" style="text-decoration: none;">(Xem tình trạng)</a>
                             </div>
                             <div class="row">
                                 <p class="mr-1 my-1" style="text-align: left; padding-left: 15px;">- Các hệ thống và thiết bị bổ trợ đang hoạt động</p>
                                <%-- <span class="my-1">bình thường;</span>--%>
                                  <input class="ml-2">
-                                <a class="ml-2" href="#" style="text-decoration: none;">(Xem tình trạng)</a>
+                                <a class="ml-2" onclick="XTT_CacHeThongVaThietBiBoTro()" href="#" style="text-decoration: none;">(Xem tình trạng)</a>
                             </div>
                             <div class="row">
                                 <p class="mr-1 my-1" style="text-align: left; padding-left: 15px;">- Thân vỏ</p>
                                <%-- <span class="my-1">vẫn kín nước;</span>--%>
                                  <input class="ml-2">
-                                <a class="ml-2" href="#" style="text-decoration: none;">(Xem tình trạng)</a>
+                                <a class="ml-2" onclick="XTT_ThanVo()" href="#" style="text-decoration: none;">(Xem tình trạng)</a>
                             </div>
                             <div class="row">
                                 <p class="mr-1 my-1" style="text-align: left; padding-left: 15px;">- Hệ trục chân vịt</p>
                                 <%--<span class="my-1">đảm bảo.</span>--%>
                                  <input class="ml-2">
-                                <a class="ml-2" href="#" style="text-decoration: none;">(Xem tình trạng)</a>
+                                <a class="ml-2"  onclick="XTT_HeTrucChanVit()" href="#" style="text-decoration: none;">(Xem tình trạng)</a>
                             </div>
                             <p class="mr-2" style="font-weight: bold; text-align: left;">b) Trang bị Vũ khí, khí tài</p>
                             <div class="row">
                                 <p class="mr-1 my-1" style="text-align: left; padding-left: 15px;">- Vũ khí: Hệ thống vũ khí trên tàu</p>
                                 <%--<span class="my-1">đầy đủ cơ số, hoạt động bình thường;</span>--%>
                                  <input class="ml-2">
-                                <a class="ml-2" href="#" style="text-decoration: none;">(Xem tình trạng)</a>
+                                <a class="ml-2" onclick="XTT_VuKhi()"  href="#" style="text-decoration: none;">(Xem tình trạng)</a>
                             </div>
                             <p class="mr-2" style="text-align: left;">- Khí tài:</p>
                             <div class="row">
@@ -245,13 +245,13 @@
                                 <p class="mr-1 my-1" style="text-align: left;">, hệ thống VSAT</p>
                               <%--  <span class="my-1">hoạt động ổn định, đường truyền thông suốt;</span>--%>
                                  <input class="ml-2">
-                                <a class="ml-2" href="#" style="text-decoration: none;">(Xem tình trạng)</a>
+                                <a class="ml-2" onclick="XTT_HeThongVSAT()" href="#" style="text-decoration: none;">(Xem tình trạng)</a>
                             </div>
                             <div class="row">
                                 <p class="mr-2 my-1" style="text-align: left; padding-left: 15px;">+ Thiết bị Thông tin liên lạc: Hoạt động</p>
                                 <%--<span class="my-1">bình thường, đảm bảo thông tin liên lạc.</span>--%>
                                  <input class="ml-2">
-                                <a class="ml-2" href="#" style="text-decoration: none;">(Xem tình trạng)</a>
+                                <a class="ml-2" onclick="XTT_ThietBiThongTinLienLac()" href="#" style="text-decoration: none;">(Xem tình trạng)</a>
                             </div>
                             <p class="mr-2" style="font-weight: bold; text-align: left;">3. Kiến nghị, đề nghị</p>
                             <textarea rows="3" form="rpform" required style="width: 100%; padding: 5px; resize: none;"></textarea>
@@ -501,8 +501,37 @@
         }
 
         function XTT_MayChinh() {
-            var win = window.open(baseaddress + "Page_Master/ThanVo?Ship_ID=" + Ship_ID, '_blank');
+            var win = window.open(baseaddress + "Page_Master/TinhNangThietBi?Ship_ID=" + Ship_ID, '_blank');
             win.focus();
         }
+        function XTT_MayPhatDien() {
+            var win = window.open(baseaddress + "Page_Master/TinhNangThietBi?Ship_ID=" + Ship_ID, '_blank');
+            win.focus();
+        } 
+        function XTT_CacHeThongVaThietBiBoTro() {
+            var win = window.open(baseaddress + "Page_Master/TinhNangThietBi?Ship_ID=" + Ship_ID, '_blank');
+            win.focus();
+        } 
+        function XTT_ThanVo() {
+            var win = window.open(baseaddress + "Page_Master/TinhNangThietBi?Ship_ID=" + Ship_ID, '_blank');
+            win.focus();
+        }
+        function XTT_HeTrucChanVit() {
+            var win = window.open(baseaddress + "Page_Master/TinhNangThietBi?Ship_ID=" + Ship_ID, '_blank');
+            win.focus();
+        }
+        function XTT_VuKhi() {
+            var win = window.open(baseaddress + "Page_Master/TinhNangThietBi?Ship_ID=" + Ship_ID, '_blank');
+            win.focus();
+        }
+        function XTT_HeThongVSAT() {
+            var win = window.open(baseaddress + "Page_Master/TinhNangThietBi?Ship_ID=" + Ship_ID, '_blank');
+            win.focus();
+        }
+        function XTT_ThietBiThongTinLienLac() {
+            var win = window.open(baseaddress + "Page_Master/TinhNangThietBi?Ship_ID=" + Ship_ID, '_blank');
+            win.focus();
+        }
+        
     </script>
 </asp:Content>
