@@ -1386,7 +1386,7 @@ TR&#7908;C CHÂN V&#7882;T</span></b></p>
         }
 
         $(document).ready(function () {
-            if (vung == null | vung == 1) {
+            if (vung == null || vung == 1) {
                 vung_id = '5AEBB23FF45F3C235AFD86B510BF9E8C';
                 document.getElementById("Vung1").classList.add("a_selected");
                 document.getElementById("Vung2").classList.remove("a_selected");
@@ -1439,7 +1439,8 @@ TR&#7908;C CHÂN V&#7882;T</span></b></p>
                     tabletext += "</tbody>";
                     $('#tableship').html(tabletext);
                     loadTableShip();
-                    $('#tableship_wrapper .row .col-sm-12').first().html('<div class="btn-group"><button onclick="btn_Load_listship()" class="btn btn-lg btn-secondary mb-3"><span class="bi-arrow-clockwise"></span> &nbsp;Load dữ liệu</button> <button onclick="btn_addship()" class="btn btn-lg btn-secondary mb-3"><span class="bi-plus-circle-fill"></span> &nbsp;Thêm mới tàu</button><div class="btn-group"><button type="button" class="btn btn-lg btn-secondary mb-3 dropdown-toggle" data-toggle="dropdown"><span class="bi-file-earmark-text"></span> Xuất báo cáo </button><ul class="dropdown-menu" role="menu" style="width: max-content;"><li><a href="#"><i class="material-icons revert-color">print</i> In báo cáo</a></li><li><a href="#" ><i class="material-icons blue-color">text_snippet</i> Xuất file Word</a></li><li><a href="#"><i class="material-icons green-color">description</i> Xuất file Excel</a></li><li><a href="#"><i class="material-icons orange-color">picture_as_pdf</i> Xuất file PDF</a></li></ul></div></div>');
+                    //$('#tableship_wrapper .row .col-sm-12').first().html('<div class="btn-group"><button onclick="btn_Load_listship()" class="btn btn-lg btn-secondary mb-3"><span class="bi-arrow-clockwise"></span> &nbsp;Load dữ liệu</button> <button onclick="btn_addship()" class="btn btn-lg btn-secondary mb-3"><span class="bi-plus-circle-fill"></span> &nbsp;Thêm mới tàu</button><div class="btn-group"><button type="button" class="btn btn-lg btn-secondary mb-3 dropdown-toggle" data-toggle="dropdown"><span class="bi-file-earmark-text"></span> Xuất báo cáo </button><ul class="dropdown-menu" role="menu" style="width: max-content;"><li><a href="#"><i class="material-icons revert-color">print</i> In báo cáo</a></li><li><a href="#" ><i class="material-icons blue-color">text_snippet</i> Xuất file Word</a></li><li><a href="#"><i class="material-icons green-color">description</i> Xuất file Excel</a></li><li><a href="#"><i class="material-icons orange-color">picture_as_pdf</i> Xuất file PDF</a></li></ul></div></div>');
+                    $('#tableship_wrapper .row .col-sm-12').first().html('<div class="btn-group"><button onclick="btn_Load_listship()" class="btn btn-lg btn-secondary mb-3"><span class="bi-arrow-clockwise"></span> &nbsp;Load dữ liệu</button> <button onclick="btn_addship()" class="btn btn-lg btn-secondary mb-3"><span class="bi-plus-circle-fill"></span> &nbsp;Thêm mới tàu</button></div>');
                     $('#tableship_wrapper .row').first().next().children().css("overflow-x", "auto");
                     $('#tableship_wrapper').css("overflow-x", "hidden");
                     $('#tableship_wrapper').css("overflow-y", "inherit");
@@ -1525,7 +1526,7 @@ TR&#7908;C CHÂN V&#7882;T</span></b></p>
                 }).done(function (res) {
                     var vung = getParameterByName("vung");
                     var vung_id = "";
-                    if (vung == null | vung == 1) {
+                    if (vung == null || vung == 1) {
                         vung_id = '5AEBB23FF45F3C235AFD86B510BF9E8C';
                     }
                     else if (vung == 2) {
@@ -1542,7 +1543,8 @@ TR&#7908;C CHÂN V&#7882;T</span></b></p>
                 }).fail(function (res) {
                     toastError("Lỗi", "Xóa thông tin tàu không thành công!");
                 })
-            } else {
+            }
+            else {
 
             }
         }
@@ -1552,7 +1554,7 @@ TR&#7908;C CHÂN V&#7882;T</span></b></p>
         }
 
         function btn_Load_listship() {
-            if (vung == null | vung == 1) {
+            if (vung == null || vung == 1) {
                 vung_id = '5AEBB23FF45F3C235AFD86B510BF9E8C';
                 document.getElementById("Vung1").classList.add("a_selected");
                 document.getElementById("Vung2").classList.remove("a_selected");

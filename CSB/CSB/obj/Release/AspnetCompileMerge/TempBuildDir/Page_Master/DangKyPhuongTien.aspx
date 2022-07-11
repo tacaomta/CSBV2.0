@@ -1,6 +1,14 @@
 ﻿<%@ Page Title="Đăng ký các phương tiện bảo vệ sức sống tàu và cứu sinh" Language="C#" MasterPageFile="~/Master/TrangChu.Master" AutoEventWireup="true" CodeBehind="DangKyPhuongTien.aspx.cs" Inherits="CSB.Page_Master.DangKyPhuongTien" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
+    <style>
+        .breadcrumb {
+            background-color: #ffffff !important;
+        }
+        .page-wrapper {
+            padding-top: 0 !important;
+        }
+    </style>
     <div class="main-body">
         <div class="page-wrapper">
             <div class="row">

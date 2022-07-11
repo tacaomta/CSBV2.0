@@ -1,5 +1,13 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Master/TrangChu.Master" AutoEventWireup="true" CodeBehind="ThoiGianLamViecMay.aspx.cs" Inherits="CSB.Page_Master.ThoiGianLamViecMay" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
+    <style>
+        .breadcrumb {
+            background-color: #ffffff !important;
+        }
+        .page-wrapper {
+            padding-top: 0 !important;
+        }
+    </style>
     <div class="main-body">
         <div class="page-wrapper">
             <div class="row">
