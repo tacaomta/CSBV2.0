@@ -50,7 +50,7 @@
         <div class="section" style="background-color: #fff; padding-bottom: 15px;">
             <div class="section-header" style="background-color: #fff;">
                 <div class="title">
-                    <h4 id="title" style="color: black; margin: 0">FORM BÁO CÁO KỸ THUẬT TÀU</h4>
+                    <h4 id="title" style="color: black; margin: 0">BÁO CÁO KỸ THUẬT TÀU</h4>
                     <div class="blue-hr"></div>
                 </div>
                 <div class="section-header-breadcrumb">
@@ -183,7 +183,7 @@
                             </div>
                             <div class="row">
                                 <p class="mr-1" style="font-weight: bold; text-align: left;">2. Tình trạng kỹ thuật hiện nay của các tàu</p>
-                                <span class="text-bold">CSB 4031, CSB 4035, CSB 4039</span>
+                                <span id="ship_name_tt" class="text-bold"></span>
                             </div>
                             <p class="mr-2" style="font-weight: bold; text-align: left;">a) Hệ động lực</p>
                             <div class="row">
@@ -338,7 +338,11 @@
 
                 },
                 success: function (data) {
+                    
                     $("#ship_name").html(data.TTCOBAN.SOHIEU);
+                    $("#ship_name_tt").html(data.TTCOBAN.SOHIEU);
+                    $("#title").html('BÁO CÁO KỸ THUẬT TÀU '+data.TTCOBAN.SOHIEU);
+                    
                     $("#Lmax").html(data.KT.Lmax); // Chiều dài lớn nhất
                     $("#Bmax").html(data.KT.Bmax); // Chiều rộng lớn nhất
                     $("#Htb").html(data.KT.Htb); // Chiều cao mạn
