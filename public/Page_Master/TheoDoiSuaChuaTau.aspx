@@ -1,5 +1,10 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Master/TrangChu.Master" AutoEventWireup="true" CodeBehind="TheoDoiSuaChuaTau.aspx.cs" Inherits="CSB.Page_Master.TheoDoiSuaChuaTau" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
+    <style>
+        #table_SuaChuaTau_wrapper {
+            overflow-x: hidden;
+        }
+    </style>
         <div id="form1">
         <div class="section" style="background-color: #fff; padding-bottom: 5px;">
             <div class="section-header" style="background-color: #fff;">
