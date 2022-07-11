@@ -8,7 +8,7 @@
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
     <UseGlobalApplicationHostFile />
-    <LastActiveSolutionConfig>Release|Any CPU</LastActiveSolutionConfig>
+    <LastActiveSolutionConfig>Debug|Any CPU</LastActiveSolutionConfig>
     <NameOfLastUsedPublishProfile>D:\Code Visual 2019\CanhSatBien\CSB\CSB\CSB\Properties\PublishProfiles\FolderProfile17.pubxml</NameOfLastUsedPublishProfile>
   </PropertyGroup>
   <PropertyGroup>

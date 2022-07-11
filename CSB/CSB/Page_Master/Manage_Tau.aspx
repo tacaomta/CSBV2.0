@@ -1386,7 +1386,7 @@ TR&#7908;C CHÂN V&#7882;T</span></b></p>
         }
 
         $(document).ready(function () {
-            if (vung == null | vung == 1) {
+            if (vung == null || vung == 1) {
                 vung_id = '5AEBB23FF45F3C235AFD86B510BF9E8C';
                 document.getElementById("Vung1").classList.add("a_selected");
                 document.getElementById("Vung2").classList.remove("a_selected");
@@ -1525,7 +1525,7 @@ TR&#7908;C CHÂN V&#7882;T</span></b></p>
                 }).done(function (res) {
                     var vung = getParameterByName("vung");
                     var vung_id = "";
-                    if (vung == null | vung == 1) {
+                    if (vung == null || vung == 1) {
                         vung_id = '5AEBB23FF45F3C235AFD86B510BF9E8C';
                     }
                     else if (vung == 2) {
@@ -1542,7 +1542,8 @@ TR&#7908;C CHÂN V&#7882;T</span></b></p>
                 }).fail(function (res) {
                     toastError("Lỗi", "Xóa thông tin tàu không thành công!");
                 })
-            } else {
+            }
+            else {
 
             }
         }
@@ -1552,7 +1553,7 @@ TR&#7908;C CHÂN V&#7882;T</span></b></p>
         }
 
         function btn_Load_listship() {
-            if (vung == null | vung == 1) {
+            if (vung == null || vung == 1) {
                 vung_id = '5AEBB23FF45F3C235AFD86B510BF9E8C';
                 document.getElementById("Vung1").classList.add("a_selected");
                 document.getElementById("Vung2").classList.remove("a_selected");

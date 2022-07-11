@@ -4446,6 +4446,7 @@
             });
         };
         function add_HETRUCCHANVIT() {
+            debugger
             var form = document.getElementById("form-add-HETRUCCHANVIT");
             console.log(form.checkValidity());
             if (form.checkValidity() == true) {
