@@ -5,7 +5,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <_PublishTargetUrl>C:\Users\Linh\Documents\GitHub\CSBV2.0\public</_PublishTargetUrl>
-    <History>True|2022-07-05T15:07:11.7810557Z;True|2022-07-03T17:53:05.2890419+07:00;True|2022-07-01T12:26:38.3556407+07:00;True|2022-06-28T11:14:50.5252768+07:00;True|2022-06-28T11:01:49.1801526+07:00;True|2022-06-28T00:38:04.2961563+07:00;True|2022-06-26T16:47:06.4962460+07:00;True|2022-04-28T09:53:53.8908883+07:00;True|2022-03-24T17:00:53.7084124+07:00;</History>
+    <History>True|2022-07-12T17:02:04.2303090Z;True|2022-07-05T22:07:11.7810557+07:00;True|2022-07-03T17:53:05.2890419+07:00;True|2022-07-01T12:26:38.3556407+07:00;True|2022-06-28T11:14:50.5252768+07:00;True|2022-06-28T11:01:49.1801526+07:00;True|2022-06-28T00:38:04.2961563+07:00;True|2022-06-26T16:47:06.4962460+07:00;True|2022-04-28T09:53:53.8908883+07:00;True|2022-03-24T17:00:53.7084124+07:00;</History>
   </PropertyGroup>
   <ItemGroup>
     <File Include="About.aspx">
@@ -84,10 +84,10 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>02/04/2021 21:27:12</publishTime>
     </File>
     <File Include="bin/CSB.dll">
-      <publishTime>07/05/2022 22:07:09</publishTime>
+      <publishTime>07/13/2022 00:02:01</publishTime>
     </File>
     <File Include="bin/CSB.pdb">
-      <publishTime>07/05/2022 22:07:09</publishTime>
+      <publishTime>07/13/2022 00:02:01</publishTime>
     </File>
     <File Include="bin/Microsoft.AspNet.FriendlyUrls.dll">
       <publishTime>04/08/2022 08:01:24</publishTime>
@@ -522,7 +522,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>05/25/2022 22:39:36</publishTime>
     </File>
     <File Include="Master/TrangChu.Master">
-      <publishTime>07/05/2022 21:53:25</publishTime>
+      <publishTime>07/13/2022 00:01:40</publishTime>
     </File>
     <File Include="Page_Master/Add_Ship.aspx">
       <publishTime>06/06/2022 14:12:19</publishTime>
@@ -534,25 +534,25 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>06/15/2022 15:55:22</publishTime>
     </File>
     <File Include="Page_Master/DacDiemChung.aspx">
-      <publishTime>07/03/2022 17:14:59</publishTime>
+      <publishTime>07/12/2022 16:56:30</publishTime>
     </File>
     <File Include="Page_Master/DangKyPhuongTien.aspx">
-      <publishTime>07/01/2022 12:25:28</publishTime>
+      <publishTime>07/09/2022 17:12:44</publishTime>
     </File>
     <File Include="Page_Master/FormBaoCao.aspx">
-      <publishTime>06/28/2022 00:35:37</publishTime>
+      <publishTime>07/13/2022 00:00:42</publishTime>
     </File>
     <File Include="Page_Master/HoatDongTau.aspx">
-      <publishTime>07/01/2022 15:41:10</publishTime>
+      <publishTime>07/09/2022 17:12:44</publishTime>
     </File>
     <File Include="Page_Master/Information_User.aspx">
       <publishTime>07/01/2022 15:41:10</publishTime>
     </File>
     <File Include="Page_Master/KiemTraKyThuat.aspx">
-      <publishTime>06/20/2022 21:38:52</publishTime>
+      <publishTime>07/09/2022 17:12:44</publishTime>
     </File>
     <File Include="Page_Master/Login.aspx">
-      <publishTime>07/05/2022 21:53:25</publishTime>
+      <publishTime>07/13/2022 00:01:29</publishTime>
     </File>
     <File Include="Page_Master/Manage_ChuyenNganh.aspx">
       <publishTime>06/20/2022 21:38:52</publishTime>
@@ -579,10 +579,10 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>06/20/2022 21:38:52</publishTime>
     </File>
     <File Include="Page_Master/Manage_Staff.aspx">
-      <publishTime>07/01/2022 15:41:10</publishTime>
+      <publishTime>07/09/2022 17:12:44</publishTime>
     </File>
     <File Include="Page_Master/Manage_Tau.aspx">
-      <publishTime>07/04/2022 10:47:58</publishTime>
+      <publishTime>07/12/2022 20:59:48</publishTime>
     </File>
     <File Include="Page_Master/Manage_user.aspx">
       <publishTime>06/20/2022 21:38:52</publishTime>
@@ -603,25 +603,25 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>06/20/2022 22:35:36</publishTime>
     </File>
     <File Include="Page_Master/TaiNanHuHong.aspx">
-      <publishTime>06/20/2022 17:06:48</publishTime>
+      <publishTime>07/09/2022 17:12:44</publishTime>
     </File>
     <File Include="Page_Master/ThanVo.aspx">
       <publishTime>06/15/2022 15:46:21</publishTime>
     </File>
     <File Include="Page_Master/TheoDoiCaiHoanThayThe.aspx">
-      <publishTime>06/20/2022 17:14:37</publishTime>
+      <publishTime>07/09/2022 17:12:44</publishTime>
     </File>
     <File Include="Page_Master/TheoDoiSuaChuaTau.aspx">
-      <publishTime>06/20/2022 17:06:48</publishTime>
+      <publishTime>07/09/2022 17:12:44</publishTime>
     </File>
     <File Include="Page_Master/ThoiGianLamViecMay.aspx">
-      <publishTime>06/21/2022 11:30:55</publishTime>
+      <publishTime>07/09/2022 17:12:44</publishTime>
     </File>
     <File Include="Page_Master/TinhNangChuYeu.aspx">
-      <publishTime>07/05/2022 21:53:25</publishTime>
+      <publishTime>07/12/2022 16:56:30</publishTime>
     </File>
     <File Include="Page_Master/TinhNangThietBi.aspx">
-      <publishTime>07/01/2022 15:41:10</publishTime>
+      <publishTime>07/12/2022 16:56:30</publishTime>
     </File>
     <File Include="Page_Master/TrangChu.aspx">
       <publishTime>04/08/2022 08:01:23</publishTime>
@@ -855,7 +855,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>04/08/2022 08:01:23</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>07/05/2022 22:07:09</publishTime>
+      <publishTime>07/13/2022 00:02:02</publishTime>
     </File>
   </ItemGroup>
 </Project>

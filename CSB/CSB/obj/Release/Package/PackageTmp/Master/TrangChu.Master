@@ -1294,7 +1294,7 @@
     <script src="../Scripts/vendor/jquery.nicescroll.min.js"></script>
     <script>
         var linkapi = "http://localhost:8082/api/";
-       /* var baseaddress = "http://localhost:44347/";*/
+        //var baseaddress = "http://localhost:44347/";
         var baseaddress = "http://localhost:8080/";
         $(document).ready(function () {
             if (sessionStorage.getItem("userLoginUsername") != null) {
@@ -1359,7 +1359,7 @@
             }
         });
 
-        function exportToWord(element, filename) {
+        function exportToWord(element, filename, orientation = 'landscape') {
             if (!window.Blob) {
                 alert('Your legacy browser does not support this action.');
                 return;
@@ -1367,9 +1367,11 @@
             var html, link, blob, url, css;
             // EU A4 use: size: 841.95pt 595.35pt;
             // US Letter use: size:11.0in 8.5in;
+            var size = "595.35pt 841.95pt";
+            if (orientation == 'landscape') size = "841.95pt 595.35pt ";
             css = (
                 '<style>' +
-                '@page WordSection1{size: 841.95pt 595.35pt;mso-page-orientation: landscape;}' +
+                '@page WordSection1{size: ' + size + ';}' +
                 'div.WordSection1 {page: WordSection1;}' +
                 /*'table{border-collapse:collapse;}td{border:1px gray solid;width:5em;padding:2px;}' +*/
                 '</style>'

@@ -383,7 +383,7 @@
                                 </div>
                                 <div class="form-footer">
                                     <div class="left">
-                                        <a onclick="quayLai()" style="float: left" class="btn btn-success"><i class="bi bi-arrow-left-circle"></i> Quay lại</a>
+                                      <%--  <a onclick="quayLai()" style="float: left" class="btn btn-success"><i class="bi bi-arrow-left-circle"></i> Quay lại</a>--%>
                                     </div>
                                     <div class="right">
                                         <div onclick="remove_input_add_ship()" class="btn btn-danger" style="margin-right: 10px;">
