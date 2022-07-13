@@ -954,6 +954,7 @@ nghị, đề nghị</b>
             }
         }
         function xemTruoc() {
+            loadBCKyThuat();
             $("#baocao").removeAttr("hidden", "hidden");
         }
         function tatXemTruoc() {
