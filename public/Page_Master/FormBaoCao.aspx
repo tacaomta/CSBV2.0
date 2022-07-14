@@ -72,7 +72,7 @@
                                 <div class="horizontal-line" style="width: 20%;"></div>
                                 <div class="mt-2" style="display: flex; flex-direction: row; justify-content: center;">
                                     <p>Số:</p>
-                                    <input id="so" class="ml-2 mr-1 text-bold" style="width: 50px;" required/>
+                                    <input id="so" class="ml-2 mr-1 text-bold" style="width: 50px;" required />
                                     <p>/BC-KT</p>
                                 </div>
                             </div>
@@ -93,7 +93,7 @@
                             <div class="horizontal-line" style="width: 25%;"></div>
                             <div class="my-2" style="display: flex; flex-direction: row; justify-content: center;">
                                 <p>Kính gửi:</p>
-                                <input id="kinhgui" class="ml-2" required/>
+                                <input id="kinhgui" class="ml-2" required />
                             </div>
                             <div class="my-2" style="display: flex; flex-direction: row;">
                                 <p style="white-space: nowrap;">Căn cứ:</p>
@@ -204,42 +204,42 @@
                                 <input class="ml-2" style="width: 50px;" id="imaychinh2" required>
                                 <p class="mx-1 my-1" style="text-align: left;">đến</p>
                                 <%-- <span class="my-1">28</span>--%>
-                                <input class="ml-2" style="width: 50px;"  id="imaychinh3" required>
+                                <input class="ml-2" style="width: 50px;" id="imaychinh3" required>
                                 <p class="mx-1 my-1" style="text-align: left;">M/h trong điều kiện sóng cấp</p>
                                 <%--  <span class="my-1">3;</span>--%>
-                                <input class="ml-2" style="width: 50px;"  id="imaychinh4" required>
-                                <a class="mx-1" onclick="XTT_MayChinh()" style="text-decoration: none;cursor: pointer;">(Xem tình trạng)</a>
+                                <input class="ml-2" style="width: 50px;" id="imaychinh4" required>
+                                <a class="mx-1" onclick="XTT_MayChinh()" style="text-decoration: none; cursor: pointer;">(Xem tình trạng)</a>
                             </div>
                             <div class="row form-s2">
                                 <p class="mr-1 my-1" style="text-align: left; padding-left: 15px;">- Máy phát điện, hệ thống điện, hệ thống cứu hộ hoạt động</p>
                                 <%--  <span class="my-1">bình thường;</span>--%>
                                 <input class="ml-2" id="iphatdien" required>
-                                <a class="ml-2" onclick="XTT_MayPhatDien()" style="text-decoration: none;cursor: pointer;">(Xem tình trạng)</a>
+                                <a class="ml-2" onclick="XTT_MayPhatDien()" style="text-decoration: none; cursor: pointer;">(Xem tình trạng)</a>
                             </div>
                             <div class="row form-s2">
                                 <p class="mr-1 my-1" style="text-align: left; padding-left: 15px;">- Các hệ thống và thiết bị bổ trợ đang hoạt động</p>
                                 <%-- <span class="my-1">bình thường;</span>--%>
                                 <input class="ml-2" id="hebotro" required>
-                                <a class="ml-2" onclick="XTT_CacHeThongVaThietBiBoTro()" style="text-decoration: none;cursor: pointer;">(Xem tình trạng)</a>
+                                <a class="ml-2" onclick="XTT_CacHeThongVaThietBiBoTro()" style="text-decoration: none; cursor: pointer;">(Xem tình trạng)</a>
                             </div>
                             <div class="row form-s2">
                                 <p class="mr-1 my-1" style="text-align: left; padding-left: 15px;">- Thân vỏ</p>
                                 <%-- <span class="my-1">vẫn kín nước;</span>--%>
                                 <input class="ml-2" id="thanvo" required>
-                                <a class="ml-2" onclick="XTT_ThanVo()" style="text-decoration: none;cursor: pointer;">(Xem tình trạng)</a>
+                                <a class="ml-2" onclick="XTT_ThanVo()" style="text-decoration: none; cursor: pointer;">(Xem tình trạng)</a>
                             </div>
                             <div class="row form-s2">
                                 <p class="mr-1 my-1" style="text-align: left; padding-left: 15px;">- Hệ trục chân vịt</p>
                                 <%--<span class="my-1">đảm bảo.</span>--%>
                                 <input class="ml-2" id="chanvit" required>
-                                <a class="ml-2" onclick="XTT_HeTrucChanVit()" style="text-decoration: none;cursor: pointer;">(Xem tình trạng)</a>
+                                <a class="ml-2" onclick="XTT_HeTrucChanVit()" style="text-decoration: none; cursor: pointer;">(Xem tình trạng)</a>
                             </div>
                             <p class="mr-2" style="font-weight: bold; text-align: left;">b) Trang bị Vũ khí, khí tài</p>
                             <div class="row form-s2">
                                 <p class="mr-1 my-1" style="text-align: left; padding-left: 15px;">- Vũ khí: Hệ thống vũ khí trên tàu</p>
                                 <%--<span class="my-1">đầy đủ cơ số, hoạt động bình thường;</span>--%>
                                 <input class="ml-2" id="vukhi" required>
-                                <a class="ml-2" onclick="XTT_VuKhi()" style="text-decoration: none;cursor: pointer;">(Xem tình trạng)</a>
+                                <a class="ml-2" onclick="XTT_VuKhi()" style="text-decoration: none; cursor: pointer;">(Xem tình trạng)</a>
                             </div>
                             <p class="mr-2" style="text-align: left;">- Khí tài:</p>
                             <div class="row form-s2">
@@ -249,13 +249,13 @@
                                 <p class="mr-1 my-1" style="text-align: left;">, hệ thống VSAT</p>
                                 <%--  <span class="my-1">hoạt động ổn định, đường truyền thông suốt;</span>--%>
                                 <input class="ml-2" id="vsat" required>
-                                <a class="ml-2" onclick="XTT_HeThongVSAT()" style="text-decoration: none;cursor: pointer;">(Xem tình trạng)</a>
+                                <a class="ml-2" onclick="XTT_HeThongVSAT()" style="text-decoration: none; cursor: pointer;">(Xem tình trạng)</a>
                             </div>
                             <div class="row form-s2">
                                 <p class="mr-2 my-1" style="text-align: left; padding-left: 15px;">+ Thiết bị Thông tin liên lạc: Hoạt động</p>
                                 <%--<span class="my-1">bình thường, đảm bảo thông tin liên lạc.</span>--%>
                                 <input class="ml-2" id="lienlac" required>
-                                <a class="ml-2" onclick="XTT_ThietBiThongTinLienLac()" style="text-decoration: none;cursor: pointer;">(Xem tình trạng)</a>
+                                <a class="ml-2" onclick="XTT_ThietBiThongTinLienLac()" style="text-decoration: none; cursor: pointer;">(Xem tình trạng)</a>
                             </div>
                             <p class="mr-2" style="font-weight: bold; text-align: left;">3. Kiến nghị, đề nghị</p>
                             <textarea rows="3" form="rpform" required style="width: 100%; padding: 5px; resize: none;" id="kiennghi"></textarea>
@@ -277,7 +277,7 @@
                             </div>
                             <div class="row mt-5">
                                 <div class="col-6">
-                                    <div class="btn-rp btn btn-secondary" onclick="xemTruoc();"><span class="bi-eye"></span>Xem trước</div>
+                                    <div class="btn-rp btn btn-secondary" data-toggle="modal" data-target="#modal-xemTruoc" onclick="xemTruoc();"><span class="bi-eye"></span>Xem trước</div>
                                 </div>
                                 <div class="col-6">
                                     <button type="submit" class="btn-rp btn btn-primary" onclick="xuatWordBCKyThuat();"><span class="bi-download"></span>Xuất báo cáo</button>
@@ -289,354 +289,367 @@
             </form>
         </div>
     </div>
-    <div id="baocao" style="display: flex; background-color:white;" hidden="hidden">
-    <div class="btn btn-danger" onclick="tatXemTruoc()" style="
-    position: absolute;
-    margin-top: 5px;
-    margin-left: calc(50% - 515px);
-">
-        X
-    </div>
-    <div id="contentptrTau" style="border: solid;width: 595.35pt;padding: 90px;margin: auto;" >
-        <div class="WordSection1">
-            <table class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0" width="612"
-                style='width: 459.0pt; border-collapse: collapse'>
-                <tr style='height: 13.5pt'>
-                    <td width="258" valign="top" style='width: 193.5pt; padding: 0in 5.4pt 0in 5.4pt; height: 13.5pt'>
-                        <p class="MsoNormal" align="center" style='text-align: center'>
-                            <span lang="VI">BỘ TƯ LỆNH CẢNH SÁT BIỂN</span>
-                        </p>
-                    </td>
-                    <td width="354" valign="top" style='width: 265.5pt; padding: 0in 5.4pt 0in 5.4pt; height: 13.5pt'>
-                        <p class="MsoNormal" align="center" style='text-align: center'>
-                            <b><span lang="VI">CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM</span></b><span lang="VI"> </span>
-                        </p>
-                    </td>
-                </tr>
-                <tr style='height: 22.9pt'>
-                    <td width="258" valign="top" style='width: 193.5pt; padding: 0in 5.4pt 0in 5.4pt; height: 22.9pt'>
-                        <p class="MsoNormal" align="center" style='text-align: center'>
-                            <b><span id="donvi">CỤ<u>C KỸ TH</u>UẬT</span></b>
-                        </p>
-                    </td>
-                    <td width="354" valign="top" style='width: 265.5pt; padding: 0in 5.4pt 0in 5.4pt; height: 22.9pt'>
-                        <p class="MsoNormal" align="center" style='text-align: center'>
-                            <b><span lang="VI">Độc L<u>ập – Tự Do – Hạnh P</u>húc</span></b><span lang="VI"> </span>
-                        </p>
-                    </td>
-                </tr>
-                <tr style='height: 26.1pt'>
-                    <td width="258" valign="top" style='width: 193.5pt; padding: 0in 5.4pt 0in 5.4pt; height: 26.1pt'>
-                        <p class="MsoNormal" align="center" style='text-align: center'>
-                            <b><span lang="VI">&nbsp;</span></b><span
-                                lang="VI">Số: <span id="soBC">2204</span>/</span>BC-KT
-                        </p>
-                    </td>
-                    <td width="354" valign="top" style='width: 265.5pt; padding: 0in 5.4pt 0in 5.4pt; height: 26.1pt'>
-                        <p class="MsoNormal" align="right" style='text-align: right'>
-                            <i><span lang="VI">Hà Nội, ngày <span id="sp-day">12</span>&nbsp;tháng <span id="sp-month">7</span>&nbsp;năm <span id="sp-year">2022</span></span></i><span lang="VI"> </span>
-                        </p>
-                    </td>
-                </tr>
-            </table>
-            <p class="MsoNormal" align="center" style='text-align: center'>
-                <b><span style='font-size: 16.0pt'>BÁO CÁO</span></b>
-            </p>
-            <p class="MsoNormal" align="center" style='text-align: center'>
-                <b><span id="tenBC">Tên báo cáo: Tình trạng kỹ thuật tàu CSB4002 phục vụ kiểm tra công tác triển khai thực hiện nhiệm vụ IUU khu vực …</span></b>
-            </p>
-            <p class="MsoNormal" align="center" style='text-align: center'>
-                Kính gửi: <span id="kinhGuiBC">Tư lệnh Cảnh sát Biển</span>
-            </p>
-            <p class="MsoNormal" style='margin-top: 6.0pt; text-align: justify; text-indent: .25in'>
-                <span id="canCu1BC">Căn
+
+    <div class="modal fade" id="modal-xemTruoc" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-xl" role="document">
+            <div class="modal-content">
+                <form id="form-add-DANGKYTAINANHUHONG" onsubmit="return false">
+                    <div class="card auth_form" style="margin-bottom: 0px">
+                        <div class="modal-header">
+                            <h4 class="title-modal-banve font-weight-bold">Báo cáo kỹ thuật tàu </h4>
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+                        <div class="modal-body">
+                            <div id="baocao" style="display: flex; background-color: white;" hidden="hidden">
+                                <div id="contentptrTau" style="border: solid; width: 595.35pt; padding: 90px; margin: auto;">
+                                    <div class="WordSection1">
+                                        <table class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0" width="612"
+                                            style='width: 459.0pt; border-collapse: collapse'>
+                                            <tr style='height: 13.5pt'>
+                                                <td width="258" valign="top" style='width: 193.5pt; padding: 0in 5.4pt 0in 5.4pt; height: 13.5pt'>
+                                                    <p class="MsoNormal" align="center" style='text-align: center'>
+                                                        <span lang="VI">BỘ TƯ LỆNH CẢNH SÁT BIỂN</span>
+                                                    </p>
+                                                </td>
+                                                <td width="354" valign="top" style='width: 265.5pt; padding: 0in 5.4pt 0in 5.4pt; height: 13.5pt'>
+                                                    <p class="MsoNormal" align="center" style='text-align: center'>
+                                                        <b><span lang="VI">CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM</span></b><span lang="VI"> </span>
+                                                    </p>
+                                                </td>
+                                            </tr>
+                                            <tr style='height: 22.9pt'>
+                                                <td width="258" valign="top" style='width: 193.5pt; padding: 0in 5.4pt 0in 5.4pt; height: 22.9pt'>
+                                                    <p class="MsoNormal" align="center" style='text-align: center'>
+                                                        <b><span id="donvi">CỤ<u>C KỸ TH</u>UẬT</span></b>
+                                                    </p>
+                                                </td>
+                                                <td width="354" valign="top" style='width: 265.5pt; padding: 0in 5.4pt 0in 5.4pt; height: 22.9pt'>
+                                                    <p class="MsoNormal" align="center" style='text-align: center'>
+                                                        <b><span lang="VI">Độc L<u>ập – Tự Do – Hạnh P</u>húc</span></b><span lang="VI"> </span>
+                                                    </p>
+                                                </td>
+                                            </tr>
+                                            <tr style='height: 26.1pt'>
+                                                <td width="258" valign="top" style='width: 193.5pt; padding: 0in 5.4pt 0in 5.4pt; height: 26.1pt'>
+                                                    <p class="MsoNormal" align="center" style='text-align: center'>
+                                                        <b><span lang="VI">&nbsp;</span></b><span
+                                                            lang="VI">Số: <span id="soBC">2204</span>/</span>BC-KT
+                                                    </p>
+                                                </td>
+                                                <td width="354" valign="top" style='width: 265.5pt; padding: 0in 5.4pt 0in 5.4pt; height: 26.1pt'>
+                                                    <p class="MsoNormal" align="right" style='text-align: right'>
+                                                        <i><span lang="VI">Hà Nội, ngày <span id="sp-day">12</span>&nbsp;tháng <span id="sp-month">7</span>&nbsp;năm <span id="sp-year">2022</span></span></i><span lang="VI"> </span>
+                                                    </p>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                        <p class="MsoNormal" align="center" style='text-align: center'>
+                                            <b><span style='font-size: 16.0pt'>BÁO CÁO</span></b>
+                                        </p>
+                                        <p class="MsoNormal" align="center" style='text-align: center'>
+                                            <b><span id="tenBC">Tên báo cáo: Tình trạng kỹ thuật tàu CSB4002 phục vụ kiểm tra công tác triển khai thực hiện nhiệm vụ IUU khu vực …</span></b>
+                                        </p>
+                                        <p class="MsoNormal" align="center" style='text-align: center'>
+                                            Kính gửi: <span id="kinhGuiBC">Tư lệnh Cảnh sát Biển</span>
+                                        </p>
+                                        <p class="MsoNormal" style='margin-top: 6.0pt; text-align: justify; text-indent: .25in'>
+                                            <span id="canCu1BC">Căn
 cứ Kế hoạch số 1986/KH-BTL ngày 11/3/2022 của BTL CSB về kiểm tra công
 tác triển khai thực hiện nhiệm vụ IUU khu vực giáp ranh Việt Nam -
 Thái Lan - Malaixia kết hợp kiểm tra các đơn vị tại Đảo Thổ Chu, Côn
 Đảo</span>
-            </p>
-            <p class="MsoNormal" style='margin-top: 6.0pt; text-align: justify; text-indent: .25in'>
-                <span id="cuncu2BC">Căn
+                                        </p>
+                                        <p class="MsoNormal" style='margin-top: 6.0pt; text-align: justify; text-indent: .25in'>
+                                            <span id="cuncu2BC">Căn
 cứ Tình trạng kỹ thuật của các tàu CSB 4031/BTL Vùng CSB 3, CSB 4039,
 CSB 4035/BTL Vùng CSB 4</span>
-            </p>
-            <p class="MsoNormal" style='margin-top: 6.0pt; text-align: justify; text-indent: .25in'>
-                Cục Kỹ thuật báo cáo như sau:
-            </p>
-            <p class="MsoListParagraph" style='margin-top: 12.0pt; margin-right: 0in; margin-bottom: 6.0pt; margin-left: 0in; text-indent: .25in'>
-                <b><span lang="VI">1.</span></b><b><span
-                    lang="VI" style='font-size: 7.0pt'>&nbsp;&nbsp; </span>Thông số cơ bản của tàu <span id="tentau2">Tentau</span></b>
-            </p>
-            <table class="MsoTableGrid" border="0" cellspacing="0" cellpadding="0" width="613"
-                style='width: 459.45pt; margin-left: -4.5pt; border-collapse: collapse; border: none'>
-                <tr>
-                    <td width="312" valign="top" style='width: 3.25in; padding: 0in 5.4pt 0in 5.4pt'>
-                        <p class="MsoListParagraph" style='margin-top: 0in; margin-right: 0in; margin-bottom: 6.0pt; margin-left: 0in; text-indent: 16.9pt'>
-                            - Chiều dài lớn nhất
-                        </p>
-                    </td>
-                    <td width="301" valign="top" style='width: 225.45pt; padding: 0in 5.4pt 0in 5.4pt'>
-                        <p class="MsoListParagraph" style='margin-top: 0in; margin-right: 0in; margin-bottom: 6.0pt; margin-left: 0in'>
-                            L<sub>max</sub> = <span id="lmax">45.6</span> m;
-                        </p>
-                    </td>
-                </tr>
-                <tr>
-                    <td width="312" valign="top" style='width: 3.25in; padding: 0in 5.4pt 0in 5.4pt'>
-                        <p class="MsoListParagraph" style='margin-top: 0in; margin-right: 0in; margin-bottom: 6.0pt; margin-left: 0in; text-indent: 17.1pt'>
-                            - Chiều rộng lớn nhất
-                        </p>
-                    </td>
-                    <td width="301" valign="top" style='width: 225.45pt; padding: 0in 5.4pt 0in 5.4pt'>
-                        <p class="MsoListParagraph" style='margin-top: 0in; margin-right: 0in; margin-bottom: 6.0pt; margin-left: 0in'>
-                            B<sub>max</sub> = <span id="bmax">9.3</span> m;
-                        </p>
-                    </td>
-                </tr>
-                <tr>
-                    <td width="312" valign="top" style='width: 3.25in; padding: 0in 5.4pt 0in 5.4pt'>
-                        <p class="MsoListParagraph" style='margin-top: 0in; margin-right: 0in; margin-bottom: 6.0pt; margin-left: 0in; text-indent: 17.1pt'>
-                            - Chiều cao mạn
-                        </p>
-                    </td>
-                    <td width="301" valign="top" style='width: 225.45pt; padding: 0in 5.4pt 0in 5.4pt'>
-                        <p class="MsoListParagraph" style='margin-top: 0in; margin-right: 0in; margin-bottom: 6.0pt; margin-left: 0in'>
-                            H = <span id="hman">3.75</span> m;
-                        </p>
-                    </td>
-                </tr>
-                <tr>
-                    <td width="312" valign="top" style='width: 3.25in; padding: 0in 5.4pt 0in 5.4pt'>
-                        <p class="MsoListParagraph" style='margin-top: 0in; margin-right: 0in; margin-bottom: 6.0pt; margin-left: 0in; text-indent: 17.0pt'>
-                            - Mớn nước
-                        </p>
-                    </td>
-                    <td width="301" valign="top" style='width: 225.45pt; padding: 0in 5.4pt 0in 5.4pt'>
-                        <p class="MsoListParagraph">Tm = <span id="tmonnuoc">5.3</span> m;</p>
-                    </td>
-                </tr>
-                <tr>
-                    <td width="312" valign="top" style='width: 3.25in; padding: 0in 5.4pt 0in 5.4pt'>
-                        <p class="MsoListParagraph" style='margin-top: 0in; margin-right: 0in; margin-bottom: 6.0pt; margin-left: 0in; text-indent: 17.0pt'>
-                            - Máy chính
-                        </p>
-                    </td>
-                    <td width="301" valign="top" style='width: 225.45pt; padding: 0in 5.4pt 0in 5.4pt'>
-                        <p class="MsoListParagraph" style='margin-top: 0in; margin-right: 0in; margin-bottom: 6.0pt; margin-left: 0in'>
-                            <span id="maychinhBC1">00</span> máy chính;
-                        </p>
-                    </td>
-                </tr>
-                <tr>
-                    <td width="312" valign="top" style='width: 3.25in; padding: 0in 5.4pt 0in 5.4pt'>
-                        <p class="MsoListParagraph" style='margin-top: 0in; margin-right: 0in; margin-bottom: 6.0pt; margin-left: 0in; text-indent: 17.0pt'>
-                            - Vận tốc lớn nhất theo thiết
+                                        </p>
+                                        <p class="MsoNormal" style='margin-top: 6.0pt; text-align: justify; text-indent: .25in'>
+                                            Cục Kỹ thuật báo cáo như sau:
+                                        </p>
+                                        <p class="MsoListParagraph" style='margin-top: 12.0pt; margin-right: 0in; margin-bottom: 6.0pt; margin-left: 0in; text-indent: .25in'>
+                                            <b><span lang="VI">1.</span></b><b><span
+                                                lang="VI" style='font-size: 7.0pt'>&nbsp;&nbsp; </span>Thông số cơ bản của tàu <span id="tentau2">Tentau</span></b>
+                                        </p>
+                                        <table class="MsoTableGrid" border="0" cellspacing="0" cellpadding="0" width="633"
+                                            style='width: 489.45pt; margin-left: -4.5pt; border-collapse: collapse; border: none'>
+                                            <tr>
+                                                <td width="332" valign="top" style='width: 3.25in; padding: 0in 5.4pt 0in 5.4pt'>
+                                                    <p class="MsoListParagraph" style='margin-top: 0in; margin-right: 0in; margin-bottom: 6.0pt; margin-left: 0in; text-indent: 16.9pt'>
+                                                        - Chiều dài lớn nhất
+                                                    </p>
+                                                </td>
+                                                <td width="301" valign="top" style='width: 225.45pt; padding: 0in 5.4pt 0in 5.4pt'>
+                                                    <p class="MsoListParagraph" style='margin-top: 0in; margin-right: 0in; margin-bottom: 6.0pt; margin-left: 0in'>
+                                                        L<sub>max</sub> = <span id="lmax">45.6</span> m;
+                                                    </p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td width="332" valign="top" style='width: 3.25in; padding: 0in 5.4pt 0in 5.4pt'>
+                                                    <p class="MsoListParagraph" style='margin-top: 0in; margin-right: 0in; margin-bottom: 6.0pt; margin-left: 0in; text-indent: 17.1pt'>
+                                                        - Chiều rộng lớn nhất
+                                                    </p>
+                                                </td>
+                                                <td width="301" valign="top" style='width: 225.45pt; padding: 0in 5.4pt 0in 5.4pt'>
+                                                    <p class="MsoListParagraph" style='margin-top: 0in; margin-right: 0in; margin-bottom: 6.0pt; margin-left: 0in'>
+                                                        B<sub>max</sub> = <span id="bmax">9.3</span> m;
+                                                    </p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td width="332" valign="top" style='width: 3.25in; padding: 0in 5.4pt 0in 5.4pt'>
+                                                    <p class="MsoListParagraph" style='margin-top: 0in; margin-right: 0in; margin-bottom: 6.0pt; margin-left: 0in; text-indent: 17.1pt'>
+                                                        - Chiều cao mạn
+                                                    </p>
+                                                </td>
+                                                <td width="301" valign="top" style='width: 225.45pt; padding: 0in 5.4pt 0in 5.4pt'>
+                                                    <p class="MsoListParagraph" style='margin-top: 0in; margin-right: 0in; margin-bottom: 6.0pt; margin-left: 0in'>
+                                                        H = <span id="hman">3.75</span> m;
+                                                    </p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td width="332" valign="top" style='width: 3.25in; padding: 0in 5.4pt 0in 5.4pt'>
+                                                    <p class="MsoListParagraph" style='margin-top: 0in; margin-right: 0in; margin-bottom: 6.0pt; margin-left: 0in; text-indent: 17.0pt'>
+                                                        - Mớn nước
+                                                    </p>
+                                                </td>
+                                                <td width="301" valign="top" style='width: 225.45pt; padding: 0in 5.4pt 0in 5.4pt'>
+                                                    <p class="MsoListParagraph">Tm = <span id="tmonnuoc">5.3</span> m;</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td width="332" valign="top" style='width: 3.25in; padding: 0in 5.4pt 0in 5.4pt'>
+                                                    <p class="MsoListParagraph" style='margin-top: 0in; margin-right: 0in; margin-bottom: 6.0pt; margin-left: 0in; text-indent: 17.0pt'>
+                                                        - Máy chính
+                                                    </p>
+                                                </td>
+                                                <td width="301" valign="top" style='width: 225.45pt; padding: 0in 5.4pt 0in 5.4pt'>
+                                                    <p class="MsoListParagraph" style='margin-top: 0in; margin-right: 0in; margin-bottom: 6.0pt; margin-left: 0in'>
+                                                        <span id="maychinhBC1">00</span> máy chính;
+                                                    </p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td width="332" valign="top" style='width: 3.25in; padding: 0in 5.4pt 0in 5.4pt'>
+                                                    <p class="MsoListParagraph" style='margin-top: 0in; margin-right: 0in; margin-bottom: 6.0pt; margin-left: 0in; text-indent: 17.0pt'>
+                                                        - Vận tốc lớn nhất theo thiết
   kế
-                        </p>
-                    </td>
-                    <td width="301" valign="top" style='width: 225.45pt; padding: 0in 5.4pt 0in 5.4pt'>
-                        <p class="MsoListParagraph">v<sub>max</sub> = <span id="vmaxBC">45</span> hải lý/giờ;</p>
-                    </td>
-                </tr>
-                <tr>
-                    <td width="312" valign="top" style='width: 3.25in; padding: 0in 5.4pt 0in 5.4pt'>
-                        <p class="MsoListParagraph" style='margin-top: 0in; margin-right: 0in; margin-bottom: 6.0pt; margin-left: 0in; text-indent: 17.0pt'>
-                            - Vận tốc kinh tế theo thiết
+                                                    </p>
+                                                </td>
+                                                <td width="301" valign="top" style='width: 225.45pt; padding: 0in 5.4pt 0in 5.4pt'>
+                                                    <p class="MsoListParagraph">v<sub>max</sub> = <span id="vmaxBC">45</span> hải lý/giờ;</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td width="332" valign="top" style='width: 3.25in; padding: 0in 5.4pt 0in 5.4pt'>
+                                                    <p class="MsoListParagraph" style='margin-top: 0in; margin-right: 0in; margin-bottom: 6.0pt; margin-left: 0in; text-indent: 17.0pt'>
+                                                        - Vận tốc kinh tế theo thiết
   kế
-                        </p>
-                    </td>
-                    <td width="301" valign="top" style='width: 225.45pt; padding: 0in 5.4pt 0in 5.4pt'>
-                        <p class="MsoListParagraph" style='margin-top: 0in; margin-right: 0in; margin-bottom: 6.0pt; margin-left: 0in'>
-                            v<sub>kt</sub> = <span id="vktBC">45</span> hải lý/giờ;
-                        </p>
-                    </td>
-                </tr>
-                <tr>
-                    <td width="312" valign="top" style='width: 3.25in; padding: 0in 5.4pt 0in 5.4pt'>
-                        <p class="MsoListParagraph" style='margin-top: 0in; margin-right: 0in; margin-bottom: 6.0pt; margin-left: 0in; text-indent: 17.0pt'>
-                            - Lượng chiếm nước đầy tải
-                        </p>
-                    </td>
-                    <td width="301" valign="top" style='width: 225.45pt; padding: 0in 5.4pt 0in 5.4pt'>
-                        <p class="MsoListParagraph" style='margin-top: 0in; margin-right: 0in; margin-bottom: 6.0pt; margin-left: 0in'>
-                            D<sub>dt</sub> = <span id="ddtBC">176</span> tấn;
-                        </p>
-                    </td>
-                </tr>
-                <tr>
-                    <td width="312" valign="top" style='width: 3.25in; padding: 0in 5.4pt 0in 5.4pt'>
-                        <p class="MsoListParagraph" style='margin-top: 0in; margin-right: 0in; margin-bottom: 6.0pt; margin-left: 0in; text-indent: 17.0pt'>
-                            - Số hệ trục chân vịt
-                        </p>
-                    </td>
-                    <td width="301" valign="top" style='width: 225.45pt; padding: 0in 5.4pt 0in 5.4pt'>
-                        <p class="MsoListParagraph" style='margin-top: 0in; margin-right: 0in; margin-bottom: 6.0pt; margin-left: 0in'>
-                            <span id="chanvitBC">03</span> hệ trục;
-                        </p>
-                    </td>
-                </tr>
-                <tr>
-                    <td width="312" valign="top" style='width: 3.25in; padding: 0in 5.4pt 0in 5.4pt'>
-                        <p class="MsoListParagraph" style='margin-top: 0in; margin-right: 0in; margin-bottom: 6.0pt; margin-left: 0in; text-indent: 17.0pt'>
-                            - Tầm hoạt động
-                        </p>
-                    </td>
-                    <td width="301" valign="top" style='width: 225.45pt; padding: 0in 5.4pt 0in 5.4pt'>
-                        <p class="MsoListParagraph" style='margin-top: 0in; margin-right: 0in; margin-bottom: 6.0pt; margin-left: 0in'>
-                            <span id="tamhoatdong">2500</span> hải lý;
-                        </p>
-                    </td>
-                </tr>
-                <tr>
-                    <td width="312" valign="top" style='width: 3.25in; padding: 0in 5.4pt 0in 5.4pt'>
-                        <p class="MsoListParagraph" style='margin-top: 0in; margin-right: 0in; margin-bottom: 6.0pt; margin-left: 0in; text-indent: 17.0pt'>
-                            - Thời gian hoạt động liên tục
+                                                    </p>
+                                                </td>
+                                                <td width="301" valign="top" style='width: 225.45pt; padding: 0in 5.4pt 0in 5.4pt'>
+                                                    <p class="MsoListParagraph" style='margin-top: 0in; margin-right: 0in; margin-bottom: 6.0pt; margin-left: 0in'>
+                                                        v<sub>kt</sub> = <span id="vktBC">45</span> hải lý/giờ;
+                                                    </p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td width="332" valign="top" style='width: 3.25in; padding: 0in 5.4pt 0in 5.4pt'>
+                                                    <p class="MsoListParagraph" style='margin-top: 0in; margin-right: 0in; margin-bottom: 6.0pt; margin-left: 0in; text-indent: 17.0pt'>
+                                                        - Lượng chiếm nước đầy tải
+                                                    </p>
+                                                </td>
+                                                <td width="301" valign="top" style='width: 225.45pt; padding: 0in 5.4pt 0in 5.4pt'>
+                                                    <p class="MsoListParagraph" style='margin-top: 0in; margin-right: 0in; margin-bottom: 6.0pt; margin-left: 0in'>
+                                                        D<sub>dt</sub> = <span id="ddtBC">176</span> tấn;
+                                                    </p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td width="332" valign="top" style='width: 3.25in; padding: 0in 5.4pt 0in 5.4pt'>
+                                                    <p class="MsoListParagraph" style='margin-top: 0in; margin-right: 0in; margin-bottom: 6.0pt; margin-left: 0in; text-indent: 17.0pt'>
+                                                        - Số hệ trục chân vịt
+                                                    </p>
+                                                </td>
+                                                <td width="301" valign="top" style='width: 225.45pt; padding: 0in 5.4pt 0in 5.4pt'>
+                                                    <p class="MsoListParagraph" style='margin-top: 0in; margin-right: 0in; margin-bottom: 6.0pt; margin-left: 0in'>
+                                                        <span id="chanvitBC">03</span> hệ trục;
+                                                    </p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td width="332" valign="top" style='width: 3.25in; padding: 0in 5.4pt 0in 5.4pt'>
+                                                    <p class="MsoListParagraph" style='margin-top: 0in; margin-right: 0in; margin-bottom: 6.0pt; margin-left: 0in; text-indent: 17.0pt'>
+                                                        - Tầm hoạt động
+                                                    </p>
+                                                </td>
+                                                <td width="301" valign="top" style='width: 225.45pt; padding: 0in 5.4pt 0in 5.4pt'>
+                                                    <p class="MsoListParagraph" style='margin-top: 0in; margin-right: 0in; margin-bottom: 6.0pt; margin-left: 0in'>
+                                                        <span id="tamhoatdong">2500</span> hải lý;
+                                                    </p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td width="332" valign="top" style='width: 3.25in; padding: 0in 5.4pt 0in 5.4pt'>
+                                                    <p class="MsoListParagraph" style='margin-top: 0in; margin-right: 0in; margin-bottom: 6.0pt; margin-left: 0in; text-indent: 17.0pt'>
+                                                        - Thời gian hoạt động liên tục
   trên biển
-                        </p>
-                    </td>
-                    <td width="301" valign="top" style='width: 225.45pt; padding: 0in 5.4pt 0in 5.4pt'>
-                        <p class="MsoListParagraph" style='margin-top: 0in; margin-right: 0in; margin-bottom: 6.0pt; margin-left: 0in'>
-                            <span id="tgianhd">30</span> ngày đêm;
-                        </p>
-                    </td>
-                </tr>
-                <tr>
-                    <td width="312" valign="top" style='width: 3.25in; padding: 0in 5.4pt 0in 5.4pt'>
-                        <p class="MsoListParagraph" style='margin-top: 0in; margin-right: 0in; margin-bottom: 6.0pt; margin-left: 0in; text-indent: 17.0pt'>
-                            - Lượng dự trữ dầu cháy
-                        </p>
-                    </td>
-                    <td width="301" valign="top" style='width: 225.45pt; padding: 0in 5.4pt 0in 5.4pt'>
-                        <p class="MsoListParagraph" style='margin-top: 0in; margin-right: 0in; margin-bottom: 6.0pt; margin-left: 0in'>
-                            <span id="dtdauchay">86,5</span> m<sub>­</sub><sup>3</sup>;
-                        </p>
-                    </td>
-                </tr>
-                <tr>
-                    <td width="312" valign="top" style='width: 3.25in; padding: 0in 5.4pt 0in 5.4pt'>
-                        <p class="MsoListParagraph" style='margin-top: 0in; margin-right: 0in; margin-bottom: 6.0pt; margin-left: 0in; text-indent: 17.0pt'>
-                            - Lượng dự trữ dầu nhờn
-                        </p>
-                    </td>
-                    <td width="301" valign="top" style='width: 225.45pt; padding: 0in 5.4pt 0in 5.4pt'>
-                        <p class="MsoListParagraph" style='margin-top: 0in; margin-right: 0in; margin-bottom: 6.0pt; margin-left: 0in'>
-                            <span id="dtdaunhom">1,5</span> m<sub>­</sub><sup>3</sup>.
-                        </p>
-                    </td>
-                </tr>
-            </table>
+                                                    </p>
+                                                </td>
+                                                <td width="301" valign="top" style='width: 225.45pt; padding: 0in 5.4pt 0in 5.4pt'>
+                                                    <p class="MsoListParagraph" style='margin-top: 0in; margin-right: 0in; margin-bottom: 6.0pt; margin-left: 0in'>
+                                                        <span id="tgianhd">30</span> ngày đêm;
+                                                    </p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td width="332" valign="top" style='width: 3.25in; padding: 0in 5.4pt 0in 5.4pt'>
+                                                    <p class="MsoListParagraph" style='margin-top: 0in; margin-right: 0in; margin-bottom: 6.0pt; margin-left: 0in; text-indent: 17.0pt'>
+                                                        - Lượng dự trữ dầu cháy
+                                                    </p>
+                                                </td>
+                                                <td width="301" valign="top" style='width: 225.45pt; padding: 0in 5.4pt 0in 5.4pt'>
+                                                    <p class="MsoListParagraph" style='margin-top: 0in; margin-right: 0in; margin-bottom: 6.0pt; margin-left: 0in'>
+                                                        <span id="dtdauchay">86,5</span> m<sub>­</sub><sup>3</sup>;
+                                                    </p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td width="332" valign="top" style='width: 3.25in; padding: 0in 5.4pt 0in 5.4pt'>
+                                                    <p class="MsoListParagraph" style='margin-top: 0in; margin-right: 0in; margin-bottom: 6.0pt; margin-left: 0in; text-indent: 17.0pt'>
+                                                        - Lượng dự trữ dầu nhờn
+                                                    </p>
+                                                </td>
+                                                <td width="301" valign="top" style='width: 225.45pt; padding: 0in 5.4pt 0in 5.4pt'>
+                                                    <p class="MsoListParagraph" style='margin-top: 0in; margin-right: 0in; margin-bottom: 6.0pt; margin-left: 0in'>
+                                                        <span id="dtdaunhom">1,5</span> m<sub>­</sub><sup>3</sup>.
+                                                    </p>
+                                                </td>
+                                            </tr>
+                                        </table>
 
-            <p class="MsoListParagraph" style='margin-top: 6.0pt; margin-right: 0in; margin-bottom: 6.0pt; margin-left: 0in; text-indent: .25in'>
-                <b><span lang="VI">2.</span></b><b><span
-                    lang="VI" style='font-size: 7.0pt'>&nbsp;&nbsp; </span></b><b><span lang="VI">Tình
+                                        <p class="MsoListParagraph" style='margin-top: 6.0pt; margin-right: 0in; margin-bottom: 6.0pt; margin-left: 0in; text-indent: .25in'>
+                                            <b><span lang="VI">2.</span></b><b><span
+                                                lang="VI" style='font-size: 7.0pt'>&nbsp;&nbsp; </span></b><b><span lang="VI">Tình
 trạng kỹ thuật hiện nay của các tàu</span> <span id="tentau3">Tentau</span></b>
-            </p>
+                                        </p>
 
-            <p class="MsoListParagraph" style='margin-top: 6.0pt; margin-right: 0in; margin-bottom: 6.0pt; margin-left: 0in; text-indent: .25in'>
-                <b>a) Hệ động lực</b>
-            </p>
+                                        <p class="MsoListParagraph" style='margin-top: 6.0pt; margin-right: 0in; margin-bottom: 6.0pt; margin-left: 0in; text-indent: .25in'>
+                                            <b>a) Hệ động lực</b>
+                                        </p>
 
-            <p class="MsoListParagraph" style='margin-top: 0in; margin-right: 0in; margin-bottom: 6.0pt; margin-left: 0in; text-align: justify; text-indent: .25in'>
-                - <span id="maychinhBC2">03</span> máy chính
+                                        <p class="MsoListParagraph" style='margin-top: 0in; margin-right: 0in; margin-bottom: 6.0pt; margin-left: 0in; text-align: justify; text-indent: .25in'>
+                                            - <span id="maychinhBC2">03</span> máy chính
 và hộp số đang hoạt động <span id="maychinhBC3">bình thường</span>, tốc độ các tàu đạt từ <span id="maychinhBC4">24</span> đến
-<span id="maychinhBC5">28</span> M/h trong điều kiện sóng cấp <span id="maychinhBC6">3</span>;
-            </p>
+                                            <span id="maychinhBC5">28</span> M/h trong điều kiện sóng cấp <span id="maychinhBC6">3</span>;
+                                        </p>
 
-            <p class="MsoListParagraph" style='margin-top: 0in; margin-right: 0in; margin-bottom: 6.0pt; margin-left: 0in; text-align: justify; text-indent: .25in'>
-                - Máy phát điện,
+                                        <p class="MsoListParagraph" style='margin-top: 0in; margin-right: 0in; margin-bottom: 6.0pt; margin-left: 0in; text-align: justify; text-indent: .25in'>
+                                            - Máy phát điện,
 hệ thống điện, hệ thống cứu hộ hoạt động <span id="mayphatdienBC">bình thường</span>;
-            </p>
+                                        </p>
 
-            <p class="MsoListParagraph" style='margin-top: 0in; margin-right: 0in; margin-bottom: 6.0pt; margin-left: 0in; text-align: justify; text-indent: .25in'>
-                - Các hệ thống
+                                        <p class="MsoListParagraph" style='margin-top: 0in; margin-right: 0in; margin-bottom: 6.0pt; margin-left: 0in; text-align: justify; text-indent: .25in'>
+                                            - Các hệ thống
 và thiết bị bổ trợ đang hoạt động <span id="hebotroBC">bình thường</span>;
-            </p>
+                                        </p>
 
-            <p class="MsoListParagraph" style='margin-top: 0in; margin-right: 0in; margin-bottom: 6.0pt; margin-left: 0in; text-align: justify; text-indent: .25in'>
-                - Thân vỏ <span id="thanvoBC">vẫn kín nước</span>;
-            </p>
+                                        <p class="MsoListParagraph" style='margin-top: 0in; margin-right: 0in; margin-bottom: 6.0pt; margin-left: 0in; text-align: justify; text-indent: .25in'>
+                                            - Thân vỏ <span id="thanvoBC">vẫn kín nước</span>;
+                                        </p>
 
-            <p class="MsoListParagraph" style='margin-top: 0in; margin-right: 0in; margin-bottom: 6.0pt; margin-left: 0in; text-align: justify; text-indent: .25in'>
-                - Hệ trục chân vịt <span id="chanvitBC2">đảm bảo</span>.
-            </p>
+                                        <p class="MsoListParagraph" style='margin-top: 0in; margin-right: 0in; margin-bottom: 6.0pt; margin-left: 0in; text-align: justify; text-indent: .25in'>
+                                            - Hệ trục chân vịt <span id="chanvitBC2">đảm bảo</span>.
+                                        </p>
 
-            <p class="MsoListParagraph" style='margin-top: 0in; margin-right: 0in; margin-bottom: 6.0pt; margin-left: 0in; text-indent: .25in'>
-                <b>b) Trang bị Vũ khí, khí tài</b>
-            </p>
+                                        <p class="MsoListParagraph" style='margin-top: 0in; margin-right: 0in; margin-bottom: 6.0pt; margin-left: 0in; text-indent: .25in'>
+                                            <b>b) Trang bị Vũ khí, khí tài</b>
+                                        </p>
 
-            <p class="MsoListParagraph" style='margin-top: 0in; margin-right: 0in; margin-bottom: 6.0pt; margin-left: 0in; text-align: justify; text-indent: .25in'>
-                - Vũ khí: Hệ
+                                        <p class="MsoListParagraph" style='margin-top: 0in; margin-right: 0in; margin-bottom: 6.0pt; margin-left: 0in; text-align: justify; text-indent: .25in'>
+                                            - Vũ khí: Hệ
 thống vũ khí trên tàu <span id="vukhiBC">như nào</span>;
-            </p>
+                                        </p>
 
-            <p class="MsoListParagraph" style='margin-top: 0in; margin-right: 0in; margin-bottom: 6.0pt; margin-left: 0in; text-align: justify; text-indent: .25in'>
-                - Khí tài:
-            </p>
+                                        <p class="MsoListParagraph" style='margin-top: 0in; margin-right: 0in; margin-bottom: 6.0pt; margin-left: 0in; text-align: justify; text-indent: .25in'>
+                                            - Khí tài:
+                                        </p>
 
-            <p class="MsoListParagraph" style='margin-top: 0in; margin-right: 0in; margin-bottom: 6.0pt; margin-left: 0in; text-align: justify; text-indent: .25in'>
-                + Thiết bị Hàng
+                                        <p class="MsoListParagraph" style='margin-top: 0in; margin-right: 0in; margin-bottom: 6.0pt; margin-left: 0in; text-align: justify; text-indent: .25in'>
+                                            + Thiết bị Hàng
 hải: Các thiết bị khí tài Hàng hải <span id="hanghai1BC">như nào</span>, hệ thống VSAT <span id="hanghai2BC">như nào</span>;
-            </p>
+                                        </p>
 
-            <p class="MsoListParagraph" style='margin-top: 0in; margin-right: 0in; margin-bottom: 6.0pt; margin-left: 0in; text-align: justify; text-indent: .25in'>
-                + Thiết bị Thông tin liên lạc: Hoạt động <span id="lienlacBC">như nào</span>.
-            </p>
+                                        <p class="MsoListParagraph" style='margin-top: 0in; margin-right: 0in; margin-bottom: 6.0pt; margin-left: 0in; text-align: justify; text-indent: .25in'>
+                                            + Thiết bị Thông tin liên lạc: Hoạt động <span id="lienlacBC">như nào</span>.
+                                        </p>
 
-            <p class="MsoListParagraph" style='margin-bottom: 6.0pt; text-indent: .25in'>
-                <b><span
-                    lang="VI">3.</span></b><b><span lang="VI" style='font-size: 7.0pt'>&nbsp;&nbsp; </span>Kiến
+                                        <p class="MsoListParagraph" style='margin-bottom: 6.0pt; text-indent: .25in'>
+                                            <b><span
+                                                lang="VI">3.</span></b><b><span lang="VI" style='font-size: 7.0pt'>&nbsp;&nbsp; </span>Kiến
 nghị, đề nghị</b>
-            </p>
+                                        </p>
 
-            <p class="MsoListParagraph" style='margin-top: 0in; margin-right: 0in; margin-bottom: 6.0pt; margin-left: 0in; text-align: justify; text-indent: .25in'>
-                <span id="kiennghiBC">Kiến nghị không</span>.
-            </p>
+                                        <p class="MsoListParagraph" style='margin-top: 0in; margin-right: 0in; margin-bottom: 6.0pt; margin-left: 0in; text-align: justify; text-indent: .25in'>
+                                            <span id="kiennghiBC">Kiến nghị không</span>.
+                                        </p>
 
-            <p class="MsoListParagraph" style='margin-top: 0in; margin-right: 0in; margin-bottom: 6.0pt; margin-left: 0in; text-align: justify; text-indent: .25in'>
-                Cục kỹ thuật tổng hợp,báo cáo./.
-            </p>
+                                        <p class="MsoListParagraph" style='margin-top: 0in; margin-right: 0in; margin-bottom: 6.0pt; margin-left: 0in; text-align: justify; text-indent: .25in'>
+                                            Cục kỹ thuật tổng hợp,báo cáo./.
+                                        </p>
 
-            <p class="MsoNormal" style='margin-top: 7.0pt'><span lang="VI">&nbsp;</span></p>
+                                        <p class="MsoNormal" style='margin-top: 7.0pt'><span lang="VI">&nbsp;</span></p>
 
-            <table class="MsoTableGrid" border="0" cellspacing="0" cellpadding="0" width="613"
-                style='width: 459.45pt; margin-left: -4.5pt; border-collapse: collapse; border: none'>
-                <tr>
-                    <td width="312" valign="top" style='width: 3.25in; padding: 0in 5.4pt 0in 5.4pt'>
-                        <p class="MsoListParagraph" style='margin-top: 0in; margin-right: 0in; margin-bottom: 6.0pt; margin-left: 0in; text-indent: 3.7pt'>
-                            <b><i>Nơi nhận:</i></b>
-                        </p>
-                        <p class="MsoListParagraph" style='margin-top: 0in; margin-right: 0in; margin-bottom: 6.0pt; margin-left: 0in; text-indent: 3.7pt'>
-                            <span id="noinhanBC">- Các nơi nhận.</span>
-                        </p>
-                        <p class="MsoNormal" style='margin-bottom: 6.0pt'>&nbsp;</p>
-                    </td>
-                    <td width="301" valign="top" style='width: 225.45pt; padding: 0in 5.4pt 0in 5.4pt'>
-                        <p class="MsoListParagraph" align="center" style='margin-top: 0in; margin-right: 0in; margin-bottom: 6.0pt; margin-left: 0in; text-align: center'>
-                            <b><span id="chukyBC1">KT. CHỦ NHIỆM PHÓ CHỦ NHIỆM</span></b>
-                        </p>
-                        <p class="MsoListParagraph" align="center" style='margin-top: 0in; margin-right: 0in; margin-bottom: 6.0pt; margin-left: 0in; text-align: center'>
-                            <b>&nbsp;</b>
-                        </p>
-                        <p class="MsoListParagraph" align="center" style='margin-top: 0in; margin-right: 0in; margin-bottom: 6.0pt; margin-left: 0in; text-align: center'>
-                            <b>&nbsp;</b>
-                        </p>
-                        <p class="MsoListParagraph" align="center" style='margin-top: 0in; margin-right: 0in; margin-bottom: 6.0pt; margin-left: 0in; text-align: center'>
-                            <b>&nbsp;</b>
-                        </p>
-                        <p class="MsoListParagraph" align="center" style='margin-top: 0in; margin-right: 0in; margin-bottom: 6.0pt; margin-left: 0in; text-align: center'>
-                            <b>&nbsp;</b>
-                        </p>
-                        <p class="MsoListParagraph" align="center" style='margin-top: 0in; margin-right: 0in; margin-bottom: 6.0pt; margin-left: 0in; text-align: center'>
-                            <b><span id="chukyBC2">Đại tá Nguyễn Văn Toán</span></b>
-                        </p>
-                    </td>
-                </tr>
-            </table>
+                                        <table class="MsoTableGrid" border="0" cellspacing="0" cellpadding="0" width="613"
+                                            style='width: 459.45pt; margin-left: -4.5pt; border-collapse: collapse; border: none'>
+                                            <tr>
+                                                <td width="332" valign="top" style='width: 3.25in; padding: 0in 5.4pt 0in 5.4pt'>
+                                                    <p class="MsoListParagraph" style='margin-top: 0in; margin-right: 0in; margin-bottom: 6.0pt; margin-left: 0in; text-indent: 3.7pt'>
+                                                        <b><i>Nơi nhận:</i></b>
+                                                    </p>
+                                                    <p class="MsoListParagraph" style='margin-top: 0in; margin-right: 0in; margin-bottom: 6.0pt; margin-left: 0in; text-indent: 3.7pt'>
+                                                        <span id="noinhanBC">- Các nơi nhận.</span>
+                                                    </p>
+                                                    <p class="MsoNormal" style='margin-bottom: 6.0pt'>&nbsp;</p>
+                                                </td>
+                                                <td width="301" valign="top" style='width: 225.45pt; padding: 0in 5.4pt 0in 5.4pt'>
+                                                    <p class="MsoListParagraph" align="center" style='margin-top: 0in; margin-right: 0in; margin-bottom: 6.0pt; margin-left: 0in; text-align: center'>
+                                                        <b><span id="chukyBC1">KT. CHỦ NHIỆM PHÓ CHỦ NHIỆM</span></b>
+                                                    </p>
+                                                    <p class="MsoListParagraph" align="center" style='margin-top: 0in; margin-right: 0in; margin-bottom: 6.0pt; margin-left: 0in; text-align: center'>
+                                                        <b>&nbsp;</b>
+                                                    </p>
+                                                    <p class="MsoListParagraph" align="center" style='margin-top: 0in; margin-right: 0in; margin-bottom: 6.0pt; margin-left: 0in; text-align: center'>
+                                                        <b>&nbsp;</b>
+                                                    </p>
+                                                    <p class="MsoListParagraph" align="center" style='margin-top: 0in; margin-right: 0in; margin-bottom: 6.0pt; margin-left: 0in; text-align: center'>
+                                                        <b>&nbsp;</b>
+                                                    </p>
+                                                    <p class="MsoListParagraph" align="center" style='margin-top: 0in; margin-right: 0in; margin-bottom: 6.0pt; margin-left: 0in; text-align: center'>
+                                                        <b>&nbsp;</b>
+                                                    </p>
+                                                    <p class="MsoListParagraph" align="center" style='margin-top: 0in; margin-right: 0in; margin-bottom: 6.0pt; margin-left: 0in; text-align: center'>
+                                                        <b><span id="chukyBC2">Đại tá Nguyễn Văn Toán</span></b>
+                                                    </p>
+                                                </td>
+                                            </tr>
+                                        </table>
 
-            <p class="MsoNormal" style='margin-top: 7.0pt'><span lang="VI">&nbsp;</span></p>
+                                        <p class="MsoNormal" style='margin-top: 7.0pt'><span lang="VI">&nbsp;</span></p>
 
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary" data-dismiss="modal">Đóng</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
         </div>
-    </div>
     </div>
     <script src="../Scripts/jquery-3.4.1.min.js"></script>
     <script>
@@ -700,7 +713,7 @@ nghị, đề nghị</b>
                     $("#ship_name").html(data.TTCOBAN.SOHIEU);
                     $("#ship_name_tt").html(data.TTCOBAN.SOHIEU);
                     $("#title").html('BÁO CÁO KỸ THUẬT TÀU ' + data.TTCOBAN.SOHIEU);
-                    
+
                     $("#Lmax").html(data.KT.Lmax); // Chiều dài lớn nhất
                     $("#Bmax").html(data.KT.Bmax); // Chiều rộng lớn nhất
                     $("#Htb").html(data.KT.Htb); // Chiều cao mạn
