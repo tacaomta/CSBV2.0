@@ -97,11 +97,11 @@
                             </div>
                             <div class="my-2" style="display: flex; flex-direction: row;">
                                 <%--<p style="white-space: nowrap;"></p>--%>
-                                <textarea id="cancu1" class="ml-2" rows="3" form="rpform" required style="width: 100%; padding: 5px; resize: none;">Căn cứ: Kế hoạch số 1986/KH-BTL ngày 11/3/2022 của BTL CSB về kiểm tra công tác triển khai thực hiện nhiệm vụ IUU khu vực giáp ranh Việt Nam - Thái Lan - Malaixia kết hợp kiểm tra các đơn vị tại Đảo Thổ Chu, Côn Đảo</textarea>
+                                <textarea id="cancu1" class="ml-2" rows="3" form="rpform" required style="width: 100%; padding: 5px; resize: none;">Căn cứ Kế hoạch số 1986/KH-BTL ngày 11/3/2022 của BTL CSB về kiểm tra công tác triển khai thực hiện nhiệm vụ IUU khu vực giáp ranh Việt Nam - Thái Lan - Malaixia kết hợp kiểm tra các đơn vị tại Đảo Thổ Chu, Côn Đảo</textarea>
                             </div>
                             <div class="my-2" style="display: flex; flex-direction: row;">
                                 <%--<p style="white-space: nowrap;"></p>--%>
-                                <textarea id="cancu2" class="ml-2" rows="3" form="rpform" required style="width: 100%; padding: 5px; resize: none;">Căn cứ: Tình trạng kỹ thuật của tàu CSB 4002</textarea>
+                                <textarea id="cancu2" class="ml-2" rows="3" form="rpform" required style="width: 100%; padding: 5px; resize: none;">Căn cứ tình trạng kỹ thuật của tàu CSB 4002</textarea>
                             </div>
                             <p style="text-align: left;">Cục Kỹ thuật báo cáo như sau:</p>
                             <div class="row">
