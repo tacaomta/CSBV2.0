@@ -89,19 +89,19 @@
                     <div class="row" style="justify-content: center;">
                         <div class="text-center col-10">
                             <p class="text-bold">BÁO CÁO</p>
-                            <textarea id="tenbaocao" rows="3" form="rpform" required style="font-weight: bold; width: 100%; text-align: center; padding: 5px; resize: none;">Tình trạng kỹ thuật tàu CSB 4031, CSB 4035, CSB 4039 phục vụ kiểm tra công tác triển khai thực hiện nhiệm vụ IUU khu vực giáp ranh Việt Nam - Thái Lan - Malaixia kết hợp kiểm tra các đơn vị tại Đảo Thổ Chu, Côn Đảo</textarea>
+                            <textarea id="tenbaocao" rows="3" form="rpform" required style="font-weight: bold; width: 100%; text-align: center; padding: 5px; resize: none;">Tình trạng kỹ thuật tàu CSB 4002 phục vụ kiểm tra công tác triển khai thực hiện nhiệm vụ IUU khu vực giáp ranh Việt Nam - Thái Lan - Malaixia kết hợp kiểm tra các đơn vị tại Đảo Thổ Chu, Côn Đảo</textarea>
                             <div class="horizontal-line" style="width: 25%;"></div>
                             <div class="my-2" style="display: flex; flex-direction: row; justify-content: center;">
                                 <p>Kính gửi:</p>
                                 <input id="kinhgui" class="ml-2" required />
                             </div>
                             <div class="my-2" style="display: flex; flex-direction: row;">
-                                <p style="white-space: nowrap;">Căn cứ:</p>
-                                <textarea id="cancu1" class="ml-2" rows="3" form="rpform" required style="width: 100%; padding: 5px; resize: none;">Kế hoạch số 1986/KH-BTL ngày 11/3/2022 của BTL CSB về kiểm tra công tác triển khai thực hiện nhiệm vụ IUU khu vực giáp ranh Việt Nam - Thái Lan - Malaixia kết hợp kiểm tra các đơn vị tại Đảo Thổ Chu, Côn Đảo</textarea>
+                                <%--<p style="white-space: nowrap;"></p>--%>
+                                <textarea id="cancu1" class="ml-2" rows="3" form="rpform" required style="width: 100%; padding: 5px; resize: none;">Căn cứ: Kế hoạch số 1986/KH-BTL ngày 11/3/2022 của BTL CSB về kiểm tra công tác triển khai thực hiện nhiệm vụ IUU khu vực giáp ranh Việt Nam - Thái Lan - Malaixia kết hợp kiểm tra các đơn vị tại Đảo Thổ Chu, Côn Đảo</textarea>
                             </div>
                             <div class="my-2" style="display: flex; flex-direction: row;">
-                                <p style="white-space: nowrap;">Căn cứ:</p>
-                                <textarea id="cancu2" class="ml-2" rows="3" form="rpform" required style="width: 100%; padding: 5px; resize: none;">Tình trạng kỹ thuật của các tàu CSB 4031/BTL Vùng CSB 3, CSB 4039, CSB 4035/BTL Vùng CSB 4</textarea>
+                                <%--<p style="white-space: nowrap;"></p>--%>
+                                <textarea id="cancu2" class="ml-2" rows="3" form="rpform" required style="width: 100%; padding: 5px; resize: none;">Căn cứ: Tình trạng kỹ thuật của tàu CSB 4002</textarea>
                             </div>
                             <p style="text-align: left;">Cục Kỹ thuật báo cáo như sau:</p>
                             <div class="row">
@@ -186,11 +186,11 @@
                                 </div>
                             </div>
                             <div class="row">
-                                <p class="mr-1" style="font-weight: bold; text-align: left;">2. Tình trạng kỹ thuật hiện nay của các tàu</p>
+                                <p class="mr-1" style="font-weight: bold; text-align: left;">2. Tình trạng kỹ thuật hiện nay của tàu</p>
                                 <span id="ship_name_tt" class="text-bold"></span>
                             </div>
                             <p class="mr-2" style="font-weight: bold; text-align: left;">a) Hệ động lực</p>
-                            <div class="row" class="form-s2">
+                            <div class="row form-s2">
                                 <p class="mr-2 my-1" style="text-align: left; padding-left: 15px;">-</p>
                                 <span id="count_mc" class="my-1">03</span>
                                 <p class="mr-2 my-1" style="text-align: left; padding-left: 5px">máy chính và hộp số đang hoạt động</p>
@@ -199,7 +199,7 @@
                                 <%--              <p class="mx-1 my-1" style="text-align: left;"></p>--%>
                                 <%--<span class="my-1">bình thường</span>--%>
                                 <input class="ml-2" id="imaychinh1" required>
-                                <p class="mx-1 my-1" style="text-align: left;">, tốc độ các tàu đạt từ</p>
+                                <p class="mx-1 my-1" style="text-align: left;">, tốc độ tàu đạt từ</p>
                                 <%--   <span class="my-1">24</span>--%>
                                 <input class="ml-2" style="width: 50px;" id="imaychinh2" required>
                                 <p class="mx-1 my-1" style="text-align: left;">đến</p>
@@ -347,7 +347,7 @@
                                             <b><span style='font-size: 16.0pt'>BÁO CÁO</span></b>
                                         </p>
                                         <p class="MsoNormal" align="center" style='text-align: center'>
-                                            <b><span id="tenBC">Tên báo cáo: Tình trạng kỹ thuật tàu CSB4002 phục vụ kiểm tra công tác triển khai thực hiện nhiệm vụ IUU khu vực …</span></b>
+                                            <b><span id="tenBC">Tên báo cáo: Tình trạng kỹ thuật tàu CSB 4002 phục vụ kiểm tra công tác triển khai thực hiện nhiệm vụ IUU khu vực …</span></b>
                                         </p>
                                         <p class="MsoNormal" align="center" style='text-align: center'>
                                             Kính gửi: <span id="kinhGuiBC">Tư lệnh Cảnh sát Biển</span>
@@ -361,8 +361,7 @@ Thái Lan - Malaixia kết hợp kiểm tra các đơn vị tại Đảo Th
                                         </p>
                                         <p class="MsoNormal" style='margin-top: 6.0pt; text-align: justify; text-indent: .25in'>
                                             <span id="cuncu2BC">Căn
-cứ Tình trạng kỹ thuật của các tàu CSB 4031/BTL Vùng CSB 3, CSB 4039,
-CSB 4035/BTL Vùng CSB 4</span>
+cứ Tình trạng kỹ thuật của tàu CSB 4002</span>
                                         </p>
                                         <p class="MsoNormal" style='margin-top: 6.0pt; text-align: justify; text-indent: .25in'>
                                             Cục Kỹ thuật báo cáo như sau:
@@ -533,7 +532,7 @@ CSB 4035/BTL Vùng CSB 4</span>
                                         <p class="MsoListParagraph" style='margin-top: 6.0pt; margin-right: 0in; margin-bottom: 6.0pt; margin-left: 0in; text-indent: .25in'>
                                             <b><span lang="VI">2.</span></b><b><span
                                                 lang="VI" style='font-size: 7.0pt'>&nbsp;&nbsp; </span></b><b><span lang="VI">Tình
-trạng kỹ thuật hiện nay của các tàu</span> <span id="tentau3">Tentau</span></b>
+trạng kỹ thuật hiện nay của tàu</span> <span id="tentau3">Tentau</span></b>
                                         </p>
 
                                         <p class="MsoListParagraph" style='margin-top: 6.0pt; margin-right: 0in; margin-bottom: 6.0pt; margin-left: 0in; text-indent: .25in'>
@@ -542,7 +541,7 @@ trạng kỹ thuật hiện nay của các tàu</span> <span id="tentau3">Te
 
                                         <p class="MsoListParagraph" style='margin-top: 0in; margin-right: 0in; margin-bottom: 6.0pt; margin-left: 0in; text-align: justify; text-indent: .25in'>
                                             - <span id="maychinhBC2">03</span> máy chính
-và hộp số đang hoạt động <span id="maychinhBC3">bình thường</span>, tốc độ các tàu đạt từ <span id="maychinhBC4">24</span> đến
+và hộp số đang hoạt động <span id="maychinhBC3">bình thường</span>, tốc độ tàu đạt từ <span id="maychinhBC4">24</span> đến
                                             <span id="maychinhBC5">28</span> M/h trong điều kiện sóng cấp <span id="maychinhBC6">3</span>;
                                         </p>
 
@@ -597,7 +596,7 @@ nghị, đề nghị</b>
                                         </p>
 
                                         <p class="MsoListParagraph" style='margin-top: 0in; margin-right: 0in; margin-bottom: 6.0pt; margin-left: 0in; text-align: justify; text-indent: .25in'>
-                                            Cục kỹ thuật tổng hợp,báo cáo./.
+                                            Cục kỹ thuật tổng hợp, báo cáo./.
                                         </p>
 
                                         <p class="MsoNormal" style='margin-top: 7.0pt'><span lang="VI">&nbsp;</span></p>
