@@ -77,34 +77,34 @@
                                 <div class="scroll" style="overflow-y: auto;">
                                     <ul class="nav nav-tabs" style="inline-size: max-content;">
                                         <li class="nav-item">
-                                            <a class="nav-link active" data-toggle="tab" href="#HANGHAI">Hàng hải</a>
+                                            <a class="nav-link" data-toggle="tab" onclick="loadDataList_HANGHAI()" id="tabHANGHAI" href="#HANGHAI">Hàng hải</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" data-toggle="tab" onclick="loadDataList_VUKHI()" href="#VUKHI">Vũ khí</a>
+                                            <a class="nav-link" data-toggle="tab" onclick="loadDataList_VUKHI()" id="tabVUKHI" href="#VUKHI">Vũ khí</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" data-toggle="tab" onclick="loadDataList_RADA()" href="#RADA">Rada</a>
+                                            <a class="nav-link" data-toggle="tab" onclick="loadDataList_RADA()" id="tabRADA" href="#RADA">Rada</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" data-toggle="tab" onclick="loadDataList_TOMAY()" href="#TOMAY">Các tổ máy</a>
+                                            <a class="nav-link" data-toggle="tab" onclick="loadDataList_TOMAY()" id="tabTOMAY" href="#TOMAY">Các tổ máy</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" data-toggle="tab" onclick="loadDataList_HETRUCCHANVIT()" href="#HETRUCHANVIT">Hệ trục chân vịt</a>
+                                            <a class="nav-link" data-toggle="tab" onclick="loadDataList_HETRUCCHANVIT()" id="tabHETRUCHANVIT" href="#HETRUCHANVIT">Hệ trục chân vịt</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" data-toggle="tab" onclick="loadDataList_NEOXICHNEO()" href="#NEOXICHNEO">Neo, xích neo</a>
+                                            <a class="nav-link" data-toggle="tab" onclick="loadDataList_NEOXICHNEO()" id="tabNEOXICHNEO" href="#NEOXICHNEO">Neo, xích neo</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" data-toggle="tab" onclick="loadDataList_BOMDAUNUOCTHONGGIO()" href="#BOMDAU-NUOC-THONGGIO">Bơm dầu, nước, thông gió</a>
+                                            <a class="nav-link" data-toggle="tab" onclick="loadDataList_BOMDAUNUOCTHONGGIO()" id="tabBOMDAU-NUOC-THONGGIO" href="#BOMDAU-NUOC-THONGGIO">Bơm dầu, nước, thông gió</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" data-toggle="tab" onclick="loadDataList_TRANGBIKHAC()" href="#TRANGBIKHAC">Trang bị khác</a>
+                                            <a class="nav-link" data-toggle="tab" onclick="loadDataList_TRANGBIKHAC()" id="tabTRANGBIKHAC" href="#TRANGBIKHAC">Trang bị khác</a>
                                         </li>
                                         <%--<li class="nav-item">
                                         <a class="nav-link" data-toggle="tab" onclick="loadDataList_THANVO()" href="#THANVO">Thân vỏ</a>
                                     </li>--%>
                                         <li class="nav-item">
-                                            <a class="nav-link" data-toggle="tab" onclick="loadDataList_MAYNENKHI()" href="#MAYNENKHI">Máy nén khí</a>
+                                            <a class="nav-link" data-toggle="tab" onclick="loadDataList_MAYNENKHI()" id="tabMAYNENKHI" href="#MAYNENKHI">Máy nén khí</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -3152,9 +3152,53 @@
             }
             else {
                 Load_Title(Ship_ID);
-                loadDataList_HANGHAI();
+                i = sessionStorage.getItem("tab");
+                console.log(i);
+                if (i >= 1 && i <= 9) {
+                    Active(i);
+                } else {
+                    Active(1);
+                }
             }
         });
+        function Active(i) {
+            if (i == 1) {
+                $("#tabHANGHAI").tab('show');
+                loadDataList_HANGHAI();
+            }
+            else if (i == 2) {
+                $("#tabVUKHI").tab('show');
+                loadDataList_VUKHI();
+            }
+            else if (i == 3) {
+                $("#tabRADA").tab('show');
+                loadDataList_RADA();
+            }
+            else if (i == 4) {
+                $("#tabTOMAY").tab('show');
+                loadDataList_TOMAY();
+            }
+            else if (i == 5) {
+                $("#tabHETRUCHANVIT").tab('show');
+                loadDataList_HETRUCCHANVIT();
+            }
+            else if (i == 6) {
+                $("#tabNEOXICHNEO").tab('show');
+                loadDataList_NEOXICHNEO();
+            }
+            else if (i == 7) {
+                $("#tabBOMDAU-NUOC-THONGGIO").tab('show');
+                loadDataList_BOMDAUNUOCTHONGGIO();
+            }
+            else if (i == 8) {
+                $("#tabTRANGBIKHAC").tab('show');
+                loadDataList_TRANGBIKHAC();
+            }
+            else {
+                $("#tabHANGHAI").tab('show');
+                loadDataList_HANGHAI();
+            }
+        }
 
         // HÀNG HẢI
         function loadDataList_HANGHAI() {
