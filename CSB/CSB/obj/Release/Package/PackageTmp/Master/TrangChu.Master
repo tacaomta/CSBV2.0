@@ -9,7 +9,8 @@
     <link href="../Content/dataTables.bootstrap4.min.css" rel="stylesheet" />
     <link href="../Content/MaterialIcons.css" rel="stylesheet" />
     <link href="../Content/font-awesome.min.css" rel="stylesheet" />
-    <link href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css" rel="stylesheet" />
+    <%--<link href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css" rel="stylesheet" />--%>
+    <link href="../Content/jquery.dataTables.min.css" rel="stylesheet" />
     <link href="../css/boxicons.min.css" rel="stylesheet" />
 
     <style>
