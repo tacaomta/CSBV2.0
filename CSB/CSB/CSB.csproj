@@ -277,6 +277,10 @@
     <Content Include="Image\ic-login.png" />
     <Content Include="Image\logo_CSB.png" />
     <Content Include="Image\phuhieu.jpg" />
+    <Content Include="Image\ship1.gif" />
+    <Content Include="Image\ship2.gif" />
+    <Content Include="Image\ship3.gif" />
+    <Content Include="Image\ship5.gif" />
     <Content Include="Image\Ships\boat.jpg" />
     <Content Include="Image\Ships\default.jpg" />
     <Content Include="Image\Ships\Tau1.jpg" />
@@ -303,6 +307,8 @@
     <Content Include="Page_Master\Manage_Tau.aspx" />
     <Content Include="Page_Master\Manage_user.aspx" />
     <Content Include="Page_Master\Null.aspx" />
+    <Content Include="Page_Master\SearchPage.aspx" />
+    <Content Include="Page_Master\SearchResult.aspx" />
     <Content Include="Page_Master\ShipActivity.aspx" />
     <Content Include="Page_Master\Ship_equiment.aspx">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -603,6 +609,20 @@
     </Compile>
     <Compile Include="Page_Master\Null.aspx.designer.cs">
       <DependentUpon>Null.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Page_Master\SearchPage.aspx.cs">
+      <DependentUpon>SearchPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page_Master\SearchPage.aspx.designer.cs">
+      <DependentUpon>SearchPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Page_Master\SearchResult.aspx.cs">
+      <DependentUpon>SearchResult.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page_Master\SearchResult.aspx.designer.cs">
+      <DependentUpon>SearchResult.aspx</DependentUpon>
     </Compile>
     <Compile Include="Page_Master\ShipActivity.aspx.cs">
       <DependentUpon>ShipActivity.aspx</DependentUpon>

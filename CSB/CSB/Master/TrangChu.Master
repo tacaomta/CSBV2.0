@@ -1199,7 +1199,7 @@
         </div>
         <div class="mainMenu">
             <ul class="mainMenu-list" style="display: flex; justify-content: space-between;">
-                <li><a class="a_menu" href="../Page_Master/Null.aspx" title="Trang chủ">TRANG CHỦ</a></li>
+                <li><a class="a_menu" href="../Page_Master/SearchPage.aspx" title="Trang chủ">TRANG CHỦ</a></li>
                 <li><a class="a_menu" href="../Page_Master/Null.aspx" title="Cập nhật thông tin dữ liệu">CẬP NHẬT TTDL</a></li>
                 <li><a class="a_menu" href="../Page_Master/Null.aspx" title="Truy xuất dữ liệu">TRUY XUẤT DL</a></li>
                 <li><a class="a_menu" href="../Page_Master/Null.aspx" title="Giới thiệu về Phòng quản lý kỹ thuật tàu">GIỚI THIỆU VỀ PQLKTT</a></li>
@@ -1295,8 +1295,8 @@
     <script src="../Scripts/vendor/jquery.nicescroll.min.js"></script>
     <script>
         var linkapi = "http://localhost:8082/api/";
-        //var baseaddress = "http://localhost:44347/";
-        var baseaddress = "http://localhost:8080/";
+        var baseaddress = "http://localhost:44347/";
+        //var baseaddress = "http://localhost:8080/";
         $(document).ready(function () {
             if (sessionStorage.getItem("userLoginUsername") != null) {
                 $('#user-login-fullname').text(" " + sessionStorage.getItem("userLoginFullname"));
