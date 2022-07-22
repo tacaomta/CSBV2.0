@@ -1851,6 +1851,15 @@
             <param name="id"></param>
             <returns></returns>
         </member>
+        <member name="M:DHSLAPI.Controllers.TAUController.GetShipsbyKeywords(System.String)">
+            <summary>
+            Tìm kiếm thông tin tàu theo các trường thông tin của tàu:
+            * Số hiệu, ký hiệu, nơi sản xuất, năm hạ thuỷ, năm tiếp nhận
+            * chức năng, hải đội, hải đoàn và vùng cảnh sát biển
+            </summary>
+            <param name="keyword">từ khoá tìm kiếm</param>
+            <returns></returns>
+        </member>
         <member name="T:DHSLAPI.Controllers.THANVOController">
             <summary>
             Thân vỏ
