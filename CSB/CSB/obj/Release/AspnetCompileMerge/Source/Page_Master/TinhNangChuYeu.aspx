@@ -81,7 +81,7 @@
 
                             <div class="form-footer">
                                 <div class="left">
-                                    <a href="#" onclick="QuayLai()" style="float: left" class="btn btn-success"><i class="bi bi-arrow-left-circle"></i>&nbsp;Quay lại</a>
+                                  <%--  <a href="#" onclick="QuayLai()" style="float: left" class="btn btn-success"><i class="bi bi-arrow-left-circle"></i>&nbsp;Quay lại</a>--%>
                                 </div>
 
 

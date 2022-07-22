@@ -9,7 +9,8 @@
     <link href="../Content/dataTables.bootstrap4.min.css" rel="stylesheet" />
     <link href="../Content/MaterialIcons.css" rel="stylesheet" />
     <link href="../Content/font-awesome.min.css" rel="stylesheet" />
-    <link href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css" rel="stylesheet" />
+    <%--<link href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css" rel="stylesheet" />--%>
+    <link href="../Content/jquery.dataTables.min.css" rel="stylesheet" />
     <link href="../css/boxicons.min.css" rel="stylesheet" />
 
     <style>
@@ -1198,7 +1199,7 @@
         </div>
         <div class="mainMenu">
             <ul class="mainMenu-list" style="display: flex; justify-content: space-between;">
-                <li><a class="a_menu" href="../Page_Master/Null.aspx" title="Trang chủ">TRANG CHỦ</a></li>
+                <li><a class="a_menu" href="../Page_Master/SearchPage.aspx" title="Trang chủ">TRANG CHỦ</a></li>
                 <li><a class="a_menu" href="../Page_Master/Null.aspx" title="Cập nhật thông tin dữ liệu">CẬP NHẬT TTDL</a></li>
                 <li><a class="a_menu" href="../Page_Master/Null.aspx" title="Truy xuất dữ liệu">TRUY XUẤT DL</a></li>
                 <li><a class="a_menu" href="../Page_Master/Null.aspx" title="Giới thiệu về Phòng quản lý kỹ thuật tàu">GIỚI THIỆU VỀ PQLKTT</a></li>
@@ -1359,7 +1360,7 @@
             }
         });
 
-        function exportToWord(element, filename) {
+        function exportToWord(element, filename, orientation = 'landscape') {
             if (!window.Blob) {
                 alert('Your legacy browser does not support this action.');
                 return;
@@ -1367,9 +1368,11 @@
             var html, link, blob, url, css;
             // EU A4 use: size: 841.95pt 595.35pt;
             // US Letter use: size:11.0in 8.5in;
+            var size = "595.35pt 841.95pt";
+            if (orientation == 'landscape') size = "841.95pt 595.35pt ";
             css = (
                 '<style>' +
-                '@page WordSection1{size: 841.95pt 595.35pt;mso-page-orientation: landscape;}' +
+                '@page WordSection1{size: ' + size + ';}' +
                 'div.WordSection1 {page: WordSection1;}' +
                 /*'table{border-collapse:collapse;}td{border:1px gray solid;width:5em;padding:2px;}' +*/
                 '</style>'
