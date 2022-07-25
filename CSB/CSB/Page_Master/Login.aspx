@@ -165,7 +165,7 @@
                     sessionStorage.setItem("userLoginFullname", data.Fullname);
                     sessionStorage.setItem("userLoginID", data.ID);
                     //44347
-                  /*  window.location = "http://localhost:8080/Page_Master/Null";*/
+                /*    window.location = "http://localhost:8080/Page_Master/SearchPage";*/
                     window.location = "http://localhost:44347/Page_Master/SearchPage";
                 }, error: function (ret) {
                     console.log(ret);
