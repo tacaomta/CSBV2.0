@@ -3033,7 +3033,7 @@
                     <form id="form-add-MAYNENKHI" onsubmit="return false">
                         <div class="card auth_form" style="margin-bottom: 0px">
                             <div class="modal-header">
-                                <h4 class="title-modal-banve font-weight-bold"> Thêm thông tin trang bị khác tàu</h4>
+                                <h4 class="title-modal-banve font-weight-bold"> Thêm thông tin máy nén khí</h4>
                             </div>
                             <div class="modal-body">
                                 <div class="row clearfix ">

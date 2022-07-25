@@ -71,7 +71,7 @@
                                     </div>
                                     <div id="DANGKYCLVUKHI" class=" tab-pane">
                                         <br>
-                                        <h5>VŨ KHÍ</h5>
+                                        <h5>ĐĂNG KÝ CHẤT LƯỢNG VŨ KHÍ</h5>
                                         <div class="btn-group">
                                             <button onclick="loadDataList_DANGKYCLVUKHI()" class="btn btn-secondary mb-2"><span class="bi-arrow-clockwise"></span>&nbsp;Load dữ liệu</button>
                                             <button id="btn_add_DANGKYCLVUKHI" onclick="click_add_DANGKYCLVUKHI(null)" class="btn btn-secondary mb-2" data-toggle="modal" data-target="#model-add-DANGKYCLVUKHI" style="padding-top: 4px;"><span class="bi bi-plus-circle"></span> Thêm</button>
@@ -137,7 +137,7 @@
                                     </div>--%>
                                     <div id="BOMDAU-NUOC-THONGGIO" class=" tab-pane">
                                         <br>
-                                        <h5>BẢNG THỐNG KÊ CÁC BƠM DẦU, NƯỚC VÀ THÔNG GIÓ</h5>
+                                        <h5>ĐĂNG KÝ CHẤT LƯỢNG BƠM DẦU, NƯỚC VÀ THÔNG GIÓ</h5>
                                         <div class="btn-group">
                                             <button onclick="loadDataList_DANGKYCLBDNTG()" class="btn btn-secondary mb-2"><span class="bi-arrow-clockwise"></span>&nbsp;Load dữ liệu</button>
                                             <button id="btn_add_DANGKYCLBDNTG" onclick="click_add_DANGKYCLBDNTG(null)" class="btn btn-secondary mb-2" data-toggle="modal" data-target="#model-add-DANGKYCLBDNTG" style="padding-top: 4px;"><span class="bi bi-plus-circle"></span> Thêm bơm dầu, nước và thông gió</button>
@@ -147,7 +147,7 @@
                                     </div>
                                     <div id="DANGKYCLTHIETBIKHAC" class=" tab-pane">
                                         <br>
-                                        <h5>CÁC TRANG BỊ KHÁC</h5>
+                                        <h5>ĐĂNG KÝ CHẤT LƯỢNG CÁC TRANG BỊ KHÁC</h5>
                                         <div class="btn-group">
                                             <button onclick="loadDataList_DANGKYCLTHIETBIKHAC()" class="btn btn-secondary mb-2"><span class="bi-arrow-clockwise"></span>&nbsp;Load dữ liệu</button>
                                             <button id="btn_add_DANGKYCLTHIETBIKHAC" onclick="click_add_DANGKYCLTHIETBIKHAC(null)" class="btn btn-secondary mb-2" data-toggle="modal" data-target="#model-add-DANGKYCLTHIETBIKHAC" style="padding-top: 4px;"><span class="bi bi-plus-circle"></span> Thêm trang bị khác</button>
