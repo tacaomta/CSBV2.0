@@ -29,7 +29,7 @@
                         <div class="card-block">
                             <div class="" style="display: flex;align-items: center;">
                                 <div class="btn-group">
-                                    <button onclick="loadDataList_THOIGIANLAMVIECMAY()" class="btn btn-secondary mb-2"><span class="bi-arrow-clockwise"></span>&nbsp;Load dữ liệu</button>
+                                    <button onclick="loadDuLieu()" class="btn btn-secondary mb-2"><span class="bi-arrow-clockwise"></span>&nbsp;Load dữ liệu</button>
                                     <button id="btn_add_THOIGIANLAMVIECMAY" class="btn btn-secondary mb-2" data-toggle="modal" data-target="#model-add-THOIGIANLAMVIECMAY" onclick="loadDSMay()" style="padding-top: 4px;"><span class="bi bi-plus-circle"></span> Thêm mới</button>
                                 </div>
                                 <div class="col-md-4" style="position: relative;margin-left: auto;display: flex;">
@@ -515,6 +515,10 @@
             } else {
 
             }
+        }
+        function loadDuLieu() {
+            loadDataList_THOIGIANLAMVIECMAY($('#NAM').val());
+            //console.log($('#NAM').val());
         }
     </script>
 </asp:Content>
