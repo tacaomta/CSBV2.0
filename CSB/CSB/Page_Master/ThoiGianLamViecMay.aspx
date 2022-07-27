@@ -78,7 +78,7 @@
                                             <div class="form-group row">
                                                 <label class="col-sm-4 col-form-label">Năm hiện tại: </label>
                                                 <div class="col-sm-8">
-                                                    <input type="number" min="0" id="add-THOIGIANLAMVIECMAY-NAM" disabled="" class="form-control">
+                                                    <input type="number" min="0" id="add-THOIGIANLAMVIECMAY-NAM" class="form-control">
                                                 </div>
                                             </div>
                                         </div>
@@ -432,7 +432,8 @@
                         loadDataList_THOIGIANLAMVIECMAY(THOIGIANLAMVIECMAY.NAM);
                         $("#NAM").val(THOIGIANLAMVIECMAY.NAM);
                     }, error: function (ret) {
-                        toastError("Thất bại", "");
+                        console.log(THOIGIANLAMVIECMAY);
+                        toastError("Thất bại", "Bản ghi đã tồn tại!");
                     },
                     complete: function () { // Set our complete callback, adding the .hidden class and hiding the spinner.
                         $('#model-add-THOIGIANLAMVIECMAY').modal("hide");

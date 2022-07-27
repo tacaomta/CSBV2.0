@@ -1293,10 +1293,9 @@
     <script src="../Scripts/vendor/dataTables.responsive.min.js"></script>
     <script src="../Scripts/vendor/responsive.bootstrap4.min.js"></script>
     <script src="../Scripts/vendor/jquery.nicescroll.min.js"></script>
+    <script src="../value.js"></script>
     <script>
-        var linkapi = "http://localhost:8082/api/";
-        var baseaddress = "http://localhost:44347/";
-        //var baseaddress = "http://localhost:8080/";
+        
         $(document).ready(function () {
             if (sessionStorage.getItem("userLoginUsername") != null) {
                 $('#user-login-fullname').text(" " + sessionStorage.getItem("userLoginFullname"));

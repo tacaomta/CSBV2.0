@@ -112,6 +112,7 @@
     <script src="../Scripts/jquery-3.4.1.min.js"></script>
     <script src="../Scripts/js/Login.js"></script>
     <script src="../Scripts/js/Master.js"></script>
+    <script src="../value.js"></script>
     <script>
         // Add event press Enter in an input tag
         $('#username').keypress(function (event) {
@@ -145,7 +146,7 @@
             console.log(user);
             $.ajax({
                 type: "POST",
-                url: "http://localhost:8082/api/user_login",
+                url: linkapi + "user_login",
                 dataType: "json",
                 data: JSON.stringify(user),
                 contentType: "application/json",
@@ -164,9 +165,7 @@
                     sessionStorage.setItem("userLoginUsername", data.UserName);
                     sessionStorage.setItem("userLoginFullname", data.Fullname);
                     sessionStorage.setItem("userLoginID", data.ID);
-                    //44347
-                /*    window.location = "http://localhost:8080/Page_Master/SearchPage";*/
-                    window.location = "http://localhost:44347/Page_Master/SearchPage";
+                    window.location = baseaddress + "Page_Master/SearchPage";
                 }, error: function (ret) {
                     console.log(ret);
                     $('#error-login-text').text('Tài khoản hoặc mật khẩu không đúng');

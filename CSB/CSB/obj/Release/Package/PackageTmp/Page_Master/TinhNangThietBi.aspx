@@ -150,7 +150,7 @@
                                             <button onclick="loadDataList_MAYCHINH()" class="btn btn-secondary mb-2"><span class="bi-arrow-clockwise"></span>&nbsp;Load dữ liệu</button>
                                             <button class="btn btn-secondary mb-2" data-toggle="modal" data-target="#model-add-MAYCHINH" style="padding-top: 4px;"><span class="bi bi-plus-circle"></span> Thêm máy chính</button>
                                         </div>
-                                        <table id="table-MAYCHINH" class="table table-bordered table-striped table-md" style="width: 100%">
+                                        <table id="table-MAYCHINH" class="table table-bordered  table-md" style="width: 100%">
                                         </table>
                                         <br />
                                         <h5>MÁY PHỤ PHÁT ĐIỆN</h5>
@@ -158,7 +158,7 @@
                                             <button onclick="loadDataList_MAYPHU()" class="btn btn-secondary mb-2"><span class="bi-arrow-clockwise"></span>&nbsp;Load dữ liệu</button>
                                             <button id="btn_add_MAYPHU" class="btn btn-secondary mb-2" data-toggle="modal" data-target="#model-add-MAYPHU" style="padding-top: 4px;"><span class="bi bi-plus-circle"></span> Thêm máy phụ</button>
                                         </div>
-                                        <table id="table-MAYPHU" class="table table-bordered table-striped table-md" style="width: 100%">
+                                        <table id="table-MAYPHU" class="table table-bordered table-md" style="width: 100%">
                                         </table>
                                         <br />
                                         <h5>CÁC TỔ MÁY CHUYÊN DỤNG</h5>
@@ -166,7 +166,7 @@
                                             <button onclick="loadDataList_MAYCHUYENDUNG()" class="btn btn-secondary mb-2"><span class="bi-arrow-clockwise"></span>&nbsp;Load dữ liệu</button>
                                             <button id="btn_add_MAYCHUYENDUNG" class="btn btn-secondary mb-2" data-toggle="modal" data-target="#model-add-MAYCHUYENDUNG" style="padding-top: 4px;"><span class="bi bi-plus-circle"></span> Thêm máy chuyên dụng</button>
                                         </div>
-                                        <table id="table-MAYCHUYENDUNG" class="table table-bordered table-striped table-md" style="width: 100%">
+                                        <table id="table-MAYCHUYENDUNG" class="table table-bordered table-md" style="width: 100%">
                                         </table>
                                     </div>
                                     <div id="HETRUCHANVIT" class=" tab-pane">
@@ -3122,6 +3122,7 @@
     <div id="loader" class="spinner-border text-primary" role="status"></div>
     <script src="../Scripts/jquery-3.4.1.min.js"></script>
     <script>
+             
         function getParameterByName(name, url = window.location.href) {
             name = name.replace(/[\[\]]/g, '\\$&');
             var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
@@ -3153,7 +3154,6 @@
             else {
                 Load_Title(Ship_ID);
                 i = sessionStorage.getItem("tab");
-                console.log(i);
                 if (i >= 1 && i <= 9) {
                     Active(i);
                 } else {
@@ -3637,16 +3637,27 @@
         function loadDataList_MAYCHINH() {
             $.ajax({
                 type: "GET",
-                url: linkapi + "v2/maychinh?id=" + getParameterByName("Ship_ID"),
+                url: linkapi + "v2.1/maychinh?id=" + getParameterByName("Ship_ID") + "&trigger=" + trigger + "&limit=" + limit,
                 dataType: "json",
                 beforeSend: function () { // Before we send the request, remove the .hidden class from the spinner and default to inline-block.
                     $('#loader').removeClass('hidden');
                 },
                 success: function (data) {
+                    console.log(data);
                     var tabletext = "<thead><tr><th>STT</th><th>KÝ HIỆU</th><th>Số hiệu</th><th>NĂM SẢN XUẤT</th><th>NƠI SẢN XUẤT</th><th>CÔNG SUẤT</th><th>HỆ THỐNG ĐIỀU KHIỂN</th><th>TÁC VỤ</th></tr></thead><tbody>";
                     var i = 1;
                     $.each(data, function (key, item) {
-                        tabletext += "<tr><td style='text-align: center;'>" + i + "</td><td>" + item.THONGSOCOBAN.KYHIEU + "</td><td>" + item.THONGSOCOBAN.SOHIEUMAY + "</td><td style='text-align: center;'>" + item.THONGSOCOBAN.NAMSANXUAT + "</td><td>" + item.THONGSOCOBAN.NOISANXUAT + "</td><td>" + item.THONGSOCOBAN.CONGSUAT + "</td><td>" + item.THONGSOCOBAN.HETHONGDIEUKHIEN + '</td><td><div style="display: flex; justify-content: space-around;"><a href="#" class="edit" title="Sửa" data-toggle="modal" data-target="#model-edit-MAYCHINH"  onclick="onclick_edit_MAYCHINH(`' + item.ID + '`,`' + item.THONGSOCOBAN.KYHIEU + '`,`' + item.THONGSOCOBAN.NAMSANXUAT + '`,`' + item.THONGSOCOBAN.NOISANXUAT + '`,`' + item.THONGSOCOBAN.NAMLAPRAP + '`,`' + item.THONGSOCOBAN.VITRILAPRAP + '`,`' + item.THONGSOCOBAN.SOHIEUMAY + '`,`' + item.THONGSOCOBAN.CONGSUAT + '`,`' + item.THONGSOCOBAN.VONGQUAY + '`,`' + item.THONGSOCOBAN.CHIEUQUAY + '`,`' + item.THONGSOCOBAN.NGUONKHOIDONG + '`,`' + item.THONGSOCOBAN.HETHONGDIEUKHIEN + '`,`' + item.THONGSOCOBAN.TRONGLUONG + '`,`' + item.THONGSOCOBAN.KICHTHUOCMAY.DAI + '`,`' + item.THONGSOCOBAN.KICHTHUOCMAY.RONG + '`,`' + item.THONGSOCOBAN.KICHTHUOCMAY.CAO + '`,`' + item.THONGSOCOBAN.CHUKYSUACHUA.TIEUTU + '`,`' + item.THONGSOCOBAN.CHUKYSUACHUA.TRUNGTU + '`,`' + item.THONGSOCOBAN.CHUKYSUACHUA.DAITU + '`,`' + item.THONGSOCOBAN.LOAIDIEN.DIENAP + '`,`' + item.THONGSOCOBAN.LOAIDIEN.TANSO + '`,`' + item.PHUONGPHAPTRUYENTAI.KYHIEULYHOP_BOGIAMVONG + '`,`' + item.PHUONGPHAPTRUYENTAI.SOHIEULYHOP_BOGIAMVONG + '`,`' + item.PHUONGPHAPTRUYENTAI.TYSOTRUYEN + '`,`' + item.PHUONGPHAPTRUYENTAI.KHOPNOICUNG + '`,`' + item.PHUONGPHAPTRUYENTAI.KHOPNOIMEM + '`,`' + item.PHUONGPHAPTRUYENTAI.CUROA + '`,`' + item.PHUONGPHAPTRUYENTAI.KYHIEUVONGBI + '`)"><i class="material-icons">&#xE254;</i></a><a href="#" class="delete" title="Xóa" onclick="delete_MAYCHINH(`' + item.ID + '`)"><i class="material-icons">&#xE872;</i></a></div></td></tr>';
+                        tabletext += "<tr ";
+                        if (item.THONGBAODINHMUC.MUCCANHBAO == 1) {
+                            tabletext += 'style="background-color: #fff2cb;"';
+                        }
+                        else if (item.THONGBAODINHMUC.MUCCANHBAO == 2) {
+                            tabletext += 'style="background-color: #ff9999;"';
+                        }
+                        else  {
+                            tabletext += 'style="background-color: #ffffff;"';
+                        }
+                        tabletext += "><td style='text-align: center;'>" + i + "</td><td>" + item.THONGSOCOBAN.KYHIEU + "</td><td>" + item.THONGSOCOBAN.SOHIEUMAY + "</td><td style='text-align: center;'>" + item.THONGSOCOBAN.NAMSANXUAT + "</td><td>" + item.THONGSOCOBAN.NOISANXUAT + "</td><td>" + item.THONGSOCOBAN.CONGSUAT + "</td><td>" + item.THONGSOCOBAN.HETHONGDIEUKHIEN + '</td><td><div style="display: flex; justify-content: space-around;"><a href="#" class="edit" title="Sửa" data-toggle="modal" data-target="#model-edit-MAYCHINH"  onclick="onclick_edit_MAYCHINH(`' + item.ID + '`,`' + item.THONGSOCOBAN.KYHIEU + '`,`' + item.THONGSOCOBAN.NAMSANXUAT + '`,`' + item.THONGSOCOBAN.NOISANXUAT + '`,`' + item.THONGSOCOBAN.NAMLAPRAP + '`,`' + item.THONGSOCOBAN.VITRILAPRAP + '`,`' + item.THONGSOCOBAN.SOHIEUMAY + '`,`' + item.THONGSOCOBAN.CONGSUAT + '`,`' + item.THONGSOCOBAN.VONGQUAY + '`,`' + item.THONGSOCOBAN.CHIEUQUAY + '`,`' + item.THONGSOCOBAN.NGUONKHOIDONG + '`,`' + item.THONGSOCOBAN.HETHONGDIEUKHIEN + '`,`' + item.THONGSOCOBAN.TRONGLUONG + '`,`' + item.THONGSOCOBAN.KICHTHUOCMAY.DAI + '`,`' + item.THONGSOCOBAN.KICHTHUOCMAY.RONG + '`,`' + item.THONGSOCOBAN.KICHTHUOCMAY.CAO + '`,`' + item.THONGSOCOBAN.CHUKYSUACHUA.TIEUTU + '`,`' + item.THONGSOCOBAN.CHUKYSUACHUA.TRUNGTU + '`,`' + item.THONGSOCOBAN.CHUKYSUACHUA.DAITU + '`,`' + item.THONGSOCOBAN.LOAIDIEN.DIENAP + '`,`' + item.THONGSOCOBAN.LOAIDIEN.TANSO + '`,`' + item.PHUONGPHAPTRUYENTAI.KYHIEULYHOP_BOGIAMVONG + '`,`' + item.PHUONGPHAPTRUYENTAI.SOHIEULYHOP_BOGIAMVONG + '`,`' + item.PHUONGPHAPTRUYENTAI.TYSOTRUYEN + '`,`' + item.PHUONGPHAPTRUYENTAI.KHOPNOICUNG + '`,`' + item.PHUONGPHAPTRUYENTAI.KHOPNOIMEM + '`,`' + item.PHUONGPHAPTRUYENTAI.CUROA + '`,`' + item.PHUONGPHAPTRUYENTAI.KYHIEUVONGBI + '`)"><i class="material-icons">&#xE254;</i></a><a href="#" class="delete" title="Xóa" onclick="delete_MAYCHINH(`' + item.ID + '`)"><i class="material-icons">&#xE872;</i></a></div></td></tr>';
                         i = i + 1;
                     });
                     tabletext += "</tbody>";
@@ -3903,7 +3914,7 @@
         function loadDataList_MAYPHU() {
             $.ajax({
                 type: "GET",
-                url: linkapi + "v2/mayphuphatdien?id=" + getParameterByName("Ship_ID"),
+                url: linkapi + "v2.1/mayphuphatdien?id=" + getParameterByName("Ship_ID") + "&trigger=" + trigger + "&limit=" + limit,
                 dataType: "json",
                 beforeSend: function () { // Before we send the request, remove the .hidden class from the spinner and default to inline-block.
                     $('#loader').removeClass('hidden');
@@ -3912,7 +3923,17 @@
                     var tabletext = "<thead><tr><th>STT</th><th>KÝ HIỆU</th><th>Số hiệu</th><th>NĂM SẢN XUẤT</th><th>NƠI SẢN XUẤT</th><th>CÔNG SUẤT</th><th>HỆ THỐNG ĐIỀU KHIỂN</th><th>TÁC VỤ</th></tr></thead><tbody>";
                     var i = 1;
                     $.each(data, function (key, item) {
-                        tabletext += "<tr><td style='text-align: center;'>" + i + "</td><td>" + item.THONGSOCOBAN.KYHIEU + "</td><td>" + item.THONGSOCOBAN.SOHIEUMAY + "</td><td style='text-align: center;'>" + item.THONGSOCOBAN.NAMSANXUAT + "</td><td>" + item.THONGSOCOBAN.NOISANXUAT + "</td><td>" + item.THONGSOCOBAN.CONGSUAT + "</td><td>" + item.THONGSOCOBAN.HETHONGDIEUKHIEN + '</td><td><div style="display: flex; jusitfy-content: space-around;"><a href="#" class="edit" title="Sửa" data-toggle="modal" data-target="#model-edit-MAYPHU"  onclick="onclick_edit_MAYPHU(`' + item.ID + '`,`' + item.THONGSOCOBAN.KYHIEU + '`,`' + item.THONGSOCOBAN.NAMSANXUAT + '`,`' + item.THONGSOCOBAN.NOISANXUAT + '`,`' + item.THONGSOCOBAN.NAMLAPRAP + '`,`' + item.THONGSOCOBAN.VITRILAPRAP + '`,`' + item.THONGSOCOBAN.SOHIEUMAY + '`,`' + item.THONGSOCOBAN.CONGSUAT + '`,`' + item.THONGSOCOBAN.VONGQUAY + '`,`' + item.THONGSOCOBAN.CHIEUQUAY + '`,`' + item.THONGSOCOBAN.NGUONKHOIDONG + '`,`' + item.THONGSOCOBAN.HETHONGDIEUKHIEN + '`,`' + item.THONGSOCOBAN.TRONGLUONG + '`,`' + item.THONGSOCOBAN.KICHTHUOCMAY.DAI + '`,`' + item.THONGSOCOBAN.KICHTHUOCMAY.RONG + '`,`' + item.THONGSOCOBAN.KICHTHUOCMAY.CAO + '`,`' + item.THONGSOCOBAN.CHUKYSUACHUA.TIEUTU + '`,`' + item.THONGSOCOBAN.CHUKYSUACHUA.TRUNGTU + '`,`' + item.THONGSOCOBAN.CHUKYSUACHUA.DAITU + '`,`' + item.THONGSOCOBAN.LOAIDIEN.DIENAP + '`,`' + item.THONGSOCOBAN.LOAIDIEN.TANSO + '`,`' + item.PHUONGPHAPTRUYENTAI.KYHIEULYHOP_BOGIAMVONG + '`,`' + item.PHUONGPHAPTRUYENTAI.SOHIEULYHOP_BOGIAMVONG + '`,`' + item.PHUONGPHAPTRUYENTAI.TYSOTRUYEN + '`,`' + item.PHUONGPHAPTRUYENTAI.KHOPNOICUNG + '`,`' + item.PHUONGPHAPTRUYENTAI.KHOPNOIMEM + '`,`' + item.PHUONGPHAPTRUYENTAI.CUROA + '`,`' + item.PHUONGPHAPTRUYENTAI.KYHIEUVONGBI + '`)"><i class="material-icons">&#xE254;</i></a><a href="#" class="delete" title="Xóa" onclick="delete_MAYPHU(`' + item.ID + '`)"><i class="material-icons">&#xE872;</i></a></div></td></tr>';
+                        tabletext += "<tr ";
+                        if (item.THONGBAODINHMUC.MUCCANHBAO == 1) {
+                            tabletext += 'style="background-color: #fff2cb;"';
+                        }
+                        else if (item.THONGBAODINHMUC.MUCCANHBAO == 2) {
+                            tabletext += 'style="background-color: #ff9999;"';
+                        }
+                        else {
+                            tabletext += 'style="background-color: #ffffff;"';
+                        }
+                        tabletext += "><td style='text-align: center;'>" + i + "</td><td>" + item.THONGSOCOBAN.KYHIEU + "</td><td>" + item.THONGSOCOBAN.SOHIEUMAY + "</td><td style='text-align: center;'>" + item.THONGSOCOBAN.NAMSANXUAT + "</td><td>" + item.THONGSOCOBAN.NOISANXUAT + "</td><td>" + item.THONGSOCOBAN.CONGSUAT + "</td><td>" + item.THONGSOCOBAN.HETHONGDIEUKHIEN + '</td><td><div style="display: flex; jusitfy-content: space-around;"><a href="#" class="edit" title="Sửa" data-toggle="modal" data-target="#model-edit-MAYPHU"  onclick="onclick_edit_MAYPHU(`' + item.ID + '`,`' + item.THONGSOCOBAN.KYHIEU + '`,`' + item.THONGSOCOBAN.NAMSANXUAT + '`,`' + item.THONGSOCOBAN.NOISANXUAT + '`,`' + item.THONGSOCOBAN.NAMLAPRAP + '`,`' + item.THONGSOCOBAN.VITRILAPRAP + '`,`' + item.THONGSOCOBAN.SOHIEUMAY + '`,`' + item.THONGSOCOBAN.CONGSUAT + '`,`' + item.THONGSOCOBAN.VONGQUAY + '`,`' + item.THONGSOCOBAN.CHIEUQUAY + '`,`' + item.THONGSOCOBAN.NGUONKHOIDONG + '`,`' + item.THONGSOCOBAN.HETHONGDIEUKHIEN + '`,`' + item.THONGSOCOBAN.TRONGLUONG + '`,`' + item.THONGSOCOBAN.KICHTHUOCMAY.DAI + '`,`' + item.THONGSOCOBAN.KICHTHUOCMAY.RONG + '`,`' + item.THONGSOCOBAN.KICHTHUOCMAY.CAO + '`,`' + item.THONGSOCOBAN.CHUKYSUACHUA.TIEUTU + '`,`' + item.THONGSOCOBAN.CHUKYSUACHUA.TRUNGTU + '`,`' + item.THONGSOCOBAN.CHUKYSUACHUA.DAITU + '`,`' + item.THONGSOCOBAN.LOAIDIEN.DIENAP + '`,`' + item.THONGSOCOBAN.LOAIDIEN.TANSO + '`,`' + item.PHUONGPHAPTRUYENTAI.KYHIEULYHOP_BOGIAMVONG + '`,`' + item.PHUONGPHAPTRUYENTAI.SOHIEULYHOP_BOGIAMVONG + '`,`' + item.PHUONGPHAPTRUYENTAI.TYSOTRUYEN + '`,`' + item.PHUONGPHAPTRUYENTAI.KHOPNOICUNG + '`,`' + item.PHUONGPHAPTRUYENTAI.KHOPNOIMEM + '`,`' + item.PHUONGPHAPTRUYENTAI.CUROA + '`,`' + item.PHUONGPHAPTRUYENTAI.KYHIEUVONGBI + '`)"><i class="material-icons">&#xE254;</i></a><a href="#" class="delete" title="Xóa" onclick="delete_MAYPHU(`' + item.ID + '`)"><i class="material-icons">&#xE872;</i></a></div></td></tr>';
                         i = i + 1;
                     });
                     tabletext += "</tbody>";
@@ -4168,7 +4189,7 @@
         function loadDataList_MAYCHUYENDUNG() {
             $.ajax({
                 type: "GET",
-                url: linkapi + "v2/maychuyendung?id=" + getParameterByName("Ship_ID"),
+                url: linkapi + "v2.1/maychuyendung?id=" + getParameterByName("Ship_ID") + "&trigger=" + trigger + "&limit=" + limit,
                 dataType: "json",
                 beforeSend: function () { // Before we send the request, remove the .hidden class from the spinner and default to inline-block.
                     $('#loader').removeClass('hidden');
@@ -4177,7 +4198,17 @@
                     var tabletext = "<thead><tr><th>STT</th><th>KÝ HIỆU</th><th>Số hiệu</th><th>NĂM SẢN XUẤT</th><th>NƠI SẢN XUẤT</th><th>CÔNG SUẤT</th><th>HỆ THỐNG ĐIỀU KHIỂN</th><th>TÁC VỤ</th></tr></thead><tbody>";
                     var i = 1;
                     $.each(data, function (key, item) {
-                        tabletext += "<tr><td style='text-align: center;'>" + i + "</td><td>" + item.THONGSOCOBAN.KYHIEU + "</td><td>" + item.THONGSOCOBAN.SOHIEUMAY + "</td><td style='text-align: center;'>" + item.THONGSOCOBAN.NAMSANXUAT + "</td><td>" + item.THONGSOCOBAN.NOISANXUAT + "</td><td>" + item.THONGSOCOBAN.CONGSUAT + "</td><td>" + item.THONGSOCOBAN.HETHONGDIEUKHIEN + '</td><td><div style="display: flex; justify-content: space-around;"><a href="#" class="edit" title="Sửa" data-toggle="modal" data-target="#model-edit-MAYCHUYENDUNG"  onclick="onclick_edit_MAYCHUYENDUNG(`' + item.ID + '`,`' + item.THONGSOCOBAN.KYHIEU + '`,`' + item.THONGSOCOBAN.NAMSANXUAT + '`,`' + item.THONGSOCOBAN.NOISANXUAT + '`,`' + item.THONGSOCOBAN.NAMLAPRAP + '`,`' + item.THONGSOCOBAN.VITRILAPRAP + '`,`' + item.THONGSOCOBAN.SOHIEUMAY + '`,`' + item.THONGSOCOBAN.CONGSUAT + '`,`' + item.THONGSOCOBAN.VONGQUAY + '`,`' + item.THONGSOCOBAN.CHIEUQUAY + '`,`' + item.THONGSOCOBAN.NGUONKHOIDONG + '`,`' + item.THONGSOCOBAN.HETHONGDIEUKHIEN + '`,`' + item.THONGSOCOBAN.TRONGLUONG + '`,`' + item.THONGSOCOBAN.KICHTHUOCMAY.DAI + '`,`' + item.THONGSOCOBAN.KICHTHUOCMAY.RONG + '`,`' + item.THONGSOCOBAN.KICHTHUOCMAY.CAO + '`,`' + item.THONGSOCOBAN.CHUKYSUACHUA.TIEUTU + '`,`' + item.THONGSOCOBAN.CHUKYSUACHUA.TRUNGTU + '`,`' + item.THONGSOCOBAN.CHUKYSUACHUA.DAITU + '`,`' + item.THONGSOCOBAN.LOAIDIEN.DIENAP + '`,`' + item.THONGSOCOBAN.LOAIDIEN.TANSO + '`,`' + item.PHUONGPHAPTRUYENTAI.KYHIEULYHOP_BOGIAMVONG + '`,`' + item.PHUONGPHAPTRUYENTAI.SOHIEULYHOP_BOGIAMVONG + '`,`' + item.PHUONGPHAPTRUYENTAI.TYSOTRUYEN + '`,`' + item.PHUONGPHAPTRUYENTAI.KHOPNOICUNG + '`,`' + item.PHUONGPHAPTRUYENTAI.KHOPNOIMEM + '`,`' + item.PHUONGPHAPTRUYENTAI.CUROA + '`,`' + item.PHUONGPHAPTRUYENTAI.KYHIEUVONGBI + '`)"><i class="material-icons">&#xE254;</i></a><a href="#" class="delete" title="Xóa" onclick="delete_MAYCHUYENDUNG(`' + item.ID + '`)"><i class="material-icons">&#xE872;</i></a></div></td></tr>';
+                        tabletext += "<tr ";
+                        if (item.THONGBAODINHMUC.MUCCANHBAO == 1) {
+                            tabletext += 'style="background-color: #fff2cb;"';
+                        }
+                        else if (item.THONGBAODINHMUC.MUCCANHBAO == 2) {
+                            tabletext += 'style="background-color: #ff9999;"';
+                        }
+                        else {
+                            tabletext += 'style="background-color: #ffffff;"';
+                        }
+                        tabletext += "><td style='text-align: center;'>" + i + "</td><td>" + item.THONGSOCOBAN.KYHIEU + "</td><td>" + item.THONGSOCOBAN.SOHIEUMAY + "</td><td style='text-align: center;'>" + item.THONGSOCOBAN.NAMSANXUAT + "</td><td>" + item.THONGSOCOBAN.NOISANXUAT + "</td><td>" + item.THONGSOCOBAN.CONGSUAT + "</td><td>" + item.THONGSOCOBAN.HETHONGDIEUKHIEN + '</td><td><div style="display: flex; justify-content: space-around;"><a href="#" class="edit" title="Sửa" data-toggle="modal" data-target="#model-edit-MAYCHUYENDUNG"  onclick="onclick_edit_MAYCHUYENDUNG(`' + item.ID + '`,`' + item.THONGSOCOBAN.KYHIEU + '`,`' + item.THONGSOCOBAN.NAMSANXUAT + '`,`' + item.THONGSOCOBAN.NOISANXUAT + '`,`' + item.THONGSOCOBAN.NAMLAPRAP + '`,`' + item.THONGSOCOBAN.VITRILAPRAP + '`,`' + item.THONGSOCOBAN.SOHIEUMAY + '`,`' + item.THONGSOCOBAN.CONGSUAT + '`,`' + item.THONGSOCOBAN.VONGQUAY + '`,`' + item.THONGSOCOBAN.CHIEUQUAY + '`,`' + item.THONGSOCOBAN.NGUONKHOIDONG + '`,`' + item.THONGSOCOBAN.HETHONGDIEUKHIEN + '`,`' + item.THONGSOCOBAN.TRONGLUONG + '`,`' + item.THONGSOCOBAN.KICHTHUOCMAY.DAI + '`,`' + item.THONGSOCOBAN.KICHTHUOCMAY.RONG + '`,`' + item.THONGSOCOBAN.KICHTHUOCMAY.CAO + '`,`' + item.THONGSOCOBAN.CHUKYSUACHUA.TIEUTU + '`,`' + item.THONGSOCOBAN.CHUKYSUACHUA.TRUNGTU + '`,`' + item.THONGSOCOBAN.CHUKYSUACHUA.DAITU + '`,`' + item.THONGSOCOBAN.LOAIDIEN.DIENAP + '`,`' + item.THONGSOCOBAN.LOAIDIEN.TANSO + '`,`' + item.PHUONGPHAPTRUYENTAI.KYHIEULYHOP_BOGIAMVONG + '`,`' + item.PHUONGPHAPTRUYENTAI.SOHIEULYHOP_BOGIAMVONG + '`,`' + item.PHUONGPHAPTRUYENTAI.TYSOTRUYEN + '`,`' + item.PHUONGPHAPTRUYENTAI.KHOPNOICUNG + '`,`' + item.PHUONGPHAPTRUYENTAI.KHOPNOIMEM + '`,`' + item.PHUONGPHAPTRUYENTAI.CUROA + '`,`' + item.PHUONGPHAPTRUYENTAI.KYHIEUVONGBI + '`)"><i class="material-icons">&#xE254;</i></a><a href="#" class="delete" title="Xóa" onclick="delete_MAYCHUYENDUNG(`' + item.ID + '`)"><i class="material-icons">&#xE872;</i></a></div></td></tr>';
                         i = i + 1;
                     });
                     tabletext += "</tbody>";
