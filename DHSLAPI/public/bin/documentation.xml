@@ -1285,6 +1285,15 @@
             <param name="id">id tàu</param>
             <returns></returns>
         </member>
+        <member name="M:DHSLAPI.Controllers.MAYCHINHController.LAYTHONGTINMAYCHINH2(System.String,System.Int32,System.Int32)">
+            <summary>
+            Lấy thông tin máy chính của tàu có cảnh báo định mức thời gian hoạt động
+            </summary>
+            <param name="id">id tàu</param>
+            <param name="trigger">định mức cảnh báo</param>
+            <param name="limit">Thời gian hoạt động từ lần sửa chữa, bảo dưỡng trước đến lần tiếp theo</param>
+            <returns></returns>
+        </member>
         <member name="M:DHSLAPI.Controllers.MAYCHINHController.SOLUONGMAY(System.String)">
             <summary>
             Lấy số lượng máy chính của tàu
@@ -1325,6 +1334,15 @@
             Lấy thông tin máy chuyên dụng
             </summary>
             <param name="id">id tàu</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.MAYCHUYENDUNGController.LAYTHONGTINMAYCHUYENDUNG2(System.String,System.Int32,System.Int32)">
+            <summary>
+            Lấy thông tin máy chuyên dụng có cảnh báo định mức
+            </summary>
+            <param name="id">id tàu</param>
+            <param name="trigger">định mức cảnh báo</param>
+            <param name="limit">Thời gian hoạt động từ lần sửa chữa, bảo dưỡng trước đến lần tiếp theo</param>
             <returns></returns>
         </member>
         <member name="M:DHSLAPI.Controllers.MAYCHUYENDUNGController.SOLUONGMAYCHUYENDUNG(System.String)">
@@ -1409,6 +1427,15 @@
             Lấy thông tin máy phụ phát điện của tàu
             </summary>
             <param name="id">id tàu</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.MAYPHUPHATDIENController.LAYTHONGTINMAYPHUPHATDIEN2(System.String,System.Int32,System.Int32)">
+            <summary>
+            Lấy thông tin máy phụ phát điện có cảnh báo định mức
+            </summary>
+            <param name="id">id tàu</param>
+            <param name="trigger">định mức cảnh báo</param>
+            <param name="limit">Thời gian hoạt động từ lần sửa chữa, bảo dưỡng trước đến lần tiếp theo</param>
             <returns></returns>
         </member>
         <member name="M:DHSLAPI.Controllers.MAYPHUPHATDIENController.SOLUONGMAYPHU(System.String)">
@@ -4254,6 +4281,34 @@
             Phương pháp truyền tải
             </summary>
         </member>
+        <member name="P:DHSLAPI.Models.THONGTINMAY.THONGBAODINHMUC">
+            <summary>
+            Thông báo định mức cảnh báo bảo dưỡng, sửa chữa định kỳ
+            </summary>
+        </member>
+        <member name="T:DHSLAPI.Models.THONGBAODINHMUC">
+            <summary>
+            Thông tin định mức cảnh báo
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.THONGBAODINHMUC.SUACHUACUOICUNG">
+            <summary>
+            Thời gian sửa chữa cuối cùng
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.THONGBAODINHMUC.MUCCANHBAO">
+            <summary>
+            Mức cảnh báo:
+            0 - chưa đến mức cảnh báo
+            1 - sắp đến lần bảo dưỡng, sửa chữa tiếp theo
+            2 - đã quá hạn bảo dưỡng, sửa chữa
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.THONGBAODINHMUC.THOIGIANCONLAI">
+            <summary>
+            Thời gian còn lại hoạt động của máy đến lần bảo dưỡng, sửa chữa tiếp theo
+            </summary>
+        </member>
         <member name="T:DHSLAPI.Models.THONGSOCOBAN">
             <summary>
             THông số cơ bản
@@ -4904,6 +4959,16 @@
             </summary>
             <param name="id">id thông tin thân vỏ</param>
             <param name="tv">thông tin thân vỏ mới</param>
+            <returns></returns>
+        </member>
+        <member name="M:ShipyardInfo.classes.Connection.LAYTHONGTINMAYTAU2(System.String,System.String,System.Int32,System.Int32)">
+            <summary>
+            Lấy thông tin máy có cảnh báo định mức
+            </summary>
+            <param name="id"></param>
+            <param name="loaimay"></param>
+            <param name="trigger"></param>
+            <param name="limit"></param>
             <returns></returns>
         </member>
         <member name="M:ShipyardInfo.classes.Connection.SUATHONGTINMAYTAU(System.String,DHSLAPI.Models.THONGTINMAY)">
