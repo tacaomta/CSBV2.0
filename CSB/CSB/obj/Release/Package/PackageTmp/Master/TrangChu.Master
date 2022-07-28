@@ -374,7 +374,6 @@
         .main-footer {
             padding: 20px;
             color: #98a6ad;
-            border-top: 1px solid #e3eaef;
             display: inline-block;
             width: 100%;
         }
@@ -1142,7 +1141,7 @@
       <li>
         <a href="../Page_Master/Manage_Tau?vung=1#">
           <i class='bi-folder' ></i>
-          <span class="link_name">Quản lý tàu</span>
+          <span class="link_name">Hồ sơ tàu</span>
         </a>
         <ul class="sub-menu blank">
           <li><a class="link_name" href="../Page_Master/Manage_Tau?vung=1#">Quản lý tàu</a></li>

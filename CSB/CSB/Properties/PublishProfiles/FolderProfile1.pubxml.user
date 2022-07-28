@@ -5,7 +5,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <_PublishTargetUrl>C:\Users\Linh\Documents\GitHub\CSBV2.0\public</_PublishTargetUrl>
-    <History>True|2022-07-27T10:03:01.6059981Z;True|2022-07-27T16:11:52.1816732+07:00;True|2022-07-27T13:18:37.8159421+07:00;True|2022-07-26T15:32:45.7081745+07:00;True|2022-07-26T14:52:09.7285996+07:00;True|2022-07-16T10:08:56.4668358+07:00;True|2022-07-14T15:34:19.4403688+07:00;True|2022-07-14T15:19:06.6326897+07:00;True|2022-07-13T00:02:04.2303090+07:00;True|2022-07-05T22:07:11.7810557+07:00;True|2022-07-03T17:53:05.2890419+07:00;True|2022-07-01T12:26:38.3556407+07:00;True|2022-06-28T11:14:50.5252768+07:00;True|2022-06-28T11:01:49.1801526+07:00;True|2022-06-28T00:38:04.2961563+07:00;True|2022-06-26T16:47:06.4962460+07:00;True|2022-04-28T09:53:53.8908883+07:00;True|2022-03-24T17:00:53.7084124+07:00;</History>
+    <History>True|2022-07-28T03:02:24.8779257Z;True|2022-07-27T17:03:01.6059981+07:00;True|2022-07-27T16:11:52.1816732+07:00;True|2022-07-27T13:18:37.8159421+07:00;True|2022-07-26T15:32:45.7081745+07:00;True|2022-07-26T14:52:09.7285996+07:00;True|2022-07-16T10:08:56.4668358+07:00;True|2022-07-14T15:34:19.4403688+07:00;True|2022-07-14T15:19:06.6326897+07:00;True|2022-07-13T00:02:04.2303090+07:00;True|2022-07-05T22:07:11.7810557+07:00;True|2022-07-03T17:53:05.2890419+07:00;True|2022-07-01T12:26:38.3556407+07:00;True|2022-06-28T11:14:50.5252768+07:00;True|2022-06-28T11:01:49.1801526+07:00;True|2022-06-28T00:38:04.2961563+07:00;True|2022-06-26T16:47:06.4962460+07:00;True|2022-04-28T09:53:53.8908883+07:00;True|2022-03-24T17:00:53.7084124+07:00;</History>
   </PropertyGroup>
   <ItemGroup>
     <File Include="About.aspx">
@@ -84,10 +84,10 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>02/04/2021 21:27:12</publishTime>
     </File>
     <File Include="bin/CSB.dll">
-      <publishTime>07/27/2022 17:03:00</publishTime>
+      <publishTime>07/28/2022 10:02:22</publishTime>
     </File>
     <File Include="bin/CSB.pdb">
-      <publishTime>07/27/2022 17:03:00</publishTime>
+      <publishTime>07/28/2022 10:02:22</publishTime>
     </File>
     <File Include="bin/Microsoft.AspNet.FriendlyUrls.dll">
       <publishTime>04/08/2022 08:01:24</publishTime>
@@ -537,7 +537,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>05/25/2022 22:39:36</publishTime>
     </File>
     <File Include="Master/TrangChu.Master">
-      <publishTime>07/27/2022 13:14:56</publishTime>
+      <publishTime>07/28/2022 09:57:48</publishTime>
     </File>
     <File Include="Page_Master/Add_Ship.aspx">
       <publishTime>06/06/2022 14:12:19</publishTime>
@@ -606,10 +606,10 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>06/06/2022 14:12:19</publishTime>
     </File>
     <File Include="Page_Master/SearchPage.aspx">
-      <publishTime>07/24/2022 15:44:52</publishTime>
+      <publishTime>07/28/2022 09:57:48</publishTime>
     </File>
     <File Include="Page_Master/SearchResult.aspx">
-      <publishTime>07/24/2022 15:44:52</publishTime>
+      <publishTime>07/28/2022 09:57:48</publishTime>
     </File>
     <File Include="Page_Master/ShipActivity.aspx">
       <publishTime>06/06/2022 14:12:19</publishTime>
@@ -873,7 +873,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>04/08/2022 08:01:24</publishTime>
     </File>
     <File Include="value.js">
-      <publishTime>07/27/2022 17:02:46</publishTime>
+      <publishTime>07/28/2022 10:02:03</publishTime>
     </File>
     <File Include="ViewSwitcher.ascx">
       <publishTime>04/08/2022 08:01:23</publishTime>

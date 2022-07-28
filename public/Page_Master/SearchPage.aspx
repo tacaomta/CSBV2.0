@@ -4,6 +4,7 @@
         .page-container {
             background-color: #92ddff;
             padding-top: 30px;
+            height: 65vh;
         }
         .search-gif {
             background-image: url(../Image/ship5.gif);
@@ -45,9 +46,10 @@
             line-height: 50px;  
         }
             .search-button:hover {
-                background-color: darkblue;
+                background-color: #4141b3;
                 text-decoration: none;
                 color: #ffffff;
+                cursor: pointer;
             }
     </style>
     <div class="page-container">
@@ -62,6 +64,12 @@
     </div>
     <script src="../Scripts/jquery-3.4.1.slim.min.js"></script>
     <script>
+        $('#keyword').keypress(function (event) {
+            var keycode = (event.keyCode ? event.keyCode : event.which);
+            if (keycode == '13') {
+                Search_Ship();
+            }
+        });
         function Search_Ship() {
             var trimStr = $.trim($('#keyword').val());
             if (trimStr == '') {
