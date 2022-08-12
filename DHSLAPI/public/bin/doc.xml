@@ -719,6 +719,11 @@
             <param name="id">id của xích neo</param>
             <returns></returns>
         </member>
+        <member name="T:DHSLAPI.Controllers.DANGKYCLBDNTGController">
+            <summary>
+            Đăng ký chất lượng bơm dầu, thông gió
+            </summary>
+        </member>
         <member name="M:DHSLAPI.Controllers.DANGKYCLBDNTGController.LAYTHONGTINDANGKYCLBDNTG(System.String)">
             <summary>
             Lấy thông tin đăng ký bơm dầu, nước và thông gió
@@ -748,6 +753,11 @@
             </summary>
             <param name="id">id của tàu</param>
             <returns></returns>
+        </member>
+        <member name="T:DHSLAPI.Controllers.DANGKYCLHANGHAIController">
+            <summary>
+            Đăng ký chất lượng hàng hải
+            </summary>
         </member>
         <member name="M:DHSLAPI.Controllers.DANGKYCLHANGHAIController.LAYTHONGTINDANGKYCLHANGHAI(System.String)">
             <summary>
@@ -779,6 +789,11 @@
             <param name="id">id của tàu</param>
             <returns></returns>
         </member>
+        <member name="T:DHSLAPI.Controllers.DANGKYCLHTCVController">
+            <summary>
+            Đăng ký chất lượng hệ trục chân vịt
+            </summary>
+        </member>
         <member name="M:DHSLAPI.Controllers.DANGKYCLHTCVController.LAYTHONGTINDANGKYCLHTCV(System.String)">
             <summary>
             Lấy thông tin đăng ký hệ trục chân vịt
@@ -808,6 +823,11 @@
             </summary>
             <param name="id">id của tàu</param>
             <returns></returns>
+        </member>
+        <member name="T:DHSLAPI.Controllers.DANGKYCLMAYCHINHController">
+            <summary>
+            Đăng ký chất lượng máy chính
+            </summary>
         </member>
         <member name="F:DHSLAPI.Controllers.DANGKYCLMAYCHINHController.con">
             <summary>
@@ -879,6 +899,11 @@
             <param name="id">id của tàu</param>
             <returns></returns>
         </member>
+        <member name="T:DHSLAPI.Controllers.DANGKYCLMAYPHUController">
+            <summary>
+            Đăng ký chất lượng máy phụ
+            </summary>
+        </member>
         <member name="F:DHSLAPI.Controllers.DANGKYCLMAYPHUController.con">
             <summary>
             Đăng ký chất lượng máy phụ phát điện
@@ -949,6 +974,11 @@
             <param name="id">id của bơm dầu, nước và thông gió</param>
             <returns></returns>
         </member>
+        <member name="T:DHSLAPI.Controllers.DANGKYCLTHIETBIKHACController">
+            <summary>
+            Đăng ký chất lượng thiết bị khác
+            </summary>
+        </member>
         <member name="M:DHSLAPI.Controllers.DANGKYCLTHIETBIKHACController.LAYTHONGTINDANGKYCLTHIETBIKHAC(System.String)">
             <summary>
             Lấy thông tin đăng ký thiết bị khác
@@ -978,6 +1008,11 @@
             </summary>
             <param name="id">id của tàu</param>
             <returns></returns>
+        </member>
+        <member name="T:DHSLAPI.Controllers.DANGKYCLVUKHIController">
+            <summary>
+            Đăng ký chất lượng vũ khí
+            </summary>
         </member>
         <member name="M:DHSLAPI.Controllers.DANGKYCLVUKHIController.LAYTHONGTINDANGKYCLVUKHI(System.String)">
             <summary>
@@ -1009,6 +1044,11 @@
             <param name="id">id của tàu</param>
             <returns></returns>
         </member>
+        <member name="T:DHSLAPI.Controllers.DANGKYNEOXICHNEOController">
+            <summary>
+            Đăng ký chất lượng neo, xích neo
+            </summary>
+        </member>
         <member name="M:DHSLAPI.Controllers.DANGKYNEOXICHNEOController.LAYTHONGTINDANGKYNEOXICHNEO(System.String)">
             <summary>
             Lấy thông tin đăng ký thay đổi mất bổ sung neo xích neo
@@ -1038,6 +1078,11 @@
             </summary>
             <param name="id">id của tàu</param>
             <returns></returns>
+        </member>
+        <member name="T:DHSLAPI.Controllers.DegreeController">
+            <summary>
+            Bằng cấp 
+            </summary>
         </member>
         <member name="M:DHSLAPI.Controllers.DegreeController.GetAll">
             <summary>
@@ -1162,6 +1207,11 @@
             </summary>
             <param name="id">id của hệ trục chân vịt</param>
             <returns></returns>
+        </member>
+        <member name="T:DHSLAPI.Controllers.InstitutionController">
+            <summary>
+            Cơ sở đào tạo
+            </summary>
         </member>
         <member name="M:DHSLAPI.Controllers.InstitutionController.GetAll">
             <summary>
@@ -1671,6 +1721,11 @@
             </summary>
             <param name="id"></param>
             <returns></returns>
+        </member>
+        <member name="T:DHSLAPI.Controllers.PositionController">
+            <summary>
+            Chức vụ
+            </summary>
         </member>
         <member name="M:DHSLAPI.Controllers.PositionController.GetAll">
             <summary>
