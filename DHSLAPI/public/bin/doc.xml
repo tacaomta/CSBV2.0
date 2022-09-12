@@ -3834,6 +3834,51 @@
             Ghi chú
             </summary>
         </member>
+        <member name="T:DHSLAPI.Models.TOMTATNOIDUNG">
+            <summary>
+            Tóm tắt nội dung sửa chữa
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.TOMTATNOIDUNG.MAYCHINH">
+            <summary>
+            tóm tắt về máy chính
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.TOMTATNOIDUNG.HETRUC">
+            <summary>
+            Tóm tắt về hệ trục
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.TOMTATNOIDUNG.THANVO">
+            <summary>
+            Tóm tắt về thân vỏ
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.TOMTATNOIDUNG.TRANGBIKHAC">
+            <summary>
+            Tóm tắt về trang bị khác
+            </summary>
+        </member>
+        <member name="T:DHSLAPI.Models.DANHGIACHATLUONG">
+            <summary>
+            Đánh giá chất lượng
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.DANHGIACHATLUONG.TOCDOTOIDA">
+            <summary>
+            Tốc độ tối đa
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.DANHGIACHATLUONG.TONGTHE">
+            <summary>
+            Tổng thể
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.DANHGIACHATLUONG.TONTAI">
+            <summary>
+            Tồn tại
+            </summary>
+        </member>
         <member name="T:DHSLAPI.Models.THIETBIKHAC">
             <summary>
             Các trang thiết bị khác
