@@ -5108,7 +5108,7 @@
             <param name="limit"></param>
             <returns></returns>
         </member>
-        <member name="M:ShipyardInfo.classes.Connection.LAYTHONGTINMAYTAU2(System.String,System.String)">
+        <member name="M:ShipyardInfo.classes.Connection.LAYTHONGTINMAYTAUV2(System.String,System.String)">
             <summary>
             Lấy danh mục máy có định mức cảnh báo
             </summary>
