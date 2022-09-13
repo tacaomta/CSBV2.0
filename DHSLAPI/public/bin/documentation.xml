@@ -1344,6 +1344,15 @@
             <param name="limit">Thời gian hoạt động từ lần sửa chữa, bảo dưỡng trước đến lần tiếp theo</param>
             <returns></returns>
         </member>
+        <member name="M:DHSLAPI.Controllers.MAYCHINHController.LAYTHONGTINMAYCHINH3(System.String)">
+            <summary>
+            Lấy thông tin máy chính của tàu có cảnh báo định mức thời gian hoạt động
+            Hàm này v2.2 (định mức áp dụng cho từng máy, thông tin lưu trong thông tin máy)
+            là hàm cập nhật của hàm v2.1 (định mức áp dụng chung cho các máy)
+            </summary>
+            <param name="id">id tàu</param>
+            <returns></returns>
+        </member>
         <member name="M:DHSLAPI.Controllers.MAYCHINHController.SOLUONGMAY(System.String)">
             <summary>
             Lấy số lượng máy chính của tàu
@@ -1393,6 +1402,15 @@
             <param name="id">id tàu</param>
             <param name="trigger">định mức cảnh báo</param>
             <param name="limit">Thời gian hoạt động từ lần sửa chữa, bảo dưỡng trước đến lần tiếp theo</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.MAYCHUYENDUNGController.LAYTHONGTINMAYCHUYENDUNG3(System.String)">
+            <summary>
+            Lấy thông tin máy chuyên dụng của tàu có cảnh báo định mức thời gian hoạt động
+            Hàm này v2.2 (định mức áp dụng cho từng máy, thông tin lưu trong thông tin máy)
+            là hàm cập nhật của hàm v2.1 (định mức áp dụng chung cho các máy)
+            </summary>
+            <param name="id">id tàu</param>
             <returns></returns>
         </member>
         <member name="M:DHSLAPI.Controllers.MAYCHUYENDUNGController.SOLUONGMAYCHUYENDUNG(System.String)">
@@ -1486,6 +1504,15 @@
             <param name="id">id tàu</param>
             <param name="trigger">định mức cảnh báo</param>
             <param name="limit">Thời gian hoạt động từ lần sửa chữa, bảo dưỡng trước đến lần tiếp theo</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.MAYPHUPHATDIENController.LAYTHONGTINMAYPHUPHATDIEN3(System.String)">
+            <summary>
+            Lấy thông tin máy phụ phát điện của tàu có cảnh báo định mức thời gian hoạt động
+            Hàm này v2.2 (định mức áp dụng cho từng máy, thông tin lưu trong thông tin máy)
+            là hàm cập nhật của hàm v2.1 (định mức áp dụng chung cho các máy)
+            </summary>
+            <param name="id">id tàu</param>
             <returns></returns>
         </member>
         <member name="M:DHSLAPI.Controllers.MAYPHUPHATDIENController.SOLUONGMAYPHU(System.String)">
@@ -4409,6 +4436,16 @@
             Thời gian còn lại hoạt động của máy đến lần bảo dưỡng, sửa chữa tiếp theo
             </summary>
         </member>
+        <member name="P:DHSLAPI.Models.THONGBAODINHMUC.DINHMUCSUACHUA">
+            <summary>
+            Thời gian giữa hai lần sửa chữa, bảo dưỡng
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.THONGBAODINHMUC.DINHMUCTHONGBAO">
+            <summary>
+            Thời gian hoạt động, cảnh báo sắp đến lần sửa chữa, bảo dưỡng tiếp theo
+            </summary>
+        </member>
         <member name="T:DHSLAPI.Models.THONGSOCOBAN">
             <summary>
             THông số cơ bản
@@ -5069,6 +5106,14 @@
             <param name="loaimay"></param>
             <param name="trigger"></param>
             <param name="limit"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ShipyardInfo.classes.Connection.LAYTHONGTINMAYTAU2(System.String,System.String)">
+            <summary>
+            Lấy danh mục máy có định mức cảnh báo
+            </summary>
+            <param name="id">id tàu</param>
+            <param name="loaimay"></param>
             <returns></returns>
         </member>
         <member name="M:ShipyardInfo.classes.Connection.SUATHONGTINMAYTAU(System.String,DHSLAPI.Models.THONGTINMAY)">
