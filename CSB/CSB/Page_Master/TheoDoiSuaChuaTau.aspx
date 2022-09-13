@@ -114,17 +114,66 @@
                                 <div class="row">
                                     <div class="col-sm-6">
                                         <div class="form-group row">
-                                            <label class="col-sm-4 col-form-label">Nội dung sửa chữa: </label>
+                                            <label class="col-sm-4 col-form-label">Ghi chú: </label>
                                             <div class="col-sm-8">
-                                                <input type="text" id="SuaChua_addNoiDungSC" class="form-control">
+                                                <input type="text" id="SuaChua_addGhiChu" class="form-control">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <h4 class="sub-title">Đánh giá nội dung sửa chữa</h4>
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="form-group row">
+                                            <label class="col-sm-4 col-form-label">Máy chính: </label>
+                                            <div class="col-sm-8">
+                                                <input type="text" id="SuaChua_addNoiDungSC_MC" class="form-control">
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-sm-6">
                                         <div class="form-group row">
-                                            <label class="col-sm-4 col-form-label">Đánh giá chất lượng: </label>
+                                            <label class="col-sm-4 col-form-label">Hệ trục: </label>
                                             <div class="col-sm-8">
-                                                <input type="text" id="SuaChua_addDanhGia" class="form-control">
+                                                <input type="text" id="SuaChua_addNoiDungSC_HT" class="form-control">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                 <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="form-group row">
+                                            <label class="col-sm-4 col-form-label">Thân vỏ: </label>
+                                            <div class="col-sm-8">
+                                                <input type="text" id="SuaChua_addNoiDungSC_TV" class="form-control">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group row">
+                                            <label class="col-sm-4 col-form-label">Trang bị khác: </label>
+                                            <div class="col-sm-8">
+                                                <input type="text" id="SuaChua_addNoiDungSC_TBK" class="form-control">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <h4 class="sub-title">Đánh giá chất lượng sửa chữa</h4>
+                                
+                                 <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="form-group row">
+                                            <label class="col-sm-4 col-form-label">Tốc độ tối đa: </label>
+                                            <div class="col-sm-8">
+                                                <input type="text" id="SuaChua_addChatLuongSC_TDTD" class="form-control">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group row">
+                                            <label class="col-sm-4 col-form-label">Tổng thể: </label>
+                                            <div class="col-sm-8">
+                                                <input type="text" id="SuaChua_addChatLuongSC_TongThe" class="form-control">
                                             </div>
                                         </div>
                                     </div>
@@ -132,9 +181,9 @@
                                 <div class="row">
                                     <div class="col-sm-6">
                                         <div class="form-group row">
-                                            <label class="col-sm-4 col-form-label">Ghi chú: </label>
+                                            <label class="col-sm-4 col-form-label">Tồn tại: </label>
                                             <div class="col-sm-8">
-                                                <input type="text" id="SuaChua_addGhiChu" class="form-control">
+                                                <input type="text" id="SuaChua_addChatLuongSC_TonTai" class="form-control">
                                             </div>
                                         </div>
                                     </div>
@@ -220,20 +269,68 @@
                                         </div>
                                     </div>
                                 </div>
+                                 <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="form-group row">
+                                            <label class="col-sm-4 col-form-label">Ghi chú: </label>
+                                            <div class="col-sm-8">
+                                                <input type="text" id="SuaChua_editGhiChu" class="form-control">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                  <h4 class="sub-title">Đánh giá nội dung sửa chữa</h4>
                                 <div class="row">
                                     <div class="col-sm-6">
                                         <div class="form-group row">
-                                            <label class="col-sm-4 col-form-label">Nội dung sửa chữa: </label>
+                                            <label class="col-sm-4 col-form-label">Máy chính: </label>
                                             <div class="col-sm-8">
-                                                <input type="text" id="SuaChua_editNoiDungSC" class="form-control">
+                                                <input type="text" id="SuaChua_editNoiDungSC_MC" class="form-control">
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-sm-6">
                                         <div class="form-group row">
-                                            <label class="col-sm-4 col-form-label">Đánh giá chất lượng: </label>
+                                            <label class="col-sm-4 col-form-label">Hệ trục: </label>
                                             <div class="col-sm-8">
-                                                <input type="text" id="SuaChua_editDanhGia" class="form-control">
+                                                <input type="text" id="SuaChua_editNoiDungSC_HT" class="form-control">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                 <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="form-group row">
+                                            <label class="col-sm-4 col-form-label">Thân vỏ: </label>
+                                            <div class="col-sm-8">
+                                                <input type="text" id="SuaChua_editNoiDungSC_TV" class="form-control">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group row">
+                                            <label class="col-sm-4 col-form-label">Trang bị khác: </label>
+                                            <div class="col-sm-8">
+                                                <input type="text" id="SuaChua_editNoiDungSC_TBK" class="form-control">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <h4 class="sub-title">Đánh giá chất lượng sửa chữa</h4>
+                                                                 <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="form-group row">
+                                            <label class="col-sm-4 col-form-label">Tốc độ tối đa: </label>
+                                            <div class="col-sm-8">
+                                                <input type="text" id="SuaChua_editChatLuongSC_TDTD" class="form-control">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group row">
+                                            <label class="col-sm-4 col-form-label">Tổng thể: </label>
+                                            <div class="col-sm-8">
+                                                <input type="text" id="SuaChua_editChatLuongSC_TongThe" class="form-control">
                                             </div>
                                         </div>
                                     </div>
@@ -241,9 +338,9 @@
                                 <div class="row">
                                     <div class="col-sm-6">
                                         <div class="form-group row">
-                                            <label class="col-sm-4 col-form-label">Ghi chú: </label>
+                                            <label class="col-sm-4 col-form-label">Tồn tại: </label>
                                             <div class="col-sm-8">
-                                                <input type="text" id="SuaChua_editGhiChu" class="form-control">
+                                                <input type="text" id="SuaChua_editChatLuongSC_TonTai" class="form-control">
                                             </div>
                                         </div>
                                     </div>
@@ -368,10 +465,10 @@
                         //$('#loader').removeClass('hidden');
                     },
                     success: function (data) {
-                        var tabletext = "<thead><tr><th rowspan='2'>STT</th><th colspan='2'>TG SỬA CHỮA</th><th rowspan='2'>NƠI SỬA CHỮA</th><th rowspan='2'>CẤP SỬA CHỮA</th><th rowspan='2'>GIÁ THÀNH(VNĐ)</th><th rowspan='2'>NỘI DUNG SỬA CHỮA</th><th rowspan='2'>CHẤT LƯỢNG</th><th rowspan='2'>GHI CHÚ</th><th rowspan='2'>TÁC VỤ</th></tr><tr><th>Bắt đầu</th><th>Kết thúc</th></tr></thead><tbody>";
+                        var tabletext = "<thead><tr><th rowspan='2'>STT</th><th colspan='2'>TG SỬA CHỮA</th><th rowspan='2'>NƠI SỬA CHỮA</th><th rowspan='2'>CẤP SỬA CHỮA</th><th rowspan='2'>GIÁ THÀNH(VNĐ)</th><th rowspan='2'>PHƯƠNG ÁN</th><th colspan='4'>ĐÁNH GIÁ N.DUNG SC</th><th colspan='3'>ĐÁNH GIÁ C.LƯỢNG SC</th><th rowspan='2'>TÁC VỤ</th></tr><tr><th>Bắt đầu</th><th>Kết thúc</th><th>Máy chính</th><th>Hệ trục</th><th>Thân vỏ</th><th>Trang bị khác</th><th>T.Độ max</th><th>Tổng thể</th><th>Tồn tại</th></tr></thead><tbody>";
                         var i = 1;
                         $.each(data, function (key, item) {
-                            tabletext += "<tr><td style='text-align: center;'>" + i + "</td><td>" + item.THOIGIAN.BATDAU + "</td><td>" + item.THOIGIAN.KETTHUC + "</td><td>" + item.NOISUACHUA + "</td><td>" + item.CAPSUACHUA.CAP + "</td><td>" + item.GIATHANH + "</td><td>" + item.TOMTATNOIDUNG + "</td><td>" + item.DANHGIACHATLUONG + "</td><td>" + item.GHICHU + "</td>" + '<td><div style="display: flex; justify-content: space-around;"><a href="#" class="edit" title="Sửa" data-toggle="modal" data-target="#model-edit-SuaChuaTau" onclick="edit_suachuatau(`' + item.ID + '`,`' + item.THOIGIAN.BATDAU + '`,`' + item.THOIGIAN.KETTHUC + '`,`' + item.NOISUACHUA + '`,`' + item.CAPSUACHUA.ID + '`,`' + item.PHUONGANKEDA + '`,`' + item.GIATHANH + '`,`' + item.TOMTATNOIDUNG + '`,`' + item.DANHGIACHATLUONG + '`,`' + item.GHICHU + '`)"><i class="material-icons">&#xE254;</i></a><a href="#" class="delete" title="Xóa" onclick="delete_suachuatau(`' + item.ID + '`)"><i class="material-icons">&#xE872;</i></a></div></td></tr>';
+                            tabletext += "<tr><td style='text-align: center;'>" + i + "</td><td>" + item.THOIGIAN.BATDAU + "</td><td>" + item.THOIGIAN.KETTHUC + "</td><td>" + item.NOISUACHUA + "</td><td>" + item.CAPSUACHUA.CAP + "</td><td>" + item.GIATHANH + "</td><td>" + item.PHUONGANKEDA + "</td><td>" + item.TOMTATNOIDUNG.MAYCHINH + "</td><td>" + item.TOMTATNOIDUNG.HETRUC + "</td><td>" + item.TOMTATNOIDUNG.THANVO + "</td><td>" + item.TOMTATNOIDUNG.TRANGBIKHAC + "</td><td>" + item.DANHGIACHATLUONG.TOCDOTOIDA + "</td><td>" + item.DANHGIACHATLUONG.TONGTHE + "</td><td>" + item.DANHGIACHATLUONG.TONTAI + "</td>" + '<td><div style="display: flex; justify-content: space-around;"><a href="#" class="edit" title="Sửa" data-toggle="modal" data-target="#model-edit-SuaChuaTau" onclick="edit_suachuatau(`' + item.ID + '`,`' + item.THOIGIAN.BATDAU + '`,`' + item.THOIGIAN.KETTHUC + '`,`' + item.NOISUACHUA + '`,`' + item.CAPSUACHUA.ID + '`,`' + item.PHUONGANKEDA + '`,`' + item.GIATHANH + '`,`' + item.TOMTATNOIDUNG.MAYCHINH + '`,`' + item.TOMTATNOIDUNG.HETRUC + '`,`' + item.TOMTATNOIDUNG.THANVO + '`,`' + item.TOMTATNOIDUNG.TRANGBIKHAC + '`,`' + item.DANHGIACHATLUONG.TOCDOTOIDA + '`,`' + item.DANHGIACHATLUONG.TONGTHE + '`,`' + item.DANHGIACHATLUONG.TONTAI + '`,`' + item.GHICHU + '`)"><i class="material-icons">&#xE254;</i></a><a href="#" class="delete" title="Xóa" onclick="delete_suachuatau(`' + item.ID + '`)"><i class="material-icons">&#xE872;</i></a></div></td></tr>';
                             i = i + 1;
                         });
                         tabletext += "</tbody>";
@@ -493,8 +590,17 @@
                     },
                     PHUONGANKEDA: $("#SuaChua_addPhuongAn").val(),
                     GIATHANH: $("#SuaChua_addGiaThanh").val(),
-                    TOMTATNOIDUNG: $("#SuaChua_addNoiDungSC").val(),
-                    DANHGIACHATLUONG: $("#SuaChua_addDanhGia").val(),
+                    TOMTATNOIDUNG: {
+                        MAYCHINH: $("#SuaChua_addNoiDungSC_MC").val(),
+                        HETRUC: $("#SuaChua_addNoiDungSC_HT").val() ,
+                        THANVO: $("#SuaChua_addNoiDungSC_TV").val(),
+                        TRANGBIKHAC: $("#SuaChua_addNoiDungSC_TBK").val()
+                    }, 
+                    DANHGIACHATLUONG: {
+                        TOCDOTOIDA: $("#SuaChua_addChatLuongSC_TDTD").val(),
+                        TONGTHE: $("#SuaChua_addChatLuongSC_TongThe").val(),
+                        TONTAI: $("#SuaChua_addChatLuongSC_TonTai").val()
+                    },
                     GHICHU: $("#SuaChua_addGhiChu").val(),
                 };
                 console.log(SuaChuaTau);
@@ -517,8 +623,13 @@
                         $("#SuaChua_addNoiSuaChua").val("");
                         $("#SuaChua_addPhuongAn").val("");
                         $("#SuaChua_addGiaThanh").val("");
-                        $("#SuaChua_addNoiDungSC").val("");
-                        $("#SuaChua_addDanhGia").val("");
+                        $("#SuaChua_addNoiDungSC_MC").val("");
+                        $("#SuaChua_addNoiDungSC_HT").val("");
+                        $("#SuaChua_addNoiDungSC_TV").val("");
+                        $("#SuaChua_addNoiDungSC_TBK").val("");
+                        $("#SuaChua_addChatLuongSC_TDTD").val("");
+                        $("#SuaChua_addChatLuongSC_TongThe").val("");
+                        $("#SuaChua_addChatLuongSC_TonTai").val("");
                         $("#SuaChua_addGhiChu").val("");
                         $('#model-add-SuaChuaTau').modal("hide");
                     },
@@ -526,7 +637,7 @@
             }
         }
 
-        function edit_suachuatau(ID, THOIGIANBD, THOIGIANKT, NOISUACHUA, CAPSUACHUA_ID, PHUONGANKEDA, GIATHANH, TOMTATNOIDUNG, DANHGIACHATLUONG, GHICHU) {
+        function edit_suachuatau(ID, THOIGIANBD, THOIGIANKT, NOISUACHUA, CAPSUACHUA_ID, PHUONGANKEDA, GIATHANH, MAYCHINH, HETRUC, THANVO, TRANGBIKHAC, TOCDOTOIDA, TONGTHE, TONTAI,GHICHU) {
             var day = THOIGIANBD.substring(0, 2);
             var month = THOIGIANBD.substring(3, 5);
             var year = THOIGIANBD.substring(6, 10);
@@ -542,8 +653,16 @@
             $("#SuaChua_editNoiSuaChua").val(NOISUACHUA);
             $("#SuaChua_editPhuongAn").val(PHUONGANKEDA);
             $("#SuaChua_editGiaThanh").val(GIATHANH);
-            $("#SuaChua_editNoiDungSC").val(TOMTATNOIDUNG);
-            $("#SuaChua_editDanhGia").val(DANHGIACHATLUONG);
+
+            
+            $("#SuaChua_editNoiDungSC_MC").val(MAYCHINH);
+            $("#SuaChua_editNoiDungSC_HT").val(HETRUC);
+            $("#SuaChua_editNoiDungSC_TV").val(THANVO);
+            $("#SuaChua_editNoiDungSC_TBK").val(TRANGBIKHAC);
+            $("#SuaChua_editChatLuongSC_TDTD").val(TOCDOTOIDA);
+            $("#SuaChua_editChatLuongSC_TongThe").val(TOCDOTOIDA);
+            $("#SuaChua_editChatLuongSC_TonTai").val(TOCDOTOIDA);
+          
             $("#SuaChua_editGhiChu").val(GHICHU);
         }
 
@@ -589,8 +708,17 @@
                     },
                     PHUONGANKEDA: $("#SuaChua_editPhuongAn").val(),
                     GIATHANH: $("#SuaChua_editGiaThanh").val(),
-                    TOMTATNOIDUNG: $("#SuaChua_editNoiDungSC").val(),
-                    DANHGIACHATLUONG: $("#SuaChua_editDanhGia").val(),
+                    TOMTATNOIDUNG: {
+                        MAYCHINH: $("#SuaChua_editNoiDungSC_MC").val(),
+                        HETRUC: $("#SuaChua_editNoiDungSC_HT").val(),
+                        THANVO: $("#SuaChua_editNoiDungSC_TV").val(),
+                        TRANGBIKHAC: $("#SuaChua_editNoiDungSC_TBK").val()
+                    },
+                    DANHGIACHATLUONG: {
+                        TOCDOTOIDA: $("#SuaChua_editChatLuongSC_TDTD").val(),
+                        TONGTHE: $("#SuaChua_editChatLuongSC_TongThe").val(),
+                        TONTAI: $("#SuaChua_editChatLuongSC_TonTai").val()
+                    },
                     GHICHU: $("#SuaChua_editGhiChu").val(),
                 };
                 console.log(SuaChuaTau);
@@ -607,15 +735,15 @@
                         toastError("Thất bại", "");
                     },
                     complete: function () { // Set our complete callback, adding the .hidden class and hiding the spinner.
-                        $("#SuaChua_addTGbatdau").val("");
-                        $("#SuaChua_addTGketthuc").val("");
-                        //Thiếu cấp bậc
-                        $("#SuaChua_addNoiSuaChua").val("");
-                        $("#SuaChua_addPhuongAn").val("");
-                        $("#SuaChua_addGiaThanh").val("");
-                        $("#SuaChua_addNoiDungSC").val("");
-                        $("#SuaChua_addDanhGia").val("");
-                        $("#SuaChua_addGhiChu").val("");
+                        //$("#SuaChua_addTGbatdau").val("");
+                        //$("#SuaChua_addTGketthuc").val("");
+                        ////Thiếu cấp bậc
+                        //$("#SuaChua_addNoiSuaChua").val("");
+                        //$("#SuaChua_addPhuongAn").val("");
+                        //$("#SuaChua_addGiaThanh").val("");
+                        //$("#SuaChua_addNoiDungSC").val("");
+                        //$("#SuaChua_addDanhGia").val("");
+                        //$("#SuaChua_addGhiChu").val("");
                         $('#model-edit-SuaChuaTau').modal("hide");
                     },
                 });

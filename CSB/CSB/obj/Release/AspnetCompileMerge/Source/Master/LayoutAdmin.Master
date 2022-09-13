@@ -6184,7 +6184,6 @@
     <script src="../Scripts/vendor/jquery.dataTables.min.js"></script>
     <script src="../Scripts/vendor/dataTables.bootstrap4.min.js"></script>
     <script src="../Scripts/vendor/popper.min.js"></script>
-    <script src="../Scripts/vendor/jquery.dataTables.min.js"></script>
     <script src="../Scripts/vendor/dataTables.bootstrap4.min.js"></script>
     <script src="../Scripts/vendor/dataTables.buttons.min.js"></script>
 <%--    <script src="../Scripts/vendor/buttons.bootstrap4.min.js"></script>--%>

@@ -29,7 +29,7 @@
                         <div class="card-block">
                             <div class="" style="display: flex;align-items: center;">
                                 <div class="btn-group">
-                                    <button onclick="loadDataList_THOIGIANLAMVIECMAY()" class="btn btn-secondary mb-2"><span class="bi-arrow-clockwise"></span>&nbsp;Load dữ liệu</button>
+                                    <button onclick="loadDuLieu()" class="btn btn-secondary mb-2"><span class="bi-arrow-clockwise"></span>&nbsp;Load dữ liệu</button>
                                     <button id="btn_add_THOIGIANLAMVIECMAY" class="btn btn-secondary mb-2" data-toggle="modal" data-target="#model-add-THOIGIANLAMVIECMAY" onclick="loadDSMay()" style="padding-top: 4px;"><span class="bi bi-plus-circle"></span> Thêm mới</button>
                                 </div>
                                 <div class="col-md-4" style="position: relative;margin-left: auto;display: flex;">
@@ -78,7 +78,7 @@
                                             <div class="form-group row">
                                                 <label class="col-sm-4 col-form-label">Năm hiện tại: </label>
                                                 <div class="col-sm-8">
-                                                    <input type="number" min="0" id="add-THOIGIANLAMVIECMAY-NAM" disabled="" class="form-control">
+                                                    <input type="number" min="0" id="add-THOIGIANLAMVIECMAY-NAM" class="form-control">
                                                 </div>
                                             </div>
                                         </div>
@@ -356,7 +356,7 @@
                 success: function (data) {
                     var tabletext = "<thead><tr><th>STT</th><th>KÝ HIỆU MÁY</th><th>CHUYỂN NĂM TRƯỚC</th><th>QUÝ I</th><th>QUÝ II</th><th>QUÝ III</th><th>QUÝ IV</th><th>TỔNG (4 QUÝ + NĂM TRƯỚC)</th><th>TÁC VỤ</th></tr></thead><tbody>";                    var i = 1;
                     $.each(data, function (key, item) {
-                        tabletext += "<tr><td style='text-align: center;>" + i + "</td><td>" + item.THONGTINMAY.THONGSOCOBAN.KYHIEU + "</td><td>" + item.NAMTRUOC + "</td><td>" + item.QUYI + "</td><td>" + item.QUYII + "</td><td>" + item.QUYIII + "</td><td>" + item.QUYIV + "</td><td>" + item.TONG + '</td><td><div style="display: flex; justify-content: center;"><a href="#" class="edit" title="Sửa" data-toggle="modal" data-target="#model-edit-THOIGIANLAMVIECMAY"  onclick="onclick_edit_THOIGIANLAMVIECMAY(`' + item.ID + '`,`' + item.THONGTINMAY.ID + '`,`' + item.THONGTINMAY.THONGSOCOBAN.KYHIEU + '`,`' + item.QUYI + '`,`' + item.QUYII + '`,`' + item.QUYIII + '`,`' + item.QUYIV + '`,`' + item.NAMTRUOC + '`,`' + item.TONGTRONGNAM + '`,`' + item.TONG + '`)"><i class="material-icons">&#xE254;</i></a><a href="#" class="delete" title="Xóa" onclick="delete_THOIGIANLAMVIECMAY(`' + item.ID + '`)"><i class="material-icons">&#xE872;</i></a></div></td></tr>';
+                        tabletext += "<tr><td style='text-align: center;'>" + i + "</td><td>" + item.THONGTINMAY.THONGSOCOBAN.KYHIEU + "</td><td>" + item.NAMTRUOC + "</td><td>" + item.QUYI + "</td><td>" + item.QUYII + "</td><td>" + item.QUYIII + "</td><td>" + item.QUYIV + "</td><td>" + item.TONG + '</td><td><div style="display: flex; justify-content: center;"><a href="#" class="edit" title="Sửa" data-toggle="modal" data-target="#model-edit-THOIGIANLAMVIECMAY"  onclick="onclick_edit_THOIGIANLAMVIECMAY(`' + item.ID + '`,`' + item.THONGTINMAY.ID + '`,`' + item.THONGTINMAY.THONGSOCOBAN.KYHIEU + '`,`' + item.QUYI + '`,`' + item.QUYII + '`,`' + item.QUYIII + '`,`' + item.QUYIV + '`,`' + item.NAMTRUOC + '`,`' + item.TONGTRONGNAM + '`,`' + item.TONG + '`)"><i class="material-icons">&#xE254;</i></a><a href="#" class="delete" title="Xóa" onclick="delete_THOIGIANLAMVIECMAY(`' + item.ID + '`)"><i class="material-icons">&#xE872;</i></a></div></td></tr>';
                         i = i + 1;
                     });
                     tabletext += "</tbody>";
@@ -432,7 +432,8 @@
                         loadDataList_THOIGIANLAMVIECMAY(THOIGIANLAMVIECMAY.NAM);
                         $("#NAM").val(THOIGIANLAMVIECMAY.NAM);
                     }, error: function (ret) {
-                        toastError("Thất bại", "");
+                        console.log(THOIGIANLAMVIECMAY);
+                        toastError("Thất bại", "Bản ghi đã tồn tại!");
                     },
                     complete: function () { // Set our complete callback, adding the .hidden class and hiding the spinner.
                         $('#model-add-THOIGIANLAMVIECMAY').modal("hide");
@@ -515,6 +516,10 @@
             } else {
 
             }
+        }
+        function loadDuLieu() {
+            loadDataList_THOIGIANLAMVIECMAY($('#NAM').val());
+            //console.log($('#NAM').val());
         }
     </script>
 </asp:Content>

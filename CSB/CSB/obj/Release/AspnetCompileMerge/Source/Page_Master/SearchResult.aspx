@@ -141,7 +141,8 @@
         </div>
         <div class="right-result col-10 p-0">
             <div id="result-message" class="result-message" style="padding: 20px 15px">
-                Tìm thấy <span id="result-num">3</span> kết quả phù hợp
+                <%--Tìm thấy <span id="result-num">3</span> kết quả phù hợp--%>
+                Đang tìm kiếm ...
                 <div class="blue-hr"></div>
             </div>
             <div id="List_Result" class="result-container">
@@ -188,7 +189,8 @@
                             tabletext += '<div class="result-card"><p style="font-size: 30px; color: #2070cc; font-weight: bold;">Tàu CSB số hiệu: ' + item.TTCOBAN.SOHIEU + '</p><p>- Ký hiệu: ' + item.TTCOBAN.KYHIEU + '</p><p>- Nơi sản xuất: ' + item.TTCOBAN.NOISANXUAT + '</p><p>- Năm hạ thủy: ' + item.TTCOBAN.NAMHATHUY + '</p> <p>- Chức năng: ' + item.TTCOBAN.CHUCNANG + '</p><button class="res-button"  onclick="View_HoSoTau(`' + item.ID + '`)">Xem hồ sơ</button></div>';
                             i++;
                         });
-                        $('#result-num').html(i);
+                        $("#result-message").html('Tìm thấy ' + '<span id="result-num">' + i + '</span>' + ' kết quả phù hợp' + '<div class="blue-hr"></div>');
+                        /*$('#result-num').html(i);*/
                         $('#List_Result').html(tabletext);
                     }
 

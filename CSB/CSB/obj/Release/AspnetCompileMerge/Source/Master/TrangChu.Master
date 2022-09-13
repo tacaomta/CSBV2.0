@@ -14,13 +14,15 @@
     <link href="../css/boxicons.min.css" rel="stylesheet" />
 
     <style>
-        @font-face{
+        @font-face {
             font-family: 'boxicons';
             src: url(../fonts/boxicons.woff2) format('woff2');
         }
+
         .dataTables_wrapper {
             overflow-y: auto;
         }
+
         * {
             padding: 0;
             margin-right: 0;
@@ -201,7 +203,7 @@
         #accordion {
             font-size: 15px;
         }
-        
+
         #rightContent .navbar {
             justify-content: flex-end;
             background-color: #ffffff !important;
@@ -274,7 +276,7 @@
         }
 
         .narrowed {
-            width: calc(100% - 78px) ;
+            width: calc(100% - 78px);
         }
 
 
@@ -374,7 +376,6 @@
         .main-footer {
             padding: 20px;
             color: #98a6ad;
-            border-top: 1px solid #e3eaef;
             display: inline-block;
             width: 100%;
         }
@@ -663,9 +664,9 @@
             background-color: #f9f9f9;
         }
 
-        .breadcrumb .breadcrumb-item {
-            line-height: 1;
-        }
+            .breadcrumb .breadcrumb-item {
+                line-height: 1;
+            }
 
         .breadcrumb-item::before {
             color: #01b5f9 !important;
@@ -697,9 +698,9 @@
             background-color: #f9f9f9;
         }
 
-        .breadcrumb .breadcrumb-item {
-            line-height: 1;
-        }
+            .breadcrumb .breadcrumb-item {
+                line-height: 1;
+            }
 
         .breadcrumb-item::before {
             color: #01b5f9 !important;
@@ -731,16 +732,20 @@
                 border: none !important;
                 background: transparent !important;
             }
-            .row .form-group{
-                display:flex;
-            }
-    table.dataTable thead th, table.dataTable tfoot th {
-        font-weight: 500;
-        text-align: center;
-    }
-    .btn {
-        font-size: 14px;
-    }
+
+        .row .form-group {
+            display: flex;
+        }
+
+        table.dataTable thead th, table.dataTable tfoot th {
+            font-weight: 500;
+            text-align: center;
+        }
+
+        .btn {
+            font-size: 14px;
+        }
+
         .blue-hr {
             width: 50px;
             height: 4px;
@@ -765,8 +770,9 @@
 
         .btn {
             font-size: 12px;
-            }
-                .row .form-group {
+        }
+
+        .row .form-group {
             display: flex;
         }
 
@@ -783,26 +789,27 @@
 
 
 
-        #loader{
+        #loader {
             z-index: 999;
-            position:fixed;
-            top:50%;
-            left:50%;
+            position: fixed;
+            top: 50%;
+            left: 50%;
         }
 
-        .hidden{
-            display:none;
+        .hidden {
+            display: none;
         }
         /* new */
         .logo-details {
-        padding: 10px;
-      }
-        
-      .sidebar.closee .sidebar-img {
+            padding: 10px;
+        }
+
+        .sidebar.closee .sidebar-img {
             width: 100%;
             height: auto;
         }
-      .sidebar .sidebar-img {
+
+        .sidebar .sidebar-img {
             display: inline-block;
             height: 150px;
             background-image: url('../Image/logo_CSB.png');
@@ -812,6 +819,7 @@
             align-items: center;
             transition: all .5s;
         }
+
         ::-webkit-scrollbar {
             width: 10px;
         }
@@ -829,369 +837,417 @@
                 background: #555;
             }
         /* Google Fonts Import Link */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
-}
-.sidebar{
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 250px;
-  background: #f6f9ff;
-  z-index: 100;
-  transition: all 0.5s ease;
-  overflow-y: overlay;
-  /**/
-}
-.sidebar.closee{
-  width: 78px;
-  overflow-y: visible;
-}
-.sidebar .logo-details{
-  display: flex;
-  justify-content: center;
-  /* height: 60px; */
-  width: 100%;
-  display: flex;
-  align-items: center;
-}
-.sidebar .logo-details i{
-  font-size: 30px;
-  color: #fff;
-  height: 50px;
-  min-width: 78px;
-  text-align: center;
-  line-height: 50px;
-}
-.sidebar .logo-details .logo_name{
-  font-size: 22px;
-  color: #fff;
-  font-weight: 600;
-  transition: 0.3s ease;
-  transition-delay: 0.1s;
-}
-.sidebar.closee .logo-details .logo_name{
-  transition-delay: 0s;
-  opacity: 0;
-  pointer-events: none;
-}
-.sidebar .nav-links{
-  /* height: 100%; */
-  /* padding: 30px 0 150px 0; */
-  overflow: auto;
-}
-.sidebar.closee .nav-links{
-  overflow: visible;
-}
-.sidebar .nav-links::-webkit-scrollbar{
-  display: none;
-}
-.sidebar .nav-links li{
-  position: relative;
-  list-style: none;
-  transition: all 0.4s ease;
-}
-/*.sidebar .nav-links li:hover{
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 250px;
+            background: #f6f9ff;
+            z-index: 100;
+            transition: all 0.5s ease;
+            overflow-y: overlay;
+            /**/
+        }
+
+            .sidebar.closee {
+                width: 78px;
+                overflow-y: visible;
+            }
+
+            .sidebar .logo-details {
+                display: flex;
+                justify-content: center;
+                /* height: 60px; */
+                width: 100%;
+                display: flex;
+                align-items: center;
+            }
+
+                .sidebar .logo-details i {
+                    font-size: 30px;
+                    color: #fff;
+                    height: 50px;
+                    min-width: 78px;
+                    text-align: center;
+                    line-height: 50px;
+                }
+
+                .sidebar .logo-details .logo_name {
+                    font-size: 22px;
+                    color: #fff;
+                    font-weight: 600;
+                    transition: 0.3s ease;
+                    transition-delay: 0.1s;
+                }
+
+            .sidebar.closee .logo-details .logo_name {
+                transition-delay: 0s;
+                opacity: 0;
+                pointer-events: none;
+            }
+
+            .sidebar .nav-links {
+                /* height: 100%; */
+                /* padding: 30px 0 150px 0; */
+                overflow: auto;
+            }
+
+            .sidebar.closee .nav-links {
+                overflow: visible;
+            }
+
+            .sidebar .nav-links::-webkit-scrollbar {
+                display: none;
+            }
+
+            .sidebar .nav-links li {
+                position: relative;
+                list-style: none;
+                transition: all 0.4s ease;
+            }
+                /*.sidebar .nav-links li:hover{
   background: #e0e0e0;
 }*/
-.sidebar .nav-links li .iocn-link{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 50px; 
-  cursor: pointer;
-}
-.sidebar .nav-links li i{
-  color: #798a78;
-  font-size: 20px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  padding: 12px;
-}
-.sidebar.closee .nav-links li i{
-  text-align: center;
-  color: #798a78;
-  font-size: 20px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  padding: 12px 29px;
-}
-.sidebar .nav-links li.showMenu i.arrow{
-  transform: rotate(-180deg);
-}
-.sidebar.closee .nav-links i.arrow{
-  display: none;
-}
-.sidebar .nav-links li a{
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-}
-.sidebar .nav-links li a .link_name{
-  font-size: 14px;
-  font-weight: 400;
-  color: #798a78;
-  transition: all 0.4s ease;
-}
-.sidebar.closee .nav-links li a .link_name{
-  opacity: 0;
-  pointer-events: none;
-}
-.sidebar .nav-links li .sub-menu{
-  background: #f5f6fa;
-  display: none;
-}
-.sidebar .nav-links li.showMenu .sub-menu{
-  display: block;
-}
-.sidebar .nav-links li .sub-menu a{
-  color: #798a78;
-  font-size: 14px;
-  padding: 8px 15px;
-  white-space: normal ;
-  opacity: 0.8;
-  transition: all 0.3s ease;
-}
-.sidebar .nav-links li .sub-menu a:hover{
-  opacity: 1;
-}
-.sidebar.closee .nav-links li .sub-menu{
-  position: absolute;
-  left: 100%;
-  top: -10px;
-  margin-top: 0;
-  padding: 10px 20px;
-  border-radius: 0 6px 6px 0;
-  opacity: 0;
-  display: block;
-  pointer-events: none;
-  transition: 0s;
-  width: 350px;
+                .sidebar .nav-links li .iocn-link {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    height: 50px;
+                    cursor: pointer;
+                }
 
-}
-.sidebar.closee .nav-links li:hover .sub-menu{
-  top: 0;
-  opacity: 1;
-  pointer-events: auto;
-  transition: all 0.4s ease;
-}
-.sidebar .nav-links li .sub-menu .link_name{
-  display: none;
-}
-.sidebar.closee .nav-links li .sub-menu .link_name{
-  font-size: 18px;
-  opacity: 1;
-  display: block;
-}
-.sidebar .nav-links li .sub-menu.blank{
-  opacity: 1;
-  pointer-events: auto;
-  padding: 3px 20px 6px 16px;
-  opacity: 0;
-  pointer-events: none;
-}
-.sidebar .nav-links li:hover .sub-menu.blank{
-  top: 50%;
-  transform: translateY(-50%);
-}
-.sidebar .profile-details{
-  position: fixed;
-  bottom: 0;
-  width: 250px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background: #1d1b31;
-  padding: 12px 0;
-  transition: all 0.5s ease;
-}
-.sidebar.closee .profile-details{
-  background: none;
-}
-.sidebar.closee .profile-details{
-  width: 78px;
-}
-.sidebar .profile-details .profile-content{
-  display: flex;
-  align-items: center;
-}
-.sidebar .profile-details img{
-  height: 52px;
-  width: 52px;
-  object-fit: cover;
-  border-radius: 16px;
-  margin: 0 14px 0 12px;
-  background: #1d1b31;
-  transition: all 0.5s ease;
-}
-.sidebar.closee .profile-details img{
-  padding: 10px;
-}
-.sidebar .profile-details .profile_name,
-.sidebar .profile-details .job{
-  color: #fff;
-  font-size: 18px;
-  font-weight: 500;
-  white-space: nowrap;
-}
-.sidebar.closee .profile-details i,
-.sidebar.closee .profile-details .profile_name,
-.sidebar.closee .profile-details .job{
-  display: none;
-}
-.sidebar .profile-details .job{
-  font-size: 12px;
-}
-.sidebar.closee ~ #rightContent{
-  left: 78px;
-  width: calc(100% - 78px);
-}
-.bx-menu{
-    position: absolute;
-  color: #2070cc;
-  font-size: 35px;
-  margin: 5px 10px;
-  cursor: pointer;
-}
-@media (max-width: 400px) {
-  .sidebar.closee .nav-links li .sub-menu{
-    display: none;
-  }
-  .sidebar{
-    width: 78px;
-  }
-  .sidebar.closee{
-    width: 0;
-  }
-  .sidebar.closee ~ .right-content{
-    width: 100%;
-    left: 0;
-  }
-}
+                .sidebar .nav-links li i {
+                    color: #798a78;
+                    font-size: 20px;
+                    cursor: pointer;
+                    transition: all 0.3s ease;
+                    padding: 12px;
+                }
 
+            .sidebar.closee .nav-links li i {
+                text-align: center;
+                color: #798a78;
+                font-size: 20px;
+                cursor: pointer;
+                transition: all 0.3s ease;
+                padding: 12px 29px;
+            }
+
+            .sidebar .nav-links li.showMenu i.arrow {
+                transform: rotate(-180deg);
+            }
+
+            .sidebar.closee .nav-links i.arrow {
+                display: none;
+            }
+
+            .sidebar .nav-links li a {
+                display: flex;
+                align-items: center;
+                text-decoration: none;
+            }
+
+                .sidebar .nav-links li a .link_name {
+                    font-size: 14px;
+                    font-weight: 400;
+                    color: #798a78;
+                    transition: all 0.4s ease;
+                }
+
+            .sidebar.closee .nav-links li a .link_name {
+                opacity: 0;
+                pointer-events: none;
+            }
+
+            .sidebar .nav-links li .sub-menu {
+                background: #f5f6fa;
+                display: none;
+            }
+
+            .sidebar .nav-links li.showMenu .sub-menu {
+                display: block;
+            }
+
+            .sidebar .nav-links li .sub-menu a {
+                color: #798a78;
+                font-size: 14px;
+                padding: 8px 15px;
+                white-space: normal;
+                opacity: 0.8;
+                transition: all 0.3s ease;
+            }
+
+                .sidebar .nav-links li .sub-menu a:hover {
+                    opacity: 1;
+                }
+
+            .sidebar.closee .nav-links li .sub-menu {
+                position: absolute;
+                left: 100%;
+                top: -10px;
+                margin-top: 0;
+                padding: 10px 20px;
+                border-radius: 0 6px 6px 0;
+                opacity: 0;
+                display: block;
+                pointer-events: none;
+                transition: 0s;
+                width: 350px;
+            }
+
+            .sidebar.closee .nav-links li:hover .sub-menu {
+                top: 0;
+                opacity: 1;
+                pointer-events: auto;
+                transition: all 0.4s ease;
+            }
+
+            .sidebar .nav-links li .sub-menu .link_name {
+                display: none;
+            }
+
+            .sidebar.closee .nav-links li .sub-menu .link_name {
+                font-size: 18px;
+                opacity: 1;
+                display: block;
+            }
+
+            .sidebar .nav-links li .sub-menu.blank {
+                opacity: 1;
+                pointer-events: auto;
+                padding: 3px 20px 6px 16px;
+                opacity: 0;
+                pointer-events: none;
+            }
+
+            .sidebar .nav-links li:hover .sub-menu.blank {
+                top: 50%;
+                transform: translateY(-50%);
+            }
+
+            .sidebar .profile-details {
+                position: fixed;
+                bottom: 0;
+                width: 250px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                background: #1d1b31;
+                padding: 12px 0;
+                transition: all 0.5s ease;
+            }
+
+            .sidebar.closee .profile-details {
+                background: none;
+            }
+
+            .sidebar.closee .profile-details {
+                width: 78px;
+            }
+
+            .sidebar .profile-details .profile-content {
+                display: flex;
+                align-items: center;
+            }
+
+            .sidebar .profile-details img {
+                height: 52px;
+                width: 52px;
+                object-fit: cover;
+                border-radius: 16px;
+                margin: 0 14px 0 12px;
+                background: #1d1b31;
+                transition: all 0.5s ease;
+            }
+
+            .sidebar.closee .profile-details img {
+                padding: 10px;
+            }
+
+            .sidebar .profile-details .profile_name,
+            .sidebar .profile-details .job {
+                color: #fff;
+                font-size: 18px;
+                font-weight: 500;
+                white-space: nowrap;
+            }
+
+            .sidebar.closee .profile-details i,
+            .sidebar.closee .profile-details .profile_name,
+            .sidebar.closee .profile-details .job {
+                display: none;
+            }
+
+            .sidebar .profile-details .job {
+                font-size: 12px;
+            }
+
+            .sidebar.closee ~ #rightContent {
+                left: 78px;
+                width: calc(100% - 78px);
+            }
+
+        .bx-menu {
+            position: absolute;
+            color: #2070cc;
+            font-size: 35px;
+            margin: 5px 10px;
+            cursor: pointer;
+        }
+
+        @media (max-width: 400px) {
+            .sidebar.closee .nav-links li .sub-menu {
+                display: none;
+            }
+
+            .sidebar {
+                width: 78px;
+            }
+
+                .sidebar.closee {
+                    width: 0;
+                }
+
+                    .sidebar.closee ~ .right-content {
+                        width: 100%;
+                        left: 0;
+                    }
+        }
     </style>
 </head>
 
 <body>
     <div class="sidebar">
-    <div class="logo-details">
-      <img class="sidebar-img" src="../Image/logo_CSB.png" />
-      <!-- <div class="sidebar-brand">
+        <div class="logo-details">
+            <img class="sidebar-img" src="../Image/logo_CSB.png" />
+            <!-- <div class="sidebar-brand">
       </div> -->
+        </div>
+        <ul class="nav-links">
+            <li>
+                <div class="iocn-link arro">
+                    <a class="arrow" href="#">
+                        <i class='bi-ui-checks-grid arroww'></i>
+                        <span class="link_name arroww">Nghiệp vụ PQLKTT </span>
+                    </a>
+                    <i class='bi bi-caret-down-fill arrow'></i>
+                </div>
+                <ul class="sub-menu">
+                    <li><a class="link_name" href="#">Nghiệp vụ PQLKTT </a></li>
+                    <li><a href="../Page_Master/Null.aspx">Công văn, tài liệu cấp trên</a></li>
+                    <li><a href="../Page_Master/Null.aspx">Công văn, tài liệu các đơn vị</a></li>
+                    <li><a href="../Page_Master/Null.aspx">Kiểm tra, chỉ đạo, hướng dẫn các ĐV</a></li>
+                    <li><a href="../Page_Master/Null.aspx">NCKH, sáng kiến, cải tiến</a></li>
+                    <li><a href="../Page_Master/Null.aspx">Huấn luyện, hội thi, hội thao</a></li>
+                    <li><a href="../Page_Master/Null.aspx">Theo dõi thực hiện nhiệm vụ phòng</a></li>
+                    <li><a href="../Page_Master/Null.aspx">Thực hiện chế độ báo cáo</a></li>
+                </ul>
+            </li>
+            <li>
+                <div class="iocn-link arro">
+                    <a class="arrow" href="#">
+                        <i class='bi-gear-fill arroww'></i>
+                        <span class="link_name arroww">Sửa chữa tàu </span>
+                    </a>
+                    <i class='bi bi-caret-down-fill arrow'></i>
+                </div>
+                <ul class="sub-menu">
+                    <li><a class="link_name" href="#">Sửa chữa tàu </a></li>
+                    <li><a href="../Page_Master/Null.aspx">Tài liệu pháp quy</a></li>
+                    <li><a href="../Page_Master/Null.aspx">Thống kê sửa chữa tàu</a></li>
+                    <li><a href="../Page_Master/Null.aspx">Hồ sơ sửa chữa tàu</a></li>
+                    <li><a href="../Page_Master/Null.aspx">Tình trạng kỹ thuật trước và sau sửa chữa tàu</a></li>
+                    <li><a href="../Page_Master/Null.aspx">Ngân sách sửa chữa</a></li>
+                    <li><a href="../Page_Master/Null.aspx">Quản lý hạng mục sửa chữa</a></li>
+                    <li><a href="../Page_Master/Null.aspx">Phân cấp sửa chữa tàu, trang bị</a></li>
+                </ul>
+            </li>
+            <li>
+                <div class="iocn-link arro">
+                    <a class="arrow" href="#">
+                        <i class='bi-file-earmark-fill arroww'></i>
+                        <span class="link_name arroww">ĐBKT ngành tàu </span>
+                    </a>
+                    <i class='bi bi-caret-down-fill arrow'></i>
+                </div>
+                <ul class="sub-menu">
+                    <li><a class="link_name" href="#">ĐBKT ngành tàu </a></li>
+                    <li><a href="../Page_Master/Null.aspx">Thời gian làm việc của máy móc trang bị</a></li>
+                    <li><a href="../Page_Master/Null.aspx">Tiếp nhận tàu thuyền, trang bị mới</a></li>
+                    <li><a href="../Page_Master/Null.aspx">Cải hoán, cải tiến trang bị</a></li>
+                    <li><a href="../Page_Master/Null.aspx">Quản lý ngân sách bảo đảm kỹ thuật tại đơn vị</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="../Page_Master/Manage_Tau?vung=1#">
+                    <i class='bi-folder'></i>
+                    <span class="link_name">Hồ sơ tàu</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a class="link_name" href="../Page_Master/Manage_Tau?vung=1#">Quản lý tàu</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bi-folder'></i>
+                    <span class="link_name">Hồ sơ Xuất xưởng</span>
+                </a>
+            </li>
+            <li>
+                <div class="iocn-link arro">
+                    <a class="arrow" href="#">
+                        <i class='bi-cart3 arroww'></i>
+                        <span class="link_name arrowww">QL vật tư, mua sắm </span>
+                    </a>
+                    <i class='bi bi-caret-down-fill arrow'></i>
+                </div>
+                <ul class="sub-menu">
+                    <li><a class="link_name" href="#">QL vật tư, mua sắm </a></li>
+                    <li><a href="../Page_Master/Null.aspx">Ngân sách, hạng mục mua sắm</a></li>
+                    <li><a href="../Page_Master/Null.aspx">Quản lý gói thầu</a></li>
+                    <li><a href="../Page_Master/Null.aspx">Nhập xuất tồn kho BTL CSB</a></li>
+                    <li><a href="../Page_Master/Null.aspx">Phân cấp đảm bảo vật tư ngành tàu</a></li>
+                    <li><a href="../Page_Master/Null.aspx">Thống kê mật độ hư hỏng cụm chi tiết, hệ thống - nhu cầu vật tư</a></li>
+                    <li><a href="../Page_Master/Null.aspx">Quản lý khả năng tạo nguồn vật tư</a></li>
+                    <li><a href="../Page_Master/Null.aspx">Hiệu quả sử dụng vật tư</a></li>
+                </ul>
+            </li>
+            <li>
+                <div class="iocn-link arro">
+                    <a class="arrow" href="#">
+                        <i class='bi-person-fill arroww'></i>
+                        <span class="link_name arroww">QL danh mục </span>
+                    </a>
+                    <i class='bi bi-caret-down-fill arrow'></i>
+                </div>
+                <ul class="sub-menu">
+                    <li><a class="link_name" href="#">QL danh mục </a></li>
+                    <li><a href="../Page_Master/Manage_user">Quản lý người dùng</a></li>
+                    <li><a href="../Page_Master/Manage_ChuyenNganh.aspx">Quản lí chuyên ngành</a></li>
+                    <li><a href="../Page_Master/Manage_Position.aspx">Quản lí chức vụ</a></li>
+                    <li><a href="../Page_Master/Manage_Institution.aspx">Quản lí trường đào tạo</a></li>
+                    <li><a href="../Page_Master/Manage_Degree.aspx">Quản lí bằng cấp</a></li>
+                    <li><a href="../Page_Master/Manage_Ranking.aspx">Quản lí cấp bậc</a></li>
+                    <li><a href="../Page_Master/Manage_flotilla.aspx">Quản lí hải đội</a></li>
+                    <li><a href="../Page_Master/Manage_squadron.aspx">Quản lí hải đoàn</a></li>
+                </ul>
+            </li>
+        </ul>
     </div>
-    <ul class="nav-links">
-      <li>
-        <div class="iocn-link arro">
-          <a class="arrow" href="#">
-            <i class='bi-ui-checks-grid arroww' ></i>
-            <span class="link_name arroww">Nghiệp vụ PQLKTT </span>
-          </a>
-          <i class='bi bi-caret-down-fill arrow' ></i>
-        </div>
-        <ul class="sub-menu">
-          <li><a class="link_name" href="#">Nghiệp vụ PQLKTT </a></li>
-          <li><a href="../Page_Master/Null.aspx">Công văn, tài liệu cấp trên</a></li>
-          <li><a href="../Page_Master/Null.aspx">Công văn, tài liệu các đơn vị</a></li>
-          <li><a href="../Page_Master/Null.aspx">Kiểm tra, chỉ đạo, hướng dẫn các ĐV</a></li>
-          <li><a href="../Page_Master/Null.aspx">NCKH, sáng kiến, cải tiến</a></li>
-          <li><a href="../Page_Master/Null.aspx">Huấn luyện, hội thi, hội thao</a></li>
-          <li><a href="../Page_Master/Null.aspx">Theo dõi thực hiện nhiệm vụ phòng</a></li>
-          <li><a href="../Page_Master/Null.aspx">Thực hiện chế độ báo cáo</a></li>
-        </ul>
-      </li>
-      <li>
-        <div class="iocn-link arro">
-          <a class="arrow" href="#">
-            <i class='bi-gear-fill arroww' ></i>
-            <span class="link_name arroww">Sửa chữa tàu </span>
-          </a>
-          <i class='bi bi-caret-down-fill arrow' ></i>
-        </div>
-        <ul class="sub-menu">
-          <li><a class="link_name" href="#">Sửa chữa tàu </a></li>
-          <li><a href="../Page_Master/Null.aspx">Tài liệu pháp quy</a></li>
-          <li><a href="../Page_Master/Null.aspx">Thống kê sửa chữa tàu</a></li>
-          <li><a href="../Page_Master/Null.aspx">Hồ sơ sửa chữa tàu</a></li>
-          <li><a href="../Page_Master/Null.aspx">Tình trạng kỹ thuật trước và sau sửa chữa tàu</a></li>
-          <li><a href="../Page_Master/Null.aspx">Ngân sách sửa chữa</a></li>
-          <li><a href="../Page_Master/Null.aspx">Quản lý hạng mục sửa chữa</a></li>
-          <li><a href="../Page_Master/Null.aspx">Phân cấp sửa chữa tàu, trang bị</a></li>
-        </ul>
-      </li>
-      <li>
-        <div class="iocn-link arro">
-          <a class="arrow" href="#">
-            <i class='bi-file-earmark-fill arroww' ></i>
-            <span class="link_name arroww">ĐBKT ngành tàu </span>
-          </a>
-          <i class='bi bi-caret-down-fill arrow' ></i>
-        </div>
-        <ul class="sub-menu">
-          <li><a class="link_name" href="#">ĐBKT ngành tàu </a></li>
-          <li><a href="../Page_Master/Null.aspx">Thời gian làm việc của máy móc trang bị</a></li>
-          <li><a href="../Page_Master/Null.aspx">Tiếp nhận tàu thuyền, trang bị mới</a></li>
-          <li><a href="../Page_Master/Null.aspx">Cải hoán, cải tiến trang bị</a></li>
-          <li><a href="../Page_Master/Null.aspx">Quản lý ngân sách bảo đảm kỹ thuật tại đơn vị</a></li>
-        </ul>
-      </li>
-      <li>
-        <a href="../Page_Master/Manage_Tau?vung=1#">
-          <i class='bi-folder' ></i>
-          <span class="link_name">Quản lý tàu</span>
-        </a>
-        <ul class="sub-menu blank">
-          <li><a class="link_name" href="../Page_Master/Manage_Tau?vung=1#">Quản lý tàu</a></li>
-        </ul>
-      </li>
-      <li>
-        <div class="iocn-link arro">
-          <a class="arrow" href="#">
-            <i class='bi-cart3 arroww' ></i>
-            <span class="link_name arrowww">QL vật tư, mua sắm </span>
-          </a>
-          <i class='bi bi-caret-down-fill arrow' ></i>
-        </div>
-        <ul class="sub-menu">
-          <li><a class="link_name" href="#">QL vật tư, mua sắm </a></li>
-          <li><a href="../Page_Master/Null.aspx">Ngân sách, hạng mục mua sắm</a></li>
-          <li><a href="../Page_Master/Null.aspx">Quản lý gói thầu</a></li>
-          <li><a href="../Page_Master/Null.aspx">Nhập xuất tồn kho BTL CSB</a></li>
-          <li><a href="../Page_Master/Null.aspx">Phân cấp đảm bảo vật tư ngành tàu</a></li>
-          <li><a href="../Page_Master/Null.aspx">Thống kê mật độ hư hỏng cụm chi tiết, hệ thống - nhu cầu vật tư</a></li>
-          <li><a href="../Page_Master/Null.aspx">Quản lý khả năng tạo nguồn vật tư</a></li>
-          <li><a href="../Page_Master/Null.aspx">Hiệu quả sử dụng vật tư</a></li>
-      </ul></li>
-      <li>
-        <div class="iocn-link arro">
-          <a class="arrow" href="#">
-            <i class='bi-person-fill arroww' ></i>
-            <span class="link_name arroww">QL danh mục </span>
-          </a>
-          <i class='bi bi-caret-down-fill arrow' ></i>
-        </div>
-        <ul class="sub-menu">
-          <li><a class="link_name" href="#">QL danh mục </a></li>
-          <li><a href="../Page_Master/Manage_user">Quản lý người dùng</a></li>
-          <li><a href="../Page_Master/Manage_ChuyenNganh.aspx">Quản lí chuyên ngành</a></li>
-          <li><a href="../Page_Master/Manage_Position.aspx">Quản lí chức vụ</a></li>
-          <li><a href="../Page_Master/Manage_Institution.aspx">Quản lí trường đào tạo</a></li>
-          <li><a href="../Page_Master/Manage_Degree.aspx">Quản lí bằng cấp</a></li>
-          <li><a href="../Page_Master/Manage_Ranking.aspx">Quản lí cấp bậc</a></li>
-          <li><a href="../Page_Master/Manage_flotilla.aspx">Quản lí hải đội</a></li>
-          <li><a href="../Page_Master/Manage_squadron.aspx">Quản lí hải đoàn</a></li>
-        </ul>
-      </li>
-</ul>
-  </div>
-      
-      
-      <div id="rightContent">
-          <i class='bx bx-menu' ></i>
+
+
+    <div id="rightContent">
+        <i class='bx bx-menu'></i>
         <div id="header">
             <div id="banner">
                 <img src="../Image/header.jpg" />
@@ -1210,9 +1266,9 @@
                 <li id="li_infor_login">
                     <button id="btnID" onclick="dropdownFunction()" class="dropbtn"><i id="user-login-fullname" class="bi bi-person-circle icon_account"></i><i class="bi-caret-down-fill" style="font-size: 10px; margin-left: 5px; padding: 0;"></i></button>
                     <div id="myDropdown" class="dropdown-content">
-                        <a href="../Page_Master/Information_User"><i class="bi bi-info-circle icon_menu_account"> Thông tin tài khoản</i></a>
-                        <a href="../Page_Master/Change_Password"><i class="bi bi-unlock-fill icon_menu_account"> Đổi mật khẩu</i></a>
-                        <a href="#" onclick="clickDangXuat()"><i class="bi bi-box-arrow-in-left icon_menu_account" id="btnDangXuat"> Đăng xuất</i></a>
+                        <a href="../Page_Master/Information_User"><i class="bi bi-info-circle icon_menu_account">Thông tin tài khoản</i></a>
+                        <a href="../Page_Master/Change_Password"><i class="bi bi-unlock-fill icon_menu_account">Đổi mật khẩu</i></a>
+                        <a href="#" onclick="clickDangXuat()"><i class="bi bi-box-arrow-in-left icon_menu_account" id="btnDangXuat">Đăng xuất</i></a>
                     </div>
                 </li>
             </ul>
@@ -1231,8 +1287,8 @@
             </div>
             <div class="toast-body" id="toast-body">
                 Hello, world! This is a toast message.
+            </div>
         </div>
-    </div>
 
         <footer class="main-footer">
             <div class="footer-left">
@@ -1246,37 +1302,37 @@
             </div>
         </footer>
     </div>
-    
-  <script>
-      let arro = document.querySelectorAll(".arro");
-      for (var i = 0; i < arro.length; i++) {
-          arro[i].addEventListener("click", (e) => {
-              let arroParent = e.target.parentElement;//selecting main parent of arrow
-              arroParent.classList.toggle("showMenu");
-          });
-      }
-      let arrow = document.querySelectorAll(".arrow");
-      for (var i = 0; i < arrow.length; i++) {
-          arrow[i].addEventListener("click", (e) => {
-              let arrowParent = e.target.parentElement.parentElement;//selecting main parent of arrow
-              arrowParent.classList.toggle("showMenu");
-          });
-      }
-      let arroww = document.querySelectorAll(".arroww");
-      for (var i = 0; i < arroww.length; i++) {
-          arroww[i].addEventListener("click", (e) => {
-              let arrowwParent = e.target.parentElement.parentElement.parentElement;//selecting main parent of arrow
-              arrowwParent.classList.toggle("showMenu");
-          });
-      }
-      let sidebar = document.querySelector(".sidebar");
-      let sidebarBtn = document.querySelector(".bx-menu");
-      let rightContent = document.querySelector("#rightContent");
-      console.log(sidebarBtn);
-      sidebarBtn.addEventListener("click", () => {
-          sidebar.classList.toggle("closee");
-      });
-  </script>
+
+    <script>
+        let arro = document.querySelectorAll(".arro");
+        for (var i = 0; i < arro.length; i++) {
+            arro[i].addEventListener("click", (e) => {
+                let arroParent = e.target.parentElement;//selecting main parent of arrow
+                arroParent.classList.toggle("showMenu");
+            });
+        }
+        let arrow = document.querySelectorAll(".arrow");
+        for (var i = 0; i < arrow.length; i++) {
+            arrow[i].addEventListener("click", (e) => {
+                let arrowParent = e.target.parentElement.parentElement;//selecting main parent of arrow
+                arrowParent.classList.toggle("showMenu");
+            });
+        }
+        let arroww = document.querySelectorAll(".arroww");
+        for (var i = 0; i < arroww.length; i++) {
+            arroww[i].addEventListener("click", (e) => {
+                let arrowwParent = e.target.parentElement.parentElement.parentElement;//selecting main parent of arrow
+                arrowwParent.classList.toggle("showMenu");
+            });
+        }
+        let sidebar = document.querySelector(".sidebar");
+        let sidebarBtn = document.querySelector(".bx-menu");
+        let rightContent = document.querySelector("#rightContent");
+        console.log(sidebarBtn);
+        sidebarBtn.addEventListener("click", () => {
+            sidebar.classList.toggle("closee");
+        });
+    </script>
     <script src="../Scripts/jquery-3.4.1.min.js"></script>
     <script src="../Scripts/vendor/popper.min.js"></script>
     <script src="../Scripts/bootstrap-4.6.1/bootstrap.bundle.min.js"></script>
@@ -1293,10 +1349,9 @@
     <script src="../Scripts/vendor/dataTables.responsive.min.js"></script>
     <script src="../Scripts/vendor/responsive.bootstrap4.min.js"></script>
     <script src="../Scripts/vendor/jquery.nicescroll.min.js"></script>
+    <script src="../value.js"></script>
     <script>
-        var linkapi = "http://localhost:8082/api/";
-       /* var baseaddress = "http://localhost:44347/";*/
-        var baseaddress = "http://localhost:8080/";
+
         $(document).ready(function () {
             if (sessionStorage.getItem("userLoginUsername") != null) {
                 $('#user-login-fullname').text(" " + sessionStorage.getItem("userLoginFullname"));
