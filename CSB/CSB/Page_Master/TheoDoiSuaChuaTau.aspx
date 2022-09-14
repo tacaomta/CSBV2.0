@@ -104,7 +104,7 @@
                                     </div>
                                     <div class="col-sm-6">
                                         <div class="form-group row">
-                                            <label class="col-sm-4 col-form-label">Giá thành: </label>
+                                            <label class="col-sm-4 col-form-label">Giá thành (VNĐ): </label>
                                             <div class="col-sm-8">
                                                 <input type="number" min="0" step="any" id="SuaChua_addGiaThanh" class="form-control" required>
                                             </div>
@@ -262,7 +262,7 @@
                                     </div>
                                     <div class="col-sm-6">
                                         <div class="form-group row">
-                                            <label class="col-sm-4 col-form-label">Giá thành: </label>
+                                            <label class="col-sm-4 col-form-label">Giá thành (VNĐ): </label>
                                             <div class="col-sm-8">
                                                 <input type="number" min="0" step="any" id="SuaChua_editGiaThanh" class="form-control" required>
                                             </div>
