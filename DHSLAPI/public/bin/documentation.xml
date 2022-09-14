@@ -4413,6 +4413,11 @@
             Thông báo định mức cảnh báo bảo dưỡng, sửa chữa định kỳ
             </summary>
         </member>
+        <member name="P:DHSLAPI.Models.THONGTINMAY.TINHTRANGHIENTAI">
+            <summary>
+            Tình trạng hiện tại
+            </summary>
+        </member>
         <member name="T:DHSLAPI.Models.THONGBAODINHMUC">
             <summary>
             Thông tin định mức cảnh báo
@@ -4433,17 +4438,17 @@
         </member>
         <member name="P:DHSLAPI.Models.THONGBAODINHMUC.THOIGIANCONLAI">
             <summary>
-            Thời gian còn lại hoạt động của máy đến lần bảo dưỡng, sửa chữa tiếp theo
+            Thời gian còn lại hoạt động của máy đến lần bảo dưỡng, sửa chữa tiếp theo (giờ)
             </summary>
         </member>
         <member name="P:DHSLAPI.Models.THONGBAODINHMUC.DINHMUCSUACHUA">
             <summary>
-            Thời gian giữa hai lần sửa chữa, bảo dưỡng
+            Thời gian giữa hai lần sửa chữa, bảo dưỡng (giờ)
             </summary>
         </member>
         <member name="P:DHSLAPI.Models.THONGBAODINHMUC.DINHMUCTHONGBAO">
             <summary>
-            Thời gian hoạt động, cảnh báo sắp đến lần sửa chữa, bảo dưỡng tiếp theo
+            Thời gian hoạt động, cảnh báo sắp đến lần sửa chữa, bảo dưỡng tiếp theo (giờ)
             </summary>
         </member>
         <member name="T:DHSLAPI.Models.THONGSOCOBAN">
