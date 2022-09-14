@@ -594,24 +594,24 @@
                                     <div class="row">
                                         <div class="col-sm-4">
                                             <div class="form-group row">
-                                                <label class="col-sm-4 col-form-label">Chiều dài (m): </label>
-                                                <div class="col-sm-8">
+                                                <label class="col-sm-5 col-form-label">Chiều dài (m): </label>
+                                                <div class="col-sm-7">
                                                     <input type="number" step="any" id="add-MAYCHINH-THONGSOCOBAN-KICHTHUOCMAY-DAI" min="0" class="form-control">
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="col-sm-4">
                                             <div class="form-group row">
-                                                <label class="col-sm-4 col-form-label">Chiều rộng (m): </label>
-                                                <div class="col-sm-8">
+                                                <label class="col-sm-5 col-form-label">Chiều rộng (m): </label>
+                                                <div class="col-sm-7">
                                                     <input type="number" step="any" id="add-MAYCHINH-THONGSOCOBAN-KICHTHUOCMAY-RONG" min="0" class="form-control">
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="col-sm-4">
                                             <div class="form-group row">
-                                                <label class="col-sm-4 col-form-label">Chiều cao (m): </label>
-                                                <div class="col-sm-8">
+                                                <label class="col-sm-5 col-form-label">Chiều cao (m): </label>
+                                                <div class="col-sm-7">
                                                     <input type="number" step="any" id="add-MAYCHINH-THONGSOCOBAN-KICHTHUOCMAY-CAO" min="0" class="form-control">
                                                 </div>
                                             </div>
@@ -621,24 +621,24 @@
                                     <div class="row">
                                         <div class="col-sm-4">
                                             <div class="form-group row">
-                                                <label class="col-sm-4 col-form-label">Tiểu tu (h): </label>
-                                                <div class="col-sm-8">
+                                                <label class="col-sm-5 col-form-label">Tiểu tu (h): </label>
+                                                <div class="col-sm-7">
                                                     <input type="number" step="any" id="add-MAYCHINH-THONGSOCOBAN-CHUKYSUACHUA-TIEUTU" min="0" class="form-control">
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="col-sm-4">
                                             <div class="form-group row">
-                                                <label class="col-sm-4 col-form-label">Trung tu (h): </label>
-                                                <div class="col-sm-8">
+                                                <label class="col-sm-5 col-form-label">Trung tu (h): </label>
+                                                <div class="col-sm-7">
                                                     <input type="number" step="any" id="add-MAYCHINH-THONGSOCOBAN-CHUKYSUACHUA-TRUNGTU" min="0" class="form-control">
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="col-sm-4">
                                             <div class="form-group row">
-                                                <label class="col-sm-4 col-form-label">Đại tu (h): </label>
-                                                <div class="col-sm-8">
+                                                <label class="col-sm-5 col-form-label">Đại tu (h): </label>
+                                                <div class="col-sm-7">
                                                     <input type="number" step="any" id="add-MAYCHINH-THONGSOCOBAN-CHUKYSUACHUA-DAITU" min="0" class="form-control">
                                                 </div>
                                             </div>
@@ -648,16 +648,16 @@
                                     <div class="row">
                                         <div class="col-sm-4">
                                             <div class="form-group row">
-                                                <label class="col-sm-4 col-form-label">Điện áp (V): </label>
-                                                <div class="col-sm-8">
+                                                <label class="col-sm-5 col-form-label">Điện áp (V): </label>
+                                                <div class="col-sm-7">
                                                     <input type="number" step="any" id="add-MAYCHINH-THONGSOCOBAN-LOAIDIEN-DIENAP" min="0" class="form-control">
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="col-sm-4">
                                             <div class="form-group row">
-                                                <label class="col-sm-4 col-form-label">Tần số (Hz): </label>
-                                                <div class="col-sm-8">
+                                                <label class="col-sm-5 col-form-label">Tần số (Hz): </label>
+                                                <div class="col-sm-7">
                                                     <input type="number" step="any" id="add-MAYCHINH-THONGSOCOBAN-LOAIDIEN-TANSO" min="0" class="form-control">
                                                 </div>
                                             </div>
@@ -703,24 +703,24 @@
                                     <div class="row">
                                         <div class="col-sm-4">
                                             <div class="form-group row">
-                                                <label class="col-sm-4 col-form-label">Tỷ số truyền: </label>
-                                                <div class="col-sm-8">
+                                                <label class="col-sm-5 col-form-label">Tỷ số truyền: </label>
+                                                <div class="col-sm-7">
                                                     <input type="text" id="add-MAYCHINH-PHUONGPHAPTRUYENTAI-TYSOTRUYEN" class="form-control">
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="col-sm-4">
                                             <div class="form-group row">
-                                                <label class="col-sm-4 col-form-label">Khớp nối cứng: </label>
-                                                <div class="col-sm-8">
+                                                <label class="col-sm-5 col-form-label">Khớp nối cứng: </label>
+                                                <div class="col-sm-7">
                                                     <input type="text" id="add-MAYCHINH-PHUONGPHAPTRUYENTAI-KHOPNOICUNG" class="form-control">
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="col-sm-4">
                                             <div class="form-group row">
-                                                <label class="col-sm-4 col-form-label">Khớp nối mềm: </label>
-                                                <div class="col-sm-8">
+                                                <label class="col-sm-5 col-form-label">Khớp nối mềm: </label>
+                                                <div class="col-sm-7">
                                                     <input type="text" id="add-MAYCHINH-PHUONGPHAPTRUYENTAI-KHOPNOIMEM" class="form-control">
                                                 </div>
                                             </div>
@@ -775,6 +775,17 @@
                                                 </div>
                                             </div>
                                         </div>--%>
+                                    <h4 class="sub-title">Tình trạng hiện tại</h4>
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <div class="form-group row">
+                                                <label class="col-sm-5 col-form-label">Tình trạng hiện tại: </label>
+                                                <div class="col-sm-7">
+                                                    <input type="text" id="add-MAYCHINH-TINHTRANGHIENTAI"  class="form-control">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <div class="modal-footer">
@@ -906,24 +917,24 @@
                                     <div class="row">
                                         <div class="col-sm-4">
                                             <div class="form-group row">
-                                                <label class="col-sm-4 col-form-label">Chiều dài (m): </label>
-                                                <div class="col-sm-8">
+                                                <label class="col-sm-5 col-form-label">Chiều dài (m): </label>
+                                                <div class="col-sm-7">
                                                     <input type="number" step="any" id="edit-MAYCHINH-THONGSOCOBAN-KICHTHUOCMAY-DAI" min="0" class="form-control">
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="col-sm-4">
                                             <div class="form-group row">
-                                                <label class="col-sm-4 col-form-label">Chiều rộng (m): </label>
-                                                <div class="col-sm-8">
+                                                <label class="col-sm-5 col-form-label">Chiều rộng (m): </label>
+                                                <div class="col-sm-7">
                                                     <input type="number" step="any" id="edit-MAYCHINH-THONGSOCOBAN-KICHTHUOCMAY-RONG" min="0" class="form-control">
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="col-sm-4">
                                             <div class="form-group row">
-                                                <label class="col-sm-4 col-form-label">Chiều cao (m): </label>
-                                                <div class="col-sm-8">
+                                                <label class="col-sm-5 col-form-label">Chiều cao (m): </label>
+                                                <div class="col-sm-7">
                                                     <input type="number" step="any" id="edit-MAYCHINH-THONGSOCOBAN-KICHTHUOCMAY-CAO" min="0" class="form-control">
                                                 </div>
                                             </div>
@@ -933,24 +944,24 @@
                                     <div class="row">
                                         <div class="col-sm-4">
                                             <div class="form-group row">
-                                                <label class="col-sm-4 col-form-label">Tiểu tu (h): </label>
-                                                <div class="col-sm-8">
+                                                <label class="col-sm-5 col-form-label">Tiểu tu (h): </label>
+                                                <div class="col-sm-7">
                                                     <input type="number" step="any" id="edit-MAYCHINH-THONGSOCOBAN-CHUKYSUACHUA-TIEUTU" min="0" class="form-control">
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="col-sm-4">
                                             <div class="form-group row">
-                                                <label class="col-sm-4 col-form-label">Trung tu (h): </label>
-                                                <div class="col-sm-8">
+                                                <label class="col-sm-5 col-form-label">Trung tu (h): </label>
+                                                <div class="col-sm-7">
                                                     <input type="number" step="any" id="edit-MAYCHINH-THONGSOCOBAN-CHUKYSUACHUA-TRUNGTU" min="0" class="form-control">
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="col-sm-4">
                                             <div class="form-group row">
-                                                <label class="col-sm-4 col-form-label">Đại tu (h): </label>
-                                                <div class="col-sm-8">
+                                                <label class="col-sm-5 col-form-label">Đại tu (h): </label>
+                                                <div class="col-sm-7">
                                                     <input type="number" step="any" id="edit-MAYCHINH-THONGSOCOBAN-CHUKYSUACHUA-DAITU" min="0" class="form-control">
                                                 </div>
                                             </div>
@@ -960,16 +971,16 @@
                                     <div class="row">
                                         <div class="col-sm-4">
                                             <div class="form-group row">
-                                                <label class="col-sm-4 col-form-label">Điện áp (V): </label>
-                                                <div class="col-sm-8">
+                                                <label class="col-sm-5 col-form-label">Điện áp (V): </label>
+                                                <div class="col-sm-7">
                                                     <input type="number" step="any" id="edit-MAYCHINH-THONGSOCOBAN-LOAIDIEN-DIENAP" min="0" class="form-control">
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="col-sm-4">
                                             <div class="form-group row">
-                                                <label class="col-sm-4 col-form-label">Tần số (Hz): </label>
-                                                <div class="col-sm-8">
+                                                <label class="col-sm-5 col-form-label">Tần số (Hz): </label>
+                                                <div class="col-sm-7">
                                                     <input type="number" step="any" id="edit-MAYCHINH-THONGSOCOBAN-LOAIDIEN-TANSO" min="0" class="form-control">
                                                 </div>
                                             </div>
@@ -1015,24 +1026,24 @@
                                     <div class="row">
                                         <div class="col-sm-4">
                                             <div class="form-group row">
-                                                <label class="col-sm-4 col-form-label">Tỷ số truyền: </label>
-                                                <div class="col-sm-8">
+                                                <label class="col-sm-5 col-form-label">Tỷ số truyền: </label>
+                                                <div class="col-sm-7">
                                                     <input type="text" id="edit-MAYCHINH-PHUONGPHAPTRUYENTAI-TYSOTRUYEN" class="form-control">
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="col-sm-4">
                                             <div class="form-group row">
-                                                <label class="col-sm-4 col-form-label">Khớp nối cứng: </label>
-                                                <div class="col-sm-8">
+                                                <label class="col-sm-5 col-form-label">Khớp nối cứng: </label>
+                                                <div class="col-sm-7">
                                                     <input type="text" id="edit-MAYCHINH-PHUONGPHAPTRUYENTAI-KHOPNOICUNG" class="form-control">
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="col-sm-4">
                                             <div class="form-group row">
-                                                <label class="col-sm-4 col-form-label">Khớp nối mềm: </label>
-                                                <div class="col-sm-8">
+                                                <label class="col-sm-5 col-form-label">Khớp nối mềm: </label>
+                                                <div class="col-sm-7">
                                                     <input type="text" id="edit-MAYCHINH-PHUONGPHAPTRUYENTAI-KHOPNOIMEM" class="form-control">
                                                 </div>
                                             </div>
@@ -1043,7 +1054,7 @@
                                     <div class="row">
                                         <div class="col-sm-6">
                                             <div class="form-group row">
-                                                <label class="col-sm-5 col-form-label">Sửa chữa cuối cùng (h): </label>
+                                                <label class="col-sm-5 col-form-label">Sửa chữa cuối cùng: </label>
                                                 <div class="col-sm-7">
                                                     <input type="text" id="edit-MAYCHINH-THONGBAODINHMUC-SUACHUACUOICUNG" readonly="readonly" class="form-control">
                                                 </div>
@@ -1083,6 +1094,17 @@
                                                 <label class="col-sm-5 col-form-label">Thời gian còn lại (h): </label>
                                                 <div class="col-sm-7">
                                                     <input type="text" id="edit-MAYCHINH-THONGBAODINHMUC-THOIGIANCONLAI" readonly="readonly" class="form-control">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h4 class="sub-title">Tình trạng hiện tại</h4>
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <div class="form-group row">
+                                                <label class="col-sm-5 col-form-label">Tình trạng hiện tại: </label>
+                                                <div class="col-sm-7">
+                                                    <input type="text" id="edit-MAYCHINH-TINHTRANGHIENTAI"  class="form-control">
                                                 </div>
                                             </div>
                                         </div>
@@ -1217,24 +1239,24 @@
                                     <div class="row">
                                         <div class="col-sm-4">
                                             <div class="form-group row">
-                                                <label class="col-sm-4 col-form-label">Chiều dài (m): </label>
-                                                <div class="col-sm-8">
+                                                <label class="col-sm-5 col-form-label">Chiều dài (m): </label>
+                                                <div class="col-sm-7">
                                                     <input type="number" step="any" id="add-MAYPHU-THONGSOCOBAN-KICHTHUOCMAY-DAI" min="0" class="form-control">
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="col-sm-4">
                                             <div class="form-group row">
-                                                <label class="col-sm-4 col-form-label">Chiều rộng (m): </label>
-                                                <div class="col-sm-8">
+                                                <label class="col-sm-5col-form-label">Chiều rộng (m): </label>
+                                                <div class="col-sm-7">
                                                     <input type="number" step="any" id="add-MAYPHU-THONGSOCOBAN-KICHTHUOCMAY-RONG" min="0" class="form-control">
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="col-sm-4">
                                             <div class="form-group row">
-                                                <label class="col-sm-4 col-form-label">Chiều cao (m): </label>
-                                                <div class="col-sm-8">
+                                                <label class="col-sm-5 col-form-label">Chiều cao (m): </label>
+                                                <div class="col-sm-7">
                                                     <input type="number" step="any" id="add-MAYPHU-THONGSOCOBAN-KICHTHUOCMAY-CAO" min="0" class="form-control">
                                                 </div>
                                             </div>
@@ -1244,24 +1266,24 @@
                                     <div class="row">
                                         <div class="col-sm-4">
                                             <div class="form-group row">
-                                                <label class="col-sm-4 col-form-label">Tiểu tu (h): </label>
-                                                <div class="col-sm-8">
+                                                <label class="col-sm-5 col-form-label">Tiểu tu (h): </label>
+                                                <div class="col-sm-7">
                                                     <input type="number" step="any" id="add-MAYPHU-THONGSOCOBAN-CHUKYSUACHUA-TIEUTU" min="0" class="form-control">
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="col-sm-4">
                                             <div class="form-group row">
-                                                <label class="col-sm-4 col-form-label">Trung tu (h): </label>
-                                                <div class="col-sm-8">
+                                                <label class="col-sm-5 col-form-label">Trung tu (h): </label>
+                                                <div class="col-sm-7">
                                                     <input type="number" step="any" id="add-MAYPHU-THONGSOCOBAN-CHUKYSUACHUA-TRUNGTU" min="0" class="form-control">
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="col-sm-4">
                                             <div class="form-group row">
-                                                <label class="col-sm-4 col-form-label">Đại tu (h): </label>
-                                                <div class="col-sm-8">
+                                                <label class="col-sm-5 col-form-label">Đại tu (h): </label>
+                                                <div class="col-sm-7">
                                                     <input type="number" step="any" id="add-MAYPHU-THONGSOCOBAN-CHUKYSUACHUA-DAITU" min="0" class="form-control">
                                                 </div>
                                             </div>
@@ -1271,16 +1293,16 @@
                                     <div class="row">
                                         <div class="col-sm-4">
                                             <div class="form-group row">
-                                                <label class="col-sm-4 col-form-label">Điện áp (V): </label>
-                                                <div class="col-sm-8">
+                                                <label class="col-sm-5 col-form-label">Điện áp (V): </label>
+                                                <div class="col-sm-7">
                                                     <input type="number" step="any" id="add-MAYPHU-THONGSOCOBAN-LOAIDIEN-DIENAP" min="0" class="form-control">
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="col-sm-4">
                                             <div class="form-group row">
-                                                <label class="col-sm-4 col-form-label">Tần số (Hz): </label>
-                                                <div class="col-sm-8">
+                                                <label class="col-sm-5 col-form-label">Tần số (Hz): </label>
+                                                <div class="col-sm-7">
                                                     <input type="number" step="any" id="add-MAYPHU-THONGSOCOBAN-LOAIDIEN-TANSO" min="0" class="form-control">
                                                 </div>
                                             </div>
@@ -1326,24 +1348,24 @@
                                     <div class="row">
                                         <div class="col-sm-4">
                                             <div class="form-group row">
-                                                <label class="col-sm-4 col-form-label">Tỷ số truyền: </label>
-                                                <div class="col-sm-8">
+                                                <label class="col-sm-5 col-form-label">Tỷ số truyền: </label>
+                                                <div class="col-sm-7">
                                                     <input type="text" id="add-MAYPHU-PHUONGPHAPTRUYENTAI-TYSOTRUYEN" class="form-control">
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="col-sm-4">
                                             <div class="form-group row">
-                                                <label class="col-sm-4 col-form-label">Khớp nối cứng: </label>
-                                                <div class="col-sm-8">
+                                                <label class="col-sm-5 col-form-label">Khớp nối cứng: </label>
+                                                <div class="col-sm-7">
                                                     <input type="text" id="add-MAYPHU-PHUONGPHAPTRUYENTAI-KHOPNOICUNG" class="form-control">
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="col-sm-4">
                                             <div class="form-group row">
-                                                <label class="col-sm-4 col-form-label">Khớp nối mềm: </label>
-                                                <div class="col-sm-8">
+                                                <label class="col-sm-5 col-form-label">Khớp nối mềm: </label>
+                                                <div class="col-sm-7">
                                                     <input type="text" id="add-MAYPHU-PHUONGPHAPTRUYENTAI-KHOPNOIMEM" class="form-control">
                                                 </div>
                                             </div>
@@ -1398,6 +1420,17 @@
                                                 </div>
                                             </div>
                                         </div>--%>
+                                    <h4 class="sub-title">Tình trạng hiện tại</h4>
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <div class="form-group row">
+                                                <label class="col-sm-5 col-form-label">Tình trạng hiện tại: </label>
+                                                <div class="col-sm-7">
+                                                    <input type="text" id="add-MAYPHU-TINHTRANGHIENTAI"  class="form-control">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <div class="modal-footer">
@@ -1529,24 +1562,24 @@
                                     <div class="row">
                                         <div class="col-sm-4">
                                             <div class="form-group row">
-                                                <label class="col-sm-4 col-form-label">Chiều dài (m): </label>
-                                                <div class="col-sm-8">
+                                                <label class="col-sm-5 col-form-label">Chiều dài (m): </label>
+                                                <div class="col-sm-7">
                                                     <input type="number" step="any" id="edit-MAYPHU-THONGSOCOBAN-KICHTHUOCMAY-DAI" min="0" class="form-control">
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="col-sm-4">
                                             <div class="form-group row">
-                                                <label class="col-sm-4 col-form-label">Chiều rộng (m): </label>
-                                                <div class="col-sm-8">
+                                                <label class="col-sm-5 col-form-label">Chiều rộng (m): </label>
+                                                <div class="col-sm-7">
                                                     <input type="number" step="any" id="edit-MAYPHU-THONGSOCOBAN-KICHTHUOCMAY-RONG" min="0" class="form-control">
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="col-sm-4">
                                             <div class="form-group row">
-                                                <label class="col-sm-4 col-form-label">Chiều cao (m): </label>
-                                                <div class="col-sm-8">
+                                                <label class="col-sm-5 col-form-label">Chiều cao (m): </label>
+                                                <div class="col-sm-7">
                                                     <input type="number" step="any" id="edit-MAYPHU-THONGSOCOBAN-KICHTHUOCMAY-CAO" min="0" class="form-control">
                                                 </div>
                                             </div>
@@ -1556,24 +1589,24 @@
                                     <div class="row">
                                         <div class="col-sm-4">
                                             <div class="form-group row">
-                                                <label class="col-sm-4 col-form-label">Tiểu tu (h): </label>
-                                                <div class="col-sm-8">
+                                                <label class="col-sm-5 col-form-label">Tiểu tu (h): </label>
+                                                <div class="col-sm-7">
                                                     <input type="number" step="any" id="edit-MAYPHU-THONGSOCOBAN-CHUKYSUACHUA-TIEUTU" min="0" class="form-control">
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="col-sm-4">
                                             <div class="form-group row">
-                                                <label class="col-sm-4 col-form-label">Trung tu (h): </label>
-                                                <div class="col-sm-8">
+                                                <label class="col-sm-5 col-form-label">Trung tu (h): </label>
+                                                <div class="col-sm-7">
                                                     <input type="number" step="any" id="edit-MAYPHU-THONGSOCOBAN-CHUKYSUACHUA-TRUNGTU" min="0" class="form-control">
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="col-sm-4">
                                             <div class="form-group row">
-                                                <label class="col-sm-4 col-form-label">Đại tu (h): </label>
-                                                <div class="col-sm-8">
+                                                <label class="col-sm-5 col-form-label">Đại tu (h): </label>
+                                                <div class="col-sm-7">
                                                     <input type="number" step="any" id="edit-MAYPHU-THONGSOCOBAN-CHUKYSUACHUA-DAITU" min="0" class="form-control">
                                                 </div>
                                             </div>
@@ -1583,16 +1616,16 @@
                                     <div class="row">
                                         <div class="col-sm-4">
                                             <div class="form-group row">
-                                                <label class="col-sm-4 col-form-label">Điện áp (V): </label>
-                                                <div class="col-sm-8">
+                                                <label class="col-sm-5 col-form-label">Điện áp (V): </label>
+                                                <div class="col-sm-7">
                                                     <input type="number" step="any" id="edit-MAYPHU-THONGSOCOBAN-LOAIDIEN-DIENAP" min="0" class="form-control">
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="col-sm-4">
                                             <div class="form-group row">
-                                                <label class="col-sm-4 col-form-label">Tần số (Hz): </label>
-                                                <div class="col-sm-8">
+                                                <label class="col-sm-5 col-form-label">Tần số (Hz): </label>
+                                                <div class="col-sm-7">
                                                     <input type="number" step="any" id="edit-MAYPHU-THONGSOCOBAN-LOAIDIEN-TANSO" min="0" class="form-control">
                                                 </div>
                                             </div>
@@ -1638,24 +1671,24 @@
                                     <div class="row">
                                         <div class="col-sm-4">
                                             <div class="form-group row">
-                                                <label class="col-sm-4 col-form-label">Tỷ số truyền: </label>
-                                                <div class="col-sm-8">
+                                                <label class="col-sm-5 col-form-label">Tỷ số truyền: </label>
+                                                <div class="col-sm-7">
                                                     <input type="text" id="edit-MAYPHU-PHUONGPHAPTRUYENTAI-TYSOTRUYEN" class="form-control">
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="col-sm-4">
                                             <div class="form-group row">
-                                                <label class="col-sm-4 col-form-label">Khớp nối cứng: </label>
-                                                <div class="col-sm-8">
+                                                <label class="col-sm-5 col-form-label">Khớp nối cứng: </label>
+                                                <div class="col-sm-7">
                                                     <input type="text" id="edit-MAYPHU-PHUONGPHAPTRUYENTAI-KHOPNOICUNG" class="form-control">
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="col-sm-4">
                                             <div class="form-group row">
-                                                <label class="col-sm-4 col-form-label">Khớp nối mềm: </label>
-                                                <div class="col-sm-8">
+                                                <label class="col-sm-5 col-form-label">Khớp nối mềm: </label>
+                                                <div class="col-sm-7">
                                                     <input type="text" id="edit-MAYPHU-PHUONGPHAPTRUYENTAI-KHOPNOIMEM" class="form-control">
                                                 </div>
                                             </div>
@@ -1665,7 +1698,7 @@
                                     <div class="row">
                                         <div class="col-sm-6">
                                             <div class="form-group row">
-                                                <label class="col-sm-5 col-form-label">Sửa chữa cuối cùng (h): </label>
+                                                <label class="col-sm-5 col-form-label">Sửa chữa cuối cùng: </label>
                                                 <div class="col-sm-7">
                                                     <input type="text" id="edit-MAYPHU-THONGBAODINHMUC-SUACHUACUOICUNG" readonly="readonly" class="form-control">
                                                 </div>
@@ -1705,6 +1738,17 @@
                                                 <label class="col-sm-5 col-form-label">Thời gian còn lại (h): </label>
                                                 <div class="col-sm-7">
                                                     <input type="text" id="edit-MAYPHU-THONGBAODINHMUC-THOIGIANCONLAI" readonly="readonly" class="form-control">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h4 class="sub-title">Tình trạng hiện tại</h4>
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <div class="form-group row">
+                                                <label class="col-sm-5 col-form-label">Tình trạng hiện tại: </label>
+                                                <div class="col-sm-7">
+                                                    <input type="text" id="edit-MAYPHU-TINHTRANGHIENTAI" class="form-control">
                                                 </div>
                                             </div>
                                         </div>
@@ -1839,24 +1883,24 @@
                                     <div class="row">
                                         <div class="col-sm-4">
                                             <div class="form-group row">
-                                                <label class="col-sm-4 col-form-label">Chiều dài (m): </label>
-                                                <div class="col-sm-8">
+                                                <label class="col-sm-5 col-form-label">Chiều dài (m): </label>
+                                                <div class="col-sm-7">
                                                     <input type="number" step="any" id="add-MAYCHUYENDUNG-THONGSOCOBAN-KICHTHUOCMAY-DAI" min="0" class="form-control">
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="col-sm-4">
                                             <div class="form-group row">
-                                                <label class="col-sm-4 col-form-label">Chiều rộng (m): </label>
-                                                <div class="col-sm-8">
+                                                <label class="col-sm-5 col-form-label">Chiều rộng (m): </label>
+                                                <div class="col-sm-7">
                                                     <input type="number" step="any" id="add-MAYCHUYENDUNG-THONGSOCOBAN-KICHTHUOCMAY-RONG" min="0" class="form-control">
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="col-sm-4">
                                             <div class="form-group row">
-                                                <label class="col-sm-4 col-form-label">Chiều cao (m): </label>
-                                                <div class="col-sm-8">
+                                                <label class="col-sm-5 col-form-label">Chiều cao (m): </label>
+                                                <div class="col-sm-7">
                                                     <input type="number" step="any" id="add-MAYCHUYENDUNG-THONGSOCOBAN-KICHTHUOCMAY-CAO" min="0" class="form-control">
                                                 </div>
                                             </div>
@@ -1866,24 +1910,24 @@
                                     <div class="row">
                                         <div class="col-sm-4">
                                             <div class="form-group row">
-                                                <label class="col-sm-4 col-form-label">Tiểu tu (h): </label>
-                                                <div class="col-sm-8">
+                                                <label class="col-sm-5 col-form-label">Tiểu tu (h): </label>
+                                                <div class="col-sm-7">
                                                     <input type="number" step="any" id="add-MAYCHUYENDUNG-THONGSOCOBAN-CHUKYSUACHUA-TIEUTU" min="0" class="form-control">
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="col-sm-4">
                                             <div class="form-group row">
-                                                <label class="col-sm-4 col-form-label">Trung tu (h): </label>
-                                                <div class="col-sm-8">
+                                                <label class="col-sm-5 col-form-label">Trung tu (h): </label>
+                                                <div class="col-sm-7">
                                                     <input type="number" step="any" id="add-MAYCHUYENDUNG-THONGSOCOBAN-CHUKYSUACHUA-TRUNGTU" min="0" class="form-control">
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="col-sm-4">
                                             <div class="form-group row">
-                                                <label class="col-sm-4 col-form-label">Đại tu (h): </label>
-                                                <div class="col-sm-8">
+                                                <label class="col-sm-5 col-form-label">Đại tu (h): </label>
+                                                <div class="col-sm-7">
                                                     <input type="number" step="any" id="add-MAYCHUYENDUNG-THONGSOCOBAN-CHUKYSUACHUA-DAITU" min="0" class="form-control">
                                                 </div>
                                             </div>
@@ -1893,16 +1937,16 @@
                                     <div class="row">
                                         <div class="col-sm-4">
                                             <div class="form-group row">
-                                                <label class="col-sm-4 col-form-label">Điện áp (V): </label>
-                                                <div class="col-sm-8">
+                                                <label class="col-sm-5 col-form-label">Điện áp (V): </label>
+                                                <div class="col-sm-7">
                                                     <input type="number" step="any" id="add-MAYCHUYENDUNG-THONGSOCOBAN-LOAIDIEN-DIENAP" min="0" class="form-control">
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="col-sm-4">
                                             <div class="form-group row">
-                                                <label class="col-sm-4 col-form-label">Tần số (Hz): </label>
-                                                <div class="col-sm-8">
+                                                <label class="col-sm-5 col-form-label">Tần số (Hz): </label>
+                                                <div class="col-sm-7">
                                                     <input type="number" step="any" id="add-MAYCHUYENDUNG-THONGSOCOBAN-LOAIDIEN-TANSO" min="0" class="form-control">
                                                 </div>
                                             </div>
@@ -1948,24 +1992,24 @@
                                     <div class="row">
                                         <div class="col-sm-4">
                                             <div class="form-group row">
-                                                <label class="col-sm-4 col-form-label">Tỷ số truyền: </label>
-                                                <div class="col-sm-8">
+                                                <label class="col-sm-5 col-form-label">Tỷ số truyền: </label>
+                                                <div class="col-sm-7">
                                                     <input type="text" id="add-MAYCHUYENDUNG-PHUONGPHAPTRUYENTAI-TYSOTRUYEN" class="form-control">
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="col-sm-4">
                                             <div class="form-group row">
-                                                <label class="col-sm-4 col-form-label">Khớp nối cứng: </label>
-                                                <div class="col-sm-8">
+                                                <label class="col-sm-5 col-form-label">Khớp nối cứng: </label>
+                                                <div class="col-sm-7">
                                                     <input type="text" id="add-MAYCHUYENDUNG-PHUONGPHAPTRUYENTAI-KHOPNOICUNG" class="form-control">
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="col-sm-4">
                                             <div class="form-group row">
-                                                <label class="col-sm-4 col-form-label">Khớp nối mềm: </label>
-                                                <div class="col-sm-8">
+                                                <label class="col-sm-5 col-form-label">Khớp nối mềm: </label>
+                                                <div class="col-sm-7">
                                                     <input type="text" id="add-MAYCHUYENDUNG-PHUONGPHAPTRUYENTAI-KHOPNOIMEM" class="form-control">
                                                 </div>
                                             </div>
@@ -2020,6 +2064,17 @@
                                                 </div>
                                             </div>
                                         </div>--%>
+                                    <h4 class="sub-title">Tình trạng hiện tại</h4>
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <div class="form-group row">
+                                                <label class="col-sm-5 col-form-label">Tình trạng hiện tại: </label>
+                                                <div class="col-sm-7">
+                                                    <input type="text" id="add-MAYCHUYENDUNG-TINHTRANGHIENTAI"" class="form-control">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <div class="modal-footer">
@@ -2151,24 +2206,24 @@
                                     <div class="row">
                                         <div class="col-sm-4">
                                             <div class="form-group row">
-                                                <label class="col-sm-4 col-form-label">Chiều dài (m): </label>
-                                                <div class="col-sm-8">
+                                                <label class="col-sm-5 col-form-label">Chiều dài (m): </label>
+                                                <div class="col-sm-7">
                                                     <input type="number" step="any" id="edit-MAYCHUYENDUNG-THONGSOCOBAN-KICHTHUOCMAY-DAI" min="0" class="form-control">
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="col-sm-4">
                                             <div class="form-group row">
-                                                <label class="col-sm-4 col-form-label">Chiều rộng (m): </label>
-                                                <div class="col-sm-8">
+                                                <label class="col-sm-5 col-form-label">Chiều rộng (m): </label>
+                                                <div class="col-sm-7">
                                                     <input type="number" step="any" id="edit-MAYCHUYENDUNG-THONGSOCOBAN-KICHTHUOCMAY-RONG" min="0" class="form-control">
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="col-sm-4">
                                             <div class="form-group row">
-                                                <label class="col-sm-4 col-form-label">Chiều cao (m): </label>
-                                                <div class="col-sm-8">
+                                                <label class="col-sm-5 col-form-label">Chiều cao (m): </label>
+                                                <div class="col-sm-7">
                                                     <input type="number" step="any" id="edit-MAYCHUYENDUNG-THONGSOCOBAN-KICHTHUOCMAY-CAO" min="0" class="form-control">
                                                 </div>
                                             </div>
@@ -2178,24 +2233,24 @@
                                     <div class="row">
                                         <div class="col-sm-4">
                                             <div class="form-group row">
-                                                <label class="col-sm-4 col-form-label">Tiểu tu (h): </label>
-                                                <div class="col-sm-8">
+                                                <label class="col-sm-5 col-form-label">Tiểu tu (h): </label>
+                                                <div class="col-sm-7">
                                                     <input type="number" step="any" id="edit-MAYCHUYENDUNG-THONGSOCOBAN-CHUKYSUACHUA-TIEUTU" min="0" class="form-control">
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="col-sm-4">
                                             <div class="form-group row">
-                                                <label class="col-sm-4 col-form-label">Trung tu (h): </label>
-                                                <div class="col-sm-8">
+                                                <label class="col-sm-5 col-form-label">Trung tu (h): </label>
+                                                <div class="col-sm-7">
                                                     <input type="number" step="any" id="edit-MAYCHUYENDUNG-THONGSOCOBAN-CHUKYSUACHUA-TRUNGTU" min="0" class="form-control">
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="col-sm-4">
                                             <div class="form-group row">
-                                                <label class="col-sm-4 col-form-label">Đại tu (h): </label>
-                                                <div class="col-sm-8">
+                                                <label class="col-sm-5 col-form-label">Đại tu (h): </label>
+                                                <div class="col-sm-7">
                                                     <input type="number" step="any" id="edit-MAYCHUYENDUNG-THONGSOCOBAN-CHUKYSUACHUA-DAITU" min="0" class="form-control">
                                                 </div>
                                             </div>
@@ -2205,16 +2260,16 @@
                                     <div class="row">
                                         <div class="col-sm-4">
                                             <div class="form-group row">
-                                                <label class="col-sm-4 col-form-label">Điện áp (V): </label>
-                                                <div class="col-sm-8">
+                                                <label class="col-sm-5 col-form-label">Điện áp (V): </label>
+                                                <div class="col-sm-7">
                                                     <input type="number" step="any" id="edit-MAYCHUYENDUNG-THONGSOCOBAN-LOAIDIEN-DIENAP" min="0" class="form-control">
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="col-sm-4">
                                             <div class="form-group row">
-                                                <label class="col-sm-4 col-form-label">Tần số (Hz): </label>
-                                                <div class="col-sm-8">
+                                                <label class="col-sm-5 col-form-label">Tần số (Hz): </label>
+                                                <div class="col-sm-7">
                                                     <input type="number" step="any" id="edit-MAYCHUYENDUNG-THONGSOCOBAN-LOAIDIEN-TANSO" min="0" class="form-control">
                                                 </div>
                                             </div>
@@ -2260,24 +2315,24 @@
                                     <div class="row">
                                         <div class="col-sm-4">
                                             <div class="form-group row">
-                                                <label class="col-sm-4 col-form-label">Tỷ số truyền: </label>
-                                                <div class="col-sm-8">
+                                                <label class="col-sm-5 col-form-label">Tỷ số truyền: </label>
+                                                <div class="col-sm-7">
                                                     <input type="text" id="edit-MAYCHUYENDUNG-PHUONGPHAPTRUYENTAI-TYSOTRUYEN" class="form-control">
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="col-sm-4">
                                             <div class="form-group row">
-                                                <label class="col-sm-4 col-form-label">Khớp nối cứng: </label>
-                                                <div class="col-sm-8">
+                                                <label class="col-sm-5 col-form-label">Khớp nối cứng: </label>
+                                                <div class="col-sm-7">
                                                     <input type="text" id="edit-MAYCHUYENDUNG-PHUONGPHAPTRUYENTAI-KHOPNOICUNG" class="form-control">
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="col-sm-4">
                                             <div class="form-group row">
-                                                <label class="col-sm-4 col-form-label">Khớp nối mềm: </label>
-                                                <div class="col-sm-8">
+                                                <label class="col-sm-5 col-form-label">Khớp nối mềm: </label>
+                                                <div class="col-sm-7">
                                                     <input type="text" id="edit-MAYCHUYENDUNG-PHUONGPHAPTRUYENTAI-KHOPNOIMEM" class="form-control">
                                                 </div>
                                             </div>
@@ -2287,7 +2342,7 @@
                                     <div class="row">
                                         <div class="col-sm-6">
                                             <div class="form-group row">
-                                                <label class="col-sm-5 col-form-label">Sửa chữa cuối cùng (h): </label>
+                                                <label class="col-sm-5 col-form-label">Sửa chữa cuối cùng: </label>
                                                 <div class="col-sm-7">
                                                     <input type="text" id="edit-MAYCHUYENDUNG-THONGBAODINHMUC-SUACHUACUOICUNG" readonly="readonly" class="form-control">
                                                 </div>
@@ -2327,6 +2382,17 @@
                                                 <label class="col-sm-5 col-form-label">Thời gian còn lại (h): </label>
                                                 <div class="col-sm-7">
                                                     <input type="text" id="edit-MAYCHUYENDUNG-THONGBAODINHMUC-THOIGIANCONLAI" readonly="readonly" class="form-control">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h4 class="sub-title">Tình trạng hiện tại</h4>
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <div class="form-group row">
+                                                <label class="col-sm-5 col-form-label">Tình trạng hiện tại: </label>
+                                                <div class="col-sm-7">
+                                                    <input type="text" id="edit-MAYCHUYENDUNG-TINHTRANGHIENTAI" " class="form-control">
                                                 </div>
                                             </div>
                                         </div>
@@ -3417,7 +3483,7 @@
             </div>
         </div>
     </div>
-     <div id="loader" class="spinner-border text-primary" role="status"></div>
+    <div id="loader" class="spinner-border text-primary" role="status"></div>
     <script src="../Scripts/jquery-3.4.1.slim.min.js"></script>
     <script>
 
@@ -3505,7 +3571,7 @@
                 url: linkapi + "v2/hanghai?id=" + getParameterByName("Ship_ID"),
                 dataType: "json",
                 beforeSend: function () { // Before we send the request, remove the .hidden class from the spinner and default to inline-block.
-                     $('#loader').removeClass('hidden');
+                    $('#loader').removeClass('hidden');
                 },
                 success: function (data) {
                     var tabletext = "<thead><tr><th>STT</th><th>KÝ HIỆU</th><th>SỐ LƯỢNG</th><th>TÁC VỤ</th></tr></thead><tbody>";
@@ -3651,7 +3717,7 @@
                 url: linkapi + "v2/vukhi?id=" + getParameterByName("Ship_ID"),
                 dataType: "json",
                 beforeSend: function () { // Before we send the request, remove the .hidden class from the spinner and default to inline-block.
-                      $('#loader').removeClass('hidden');
+                    $('#loader').removeClass('hidden');
                 },
                 success: function (data) {
                     var tabletext = "<thead><tr><th>STT</th><th>KÝ HIỆU</th><th>SỐ LƯỢNG</th><th>TÁC VỤ</th></tr></thead><tbody>";
@@ -3668,7 +3734,7 @@
                     console.log('errorGET');
                 },
                 complete: function () { // Set our complete callback, adding the .hidden class and hiding the spinner.
-                     $('#loader').addClass('hidden');
+                    $('#loader').addClass('hidden');
                 },
             });
         };
@@ -3791,7 +3857,7 @@
                 url: linkapi + "v2/rada?id=" + getParameterByName("Ship_ID"),
                 dataType: "json",
                 beforeSend: function () { // Before we send the request, remove the .hidden class from the spinner and default to inline-block.
-                      $('#loader').removeClass('hidden');
+                    $('#loader').removeClass('hidden');
                 },
                 success: function (data) {
                     var tabletext = "<thead><tr><th>STT</th><th>KÝ HIỆU</th><th>SỐ LƯỢNG</th><th>TÁC VỤ</th></tr></thead><tbody>";
@@ -3937,7 +4003,7 @@
                 url: linkapi + "/v2_2/maychinh?id=" + getParameterByName("Ship_ID"),
                 dataType: "json",
                 beforeSend: function () { // Before we send the request, remove the .hidden class from the spinner and default to inline-block.
-                      $('#loader').removeClass('hidden');
+                    $('#loader').removeClass('hidden');
                 },
                 success: function (data) {
                     console.log(data);
@@ -3954,7 +4020,7 @@
                         else {
                             tabletext += 'style="background-color: #ffffff;"><td style="text-align: center;">' + i + '</td>';
                         }
-                        tabletext += "<td>" + item.THONGSOCOBAN.KYHIEU + "</td><td>" + item.THONGSOCOBAN.SOHIEUMAY + "</td><td style='text-align: center;'>" + item.THONGSOCOBAN.NAMSANXUAT + "</td><td>" + item.THONGSOCOBAN.NOISANXUAT + "</td><td>" + item.THONGSOCOBAN.CONGSUAT + "</td><td>" + item.THONGSOCOBAN.HETHONGDIEUKHIEN  + '</td><td><div style="display: flex; justify-content: space-around;"><a href="#" class="edit" title="Sửa" data-toggle="modal" data-target="#model-edit-MAYCHINH"  onclick="onclick_edit_MAYCHINH(`' + item.ID + '`,`' + item.THONGSOCOBAN.KYHIEU + '`,`' + item.THONGSOCOBAN.NAMSANXUAT + '`,`' + item.THONGSOCOBAN.NOISANXUAT + '`,`' + item.THONGSOCOBAN.NAMLAPRAP + '`,`' + item.THONGSOCOBAN.VITRILAPRAP + '`,`' + item.THONGSOCOBAN.SOHIEUMAY + '`,`' + item.THONGSOCOBAN.CONGSUAT + '`,`' + item.THONGSOCOBAN.VONGQUAY + '`,`' + item.THONGSOCOBAN.CHIEUQUAY + '`,`' + item.THONGSOCOBAN.NGUONKHOIDONG + '`,`' + item.THONGSOCOBAN.HETHONGDIEUKHIEN + '`,`' + item.THONGSOCOBAN.TRONGLUONG + '`,`' + item.THONGSOCOBAN.KICHTHUOCMAY.DAI + '`,`' + item.THONGSOCOBAN.KICHTHUOCMAY.RONG + '`,`' + item.THONGSOCOBAN.KICHTHUOCMAY.CAO + '`,`' + item.THONGSOCOBAN.CHUKYSUACHUA.TIEUTU + '`,`' + item.THONGSOCOBAN.CHUKYSUACHUA.TRUNGTU + '`,`' + item.THONGSOCOBAN.CHUKYSUACHUA.DAITU + '`,`' + item.THONGSOCOBAN.LOAIDIEN.DIENAP + '`,`' + item.THONGSOCOBAN.LOAIDIEN.TANSO + '`,`' + item.PHUONGPHAPTRUYENTAI.KYHIEULYHOP_BOGIAMVONG + '`,`' + item.PHUONGPHAPTRUYENTAI.SOHIEULYHOP_BOGIAMVONG + '`,`' + item.PHUONGPHAPTRUYENTAI.TYSOTRUYEN + '`,`' + item.PHUONGPHAPTRUYENTAI.KHOPNOICUNG + '`,`' + item.PHUONGPHAPTRUYENTAI.KHOPNOIMEM + '`,`' + item.PHUONGPHAPTRUYENTAI.CUROA + '`,`' + item.PHUONGPHAPTRUYENTAI.KYHIEUVONGBI + '`,`' + item.THONGBAODINHMUC.SUACHUACUOICUNG + '`,`' + item.THONGBAODINHMUC.MUCCANHBAO + '`,`' + item.THONGBAODINHMUC.THOIGIANCONLAI + '`,`' + item.THONGBAODINHMUC.DINHMUCSUACHUA + '`,`' + item.THONGBAODINHMUC.DINHMUCTHONGBAO + '`)"><i class="material-icons">&#xE254;</i></a><a href="#" class="delete" title="Xóa" onclick="delete_MAYCHINH(`' + item.ID + '`)"><i class="material-icons">&#xE872;</i></a></div></td></tr>';
+                        tabletext += "<td>" + item.THONGSOCOBAN.KYHIEU + "</td><td>" + item.THONGSOCOBAN.SOHIEUMAY + "</td><td style='text-align: center;'>" + item.THONGSOCOBAN.NAMSANXUAT + "</td><td>" + item.THONGSOCOBAN.NOISANXUAT + "</td><td>" + item.THONGSOCOBAN.CONGSUAT + "</td><td>" + item.THONGSOCOBAN.HETHONGDIEUKHIEN + '</td><td><div style="display: flex; justify-content: space-around;"><a href="#" class="edit" title="Sửa" data-toggle="modal" data-target="#model-edit-MAYCHINH"  onclick="onclick_edit_MAYCHINH(`' + item.ID + '`,`' + item.THONGSOCOBAN.KYHIEU + '`,`' + item.THONGSOCOBAN.NAMSANXUAT + '`,`' + item.THONGSOCOBAN.NOISANXUAT + '`,`' + item.THONGSOCOBAN.NAMLAPRAP + '`,`' + item.THONGSOCOBAN.VITRILAPRAP + '`,`' + item.THONGSOCOBAN.SOHIEUMAY + '`,`' + item.THONGSOCOBAN.CONGSUAT + '`,`' + item.THONGSOCOBAN.VONGQUAY + '`,`' + item.THONGSOCOBAN.CHIEUQUAY + '`,`' + item.THONGSOCOBAN.NGUONKHOIDONG + '`,`' + item.THONGSOCOBAN.HETHONGDIEUKHIEN + '`,`' + item.THONGSOCOBAN.TRONGLUONG + '`,`' + item.THONGSOCOBAN.KICHTHUOCMAY.DAI + '`,`' + item.THONGSOCOBAN.KICHTHUOCMAY.RONG + '`,`' + item.THONGSOCOBAN.KICHTHUOCMAY.CAO + '`,`' + item.THONGSOCOBAN.CHUKYSUACHUA.TIEUTU + '`,`' + item.THONGSOCOBAN.CHUKYSUACHUA.TRUNGTU + '`,`' + item.THONGSOCOBAN.CHUKYSUACHUA.DAITU + '`,`' + item.THONGSOCOBAN.LOAIDIEN.DIENAP + '`,`' + item.THONGSOCOBAN.LOAIDIEN.TANSO + '`,`' + item.PHUONGPHAPTRUYENTAI.KYHIEULYHOP_BOGIAMVONG + '`,`' + item.PHUONGPHAPTRUYENTAI.SOHIEULYHOP_BOGIAMVONG + '`,`' + item.PHUONGPHAPTRUYENTAI.TYSOTRUYEN + '`,`' + item.PHUONGPHAPTRUYENTAI.KHOPNOICUNG + '`,`' + item.PHUONGPHAPTRUYENTAI.KHOPNOIMEM + '`,`' + item.PHUONGPHAPTRUYENTAI.CUROA + '`,`' + item.PHUONGPHAPTRUYENTAI.KYHIEUVONGBI + '`,`' + item.THONGBAODINHMUC.SUACHUACUOICUNG + '`,`' + item.THONGBAODINHMUC.MUCCANHBAO + '`,`' + item.THONGBAODINHMUC.THOIGIANCONLAI + '`,`' + item.THONGBAODINHMUC.DINHMUCSUACHUA + '`,`' + item.THONGBAODINHMUC.DINHMUCTHONGBAO + '`,`' + item.TINHTRANGHIENTAI + '`)"><i class="material-icons">&#xE254;</i></a><a href="#" class="delete" title="Xóa" onclick="delete_MAYCHINH(`' + item.ID + '`)"><i class="material-icons">&#xE872;</i></a></div></td></tr>';
                         i = i + 1;
                     });
                     tabletext += "</tbody>";
@@ -4011,7 +4077,7 @@
             var form = document.getElementById("form-add-MAYCHINH");
             console.log(form.checkValidity());
             if (form.checkValidity() == true) {
-                if ($("#add-MAYCHINH-THONGBAODINHMUC-DINHMUCSUACHUA").val() > $("#add-MAYCHINH-THONGBAODINHMUC-DINHMUCTHONGBAO").val()) {
+                if (parseInt($("#add-MAYCHINH-THONGBAODINHMUC-DINHMUCSUACHUA").val()) > parseInt($("#add-MAYCHINH-THONGBAODINHMUC-DINHMUCTHONGBAO").val())) {
                     var MAYCHINH = {
                         ID: "",
                         THONGSOCOBAN: {
@@ -4057,7 +4123,8 @@
                             THOIGIANCONLAI: $("#add-MAYCHINH-THONGBAODINHMUC-THOIGIANCONLAI").val(),
                             DINHMUCSUACHUA: $("#add-MAYCHINH-THONGBAODINHMUC-DINHMUCSUACHUA").val(),
                             DINHMUCTHONGBAO: $("#add-MAYCHINH-THONGBAODINHMUC-DINHMUCTHONGBAO").val(),
-                        }
+                        },
+                        TINHTRANGHIENTAI: $("#add-MAYCHINH-TINHTRANGHIENTAI").val(),
                     };
                     console.log(MAYCHINH);
                     $.ajax({
@@ -4115,7 +4182,7 @@
             }
             return false;
         }
-        function onclick_edit_MAYCHINH(ID, KYHIEU, NAMSANXUAT, NOISANXUAT, NAMLAPRAP, VITRILAPRAP, SOHIEUMAY, CONGSUAT, VONGQUAY, CHIEUQUAY, NGUONKHOIDONG, HETHONGDIEUKHIEN, TRONGLUONG, DAI, RONG, CAO, TIEUTU, TRUNGTU, DAITU, DIENAP, TANSO, KYHIEULYHOP_BOGIAMVONG, SOHIEULYHOP_BOGIAMVONG, TYSOTRUYEN, KHOPNOICUNG, KHOPNOIMEM, CUROA, KYHIEUVONGBI, SUACHUACUOICUNG, MUCCANHBAO, THOIGIANCONLAI, DINHMUCSUACHUA, DINHMUCTHONGBAO) {
+        function onclick_edit_MAYCHINH(ID, KYHIEU, NAMSANXUAT, NOISANXUAT, NAMLAPRAP, VITRILAPRAP, SOHIEUMAY, CONGSUAT, VONGQUAY, CHIEUQUAY, NGUONKHOIDONG, HETHONGDIEUKHIEN, TRONGLUONG, DAI, RONG, CAO, TIEUTU, TRUNGTU, DAITU, DIENAP, TANSO, KYHIEULYHOP_BOGIAMVONG, SOHIEULYHOP_BOGIAMVONG, TYSOTRUYEN, KHOPNOICUNG, KHOPNOIMEM, CUROA, KYHIEUVONGBI, SUACHUACUOICUNG, MUCCANHBAO, THOIGIANCONLAI, DINHMUCSUACHUA, DINHMUCTHONGBAO, TINHTRANGHIENTAI) {
             $("#edit-MAYCHINH-ID").val(ID);
             $("#edit-MAYCHINH-THONGSOCOBAN-KYHIEU").val(KYHIEU);
             $("#edit-MAYCHINH-THONGSOCOBAN-NAMSANXUAT").val(NAMSANXUAT);
@@ -4151,13 +4218,15 @@
             $("#edit-MAYCHINH-THONGBAODINHMUC-DINHMUCSUACHUA").val(DINHMUCSUACHUA);
             $("#edit-MAYCHINH-THONGBAODINHMUC-DINHMUCTHONGBAO").val(DINHMUCTHONGBAO);
 
+            $("#edit-MAYCHINH-TINHTRANGHIENTAI").val(TINHTRANGHIENTAI);
+
 
         }
         function edit_MAYCHINH() {
             var form = document.getElementById("form-edit-MAYCHINH");
             console.log(form.checkValidity());
             if (form.checkValidity() == true) {
-                if ($("#edit-MAYCHINH-THONGBAODINHMUC-DINHMUCSUACHUA").val() > $("#edit-MAYCHINH-THONGBAODINHMUC-DINHMUCTHONGBAO").val()) {
+                if (parseInt($("#edit-MAYCHINH-THONGBAODINHMUC-DINHMUCSUACHUA").val()) > parseInt($("#edit-MAYCHINH-THONGBAODINHMUC-DINHMUCTHONGBAO").val())) {
                     var MAYCHINH = {
                         ID: $("#edit-MAYCHINH-ID").val(),
                         THONGSOCOBAN: {
@@ -4203,7 +4272,8 @@
                             THOIGIANCONLAI: $("#edit-MAYCHINH-THONGBAODINHMUC-THOIGIANCONLAI").val(),
                             DINHMUCSUACHUA: $("#edit-MAYCHINH-THONGBAODINHMUC-DINHMUCSUACHUA").val(),
                             DINHMUCTHONGBAO: $("#edit-MAYCHINH-THONGBAODINHMUC-DINHMUCTHONGBAO").val(),
-                        }
+                        },
+                        TINHTRANGHIENTAI: $("#edit-MAYCHINH-TINHTRANGHIENTAI").val(),
                     };
                     $.ajax({
                         type: "PUT",
@@ -4253,7 +4323,7 @@
                 url: linkapi + "v2_2/mayphuphatdien?id=" + getParameterByName("Ship_ID"),
                 dataType: "json",
                 beforeSend: function () { // Before we send the request, remove the .hidden class from the spinner and default to inline-block.
-                     $('#loader').removeClass('hidden');
+                    $('#loader').removeClass('hidden');
                 },
                 success: function (data) {
                     var tabletext = "<thead><tr><th>STT</th><th>KÝ HIỆU</th><th>Số hiệu</th><th>NĂM SẢN XUẤT</th><th>NƠI SẢN XUẤT</th><th>CÔNG SUẤT</th><th>HỆ THỐNG ĐIỀU KHIỂN</th><th>TÁC VỤ</th></tr></thead><tbody>";
@@ -4269,7 +4339,7 @@
                         else {
                             tabletext += 'style="background-color: #ffffff;"><td style="text-align: center;">' + i + '</td>';
                         }
-                        tabletext += "<td>" + item.THONGSOCOBAN.KYHIEU + "</td><td>" + item.THONGSOCOBAN.SOHIEUMAY + "</td><td style='text-align: center;'>" + item.THONGSOCOBAN.NAMSANXUAT + "</td><td>" + item.THONGSOCOBAN.NOISANXUAT + "</td><td>" + item.THONGSOCOBAN.CONGSUAT + "</td><td>" + item.THONGSOCOBAN.HETHONGDIEUKHIEN + '</td><td><div style="display: flex; justify-content: space-around;"><a href="#" class="edit" title="Sửa" data-toggle="modal" data-target="#model-edit-MAYPHU"  onclick="onclick_edit_MAYPHU(`' + item.ID + '`,`' + item.THONGSOCOBAN.KYHIEU + '`,`' + item.THONGSOCOBAN.NAMSANXUAT + '`,`' + item.THONGSOCOBAN.NOISANXUAT + '`,`' + item.THONGSOCOBAN.NAMLAPRAP + '`,`' + item.THONGSOCOBAN.VITRILAPRAP + '`,`' + item.THONGSOCOBAN.SOHIEUMAY + '`,`' + item.THONGSOCOBAN.CONGSUAT + '`,`' + item.THONGSOCOBAN.VONGQUAY + '`,`' + item.THONGSOCOBAN.CHIEUQUAY + '`,`' + item.THONGSOCOBAN.NGUONKHOIDONG + '`,`' + item.THONGSOCOBAN.HETHONGDIEUKHIEN + '`,`' + item.THONGSOCOBAN.TRONGLUONG + '`,`' + item.THONGSOCOBAN.KICHTHUOCMAY.DAI + '`,`' + item.THONGSOCOBAN.KICHTHUOCMAY.RONG + '`,`' + item.THONGSOCOBAN.KICHTHUOCMAY.CAO + '`,`' + item.THONGSOCOBAN.CHUKYSUACHUA.TIEUTU + '`,`' + item.THONGSOCOBAN.CHUKYSUACHUA.TRUNGTU + '`,`' + item.THONGSOCOBAN.CHUKYSUACHUA.DAITU + '`,`' + item.THONGSOCOBAN.LOAIDIEN.DIENAP + '`,`' + item.THONGSOCOBAN.LOAIDIEN.TANSO + '`,`' + item.PHUONGPHAPTRUYENTAI.KYHIEULYHOP_BOGIAMVONG + '`,`' + item.PHUONGPHAPTRUYENTAI.SOHIEULYHOP_BOGIAMVONG + '`,`' + item.PHUONGPHAPTRUYENTAI.TYSOTRUYEN + '`,`' + item.PHUONGPHAPTRUYENTAI.KHOPNOICUNG + '`,`' + item.PHUONGPHAPTRUYENTAI.KHOPNOIMEM + '`,`' + item.PHUONGPHAPTRUYENTAI.CUROA + '`,`' + item.PHUONGPHAPTRUYENTAI.KYHIEUVONGBI + '`,`' + item.THONGBAODINHMUC.SUACHUACUOICUNG + '`,`' + item.THONGBAODINHMUC.MUCCANHBAO + '`,`' + item.THONGBAODINHMUC.THOIGIANCONLAI + '`,`' + item.THONGBAODINHMUC.DINHMUCSUACHUA + '`,`' + item.THONGBAODINHMUC.DINHMUCTHONGBAO + '`)"><i class="material-icons">&#xE254;</i></a><a href="#" class="delete" title="Xóa" onclick="delete_MAYCHINH(`' + item.ID + '`)"><i class="material-icons">&#xE872;</i></a></div></td></tr>';
+                        tabletext += "<td>" + item.THONGSOCOBAN.KYHIEU + "</td><td>" + item.THONGSOCOBAN.SOHIEUMAY + "</td><td style='text-align: center;'>" + item.THONGSOCOBAN.NAMSANXUAT + "</td><td>" + item.THONGSOCOBAN.NOISANXUAT + "</td><td>" + item.THONGSOCOBAN.CONGSUAT + "</td><td>" + item.THONGSOCOBAN.HETHONGDIEUKHIEN + '</td><td><div style="display: flex; justify-content: space-around;"><a href="#" class="edit" title="Sửa" data-toggle="modal" data-target="#model-edit-MAYPHU"  onclick="onclick_edit_MAYPHU(`' + item.ID + '`,`' + item.THONGSOCOBAN.KYHIEU + '`,`' + item.THONGSOCOBAN.NAMSANXUAT + '`,`' + item.THONGSOCOBAN.NOISANXUAT + '`,`' + item.THONGSOCOBAN.NAMLAPRAP + '`,`' + item.THONGSOCOBAN.VITRILAPRAP + '`,`' + item.THONGSOCOBAN.SOHIEUMAY + '`,`' + item.THONGSOCOBAN.CONGSUAT + '`,`' + item.THONGSOCOBAN.VONGQUAY + '`,`' + item.THONGSOCOBAN.CHIEUQUAY + '`,`' + item.THONGSOCOBAN.NGUONKHOIDONG + '`,`' + item.THONGSOCOBAN.HETHONGDIEUKHIEN + '`,`' + item.THONGSOCOBAN.TRONGLUONG + '`,`' + item.THONGSOCOBAN.KICHTHUOCMAY.DAI + '`,`' + item.THONGSOCOBAN.KICHTHUOCMAY.RONG + '`,`' + item.THONGSOCOBAN.KICHTHUOCMAY.CAO + '`,`' + item.THONGSOCOBAN.CHUKYSUACHUA.TIEUTU + '`,`' + item.THONGSOCOBAN.CHUKYSUACHUA.TRUNGTU + '`,`' + item.THONGSOCOBAN.CHUKYSUACHUA.DAITU + '`,`' + item.THONGSOCOBAN.LOAIDIEN.DIENAP + '`,`' + item.THONGSOCOBAN.LOAIDIEN.TANSO + '`,`' + item.PHUONGPHAPTRUYENTAI.KYHIEULYHOP_BOGIAMVONG + '`,`' + item.PHUONGPHAPTRUYENTAI.SOHIEULYHOP_BOGIAMVONG + '`,`' + item.PHUONGPHAPTRUYENTAI.TYSOTRUYEN + '`,`' + item.PHUONGPHAPTRUYENTAI.KHOPNOICUNG + '`,`' + item.PHUONGPHAPTRUYENTAI.KHOPNOIMEM + '`,`' + item.PHUONGPHAPTRUYENTAI.CUROA + '`,`' + item.PHUONGPHAPTRUYENTAI.KYHIEUVONGBI + '`,`' + item.THONGBAODINHMUC.SUACHUACUOICUNG + '`,`' + item.THONGBAODINHMUC.MUCCANHBAO + '`,`' + item.THONGBAODINHMUC.THOIGIANCONLAI + '`,`' + item.THONGBAODINHMUC.DINHMUCSUACHUA + '`,`' + item.THONGBAODINHMUC.DINHMUCTHONGBAO + '`,`' + item.TINHTRANGHIENTAI + '`)"><i class="material-icons">&#xE254;</i></a><a href="#" class="delete" title="Xóa" onclick="delete_MAYCHINH(`' + item.ID + '`)"><i class="material-icons">&#xE872;</i></a></div></td></tr>';
                         i = i + 1;
                     });
                     tabletext += "</tbody>";
@@ -4325,7 +4395,7 @@
             var form = document.getElementById("form-add-MAYPHU");
             console.log(form.checkValidity());
             if (form.checkValidity() == true) {
-                if ($("#add-MAYPHU-THONGBAODINHMUC-DINHMUCSUACHUA").val() > $("#add-MAYPHU-THONGBAODINHMUC-DINHMUCTHONGBAO").val()) {
+                if (parseInt($("#add-MAYPHU-THONGBAODINHMUC-DINHMUCSUACHUA").val()) > parseInt($("#add-MAYPHU-THONGBAODINHMUC-DINHMUCTHONGBAO").val())) {
                     var MAYPHU = {
                         ID: "",
                         THONGSOCOBAN: {
@@ -4371,7 +4441,8 @@
                             THOIGIANCONLAI: $("#add-MAYPHU-THONGBAODINHMUC-THOIGIANCONLAI").val(),
                             DINHMUCSUACHUA: $("#add-MAYPHU-THONGBAODINHMUC-DINHMUCSUACHUA").val(),
                             DINHMUCTHONGBAO: $("#add-MAYPHU-THONGBAODINHMUC-DINHMUCTHONGBAO").val(),
-                        }
+                        },
+                        TINHTRANGHIENTAI: $("#add-MAYPHU-TINHTRANGHIENTAI").val(),
                     };
                     $.ajax({
                         type: "POST",
@@ -4429,7 +4500,7 @@
             }
             return false;
         }
-        function onclick_edit_MAYPHU(ID, KYHIEU, NAMSANXUAT, NOISANXUAT, NAMLAPRAP, VITRILAPRAP, SOHIEUMAY, CONGSUAT, VONGQUAY, CHIEUQUAY, NGUONKHOIDONG, HETHONGDIEUKHIEN, TRONGLUONG, DAI, RONG, CAO, TIEUTU, TRUNGTU, DAITU, DIENAP, TANSO, KYHIEULYHOP_BOGIAMVONG, SOHIEULYHOP_BOGIAMVONG, TYSOTRUYEN, KHOPNOICUNG, KHOPNOIMEM, CUROA, KYHIEUVONGBI, SUACHUACUOICUNG, MUCCANHBAO, THOIGIANCONLAI, DINHMUCSUACHUA, DINHMUCTHONGBAO) {
+        function onclick_edit_MAYPHU(ID, KYHIEU, NAMSANXUAT, NOISANXUAT, NAMLAPRAP, VITRILAPRAP, SOHIEUMAY, CONGSUAT, VONGQUAY, CHIEUQUAY, NGUONKHOIDONG, HETHONGDIEUKHIEN, TRONGLUONG, DAI, RONG, CAO, TIEUTU, TRUNGTU, DAITU, DIENAP, TANSO, KYHIEULYHOP_BOGIAMVONG, SOHIEULYHOP_BOGIAMVONG, TYSOTRUYEN, KHOPNOICUNG, KHOPNOIMEM, CUROA, KYHIEUVONGBI, SUACHUACUOICUNG, MUCCANHBAO, THOIGIANCONLAI, DINHMUCSUACHUA, DINHMUCTHONGBAO, TINHTRANGHIENTAI) {
             $("#edit-MAYPHU-ID").val(ID);
             $("#edit-MAYPHU-THONGSOCOBAN-KYHIEU").val(KYHIEU);
             $("#edit-MAYPHU-THONGSOCOBAN-NAMSANXUAT").val(NAMSANXUAT);
@@ -4464,12 +4535,13 @@
             $("#edit-MAYPHU-THONGBAODINHMUC-THOIGIANCONLAI").val(THOIGIANCONLAI);
             $("#edit-MAYPHU-THONGBAODINHMUC-DINHMUCSUACHUA").val(DINHMUCSUACHUA);
             $("#edit-MAYPHU-THONGBAODINHMUC-DINHMUCTHONGBAO").val(DINHMUCTHONGBAO);
+            $("#edit-MAYPHU-TINHTRANGHIENTAIO").val(TINHTRANGHIENTAI);
         }
         function edit_MAYPHU() {
             var form = document.getElementById("form-edit-MAYPHU");
             console.log(form.checkValidity());
             if (form.checkValidity() == true) {
-                if ($("#edit-MAYPHU-THONGBAODINHMUC-DINHMUCSUACHUA").val() > $("#edit-MAYPHU-THONGBAODINHMUC-DINHMUCTHONGBAO").val()) {
+                if (parseInt($("#edit-MAYPHU-THONGBAODINHMUC-DINHMUCSUACHUA").val()) > parseInt($("#edit-MAYPHU-THONGBAODINHMUC-DINHMUCTHONGBAO").val())) {
                     var MAYPHU = {
                         ID: $("#edit-MAYPHU-ID").val(),
                         THONGSOCOBAN: {
@@ -4515,7 +4587,8 @@
                             THOIGIANCONLAI: $("#edit-MAYPHU-THONGBAODINHMUC-THOIGIANCONLAI").val(),
                             DINHMUCSUACHUA: $("#edit-MAYPHU-THONGBAODINHMUC-DINHMUCSUACHUA").val(),
                             DINHMUCTHONGBAO: $("#edit-MAYPHU-THONGBAODINHMUC-DINHMUCTHONGBAO").val(),
-                        }
+                        },
+                        TINHTRANGHIENTAI: $("#edit-MAYPHU-TINHTRANGHIENTAI").val(),
                     };
                     $.ajax({
                         type: "PUT",
@@ -4565,7 +4638,7 @@
                 url: linkapi + "v2_2/maychuyendung?id=" + getParameterByName("Ship_ID"),
                 dataType: "json",
                 beforeSend: function () { // Before we send the request, remove the .hidden class from the spinner and default to inline-block.
-                     $('#loader').removeClass('hidden');
+                    $('#loader').removeClass('hidden');
                 },
                 success: function (data) {
                     console.log(data);
@@ -4582,7 +4655,7 @@
                         else {
                             tabletext += 'style="background-color: #ffffff;"><td style="text-align: center;">' + i + '</td>';
                         }
-                        tabletext += "<td>" + item.THONGSOCOBAN.KYHIEU + "</td><td>" + item.THONGSOCOBAN.SOHIEUMAY + "</td><td style='text-align: center;'>" + item.THONGSOCOBAN.NAMSANXUAT + "</td><td>" + item.THONGSOCOBAN.NOISANXUAT + "</td><td>" + item.THONGSOCOBAN.CONGSUAT + "</td><td>" + item.THONGSOCOBAN.HETHONGDIEUKHIEN + '</td><td><div style="display: flex; justify-content: space-around;"><a href="#" class="edit" title="Sửa" data-toggle="modal" data-target="#model-edit-MAYCHUYENDUNG"  onclick="onclick_edit_MAYCHUYENDUNG(`' + item.ID + '`,`' + item.THONGSOCOBAN.KYHIEU + '`,`' + item.THONGSOCOBAN.NAMSANXUAT + '`,`' + item.THONGSOCOBAN.NOISANXUAT + '`,`' + item.THONGSOCOBAN.NAMLAPRAP + '`,`' + item.THONGSOCOBAN.VITRILAPRAP + '`,`' + item.THONGSOCOBAN.SOHIEUMAY + '`,`' + item.THONGSOCOBAN.CONGSUAT + '`,`' + item.THONGSOCOBAN.VONGQUAY + '`,`' + item.THONGSOCOBAN.CHIEUQUAY + '`,`' + item.THONGSOCOBAN.NGUONKHOIDONG + '`,`' + item.THONGSOCOBAN.HETHONGDIEUKHIEN + '`,`' + item.THONGSOCOBAN.TRONGLUONG + '`,`' + item.THONGSOCOBAN.KICHTHUOCMAY.DAI + '`,`' + item.THONGSOCOBAN.KICHTHUOCMAY.RONG + '`,`' + item.THONGSOCOBAN.KICHTHUOCMAY.CAO + '`,`' + item.THONGSOCOBAN.CHUKYSUACHUA.TIEUTU + '`,`' + item.THONGSOCOBAN.CHUKYSUACHUA.TRUNGTU + '`,`' + item.THONGSOCOBAN.CHUKYSUACHUA.DAITU + '`,`' + item.THONGSOCOBAN.LOAIDIEN.DIENAP + '`,`' + item.THONGSOCOBAN.LOAIDIEN.TANSO + '`,`' + item.PHUONGPHAPTRUYENTAI.KYHIEULYHOP_BOGIAMVONG + '`,`' + item.PHUONGPHAPTRUYENTAI.SOHIEULYHOP_BOGIAMVONG + '`,`' + item.PHUONGPHAPTRUYENTAI.TYSOTRUYEN + '`,`' + item.PHUONGPHAPTRUYENTAI.KHOPNOICUNG + '`,`' + item.PHUONGPHAPTRUYENTAI.KHOPNOIMEM + '`,`' + item.PHUONGPHAPTRUYENTAI.CUROA + '`,`' + item.PHUONGPHAPTRUYENTAI.KYHIEUVONGBI + '`,`' + item.THONGBAODINHMUC.SUACHUACUOICUNG + '`,`' + item.THONGBAODINHMUC.MUCCANHBAO + '`,`' + item.THONGBAODINHMUC.THOIGIANCONLAI + '`,`' + item.THONGBAODINHMUC.DINHMUCSUACHUA + '`,`' + item.THONGBAODINHMUC.DINHMUCTHONGBAO + '`)"><i class="material-icons">&#xE254;</i></a><a href="#" class="delete" title="Xóa" onclick="delete_MAYCHINH(`' + item.ID + '`)"><i class="material-icons">&#xE872;</i></a></div></td></tr>';
+                        tabletext += "<td>" + item.THONGSOCOBAN.KYHIEU + "</td><td>" + item.THONGSOCOBAN.SOHIEUMAY + "</td><td style='text-align: center;'>" + item.THONGSOCOBAN.NAMSANXUAT + "</td><td>" + item.THONGSOCOBAN.NOISANXUAT + "</td><td>" + item.THONGSOCOBAN.CONGSUAT + "</td><td>" + item.THONGSOCOBAN.HETHONGDIEUKHIEN + '</td><td><div style="display: flex; justify-content: space-around;"><a href="#" class="edit" title="Sửa" data-toggle="modal" data-target="#model-edit-MAYCHUYENDUNG"  onclick="onclick_edit_MAYCHUYENDUNG(`' + item.ID + '`,`' + item.THONGSOCOBAN.KYHIEU + '`,`' + item.THONGSOCOBAN.NAMSANXUAT + '`,`' + item.THONGSOCOBAN.NOISANXUAT + '`,`' + item.THONGSOCOBAN.NAMLAPRAP + '`,`' + item.THONGSOCOBAN.VITRILAPRAP + '`,`' + item.THONGSOCOBAN.SOHIEUMAY + '`,`' + item.THONGSOCOBAN.CONGSUAT + '`,`' + item.THONGSOCOBAN.VONGQUAY + '`,`' + item.THONGSOCOBAN.CHIEUQUAY + '`,`' + item.THONGSOCOBAN.NGUONKHOIDONG + '`,`' + item.THONGSOCOBAN.HETHONGDIEUKHIEN + '`,`' + item.THONGSOCOBAN.TRONGLUONG + '`,`' + item.THONGSOCOBAN.KICHTHUOCMAY.DAI + '`,`' + item.THONGSOCOBAN.KICHTHUOCMAY.RONG + '`,`' + item.THONGSOCOBAN.KICHTHUOCMAY.CAO + '`,`' + item.THONGSOCOBAN.CHUKYSUACHUA.TIEUTU + '`,`' + item.THONGSOCOBAN.CHUKYSUACHUA.TRUNGTU + '`,`' + item.THONGSOCOBAN.CHUKYSUACHUA.DAITU + '`,`' + item.THONGSOCOBAN.LOAIDIEN.DIENAP + '`,`' + item.THONGSOCOBAN.LOAIDIEN.TANSO + '`,`' + item.PHUONGPHAPTRUYENTAI.KYHIEULYHOP_BOGIAMVONG + '`,`' + item.PHUONGPHAPTRUYENTAI.SOHIEULYHOP_BOGIAMVONG + '`,`' + item.PHUONGPHAPTRUYENTAI.TYSOTRUYEN + '`,`' + item.PHUONGPHAPTRUYENTAI.KHOPNOICUNG + '`,`' + item.PHUONGPHAPTRUYENTAI.KHOPNOIMEM + '`,`' + item.PHUONGPHAPTRUYENTAI.CUROA + '`,`' + item.PHUONGPHAPTRUYENTAI.KYHIEUVONGBI + '`,`' + item.THONGBAODINHMUC.SUACHUACUOICUNG + '`,`' + item.THONGBAODINHMUC.MUCCANHBAO + '`,`' + item.THONGBAODINHMUC.THOIGIANCONLAI + '`,`' + item.THONGBAODINHMUC.DINHMUCSUACHUA + '`,`' + item.THONGBAODINHMUC.DINHMUCTHONGBAO + '`,`' + item.TINHTRANGHIENTAI + '`)"><i class="material-icons">&#xE254;</i></a><a href="#" class="delete" title="Xóa" onclick="delete_MAYCHINH(`' + item.ID + '`)"><i class="material-icons">&#xE872;</i></a></div></td></tr>';
                         i = i + 1;
                     });
                     tabletext += "</tbody>";
@@ -4593,7 +4666,7 @@
                     console.log('errorGET');
                 },
                 complete: function () { // Set our complete callback, adding the .hidden class and hiding the spinner.
-                     $('#loader').addClass('hidden');
+                    $('#loader').addClass('hidden');
                 },
             });
         };
@@ -4638,7 +4711,7 @@
             var form = document.getElementById("form-add-MAYCHUYENDUNG");
             console.log(form.checkValidity());
             if (form.checkValidity() == true) {
-                if ($("#add-MAYCHUYENDUNG-THONGBAODINHMUC-DINHMUCSUACHUA").val() > $("#add-MAYCHUYENDUNG-THONGBAODINHMUC-DINHMUCTHONGBAO").val()) {
+                if (parseInt($("#add-MAYCHUYENDUNG-THONGBAODINHMUC-DINHMUCSUACHUA").val()) > parseInt($("#add-MAYCHUYENDUNG-THONGBAODINHMUC-DINHMUCTHONGBAO").val())) {
                     var MAYCHUYENDUNG = {
                         ID: "",
                         THONGSOCOBAN: {
@@ -4684,7 +4757,8 @@
                             THOIGIANCONLAI: $("#add-MAYCHUYENDUNG-THONGBAODINHMUC-THOIGIANCONLAI").val(),
                             DINHMUCSUACHUA: $("#add-MAYCHUYENDUNG-THONGBAODINHMUC-DINHMUCSUACHUA").val(),
                             DINHMUCTHONGBAO: $("#add-MAYCHUYENDUNG-THONGBAODINHMUC-DINHMUCTHONGBAO").val(),
-                        }
+                        },
+                        TINHTRANGHIENTAI: $("#add-MAYCHUYENDUNG-TINHTRANGHIENTAI").val(),
                     };
                     $.ajax({
                         type: "POST",
@@ -4743,7 +4817,7 @@
             }
             return false;
         }
-        function onclick_edit_MAYCHUYENDUNG(ID, KYHIEU, NAMSANXUAT, NOISANXUAT, NAMLAPRAP, VITRILAPRAP, SOHIEUMAY, CONGSUAT, VONGQUAY, CHIEUQUAY, NGUONKHOIDONG, HETHONGDIEUKHIEN, TRONGLUONG, DAI, RONG, CAO, TIEUTU, TRUNGTU, DAITU, DIENAP, TANSO, KYHIEULYHOP_BOGIAMVONG, SOHIEULYHOP_BOGIAMVONG, TYSOTRUYEN, KHOPNOICUNG, KHOPNOIMEM, CUROA, KYHIEUVONGBI, SUACHUACUOICUNG, MUCCANHBAO, THOIGIANCONLAI, DINHMUCSUACHUA, DINHMUCTHONGBAO) {
+        function onclick_edit_MAYCHUYENDUNG(ID, KYHIEU, NAMSANXUAT, NOISANXUAT, NAMLAPRAP, VITRILAPRAP, SOHIEUMAY, CONGSUAT, VONGQUAY, CHIEUQUAY, NGUONKHOIDONG, HETHONGDIEUKHIEN, TRONGLUONG, DAI, RONG, CAO, TIEUTU, TRUNGTU, DAITU, DIENAP, TANSO, KYHIEULYHOP_BOGIAMVONG, SOHIEULYHOP_BOGIAMVONG, TYSOTRUYEN, KHOPNOICUNG, KHOPNOIMEM, CUROA, KYHIEUVONGBI, SUACHUACUOICUNG, MUCCANHBAO, THOIGIANCONLAI, DINHMUCSUACHUA, DINHMUCTHONGBAO, TINHTRANGHIENTAI) {
             $("#edit-MAYCHUYENDUNG-ID").val(ID);
             $("#edit-MAYCHUYENDUNG-THONGSOCOBAN-KYHIEU").val(KYHIEU);
             $("#edit-MAYCHUYENDUNG-THONGSOCOBAN-NAMSANXUAT").val(NAMSANXUAT);
@@ -4778,12 +4852,13 @@
             $("#edit-MAYCHUYENDUNG-THONGBAODINHMUC-THOIGIANCONLAI").val(THOIGIANCONLAI);
             $("#edit-MAYCHUYENDUNG-THONGBAODINHMUC-DINHMUCSUACHUA").val(DINHMUCSUACHUA);
             $("#edit-MAYCHUYENDUNG-THONGBAODINHMUC-DINHMUCTHONGBAO").val(DINHMUCTHONGBAO);
+            $("#edit-MAYCHUYENDUNG-TINHTRANGHIENTAI").val(TINHTRANGHIENTAI);
         }
         function edit_MAYCHUYENDUNG() {
             var form = document.getElementById("form-edit-MAYCHUYENDUNG");
             console.log(form.checkValidity());
             if (form.checkValidity() == true) {
-                if ($("#edit-MAYCHUYENDUNG-THONGBAODINHMUC-DINHMUCSUACHUA").val() > $("#edit-MAYCHUYENDUNG-THONGBAODINHMUC-DINHMUCTHONGBAO").val()) {
+                if (parseInt($("#edit-MAYCHUYENDUNG-THONGBAODINHMUC-DINHMUCSUACHUA").val()) > parseInt($("#edit-MAYCHUYENDUNG-THONGBAODINHMUC-DINHMUCTHONGBAO").val())) {
                     var MAYCHUYENDUNG = {
                         ID: $("#edit-MAYCHUYENDUNG-ID").val(),
                         THONGSOCOBAN: {
@@ -4829,7 +4904,8 @@
                             THOIGIANCONLAI: $("#edit-MAYCHUYENDUNG-THONGBAODINHMUC-THOIGIANCONLAI").val(),
                             DINHMUCSUACHUA: $("#edit-MAYCHUYENDUNG-THONGBAODINHMUC-DINHMUCSUACHUA").val(),
                             DINHMUCTHONGBAO: $("#edit-MAYCHUYENDUNG-THONGBAODINHMUC-DINHMUCTHONGBAO").val(),
-                        }
+                        },
+                        TINHTRANGHIENTAI: $("#edit-MAYCHUYENDUNG-TINHTRANGHIENTAI").val(),
                     };
                     $.ajax({
                         type: "PUT",
@@ -4879,7 +4955,7 @@
                 url: linkapi + "v2/hetrucchanvit?id=" + getParameterByName("Ship_ID"),
                 dataType: "json",
                 beforeSend: function () { // Before we send the request, remove the .hidden class from the spinner and default to inline-block.
-                       $('#loader').removeClass('hidden');
+                    $('#loader').removeClass('hidden');
                 },
                 success: function (data) {
                     var tabletext = "<thead><tr><th rowspan='2'>STT</th><th colspan='2'>TRỤC</th><th colspan='3'>CHÂN VỊT</th><th colspan='2'>Ổ ĐỠ</th><th rowspan='2'>TÁC VỤ</th></tr><tr><th>TỔNG CHIỀU DÀI</th><th>VẬT LIỆU</th><th>LOẠI VẬT LIỆU</th><th>ĐƯỜNG KÍNH (mm)</th><th>SỐ CÁNH</th><th>SỐ LƯỢNG</th><th>LOẠI</th></tr></thead><tbody>";
@@ -4896,7 +4972,7 @@
                     console.log('errorGET');
                 },
                 complete: function () { // Set our complete callback, adding the .hidden class and hiding the spinner.
-                       $('#loader').addClass('hidden');
+                    $('#loader').addClass('hidden');
                 },
             });
         };
@@ -5103,7 +5179,7 @@
                 url: linkapi + "v2/neoxichneo?id=" + getParameterByName("Ship_ID"),
                 dataType: "json",
                 beforeSend: function () { // Before we send the request, remove the .hidden class from the spinner and default to inline-block.
-                      $('#loader').removeClass('hidden');
+                    $('#loader').removeClass('hidden');
                 },
                 success: function (data) {
                     var tabletext = "<thead><tr><th rowspan='2'>STT</th><th colspan='3'>NEO PHẢI</th><th colspan='3'>NEO TRÁI</th><th colspan='3'>NEO SAU</th><th rowspan='2'>TÁC VỤ</th></tr><tr><th>KÝ HIỆU</th><th>ĐƯỜNG KÍNH</th><th>ĐỘ DÀI</th><th>KÝ HIỆU</th><th>ĐƯỜNG KÍNH</th><th>ĐỘ DÀI</th><th>KÝ HIỆU</th><th>ĐƯỜNG KÍNH</th><th>ĐỘ DÀI</th></tr></thead><tbody>";
@@ -5317,7 +5393,7 @@
                 url: linkapi + "v2/bomnuocthonggio?id=" + getParameterByName("Ship_ID"),
                 dataType: "json",
                 beforeSend: function () { // Before we send the request, remove the .hidden class from the spinner and default to inline-block.
-                     $('#loader').removeClass('hidden');
+                    $('#loader').removeClass('hidden');
                 },
                 success: function (data) {
                     var tabletext = "<thead><tr><th>STT</th><th>TÊN TRANG BỊ</th><th>KÝ HIỆU</th><th>NƯỚC SẢN XUẤT</th><th>LƯU LƯỢNG</th><th>SỐ LƯỢNG</th><th>TÁC VỤ</th></tr></thead><tbody>";
@@ -5334,7 +5410,7 @@
                     console.log('errorGET');
                 },
                 complete: function () { // Set our complete callback, adding the .hidden class and hiding the spinner.
-                     $('#loader').addClass('hidden');
+                    $('#loader').addClass('hidden');
                 },
             });
         };
@@ -5474,7 +5550,7 @@
                 url: linkapi + "v2/thietbikhac?id=" + getParameterByName("Ship_ID"),
                 dataType: "json",
                 beforeSend: function () { // Before we send the request, remove the .hidden class from the spinner and default to inline-block.
-                         $('#loader').removeClass('hidden');
+                    $('#loader').removeClass('hidden');
                 },
                 success: function (data) {
                     var tabletext = "<thead><tr><th>STT</th><th>TÊN TRANG THIẾT BỊ</th><th>KÝ HIỆU</th><th>SỐ LƯỢNG</th><th>TÁC VỤ</th></tr></thead><tbody>";
@@ -5491,7 +5567,7 @@
                     console.log('errorGET');
                 },
                 complete: function () { // Set our complete callback, adding the .hidden class and hiding the spinner.
-                      $('#loader').addClass('hidden');
+                    $('#loader').addClass('hidden');
                 },
             });
         };
@@ -5777,7 +5853,7 @@
                 url: linkapi + "v2/maynenkhi?id=" + getParameterByName("Ship_ID"),
                 dataType: "json",
                 beforeSend: function () { // Before we send the request, remove the .hidden class from the spinner and default to inline-block.
-                      $('#loader').removeClass('hidden');
+                    $('#loader').removeClass('hidden');
                 },
                 success: function (data) {
                     var tabletext = "<thead><tr><th>STT</th><th>KÝ HIỆU</th><th>SỐ LƯỢNG</th><th>ÁP SUẤT (Kg/cm3)</th><th>TÁC VỤ</th></tr></thead><tbody>";
@@ -5794,7 +5870,7 @@
                     console.log('errorGET');
                 },
                 complete: function () { // Set our complete callback, adding the .hidden class and hiding the spinner.
-                     $('#loader').addClass('hidden');
+                    $('#loader').addClass('hidden');
                 },
             });
         };
