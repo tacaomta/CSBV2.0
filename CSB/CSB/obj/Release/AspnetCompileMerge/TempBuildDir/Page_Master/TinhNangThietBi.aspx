@@ -752,7 +752,7 @@
                                             <div class="form-group row">
                                                 <label class="col-sm-5 col-form-label">Định mức sửa chữa (h): </label>
                                                 <div class="col-sm-7">
-                                                    <input type="number" step="any" id="add-MAYCHINH-THONGBAODINHMUC-DINHMUCSUACHUA" min="1" class="form-control">
+                                                    <input type="number" step="any" id="add-MAYCHINH-THONGBAODINHMUC-DINHMUCSUACHUA" required="required" min="1" class="form-control">
                                                 </div>
                                             </div>
                                         </div>
@@ -760,7 +760,7 @@
                                             <div class="form-group row">
                                                 <label class="col-sm-5 col-form-label">Định mức thông báo (h): </label>
                                                 <div class="col-sm-7">
-                                                    <input type="number" step="any" id="add-MAYCHINH-THONGBAODINHMUC-DINHMUCTHONGBAO" min="1" class="form-control">
+                                                    <input type="number" step="any" id="add-MAYCHINH-THONGBAODINHMUC-DINHMUCTHONGBAO" required="required" min="1" class="form-control">
                                                 </div>
                                             </div>
                                         </div>
@@ -1075,7 +1075,7 @@
                                             <div class="form-group row">
                                                 <label class="col-sm-5 col-form-label">Định mức sửa chữa (h): </label>
                                                 <div class="col-sm-7">
-                                                    <input type="number" step="any" id="edit-MAYCHINH-THONGBAODINHMUC-DINHMUCSUACHUA" min="1" class="form-control">
+                                                    <input type="number" step="any" id="edit-MAYCHINH-THONGBAODINHMUC-DINHMUCSUACHUA" required="required" min="1" class="form-control">
                                                 </div>
                                             </div>
                                         </div>
@@ -1083,7 +1083,7 @@
                                             <div class="form-group row">
                                                 <label class="col-sm-5 col-form-label">Định mức thông báo (h): </label>
                                                 <div class="col-sm-7">
-                                                    <input type="number" step="any" id="edit-MAYCHINH-THONGBAODINHMUC-DINHMUCTHONGBAO" min="1" class="form-control">
+                                                    <input type="number" step="any" id="edit-MAYCHINH-THONGBAODINHMUC-DINHMUCTHONGBAO" required="required" min="1" class="form-control">
                                                 </div>
                                             </div>
                                         </div>
@@ -1397,7 +1397,7 @@
                                             <div class="form-group row">
                                                 <label class="col-sm-5 col-form-label">Định mức sửa chữa (h): </label>
                                                 <div class="col-sm-7">
-                                                    <input type="number" step="any" id="add-MAYPHU-THONGBAODINHMUC-DINHMUCSUACHUA" min="1" class="form-control">
+                                                    <input type="number" step="any" id="add-MAYPHU-THONGBAODINHMUC-DINHMUCSUACHUA" required="required" min="1" class="form-control">
                                                 </div>
                                             </div>
                                         </div>
@@ -1405,7 +1405,7 @@
                                             <div class="form-group row">
                                                 <label class="col-sm-5 col-form-label">Định mức thông báo (h): </label>
                                                 <div class="col-sm-7">
-                                                    <input type="number" step="any" id="add-MAYPHU-THONGBAODINHMUC-DINHMUCTHONGBAO" min="1" class="form-control">
+                                                    <input type="number" step="any" id="add-MAYPHU-THONGBAODINHMUC-DINHMUCTHONGBAO" required="required" min="1" class="form-control">
                                                 </div>
                                             </div>
                                         </div>
@@ -1719,7 +1719,7 @@
                                             <div class="form-group row">
                                                 <label class="col-sm-5 col-form-label">Định mức sửa chữa (h): </label>
                                                 <div class="col-sm-7">
-                                                    <input type="number" step="any" id="edit-MAYPHU-THONGBAODINHMUC-DINHMUCSUACHUA" min="1" class="form-control">
+                                                    <input type="number" step="any" id="edit-MAYPHU-THONGBAODINHMUC-DINHMUCSUACHUA" required="required" min="1" class="form-control">
                                                 </div>
                                             </div>
                                         </div>
@@ -1727,7 +1727,7 @@
                                             <div class="form-group row">
                                                 <label class="col-sm-5 col-form-label">Định mức thông báo (h): </label>
                                                 <div class="col-sm-7">
-                                                    <input type="number" step="any" id="edit-MAYPHU-THONGBAODINHMUC-DINHMUCTHONGBAO" min="1" class="form-control">
+                                                    <input type="number" step="any" id="edit-MAYPHU-THONGBAODINHMUC-DINHMUCTHONGBAO" required="required"  min="1" class="form-control">
                                                 </div>
                                             </div>
                                         </div>
@@ -2041,7 +2041,7 @@
                                             <div class="form-group row">
                                                 <label class="col-sm-5 col-form-label">Định mức sửa chữa (h): </label>
                                                 <div class="col-sm-7">
-                                                    <input type="number" step="any" id="add-MAYCHUYENDUNG-THONGBAODINHMUC-DINHMUCSUACHUA" min="1" class="form-control">
+                                                    <input type="number" step="any" id="add-MAYCHUYENDUNG-THONGBAODINHMUC-DINHMUCSUACHUA" required="required" min="1" class="form-control">
                                                 </div>
                                             </div>
                                         </div>
@@ -2049,7 +2049,7 @@
                                             <div class="form-group row">
                                                 <label class="col-sm-5 col-form-label">Định mức thông báo (h): </label>
                                                 <div class="col-sm-7">
-                                                    <input type="number" step="any" id="add-MAYCHUYENDUNG-THONGBAODINHMUC-DINHMUCTHONGBAO" min="1" class="form-control">
+                                                    <input type="number" step="any" id="add-MAYCHUYENDUNG-THONGBAODINHMUC-DINHMUCTHONGBAO" required="required" min="1" class="form-control">
                                                 </div>
                                             </div>
                                         </div>
@@ -2363,7 +2363,7 @@
                                             <div class="form-group row">
                                                 <label class="col-sm-5 col-form-label">Định mức sửa chữa (h): </label>
                                                 <div class="col-sm-7">
-                                                    <input type="number" step="any" id="edit-MAYCHUYENDUNG-THONGBAODINHMUC-DINHMUCSUACHUA" min="1" class="form-control">
+                                                    <input type="number" step="any" id="edit-MAYCHUYENDUNG-THONGBAODINHMUC-DINHMUCSUACHUA" required="required" min="1" class="form-control">
                                                 </div>
                                             </div>
                                         </div>
@@ -2371,7 +2371,7 @@
                                             <div class="form-group row">
                                                 <label class="col-sm-5 col-form-label">Định mức thông báo (h): </label>
                                                 <div class="col-sm-7">
-                                                    <input type="number" step="any" id="edit-MAYCHUYENDUNG-THONGBAODINHMUC-DINHMUCTHONGBAO" min="1" class="form-control">
+                                                    <input type="number" step="any" id="edit-MAYCHUYENDUNG-THONGBAODINHMUC-DINHMUCTHONGBAO" required="required" min="1" class="form-control">
                                                 </div>
                                             </div>
                                         </div>
@@ -4007,7 +4007,7 @@
                 },
                 success: function (data) {
                     console.log(data);
-                    var tabletext = "<thead><tr><th>STT</th><th>KÝ HIỆU</th><th>Số hiệu</th><th>NĂM SẢN XUẤT</th><th>NƠI SẢN XUẤT</th><th>CÔNG SUẤT</th><th>HỆ THỐNG ĐIỀU KHIỂN</th><th>TÁC VỤ</th></tr></thead><tbody>";
+                    var tabletext = "<thead><tr><th>STT</th><th>KÝ HIỆU</th><th>Số hiệu</th><th>NĂM SẢN XUẤT</th><th>NƠI SẢN XUẤT</th><th>CÔNG SUẤT</th><th>HỆ THỐNG ĐIỀU KHIỂN</th><th>TÌNH TRẠNG HIỆN TẠI</th><th>TÁC VỤ</th></tr></thead><tbody>";
                     var i = 1;
                     $.each(data, function (key, item) {
                         tabletext += "<tr ";
@@ -4020,7 +4020,7 @@
                         else {
                             tabletext += 'style="background-color: #ffffff;"><td style="text-align: center;">' + i + '</td>';
                         }
-                        tabletext += "<td>" + item.THONGSOCOBAN.KYHIEU + "</td><td>" + item.THONGSOCOBAN.SOHIEUMAY + "</td><td style='text-align: center;'>" + item.THONGSOCOBAN.NAMSANXUAT + "</td><td>" + item.THONGSOCOBAN.NOISANXUAT + "</td><td>" + item.THONGSOCOBAN.CONGSUAT + "</td><td>" + item.THONGSOCOBAN.HETHONGDIEUKHIEN + '</td><td><div style="display: flex; justify-content: space-around;"><a href="#" class="edit" title="Sửa" data-toggle="modal" data-target="#model-edit-MAYCHINH"  onclick="onclick_edit_MAYCHINH(`' + item.ID + '`,`' + item.THONGSOCOBAN.KYHIEU + '`,`' + item.THONGSOCOBAN.NAMSANXUAT + '`,`' + item.THONGSOCOBAN.NOISANXUAT + '`,`' + item.THONGSOCOBAN.NAMLAPRAP + '`,`' + item.THONGSOCOBAN.VITRILAPRAP + '`,`' + item.THONGSOCOBAN.SOHIEUMAY + '`,`' + item.THONGSOCOBAN.CONGSUAT + '`,`' + item.THONGSOCOBAN.VONGQUAY + '`,`' + item.THONGSOCOBAN.CHIEUQUAY + '`,`' + item.THONGSOCOBAN.NGUONKHOIDONG + '`,`' + item.THONGSOCOBAN.HETHONGDIEUKHIEN + '`,`' + item.THONGSOCOBAN.TRONGLUONG + '`,`' + item.THONGSOCOBAN.KICHTHUOCMAY.DAI + '`,`' + item.THONGSOCOBAN.KICHTHUOCMAY.RONG + '`,`' + item.THONGSOCOBAN.KICHTHUOCMAY.CAO + '`,`' + item.THONGSOCOBAN.CHUKYSUACHUA.TIEUTU + '`,`' + item.THONGSOCOBAN.CHUKYSUACHUA.TRUNGTU + '`,`' + item.THONGSOCOBAN.CHUKYSUACHUA.DAITU + '`,`' + item.THONGSOCOBAN.LOAIDIEN.DIENAP + '`,`' + item.THONGSOCOBAN.LOAIDIEN.TANSO + '`,`' + item.PHUONGPHAPTRUYENTAI.KYHIEULYHOP_BOGIAMVONG + '`,`' + item.PHUONGPHAPTRUYENTAI.SOHIEULYHOP_BOGIAMVONG + '`,`' + item.PHUONGPHAPTRUYENTAI.TYSOTRUYEN + '`,`' + item.PHUONGPHAPTRUYENTAI.KHOPNOICUNG + '`,`' + item.PHUONGPHAPTRUYENTAI.KHOPNOIMEM + '`,`' + item.PHUONGPHAPTRUYENTAI.CUROA + '`,`' + item.PHUONGPHAPTRUYENTAI.KYHIEUVONGBI + '`,`' + item.THONGBAODINHMUC.SUACHUACUOICUNG + '`,`' + item.THONGBAODINHMUC.MUCCANHBAO + '`,`' + item.THONGBAODINHMUC.THOIGIANCONLAI + '`,`' + item.THONGBAODINHMUC.DINHMUCSUACHUA + '`,`' + item.THONGBAODINHMUC.DINHMUCTHONGBAO + '`,`' + item.TINHTRANGHIENTAI + '`)"><i class="material-icons">&#xE254;</i></a><a href="#" class="delete" title="Xóa" onclick="delete_MAYCHINH(`' + item.ID + '`)"><i class="material-icons">&#xE872;</i></a></div></td></tr>';
+                        tabletext += "<td>" + item.THONGSOCOBAN.KYHIEU + "</td><td>" + item.THONGSOCOBAN.SOHIEUMAY + "</td><td style='text-align: center;'>" + item.THONGSOCOBAN.NAMSANXUAT + "</td><td>" + item.THONGSOCOBAN.NOISANXUAT + "</td><td>" + item.THONGSOCOBAN.CONGSUAT + "</td><td>" + item.THONGSOCOBAN.HETHONGDIEUKHIEN + "</td><td>" + item.TINHTRANGHIENTAI + '</td><td><div style="display: flex; justify-content: space-around;"><a href="#" class="edit" title="Sửa" data-toggle="modal" data-target="#model-edit-MAYCHINH"  onclick="onclick_edit_MAYCHINH(`' + item.ID + '`,`' + item.THONGSOCOBAN.KYHIEU + '`,`' + item.THONGSOCOBAN.NAMSANXUAT + '`,`' + item.THONGSOCOBAN.NOISANXUAT + '`,`' + item.THONGSOCOBAN.NAMLAPRAP + '`,`' + item.THONGSOCOBAN.VITRILAPRAP + '`,`' + item.THONGSOCOBAN.SOHIEUMAY + '`,`' + item.THONGSOCOBAN.CONGSUAT + '`,`' + item.THONGSOCOBAN.VONGQUAY + '`,`' + item.THONGSOCOBAN.CHIEUQUAY + '`,`' + item.THONGSOCOBAN.NGUONKHOIDONG + '`,`' + item.THONGSOCOBAN.HETHONGDIEUKHIEN + '`,`' + item.THONGSOCOBAN.TRONGLUONG + '`,`' + item.THONGSOCOBAN.KICHTHUOCMAY.DAI + '`,`' + item.THONGSOCOBAN.KICHTHUOCMAY.RONG + '`,`' + item.THONGSOCOBAN.KICHTHUOCMAY.CAO + '`,`' + item.THONGSOCOBAN.CHUKYSUACHUA.TIEUTU + '`,`' + item.THONGSOCOBAN.CHUKYSUACHUA.TRUNGTU + '`,`' + item.THONGSOCOBAN.CHUKYSUACHUA.DAITU + '`,`' + item.THONGSOCOBAN.LOAIDIEN.DIENAP + '`,`' + item.THONGSOCOBAN.LOAIDIEN.TANSO + '`,`' + item.PHUONGPHAPTRUYENTAI.KYHIEULYHOP_BOGIAMVONG + '`,`' + item.PHUONGPHAPTRUYENTAI.SOHIEULYHOP_BOGIAMVONG + '`,`' + item.PHUONGPHAPTRUYENTAI.TYSOTRUYEN + '`,`' + item.PHUONGPHAPTRUYENTAI.KHOPNOICUNG + '`,`' + item.PHUONGPHAPTRUYENTAI.KHOPNOIMEM + '`,`' + item.PHUONGPHAPTRUYENTAI.CUROA + '`,`' + item.PHUONGPHAPTRUYENTAI.KYHIEUVONGBI + '`,`' + item.THONGBAODINHMUC.SUACHUACUOICUNG + '`,`' + item.THONGBAODINHMUC.MUCCANHBAO + '`,`' + item.THONGBAODINHMUC.THOIGIANCONLAI + '`,`' + item.THONGBAODINHMUC.DINHMUCSUACHUA + '`,`' + item.THONGBAODINHMUC.DINHMUCTHONGBAO + '`,`' + item.TINHTRANGHIENTAI + '`)"><i class="material-icons">&#xE254;</i></a><a href="#" class="delete" title="Xóa" onclick="delete_MAYCHINH(`' + item.ID + '`)"><i class="material-icons">&#xE872;</i></a></div></td></tr>';
                         i = i + 1;
                     });
                     tabletext += "</tbody>";
@@ -4050,6 +4050,7 @@
                         { name: 'NƠI SẢN XUẤT', width: 180 },
                         { name: 'CÔNG SUẤT', width: 180 },
                         { name: 'HỆ THỐNG ĐIỀU KHIỂN', width: 180 },
+                        { name: 'TÌNH TRẠNG HIỆN TẠI', width: 180 },
                         { name: 'TÁC VỤ', width: 80 },
                     ],
                     lengthChange: false,
@@ -4292,7 +4293,7 @@
                         },
                     });
                 }
-                else {
+                else{
                     alert("Định mức sửa chữa phải lớn hơn định mức thông báo!")
                 }
 
@@ -4326,7 +4327,7 @@
                     $('#loader').removeClass('hidden');
                 },
                 success: function (data) {
-                    var tabletext = "<thead><tr><th>STT</th><th>KÝ HIỆU</th><th>Số hiệu</th><th>NĂM SẢN XUẤT</th><th>NƠI SẢN XUẤT</th><th>CÔNG SUẤT</th><th>HỆ THỐNG ĐIỀU KHIỂN</th><th>TÁC VỤ</th></tr></thead><tbody>";
+                    var tabletext = "<thead><tr><th>STT</th><th>KÝ HIỆU</th><th>Số hiệu</th><th>NĂM SẢN XUẤT</th><th>NƠI SẢN XUẤT</th><th>CÔNG SUẤT</th><th>HỆ THỐNG ĐIỀU KHIỂN</th><th>TÌNH TRẠNG HIỆN TẠI</th><th>TÁC VỤ</th></tr></thead><tbody>";
                     var i = 1;
                     $.each(data, function (key, item) {
                         tabletext += "<tr ";
@@ -4339,7 +4340,7 @@
                         else {
                             tabletext += 'style="background-color: #ffffff;"><td style="text-align: center;">' + i + '</td>';
                         }
-                        tabletext += "<td>" + item.THONGSOCOBAN.KYHIEU + "</td><td>" + item.THONGSOCOBAN.SOHIEUMAY + "</td><td style='text-align: center;'>" + item.THONGSOCOBAN.NAMSANXUAT + "</td><td>" + item.THONGSOCOBAN.NOISANXUAT + "</td><td>" + item.THONGSOCOBAN.CONGSUAT + "</td><td>" + item.THONGSOCOBAN.HETHONGDIEUKHIEN + '</td><td><div style="display: flex; justify-content: space-around;"><a href="#" class="edit" title="Sửa" data-toggle="modal" data-target="#model-edit-MAYPHU"  onclick="onclick_edit_MAYPHU(`' + item.ID + '`,`' + item.THONGSOCOBAN.KYHIEU + '`,`' + item.THONGSOCOBAN.NAMSANXUAT + '`,`' + item.THONGSOCOBAN.NOISANXUAT + '`,`' + item.THONGSOCOBAN.NAMLAPRAP + '`,`' + item.THONGSOCOBAN.VITRILAPRAP + '`,`' + item.THONGSOCOBAN.SOHIEUMAY + '`,`' + item.THONGSOCOBAN.CONGSUAT + '`,`' + item.THONGSOCOBAN.VONGQUAY + '`,`' + item.THONGSOCOBAN.CHIEUQUAY + '`,`' + item.THONGSOCOBAN.NGUONKHOIDONG + '`,`' + item.THONGSOCOBAN.HETHONGDIEUKHIEN + '`,`' + item.THONGSOCOBAN.TRONGLUONG + '`,`' + item.THONGSOCOBAN.KICHTHUOCMAY.DAI + '`,`' + item.THONGSOCOBAN.KICHTHUOCMAY.RONG + '`,`' + item.THONGSOCOBAN.KICHTHUOCMAY.CAO + '`,`' + item.THONGSOCOBAN.CHUKYSUACHUA.TIEUTU + '`,`' + item.THONGSOCOBAN.CHUKYSUACHUA.TRUNGTU + '`,`' + item.THONGSOCOBAN.CHUKYSUACHUA.DAITU + '`,`' + item.THONGSOCOBAN.LOAIDIEN.DIENAP + '`,`' + item.THONGSOCOBAN.LOAIDIEN.TANSO + '`,`' + item.PHUONGPHAPTRUYENTAI.KYHIEULYHOP_BOGIAMVONG + '`,`' + item.PHUONGPHAPTRUYENTAI.SOHIEULYHOP_BOGIAMVONG + '`,`' + item.PHUONGPHAPTRUYENTAI.TYSOTRUYEN + '`,`' + item.PHUONGPHAPTRUYENTAI.KHOPNOICUNG + '`,`' + item.PHUONGPHAPTRUYENTAI.KHOPNOIMEM + '`,`' + item.PHUONGPHAPTRUYENTAI.CUROA + '`,`' + item.PHUONGPHAPTRUYENTAI.KYHIEUVONGBI + '`,`' + item.THONGBAODINHMUC.SUACHUACUOICUNG + '`,`' + item.THONGBAODINHMUC.MUCCANHBAO + '`,`' + item.THONGBAODINHMUC.THOIGIANCONLAI + '`,`' + item.THONGBAODINHMUC.DINHMUCSUACHUA + '`,`' + item.THONGBAODINHMUC.DINHMUCTHONGBAO + '`,`' + item.TINHTRANGHIENTAI + '`)"><i class="material-icons">&#xE254;</i></a><a href="#" class="delete" title="Xóa" onclick="delete_MAYCHINH(`' + item.ID + '`)"><i class="material-icons">&#xE872;</i></a></div></td></tr>';
+                        tabletext += "<td>" + item.THONGSOCOBAN.KYHIEU + "</td><td>" + item.THONGSOCOBAN.SOHIEUMAY + "</td><td style='text-align: center;'>" + item.THONGSOCOBAN.NAMSANXUAT + "</td><td>" + item.THONGSOCOBAN.NOISANXUAT + "</td><td>" + item.THONGSOCOBAN.CONGSUAT + "</td><td>" + item.THONGSOCOBAN.HETHONGDIEUKHIEN + "</td><td>" + item.TINHTRANGHIENTAI + '</td><td><div style="display: flex; justify-content: space-around;"><a href="#" class="edit" title="Sửa" data-toggle="modal" data-target="#model-edit-MAYPHU"  onclick="onclick_edit_MAYPHU(`' + item.ID + '`,`' + item.THONGSOCOBAN.KYHIEU + '`,`' + item.THONGSOCOBAN.NAMSANXUAT + '`,`' + item.THONGSOCOBAN.NOISANXUAT + '`,`' + item.THONGSOCOBAN.NAMLAPRAP + '`,`' + item.THONGSOCOBAN.VITRILAPRAP + '`,`' + item.THONGSOCOBAN.SOHIEUMAY + '`,`' + item.THONGSOCOBAN.CONGSUAT + '`,`' + item.THONGSOCOBAN.VONGQUAY + '`,`' + item.THONGSOCOBAN.CHIEUQUAY + '`,`' + item.THONGSOCOBAN.NGUONKHOIDONG + '`,`' + item.THONGSOCOBAN.HETHONGDIEUKHIEN + '`,`' + item.THONGSOCOBAN.TRONGLUONG + '`,`' + item.THONGSOCOBAN.KICHTHUOCMAY.DAI + '`,`' + item.THONGSOCOBAN.KICHTHUOCMAY.RONG + '`,`' + item.THONGSOCOBAN.KICHTHUOCMAY.CAO + '`,`' + item.THONGSOCOBAN.CHUKYSUACHUA.TIEUTU + '`,`' + item.THONGSOCOBAN.CHUKYSUACHUA.TRUNGTU + '`,`' + item.THONGSOCOBAN.CHUKYSUACHUA.DAITU + '`,`' + item.THONGSOCOBAN.LOAIDIEN.DIENAP + '`,`' + item.THONGSOCOBAN.LOAIDIEN.TANSO + '`,`' + item.PHUONGPHAPTRUYENTAI.KYHIEULYHOP_BOGIAMVONG + '`,`' + item.PHUONGPHAPTRUYENTAI.SOHIEULYHOP_BOGIAMVONG + '`,`' + item.PHUONGPHAPTRUYENTAI.TYSOTRUYEN + '`,`' + item.PHUONGPHAPTRUYENTAI.KHOPNOICUNG + '`,`' + item.PHUONGPHAPTRUYENTAI.KHOPNOIMEM + '`,`' + item.PHUONGPHAPTRUYENTAI.CUROA + '`,`' + item.PHUONGPHAPTRUYENTAI.KYHIEUVONGBI + '`,`' + item.THONGBAODINHMUC.SUACHUACUOICUNG + '`,`' + item.THONGBAODINHMUC.MUCCANHBAO + '`,`' + item.THONGBAODINHMUC.THOIGIANCONLAI + '`,`' + item.THONGBAODINHMUC.DINHMUCSUACHUA + '`,`' + item.THONGBAODINHMUC.DINHMUCTHONGBAO + '`,`' + item.TINHTRANGHIENTAI + '`)"><i class="material-icons">&#xE254;</i></a><a href="#" class="delete" title="Xóa" onclick="delete_MAYCHINH(`' + item.ID + '`)"><i class="material-icons">&#xE872;</i></a></div></td></tr>';
                         i = i + 1;
                     });
                     tabletext += "</tbody>";
@@ -4362,13 +4363,14 @@
                     stateSave: true,
                     "columns": [
                         { name: 'STT', width: 60 },
-                        { name: 'KÝ HIỆU', width: 160 },
-                        { name: 'Số hiệu', width: 160 },
+                        { name: 'KÝ HIỆU', width: 180 },
+                        { name: 'Số hiệu', width: 180 },
                         { name: 'NĂM SẢN XUẤT', width: 180 },
                         { name: 'NƠI SẢN XUẤT', width: 180 },
-                        { name: 'CÔNG SUẤT', width: 140 },
-                        { name: 'HỆ THỐNG ĐIỀU KHIỂN', width: 240 },
-                        { name: 'TÁC VỤ', width: 60 },
+                        { name: 'CÔNG SUẤT', width: 180 },
+                        { name: 'HỆ THỐNG ĐIỀU KHIỂN', width: 180 },
+                        { name: 'TÌNH TRẠNG HIỆN TẠI', width: 180 },
+                        { name: 'TÁC VỤ', width: 80 },
                     ],
                     lengthChange: false,
                     "language": {
@@ -4642,7 +4644,7 @@
                 },
                 success: function (data) {
                     console.log(data);
-                    var tabletext = "<thead><tr><th>STT</th><th>KÝ HIỆU</th><th>Số hiệu</th><th>NĂM SẢN XUẤT</th><th>NƠI SẢN XUẤT</th><th>CÔNG SUẤT</th><th>HỆ THỐNG ĐIỀU KHIỂN</th><th>TÁC VỤ</th></tr></thead><tbody>";
+                    var tabletext = "<thead><tr><th>STT</th><th>KÝ HIỆU</th><th>Số hiệu</th><th>NĂM SẢN XUẤT</th><th>NƠI SẢN XUẤT</th><th>CÔNG SUẤT</th><th>HỆ THỐNG ĐIỀU KHIỂN</th><th>TÌNH TRẠNG HIỆN TẠI</th><th>TÁC VỤ</th></tr></thead><tbody>";
                     var i = 1;
                     $.each(data, function (key, item) {
                         tabletext += "<tr ";
@@ -4655,7 +4657,7 @@
                         else {
                             tabletext += 'style="background-color: #ffffff;"><td style="text-align: center;">' + i + '</td>';
                         }
-                        tabletext += "<td>" + item.THONGSOCOBAN.KYHIEU + "</td><td>" + item.THONGSOCOBAN.SOHIEUMAY + "</td><td style='text-align: center;'>" + item.THONGSOCOBAN.NAMSANXUAT + "</td><td>" + item.THONGSOCOBAN.NOISANXUAT + "</td><td>" + item.THONGSOCOBAN.CONGSUAT + "</td><td>" + item.THONGSOCOBAN.HETHONGDIEUKHIEN + '</td><td><div style="display: flex; justify-content: space-around;"><a href="#" class="edit" title="Sửa" data-toggle="modal" data-target="#model-edit-MAYCHUYENDUNG"  onclick="onclick_edit_MAYCHUYENDUNG(`' + item.ID + '`,`' + item.THONGSOCOBAN.KYHIEU + '`,`' + item.THONGSOCOBAN.NAMSANXUAT + '`,`' + item.THONGSOCOBAN.NOISANXUAT + '`,`' + item.THONGSOCOBAN.NAMLAPRAP + '`,`' + item.THONGSOCOBAN.VITRILAPRAP + '`,`' + item.THONGSOCOBAN.SOHIEUMAY + '`,`' + item.THONGSOCOBAN.CONGSUAT + '`,`' + item.THONGSOCOBAN.VONGQUAY + '`,`' + item.THONGSOCOBAN.CHIEUQUAY + '`,`' + item.THONGSOCOBAN.NGUONKHOIDONG + '`,`' + item.THONGSOCOBAN.HETHONGDIEUKHIEN + '`,`' + item.THONGSOCOBAN.TRONGLUONG + '`,`' + item.THONGSOCOBAN.KICHTHUOCMAY.DAI + '`,`' + item.THONGSOCOBAN.KICHTHUOCMAY.RONG + '`,`' + item.THONGSOCOBAN.KICHTHUOCMAY.CAO + '`,`' + item.THONGSOCOBAN.CHUKYSUACHUA.TIEUTU + '`,`' + item.THONGSOCOBAN.CHUKYSUACHUA.TRUNGTU + '`,`' + item.THONGSOCOBAN.CHUKYSUACHUA.DAITU + '`,`' + item.THONGSOCOBAN.LOAIDIEN.DIENAP + '`,`' + item.THONGSOCOBAN.LOAIDIEN.TANSO + '`,`' + item.PHUONGPHAPTRUYENTAI.KYHIEULYHOP_BOGIAMVONG + '`,`' + item.PHUONGPHAPTRUYENTAI.SOHIEULYHOP_BOGIAMVONG + '`,`' + item.PHUONGPHAPTRUYENTAI.TYSOTRUYEN + '`,`' + item.PHUONGPHAPTRUYENTAI.KHOPNOICUNG + '`,`' + item.PHUONGPHAPTRUYENTAI.KHOPNOIMEM + '`,`' + item.PHUONGPHAPTRUYENTAI.CUROA + '`,`' + item.PHUONGPHAPTRUYENTAI.KYHIEUVONGBI + '`,`' + item.THONGBAODINHMUC.SUACHUACUOICUNG + '`,`' + item.THONGBAODINHMUC.MUCCANHBAO + '`,`' + item.THONGBAODINHMUC.THOIGIANCONLAI + '`,`' + item.THONGBAODINHMUC.DINHMUCSUACHUA + '`,`' + item.THONGBAODINHMUC.DINHMUCTHONGBAO + '`,`' + item.TINHTRANGHIENTAI + '`)"><i class="material-icons">&#xE254;</i></a><a href="#" class="delete" title="Xóa" onclick="delete_MAYCHINH(`' + item.ID + '`)"><i class="material-icons">&#xE872;</i></a></div></td></tr>';
+                        tabletext += "<td>" + item.THONGSOCOBAN.KYHIEU + "</td><td>" + item.THONGSOCOBAN.SOHIEUMAY + "</td><td style='text-align: center;'>" + item.THONGSOCOBAN.NAMSANXUAT + "</td><td>" + item.THONGSOCOBAN.NOISANXUAT + "</td><td>" + item.THONGSOCOBAN.CONGSUAT + "</td><td>" + item.THONGSOCOBAN.HETHONGDIEUKHIEN + "</td><td>" + item.TINHTRANGHIENTAI+ '</td><td><div style="display: flex; justify-content: space-around;"><a href="#" class="edit" title="Sửa" data-toggle="modal" data-target="#model-edit-MAYCHUYENDUNG"  onclick="onclick_edit_MAYCHUYENDUNG(`' + item.ID + '`,`' + item.THONGSOCOBAN.KYHIEU + '`,`' + item.THONGSOCOBAN.NAMSANXUAT + '`,`' + item.THONGSOCOBAN.NOISANXUAT + '`,`' + item.THONGSOCOBAN.NAMLAPRAP + '`,`' + item.THONGSOCOBAN.VITRILAPRAP + '`,`' + item.THONGSOCOBAN.SOHIEUMAY + '`,`' + item.THONGSOCOBAN.CONGSUAT + '`,`' + item.THONGSOCOBAN.VONGQUAY + '`,`' + item.THONGSOCOBAN.CHIEUQUAY + '`,`' + item.THONGSOCOBAN.NGUONKHOIDONG + '`,`' + item.THONGSOCOBAN.HETHONGDIEUKHIEN + '`,`' + item.THONGSOCOBAN.TRONGLUONG + '`,`' + item.THONGSOCOBAN.KICHTHUOCMAY.DAI + '`,`' + item.THONGSOCOBAN.KICHTHUOCMAY.RONG + '`,`' + item.THONGSOCOBAN.KICHTHUOCMAY.CAO + '`,`' + item.THONGSOCOBAN.CHUKYSUACHUA.TIEUTU + '`,`' + item.THONGSOCOBAN.CHUKYSUACHUA.TRUNGTU + '`,`' + item.THONGSOCOBAN.CHUKYSUACHUA.DAITU + '`,`' + item.THONGSOCOBAN.LOAIDIEN.DIENAP + '`,`' + item.THONGSOCOBAN.LOAIDIEN.TANSO + '`,`' + item.PHUONGPHAPTRUYENTAI.KYHIEULYHOP_BOGIAMVONG + '`,`' + item.PHUONGPHAPTRUYENTAI.SOHIEULYHOP_BOGIAMVONG + '`,`' + item.PHUONGPHAPTRUYENTAI.TYSOTRUYEN + '`,`' + item.PHUONGPHAPTRUYENTAI.KHOPNOICUNG + '`,`' + item.PHUONGPHAPTRUYENTAI.KHOPNOIMEM + '`,`' + item.PHUONGPHAPTRUYENTAI.CUROA + '`,`' + item.PHUONGPHAPTRUYENTAI.KYHIEUVONGBI + '`,`' + item.THONGBAODINHMUC.SUACHUACUOICUNG + '`,`' + item.THONGBAODINHMUC.MUCCANHBAO + '`,`' + item.THONGBAODINHMUC.THOIGIANCONLAI + '`,`' + item.THONGBAODINHMUC.DINHMUCSUACHUA + '`,`' + item.THONGBAODINHMUC.DINHMUCTHONGBAO + '`,`' + item.TINHTRANGHIENTAI + '`)"><i class="material-icons">&#xE254;</i></a><a href="#" class="delete" title="Xóa" onclick="delete_MAYCHINH(`' + item.ID + '`)"><i class="material-icons">&#xE872;</i></a></div></td></tr>';
                         i = i + 1;
                     });
                     tabletext += "</tbody>";
@@ -4678,13 +4680,14 @@
                     stateSave: true,
                     "columns": [
                         { name: 'STT', width: 60 },
-                        { name: 'KÝ HIỆU', width: 160 },
-                        { name: 'Số hiệu', width: 160 },
+                        { name: 'KÝ HIỆU', width: 180 },
+                        { name: 'Số hiệu', width: 180 },
                         { name: 'NĂM SẢN XUẤT', width: 180 },
                         { name: 'NƠI SẢN XUẤT', width: 180 },
-                        { name: 'CÔNG SUẤT', width: 140 },
-                        { name: 'HỆ THỐNG ĐIỀU KHIỂN', width: 240 },
-                        { name: 'TÁC VỤ', width: 60 },
+                        { name: 'CÔNG SUẤT', width: 180 },
+                        { name: 'HỆ THỐNG ĐIỀU KHIỂN', width: 180 },
+                        { name: 'TÌNH TRẠNG HIỆN TẠI', width: 180 },
+                        { name: 'TÁC VỤ', width: 80 },
                     ],
                     lengthChange: false,
                     "language": {
