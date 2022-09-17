@@ -2415,7 +2415,7 @@
                                             <div class="form-group row">
                                                 <label class="col-sm-2 col-form-label">Tình trạng hiện tại: </label>
                                                 <div class="col-sm-10">
-                                                     <textarea type="text" id="edit-MAYCHUYENDUNG-TINHTRANGHIENTAII"  class="form-control"></textarea>
+                                                     <textarea type="text" id="edit-MAYCHUYENDUNG-TINHTRANGHIENTAI"  class="form-control"></textarea>
                                                 </div>
                                             </div>
                                         </div>
@@ -4933,6 +4933,7 @@
                         },
                         TINHTRANGHIENTAI: $("#edit-MAYCHUYENDUNG-TINHTRANGHIENTAI").val(),
                     };
+                    console.log(MAYCHUYENDUNG);
                     $.ajax({
                         type: "PUT",
                         url: linkapi + "v2/update_maychuyendung?id=" + MAYCHUYENDUNG.ID,
