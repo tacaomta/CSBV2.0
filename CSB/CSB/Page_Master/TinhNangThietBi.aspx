@@ -701,26 +701,28 @@
                                         </div>
                                     </div>
                                     <div class="row">
-                                        <div class="col-sm-4">
+                                        <div class="col-sm-6">
                                             <div class="form-group row">
-                                                <label class="col-sm-5 col-form-label">Tỷ số truyền: </label>
-                                                <div class="col-sm-7">
+                                                <label class="col-sm-4 col-form-label">Tỷ số truyền: </label>
+                                                <div class="col-sm-8">
                                                     <input type="text" id="add-MAYCHINH-PHUONGPHAPTRUYENTAI-TYSOTRUYEN" class="form-control">
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-sm-4">
+                                        <div class="col-sm-6">
                                             <div class="form-group row">
-                                                <label class="col-sm-5 col-form-label">Khớp nối cứng: </label>
-                                                <div class="col-sm-7">
+                                                <label class="col-sm-4 col-form-label">Khớp nối cứng: </label>
+                                                <div class="col-sm-8">
                                                     <input type="text" id="add-MAYCHINH-PHUONGPHAPTRUYENTAI-KHOPNOICUNG" class="form-control">
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-sm-4">
-                                            <div class="form-group row">
-                                                <label class="col-sm-5 col-form-label">Khớp nối mềm: </label>
-                                                <div class="col-sm-7">
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                             <div class="form-group row">
+                                                <label class="col-sm-4 col-form-label">Khớp nối mềm: </label>
+                                                <div class="col-sm-8">
                                                     <input type="text" id="add-MAYCHINH-PHUONGPHAPTRUYENTAI-KHOPNOIMEM" class="form-control">
                                                 </div>
                                             </div>
@@ -777,11 +779,11 @@
                                         </div>--%>
                                     <h4 class="sub-title">Tình trạng hiện tại</h4>
                                     <div class="row">
-                                        <div class="col-sm-6">
+                                        <div class="col-sm-12">
                                             <div class="form-group row">
-                                                <label class="col-sm-5 col-form-label">Tình trạng hiện tại: </label>
-                                                <div class="col-sm-7">
-                                                    <input type="text" id="add-MAYCHINH-TINHTRANGHIENTAI"  class="form-control">
+                                                <label class="col-sm-2 col-form-label">Tình trạng hiện tại: </label>
+                                                <div class="col-sm-10">
+                                                    <textarea type="text" id="add-MAYCHINH-TINHTRANGHIENTAI"  class="form-control"></textarea>
                                                 </div>
                                             </div>
                                         </div>
@@ -1024,31 +1026,41 @@
                                         </div>
                                     </div>
                                     <div class="row">
-                                        <div class="col-sm-4">
+                                        <div class="col-sm-6">
                                             <div class="form-group row">
-                                                <label class="col-sm-5 col-form-label">Tỷ số truyền: </label>
-                                                <div class="col-sm-7">
+                                                <label class="col-sm-4 col-form-label">Tỷ số truyền: </label>
+                                                <div class="col-sm-8">
                                                     <input type="text" id="edit-MAYCHINH-PHUONGPHAPTRUYENTAI-TYSOTRUYEN" class="form-control">
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-sm-4">
+                                        <div class="col-sm-6">
                                             <div class="form-group row">
-                                                <label class="col-sm-5 col-form-label">Khớp nối cứng: </label>
-                                                <div class="col-sm-7">
+                                                <label class="col-sm-4 col-form-label">Khớp nối cứng: </label>
+                                                <div class="col-sm-8">
                                                     <input type="text" id="edit-MAYCHINH-PHUONGPHAPTRUYENTAI-KHOPNOICUNG" class="form-control">
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-sm-4">
+          <%--                              <div class="col-sm-4">
                                             <div class="form-group row">
                                                 <label class="col-sm-5 col-form-label">Khớp nối mềm: </label>
                                                 <div class="col-sm-7">
                                                     <input type="text" id="edit-MAYCHINH-PHUONGPHAPTRUYENTAI-KHOPNOIMEM" class="form-control">
                                                 </div>
                                             </div>
-                                        </div>
+                                        </div>--%>
 
+                                    </div>
+                                     <div class="row">
+                                        <div class="col-sm-6">
+                                            <div class="form-group row">
+                                                <label class="col-sm-4 col-form-label">Khớp nối mềm: </label>
+                                                <div class="col-sm-8">
+                                                    <input type="text" id="edit-MAYCHINH-PHUONGPHAPTRUYENTAI-KHOPNOIMEM" class="form-control">
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                     <h4 class="sub-title">Thông báo định mức</h4>
                                     <div class="row">
@@ -1100,11 +1112,11 @@
                                     </div>
                                     <h4 class="sub-title">Tình trạng hiện tại</h4>
                                     <div class="row">
-                                        <div class="col-sm-6">
+                                        <div class="col-sm-12">
                                             <div class="form-group row">
-                                                <label class="col-sm-5 col-form-label">Tình trạng hiện tại: </label>
-                                                <div class="col-sm-7">
-                                                    <input type="text" id="edit-MAYCHINH-TINHTRANGHIENTAI"  class="form-control">
+                                                <label class="col-sm-2 col-form-label">Tình trạng hiện tại: </label>
+                                                <div class="col-sm-10">
+                                                     <textarea type="text" id="edit-MAYCHINH-TINHTRANGHIENTAI"  class="form-control"></textarea>
                                                 </div>
                                             </div>
                                         </div>
@@ -1346,26 +1358,28 @@
                                         </div>
                                     </div>
                                     <div class="row">
-                                        <div class="col-sm-4">
+                                        <div class="col-sm-6">
                                             <div class="form-group row">
-                                                <label class="col-sm-5 col-form-label">Tỷ số truyền: </label>
-                                                <div class="col-sm-7">
+                                                <label class="col-sm-4 col-form-label">Tỷ số truyền: </label>
+                                                <div class="col-sm-8">
                                                     <input type="text" id="add-MAYPHU-PHUONGPHAPTRUYENTAI-TYSOTRUYEN" class="form-control">
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-sm-4">
+                                        <div class="col-sm-6">
                                             <div class="form-group row">
-                                                <label class="col-sm-5 col-form-label">Khớp nối cứng: </label>
-                                                <div class="col-sm-7">
+                                                <label class="col-sm-4 col-form-label">Khớp nối cứng: </label>
+                                                <div class="col-sm-8">
                                                     <input type="text" id="add-MAYPHU-PHUONGPHAPTRUYENTAI-KHOPNOICUNG" class="form-control">
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-sm-4">
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-6">
                                             <div class="form-group row">
-                                                <label class="col-sm-5 col-form-label">Khớp nối mềm: </label>
-                                                <div class="col-sm-7">
+                                                <label class="col-sm-4 col-form-label">Khớp nối mềm: </label>
+                                                <div class="col-sm-8">
                                                     <input type="text" id="add-MAYPHU-PHUONGPHAPTRUYENTAI-KHOPNOIMEM" class="form-control">
                                                 </div>
                                             </div>
@@ -1422,11 +1436,11 @@
                                         </div>--%>
                                     <h4 class="sub-title">Tình trạng hiện tại</h4>
                                     <div class="row">
-                                        <div class="col-sm-6">
+                                        <div class="col-sm-12">
                                             <div class="form-group row">
-                                                <label class="col-sm-5 col-form-label">Tình trạng hiện tại: </label>
-                                                <div class="col-sm-7">
-                                                    <input type="text" id="add-MAYPHU-TINHTRANGHIENTAI"  class="form-control">
+                                                <label class="col-sm-2 col-form-label">Tình trạng hiện tại: </label>
+                                                <div class="col-sm-10">
+                                                      <textarea type="text" id="add-MAYPHU-TINHTRANGHIENTAI"  class="form-control"></textarea>
                                                 </div>
                                             </div>
                                         </div>
@@ -1669,26 +1683,29 @@
                                         </div>
                                     </div>
                                     <div class="row">
-                                        <div class="col-sm-4">
+                                        <div class="col-sm-6">
                                             <div class="form-group row">
-                                                <label class="col-sm-5 col-form-label">Tỷ số truyền: </label>
-                                                <div class="col-sm-7">
+                                                <label class="col-sm-4 col-form-label">Tỷ số truyền: </label>
+                                                <div class="col-sm-8">
                                                     <input type="text" id="edit-MAYPHU-PHUONGPHAPTRUYENTAI-TYSOTRUYEN" class="form-control">
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-sm-4">
+                                        <div class="col-sm-6">
                                             <div class="form-group row">
-                                                <label class="col-sm-5 col-form-label">Khớp nối cứng: </label>
-                                                <div class="col-sm-7">
+                                                <label class="col-sm-4 col-form-label">Khớp nối cứng: </label>
+                                                <div class="col-sm-8">
                                                     <input type="text" id="edit-MAYPHU-PHUONGPHAPTRUYENTAI-KHOPNOICUNG" class="form-control">
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-sm-4">
+                                       
+                                    </div>
+                                    <div class="row">
+                                         <div class="col-sm-6">
                                             <div class="form-group row">
-                                                <label class="col-sm-5 col-form-label">Khớp nối mềm: </label>
-                                                <div class="col-sm-7">
+                                                <label class="col-sm-4 col-form-label">Khớp nối mềm: </label>
+                                                <div class="col-sm-8">
                                                     <input type="text" id="edit-MAYPHU-PHUONGPHAPTRUYENTAI-KHOPNOIMEM" class="form-control">
                                                 </div>
                                             </div>
@@ -1744,11 +1761,11 @@
                                     </div>
                                     <h4 class="sub-title">Tình trạng hiện tại</h4>
                                     <div class="row">
-                                        <div class="col-sm-6">
+                                        <div class="col-sm-12">
                                             <div class="form-group row">
-                                                <label class="col-sm-5 col-form-label">Tình trạng hiện tại: </label>
-                                                <div class="col-sm-7">
-                                                    <input type="text" id="edit-MAYPHU-TINHTRANGHIENTAI" class="form-control">
+                                                <label class="col-sm-2 col-form-label">Tình trạng hiện tại: </label>
+                                                <div class="col-sm-10">
+                                                     <textarea type="text" id="edit-MAYPHU-TINHTRANGHIENTAI"  class="form-control"></textarea>
                                                 </div>
                                             </div>
                                         </div>
@@ -1990,26 +2007,29 @@
                                         </div>
                                     </div>
                                     <div class="row">
-                                        <div class="col-sm-4">
+                                        <div class="col-sm-6">
                                             <div class="form-group row">
-                                                <label class="col-sm-5 col-form-label">Tỷ số truyền: </label>
-                                                <div class="col-sm-7">
+                                                <label class="col-sm-4 col-form-label">Tỷ số truyền: </label>
+                                                <div class="col-sm-8">
                                                     <input type="text" id="add-MAYCHUYENDUNG-PHUONGPHAPTRUYENTAI-TYSOTRUYEN" class="form-control">
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-sm-4">
+                                        <div class="col-sm-6">
                                             <div class="form-group row">
-                                                <label class="col-sm-5 col-form-label">Khớp nối cứng: </label>
-                                                <div class="col-sm-7">
+                                                <label class="col-sm-4 col-form-label">Khớp nối cứng: </label>
+                                                <div class="col-sm-8">
                                                     <input type="text" id="add-MAYCHUYENDUNG-PHUONGPHAPTRUYENTAI-KHOPNOICUNG" class="form-control">
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-sm-4">
+                                       
+                                    </div>
+                                    <div class="row">
+                                         <div class="col-sm-6">
                                             <div class="form-group row">
-                                                <label class="col-sm-5 col-form-label">Khớp nối mềm: </label>
-                                                <div class="col-sm-7">
+                                                <label class="col-sm-4 col-form-label">Khớp nối mềm: </label>
+                                                <div class="col-sm-8">
                                                     <input type="text" id="add-MAYCHUYENDUNG-PHUONGPHAPTRUYENTAI-KHOPNOIMEM" class="form-control">
                                                 </div>
                                             </div>
@@ -2066,11 +2086,11 @@
                                         </div>--%>
                                     <h4 class="sub-title">Tình trạng hiện tại</h4>
                                     <div class="row">
-                                        <div class="col-sm-6">
+                                        <div class="col-sm-12">
                                             <div class="form-group row">
-                                                <label class="col-sm-5 col-form-label">Tình trạng hiện tại: </label>
-                                                <div class="col-sm-7">
-                                                    <input type="text" id="add-MAYCHUYENDUNG-TINHTRANGHIENTAI"" class="form-control">
+                                                <label class="col-sm-2 col-form-label">Tình trạng hiện tại: </label>
+                                                <div class="col-sm-10">
+                                                     <textarea type="text" id="add-MAYCHUYENDUNG-TINHTRANGHIENTAI"  class="form-control"></textarea>
                                                 </div>
                                             </div>
                                         </div>
@@ -2313,26 +2333,29 @@
                                         </div>
                                     </div>
                                     <div class="row">
-                                        <div class="col-sm-4">
+                                        <div class="col-sm-6">
                                             <div class="form-group row">
-                                                <label class="col-sm-5 col-form-label">Tỷ số truyền: </label>
-                                                <div class="col-sm-7">
+                                                <label class="col-sm-4 col-form-label">Tỷ số truyền: </label>
+                                                <div class="col-sm-8">
                                                     <input type="text" id="edit-MAYCHUYENDUNG-PHUONGPHAPTRUYENTAI-TYSOTRUYEN" class="form-control">
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-sm-4">
+                                        <div class="col-sm-6">
                                             <div class="form-group row">
-                                                <label class="col-sm-5 col-form-label">Khớp nối cứng: </label>
-                                                <div class="col-sm-7">
+                                                <label class="col-sm-4 col-form-label">Khớp nối cứng: </label>
+                                                <div class="col-sm-8">
                                                     <input type="text" id="edit-MAYCHUYENDUNG-PHUONGPHAPTRUYENTAI-KHOPNOICUNG" class="form-control">
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-sm-4">
+                                        
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-6">
                                             <div class="form-group row">
-                                                <label class="col-sm-5 col-form-label">Khớp nối mềm: </label>
-                                                <div class="col-sm-7">
+                                                <label class="col-sm-4 col-form-label">Khớp nối mềm: </label>
+                                                <div class="col-sm-8">
                                                     <input type="text" id="edit-MAYCHUYENDUNG-PHUONGPHAPTRUYENTAI-KHOPNOIMEM" class="form-control">
                                                 </div>
                                             </div>
@@ -2388,11 +2411,11 @@
                                     </div>
                                     <h4 class="sub-title">Tình trạng hiện tại</h4>
                                     <div class="row">
-                                        <div class="col-sm-6">
+                                        <div class="col-sm-12">
                                             <div class="form-group row">
-                                                <label class="col-sm-5 col-form-label">Tình trạng hiện tại: </label>
-                                                <div class="col-sm-7">
-                                                    <input type="text" id="edit-MAYCHUYENDUNG-TINHTRANGHIENTAI" " class="form-control">
+                                                <label class="col-sm-2 col-form-label">Tình trạng hiện tại: </label>
+                                                <div class="col-sm-10">
+                                                     <textarea type="text" id="edit-MAYCHUYENDUNG-TINHTRANGHIENTAII"  class="form-control"></textarea>
                                                 </div>
                                             </div>
                                         </div>
