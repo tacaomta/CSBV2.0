@@ -1871,6 +1871,92 @@
             <param name="id"></param>
             <returns></returns>
         </member>
+        <member name="T:DHSLAPI.Controllers.SearchController">
+            <summary>
+            Tìm kiếm thông tin
+            </summary>
+        </member>
+        <member name="M:DHSLAPI.Controllers.SearchController.GetShipsbyKeywords(System.String)">
+            <summary>
+            Tìm kiếm thông tin tàu theo các trường thông tin của tàu:
+            * Số hiệu, ký hiệu, nơi sản xuất, năm hạ thuỷ, năm tiếp nhận
+            * chức năng, hải đội, hải đoàn và vùng cảnh sát biển
+            </summary>
+            <param name="keyword">từ khoá tìm kiếm</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.SearchController.TIMKIEMTHEOCANBOKT(System.String)">
+            <summary>
+            Tìm kiếm thông tin theo cán bộ kỹ thuật      
+            URL kiểm tra:
+            http://localhost:8082/api/v3/searchbycb?keyword=Ngô
+            </summary>
+            <param name="keyword">từ khoá tìm kiếm</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.SearchController.TIMKIEMTHEOHOSOTAU(System.String)">
+            <summary>
+            Tìm kiếm thông tin theo hồ sơ tàu
+            url test
+            http://localhost:8082/api/v3/searchbyhs?keyword=nga
+            </summary>
+            <param name="keyword">từ khoá tìm kiếm</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.SearchController.TIMKIEMTHEOTHONGTINHANGHAI(System.String)">
+            <summary>
+            Tìm kiếm thông tin theo thông tin hàng hải
+            url test
+            http://localhost:8082/api/v3/searchbyhanghai?keyword=hh01
+            </summary>
+            <param name="keyword">từ khoá tìm kiếm</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.SearchController.TIMKIEMTHEOTHONGTINHETRUC(System.String)">
+            <summary>
+            Tìm kiếm thông tin theo thông tin hệ trục chân vịt
+            url test
+            http://localhost:8082/api/v3/searchbyhtcv?keyword=thép
+            </summary>
+            <param name="keyword">từ khoá tìm kiếm</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.SearchController.TIMKIEMTHEOTHONGTINMAY(System.String)">
+            <summary>
+            Tìm kiếm thông tin theo thông tin thông tin máy
+            url test
+            http://localhost:8082/api/v3/searchbythongtinmay?keyword=liên xô
+            </summary>
+            <param name="keyword">từ khoá tìm kiếm</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.SearchController.TIMKIEMTHEOTHONGTINNEOXICHNEO(System.String)">
+            <summary>
+            Tìm kiếm thông tin theo thông tin neo, xích neo
+            url test
+            http://localhost:8082/api/v3/searchbythongtinneoxichneo?keyword=MSCE
+            </summary>
+            <param name="keyword">từ khoá tìm kiếm</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.SearchController.TIMKIEMTHEOTHONGTINRADA(System.String)">
+            <summary>
+            Tìm kiếm thông tin theo thông tin rada
+            url test
+            http://localhost:8082/api/v3/searchbythongtinrada?keyword=rd
+            </summary>
+            <param name="keyword">từ khoá tìm kiếm</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.SearchController.TIMKIEMTHEOTHONGTINTHANVO(System.String)">
+            <summary>
+            Tìm kiếm thông tin theo thông tin thân vỏ
+            url test
+            http://localhost:8082/api/v3/searchbythongtinthanvo?keyword=thép
+            </summary>
+            <param name="keyword">từ khoá tìm kiếm</param>
+            <returns></returns>
+        </member>
         <member name="T:DHSLAPI.Controllers.TAINANHUHONGController">
             <summary>
             ĐĂNG KÝ TAI NẠN, HƯ HỎNG
@@ -3641,6 +3727,111 @@
             ID của tàu
             </summary>
         </member>
+        <member name="T:DHSLAPI.Models.KQTIMKIEMTHEOCANBO">
+            <summary>
+            Kết quả trả về khi tìm kiếm theo thông tin cán bộ kỹ thuật
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.KQTIMKIEMTHEOCANBO.CB">
+            <summary>
+            Thông tin chi tiết cán bộ kỹ thuật
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.KQTIMKIEMTHEOCANBO.TAU">
+            <summary>
+            THông tin tàu được biên chế
+            </summary>
+        </member>
+        <member name="T:DHSLAPI.Models.KQTIMKIEMTHEOHANGHAI">
+            <summary>
+            Kết quả trả về khi tìm kiếm thông tin theo hàng hải
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.KQTIMKIEMTHEOHANGHAI.HH">
+            <summary>
+            Thông tin hàng hải
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.KQTIMKIEMTHEOHANGHAI.TAU">
+            <summary>
+            Thông tin tàu
+            </summary>
+        </member>
+        <member name="T:DHSLAPI.Models.KQTIMKIEMTHEOHETRUC">
+            <summary>
+            Kết quả tìm kiếm theo thông tin hệ trục
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.KQTIMKIEMTHEOHETRUC.HT">
+            <summary>
+            Thông tin hệ trục
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.KQTIMKIEMTHEOHETRUC.TAU">
+            <summary>
+            Thông tin tàu
+            </summary>
+        </member>
+        <member name="T:DHSLAPI.Models.KQTIMKIEMTHEOTHONGTINMAY">
+            <summary>
+            Kết quả tìm kiếm theo thông tin máy
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.KQTIMKIEMTHEOTHONGTINMAY.HTM">
+            <summary>
+            Thông tin máy
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.KQTIMKIEMTHEOTHONGTINMAY.TAU">
+            <summary>
+            Thông tin tàu
+            </summary>
+        </member>
+        <member name="T:DHSLAPI.Models.KQTIMKIEMTHEOTHONGTINNEOXICHNEO">
+            <summary>
+            Kết quả tìm kiếm theo neo, xích neo
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.KQTIMKIEMTHEOTHONGTINNEOXICHNEO.NXN">
+            <summary>
+            Thông tin NEO, xích neo
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.KQTIMKIEMTHEOTHONGTINNEOXICHNEO.TAU">
+            <summary>
+            Thông tin tàu
+            </summary>
+        </member>
+        <member name="T:DHSLAPI.Models.KQTIMKIEMTHEOTHONGTINRADA">
+            <summary>
+            Kết quả tìm kiếm theo thông tin rada
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.KQTIMKIEMTHEOTHONGTINRADA.RD">
+            <summary>
+            Thông tin rada
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.KQTIMKIEMTHEOTHONGTINRADA.TAU">
+            <summary>
+            Thông tin tàu
+            </summary>
+        </member>
+        <member name="T:DHSLAPI.Models.KQTIMKIEMTHEOTHONGTINTHANVO">
+            <summary>
+            Kết quả tìm kiếm theo thông tin thân vỏ
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.KQTIMKIEMTHEOTHONGTINTHANVO.TV">
+            <summary>
+            Thông tin thân vỏ
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.KQTIMKIEMTHEOTHONGTINTHANVO.TAU">
+            <summary>
+            Thông tin tàu
+            </summary>
+        </member>
         <member name="T:DHSLAPI.Models.TAINANHUHONG">
             <summary>
             Tai nạn hư hỏng
@@ -5242,6 +5433,13 @@
             <param name="loaitb">loại thiết bị: 1 - hàng hải, 2 - vũ khí
             3 - ra đa, 4 - các lại máy, 5 - hệ trục chân vịt, 6 - neo xích neo
             7 - bơm dầu, 8 - các thiết bị khác</param>
+            <returns></returns>
+        </member>
+        <member name="M:ShipyardInfo.classes.Connection.TIMKIEMTHEOCANBOKT(System.String)">
+            <summary>
+            Tìm kiếm thông tin theo cán bộ kỹ thuật tàu
+            </summary>
+            <param name="keyword"></param>
             <returns></returns>
         </member>
         <member name="P:ShipyardInfo.classes.Flotilla.Squadron">
