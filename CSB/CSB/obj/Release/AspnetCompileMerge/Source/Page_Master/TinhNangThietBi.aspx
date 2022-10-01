@@ -80,7 +80,7 @@
                         </div>
                         <div class="card-block">
                             <div class="">
-                                <div class="scroll" style="overflow-y: auto;">
+                                <div class="scroll">
                                     <ul class="nav nav-tabs" style="inline-size: max-content;">
                                         <li class="nav-item">
                                             <a class="nav-link" data-toggle="tab" onclick="loadDataList_HANGHAI()" id="tabHANGHAI" href="#HANGHAI">Hàng hải</a>
