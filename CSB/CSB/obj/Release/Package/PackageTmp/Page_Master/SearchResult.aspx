@@ -113,7 +113,8 @@
             .res-button:hover {
                 background-color: darkblue;
             }
-                .search-box {
+
+        .search-box {
             width: 86%;
             height: 50px;
             line-height: 30px;
@@ -121,9 +122,11 @@
             padding: 0 15px;
             border: none;
         }
+
             .search-box:focus {
                 outline: none;
             }
+
         .search-button {
             background-color: Highlight;
             border-radius: 15px;
@@ -131,8 +134,9 @@
             padding: 0 10px;
             border: none;
             text-decoration: none;
-            line-height: 50px;  
+            line-height: 50px;
         }
+
             .search-button:hover {
                 background-color: #4141b3;
                 text-decoration: none;
@@ -144,31 +148,46 @@
         <div class="left-result col-2">
             <p>Tìm kiếm theo</p>
             <label class="label-container" for="res-all">
-                All
+                Tất cả
               <input type="radio" checked="checked" id="res-all" value="res-all" name="radio1">
                 <span class="checkmark"></span>
             </label>
-            <label class="label-container" for="res-id">
-                ID tàu
-              <input type="radio" id="res-id" value="res-id" name="radio1">
+            <label class="label-container" for="res-canbo">
+                Cán bộ kỹ thuật
+              <input type="radio" id="res-canbo" value="res-canbo" name="radio1">
                 <span class="checkmark"></span>
             </label>
-            <label class="label-container" for="res-name">
-                Tên tàu
-              <input type="radio" id="res-name" value="res-name" name="radio1">
+            <label class="label-container" for="res-hosotau">
+                Hồ sơ tàu
+              <input type="radio" id="res-hosotau" value="res-hosotau" name="radio1">
                 <span class="checkmark"></span>
             </label>
-            <label class="label-container" for="res-cap">
-                Cán bộ
-              <input type="radio" id="res-cap" value="res-cb" name="radio1">
-                <span class="checkmark"></span>
-            </label>
-            <label class="label-container" for="res-year">
-                Năm hạ thủy
-              <input type="radio" id="res-year" value="res-year" name="radio1">
+            <label class="label-container" for="res-thongtinmay">
+                Thông tin máy
+              <input type="radio" id="res-thongtinmay" value="res-thongtinmay" name="radio1">
                 <span class="checkmark"></span>
             </label>
 
+            <label class="label-container" for="res-thongtinrada">
+                Thông tin rada
+              <input type="radio" id="res-thongtinrada" value="res-thongtinrada" name="radio1">
+                <span class="checkmark"></span>
+            </label>
+            <label class="label-container" for="res-thongtinhanghai">
+                Thông tin hàng hải
+              <input type="radio" id="res-thongtinhanghai" value="res-thongtinhanghai" name="radio1">
+                <span class="checkmark"></span>
+            </label>
+            <label class="label-container" for="res-thongtinthanvo">
+                Thông tin thân vỏ
+              <input type="radio" id="res-thongtinthanvo" value="res-thongtinthanvo" name="radio1">
+                <span class="checkmark"></span>
+            </label>
+            <label class="label-container" for="res-thongtinneo">
+                Thông tin neo, xích neo
+              <input type="radio" id="res-thongtinneo" value="res-thongtinneo" name="radio1">
+                <span class="checkmark"></span>
+            </label>
             <p>Lọc theo đơn vị</p>
             <label class="label-container" for="res-all-unit">
                 All
@@ -192,7 +211,7 @@
             </label>
         </div>
         <div class="center-result col-8 p-0">
-            <div class="row" style="padding: 18px 0px 0px 30px" >
+            <div class="row" style="padding: 18px 0px 0px 30px">
                 <input id="keyword_result" class="search-box" type="text" />
                 <a onclick="Search_Ship()" class="search-button ml-3">Tìm kiếm</a>
             </div>
@@ -205,7 +224,6 @@
             </div>
         </div>
         <div class="right-result col-2" style="border-left: 1px solid #d0d0d0">
-
         </div>
     </div>
     <script src="../Scripts/jquery-3.4.1.slim.min.js"></script>
@@ -248,6 +266,7 @@
                 alert('Bạn chưa nhập thông tin tìm kiếm!');
             }
             else {
+                history.pushState({}, "", "SearchResult?keyword=" + trimStr);
                 Result_Search(trimStr);
             }
 
@@ -259,14 +278,39 @@
                     type_search = checkbox[i].value;
                 }
             }
-            Result_Search(Keyword_Search);
+            var trimStr = $.trim($('#keyword_result').val());
+            if (trimStr == '') {
+                alert('Bạn chưa nhập thông tin tìm kiếm!');
+            }
+            else {
+                history.pushState({}, "", "SearchResult?keyword=" + trimStr);
+                Result_Search(trimStr);
+            }
         })
         function Result_Search(Keyword) {
             if (type_search == "res-all") {
-                LinkApi = linkapi + "v2/search?keyword=" + Keyword;
+                LinkApi = linkapi + "v3/search?keyword=" + Keyword;
             }
-            else if (type_search == "res-cb") {
+            else if (type_search == "res-canbo") {
                 LinkApi = linkapi + "v3/searchbycb?keyword=" + Keyword;
+            }
+            else if (type_search == "res-hosotau") {
+                LinkApi = linkapi + "v3/searchbyhs?keyword=" + Keyword;
+            }
+            else if (type_search == "res-thongtinmay") {
+                LinkApi = linkapi + "v3/searchbythongtinmay?keyword=" + Keyword;
+            }
+            else if (type_search == "res-thongtinrada") {
+                LinkApi = linkapi + "v3/searchbythongtinrada?keyword=" + Keyword;
+            }
+            else if (type_search == "res-thongtinhanghai") {
+                LinkApi = linkapi + "v3/searchbyhanghai?keyword=" + Keyword;
+            }
+            else if (type_search == "res-thongtinthanvo") {
+                LinkApi = linkapi + "v3/searchbythongtinthanvo?keyword=" + Keyword;
+            }
+            else if (type_search == "res-thongtinneo") {
+                LinkApi = linkapi + "v3/searchbythongtinneoxichneo?keyword=" + Keyword;
             }
             $.ajax({
                 type: "GET",
@@ -279,7 +323,7 @@
                 success: function (data) {
                     if (data == null) {
                         $("#result-message").html('Không tìm thấy kết quả phù hợp' + '<div class="blue-hr"></div>');
-                       
+
                     }
                     else {
                         var tabletext = '';
@@ -287,11 +331,27 @@
                         $.each(data, function (key, item) {
                             if (type_search == "res-all") {
                                 tabletext += '<div class="result-card"><p style="font-size: 30px; color: #2070cc; font-weight: bold;">Tàu CSB số hiệu: ' + item.TTCOBAN.SOHIEU + '</p><p>- Ký hiệu: ' + item.TTCOBAN.KYHIEU + '</p><p>- Nơi sản xuất: ' + item.TTCOBAN.NOISANXUAT + '</p><p>- Năm hạ thủy: ' + item.TTCOBAN.NAMHATHUY + '</p> <p>- Chức năng: ' + item.TTCOBAN.CHUCNANG + '</p><button class="res-button"  onclick="View_HoSoTau(`' + item.ID + '`)">Xem hồ sơ tàu</button></div>';
-
                             }
-                            else if (type_search == "res-cb") {
+                            else if (type_search == "res-canbo") {
                                 tabletext += '<div class="result-card"><p style="font-size: 30px; color: #2070cc; font-weight: bold;">Cán bộ: ' + item.CB.FullName + '</p><p>- Năm sinh: ' + item.CB.BirthYear + '</p><p>- Cấp bậc: ' + item.CB.Ranking.Name + '</p><p>- Chức vụ: ' + item.CB.Position.Name + '</p> <p>- Số hiệu tàu: ' + item.TAU.TTCOBAN.SOHIEU + '</p><button class="res-button"  onclick="View_HoSoTau(`' + item.TAU.ID + '`)">Xem hồ sơ tàu</button></div>';
-
+                            }
+                            else if (type_search == "res-hosotau") {
+                                tabletext += '<div class="result-card"><p style="font-size: 30px; color: #2070cc; font-weight: bold;">Tàu CSB số hiệu: ' + item.TTCOBAN.SOHIEU + '</p><p>- Ký hiệu: ' + item.TTCOBAN.KYHIEU + '</p><p>- Nơi sản xuất: ' + item.TTCOBAN.NOISANXUAT + '</p><p>- Năm hạ thủy: ' + item.TTCOBAN.NAMHATHUY + '</p> <p>- Chức năng: ' + item.TTCOBAN.CHUCNANG + '</p><button class="res-button"  onclick="View_HoSoTau(`' + item.ID + '`)">Xem hồ sơ tàu</button></div>';
+                            }
+                            else if (type_search == "res-thongtinmay") {
+                                tabletext += '<div class="result-card"><p style="font-size: 30px; color: #2070cc; font-weight: bold;">Ký hiệu máy: ' + item.HTM.THONGSOCOBAN.KYHIEU + '</p><p>- Số hiệu máy: ' + item.HTM.THONGSOCOBAN.SOHIEUMAY + '</p><p>- Năm sản xuất: ' + item.HTM.THONGSOCOBAN.NAMSANXUAT + '</p><p>- Công suất: ' + item.HTM.THONGSOCOBAN.CONGSUAT +' (Kw)' + '</p> <p>- Số hiệu tàu: ' + item.TAU.TTCOBAN.SOHIEU + '</p><button class="res-button"  onclick="View_HoSoTau(`' + item.TAU.ID + '`)">Xem hồ sơ tàu</button></div>';
+                            }
+                            else if (type_search == "res-thongtinrada") {
+                                tabletext += '<div class="result-card"><p style="font-size: 30px; color: #2070cc; font-weight: bold;">Ký hiệu rada: ' + item.RD.KYHIEU + '</p><p>- Số lượng: ' + item.RD.SOLUONG + '</p><p>- Số hiệu tàu: ' + item.TAU.TTCOBAN.SOHIEU + '</p><p>- ký hiệu tàu: ' + item.TAU.TTCOBAN.KYHIEU + '</p> <p>- Chức năng tàu: ' + item.TAU.TTCOBAN.CHUCNANG + '</p><button class="res-button"  onclick="View_HoSoTau(`' + item.TAU.ID + '`)">Xem hồ sơ tàu</button></div>';
+                            }
+                            else if (type_search == "res-thongtinhanghai") {
+                                tabletext += '<div class="result-card"><p style="font-size: 30px; color: #2070cc; font-weight: bold;">Ký hiệu hàng hải: ' + item.HH.KYHIEU + '</p><p>- Số lượng: ' + item.HH.SOLUONG + '</p><p>- Số hiệu tàu: ' + item.TAU.TTCOBAN.SOHIEU + '</p><p>- ký hiệu tàu: ' + item.TAU.TTCOBAN.KYHIEU + '</p> <p>- Chức năng tàu: ' + item.TAU.TTCOBAN.CHUCNANG + '</p><button class="res-button"  onclick="View_HoSoTau(`' + item.TAU.ID + '`)">Xem hồ sơ tàu</button></div>';
+                            }
+                            else if (type_search == "res-searchbythongtinthanvo") {
+                                tabletext += '<div class="result-card"><p style="font-size: 30px; color: #2070cc; font-weight: bold;">Ký hiệu vật liệu: ' + item.TV.KYHIEUVATLIEU + '</p><p>- Số khoang kín nước: ' + item.TV.SOKHOANGKINNUOC + '</p><p>- Số sườn tàu: ' + item.TV.SOSUONTAU + '</p><p>- Số két dàu cháy: ' + item.TV.SOKETDAUCHAY + '</p> <p>- Số hiệu tàu: ' + item.TAU.TTCOBAN.SOHIEU + '</p><button class="res-button"  onclick="View_HoSoTau(`' + item.TAU.ID + '`)">Xem hồ sơ tàu</button></div>';
+                            }
+                            else if (type_search == "res-thongtinneo") {
+                                tabletext += '<div class="result-card"><p style="font-size: 30px; color: #2070cc; font-weight: bold;">Tàu CSB số hiệu: ' + item.TAU.TTCOBAN.SOHIEU + '</p><p>- Ký hiệu neo phải: ' + item.NXN.NEOPHAI.KYHIEU + '</p><p>- Ký hiệu neo trái: ' + item.NXN.NEOTRAI.KYHIEU + '</p><p>- Ký hiệu neo sau: ' + item.NXN.NEOSAU.KYHIEU + '</p><button class="res-button"  onclick="View_HoSoTau(`' + item.TAU.ID + '`)">Xem hồ sơ tàu</button></div>';
                             }
                             i++;
                         });
