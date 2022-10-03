@@ -720,7 +720,7 @@
                                     </div>
                                     <div class="row">
                                         <div class="col-sm-6">
-                                             <div class="form-group row">
+                                            <div class="form-group row">
                                                 <label class="col-sm-4 col-form-label">Khớp nối mềm: </label>
                                                 <div class="col-sm-8">
                                                     <input type="text" id="add-MAYCHINH-PHUONGPHAPTRUYENTAI-KHOPNOIMEM" class="form-control">
@@ -767,23 +767,24 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <%-- <div class="row">
-                                            <div class="col-sm-6">
-                                                <div class="form-group row">
-                                                    <label class="col-sm-4 col-form-label">Thời gian còn lại (h): </label>
-                                                    <div class="col-sm-8">
-                                                        <input type="text" id="add-MAYCHINH-THONGBAODINHMUC-THOIGIANCONLAI" readonly="readonly" class="form-control">
-                                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <div class="form-group row">
+                                                <label class="col-sm-5 col-form-label">Loại cảnh báo: </label>
+                                                <div class="col-sm-7">
+                                                    <select class="form-control" id="add-MAYCHINH-THONGBAODINHMUC-LOAICANHBAO">
+                                                    </select>
                                                 </div>
                                             </div>
-                                        </div>--%>
+                                        </div>
+                                    </div>
                                     <h4 class="sub-title">Tình trạng hiện tại</h4>
                                     <div class="row">
                                         <div class="col-sm-12">
                                             <div class="form-group row">
                                                 <label class="col-sm-2 col-form-label">Tình trạng hiện tại: </label>
                                                 <div class="col-sm-10">
-                                                    <textarea type="text" id="add-MAYCHINH-TINHTRANGHIENTAI"  class="form-control"></textarea>
+                                                    <textarea type="text" id="add-MAYCHINH-TINHTRANGHIENTAI" class="form-control"></textarea>
                                                 </div>
                                             </div>
                                         </div>
@@ -1042,7 +1043,7 @@
                                                 </div>
                                             </div>
                                         </div>
-          <%--                              <div class="col-sm-4">
+                                        <%--                              <div class="col-sm-4">
                                             <div class="form-group row">
                                                 <label class="col-sm-5 col-form-label">Khớp nối mềm: </label>
                                                 <div class="col-sm-7">
@@ -1050,9 +1051,8 @@
                                                 </div>
                                             </div>
                                         </div>--%>
-
                                     </div>
-                                     <div class="row">
+                                    <div class="row">
                                         <div class="col-sm-6">
                                             <div class="form-group row">
                                                 <label class="col-sm-4 col-form-label">Khớp nối mềm: </label>
@@ -1109,6 +1109,16 @@
                                                 </div>
                                             </div>
                                         </div>
+                                        <div class="col-sm-6">
+                                            <div class="form-group row">
+                                                <label class="col-sm-5 col-form-label">Loại cảnh báo: </label>
+                                                <div class="col-sm-7">
+                                                    <select class="form-control" id="edit-MAYCHINH-THONGBAODINHMUC-LOAICANHBAO">
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+
                                     </div>
                                     <h4 class="sub-title">Tình trạng hiện tại</h4>
                                     <div class="row">
@@ -1116,7 +1126,7 @@
                                             <div class="form-group row">
                                                 <label class="col-sm-2 col-form-label">Tình trạng hiện tại: </label>
                                                 <div class="col-sm-10">
-                                                     <textarea type="text" id="edit-MAYCHINH-TINHTRANGHIENTAI"  class="form-control"></textarea>
+                                                    <textarea type="text" id="edit-MAYCHINH-TINHTRANGHIENTAI" class="form-control"></textarea>
                                                 </div>
                                             </div>
                                         </div>
@@ -1424,23 +1434,24 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <%--                                        <div class="row">
-                                            <div class="col-sm-6">
-                                                <div class="form-group row">
-                                                    <label class="col-sm-4 col-form-label">Thời gian còn lại (h): </label>
-                                                    <div class="col-sm-8">
-                                                        <input type="text" id="add-MAYPHU-THONGBAODINHMUC-THOIGIANCONLAI" readonly="readonly" class="form-control">
-                                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <div class="form-group row">
+                                                <label class="col-sm-5 col-form-label">Loại cảnh báo: </label>
+                                                <div class="col-sm-7">
+                                                    <select class="form-control" id="add-MAYPHU-THONGBAODINHMUC-LOAICANHBAO">
+                                                    </select>
                                                 </div>
                                             </div>
-                                        </div>--%>
+                                        </div>
+                                    </div>
                                     <h4 class="sub-title">Tình trạng hiện tại</h4>
                                     <div class="row">
                                         <div class="col-sm-12">
                                             <div class="form-group row">
                                                 <label class="col-sm-2 col-form-label">Tình trạng hiện tại: </label>
                                                 <div class="col-sm-10">
-                                                      <textarea type="text" id="add-MAYPHU-TINHTRANGHIENTAI"  class="form-control"></textarea>
+                                                    <textarea type="text" id="add-MAYPHU-TINHTRANGHIENTAI" class="form-control"></textarea>
                                                 </div>
                                             </div>
                                         </div>
@@ -1699,10 +1710,10 @@
                                                 </div>
                                             </div>
                                         </div>
-                                       
+
                                     </div>
                                     <div class="row">
-                                         <div class="col-sm-6">
+                                        <div class="col-sm-6">
                                             <div class="form-group row">
                                                 <label class="col-sm-4 col-form-label">Khớp nối mềm: </label>
                                                 <div class="col-sm-8">
@@ -1744,7 +1755,7 @@
                                             <div class="form-group row">
                                                 <label class="col-sm-5 col-form-label">Định mức thông báo (h): </label>
                                                 <div class="col-sm-7">
-                                                    <input type="number" step="any" id="edit-MAYPHU-THONGBAODINHMUC-DINHMUCTHONGBAO" required="required"  min="1" class="form-control">
+                                                    <input type="number" step="any" id="edit-MAYPHU-THONGBAODINHMUC-DINHMUCTHONGBAO" required="required" min="1" class="form-control">
                                                 </div>
                                             </div>
                                         </div>
@@ -1758,6 +1769,15 @@
                                                 </div>
                                             </div>
                                         </div>
+                                        <div class="col-sm-6">
+                                            <div class="form-group row">
+                                                <label class="col-sm-5 col-form-label">Loại cảnh báo: </label>
+                                                <div class="col-sm-7">
+                                                    <select class="form-control" id="edit-MAYPHU-THONGBAODINHMUC-LOAICANHBAO">
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                     <h4 class="sub-title">Tình trạng hiện tại</h4>
                                     <div class="row">
@@ -1765,7 +1785,7 @@
                                             <div class="form-group row">
                                                 <label class="col-sm-2 col-form-label">Tình trạng hiện tại: </label>
                                                 <div class="col-sm-10">
-                                                     <textarea type="text" id="edit-MAYPHU-TINHTRANGHIENTAI"  class="form-control"></textarea>
+                                                    <textarea type="text" id="edit-MAYPHU-TINHTRANGHIENTAI" class="form-control"></textarea>
                                                 </div>
                                             </div>
                                         </div>
@@ -2023,10 +2043,10 @@
                                                 </div>
                                             </div>
                                         </div>
-                                       
+
                                     </div>
                                     <div class="row">
-                                         <div class="col-sm-6">
+                                        <div class="col-sm-6">
                                             <div class="form-group row">
                                                 <label class="col-sm-4 col-form-label">Khớp nối mềm: </label>
                                                 <div class="col-sm-8">
@@ -2074,23 +2094,24 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <%-- <div class="row">
-                                            <div class="col-sm-6">
-                                                <div class="form-group row">
-                                                    <label class="col-sm-4 col-form-label">Thời gian còn lại (h): </label>
-                                                    <div class="col-sm-8">
-                                                        <input type="text" id="add-MAYCHUYENDUNG-THONGBAODINHMUC-THOIGIANCONLAI" readonly="readonly" class="form-control">
-                                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <div class="form-group row">
+                                                <label class="col-sm-5 col-form-label">Loại cảnh báo: </label>
+                                                <div class="col-sm-7">
+                                                    <select class="form-control" id="add-MAYCHUYENDUNG-THONGBAODINHMUC-LOAICANHBAO">
+                                                    </select>
                                                 </div>
                                             </div>
-                                        </div>--%>
+                                        </div>
+                                    </div>
                                     <h4 class="sub-title">Tình trạng hiện tại</h4>
                                     <div class="row">
                                         <div class="col-sm-12">
                                             <div class="form-group row">
                                                 <label class="col-sm-2 col-form-label">Tình trạng hiện tại: </label>
                                                 <div class="col-sm-10">
-                                                     <textarea type="text" id="add-MAYCHUYENDUNG-TINHTRANGHIENTAI"  class="form-control"></textarea>
+                                                    <textarea type="text" id="add-MAYCHUYENDUNG-TINHTRANGHIENTAI" class="form-control"></textarea>
                                                 </div>
                                             </div>
                                         </div>
@@ -2349,7 +2370,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        
+
                                     </div>
                                     <div class="row">
                                         <div class="col-sm-6">
@@ -2408,6 +2429,15 @@
                                                 </div>
                                             </div>
                                         </div>
+                                        <div class="col-sm-6">
+                                            <div class="form-group row">
+                                                <label class="col-sm-5 col-form-label">Loại cảnh báo: </label>
+                                                <div class="col-sm-7">
+                                                    <select class="form-control" id="edit-MAYCHUYENDUNG-THONGBAODINHMUC-LOAICANHBAO">
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                     <h4 class="sub-title">Tình trạng hiện tại</h4>
                                     <div class="row">
@@ -2415,7 +2445,7 @@
                                             <div class="form-group row">
                                                 <label class="col-sm-2 col-form-label">Tình trạng hiện tại: </label>
                                                 <div class="col-sm-10">
-                                                     <textarea type="text" id="edit-MAYCHUYENDUNG-TINHTRANGHIENTAI"  class="form-control"></textarea>
+                                                    <textarea type="text" id="edit-MAYCHUYENDUNG-TINHTRANGHIENTAI" class="form-control"></textarea>
                                                 </div>
                                             </div>
                                         </div>
@@ -4018,12 +4048,15 @@
             loadDataList_MAYCHINH();
             loadDataList_MAYPHU();
             loadDataList_MAYCHUYENDUNG();
+            list_LoaiCanhBao('', 'add-MAYCHINH-THONGBAODINHMUC-LOAICANHBAO');
+            list_LoaiCanhBao('', 'add-MAYPHU-THONGBAODINHMUC-LOAICANHBAO');
+            list_LoaiCanhBao('', 'add-MAYCHUYENDUNG-THONGBAODINHMUC-LOAICANHBAO');
         }
         // MAY CHÍNH
         function loadDataList_MAYCHINH() {
             $.ajax({
                 type: "GET",
-                url: linkapi + "/v2_2/maychinh?id=" + getParameterByName("Ship_ID"),
+                url: linkapi + "v2_2/maychinh?id=" + getParameterByName("Ship_ID"),
                 dataType: "json",
                 beforeSend: function () { // Before we send the request, remove the .hidden class from the spinner and default to inline-block.
                     $('#loader').removeClass('hidden');
@@ -4043,7 +4076,7 @@
                         else {
                             tabletext += 'style="background-color: #ffffff;"><td style="text-align: center;">' + i + '</td>';
                         }
-                        tabletext += "<td>" + item.THONGSOCOBAN.KYHIEU + "</td><td>" + item.THONGSOCOBAN.SOHIEUMAY + "</td><td style='text-align: center;'>" + item.THONGSOCOBAN.NAMSANXUAT + "</td><td>" + item.THONGSOCOBAN.NOISANXUAT + "</td><td>" + item.THONGSOCOBAN.CONGSUAT + "</td><td>" + item.THONGSOCOBAN.HETHONGDIEUKHIEN + "</td><td>" + item.TINHTRANGHIENTAI + '</td><td><div style="display: flex; justify-content: space-around;"><a href="#" class="edit" title="Sửa" data-toggle="modal" data-target="#model-edit-MAYCHINH"  onclick="onclick_edit_MAYCHINH(`' + item.ID + '`,`' + item.THONGSOCOBAN.KYHIEU + '`,`' + item.THONGSOCOBAN.NAMSANXUAT + '`,`' + item.THONGSOCOBAN.NOISANXUAT + '`,`' + item.THONGSOCOBAN.NAMLAPRAP + '`,`' + item.THONGSOCOBAN.VITRILAPRAP + '`,`' + item.THONGSOCOBAN.SOHIEUMAY + '`,`' + item.THONGSOCOBAN.CONGSUAT + '`,`' + item.THONGSOCOBAN.VONGQUAY + '`,`' + item.THONGSOCOBAN.CHIEUQUAY + '`,`' + item.THONGSOCOBAN.NGUONKHOIDONG + '`,`' + item.THONGSOCOBAN.HETHONGDIEUKHIEN + '`,`' + item.THONGSOCOBAN.TRONGLUONG + '`,`' + item.THONGSOCOBAN.KICHTHUOCMAY.DAI + '`,`' + item.THONGSOCOBAN.KICHTHUOCMAY.RONG + '`,`' + item.THONGSOCOBAN.KICHTHUOCMAY.CAO + '`,`' + item.THONGSOCOBAN.CHUKYSUACHUA.TIEUTU + '`,`' + item.THONGSOCOBAN.CHUKYSUACHUA.TRUNGTU + '`,`' + item.THONGSOCOBAN.CHUKYSUACHUA.DAITU + '`,`' + item.THONGSOCOBAN.LOAIDIEN.DIENAP + '`,`' + item.THONGSOCOBAN.LOAIDIEN.TANSO + '`,`' + item.PHUONGPHAPTRUYENTAI.KYHIEULYHOP_BOGIAMVONG + '`,`' + item.PHUONGPHAPTRUYENTAI.SOHIEULYHOP_BOGIAMVONG + '`,`' + item.PHUONGPHAPTRUYENTAI.TYSOTRUYEN + '`,`' + item.PHUONGPHAPTRUYENTAI.KHOPNOICUNG + '`,`' + item.PHUONGPHAPTRUYENTAI.KHOPNOIMEM + '`,`' + item.PHUONGPHAPTRUYENTAI.CUROA + '`,`' + item.PHUONGPHAPTRUYENTAI.KYHIEUVONGBI + '`,`' + item.THONGBAODINHMUC.SUACHUACUOICUNG + '`,`' + item.THONGBAODINHMUC.MUCCANHBAO + '`,`' + item.THONGBAODINHMUC.THOIGIANCONLAI + '`,`' + item.THONGBAODINHMUC.DINHMUCSUACHUA + '`,`' + item.THONGBAODINHMUC.DINHMUCTHONGBAO + '`,`' + item.TINHTRANGHIENTAI + '`)"><i class="material-icons">&#xE254;</i></a><a href="#" class="delete" title="Xóa" onclick="delete_MAYCHINH(`' + item.ID + '`)"><i class="material-icons">&#xE872;</i></a></div></td></tr>';
+                        tabletext += "<td>" + item.THONGSOCOBAN.KYHIEU + "</td><td>" + item.THONGSOCOBAN.SOHIEUMAY + "</td><td style='text-align: center;'>" + item.THONGSOCOBAN.NAMSANXUAT + "</td><td>" + item.THONGSOCOBAN.NOISANXUAT + "</td><td>" + item.THONGSOCOBAN.CONGSUAT + "</td><td>" + item.THONGSOCOBAN.HETHONGDIEUKHIEN + "</td><td>" + item.TINHTRANGHIENTAI + '</td><td><div style="display: flex; justify-content: space-around;"><a href="#" class="edit" title="Sửa" data-toggle="modal" data-target="#model-edit-MAYCHINH"  onclick="onclick_edit_MAYCHINH(`' + item.ID + '`,`' + item.THONGSOCOBAN.KYHIEU + '`,`' + item.THONGSOCOBAN.NAMSANXUAT + '`,`' + item.THONGSOCOBAN.NOISANXUAT + '`,`' + item.THONGSOCOBAN.NAMLAPRAP + '`,`' + item.THONGSOCOBAN.VITRILAPRAP + '`,`' + item.THONGSOCOBAN.SOHIEUMAY + '`,`' + item.THONGSOCOBAN.CONGSUAT + '`,`' + item.THONGSOCOBAN.VONGQUAY + '`,`' + item.THONGSOCOBAN.CHIEUQUAY + '`,`' + item.THONGSOCOBAN.NGUONKHOIDONG + '`,`' + item.THONGSOCOBAN.HETHONGDIEUKHIEN + '`,`' + item.THONGSOCOBAN.TRONGLUONG + '`,`' + item.THONGSOCOBAN.KICHTHUOCMAY.DAI + '`,`' + item.THONGSOCOBAN.KICHTHUOCMAY.RONG + '`,`' + item.THONGSOCOBAN.KICHTHUOCMAY.CAO + '`,`' + item.THONGSOCOBAN.CHUKYSUACHUA.TIEUTU + '`,`' + item.THONGSOCOBAN.CHUKYSUACHUA.TRUNGTU + '`,`' + item.THONGSOCOBAN.CHUKYSUACHUA.DAITU + '`,`' + item.THONGSOCOBAN.LOAIDIEN.DIENAP + '`,`' + item.THONGSOCOBAN.LOAIDIEN.TANSO + '`,`' + item.PHUONGPHAPTRUYENTAI.KYHIEULYHOP_BOGIAMVONG + '`,`' + item.PHUONGPHAPTRUYENTAI.SOHIEULYHOP_BOGIAMVONG + '`,`' + item.PHUONGPHAPTRUYENTAI.TYSOTRUYEN + '`,`' + item.PHUONGPHAPTRUYENTAI.KHOPNOICUNG + '`,`' + item.PHUONGPHAPTRUYENTAI.KHOPNOIMEM + '`,`' + item.PHUONGPHAPTRUYENTAI.CUROA + '`,`' + item.PHUONGPHAPTRUYENTAI.KYHIEUVONGBI + '`,`' + item.THONGBAODINHMUC.SUACHUACUOICUNG + '`,`' + item.THONGBAODINHMUC.MUCCANHBAO + '`,`' + item.THONGBAODINHMUC.THOIGIANCONLAI + '`,`' + item.THONGBAODINHMUC.LOAICANHBAO.ID + '`,`' + item.THONGBAODINHMUC.DINHMUCSUACHUA + '`,`' + item.THONGBAODINHMUC.DINHMUCTHONGBAO + '`,`' + item.TINHTRANGHIENTAI + '`)"><i class="material-icons">&#xE254;</i></a><a href="#" class="delete" title="Xóa" onclick="delete_MAYCHINH(`' + item.ID + '`)"><i class="material-icons">&#xE872;</i></a></div></td></tr>';
                         i = i + 1;
                     });
                     tabletext += "</tbody>";
@@ -4058,6 +4091,53 @@
                 },
             });
         };
+        function list_LoaiCanhBao(id_loaicanhbao, string_loaicanhbao) {
+            debugger
+            $.ajax({
+                type: "GET",
+                url: linkapi + "v2/caccapsuachuatau",
+                dataType: "json",
+                success: function (data) {
+                    console.log(data);
+                    $('#' + string_loaicanhbao).empty();
+                    $.each(data, function (key, item) {
+
+                        if (item.ID == id_loaicanhbao) {
+                            $('#' + string_loaicanhbao).append($('<option>', {
+                                selected: true,
+                                value: item.ID,
+                                text: item.CAP
+                            }));
+                        }
+                        else {
+                            $('#' + string_loaicanhbao).append($('<option>', {
+                                selected: false,
+                                value: item.ID,
+                                text: item.CAP
+                            }));
+                        }
+
+                    });
+                    if (id_loaicanhbao == '') {
+                        $('#' + string_loaicanhbao + 'select').val(data[0].ID);
+
+                    }
+                    //else if (id_loaicanhbao == null) {
+                    //    $('#' + string_loaicanhbao).append($('<option>', {
+                    //        selected: true,
+                    //        value: "null",
+                    //        text: "Chưa nhập"
+                    //    }));
+                    //}
+                }, error: function (ret) {
+                    console.log('errorGET');
+                },
+                complete: function () { // Set our complete callback, adding the .hidden class and hiding the spinner.
+
+                },
+            });
+
+        }
         function loadTableMAYCHINH() {
 
             $('table[id=table-MAYCHINH]').each(function () {
@@ -4147,6 +4227,9 @@
                             THOIGIANCONLAI: $("#add-MAYCHINH-THONGBAODINHMUC-THOIGIANCONLAI").val(),
                             DINHMUCSUACHUA: $("#add-MAYCHINH-THONGBAODINHMUC-DINHMUCSUACHUA").val(),
                             DINHMUCTHONGBAO: $("#add-MAYCHINH-THONGBAODINHMUC-DINHMUCTHONGBAO").val(),
+                            LOAICANHBAO: {
+                                ID: $("#add-MAYCHINH-THONGBAODINHMUC-LOAICANHBAO").val()
+                            }
                         },
                         TINHTRANGHIENTAI: $("#add-MAYCHINH-TINHTRANGHIENTAI").val(),
                     };
@@ -4164,38 +4247,40 @@
                             toastError("Thất bại", ret.responseJSON.Message);
                         },
                         complete: function () { // Set our complete callback, adding the .hidden class and hiding the spinner.
-                            $("#add-MAYCHINH-THONGSOCOBAN-KYHIEU").val();
-                            $("#add-MAYCHINH-THONGSOCOBAN-NAMSANXUAT").val();
-                            $("#add-MAYCHINH-THONGSOCOBAN-NOISANXUAT").val();
-                            $("#add-MAYCHINH-THONGSOCOBAN-NAMLAPRAP").val();
-                            $("#add-MAYCHINH-THONGSOCOBAN-VITRILAPRAP").val();
-                            $("#add-MAYCHINH-THONGSOCOBAN-SOHIEUMAY").val();
-                            $("#add-MAYCHINH-THONGSOCOBAN-CONGSUAT").val();
-                            $("#add-MAYCHINH-THONGSOCOBAN-VONGQUAY").val();
-                            $("#add-MAYCHINH-THONGSOCOBAN-CHIEUQUAY").val();
-                            $("#add-MAYCHINH-THONGSOCOBAN-NGUONKHOIDONG").val();
-                            $("#add-MAYCHINH-THONGSOCOBAN-HETHONGDIEUKHIEN").val();
-                            $("#add-MAYCHINH-THONGSOCOBAN-KICHTHUOCMAY-DAI").val();
-                            $("#add-MAYCHINH-THONGSOCOBAN-KICHTHUOCMAY-RONG").val();
-                            $("#add-MAYCHINH-THONGSOCOBAN-KICHTHUOCMAY-CAO").val();
-                            $("#add-MAYCHINH-THONGSOCOBAN-TRONGLUONG").val();
-                            $("#add-MAYCHINH-THONGSOCOBAN-CHUKYSUACHUA-TIEUTU").val();
-                            $("#add-MAYCHINH-THONGSOCOBAN-CHUKYSUACHUA-TRUNGTU").val();
-                            $("#add-MAYCHINH-THONGSOCOBAN-CHUKYSUACHUA-DAITU").val();
-                            $("#add-MAYCHINH-THONGSOCOBAN-LOAIDIEN-DIENAP").val();
-                            $("#add-MAYCHINH-THONGSOCOBAN-LOAIDIEN-TANSO").val();
-                            $("#add-MAYCHINH-PHUONGPHAPTRUYENTAI-KYHIEULYHOP_BOGIAMVONG").val();
-                            $("#add-MAYCHINH-PHUONGPHAPTRUYENTAI-SOHIEULYHOP_BOGIAMVONG").val();
-                            $("#add-MAYCHINH-PHUONGPHAPTRUYENTAI-TYSOTRUYEN").val();
-                            $("#add-MAYCHINH-PHUONGPHAPTRUYENTAI-KHOPNOICUNG").val();
-                            $("#add-MAYCHINH-PHUONGPHAPTRUYENTAI-KHOPNOIMEM").val();
-                            $("#add-MAYCHINH-PHUONGPHAPTRUYENTAI-CUROA").val();
-                            $("#add-MAYCHINH-PHUONGPHAPTRUYENTAI-KYHIEUVONGBI").val();
-                            $("#add-MAYCHINH-THONGBAODINHMUC-SUACHUACUOICUNG").val();
-                            $("#add-MAYCHINH-THONGBAODINHMUC-MUCCANHBAO").val();
-                            $("#add-MAYCHINH-THONGBAODINHMUC-THOIGIANCONLAI").val();
-                            $("#add-MAYCHINH-THONGBAODINHMUC-DINHMUCSUACHUA").val();
-                            $("#add-MAYCHINH-THONGBAODINHMUC-DINHMUCTHONGBAO").val();
+                            $("#add-MAYCHINH-THONGSOCOBAN-KYHIEU").val("");
+                            $("#add-MAYCHINH-THONGSOCOBAN-NAMSANXUAT").val("");
+                            $("#add-MAYCHINH-THONGSOCOBAN-NOISANXUAT").val("");
+                            $("#add-MAYCHINH-THONGSOCOBAN-NAMLAPRAP").val("");
+                            $("#add-MAYCHINH-THONGSOCOBAN-VITRILAPRAP").val("");
+                            $("#add-MAYCHINH-THONGSOCOBAN-SOHIEUMAY").val("");
+                            $("#add-MAYCHINH-THONGSOCOBAN-CONGSUAT").val("");
+                            $("#add-MAYCHINH-THONGSOCOBAN-VONGQUAY").val("");
+                            $("#add-MAYCHINH-THONGSOCOBAN-CHIEUQUAY").val("");
+                            $("#add-MAYCHINH-THONGSOCOBAN-NGUONKHOIDONG").val("");
+                            $("#add-MAYCHINH-THONGSOCOBAN-HETHONGDIEUKHIEN").val("");
+                            $("#add-MAYCHINH-THONGSOCOBAN-KICHTHUOCMAY-DAI").val("");
+                            $("#add-MAYCHINH-THONGSOCOBAN-KICHTHUOCMAY-RONG").val("");
+                            $("#add-MAYCHINH-THONGSOCOBAN-KICHTHUOCMAY-CAO").val("");
+                            $("#add-MAYCHINH-THONGSOCOBAN-TRONGLUONG").val("");
+                            $("#add-MAYCHINH-THONGSOCOBAN-CHUKYSUACHUA-TIEUTU").val("");
+                            $("#add-MAYCHINH-THONGSOCOBAN-CHUKYSUACHUA-TRUNGTU").val("");
+                            $("#add-MAYCHINH-THONGSOCOBAN-CHUKYSUACHUA-DAITU").val("");
+                            $("#add-MAYCHINH-THONGSOCOBAN-LOAIDIEN-DIENAP").val("");
+                            $("#add-MAYCHINH-THONGSOCOBAN-LOAIDIEN-TANSO").val("");
+                            $("#add-MAYCHINH-PHUONGPHAPTRUYENTAI-KYHIEULYHOP_BOGIAMVONG").val("");
+                            $("#add-MAYCHINH-PHUONGPHAPTRUYENTAI-SOHIEULYHOP_BOGIAMVONG").val("");
+                            $("#add-MAYCHINH-PHUONGPHAPTRUYENTAI-TYSOTRUYEN").val("");
+                            $("#add-MAYCHINH-PHUONGPHAPTRUYENTAI-KHOPNOICUNG").val("");
+                            $("#add-MAYCHINH-PHUONGPHAPTRUYENTAI-KHOPNOIMEM").val("");
+                            $("#add-MAYCHINH-PHUONGPHAPTRUYENTAI-CUROA").val("");
+                            $("#add-MAYCHINH-PHUONGPHAPTRUYENTAI-KYHIEUVONGBI").val("");
+                            $("#add-MAYCHINH-THONGBAODINHMUC-SUACHUACUOICUNG").val("");
+                            $("#add-MAYCHINH-THONGBAODINHMUC-MUCCANHBAO").val("");
+                            $("#add-MAYCHINH-THONGBAODINHMUC-THOIGIANCONLAI").val("");
+                            $("#add-MAYCHINH-THONGBAODINHMUC-DINHMUCSUACHUA").val("");
+                            $("#add-MAYCHINH-THONGBAODINHMUC-DINHMUCTHONGBAO").val("");
+                            list_LoaiCanhBao('', 'add-MAYCHINH-THONGBAODINHMUC-LOAICANHBAO');
+                            $("#add-MAYCHINH-TINHTRANGHIENTAI").val("");
                             $('#model-add-MAYCHINH').modal("hide");
                         },
                     });
@@ -4206,7 +4291,8 @@
             }
             return false;
         }
-        function onclick_edit_MAYCHINH(ID, KYHIEU, NAMSANXUAT, NOISANXUAT, NAMLAPRAP, VITRILAPRAP, SOHIEUMAY, CONGSUAT, VONGQUAY, CHIEUQUAY, NGUONKHOIDONG, HETHONGDIEUKHIEN, TRONGLUONG, DAI, RONG, CAO, TIEUTU, TRUNGTU, DAITU, DIENAP, TANSO, KYHIEULYHOP_BOGIAMVONG, SOHIEULYHOP_BOGIAMVONG, TYSOTRUYEN, KHOPNOICUNG, KHOPNOIMEM, CUROA, KYHIEUVONGBI, SUACHUACUOICUNG, MUCCANHBAO, THOIGIANCONLAI, DINHMUCSUACHUA, DINHMUCTHONGBAO, TINHTRANGHIENTAI) {
+        function onclick_edit_MAYCHINH(ID, KYHIEU, NAMSANXUAT, NOISANXUAT, NAMLAPRAP, VITRILAPRAP, SOHIEUMAY, CONGSUAT, VONGQUAY, CHIEUQUAY, NGUONKHOIDONG, HETHONGDIEUKHIEN, TRONGLUONG, DAI, RONG, CAO, TIEUTU, TRUNGTU, DAITU, DIENAP, TANSO, KYHIEULYHOP_BOGIAMVONG, SOHIEULYHOP_BOGIAMVONG, TYSOTRUYEN, KHOPNOICUNG, KHOPNOIMEM, CUROA, KYHIEUVONGBI, SUACHUACUOICUNG, MUCCANHBAO, THOIGIANCONLAI, ID_LOAICANHBAO, DINHMUCSUACHUA, DINHMUCTHONGBAO, TINHTRANGHIENTAI) {
+            debugger
             $("#edit-MAYCHINH-ID").val(ID);
             $("#edit-MAYCHINH-THONGSOCOBAN-KYHIEU").val(KYHIEU);
             $("#edit-MAYCHINH-THONGSOCOBAN-NAMSANXUAT").val(NAMSANXUAT);
@@ -4241,6 +4327,7 @@
             $("#edit-MAYCHINH-THONGBAODINHMUC-THOIGIANCONLAI").val(THOIGIANCONLAI);
             $("#edit-MAYCHINH-THONGBAODINHMUC-DINHMUCSUACHUA").val(DINHMUCSUACHUA);
             $("#edit-MAYCHINH-THONGBAODINHMUC-DINHMUCTHONGBAO").val(DINHMUCTHONGBAO);
+            list_LoaiCanhBao(ID_LOAICANHBAO, 'edit-MAYCHINH-THONGBAODINHMUC-LOAICANHBAO');
 
             $("#edit-MAYCHINH-TINHTRANGHIENTAI").val(TINHTRANGHIENTAI);
 
@@ -4296,6 +4383,9 @@
                             THOIGIANCONLAI: $("#edit-MAYCHINH-THONGBAODINHMUC-THOIGIANCONLAI").val(),
                             DINHMUCSUACHUA: $("#edit-MAYCHINH-THONGBAODINHMUC-DINHMUCSUACHUA").val(),
                             DINHMUCTHONGBAO: $("#edit-MAYCHINH-THONGBAODINHMUC-DINHMUCTHONGBAO").val(),
+                            LOAICANHBAO: {
+                                ID: $("#edit-MAYCHINH-THONGBAODINHMUC-LOAICANHBAO").val()
+                            }
                         },
                         TINHTRANGHIENTAI: $("#edit-MAYCHINH-TINHTRANGHIENTAI").val(),
                     };
@@ -4316,7 +4406,7 @@
                         },
                     });
                 }
-                else{
+                else {
                     alert("Định mức sửa chữa phải lớn hơn định mức thông báo!")
                 }
 
@@ -4363,7 +4453,7 @@
                         else {
                             tabletext += 'style="background-color: #ffffff;"><td style="text-align: center;">' + i + '</td>';
                         }
-                        tabletext += "<td>" + item.THONGSOCOBAN.KYHIEU + "</td><td>" + item.THONGSOCOBAN.SOHIEUMAY + "</td><td style='text-align: center;'>" + item.THONGSOCOBAN.NAMSANXUAT + "</td><td>" + item.THONGSOCOBAN.NOISANXUAT + "</td><td>" + item.THONGSOCOBAN.CONGSUAT + "</td><td>" + item.THONGSOCOBAN.HETHONGDIEUKHIEN + "</td><td>" + item.TINHTRANGHIENTAI + '</td><td><div style="display: flex; justify-content: space-around;"><a href="#" class="edit" title="Sửa" data-toggle="modal" data-target="#model-edit-MAYPHU"  onclick="onclick_edit_MAYPHU(`' + item.ID + '`,`' + item.THONGSOCOBAN.KYHIEU + '`,`' + item.THONGSOCOBAN.NAMSANXUAT + '`,`' + item.THONGSOCOBAN.NOISANXUAT + '`,`' + item.THONGSOCOBAN.NAMLAPRAP + '`,`' + item.THONGSOCOBAN.VITRILAPRAP + '`,`' + item.THONGSOCOBAN.SOHIEUMAY + '`,`' + item.THONGSOCOBAN.CONGSUAT + '`,`' + item.THONGSOCOBAN.VONGQUAY + '`,`' + item.THONGSOCOBAN.CHIEUQUAY + '`,`' + item.THONGSOCOBAN.NGUONKHOIDONG + '`,`' + item.THONGSOCOBAN.HETHONGDIEUKHIEN + '`,`' + item.THONGSOCOBAN.TRONGLUONG + '`,`' + item.THONGSOCOBAN.KICHTHUOCMAY.DAI + '`,`' + item.THONGSOCOBAN.KICHTHUOCMAY.RONG + '`,`' + item.THONGSOCOBAN.KICHTHUOCMAY.CAO + '`,`' + item.THONGSOCOBAN.CHUKYSUACHUA.TIEUTU + '`,`' + item.THONGSOCOBAN.CHUKYSUACHUA.TRUNGTU + '`,`' + item.THONGSOCOBAN.CHUKYSUACHUA.DAITU + '`,`' + item.THONGSOCOBAN.LOAIDIEN.DIENAP + '`,`' + item.THONGSOCOBAN.LOAIDIEN.TANSO + '`,`' + item.PHUONGPHAPTRUYENTAI.KYHIEULYHOP_BOGIAMVONG + '`,`' + item.PHUONGPHAPTRUYENTAI.SOHIEULYHOP_BOGIAMVONG + '`,`' + item.PHUONGPHAPTRUYENTAI.TYSOTRUYEN + '`,`' + item.PHUONGPHAPTRUYENTAI.KHOPNOICUNG + '`,`' + item.PHUONGPHAPTRUYENTAI.KHOPNOIMEM + '`,`' + item.PHUONGPHAPTRUYENTAI.CUROA + '`,`' + item.PHUONGPHAPTRUYENTAI.KYHIEUVONGBI + '`,`' + item.THONGBAODINHMUC.SUACHUACUOICUNG + '`,`' + item.THONGBAODINHMUC.MUCCANHBAO + '`,`' + item.THONGBAODINHMUC.THOIGIANCONLAI + '`,`' + item.THONGBAODINHMUC.DINHMUCSUACHUA + '`,`' + item.THONGBAODINHMUC.DINHMUCTHONGBAO + '`,`' + item.TINHTRANGHIENTAI + '`)"><i class="material-icons">&#xE254;</i></a><a href="#" class="delete" title="Xóa" onclick="delete_MAYCHINH(`' + item.ID + '`)"><i class="material-icons">&#xE872;</i></a></div></td></tr>';
+                        tabletext += "<td>" + item.THONGSOCOBAN.KYHIEU + "</td><td>" + item.THONGSOCOBAN.SOHIEUMAY + "</td><td style='text-align: center;'>" + item.THONGSOCOBAN.NAMSANXUAT + "</td><td>" + item.THONGSOCOBAN.NOISANXUAT + "</td><td>" + item.THONGSOCOBAN.CONGSUAT + "</td><td>" + item.THONGSOCOBAN.HETHONGDIEUKHIEN + "</td><td>" + item.TINHTRANGHIENTAI + '</td><td><div style="display: flex; justify-content: space-around;"><a href="#" class="edit" title="Sửa" data-toggle="modal" data-target="#model-edit-MAYPHU"  onclick="onclick_edit_MAYPHU(`' + item.ID + '`,`' + item.THONGSOCOBAN.KYHIEU + '`,`' + item.THONGSOCOBAN.NAMSANXUAT + '`,`' + item.THONGSOCOBAN.NOISANXUAT + '`,`' + item.THONGSOCOBAN.NAMLAPRAP + '`,`' + item.THONGSOCOBAN.VITRILAPRAP + '`,`' + item.THONGSOCOBAN.SOHIEUMAY + '`,`' + item.THONGSOCOBAN.CONGSUAT + '`,`' + item.THONGSOCOBAN.VONGQUAY + '`,`' + item.THONGSOCOBAN.CHIEUQUAY + '`,`' + item.THONGSOCOBAN.NGUONKHOIDONG + '`,`' + item.THONGSOCOBAN.HETHONGDIEUKHIEN + '`,`' + item.THONGSOCOBAN.TRONGLUONG + '`,`' + item.THONGSOCOBAN.KICHTHUOCMAY.DAI + '`,`' + item.THONGSOCOBAN.KICHTHUOCMAY.RONG + '`,`' + item.THONGSOCOBAN.KICHTHUOCMAY.CAO + '`,`' + item.THONGSOCOBAN.CHUKYSUACHUA.TIEUTU + '`,`' + item.THONGSOCOBAN.CHUKYSUACHUA.TRUNGTU + '`,`' + item.THONGSOCOBAN.CHUKYSUACHUA.DAITU + '`,`' + item.THONGSOCOBAN.LOAIDIEN.DIENAP + '`,`' + item.THONGSOCOBAN.LOAIDIEN.TANSO + '`,`' + item.PHUONGPHAPTRUYENTAI.KYHIEULYHOP_BOGIAMVONG + '`,`' + item.PHUONGPHAPTRUYENTAI.SOHIEULYHOP_BOGIAMVONG + '`,`' + item.PHUONGPHAPTRUYENTAI.TYSOTRUYEN + '`,`' + item.PHUONGPHAPTRUYENTAI.KHOPNOICUNG + '`,`' + item.PHUONGPHAPTRUYENTAI.KHOPNOIMEM + '`,`' + item.PHUONGPHAPTRUYENTAI.CUROA + '`,`' + item.PHUONGPHAPTRUYENTAI.KYHIEUVONGBI + '`,`' + item.THONGBAODINHMUC.SUACHUACUOICUNG + '`,`' + item.THONGBAODINHMUC.MUCCANHBAO + '`,`' + item.THONGBAODINHMUC.THOIGIANCONLAI + '`,`' + item.THONGBAODINHMUC.LOAICANHBAO.ID + '`,`' + item.THONGBAODINHMUC.DINHMUCSUACHUA + '`,`' + item.THONGBAODINHMUC.DINHMUCTHONGBAO + '`,`' + item.TINHTRANGHIENTAI + '`)"><i class="material-icons">&#xE254;</i></a><a href="#" class="delete" title="Xóa" onclick="delete_MAYCHINH(`' + item.ID + '`)"><i class="material-icons">&#xE872;</i></a></div></td></tr>';
                         i = i + 1;
                     });
                     tabletext += "</tbody>";
@@ -4466,6 +4556,9 @@
                             THOIGIANCONLAI: $("#add-MAYPHU-THONGBAODINHMUC-THOIGIANCONLAI").val(),
                             DINHMUCSUACHUA: $("#add-MAYPHU-THONGBAODINHMUC-DINHMUCSUACHUA").val(),
                             DINHMUCTHONGBAO: $("#add-MAYPHU-THONGBAODINHMUC-DINHMUCTHONGBAO").val(),
+                            LOAICANHBAO: {
+                                ID: $("#add-MAYPHU-THONGBAODINHMUC-LOAICANHBAO").val()
+                            }
                         },
                         TINHTRANGHIENTAI: $("#add-MAYPHU-TINHTRANGHIENTAI").val(),
                     };
@@ -4482,38 +4575,40 @@
                             toastError("Thất bại", ret.responseJSON.Message);
                         },
                         complete: function () { // Set our complete callback, adding the .hidden class and hiding the spinner.
-                            $("#add-MAYPHU-THONGSOCOBAN-KYHIEU").val();
-                            $("#add-MAYPHU-THONGSOCOBAN-NAMSANXUAT").val();
-                            $("#add-MAYPHU-THONGSOCOBAN-NOISANXUAT").val();
-                            $("#add-MAYPHU-THONGSOCOBAN-NAMLAPRAP").val();
-                            $("#add-MAYPHU-THONGSOCOBAN-VITRILAPRAP").val();
-                            $("#add-MAYPHU-THONGSOCOBAN-SOHIEUMAY").val();
-                            $("#add-MAYPHU-THONGSOCOBAN-CONGSUAT").val();
-                            $("#add-MAYPHU-THONGSOCOBAN-VONGQUAY").val();
-                            $("#add-MAYPHU-THONGSOCOBAN-CHIEUQUAY").val();
-                            $("#add-MAYPHU-THONGSOCOBAN-NGUONKHOIDONG").val();
-                            $("#add-MAYPHU-THONGSOCOBAN-HETHONGDIEUKHIEN").val();
-                            $("#add-MAYPHU-THONGSOCOBAN-KICHTHUOCMAY-DAI").val();
-                            $("#add-MAYPHU-THONGSOCOBAN-KICHTHUOCMAY-RONG").val();
-                            $("#add-MAYPHU-THONGSOCOBAN-KICHTHUOCMAY-CAO").val();
-                            $("#add-MAYPHU-THONGSOCOBAN-TRONGLUONG").val();
-                            $("#add-MAYPHU-THONGSOCOBAN-CHUKYSUACHUA-TIEUTU").val();
-                            $("#add-MAYPHU-THONGSOCOBAN-CHUKYSUACHUA-TRUNGTU").val();
-                            $("#add-MAYPHU-THONGSOCOBAN-CHUKYSUACHUA-DAITU").val();
-                            $("#add-MAYPHU-THONGSOCOBAN-LOAIDIEN-DIENAP").val();
-                            $("#add-MAYPHU-THONGSOCOBAN-LOAIDIEN-TANSO").val();
-                            $("#add-MAYPHU-PHUONGPHAPTRUYENTAI-KYHIEULYHOP_BOGIAMVONG").val();
-                            $("#add-MAYPHU-PHUONGPHAPTRUYENTAI-SOHIEULYHOP_BOGIAMVONG").val();
-                            $("#add-MAYPHU-PHUONGPHAPTRUYENTAI-TYSOTRUYEN").val();
-                            $("#add-MAYPHU-PHUONGPHAPTRUYENTAI-KHOPNOICUNG").val();
-                            $("#add-MAYPHU-PHUONGPHAPTRUYENTAI-KHOPNOIMEM").val();
-                            $("#add-MAYPHU-PHUONGPHAPTRUYENTAI-CUROA").val();
-                            $("#add-MAYPHU-PHUONGPHAPTRUYENTAI-KYHIEUVONGBI").val();
-                            $("#add-MAYPHU-THONGBAODINHMUC-SUACHUACUOICUNG").val();
-                            $("#add-MAYPHU-THONGBAODINHMUC-MUCCANHBAO").val();
-                            $("#add-MAYPHU-THONGBAODINHMUC-THOIGIANCONLAI").val();
-                            $("#add-MAYPHU-THONGBAODINHMUC-DINHMUCSUACHUA").val();
-                            $("#add-MAYPHU-THONGBAODINHMUC-DINHMUCTHONGBAO").val();
+                            $("#add-MAYPHU-THONGSOCOBAN-KYHIEU").val("");
+                            $("#add-MAYPHU-THONGSOCOBAN-NAMSANXUAT").val("");
+                            $("#add-MAYPHU-THONGSOCOBAN-NOISANXUAT").val("");
+                            $("#add-MAYPHU-THONGSOCOBAN-NAMLAPRAP").val("");
+                            $("#add-MAYPHU-THONGSOCOBAN-VITRILAPRAP").val("");
+                            $("#add-MAYPHU-THONGSOCOBAN-SOHIEUMAY").val("");
+                            $("#add-MAYPHU-THONGSOCOBAN-CONGSUAT").val("");
+                            $("#add-MAYPHU-THONGSOCOBAN-VONGQUAY").val("");
+                            $("#add-MAYPHU-THONGSOCOBAN-CHIEUQUAY").val("");
+                            $("#add-MAYPHU-THONGSOCOBAN-NGUONKHOIDONG").val("");
+                            $("#add-MAYPHU-THONGSOCOBAN-HETHONGDIEUKHIEN").val("");
+                            $("#add-MAYPHU-THONGSOCOBAN-KICHTHUOCMAY-DAI").val("");
+                            $("#add-MAYPHU-THONGSOCOBAN-KICHTHUOCMAY-RONG").val("");
+                            $("#add-MAYPHU-THONGSOCOBAN-KICHTHUOCMAY-CAO").val("");
+                            $("#add-MAYPHU-THONGSOCOBAN-TRONGLUONG").val("");
+                            $("#add-MAYPHU-THONGSOCOBAN-CHUKYSUACHUA-TIEUTU").val("");
+                            $("#add-MAYPHU-THONGSOCOBAN-CHUKYSUACHUA-TRUNGTU").val("");
+                            $("#add-MAYPHU-THONGSOCOBAN-CHUKYSUACHUA-DAITU").val("");
+                            $("#add-MAYPHU-THONGSOCOBAN-LOAIDIEN-DIENAP").val("");
+                            $("#add-MAYPHU-THONGSOCOBAN-LOAIDIEN-TANSO").val("");
+                            $("#add-MAYPHU-PHUONGPHAPTRUYENTAI-KYHIEULYHOP_BOGIAMVONG").val("");
+                            $("#add-MAYPHU-PHUONGPHAPTRUYENTAI-SOHIEULYHOP_BOGIAMVONG").val("");
+                            $("#add-MAYPHU-PHUONGPHAPTRUYENTAI-TYSOTRUYEN").val("");
+                            $("#add-MAYPHU-PHUONGPHAPTRUYENTAI-KHOPNOICUNG").val("");
+                            $("#add-MAYPHU-PHUONGPHAPTRUYENTAI-KHOPNOIMEM").val("");
+                            $("#add-MAYPHU-PHUONGPHAPTRUYENTAI-CUROA").val("");
+                            $("#add-MAYPHU-PHUONGPHAPTRUYENTAI-KYHIEUVONGBI").val("");
+                            $("#add-MAYPHU-THONGBAODINHMUC-SUACHUACUOICUNG").val("");
+                            $("#add-MAYPHU-THONGBAODINHMUC-MUCCANHBAO").val("");
+                            $("#add-MAYPHU-THONGBAODINHMUC-THOIGIANCONLAI").val("");
+                            $("#add-MAYPHU-THONGBAODINHMUC-DINHMUCSUACHUA").val("");
+                            $("#add-MAYPHU-THONGBAODINHMUC-DINHMUCTHONGBAO").val("");
+                            list_LoaiCanhBao('', 'add-MAYPHU-THONGBAODINHMUC-LOAICANHBAO');
+                            $("#add-MAYPHU-TINHTRANGHIENTAI").val("");
                             $('#model-add-MAYPHU').modal("hide");
                         },
                     });
@@ -4525,7 +4620,7 @@
             }
             return false;
         }
-        function onclick_edit_MAYPHU(ID, KYHIEU, NAMSANXUAT, NOISANXUAT, NAMLAPRAP, VITRILAPRAP, SOHIEUMAY, CONGSUAT, VONGQUAY, CHIEUQUAY, NGUONKHOIDONG, HETHONGDIEUKHIEN, TRONGLUONG, DAI, RONG, CAO, TIEUTU, TRUNGTU, DAITU, DIENAP, TANSO, KYHIEULYHOP_BOGIAMVONG, SOHIEULYHOP_BOGIAMVONG, TYSOTRUYEN, KHOPNOICUNG, KHOPNOIMEM, CUROA, KYHIEUVONGBI, SUACHUACUOICUNG, MUCCANHBAO, THOIGIANCONLAI, DINHMUCSUACHUA, DINHMUCTHONGBAO, TINHTRANGHIENTAI) {
+        function onclick_edit_MAYPHU(ID, KYHIEU, NAMSANXUAT, NOISANXUAT, NAMLAPRAP, VITRILAPRAP, SOHIEUMAY, CONGSUAT, VONGQUAY, CHIEUQUAY, NGUONKHOIDONG, HETHONGDIEUKHIEN, TRONGLUONG, DAI, RONG, CAO, TIEUTU, TRUNGTU, DAITU, DIENAP, TANSO, KYHIEULYHOP_BOGIAMVONG, SOHIEULYHOP_BOGIAMVONG, TYSOTRUYEN, KHOPNOICUNG, KHOPNOIMEM, CUROA, KYHIEUVONGBI, SUACHUACUOICUNG, MUCCANHBAO, THOIGIANCONLAI, ID_LOAICANHBAO, DINHMUCSUACHUA, DINHMUCTHONGBAO, TINHTRANGHIENTAI) {
             $("#edit-MAYPHU-ID").val(ID);
             $("#edit-MAYPHU-THONGSOCOBAN-KYHIEU").val(KYHIEU);
             $("#edit-MAYPHU-THONGSOCOBAN-NAMSANXUAT").val(NAMSANXUAT);
@@ -4560,6 +4655,7 @@
             $("#edit-MAYPHU-THONGBAODINHMUC-THOIGIANCONLAI").val(THOIGIANCONLAI);
             $("#edit-MAYPHU-THONGBAODINHMUC-DINHMUCSUACHUA").val(DINHMUCSUACHUA);
             $("#edit-MAYPHU-THONGBAODINHMUC-DINHMUCTHONGBAO").val(DINHMUCTHONGBAO);
+            list_LoaiCanhBao(ID_LOAICANHBAO, 'edit-MAYPHU-THONGBAODINHMUC-LOAICANHBAO');
             $("#edit-MAYPHU-TINHTRANGHIENTAIO").val(TINHTRANGHIENTAI);
         }
         function edit_MAYPHU() {
@@ -4612,6 +4708,9 @@
                             THOIGIANCONLAI: $("#edit-MAYPHU-THONGBAODINHMUC-THOIGIANCONLAI").val(),
                             DINHMUCSUACHUA: $("#edit-MAYPHU-THONGBAODINHMUC-DINHMUCSUACHUA").val(),
                             DINHMUCTHONGBAO: $("#edit-MAYPHU-THONGBAODINHMUC-DINHMUCTHONGBAO").val(),
+                            LOAICANHBAO: {
+                                ID: $("#edit-MAYPHU-THONGBAODINHMUC-LOAICANHBAO").val()
+                            }
                         },
                         TINHTRANGHIENTAI: $("#edit-MAYPHU-TINHTRANGHIENTAI").val(),
                     };
@@ -4680,7 +4779,7 @@
                         else {
                             tabletext += 'style="background-color: #ffffff;"><td style="text-align: center;">' + i + '</td>';
                         }
-                        tabletext += "<td>" + item.THONGSOCOBAN.KYHIEU + "</td><td>" + item.THONGSOCOBAN.SOHIEUMAY + "</td><td style='text-align: center;'>" + item.THONGSOCOBAN.NAMSANXUAT + "</td><td>" + item.THONGSOCOBAN.NOISANXUAT + "</td><td>" + item.THONGSOCOBAN.CONGSUAT + "</td><td>" + item.THONGSOCOBAN.HETHONGDIEUKHIEN + "</td><td>" + item.TINHTRANGHIENTAI+ '</td><td><div style="display: flex; justify-content: space-around;"><a href="#" class="edit" title="Sửa" data-toggle="modal" data-target="#model-edit-MAYCHUYENDUNG"  onclick="onclick_edit_MAYCHUYENDUNG(`' + item.ID + '`,`' + item.THONGSOCOBAN.KYHIEU + '`,`' + item.THONGSOCOBAN.NAMSANXUAT + '`,`' + item.THONGSOCOBAN.NOISANXUAT + '`,`' + item.THONGSOCOBAN.NAMLAPRAP + '`,`' + item.THONGSOCOBAN.VITRILAPRAP + '`,`' + item.THONGSOCOBAN.SOHIEUMAY + '`,`' + item.THONGSOCOBAN.CONGSUAT + '`,`' + item.THONGSOCOBAN.VONGQUAY + '`,`' + item.THONGSOCOBAN.CHIEUQUAY + '`,`' + item.THONGSOCOBAN.NGUONKHOIDONG + '`,`' + item.THONGSOCOBAN.HETHONGDIEUKHIEN + '`,`' + item.THONGSOCOBAN.TRONGLUONG + '`,`' + item.THONGSOCOBAN.KICHTHUOCMAY.DAI + '`,`' + item.THONGSOCOBAN.KICHTHUOCMAY.RONG + '`,`' + item.THONGSOCOBAN.KICHTHUOCMAY.CAO + '`,`' + item.THONGSOCOBAN.CHUKYSUACHUA.TIEUTU + '`,`' + item.THONGSOCOBAN.CHUKYSUACHUA.TRUNGTU + '`,`' + item.THONGSOCOBAN.CHUKYSUACHUA.DAITU + '`,`' + item.THONGSOCOBAN.LOAIDIEN.DIENAP + '`,`' + item.THONGSOCOBAN.LOAIDIEN.TANSO + '`,`' + item.PHUONGPHAPTRUYENTAI.KYHIEULYHOP_BOGIAMVONG + '`,`' + item.PHUONGPHAPTRUYENTAI.SOHIEULYHOP_BOGIAMVONG + '`,`' + item.PHUONGPHAPTRUYENTAI.TYSOTRUYEN + '`,`' + item.PHUONGPHAPTRUYENTAI.KHOPNOICUNG + '`,`' + item.PHUONGPHAPTRUYENTAI.KHOPNOIMEM + '`,`' + item.PHUONGPHAPTRUYENTAI.CUROA + '`,`' + item.PHUONGPHAPTRUYENTAI.KYHIEUVONGBI + '`,`' + item.THONGBAODINHMUC.SUACHUACUOICUNG + '`,`' + item.THONGBAODINHMUC.MUCCANHBAO + '`,`' + item.THONGBAODINHMUC.THOIGIANCONLAI + '`,`' + item.THONGBAODINHMUC.DINHMUCSUACHUA + '`,`' + item.THONGBAODINHMUC.DINHMUCTHONGBAO + '`,`' + item.TINHTRANGHIENTAI + '`)"><i class="material-icons">&#xE254;</i></a><a href="#" class="delete" title="Xóa" onclick="delete_MAYCHINH(`' + item.ID + '`)"><i class="material-icons">&#xE872;</i></a></div></td></tr>';
+                        tabletext += "<td>" + item.THONGSOCOBAN.KYHIEU + "</td><td>" + item.THONGSOCOBAN.SOHIEUMAY + "</td><td style='text-align: center;'>" + item.THONGSOCOBAN.NAMSANXUAT + "</td><td>" + item.THONGSOCOBAN.NOISANXUAT + "</td><td>" + item.THONGSOCOBAN.CONGSUAT + "</td><td>" + item.THONGSOCOBAN.HETHONGDIEUKHIEN + "</td><td>" + item.TINHTRANGHIENTAI + '</td><td><div style="display: flex; justify-content: space-around;"><a href="#" class="edit" title="Sửa" data-toggle="modal" data-target="#model-edit-MAYCHUYENDUNG"  onclick="onclick_edit_MAYCHUYENDUNG(`' + item.ID + '`,`' + item.THONGSOCOBAN.KYHIEU + '`,`' + item.THONGSOCOBAN.NAMSANXUAT + '`,`' + item.THONGSOCOBAN.NOISANXUAT + '`,`' + item.THONGSOCOBAN.NAMLAPRAP + '`,`' + item.THONGSOCOBAN.VITRILAPRAP + '`,`' + item.THONGSOCOBAN.SOHIEUMAY + '`,`' + item.THONGSOCOBAN.CONGSUAT + '`,`' + item.THONGSOCOBAN.VONGQUAY + '`,`' + item.THONGSOCOBAN.CHIEUQUAY + '`,`' + item.THONGSOCOBAN.NGUONKHOIDONG + '`,`' + item.THONGSOCOBAN.HETHONGDIEUKHIEN + '`,`' + item.THONGSOCOBAN.TRONGLUONG + '`,`' + item.THONGSOCOBAN.KICHTHUOCMAY.DAI + '`,`' + item.THONGSOCOBAN.KICHTHUOCMAY.RONG + '`,`' + item.THONGSOCOBAN.KICHTHUOCMAY.CAO + '`,`' + item.THONGSOCOBAN.CHUKYSUACHUA.TIEUTU + '`,`' + item.THONGSOCOBAN.CHUKYSUACHUA.TRUNGTU + '`,`' + item.THONGSOCOBAN.CHUKYSUACHUA.DAITU + '`,`' + item.THONGSOCOBAN.LOAIDIEN.DIENAP + '`,`' + item.THONGSOCOBAN.LOAIDIEN.TANSO + '`,`' + item.PHUONGPHAPTRUYENTAI.KYHIEULYHOP_BOGIAMVONG + '`,`' + item.PHUONGPHAPTRUYENTAI.SOHIEULYHOP_BOGIAMVONG + '`,`' + item.PHUONGPHAPTRUYENTAI.TYSOTRUYEN + '`,`' + item.PHUONGPHAPTRUYENTAI.KHOPNOICUNG + '`,`' + item.PHUONGPHAPTRUYENTAI.KHOPNOIMEM + '`,`' + item.PHUONGPHAPTRUYENTAI.CUROA + '`,`' + item.PHUONGPHAPTRUYENTAI.KYHIEUVONGBI + '`,`' + item.THONGBAODINHMUC.SUACHUACUOICUNG + '`,`' + item.THONGBAODINHMUC.MUCCANHBAO + '`,`' + item.THONGBAODINHMUC.THOIGIANCONLAI + '`,`' + item.THONGBAODINHMUC.LOAICANHBAO.ID  + '`,`' + item.THONGBAODINHMUC.DINHMUCSUACHUA + '`,`' + item.THONGBAODINHMUC.DINHMUCTHONGBAO + '`,`' + item.TINHTRANGHIENTAI + '`)"><i class="material-icons">&#xE254;</i></a><a href="#" class="delete" title="Xóa" onclick="delete_MAYCHINH(`' + item.ID + '`)"><i class="material-icons">&#xE872;</i></a></div></td></tr>';
                         i = i + 1;
                     });
                     tabletext += "</tbody>";
@@ -4783,6 +4882,9 @@
                             THOIGIANCONLAI: $("#add-MAYCHUYENDUNG-THONGBAODINHMUC-THOIGIANCONLAI").val(),
                             DINHMUCSUACHUA: $("#add-MAYCHUYENDUNG-THONGBAODINHMUC-DINHMUCSUACHUA").val(),
                             DINHMUCTHONGBAO: $("#add-MAYCHUYENDUNG-THONGBAODINHMUC-DINHMUCTHONGBAO").val(),
+                            LOAICANHBAO: {
+                                ID: $("#add-MAYCHUYENDUNG-THONGBAODINHMUC-LOAICANHBAO").val()
+                            }
                         },
                         TINHTRANGHIENTAI: $("#add-MAYCHUYENDUNG-TINHTRANGHIENTAI").val(),
                     };
@@ -4799,39 +4901,41 @@
                             toastError("Thất bại", ret.responseJSON.Message);
                         },
                         complete: function () { // Set our complete callback, adding the .hidden class and hiding the spinner.
-                            $("#add-MAYCHUYENDUNG-THONGSOCOBAN-KYHIEU").val();
-                            $("#add-MAYCHUYENDUNG-THONGSOCOBAN-NAMSANXUAT").val();
-                            $("#add-MAYCHUYENDUNG-THONGSOCOBAN-NOISANXUAT").val();
-                            $("#add-MAYCHUYENDUNG-THONGSOCOBAN-NAMLAPRAP").val();
-                            $("#add-MAYCHUYENDUNG-THONGSOCOBAN-VITRILAPRAP").val();
-                            $("#add-MAYCHUYENDUNG-THONGSOCOBAN-SOHIEUMAY").val();
-                            $("#add-MAYCHUYENDUNG-THONGSOCOBAN-CONGSUAT").val();
-                            $("#add-MAYCHUYENDUNG-THONGSOCOBAN-VONGQUAY").val();
-                            $("#add-MAYCHUYENDUNG-THONGSOCOBAN-CHIEUQUAY").val();
-                            $("#add-MAYCHUYENDUNG-THONGSOCOBAN-NGUONKHOIDONG").val();
-                            $("#add-MAYCHUYENDUNG-THONGSOCOBAN-HETHONGDIEUKHIEN").val();
-                            $("#add-MAYCHUYENDUNG-THONGSOCOBAN-KICHTHUOCMAY-DAI").val();
-                            $("#add-MAYCHUYENDUNG-THONGSOCOBAN-KICHTHUOCMAY-RONG").val();
-                            $("#add-MAYCHUYENDUNG-THONGSOCOBAN-KICHTHUOCMAY-CAO").val();
-                            $("#add-MAYCHUYENDUNG-THONGSOCOBAN-TRONGLUONG").val();
-                            $("#add-MAYCHUYENDUNG-THONGSOCOBAN-CHUKYSUACHUA-TIEUTU").val();
-                            $("#add-MAYCHUYENDUNG-THONGSOCOBAN-CHUKYSUACHUA-TRUNGTU").val();
-                            $("#add-MAYCHUYENDUNG-THONGSOCOBAN-CHUKYSUACHUA-DAITU").val();
-                            $("#add-MAYCHUYENDUNG-THONGSOCOBAN-LOAIDIEN-DIENAP").val();
-                            $("#add-MAYCHUYENDUNG-THONGSOCOBAN-LOAIDIEN-TANSO").val();
-                            $("#add-MAYCHUYENDUNG-PHUONGPHAPTRUYENTAI-KYHIEULYHOP_BOGIAMVONG").val();
-                            $("#add-MAYCHUYENDUNG-PHUONGPHAPTRUYENTAI-SOHIEULYHOP_BOGIAMVONG").val();
-                            $("#add-MAYCHUYENDUNG-PHUONGPHAPTRUYENTAI-TYSOTRUYEN").val();
-                            $("#add-MAYCHUYENDUNG-PHUONGPHAPTRUYENTAI-KHOPNOICUNG").val();
-                            $("#add-MAYCHUYENDUNG-PHUONGPHAPTRUYENTAI-KHOPNOIMEM").val();
-                            $("#add-MAYCHUYENDUNG-PHUONGPHAPTRUYENTAI-CUROA").val();
-                            $("#add-MAYCHUYENDUNG-PHUONGPHAPTRUYENTAI-KYHIEUVONGBI").val();
+                            $("#add-MAYCHUYENDUNG-THONGSOCOBAN-KYHIEU").val("");
+                            $("#add-MAYCHUYENDUNG-THONGSOCOBAN-NAMSANXUAT").val("");
+                            $("#add-MAYCHUYENDUNG-THONGSOCOBAN-NOISANXUAT").val("");
+                            $("#add-MAYCHUYENDUNG-THONGSOCOBAN-NAMLAPRAP").val("");
+                            $("#add-MAYCHUYENDUNG-THONGSOCOBAN-VITRILAPRAP").val("");
+                            $("#add-MAYCHUYENDUNG-THONGSOCOBAN-SOHIEUMAY").val("");
+                            $("#add-MAYCHUYENDUNG-THONGSOCOBAN-CONGSUAT").val("");
+                            $("#add-MAYCHUYENDUNG-THONGSOCOBAN-VONGQUAY").val("");
+                            $("#add-MAYCHUYENDUNG-THONGSOCOBAN-CHIEUQUAY").val("");
+                            $("#add-MAYCHUYENDUNG-THONGSOCOBAN-NGUONKHOIDONG").val("");
+                            $("#add-MAYCHUYENDUNG-THONGSOCOBAN-HETHONGDIEUKHIEN").val("");
+                            $("#add-MAYCHUYENDUNG-THONGSOCOBAN-KICHTHUOCMAY-DAI").val("");
+                            $("#add-MAYCHUYENDUNG-THONGSOCOBAN-KICHTHUOCMAY-RONG").val("");
+                            $("#add-MAYCHUYENDUNG-THONGSOCOBAN-KICHTHUOCMAY-CAO").val("");
+                            $("#add-MAYCHUYENDUNG-THONGSOCOBAN-TRONGLUONG").val("");
+                            $("#add-MAYCHUYENDUNG-THONGSOCOBAN-CHUKYSUACHUA-TIEUTU").val("");
+                            $("#add-MAYCHUYENDUNG-THONGSOCOBAN-CHUKYSUACHUA-TRUNGTU").val("");
+                            $("#add-MAYCHUYENDUNG-THONGSOCOBAN-CHUKYSUACHUA-DAITU").val("");
+                            $("#add-MAYCHUYENDUNG-THONGSOCOBAN-LOAIDIEN-DIENAP").val("");
+                            $("#add-MAYCHUYENDUNG-THONGSOCOBAN-LOAIDIEN-TANSO").val("");
+                            $("#add-MAYCHUYENDUNG-PHUONGPHAPTRUYENTAI-KYHIEULYHOP_BOGIAMVONG").val("");
+                            $("#add-MAYCHUYENDUNG-PHUONGPHAPTRUYENTAI-SOHIEULYHOP_BOGIAMVONG").val("");
+                            $("#add-MAYCHUYENDUNG-PHUONGPHAPTRUYENTAI-TYSOTRUYEN").val("");
+                            $("#add-MAYCHUYENDUNG-PHUONGPHAPTRUYENTAI-KHOPNOICUNG").val("");
+                            $("#add-MAYCHUYENDUNG-PHUONGPHAPTRUYENTAI-KHOPNOIMEM").val("");
+                            $("#add-MAYCHUYENDUNG-PHUONGPHAPTRUYENTAI-CUROA").val("");
+                            $("#add-MAYCHUYENDUNG-PHUONGPHAPTRUYENTAI-KYHIEUVONGBI").val("");
 
-                            $("#add-MAYCHUYENDUNG-THONGBAODINHMUC-SUACHUACUOICUNG").val();
-                            $("#add-MAYCHUYENDUNG-THONGBAODINHMUC-MUCCANHBAO").val();
-                            $("#add-MAYCHUYENDUNG-THONGBAODINHMUC-THOIGIANCONLAI").val();
-                            $("#add-MAYCHUYENDUNG-THONGBAODINHMUC-DINHMUCSUACHUA").val();
-                            $("#add-MAYCHUYENDUNG-THONGBAODINHMUC-DINHMUCTHONGBAO").val();
+                            $("#add-MAYCHUYENDUNG-THONGBAODINHMUC-SUACHUACUOICUNG").val("");
+                            $("#add-MAYCHUYENDUNG-THONGBAODINHMUC-MUCCANHBAO").val("");
+                            $("#add-MAYCHUYENDUNG-THONGBAODINHMUC-THOIGIANCONLAI").val("");
+                            $("#add-MAYCHUYENDUNG-THONGBAODINHMUC-DINHMUCSUACHUA").val("");
+                            $("#add-MAYCHUYENDUNG-THONGBAODINHMUC-DINHMUCTHONGBAO").val("");
+                            list_LoaiCanhBao('', 'add-MAYCHUYENDUNG-THONGBAODINHMUC-LOAICANHBAO');
+                            $("#add-MAYCHUYENDUNG-TINHTRANGHIENTAI").val("");
                             $('#model-add-MAYCHUYENDUNG').modal("hide");
                         },
                     });
@@ -4843,7 +4947,7 @@
             }
             return false;
         }
-        function onclick_edit_MAYCHUYENDUNG(ID, KYHIEU, NAMSANXUAT, NOISANXUAT, NAMLAPRAP, VITRILAPRAP, SOHIEUMAY, CONGSUAT, VONGQUAY, CHIEUQUAY, NGUONKHOIDONG, HETHONGDIEUKHIEN, TRONGLUONG, DAI, RONG, CAO, TIEUTU, TRUNGTU, DAITU, DIENAP, TANSO, KYHIEULYHOP_BOGIAMVONG, SOHIEULYHOP_BOGIAMVONG, TYSOTRUYEN, KHOPNOICUNG, KHOPNOIMEM, CUROA, KYHIEUVONGBI, SUACHUACUOICUNG, MUCCANHBAO, THOIGIANCONLAI, DINHMUCSUACHUA, DINHMUCTHONGBAO, TINHTRANGHIENTAI) {
+        function onclick_edit_MAYCHUYENDUNG(ID, KYHIEU, NAMSANXUAT, NOISANXUAT, NAMLAPRAP, VITRILAPRAP, SOHIEUMAY, CONGSUAT, VONGQUAY, CHIEUQUAY, NGUONKHOIDONG, HETHONGDIEUKHIEN, TRONGLUONG, DAI, RONG, CAO, TIEUTU, TRUNGTU, DAITU, DIENAP, TANSO, KYHIEULYHOP_BOGIAMVONG, SOHIEULYHOP_BOGIAMVONG, TYSOTRUYEN, KHOPNOICUNG, KHOPNOIMEM, CUROA, KYHIEUVONGBI, SUACHUACUOICUNG, MUCCANHBAO, THOIGIANCONLAI, ID_LOAICANHBAO, DINHMUCSUACHUA, DINHMUCTHONGBAO, TINHTRANGHIENTAI) {
             $("#edit-MAYCHUYENDUNG-ID").val(ID);
             $("#edit-MAYCHUYENDUNG-THONGSOCOBAN-KYHIEU").val(KYHIEU);
             $("#edit-MAYCHUYENDUNG-THONGSOCOBAN-NAMSANXUAT").val(NAMSANXUAT);
@@ -4878,6 +4982,7 @@
             $("#edit-MAYCHUYENDUNG-THONGBAODINHMUC-THOIGIANCONLAI").val(THOIGIANCONLAI);
             $("#edit-MAYCHUYENDUNG-THONGBAODINHMUC-DINHMUCSUACHUA").val(DINHMUCSUACHUA);
             $("#edit-MAYCHUYENDUNG-THONGBAODINHMUC-DINHMUCTHONGBAO").val(DINHMUCTHONGBAO);
+            list_LoaiCanhBao(ID_LOAICANHBAO, 'edit-MAYCHUYENDUNG-THONGBAODINHMUC-LOAICANHBAO');
             $("#edit-MAYCHUYENDUNG-TINHTRANGHIENTAI").val(TINHTRANGHIENTAI);
         }
         function edit_MAYCHUYENDUNG() {
@@ -4930,6 +5035,9 @@
                             THOIGIANCONLAI: $("#edit-MAYCHUYENDUNG-THONGBAODINHMUC-THOIGIANCONLAI").val(),
                             DINHMUCSUACHUA: $("#edit-MAYCHUYENDUNG-THONGBAODINHMUC-DINHMUCSUACHUA").val(),
                             DINHMUCTHONGBAO: $("#edit-MAYCHUYENDUNG-THONGBAODINHMUC-DINHMUCTHONGBAO").val(),
+                            LOAICANHBAO: {
+                                ID: $("#edit-MAYCHUYENDUNG-THONGBAODINHMUC-LOAICANHBAO").val()
+                            }
                         },
                         TINHTRANGHIENTAI: $("#edit-MAYCHUYENDUNG-TINHTRANGHIENTAI").val(),
                     };
