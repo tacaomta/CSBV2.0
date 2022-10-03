@@ -4642,6 +4642,11 @@
             Thời gian hoạt động, cảnh báo sắp đến lần sửa chữa, bảo dưỡng tiếp theo (giờ)
             </summary>
         </member>
+        <member name="P:DHSLAPI.Models.THONGBAODINHMUC.LOAICANHBAO">
+            <summary>
+            Loại cảnh báo
+            </summary>
+        </member>
         <member name="T:DHSLAPI.Models.THONGSOCOBAN">
             <summary>
             THông số cơ bản
