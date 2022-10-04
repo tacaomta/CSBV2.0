@@ -320,12 +320,12 @@
     <Content Include="Page_Master\TheoDoiCaiHoanThayThe.aspx" />
     <Content Include="Page_Master\TheoDoiSuaChuaTau.aspx" />
     <Content Include="Page_Master\ThoiGianLamViecMay.aspx" />
+    <Content Include="Page_Master\ThongKe.aspx" />
     <Content Include="Page_Master\TinhNangChuYeu.aspx" />
     <Content Include="Page_Master\TinhNangThietBi.aspx" />
     <Content Include="Page_Master\TrangChu.aspx" />
     <Content Include="Page_Master\Update_Ship.aspx" />
     <Content Include="Page_Master\Update_Staff.aspx" />
-    <Content Include="Page_Master\WebForm1.aspx" />
     <Content Include="reports\report.docx" />
     <Content Include="Master\TrangChu.Master" />
     <Content Include="Master\LayoutAdmin.Master" />
@@ -373,6 +373,7 @@
     <Content Include="Scripts\vendor\buttons.html5.min.js" />
     <Content Include="Scripts\vendor\buttons.print.min.js" />
     <Content Include="Scripts\vendor\chart.min.js" />
+    <Content Include="Scripts\vendor\Chart260.min.js" />
     <Content Include="Scripts\vendor\dataTables.bootstrap4.min.js" />
     <Content Include="Scripts\vendor\dataTables.buttons.min.js" />
     <Content Include="Scripts\vendor\dataTables.responsive.min.js" />
@@ -690,6 +691,13 @@
     <Compile Include="Page_Master\ThoiGianLamViecMay.aspx.designer.cs">
       <DependentUpon>ThoiGianLamViecMay.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Page_Master\ThongKe.aspx.cs">
+      <DependentUpon>ThongKe.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page_Master\ThongKe.aspx.designer.cs">
+      <DependentUpon>ThongKe.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Page_Master\TinhNangChuYeu.aspx.cs">
       <DependentUpon>TinhNangChuYeu.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -724,13 +732,6 @@
     </Compile>
     <Compile Include="Page_Master\Update_Staff.aspx.designer.cs">
       <DependentUpon>Update_Staff.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Page_Master\WebForm1.aspx.cs">
-      <DependentUpon>WebForm1.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Page_Master\WebForm1.aspx.designer.cs">
-      <DependentUpon>WebForm1.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="reports\MayChinh.Designer.cs">
