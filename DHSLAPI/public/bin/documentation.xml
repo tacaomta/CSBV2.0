@@ -2999,6 +2999,11 @@
             Nội dung sửa chữa
             </summary>
         </member>
+        <member name="P:DHSLAPI.Models.BIEUDOTOCDOTOIDA.SHTAU">
+            <summary>
+            Số hiệu tàu
+            </summary>
+        </member>
         <member name="T:DHSLAPI.Models.BOMDAUNUOCTHONGGIO">
             <summary>
             Các thiết bị bơm dầu, nước và thông gió
