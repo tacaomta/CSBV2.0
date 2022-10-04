@@ -586,6 +586,19 @@
             <param name="id">id của neo</param>
             <returns></returns>
         </member>
+        <member name="T:DHSLAPI.Controllers.BIEUDOController">
+            <summary>
+            Biểu đồ thống kê
+            </summary>
+        </member>
+        <member name="M:DHSLAPI.Controllers.BIEUDOController.LAYBIEUDOTOCDOTOIDA(System.String)">
+            <summary>
+            Biểu đồ tốc độ tối đa. Yêu cầu tàu phải có thông tin sửa chữa hàng năm,
+            nếu chưa có thông tin sửa chữa, biểu đồ hiển thị chưa có thông tin sửa chữa
+            </summary>
+            <param name="id">Id của tàu</param>
+            <returns></returns>
+        </member>
         <member name="T:DHSLAPI.Controllers.BOMDAUNUOCTHONGGIOController">
             <summary>
             Bơm dầu, nước thông gió
@@ -2965,6 +2978,26 @@
             </summary>
             <param name="id">Id của tời neo</param>
             <returns></returns>
+        </member>
+        <member name="T:DHSLAPI.Models.BIEUDOTOCDOTOIDA">
+            <summary>
+            Thông tin biểu đồ tốc độ tối đa
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.BIEUDOTOCDOTOIDA.NAM">
+            <summary>
+            Năm kết thúc sửa chữa
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.BIEUDOTOCDOTOIDA.TOCDO">
+            <summary>
+            Tốc độ tối đa của tàu sau khi sửa chữa
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.BIEUDOTOCDOTOIDA.NOIDUNG_SUACHUA">
+            <summary>
+            Nội dung sửa chữa
+            </summary>
         </member>
         <member name="T:DHSLAPI.Models.BOMDAUNUOCTHONGGIO">
             <summary>
