@@ -1059,7 +1059,7 @@
         </member>
         <member name="T:DHSLAPI.Controllers.DANGKYNEOXICHNEOController">
             <summary>
-            Đăng ký chất lượng neo, xích neo
+            Đăng ký thay đổi, mất, bổ sung neo, xích neo
             </summary>
         </member>
         <member name="M:DHSLAPI.Controllers.DANGKYNEOXICHNEOController.LAYTHONGTINDANGKYNEOXICHNEO(System.String)">
@@ -1295,6 +1295,17 @@
             </summary>
             <param name="id">id thông tin</param>
             <returns></returns>
+        </member>
+        <member name="T:DHSLAPI.Controllers.LOAITHIETBIController">
+            <summary>
+            Loại thiết bị
+            </summary>
+        </member>
+        <member name="M:DHSLAPI.Controllers.LOAITHIETBIController.LAYTHONGTINLOAITHIETBI">
+            <summary>
+            Lấy danh mục loại thiết bị
+            </summary>
+            <returns>Danh mục loại thiết bị</returns>
         </member>
         <member name="T:DHSLAPI.Controllers.MajoringController">
             <summary>
@@ -4158,6 +4169,31 @@
         <member name="P:DHSLAPI.Models.THIETBIKHAC.SOLUONG">
             <summary>
             Số lượng
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.THIETBIKHAC.LOAITB">
+            <summary>
+            Loại thiết bị
+            </summary>
+        </member>
+        <member name="T:DHSLAPI.Models.LOAITHIETBI">
+            <summary>
+            Loại trang bị: Thiết bị lạnh, giá đỡ, xuồng....
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.LOAITHIETBI.ID">
+            <summary>
+            ID
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.LOAITHIETBI.TENLOAITB">
+            <summary>
+            Tên loại thiết bị
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.LOAITHIETBI.GHICHU">
+            <summary>
+            Ghi chú
             </summary>
         </member>
         <member name="T:DHSLAPI.Models.THOIGIANLAMVIECMAY">
