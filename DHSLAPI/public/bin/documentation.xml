@@ -1073,7 +1073,7 @@
             <summary>
             Thêm thông tin đăng ký thay đổi, mất, bổ sung neo, xích neo cho tàu
             </summary>
-            <param name="id">id tàu</param>
+            <param name="id">id neo, xích neo</param>
             <param name="mc">Thông tin đăng ký thay đổi, mất, bổ sung neo, xích neo</param>
             <returns></returns>
         </member>
@@ -4192,6 +4192,31 @@
             </summary>
         </member>
         <member name="P:DHSLAPI.Models.LOAITHIETBI.GHICHU">
+            <summary>
+            Ghi chú
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.LOAITHIETBI.NHOMTB">
+            <summary>
+            Nhóm thiết bị
+            </summary>
+        </member>
+        <member name="T:DHSLAPI.Models.NHOMTHIETBI">
+            <summary>
+            Nhóm thiết bị
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.NHOMTHIETBI.ID">
+            <summary>
+            ID
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.NHOMTHIETBI.TENNHOM">
+            <summary>
+            Tên nhóm
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.NHOMTHIETBI.GHICHU">
             <summary>
             Ghi chú
             </summary>
