@@ -1069,6 +1069,14 @@
             <param name="id">id tàu</param>
             <returns></returns>
         </member>
+        <member name="M:DHSLAPI.Controllers.DANGKYNEOXICHNEOController.LAYTHONGTINDANGKYNEOXICHNEOCHITIET(System.String)">
+            <summary>
+            Lấy thông tin đăng ký thay đổi mất bổ sung của neo, xích neo
+            theo id của nó
+            </summary>
+            <param name="id">id neo, xích neo</param>
+            <returns></returns>
+        </member>
         <member name="M:DHSLAPI.Controllers.DANGKYNEOXICHNEOController.InsertDKNEOXICHNEO(System.String,DHSLAPI.Models.DANGKYNEOXICHNEO)">
             <summary>
             Thêm thông tin đăng ký thay đổi, mất, bổ sung neo, xích neo cho tàu
@@ -1693,6 +1701,17 @@
             </summary>
             <param name="id">id của nhật ký</param>
             <returns></returns>
+        </member>
+        <member name="T:DHSLAPI.Controllers.NHOMTHIETBIController">
+            <summary>
+            Nhóm thiết bị
+            </summary>
+        </member>
+        <member name="M:DHSLAPI.Controllers.NHOMTHIETBIController.LAYTHONGTINNHOMTHIETBI">
+            <summary>
+            Lấy danh mục nhóm thiết bị
+            </summary>
+            <returns>Danh mục nhóm thiết bị</returns>
         </member>
         <member name="T:DHSLAPI.Controllers.P2Controller">
             <summary>
