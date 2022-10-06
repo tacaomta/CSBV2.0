@@ -1315,6 +1315,13 @@
             </summary>
             <returns>Danh mục loại thiết bị</returns>
         </member>
+        <member name="M:DHSLAPI.Controllers.LOAITHIETBIController.LAYTHONGTINLOAITHIETBITN(System.String)">
+            <summary>
+            Lấy loại thiết bị theo nhóm thiết bị
+            </summary>
+            <param name="id">id của nhóm thiết bị</param>
+            <returns></returns>
+        </member>
         <member name="T:DHSLAPI.Controllers.MajoringController">
             <summary>
             API Chuyên ngành
