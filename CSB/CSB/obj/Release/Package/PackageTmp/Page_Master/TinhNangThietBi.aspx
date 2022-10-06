@@ -211,7 +211,7 @@
                                         <h5>CÁC TRANG BỊ KHÁC</h5>
                                         <div class="btn-group">
                                             <button onclick="loadDataList_TRANGBIKHAC()" class="btn btn-secondary mb-2"><span class="bi-arrow-clockwise"></span>&nbsp;Load dữ liệu</button>
-                                            <button id="btn_add_TRANGBIKHAC" class="btn btn-secondary mb-2" data-toggle="modal" data-target="#model-add-TRANGBIKHAC" style="padding-top: 4px;"><span class="bi bi-plus-circle"></span>Thêm trang bị khác</button>
+                                            <button id="btn_add_TRANGBIKHAC" onclick="click_add_TRANGBIKHAC()" class="btn btn-secondary mb-2" data-toggle="modal" data-target="#model-add-TRANGBIKHAC" style="padding-top: 4px;"><span class="bi bi-plus-circle"></span>Thêm trang bị khác</button>
                                             <button onclick="DangKyChatLuong(8)" class="btn btn-secondary mb-2"><i class="bi bi-x-diamond-fill"></i>&nbsp; Thêm đăng ký chất lượng</button>
                                         </div>
                                         <table id="table-TRANGBIKHAC" class="table table-bordered table-striped table-md" style="width: 100%">
@@ -3226,6 +3226,23 @@
                                 <div class="row clearfix ">
                                     <div style="width: 100%; float: left; padding: 10px">
                                         <div class="form-group" style="display: flex">
+                                            <label class="col-md-5 control-label"><strong>Nhóm thiết bị  : </strong></label>
+                                            <div class="col-md-7">
+                                                <select class="form-control" id="add-TRANGBIKHAC-NHOMTHIETBI"></select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div style="width: 100%; float: left; padding: 10px">
+                                        <div class="form-group" style="display: flex">
+                                            <label class="col-md-5 control-label"><strong>Loại thiết bị  : </strong></label>
+                                            <div class="col-md-7">
+                                                <select class="form-control" id="add-TRANGBIKHAC-LOAITHIETBI"></select>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div style="width: 100%; float: left; padding: 10px">
+                                        <div class="form-group" style="display: flex">
                                             <label class="col-md-5 control-label"><strong>Tên trang thiết bị   : </strong></label>
                                             <div class="col-md-7">
                                                 <input type="text" class="form-control" id="add-TRANGBIKHAC-TENTB" placeholder="Nhập tên trang thiết bị" required>
@@ -3248,6 +3265,7 @@
                                             </div>
                                         </div>
                                     </div>
+
                                 </div>
                             </div>
                             <div class="modal-footer">
@@ -3270,6 +3288,23 @@
                             </div>
                             <div class="modal-body">
                                 <div class="row clearfix ">
+                                    <div style="width: 100%; float: left; padding: 10px">
+                                        <div class="form-group" style="display: flex">
+                                            <label class="col-md-5 control-label"><strong>Nhóm thiết bị  : </strong></label>
+                                            <div class="col-md-7">
+                                                <select class="form-control" id="edit-TRANGBIKHAC-NHOMTHIETBI"></select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div style="width: 100%; float: left; padding: 10px">
+                                        <div class="form-group" style="display: flex">
+                                            <label class="col-md-5 control-label"><strong>Loại thiết bị  : </strong></label>
+                                            <div class="col-md-7">
+                                                <select class="form-control" id="edit-TRANGBIKHAC-LOAITHIETBI"></select>
+                                            </div>
+                                        </div>
+                                    </div>
+
                                     <div style="width: 100%; float: left; padding: 10px">
                                         <div class="form-group" style="display: flex">
                                             <label class="col-md-5 control-label"><strong>Tên trang thiết bị   : </strong></label>
@@ -3565,6 +3600,7 @@
         }
         $(document).ready(function () {
             Ship_ID = getParameterByName('Ship_ID');
+         
             if (Ship_ID == null) {
                 history.back();
             }
@@ -3601,6 +3637,7 @@
             }
             else if (i == 6) {
                 $("#tabNEOXICHNEO").tab('show');
+              
                 loadDataList_NEOXICHNEO();
             }
             else if (i == 7) {
@@ -3609,6 +3646,7 @@
             }
             else if (i == 8) {
                 $("#tabTRANGBIKHAC").tab('show');
+                list_NhomTB('', 'add-TRANGBIKHAC-NHOMTHIETBI');
                 loadDataList_TRANGBIKHAC();
             }
             else {
@@ -4779,7 +4817,7 @@
                         else {
                             tabletext += 'style="background-color: #ffffff;"><td style="text-align: center;">' + i + '</td>';
                         }
-                        tabletext += "<td>" + item.THONGSOCOBAN.KYHIEU + "</td><td>" + item.THONGSOCOBAN.SOHIEUMAY + "</td><td style='text-align: center;'>" + item.THONGSOCOBAN.NAMSANXUAT + "</td><td>" + item.THONGSOCOBAN.NOISANXUAT + "</td><td>" + item.THONGSOCOBAN.CONGSUAT + "</td><td>" + item.THONGSOCOBAN.HETHONGDIEUKHIEN + "</td><td>" + item.TINHTRANGHIENTAI + '</td><td><div style="display: flex; justify-content: space-around;"><a href="#" class="edit" title="Sửa" data-toggle="modal" data-target="#model-edit-MAYCHUYENDUNG"  onclick="onclick_edit_MAYCHUYENDUNG(`' + item.ID + '`,`' + item.THONGSOCOBAN.KYHIEU + '`,`' + item.THONGSOCOBAN.NAMSANXUAT + '`,`' + item.THONGSOCOBAN.NOISANXUAT + '`,`' + item.THONGSOCOBAN.NAMLAPRAP + '`,`' + item.THONGSOCOBAN.VITRILAPRAP + '`,`' + item.THONGSOCOBAN.SOHIEUMAY + '`,`' + item.THONGSOCOBAN.CONGSUAT + '`,`' + item.THONGSOCOBAN.VONGQUAY + '`,`' + item.THONGSOCOBAN.CHIEUQUAY + '`,`' + item.THONGSOCOBAN.NGUONKHOIDONG + '`,`' + item.THONGSOCOBAN.HETHONGDIEUKHIEN + '`,`' + item.THONGSOCOBAN.TRONGLUONG + '`,`' + item.THONGSOCOBAN.KICHTHUOCMAY.DAI + '`,`' + item.THONGSOCOBAN.KICHTHUOCMAY.RONG + '`,`' + item.THONGSOCOBAN.KICHTHUOCMAY.CAO + '`,`' + item.THONGSOCOBAN.CHUKYSUACHUA.TIEUTU + '`,`' + item.THONGSOCOBAN.CHUKYSUACHUA.TRUNGTU + '`,`' + item.THONGSOCOBAN.CHUKYSUACHUA.DAITU + '`,`' + item.THONGSOCOBAN.LOAIDIEN.DIENAP + '`,`' + item.THONGSOCOBAN.LOAIDIEN.TANSO + '`,`' + item.PHUONGPHAPTRUYENTAI.KYHIEULYHOP_BOGIAMVONG + '`,`' + item.PHUONGPHAPTRUYENTAI.SOHIEULYHOP_BOGIAMVONG + '`,`' + item.PHUONGPHAPTRUYENTAI.TYSOTRUYEN + '`,`' + item.PHUONGPHAPTRUYENTAI.KHOPNOICUNG + '`,`' + item.PHUONGPHAPTRUYENTAI.KHOPNOIMEM + '`,`' + item.PHUONGPHAPTRUYENTAI.CUROA + '`,`' + item.PHUONGPHAPTRUYENTAI.KYHIEUVONGBI + '`,`' + item.THONGBAODINHMUC.SUACHUACUOICUNG + '`,`' + item.THONGBAODINHMUC.MUCCANHBAO + '`,`' + item.THONGBAODINHMUC.THOIGIANCONLAI + '`,`' + item.THONGBAODINHMUC.LOAICANHBAO.ID  + '`,`' + item.THONGBAODINHMUC.DINHMUCSUACHUA + '`,`' + item.THONGBAODINHMUC.DINHMUCTHONGBAO + '`,`' + item.TINHTRANGHIENTAI + '`)"><i class="material-icons">&#xE254;</i></a><a href="#" class="delete" title="Xóa" onclick="delete_MAYCHINH(`' + item.ID + '`)"><i class="material-icons">&#xE872;</i></a></div></td></tr>';
+                        tabletext += "<td>" + item.THONGSOCOBAN.KYHIEU + "</td><td>" + item.THONGSOCOBAN.SOHIEUMAY + "</td><td style='text-align: center;'>" + item.THONGSOCOBAN.NAMSANXUAT + "</td><td>" + item.THONGSOCOBAN.NOISANXUAT + "</td><td>" + item.THONGSOCOBAN.CONGSUAT + "</td><td>" + item.THONGSOCOBAN.HETHONGDIEUKHIEN + "</td><td>" + item.TINHTRANGHIENTAI + '</td><td><div style="display: flex; justify-content: space-around;"><a href="#" class="edit" title="Sửa" data-toggle="modal" data-target="#model-edit-MAYCHUYENDUNG"  onclick="onclick_edit_MAYCHUYENDUNG(`' + item.ID + '`,`' + item.THONGSOCOBAN.KYHIEU + '`,`' + item.THONGSOCOBAN.NAMSANXUAT + '`,`' + item.THONGSOCOBAN.NOISANXUAT + '`,`' + item.THONGSOCOBAN.NAMLAPRAP + '`,`' + item.THONGSOCOBAN.VITRILAPRAP + '`,`' + item.THONGSOCOBAN.SOHIEUMAY + '`,`' + item.THONGSOCOBAN.CONGSUAT + '`,`' + item.THONGSOCOBAN.VONGQUAY + '`,`' + item.THONGSOCOBAN.CHIEUQUAY + '`,`' + item.THONGSOCOBAN.NGUONKHOIDONG + '`,`' + item.THONGSOCOBAN.HETHONGDIEUKHIEN + '`,`' + item.THONGSOCOBAN.TRONGLUONG + '`,`' + item.THONGSOCOBAN.KICHTHUOCMAY.DAI + '`,`' + item.THONGSOCOBAN.KICHTHUOCMAY.RONG + '`,`' + item.THONGSOCOBAN.KICHTHUOCMAY.CAO + '`,`' + item.THONGSOCOBAN.CHUKYSUACHUA.TIEUTU + '`,`' + item.THONGSOCOBAN.CHUKYSUACHUA.TRUNGTU + '`,`' + item.THONGSOCOBAN.CHUKYSUACHUA.DAITU + '`,`' + item.THONGSOCOBAN.LOAIDIEN.DIENAP + '`,`' + item.THONGSOCOBAN.LOAIDIEN.TANSO + '`,`' + item.PHUONGPHAPTRUYENTAI.KYHIEULYHOP_BOGIAMVONG + '`,`' + item.PHUONGPHAPTRUYENTAI.SOHIEULYHOP_BOGIAMVONG + '`,`' + item.PHUONGPHAPTRUYENTAI.TYSOTRUYEN + '`,`' + item.PHUONGPHAPTRUYENTAI.KHOPNOICUNG + '`,`' + item.PHUONGPHAPTRUYENTAI.KHOPNOIMEM + '`,`' + item.PHUONGPHAPTRUYENTAI.CUROA + '`,`' + item.PHUONGPHAPTRUYENTAI.KYHIEUVONGBI + '`,`' + item.THONGBAODINHMUC.SUACHUACUOICUNG + '`,`' + item.THONGBAODINHMUC.MUCCANHBAO + '`,`' + item.THONGBAODINHMUC.THOIGIANCONLAI + '`,`' + item.THONGBAODINHMUC.LOAICANHBAO.ID + '`,`' + item.THONGBAODINHMUC.DINHMUCSUACHUA + '`,`' + item.THONGBAODINHMUC.DINHMUCTHONGBAO + '`,`' + item.TINHTRANGHIENTAI + '`)"><i class="material-icons">&#xE254;</i></a><a href="#" class="delete" title="Xóa" onclick="delete_MAYCHINH(`' + item.ID + '`)"><i class="material-icons">&#xE872;</i></a></div></td></tr>';
                         i = i + 1;
                     });
                     tabletext += "</tbody>";
@@ -5679,6 +5717,103 @@
         }
 
         // TRANG BỊ KHÁC
+        function list_NhomTB(id_NhomTB, string_NhomTB) {
+            debugger
+            $.ajax({
+                type: "GET",
+                url: linkapi + "nhomthietbi",
+                dataType: "json",
+                success: function (data) {
+                    console.log(data);
+                    $('#' + string_NhomTB).empty();
+                    $.each(data, function (key, item) {
+
+                        if (item.ID == id_NhomTB) {
+                            $('#' + string_NhomTB).append($('<option>', {
+                                selected: true,
+                                value: item.ID,
+                                text: item.TENNHOM
+                            }));
+                        }
+                        else {
+                            $('#' + string_NhomTB).append($('<option>', {
+                                selected: false,
+                                value: item.ID,
+                                text: item.TENNHOM
+                            }));
+                        }
+
+                    });
+                    if (id_NhomTB == '') {
+                        $('#' + string_NhomTB + 'select').val(data[0].ID);
+
+                    }
+                }, error: function (ret) {
+                    console.log('errorGET');
+                },
+                complete: function () { // Set our complete callback, adding the .hidden class and hiding the spinner.
+
+                },
+            });
+        }
+        function list_LoaiTB(id_LoaiTB, id_NhomTB, string_LoaiTB) {
+            debugger
+            $.ajax({
+                type: "GET",
+                url: linkapi + "loaithietbitheonhom?id=" + id_NhomTB,
+                dataType: "json",
+                success: function (data) {
+                    console.log(data);
+                    $('#' + string_LoaiTB).empty();
+
+                    $.each(data, function (key, item) {
+
+                        if (item.ID == id_LoaiTB) {
+                            $('#' + string_LoaiTB).append($('<option>', {
+                                selected: true,
+                                value: item.ID,
+                                text: item.TENLOAITB
+                            }));
+                        }
+                        else {
+                            $('#' + string_LoaiTB).append($('<option>', {
+                                selected: false,
+                                value: item.ID,
+                                text: item.TENLOAITB
+                            }));
+                        }
+
+                    });
+                    if (id_LoaiTB == '') {
+                        $('#' + string_LoaiTB + 'select').val(data[0].ID);
+                        //$('#' + string_LoaiTB).append($('<option>', {
+                        //    selected: false,
+                        //    value: 'null',
+                        //    text: "Không trực thuộc"
+                        //}));
+                    }
+                    //else if (id_LoaiTB == 'null') {
+                    //    $('#' + string_LoaiTB).append($('<option>', {
+                    //        selected: true,
+                    //        value: 'null',
+                    //        text: "Không trực thuộc"
+                    //    }));
+                    //}
+                    //else {
+                    //    $('#' + string_LoaiTB).append($('<option>', {
+                    //        selected: false,
+                    //        value: 'null',
+                    //        text: "Không trực thuộc"
+                    //    }));
+                    //}
+                }, error: function (ret) {
+                    console.log('errorGET');
+                },
+                complete: function () { // Set our complete callback, adding the .hidden class and hiding the spinner.
+                },
+            });
+
+        }
         function loadDataList_TRANGBIKHAC() {
             $.ajax({
                 type: "GET",
@@ -5688,10 +5823,10 @@
                     $('#loader').removeClass('hidden');
                 },
                 success: function (data) {
-                    var tabletext = "<thead><tr><th>STT</th><th>TÊN TRANG THIẾT BỊ</th><th>KÝ HIỆU</th><th>SỐ LƯỢNG</th><th>TÁC VỤ</th></tr></thead><tbody>";
+                    var tabletext = "<thead><tr><th>STT</th><th>NHÓM THIẾT BỊ</th><th>LOẠI THIẾT BỊ</th><th>TÊN TRANG THIẾT BỊ</th><th>KÝ HIỆU</th><th>SỐ LƯỢNG</th><th>TÁC VỤ</th></tr></thead><tbody>";
                     var i = 1;
                     $.each(data, function (key, item) {
-                        tabletext += "<tr><td style='text-align: center;'>" + i + "</td><td>" + item.TENTB + "</td><td>" + item.KYHIEU + "</td><td>" + item.SOLUONG + '</td><td><div style="display: flex; justify-content: space-around;"><a href="#" class="edit" title="Sửa" data-toggle="modal" data-target="#model-edit-TRANGBIKHAC"  onclick="onclick_edit_TRANGBIKHAC(`' + item.ID + '`,`' + item.TENTB + '`,`' + item.KYHIEU + '`,`' + item.SOLUONG + '`)"><i class="material-icons">&#xE254;</i></a><a href="#" class="delete" title="Xóa" onclick="delete_TRANGBIKHAC(`' + item.ID + '`)"><i class="material-icons">&#xE872;</i></a></div></td></tr>';
+                        tabletext += "<tr><td style='text-align: center;'>" + i + "</td><td>" + item.LOAITB.NHOMTB.TENNHOM + "</td><td>" + item.LOAITB.TENLOAITB + "</td><td>" + item.TENTB + "</td><td>" + item.KYHIEU + "</td><td>" + item.SOLUONG + '</td><td><div style="display: flex; justify-content: space-around;"><a href="#" class="edit" title="Sửa" data-toggle="modal" data-target="#model-edit-TRANGBIKHAC"  onclick="onclick_edit_TRANGBIKHAC(`' + item.ID + '`,`' + item.LOAITB.NHOMTB.ID + '`,`' + item.LOAITB.ID + '`,`' + item.TENTB + '`,`' + item.KYHIEU + '`,`' + item.SOLUONG + '`)"><i class="material-icons">&#xE254;</i></a><a href="#" class="delete" title="Xóa" onclick="delete_TRANGBIKHAC(`' + item.ID + '`)"><i class="material-icons">&#xE872;</i></a></div></td></tr>';
                         i = i + 1;
                     });
                     tabletext += "</tbody>";
@@ -5714,6 +5849,8 @@
                     stateSave: true,
                     "columns": [
                         { name: 'STT', width: 80 },
+                        { name: 'NHÓM THIẾT BỊ', width: 420 },
+                        { name: 'LOẠI THIẾT BỊ', width: 420 },
                         { name: 'TÊN TRANG THIẾT BỊ', width: 420 },
                         { name: 'KÝ HIỆU', width: 380 },
                         { name: 'SỐ LƯỢNG', width: 380 },
@@ -5740,6 +5877,16 @@
                 });
             });
         };
+        function click_add_TRANGBIKHAC() {
+            list_NhomTB('', 'add-TRANGBIKHAC-NHOMTHIETBI');
+            list_LoaiTB('', $("#add-TRANGBIKHAC-NHOMTHIETBI").val(), 'add-TRANGBIKHAC-LOAITHIETBI');
+        }
+        $("#add-TRANGBIKHAC-NHOMTHIETBI").change(function () {
+            list_LoaiTB('', $("#add-TRANGBIKHAC-NHOMTHIETBI").val(), 'add-TRANGBIKHAC-LOAITHIETBI');
+        });
+        $("#edit-TRANGBIKHAC-NHOMTHIETBI").change(function () {
+            list_LoaiTB('', $("#edit-TRANGBIKHAC-NHOMTHIETBI").val(), 'edit-TRANGBIKHAC-LOAITHIETBI');
+        });
         function add_TRANGBIKHAC() {
             var form = document.getElementById("form-add-TRANGBIKHAC");
             console.log(form.checkValidity());
@@ -5747,7 +5894,13 @@
                 var TRANGBIKHAC = {
                     TENTB: $("#add-TRANGBIKHAC-TENTB").val(),
                     KYHIEU: $("#add-TRANGBIKHAC-KYHIEU").val(),
-                    SOLUONG: $("#add-TRANGBIKHAC-SOLUONG").val()
+                    SOLUONG: $("#add-TRANGBIKHAC-SOLUONG").val(),
+                    LOAITB: {
+                        ID: $("#add-TRANGBIKHAC-LOAITHIETBI").val(),
+                        NHOMTB: {
+                            ID: $("#add-TRANGBIKHAC-NHOMTHIETBI").val()
+                        }
+                    }
                 };
                 $.ajax({
                     type: "POST",
@@ -5766,16 +5919,20 @@
                         $("#add-TRANGBIKHAC-KYHIEU").val("");
                         $("#add-TRANGBIKHAC-SOLUONG").val("");
                         $('#model-add-TRANGBIKHAC').modal("hide");
+                        list_NhomTB('', 'add-TRANGBIKHAC-NHOMTHIETBI');
+                        list_LoaiTB('', $("#add-TRANGBIKHAC-NHOMTHIETBI").val(), 'add-TRANGBIKHAC-LOAITHIETBI');
                     },
                 });
             }
             return false;
         }
-        function onclick_edit_TRANGBIKHAC(ID, TENTB, KYHIEU, SOLUONG) {
+        function onclick_edit_TRANGBIKHAC(ID,ID_NHOMTB,ID_LOAITB ,TENTB, KYHIEU, SOLUONG) {
             $('#edit-TRANGBIKHAC-ID').val(ID);
             $("#edit-TRANGBIKHAC-TENTB").val(TENTB);
             $("#edit-TRANGBIKHAC-KYHIEU").val(KYHIEU);
             $("#edit-TRANGBIKHAC-SOLUONG").val(SOLUONG);
+            list_NhomTB(ID_NHOMTB, 'edit-TRANGBIKHAC-NHOMTHIETBI');
+            list_LoaiTB(ID_LOAITB, ID_NHOMTB, 'edit-TRANGBIKHAC-LOAITHIETBI');
         }
         function edit_TRANGBIKHAC() {
             var form = document.getElementById("form-edit-TRANGBIKHAC");
@@ -5785,7 +5942,13 @@
                     ID: $("#edit-TRANGBIKHAC-ID").val(),
                     TENTB: $("#edit-TRANGBIKHAC-TENTB").val(),
                     KYHIEU: $("#edit-TRANGBIKHAC-KYHIEU").val(),
-                    SOLUONG: $("#edit-TRANGBIKHAC-SOLUONG").val()
+                    SOLUONG: $("#edit-TRANGBIKHAC-SOLUONG").val(),
+                    LOAITB: {
+                        ID: $("#edit-TRANGBIKHAC-LOAITHIETBI").val(),
+                        NHOMTB: {
+                            ID: $("#edit-TRANGBIKHAC-NHOMTHIETBI").val()
+                        }
+                    }
                 };
                 console.log(TRANGBIKHAC);
                 $.ajax({

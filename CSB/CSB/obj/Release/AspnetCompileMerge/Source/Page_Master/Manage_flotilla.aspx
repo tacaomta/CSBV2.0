@@ -121,7 +121,6 @@
         $(document).ready(function () {
             loadDataList_Flotilla();
             list_Region('', 'TT_Vung_addflotilla');
-
         });
         var date = new Date();
         var strDate = '' + date.getDate() + '/' + (Number(date.getMonth()) + 1) + '/' + date.getFullYear() + ' ' + date.getHours() + ':' + date.getMinutes() + ':' + date.getSeconds();

@@ -6043,11 +6043,11 @@
             <div class="sidebar-brand">
             </div>
             <div class="sidebar-brand-sm">
-                PQLKT TÀU
+                PQLKTT
             </div>
             <ul class="sidebar-menu">
                 <li class="nav-item dropdown">
-                    <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="bi-ui-checks-grid"></i><span>Nghiệp vụ PQLKT Tàu</span></a>
+                    <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="bi-ui-checks-grid"></i><span>Nghiệp vụ PQLKTT</span></a>
                     <ul class="dropdown-menu">
                         <li><a class="nav-link" href="../Page_Master/Null.aspx">Công văn, tài liệu cấp trên</a></li>
                         <li><a class="nav-link" href="../Page_Master/Null.aspx">Công văn, tài liệu các đơn vị</a></li>
@@ -6117,7 +6117,7 @@
                     <li><a class="a_menu" href="../Page_Master/Null.aspx">TRANG CHỦ</a></li>
                     <li><a class="a_menu" href="../Page_Master/Null.aspx">CẬP NHẬT TTDL</a></li>
                     <li><a class="a_menu" href="../Page_Master/Null.aspx">TRUY XUẤT DL</a></li>
-                    <li><a class="a_menu" href="../Page_Master/Null.aspx">GIỚI THIỆU VỀ PQLKT TÀU</a></li>
+                    <li><a class="a_menu" href="../Page_Master/Null.aspx">GIỚI THIỆU VỀ PQLKTT</a></li>
                     <li><a class="a_menu" href="../Page_Master/Null.aspx">BIỂU ĐỒ, THỐNG KÊ, PTDL</a></li>
                     <li><a class="a_menu" href="../Page_Master/Null.aspx">ĐỀ XUẤT MỚI</a></li>
                 </ul>

@@ -118,8 +118,8 @@
                
                 Load_Title(Ship_ID);
                 loadDataList_ThanVo(Ship_ID);
-                loadDataList_MayChinh(Ship_ID);
                 loadDataList_MayNenKhi(Ship_ID);
+                loadDataList_MayChinh(Ship_ID);
                 loadDataList_MayPhu_PhatDien(Ship_ID);
                 loadDataList_HangHai(Ship_ID);
                 loadDataList_RaDa(Ship_ID);
@@ -131,7 +131,6 @@
         });
 
         function Load_Title(Ship_ID) {
-            debugger
             $.ajax({
                 type: "GET",
                 url: linkapi + "v2/ship_detail?id=" + Ship_ID,
@@ -199,7 +198,7 @@
         function loadDataList_MayChinh(Ship_ID) {
             $.ajax({
                 type: "GET",
-                url: linkapi + "v2/maychinh?id=" + Ship_ID,
+                url: linkapi + "v2_2/maychinh?id=" + Ship_ID,
                 dataType: "json",
                 beforeSend: function () { // Before we send the request, remove the .hidden class from the spinner and default to inline-block.
                     //$('#loader').removeClass('hidden');
@@ -227,7 +226,21 @@
                     console.log('errorGET');
                 },
                 complete: function () { // Set our complete callback, adding the .hidden class and hiding the spinner.
-                    //$('#loader').addClass('hidden');
+                    var count_mnk = $('#table_MayNenKhi tr').length;
+                    var count_mc = $('#table_MayChinh tr').length;
+                    if (count_mc < count_mnk) {
+                        var count = count_mnk - count_mc;
+                        for (var i = 0; i < count; i++) {
+                            $("#table_MayChinh > tbody").append(' <tr> <td colspan="4" >&nbsp;</td></tr>');
+                        }
+                    }
+                    else if (count_mc > count_mnk) {
+                        var count = count_mc - count_mnk;
+                        for (var i = 1; i < count; i++) {
+                            $("#table_MayNenKhi > tbody").append('<tr> <td colspan="3" >&nbsp;</td></tr>');
+                        }
+
+                    }
                   
                   
                 },
@@ -235,7 +248,7 @@
             
         }
 
-        function loadDataList_MayNenKhi(Ship_ID) {           
+        function loadDataList_MayNenKhi(Ship_ID) {
             $.ajax({
                 type: "GET",
                 url: linkapi + "v2/maynenkhi?id=" + Ship_ID,
@@ -252,7 +265,7 @@
                     else {
                         $.each(data, function (key, item) {
                             tabletext += "<tr><td>" + item.KYHIEU + "</td><td>" + item.SOLUONG + "</td><td>" + item.APSUAT + "</td></tr>";
-                            i++;
+                            i = i + 1;
                         });
                     }
                     tabletext += "</tbody>";
@@ -265,27 +278,8 @@
                 }, error: function (ret) {
                     console.log('errorGET');
                 },
-                complete: function () { // Set our complete callback, adding the .hidden class and hiding the spinner.
-                    //$('#loader').addClass('hidden');
-                    var count_mc = $('#table_MayChinh tr').length;
-                    var count_mnk = $('#table_MayNenKhi tr').length;
-                    //alert($('#table_MayChinh tr').length);
-                    //alert($('#table_MayNenKhi tr').length);
-                    if (count_mc < count_mnk) {
-                        debugger
-                        var count = count_mnk - count_mc;
-                        for (var i = 0; i < count; i++) {
-                            $("#table_MayChinh > tbody").append(' <tr> <td colspan="4" >&nbsp;</td></tr>');
-                        }
-                    }
-                    else if (count_mc > count_mnk) {
-                        debugger
-                        var count = count_mc - count_mnk;
-                        for (var i = 1; i < count; i++) {
-                            $("#table_MayNenKhi > tbody").append('<tr> <td colspan="3" >&nbsp;</td></tr>');
-                        }
-                       
-                    }
+                complete: function () { 
+
                 },
             });
         }
@@ -293,7 +287,7 @@
 
             $.ajax({
                 type: "GET",
-                url: linkapi + "v2/mayphuphatdien?id=" + Ship_ID,
+                url: linkapi + "v2_2/mayphuphatdien?id=" + Ship_ID,
                 dataType: "json",
                 beforeSend: function () { // Before we send the request, remove the .hidden class from the spinner and default to inline-block.
                     //$('#loader').removeClass('hidden');
@@ -307,7 +301,7 @@
                     else {
                         $.each(data, function (key, item) {
                             tabletext += "<tr><td>" + item.THONGSOCOBAN.VITRILAPRAP + "</td><td>" + item.THONGSOCOBAN.KYHIEU + "</td><td>" + item.THONGSOCOBAN.CONGSUAT + "</td><td>" + item.THONGSOCOBAN.VONGQUAY + "</td></tr>";
-                            i++;
+                            i = i + 1;
                         });
                     }
                   
@@ -344,7 +338,7 @@
                     else {
                         $.each(data, function (key, item) {
                             tabletext += "<tr><td>" + item.KYHIEU + "</td><td>" + item.SOLUONG + "</td></tr>";
-                            i++;
+                            i = i + 1;
                         });
                     }
                   
@@ -381,7 +375,7 @@
                     else {
                         $.each(data, function (key, item) {
                             tabletext += "<tr><td>" + item.KYHIEU + "</td><td>" + item.SOLUONG + "</td></tr>";
-                            i++;
+                            i = i + 1;
                         });
                     }
                  
@@ -418,7 +412,7 @@
                     else {
                         $.each(data, function (key, item) {
                             tabletext += "<tr><td>" + item.KYHIEU + "</td><td>" + item.SOLUONG + "</td></tr>";
-                            i++;
+                            i = i + 1;
                         });
                     }
                   
@@ -442,7 +436,6 @@
                         max = count_vukhi;
                     }
                     if (count_hh < max) {
-                        debugger
                         var count = max - count_hh;
                         for (var i = 0; i < count; i++) {
                             $("#table_HangHai > tbody").append(' <tr> <td colspan="2" >&nbsp;</td></tr>');
@@ -450,7 +443,6 @@
               
                     }
                     if (count_rada < max) {
-                        debugger
                         var count = max - count_rada;
                         for (var i = 0; i < count; i++) {
                             $("#table_RaDa > tbody").append(' <tr> <td colspan="2" >&nbsp;</td></tr>');
@@ -458,7 +450,6 @@
                        
                     }
                     if (count_vukhi < max) {
-                        debugger
                         var count = max - count_vukhi;
                         for (var i = 0; i < count; i++) {
                             $("#table_VuKhi > tbody").append(' <tr> <td colspan="2" >&nbsp;</td></tr>');

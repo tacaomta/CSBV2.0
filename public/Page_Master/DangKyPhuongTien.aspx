@@ -5,6 +5,7 @@
         .breadcrumb {
             background-color: #ffffff !important;
         }
+
         .page-wrapper {
             padding-top: 0 !important;
         }
@@ -30,7 +31,7 @@
                         <div class="card-block">
                             <div class="">
                                 <div class="scroll" style="overflow-y: auto;">
-                                    <ul class="nav nav-tabs nav-fill" >
+                                    <ul class="nav nav-tabs nav-fill">
                                         <li class="nav-item">
                                             <a class="nav-link active" id="tabDANGKYCLHANGHAI" data-toggle="tab" onclick="loadDataList_DANGKYCLHANGHAI()" href="#DANGKYCLHANGHAI">Hàng hải</a>
                                         </li>
@@ -50,8 +51,12 @@
                                             <a class="nav-link" id="tabNEOXICHNEO" data-toggle="tab" onclick="loadDataList_NEOXICHNEO()" href="#NEOXICHNEO">Neo, xích neo</a>
                                         </li>--%>
                                         <li class="nav-item">
+                                            <a class="nav-link" id="tabDANGKYCLHETRUCCHANVIT" data-toggle="tab" onclick="loadDataList_DANGKYCLHETRUCCHANVIT()" href="#DANGKYCLHETRUCCHANVIT">Hệ trục chân vịt</a>
+                                        </li>
+                                        <li class="nav-item">
                                             <a class="nav-link" id="tabBOMDAU-NUOC-THONGGIO" data-toggle="tab" onclick="loadDataList_DANGKYCLBDNTG()" href="#BOMDAU-NUOC-THONGGIO">Bơm dầu, nước, thông gió</a>
                                         </li>
+
                                         <li class="nav-item">
                                             <a class="nav-link" id="tabDANGKYCLTHIETBIKHAC" data-toggle="tab" onclick="loadDataList_DANGKYCLTHIETBIKHAC()" href="#DANGKYCLTHIETBIKHAC">Trang bị khác</a>
                                         </li>
@@ -64,7 +69,7 @@
                                         <h5>ĐĂNG KÝ CHẤT LƯỢNG HÀNG HẢI</h5>
                                         <div class="btn-group">
                                             <button onclick="loadDataList_DANGKYCLHANGHAI()" class="btn btn-secondary mb-2"><span class="bi-arrow-clockwise"></span>&nbsp;Load dữ liệu</button>
-                                            <button id="btn_add_DANGKYCLHANGHAI" onclick="click_add_DANGKYCLHANGHAI(null)" class="btn btn-secondary mb-2" data-toggle="modal" data-target="#model-add-DANGKYCLHANGHAI" style="padding-top: 4px;"><span class="bi bi-plus-circle"></span> Thêm</button>
+                                            <button id="btn_add_DANGKYCLHANGHAI" onclick="click_add_DANGKYCLHANGHAI(null)" class="btn btn-secondary mb-2" data-toggle="modal" data-target="#model-add-DANGKYCLHANGHAI" style="padding-top: 4px;"><span class="bi bi-plus-circle"></span>Thêm</button>
                                         </div>
                                         <table id="table-DANGKYCLHANGHAI" class="table table-bordered table-striped table-md" style="width: 100%">
                                         </table>
@@ -74,19 +79,29 @@
                                         <h5>ĐĂNG KÝ CHẤT LƯỢNG VŨ KHÍ</h5>
                                         <div class="btn-group">
                                             <button onclick="loadDataList_DANGKYCLVUKHI()" class="btn btn-secondary mb-2"><span class="bi-arrow-clockwise"></span>&nbsp;Load dữ liệu</button>
-                                            <button id="btn_add_DANGKYCLVUKHI" onclick="click_add_DANGKYCLVUKHI(null)" class="btn btn-secondary mb-2" data-toggle="modal" data-target="#model-add-DANGKYCLVUKHI" style="padding-top: 4px;"><span class="bi bi-plus-circle"></span> Thêm</button>
+                                            <button id="btn_add_DANGKYCLVUKHI" onclick="click_add_DANGKYCLVUKHI(null)" class="btn btn-secondary mb-2" data-toggle="modal" data-target="#model-add-DANGKYCLVUKHI" style="padding-top: 4px;"><span class="bi bi-plus-circle"></span>Thêm</button>
                                         </div>
                                         <table id="table-DANGKYCLVUKHI" class="table table-bordered table-striped table-md" style="width: 100%">
                                         </table>
                                     </div>
-                                    <div id="DANGKYCLRADA" class=" tab-pane">   
+                                    <div id="DANGKYCLRADA" class=" tab-pane">
                                         <br>
                                         <h5>ĐĂNG KÝ CHẤT LƯỢNG RA ĐA</h5>
                                         <div class="btn-group">
                                             <button onclick="loadDataList_DANGKYCLRADA()" class="btn btn-secondary mb-2"><span class="bi-arrow-clockwise"></span>&nbsp;Load dữ liệu</button>
-                                            <button id="btn_add_DANGKYCLRADA" onclick="click_add_DANGKYCLRADA(null)" class="btn btn-secondary mb-2" data-toggle="modal" data-target="#model-add-DANGKYCLRADA" style="padding-top: 4px;"><span class="bi bi-plus-circle"></span> Thêm</button>
+                                            <button id="btn_add_DANGKYCLRADA" onclick="click_add_DANGKYCLRADA(null)" class="btn btn-secondary mb-2" data-toggle="modal" data-target="#model-add-DANGKYCLRADA" style="padding-top: 4px;"><span class="bi bi-plus-circle"></span>Thêm</button>
                                         </div>
                                         <table id="table-DANGKYCLRADA" class="table table-bordered table-striped table-md" style="width: 100%">
+                                        </table>
+                                    </div>
+                                    <div id="DANGKYCLHETRUCCHANVIT" class=" tab-pane">
+                                        <br>
+                                        <h5>ĐĂNG KÝ CHẤT LƯỢNG HỆ TRỤC CHÂN VỊT</h5>
+                                        <div class="btn-group">
+                                            <button onclick="loadDataList_DANGKYCLHETRUCCHANVIT()" class="btn btn-secondary mb-2"><span class="bi-arrow-clockwise"></span>&nbsp;Load dữ liệu</button>
+                                            <button id="btn_add_DANGKYCLHETRUCCHANVIT" onclick="click_add_DANGKYCLHETRUCCHANVIT(null)" class="btn btn-secondary mb-2" data-toggle="modal" data-target="#model-add-DANGKYCLHETRUCCHANVIT" style="padding-top: 4px;"><span class="bi bi-plus-circle"></span>Thêm</button>
+                                        </div>
+                                        <table id="table-DANGKYCLHETRUCCHANVIT" class="table table-bordered table-striped table-md" style="width: 100%">
                                         </table>
                                     </div>
                                     <%--<div id="TOMAY" class=" tab-pane">
@@ -140,7 +155,7 @@
                                         <h5>ĐĂNG KÝ CHẤT LƯỢNG BƠM DẦU, NƯỚC VÀ THÔNG GIÓ</h5>
                                         <div class="btn-group">
                                             <button onclick="loadDataList_DANGKYCLBDNTG()" class="btn btn-secondary mb-2"><span class="bi-arrow-clockwise"></span>&nbsp;Load dữ liệu</button>
-                                            <button id="btn_add_DANGKYCLBDNTG" onclick="click_add_DANGKYCLBDNTG(null)" class="btn btn-secondary mb-2" data-toggle="modal" data-target="#model-add-DANGKYCLBDNTG" style="padding-top: 4px;"><span class="bi bi-plus-circle"></span> Thêm bơm dầu, nước và thông gió</button>
+                                            <button id="btn_add_DANGKYCLBDNTG" onclick="click_add_DANGKYCLBDNTG(null)" class="btn btn-secondary mb-2" data-toggle="modal" data-target="#model-add-DANGKYCLBDNTG" style="padding-top: 4px;"><span class="bi bi-plus-circle"></span>Thêm bơm dầu, nước và thông gió</button>
                                         </div>
                                         <table id="table-DANGKYCLBDNTG" class="table table-bordered table-striped table-md" style="width: 100%">
                                         </table>
@@ -150,7 +165,7 @@
                                         <h5>ĐĂNG KÝ CHẤT LƯỢNG CÁC TRANG BỊ KHÁC</h5>
                                         <div class="btn-group">
                                             <button onclick="loadDataList_DANGKYCLTHIETBIKHAC()" class="btn btn-secondary mb-2"><span class="bi-arrow-clockwise"></span>&nbsp;Load dữ liệu</button>
-                                            <button id="btn_add_DANGKYCLTHIETBIKHAC" onclick="click_add_DANGKYCLTHIETBIKHAC(null)" class="btn btn-secondary mb-2" data-toggle="modal" data-target="#model-add-DANGKYCLTHIETBIKHAC" style="padding-top: 4px;"><span class="bi bi-plus-circle"></span> Thêm trang bị khác</button>
+                                            <button id="btn_add_DANGKYCLTHIETBIKHAC" onclick="click_add_DANGKYCLTHIETBIKHAC(null)" class="btn btn-secondary mb-2" data-toggle="modal" data-target="#model-add-DANGKYCLTHIETBIKHAC" style="padding-top: 4px;"><span class="bi bi-plus-circle"></span>Thêm trang bị khác</button>
                                         </div>
                                         <table id="table-DANGKYCLTHIETBIKHAC" class="table table-bordered table-striped table-md" style="width: 100%">
                                         </table>
@@ -164,6 +179,7 @@
         </div>
     </div>
     <div>
+
         <div class="modal fade" id="model-add-DANGKYCLHANGHAI" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
@@ -629,6 +645,260 @@
                 </div>
             </div>
         </div>
+        <div class="modal fade" id="model-add-DANGKYCLHETRUCCHANVIT" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-xl" role="document">
+                <div class="modal-content">
+                    <form id="form-add-DANGKYCLHETRUCCHANVIT" onsubmit="return false">
+                        <div class="card auth_form" style="margin-bottom: 0px">
+                            <div class="modal-header">
+                                <h4 class="title-modal-banve font-weight-bold">Thêm đăng ký chất lượng hệ trục chân vịt</h4>
+                            </div>
+                            <div class="modal-body">
+                                 <h4 class="sub-title">ĐĂNG KÝ</h4>
+                                    <div class="row">
+                                    <div class="col-sm-4">
+                                        <div class="form-group row">
+                                             <label class="col-sm-4 col-form-label">Ký hiệu hệ trục chân vịt:</label>
+                                             <div class="col-sm-8">
+                                                <select class="form-control" id="add-DANGKYCLHETRUCCHANVIT-IDHETRUCCHANVIT" required></select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <div class="form-group row">
+                                             <label class="col-sm-4 col-form-label">Năm đăng ký:</label>
+                                            <div class="col-sm-8">
+                                                <input type="number" min="0" step="1" class="form-control" id="add-DANGKYCLHETRUCCHANVIT-DANGKYCHATLUONG-NAMDANGKY" required>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <div class="form-group row">
+                                             <label class="col-sm-4 col-form-label">Trạng thái:</label>
+                                            <div class="col-sm-8">
+                                                <select class="form-control" id="add-DANGKYCLHETRUCCHANVIT-DANGKYCHATLUONG-TRANGTHAI" required></select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <h4 class="sub-title">TRỤC</h4>
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <div class="form-group row">
+                                            <label class="col-sm-4 col-form-label">Tổng chiều dài: </label>
+                                            <div class="col-sm-8">
+                                                <input type="text" id="show-add-DANGKYCLHETRUCCHANVIT-TRUC-TONGCHIEUDAI" readonly class="form-control">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <div class="form-group row">
+                                            <label class="col-sm-4 col-form-label">Vật kiệu: </label>
+                                            <div class="col-sm-8">
+                                                <input type="number" id="show-add-DANGKYCLHETRUCCHANVIT-TRUC-VATLIEU" readonly class="form-control">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <div class="form-group row">
+                                            <label class="col-sm-4 col-form-label">Tổng trọng lượng: </label>
+                                            <div class="col-sm-8">
+                                                <input type="text" id="show-add-DANGKYCLHETRUCCHANVIT-TRUC-TONGTRONGLUONG" readonly class="form-control">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <div class="form-group row">
+                                            <label class="col-sm-4 col-form-label">Đường kính trục ghép (mm): </label>
+                                            <div class="col-sm-8">
+                                                <input type="text" id="show-add-DANGKYCLHETRUCCHANVIT-TRUC-DUONGKINHTRUCGHEPCHANVIT" readonly class="form-control">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <div class="form-group row">
+                                            <label class="col-sm-4 col-form-label">Đường kính trục trung gian (mm): </label>
+                                            <div class="col-sm-8">
+                                                <input type="number" id="show-add-DANGKYCLHETRUCCHANVIT-TRUC-DUONGKINHTRUCTRUNGGIAN" readonly class="form-control">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <div class="form-group row">
+                                            <label class="col-sm-4 col-form-label">Đường kính trục xoắn (mm): </label>
+                                            <div class="col-sm-8">
+                                                <input type="text" id="show-add-DANGKYCLHETRUCCHANVIT-TRUC-DUONGKINHTRUCXOAN" readonly class="form-control">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <div class="form-group row">
+                                            <label class="col-sm-4 col-form-label">Đường kính trục chặn (mm): </label>
+                                            <div class="col-sm-8">
+                                                <input type="text" id="show-add-DANGKYCLHETRUCCHANVIT-TRUC-DUONGKINHTRUCCHAN" readonly class="form-control">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <div class="form-group row">
+                                            <label class="col-sm-4 col-form-label">Góc nghiêng trục (độ): </label>
+                                            <div class="col-sm-8">
+                                                <input type="number" id="show-add-DANGKYCLHETRUCCHANVIT-TRUC-GOCNGIENGTRUC" readonly class="form-control">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <h4 class="sub-title">CHÂN VỊT</h4>
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <div class="form-group row">
+                                            <label class="col-sm-4 col-form-label">Loại chân vịt: </label>
+                                            <div class="col-sm-8">
+                                                <input type="text" id="show-add-DANGKYCLHETRUCCHANVIT-CHANVIT-LOAICHANVIT" readonly class="form-control">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <div class="form-group row">
+                                            <label class="col-sm-4 col-form-label">Đường kính (mm): </label>
+                                            <div class="col-sm-8">
+                                                <input type="number" id="show-add-DANGKYCLHETRUCCHANVIT-CHANVIT-DUONGKINH" readonly class="form-control">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <div class="form-group row">
+                                            <label class="col-sm-4 col-form-label">Số cánh: </label>
+                                            <div class="col-sm-8">
+                                                <input type="text" id="show-add-DANGKYCLHETRUCCHANVIT-CHANVIT-SOCANH" readonly class="form-control">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <div class="form-group row">
+                                            <label class="col-sm-4 col-form-label">Vật liệu: </label>
+                                            <div class="col-sm-8">
+                                                <input type="text" id="show-add-DANGKYCLHETRUCCHANVIT-CHANVIT-VATLIEU" readonly class="form-control">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <div class="form-group row">
+                                            <label class="col-sm-4 col-form-label">Trọng lượng (kg): </label>
+                                            <div class="col-sm-8">
+                                                <input type="number" id="show-add-DANGKYCLHETRUCCHANVIT-CHANVIT-TRONGLUONG" readonly class="form-control">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <div class="form-group row">
+                                            <label class="col-sm-4 col-form-label">Chiều quay: </label>
+                                            <div class="col-sm-8">
+                                                <input type="text" id="show-add-DANGKYCLHETRUCCHANVIT-CHANVIT-CHIEUQUAY" readonly class="form-control">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <div class="form-group row">
+                                            <label class="col-sm-4 col-form-label">Vòng quay định mức (vòng/ph): </label>
+                                            <div class="col-sm-8">
+                                                <input type="text" id="show-add-DANGKYCLHETRUCCHANVIT-CHANVIT-VONGQUAYDINHMUC" readonly class="form-control">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <h4 class="sub-title">Ổ ĐỠ</h4>
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <div class="form-group row">
+                                            <label class="col-sm-4 col-form-label">Số lượng: </label>
+                                            <div class="col-sm-8">
+                                                <input type="text" id="show-add-DANGKYCLHETRUCCHANVIT-ODO-SOLUONG" readonly class="form-control">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <div class="form-group row">
+                                            <label class="col-sm-4 col-form-label">Loại: </label>
+                                            <div class="col-sm-8">
+                                                <input type="number" id="show-add-DANGKYCLHETRUCCHANVIT-ODO-LOAI" readonly class="form-control">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <div class="form-group row">
+                                            <label class="col-sm-4 col-form-label">Mỡ dầu bôi trơn: </label>
+                                            <div class="col-sm-8">
+                                                <input type="text" id="show-add-DANGKYCLHETRUCCHANVIT-ODO-MODAUBOITRON" readonly class="form-control">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>                          
+                            </div>
+                            <div class="modal-footer">
+                                <button type="submit" onclick="add_DANGKYCLHETRUCCHANVIT()" class="btn btn-info">Thêm</button>
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Đóng</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="model-edit-DANGKYCLHETRUCCHANVIT" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-xl" role="document">
+                <div class="modal-content">
+                    <form id="form-edit-DANGKYCLHETRUCCHANVIT" onsubmit="return false">
+                        <input type="hidden" id="edit-DANGKYCLHETRUCCHANVIT-DANGKYCHATLUONG_ID" />
+                        <div class="card auth_form" style="margin-bottom: 0px">
+                            <div class="modal-header">
+                                <h4 class="title-modal-banve font-weight-bold">Sửa thông tin đăng ký chất lượng hệ trục chân vịt</h4>
+                            </div>
+                            <div class="modal-body">
+                                <div class="row">
+                                    <div style="width: 100%; float: left; padding: 10px">
+                                        <div class="form-group" style="display: flex">
+                                            <label class="col-md-5 control-label"><strong>Ký hiệu hệ trục chân vịt   : </strong></label>
+                                            <div class="col-md-7">
+                                                <input type="hidden" id="edit-DANGKYCLHETRUCCHANVIT-IDHETRUCCHANVIT">
+                                                <input type="text" class="form-control" id="edit-DANGKYCLHETRUCCHANVIT-KYHIEU" disabled required>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div style="width: 100%; float: left; padding: 10px">
+                                        <div class="form-group" style="display: flex">
+                                            <label class="col-md-5 control-label"><strong>Năm đăng ký   : </strong></label>
+                                            <div class="col-md-7">
+                                                <input type="number" min="0" step="1" class="form-control" id="edit-DANGKYCLHETRUCCHANVIT-DANGKYCHATLUONG_NAMDANGKY" required>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div style="width: 100%; float: left; padding: 10px">
+                                        <div class="form-group" style="display: flex">
+                                            <label class="col-md-5 control-label"><strong>Trạng thái  : </strong></label>
+                                            <div class="col-md-7">
+                                                <select class="form-control" id="edit-DANGKYCLHETRUCCHANVIT-DANGKYCHATLUONG_TRANGTHAI" required></select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="submit" onclick="edit_DANGKYCLHETRUCCHANVIT()" class="btn btn-info">Lưu</button>
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Đóng</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
     </div>
     <script src="../Scripts/jquery-3.4.1.min.js"></script>
     <script>
@@ -665,8 +935,10 @@
                 $("#tabDANGKYCLRADA").tab('show');
                 loadDataList_DANGKYCLRADA();
             }
-            //else if (i == 4)
-            //    $("#tabTOMAY").tab('show');
+            //else if (i == 4) {
+            //    $("#tabDANGKYCLHETRUCCHANVIT").tab('show');
+            ///*    loadDataList_DANGKYCLHETRUCCHANVIT();*/
+            //}
             //else if (i == 5)
             //    $("#tabHETRUCHANVIT").tab('show');
             //else if (i == 6)
@@ -679,7 +951,7 @@
                 $("#tabDANGKYCLTHIETBIKHAC").tab('show');
                 loadDataList_DANGKYCLTHIETBIKHAC();
             }
-                
+
         }
         $(document).ready(function () {
             Ship_ID = getParameterByName('Ship_ID');
@@ -969,7 +1241,7 @@
                     success: function (data) {
                         toastSuccess("Thành công", "Thêm thông tin đăng ký chất lượng hàng hải thành công.");
                         loadDataList_DANGKYCLHANGHAI2();
-                        
+
                     }, error: function (ret) {
                         toastError("Thất bại", "");
                     },
@@ -1626,7 +1898,297 @@
 
             }
         }
+        // HỆ TRỤC CHÂN VỊT
+        function loadHETRUCCHANVIT() {
+            var textselect = '';
+            $.ajax({
+                type: "GET",
+                url: linkapi + "v2/hetrucchanvit?id=" + getParameterByName("Ship_ID"),
+                dataType: "json",
+                success: function (data) {
+                    console.log(data);
+                    $.each(data, function (key, item) {
+                        textselect += "<option value=" + item.ID + ">" + item.ID + "</option>";
+                    });
+                    console.log("okGET");
+                    $("#add-DANGKYCLHETRUCCHANVIT-IDHETRUCCHANVIT").html(textselect);
+                }, error: function (ret) {
+                    console.log('errorGET');
+                }
+            });
+        };
+        function loadDataList_DANGKYCLHETRUCCHANVIT() {
+            loadHETRUCCHANVIT();
+            $.ajax({
+                type: "GET",
+                url: linkapi + "v2/dangkyclhetrucchanvit?id=" + getParameterByName("Ship_ID"),
+                dataType: "json",
+                beforeSend: function () { // Before we send the request, remove the .hidden class from the spinner and default to inline-block.
+                    $('#loader').removeClass('hidden');
+                },
+                success: function (data) {
+                    var listNam = new Array();
+                    var i;
+                    var listlen;
+                    $.each(data, function (key, item) {
+                        listlen = listNam.length;
+                        var i = 0;
+                        for (i = 0; i < listlen; i++) {
+                            if (Number(item.DANGKYCHATLUONG_NAMDANGKY) == listNam[i]) break;
+                        }
+                        if (i == listlen) {
+                            var j = 0;
+                            for (j = 0; j < listlen; j++) {
+                                if (Number(item.DANGKYCHATLUONG_NAMDANGKY) < listNam[j]) break;
+                            }
+                            listNam.splice(j, 0, Number(item.DANGKYCHATLUONG_NAMDANGKY));
+                        }
+                    });
+                    listlen = listNam.length;
+                    for (i = 0; i < listlen; i++) {
+                        listNam[i] = String(listNam[i]);
+                    }
+                    var listPt = new Array();
+                    //var listSL = new Array();
+                    var listIDPT = new Array();
+                    $.each(data, function (key, item) {
+                        var listlen = listPt.length;
+                        var i = 0;
+                        for (i = 0; i < listlen; i++) {
+                            if (item.IDHTCV == listPt[i]) break;
+                        }
+                        if (i == listlen) {
+                            listPt.push(item.IDHTCV);
+                            listIDPT.push(item.IDHTCV);
+                        }
+                    });
+                    console.log(listPt);
+                    listlen = listNam.length;
+                    var tabletext = "<thead><tr><th rowspan='2'>STT</th><th colspan='" + listlen + "'>ĐĂNG KÝ CHẤT LƯỢNG HÀNG NĂM</th><th rowspan='2'>TÁC VỤ</th></tr><tr>";
+                    for (i = 0; i < listlen; i++) {
+                        tabletext += "<th>" + listNam[i] + "</th>";
+                    }
+                    tabletext += "</tr></thead><tbody>";
+                    var i = 1;
+                    var lenPt = listPt.length;
+                    var TRANGTHAI;
+                    var ID;
+                    for (i = 0; i < lenPt; i++) {
+                        tabletext += "<tr><td style='text-align: center;'>" + (i + 1) +  "</td>";
+                        for (j = 0; j < listlen; j++) {
+                            TRANGTHAI = '';
+                            $.each(data, function (key, item) {
+                                if (item.IDHTCV == listPt[i] && item.DANGKYCHATLUONG_NAMDANGKY == listNam[j]) {
+                                    TRANGTHAI = item.DANGKYCHATLUONG_TRANGTHAI;
+                                    ID = item.DANGKYCHATLUONG_ID;
+                                }
+                            });
+                            tabletext += "<td>";
+                            if (TRANGTHAI != "") {
+                                tabletext += '<a href="#" title="Sửa" data-toggle="modal" data-target="#model-edit-DANGKYCLHETRUCCHANVIT"  onclick="onclick_edit_DANGKYCLHETRUCCHANVIT(`' + listIDPT[i] + '`,`' + listPt[i] + '`,`' + ID + '`,`' + listNam[j] + '`,`' + TRANGTHAI + '`)">' + TRANGTHAI + '</a><a href="#" class="delete" title="Xóa" onclick="delete_DANGKYCLHETRUCCHANVIT(`' + ID + '`)" style="float: right;"><i class="bi bi-x"></i></a>' + "</td>";
+                            }
+                            tabletext += "</td>";
+                        }
+                        tabletext += '<td><div style="display: flex; justify-content: space-around;"><a href="#" class="edit" title="Thêm đăng ký" data-toggle="modal" data-target="#model-add-DANGKYCLHETRUCCHANVIT" onclick="click_add_DANGKYCLHETRUCCHANVIT(`' + listIDPT[i] + '`)"><i class="bi bi-plus-circle-fill"></i></a></div></td></tr>';
+                    }
+                    tabletext += "</tbody>";
+                    $('#table-DANGKYCLHETRUCCHANVIT').html(tabletext);
+                    loadTable('table-DANGKYCLHETRUCCHANVIT');
+                }, error: function (ret) {
+                    console.log('errorGET');
+                },
+                complete: function () { // Set our complete callback, adding the .hidden class and hiding the spinner.
+                    $('#loader').addClass('hidden');
+                },
+            });
+        };
 
+        function loadDataList_DANGKYCLHETRUCCHANVIT2() {
+            loadHETRUCCHANVIT();
+            $.ajax({
+                type: "GET",
+                url: linkapi + "v2/dangkyclhetrucchanvit?id=" + getParameterByName("Ship_ID"),
+                dataType: "json",
+                beforeSend: function () { // Before we send the request, remove the .hidden class from the spinner and default to inline-block.
+                    $('#loader').removeClass('hidden');
+                },
+                success: function (data) {
+                    var listNam = new Array();
+                    var i;
+                    var listlen;
+                    $.each(data, function (key, item) {
+                        listlen = listNam.length;
+                        var i = 0;
+                        for (i = 0; i < listlen; i++) {
+                            if (Number(item.DANGKYCHATLUONG_NAMDANGKY) == listNam[i]) break;
+                        }
+                        if (i == listlen) {
+                            var j = 0;
+                            for (j = 0; j < listlen; j++) {
+                                if (Number(item.DANGKYCHATLUONG_NAMDANGKY) < listNam[j]) break;
+                            }
+                            listNam.splice(j, 0, Number(item.DANGKYCHATLUONG_NAMDANGKY));
+                        }
+                    });
+                    listlen = listNam.length;
+                    for (i = 0; i < listlen; i++) {
+                        listNam[i] = String(listNam[i]);
+                    }
+                    var listPt = new Array();
+                    //var listSL = new Array();
+                    var listIDPT = new Array();
+                    $.each(data, function (key, item) {
+                        var listlen = listPt.length;
+                        var i = 0;
+                        for (i = 0; i < listlen; i++) {
+                            if (item.IDHTCV == listPt[i]) break;
+                        }
+                        if (i == listlen) {
+                            listPt.push(item.IDHTCV);
+                            listIDPT.push(item.IDHTCV);
+                        }
+                    });
+                    console.log(listPt);
+                    listlen = listNam.length;
+                    var tabletext = "<thead><tr><th rowspan='2'>STT</th><th colspan='" + listlen + "'>ĐĂNG KÝ CHẤT LƯỢNG HÀNG NĂM</th><th rowspan='2'>TÁC VỤ</th></tr><tr>";
+                    for (i = 0; i < listlen; i++) {
+                        tabletext += "<th>" + listNam[i] + "</th>";
+                    }
+                    tabletext += "</tr></thead><tbody>";
+                    var i = 1;
+                    var lenPt = listPt.length;
+                    var TRANGTHAI;
+                    var ID;
+                    for (i = 0; i < lenPt; i++) {
+                        tabletext += "<tr><td style='text-align: center;'>" + (i + 1) + "</td>";
+                        for (j = 0; j < listlen; j++) {
+                            TRANGTHAI = '';
+                            $.each(data, function (key, item) {
+                                if (item.IDHTCV == listPt[i] && item.DANGKYCHATLUONG_NAMDANGKY == listNam[j]) {
+                                    TRANGTHAI = item.DANGKYCHATLUONG_TRANGTHAI;
+                                    ID = item.DANGKYCHATLUONG_ID;
+                                }
+                            });
+                            tabletext += "<td>";
+                            if (TRANGTHAI != "") {
+                                tabletext += '<a href="#" title="Sửa" data-toggle="modal" data-target="#model-edit-DANGKYCLHETRUCCHANVIT"  onclick="onclick_edit_DANGKYCLHETRUCCHANVIT(`' + listIDPT[i] + '`,`' + listPt[i] + '`,`' + ID + '`,`' + listNam[j] + '`,`' + TRANGTHAI + '`)">' + TRANGTHAI + '</a><a href="#" class="delete" title="Xóa" onclick="delete_DANGKYCLHETRUCCHANVIT(`' + ID + '`)" style="float: right;"><i class="bi bi-x"></i></a>' + "</td>";
+                            }
+                            tabletext += "</td>";
+                        }
+                        tabletext += '<td><div style="display: flex; justify-content: space-around;"><a href="#" class="edit" title="Thêm đăng ký" data-toggle="modal" data-target="#model-add-DANGKYCLHETRUCCHANVIT" onclick="click_add_DANGKYCLHETRUCCHANVIT(`' + listIDPT[i] + '`)"><i class="bi bi-plus-circle-fill"></i></a></div></td></tr>';
+                    }
+                    tabletext += "</tbody>";
+                    $('#table-DANGKYCLHETRUCCHANVIT').html(tabletext);
+                }, error: function (ret) {
+                    console.log('errorGET');
+                },
+                complete: function () { // Set our complete callback, adding the .hidden class and hiding the spinner.
+                    $('#loader').addClass('hidden');
+                },
+            });
+        };
+        function click_add_DANGKYCLHETRUCCHANVIT(id = null) {
+            debugger
+            if (id != null) {
+                $('#add-DANGKYCLHETRUCCHANVIT-IDHETRUCCHANVIT').attr('disabled', '');
+                $('#add-DANGKYCLHETRUCCHANVIT-IDHETRUCCHANVIT').val(id);
+            }
+            else {
+                $('#add-DANGKYCLHETRUCCHANVIT-IDHETRUCCHANVIT').removeAttr('disabled', '');
+            }
+            loadTrangThai('add-DANGKYCLHETRUCCHANVIT-DANGKYCHATLUONG-TRANGTHAI', '');
+        };
+        function add_DANGKYCLHETRUCCHANVIT() {
+            var form = document.getElementById("form-add-DANGKYCLHETRUCCHANVIT");
+            console.log(form.checkValidity());
+            if (form.checkValidity() == true) {
+                var DANGKYCLHETRUCCHANVIT = {
+                    IDHTCV: $("#add-DANGKYCLHETRUCCHANVIT-IDHETRUCCHANVIT").val(),        
+                    DANGKYCHATLUONG_NAMDANGKY: $("#add-DANGKYCLHETRUCCHANVIT-DANGKYCHATLUONG-NAMDANGKY").val(),
+                    DANGKYCHATLUONG_TRANGTHAI: $("#add-DANGKYCLHETRUCCHANVIT-DANGKYCHATLUONG-TRANGTHAI").val()
+                };
+                console.log(DANGKYCLHETRUCCHANVIT);
+                $.ajax({
+                    type: "POST",
+                    url: linkapi + "v2/insert_dangkyclhetrucchanvit?id=" + DANGKYCLHETRUCCHANVIT.IDHTCV,
+                    dataType: "json",
+                    data: JSON.stringify(DANGKYCLHETRUCCHANVIT),
+                    contentType: "application/json",
+                    success: function (data) {
+                        toastSuccess("Thành công", "Thêm thông tin đăng ký chất lượng hệ trục chân vịt thành công.");
+                        loadDataList_DANGKYCLHETRUCCHANVIT2();
+
+                    }, error: function (ret) {
+                        toastError("Thất bại", "");
+                    },
+                    complete: function () { // Set our complete callback, adding the .hidden class and hiding the spinner.
+                        $("#add-DANGKYCLHETRUCCHANVIT-DANGKYCHATLUONG-NAMDANGKY").val("");
+                        $("#add-DANGKYCLHETRUCCHANVIT-DANGKYCHATLUONG-TRANGTHAI").val("");
+                        $('#model-add-DANGKYCLHETRUCCHANVIT').modal("hide");
+                        loadTable('table-DANGKYCLHETRUCCHANVIT');
+                    },
+                });
+            }
+            return false;
+        }
+        function onclick_edit_DANGKYCLHETRUCCHANVIT(IDHETRUCCHANVIT, KYHIEU, DANGKYCHATLUONG_ID, DANGKYCHATLUONG_NAMDANGKY, DANGKYCHATLUONG_TRANGTHAI) {
+            loadTrangThai('edit-DANGKYCLHETRUCCHANVIT-DANGKYCHATLUONG_TRANGTHAI', DANGKYCHATLUONG_TRANGTHAI);
+            $('#edit-DANGKYCLHETRUCCHANVIT-IDHETRUCCHANVIT').val(IDHETRUCCHANVIT);
+            $("#edit-DANGKYCLHETRUCCHANVIT-KYHIEU").val(KYHIEU);
+            $("#edit-DANGKYCLHETRUCCHANVIT-DANGKYCHATLUONG_ID").val(DANGKYCHATLUONG_ID);
+            $("#edit-DANGKYCLHETRUCCHANVIT-DANGKYCHATLUONG_NAMDANGKY").prop('readonly', true);
+            $("#edit-DANGKYCLHETRUCCHANVIT-DANGKYCHATLUONG_NAMDANGKY").val(Number(DANGKYCHATLUONG_NAMDANGKY));
+        }
+        function edit_DANGKYCLHETRUCCHANVIT() {
+            var form = document.getElementById("form-edit-DANGKYCLHETRUCCHANVIT");
+            console.log(form.checkValidity());
+            if (form.checkValidity() == true) {
+                var DANGKYCLHETRUCCHANVIT = {
+                    ID: $("#edit-DANGKYCLHETRUCCHANVIT-DANGKYCHATLUONG_ID").val(),
+                    IDHETRUCCHANVIT: $("#edit-DANGKYCLHETRUCCHANVIT-IDHETRUCCHANVIT").val(),
+                    //KYHIEU: $("#add-DANGKYCLRADA-IDRADA").find("option:selected").first().attr("text"),
+                    DANGKYCHATLUONG_NAMDANGKY: $("#edit-DANGKYCLHETRUCCHANVIT-DANGKYCHATLUONG_NAMDANGKY").val(),
+                    DANGKYCHATLUONG_TRANGTHAI: $("#edit-DANGKYCLHETRUCCHANVIT-DANGKYCHATLUONG_TRANGTHAI").val()
+                };
+                console.log(DANGKYCLHETRUCCHANVIT);
+                $.ajax({
+                    type: "PUT",
+                    url: linkapi + "v2/update_dangkyclhetrucchanvit?id=" + DANGKYCLHETRUCCHANVIT.ID,
+                    dataType: "json",
+                    data: JSON.stringify(DANGKYCLHETRUCCHANVIT),
+                    contentType: "application/json",
+                    success: function (data) {
+                        toastSuccess("Thành công", "Cập nhật thông tin đăng ký chất lượng thành công.");
+                        loadDataList_DANGKYCLHETRUCCHANVIT2();
+                    }, error: function (ret) {
+                        console.log(ret.responseJSON.Message);
+                        toastError("Thất bại", "");
+                    },
+                    complete: function () { // Set our complete callback, adding the .hidden class and hiding the spinner.
+                        $('#model-edit-DANGKYCLHETRUCCHANVIT').modal("hide");
+                        loadTable('table-DANGKYCLHETRUCCHANVIT');
+                    },
+                });
+            }
+            return false;
+        }
+        function delete_DANGKYCLHETRUCCHANVIT(id) {
+            let text = "Bạn có chắc muốn xóa thông tin đăng ký này?";
+            if (confirm(text) == true) {
+                $.ajax({
+                    url: linkapi + "v2/delete_dangkyclhetrucchanvit?id=" + id,
+                    type: "DELETE",
+                }).done(function (res) {
+                    toastSuccess("Thành công", "Xóa thông tin đăng ký thành công!");
+                    loadDataList_DANGKYCLHETRUCCHANVIT2();
+                    loadTable('table-DANGKYCLHETRUCCHANVIT');
+                }).fail(function (res) {
+                    toastError("Lỗi", "Xóa thông tin đăng ký không thành công!");
+                })
+            } else {
+
+            }
+        }
         // bơm dầu, nước, thông gió
         function loadBDNTG() {
             var textselect = '';
@@ -1637,7 +2199,7 @@
                 success: function (data) {
                     console.log(data);
                     $.each(data, function (key, item) {
-                        textselect += "<option value=" + item.ID + ">" + item.TENTB + " - "+ item.KYHIEU + "</option>";
+                        textselect += "<option value=" + item.ID + ">" + item.TENTB + " - " + item.KYHIEU + "</option>";
                     });
                     console.log("okGET");
                     $("#add-DANGKYCLBDNTG-IDBDNTG").html(textselect);
@@ -1647,7 +2209,7 @@
             });
         }
         function loadDataList_DANGKYCLBDNTG() {
-            
+
             console.log(1);
             loadBDNTG();
             console.log(2);

@@ -7,7 +7,7 @@
     <div class="container_myChart">
         <canvas id="myChart" style="width: 1600px; height: 700px; margin-left: 50px"></canvas>
     </div>
-        <script src="../Scripts/jquery-3.4.1.slim.min.js"></script>
+    <script src="../Scripts/jquery-3.4.1.slim.min.js"></script>
     <script src="../Scripts/vendor/Chart260.min.js"></script>
     <script>
         function getParameterByName(name, url = window.location.href) {
@@ -18,6 +18,7 @@
             if (!results[2]) return '';
             return decodeURIComponent(results[2].replace(/\+/g, ' '));
         }
+
         $(document).ready(function () {
             Ship_ID = getParameterByName('Ship_ID');
             if (Ship_ID == null) {
@@ -34,6 +35,7 @@
         else {
             var strDate_ntn = '' + date.getFullYear() + '-' + (Number(date.getMonth()) + 1) + '-' + date.getDate();
         }
+
         var listyear = [];
         var listdata_tocdo = [];
         var list_noidungsc = [];
@@ -49,19 +51,94 @@
                 },
                 success: function (data) {
                     if (data == null) {
-                       
+                        let myChart = document.getElementById('myChart').getContext('2d');
+                        // Global Options
+                        Chart.defaults.global.defaultFontFamily = 'Lato';
+                        Chart.defaults.global.defaultFontSize = 18;
+                        Chart.defaults.global.defaultFontColor = '#777';
+                        let massPopChart = new Chart(myChart, {
+                            type: 'bar', // bar, horizontalBar, pie, line, doughnut, radar, polarArea
+                            data: null,
+                            options: {
+                                tooltips: {
+                                    callbacks: {
+                                        title: function (tooltipItem, data) {
+                                            return 'Năm sửa chữa: ' + tooltipItem[0].xLabel;
+                                        },
+                                        afterTitle: function (tooltipItem) {
+                                            return `Nội dung sửa chữa: ${list_noidungsc[tooltipItem[0].index]}`;
+                                        },
+                                    }
+                                },
+                                title: {
+                                    display: true,
+                                    text: 'CHƯA CÓ DỮ LIỆU CHẤT LƯỢNG SỬA CHỮA CỦA TÀU!: ',
+                                    fontSize: 25
+                                },
+                                legend: {
+                                    display: false,
+                                    position: 'right',
+                                    labels: {
+                                        fontColor: '#000'
+                                    }
+                                },
+                                responsive: false,
+                                maintainAspectRatio: true,
+                                layout: {
+                                    padding: {
+                                        left: 50,
+                                        right: 0,
+                                        bottom: 0,
+                                        top: 0
+                                    }
+                                },
+                                scales: {
+                                    xAxes: [{
+                                        display: true,
+                                        barPercentage: 0.4,
+                                        scaleLabel: {   // To format the scale Lebel
+                                            display: true,
+                                            labelString: 'Năm sửa chữa',
+                                            fontColor: '#000',
+                                            fontSize: 16
+                                        },
+                                        ticks: {
+                                            fontColor: "black", // To format the ticks, coming on the axis/lables which we are passing.
+                                            fontSize: 16
+                                        }
+                                    }],
+                                    yAxes: [{
+                                        display: true,
+                                        scaleLabel: {
+                                            display: true,
+                                            labelString: 'Tốc độ tàu (Hải lý/ giờ)',
+                                            fontColor: '#000',
+                                            fontSize: 16
+                                        },
+                                        ticks: {
+                                            fontColor: "black",
+                                            fontSize: 16,
+                                            beginAtZero: true
+                                        }
+                                    }]
+                                },
+                            }
+                        });
                     }
                     else {
+                    
                         var i = 0;
-                        
+
                         $.each(data, function (key, item) {
                             listyear[i] = item.NAM;
                             listdata_tocdo[i] = item.TOCDO;
                             list_noidungsc[i] = item.NOIDUNG_SUACHUA;
                             listbackgroundColor_cot[i] = 'rgba(255, 99, 132, 0.6)';
+
                             name_tau = item.SHTAU;
                             i++;
                         });
+                        console.log(list_noidungsc);
                         let myChart = document.getElementById('myChart').getContext('2d');
                         // Global Options
                         Chart.defaults.global.defaultFontFamily = 'Lato';
@@ -83,6 +160,19 @@
                                 }]
                             },
                             options: {
+
+                                    tooltips: {
+                                        callbacks: {
+
+                                            title: function (tooltipItem, data) {
+                                                return 'Năm sửa chữa: ' + tooltipItem[0].xLabel;
+                                            },
+                                            afterTitle: function (tooltipItem) {
+                                                return `Nội dung sửa chữa: ${list_noidungsc[tooltipItem[0].index]}`;
+                                            },
+                                        }
+                                    },
+
                                 title: {
                                     display: true,
                                     text: 'Biểu đồ thống kê chất lượng sửa chữa tàu có số hiệu: '+name_tau,
@@ -105,10 +195,6 @@
                                         top: 0
                                     }
                                 },
-                                tooltips: {
-                                    enabled: true
-                                },
-                 
                                 scales: {
                                     xAxes: [{
                                         display: true,
@@ -117,11 +203,11 @@
                                             display: true,
                                             labelString: 'Năm sửa chữa',
                                             fontColor: '#000',
-                                            fontSize: 14
+                                            fontSize: 16
                                         },
                                         ticks: {
                                             fontColor: "black", // To format the ticks, coming on the axis/lables which we are passing.
-                                            fontSize: 14
+                                            fontSize: 16
                                         }
                                     }],
                                     yAxes: [{
@@ -130,18 +216,15 @@
                                             display: true,
                                             labelString: 'Tốc độ tàu (Hải lý/ giờ)',
                                             fontColor: '#000',
-                                            fontSize: 14
-                                          
-
+                                            fontSize: 16
                                         },
                                         ticks: {
                                             fontColor: "black",
-                                            fontSize: 14,
+                                            fontSize: 16,
                                             beginAtZero: true
                                         }
                                     }]
-                                }
-
+                                },
                             }
                         });
                     }
@@ -149,14 +232,14 @@
                 }, error: function (ret) {
                     console.log('errorGET');
                 },
-                complete: function () { 
+                complete: function () {
                 },
             });
 
         }
 
 
-        
+
     </script>
 
 </asp:Content>
