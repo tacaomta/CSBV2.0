@@ -19,7 +19,7 @@
             src: url(../fonts/boxicons.woff2) format('woff2');
         }
 
-   /*     .dataTables_wrapper {
+        /*     .dataTables_wrapper {
             overflow-y: auto;
         }
 */
@@ -504,6 +504,10 @@
 
         table.table td a.edit {
             color: #FFC107;
+        }
+
+        table.table td a.register {
+            color: #5baac7;
         }
 
         table.table td a.delete {

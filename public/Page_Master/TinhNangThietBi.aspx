@@ -3600,7 +3600,7 @@
         }
         $(document).ready(function () {
             Ship_ID = getParameterByName('Ship_ID');
-         
+
             if (Ship_ID == null) {
                 history.back();
             }
@@ -3637,7 +3637,7 @@
             }
             else if (i == 6) {
                 $("#tabNEOXICHNEO").tab('show');
-              
+
                 loadDataList_NEOXICHNEO();
             }
             else if (i == 7) {
@@ -5358,7 +5358,7 @@
                     var tabletext = "<thead><tr><th rowspan='2'>STT</th><th colspan='3'>NEO PHẢI</th><th colspan='3'>NEO TRÁI</th><th colspan='3'>NEO SAU</th><th rowspan='2'>TÁC VỤ</th></tr><tr><th>KÝ HIỆU</th><th>ĐƯỜNG KÍNH</th><th>ĐỘ DÀI</th><th>KÝ HIỆU</th><th>ĐƯỜNG KÍNH</th><th>ĐỘ DÀI</th><th>KÝ HIỆU</th><th>ĐƯỜNG KÍNH</th><th>ĐỘ DÀI</th></tr></thead><tbody>";
                     var i = 1;
                     $.each(data, function (key, item) {
-                        tabletext += "<tr><td style='text-align: center;'>" + i + "</td><td>" + item.NEOPHAI.KYHIEU + "</td><td>" + item.NEOPHAI.XICHNEO.DUONGKINH + "</td><td>" + item.NEOPHAI.XICHNEO.DODAI + "</td><td>" + item.NEOTRAI.KYHIEU + "</td><td>" + item.NEOTRAI.XICHNEO.DUONGKINH + "</td><td>" + item.NEOTRAI.XICHNEO.DODAI + "</td><td>" + item.NEOSAU.KYHIEU + "</td><td>" + item.NEOSAU.XICHNEO.DUONGKINH + "</td><td>" + item.NEOSAU.XICHNEO.DODAI + '</td><td><div style="display: flex; justify-content: space-around;"><a href="#" class="edit" title="Sửa" data-toggle="modal" data-target="#model-edit-NEOXICHNEO"  onclick="onclick_edit_NEOXICHNEO(`' + item.ID + '`,`' + item.NEOPHAI.KYHIEU + '`,`' + item.NEOPHAI.TRONGLUONGP + '`,`' + item.NEOPHAI.XICHNEO.DUONGKINH + '`,`' + item.NEOPHAI.XICHNEO.DODAI + '`,`' + item.NEOTRAI.KYHIEU + '`,`' + item.NEOTRAI.TRONGLUONGP + '`,`' + item.NEOTRAI.XICHNEO.DUONGKINH + '`,`' + item.NEOTRAI.XICHNEO.DODAI + '`,`' + item.NEOSAU.KYHIEU + '`,`' + item.NEOSAU.TRONGLUONGP + '`,`' + item.NEOSAU.XICHNEO.DUONGKINH + '`,`' + item.NEOSAU.XICHNEO.DODAI + '`)"><i class="material-icons">&#xE254;</i></a><a href="#" class="delete" title="Xóa" onclick="delete_NEOXICHNEO(`' + item.ID + '`)"><i class="material-icons">&#xE872;</i></a></div></td></tr>';
+                        tabletext += "<tr><td style='text-align: center;'>" + i + "</td><td>" + item.NEOPHAI.KYHIEU + "</td><td>" + item.NEOPHAI.XICHNEO.DUONGKINH + "</td><td>" + item.NEOPHAI.XICHNEO.DODAI + "</td><td>" + item.NEOTRAI.KYHIEU + "</td><td>" + item.NEOTRAI.XICHNEO.DUONGKINH + "</td><td>" + item.NEOTRAI.XICHNEO.DODAI + "</td><td>" + item.NEOSAU.KYHIEU + "</td><td>" + item.NEOSAU.XICHNEO.DUONGKINH + "</td><td>" + item.NEOSAU.XICHNEO.DODAI + '</td><td><div style="display: flex; justify-content: space-around;"><a href="#" class="edit" title="Sửa" data-toggle="modal" data-target="#model-edit-NEOXICHNEO"  onclick="onclick_edit_NEOXICHNEO(`' + item.ID + '`,`' + item.NEOPHAI.KYHIEU + '`,`' + item.NEOPHAI.TRONGLUONGP + '`,`' + item.NEOPHAI.XICHNEO.DUONGKINH + '`,`' + item.NEOPHAI.XICHNEO.DODAI + '`,`' + item.NEOTRAI.KYHIEU + '`,`' + item.NEOTRAI.TRONGLUONGP + '`,`' + item.NEOTRAI.XICHNEO.DUONGKINH + '`,`' + item.NEOTRAI.XICHNEO.DODAI + '`,`' + item.NEOSAU.KYHIEU + '`,`' + item.NEOSAU.TRONGLUONGP + '`,`' + item.NEOSAU.XICHNEO.DUONGKINH + '`,`' + item.NEOSAU.XICHNEO.DODAI + '`)"><i class="material-icons">&#xE254;</i></a><a href="#"  class="register" title="Đăng ký đổi, mất" onclick="dangkydoimat_NEOXICHNEO(`' + item.ID + '`)"><i class="material-icons">&#xe85d;</i></a><a href="#" class="delete" title="Xóa" onclick="delete_NEOXICHNEO(`' + item.ID + '`)"><i class="material-icons">&#xE872;</i></a></div></td></tr>';
                         i = i + 1;
                     });
                     tabletext += "</tbody>";
@@ -5475,6 +5475,10 @@
                 });
             }
             return false;
+        }
+        function dangkydoimat_NEOXICHNEO(ID) {
+            var win = window.open(baseaddress + "Page_Master/DangKyDoiMatNeoXichNeo?Xich_ID=" + ID, '_blank');
+            win.focus();
         }
         function onclick_edit_NEOXICHNEO(ID, KYHIEUPHAI, TRONGLUONGPPHAI, DUONGKINHPHAI, DODAIPHAI, KYHIEUTRAI, TRONGLUONGPTRAI, DUONGKINHTRAI, DODAITRAI, KYHIEUSAU, TRONGLUONGPSAU, DUONGKINHSAU, DODAISAU) {
             $("#edit-NEOXICHNEO-ID").val(ID);
@@ -5926,7 +5930,7 @@
             }
             return false;
         }
-        function onclick_edit_TRANGBIKHAC(ID,ID_NHOMTB,ID_LOAITB ,TENTB, KYHIEU, SOLUONG) {
+        function onclick_edit_TRANGBIKHAC(ID, ID_NHOMTB, ID_LOAITB, TENTB, KYHIEU, SOLUONG) {
             $('#edit-TRANGBIKHAC-ID').val(ID);
             $("#edit-TRANGBIKHAC-TENTB").val(TENTB);
             $("#edit-TRANGBIKHAC-KYHIEU").val(KYHIEU);
