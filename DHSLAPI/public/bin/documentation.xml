@@ -3192,9 +3192,9 @@
             Đăng ký chất lượng hệ trục chân vịt
             </summary>
         </member>
-        <member name="P:DHSLAPI.Models.DANGKYCLHTCV.IDHTCV">
+        <member name="P:DHSLAPI.Models.DANGKYCLHTCV.HTCV">
             <summary>
-            ID thiết bị
+            Thông tin hệ trục chân vịt
             </summary>
         </member>
         <member name="P:DHSLAPI.Models.DANGKYCLHTCV.DANGKYCHATLUONG_ID">
