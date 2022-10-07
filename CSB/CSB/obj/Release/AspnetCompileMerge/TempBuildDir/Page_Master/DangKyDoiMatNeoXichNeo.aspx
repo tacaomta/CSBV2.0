@@ -22,7 +22,7 @@
                     <div class="col-md-12">
                         <div class="btn-group">
                             <button onclick="loadDataList_DangKy()" class="btn btn-secondary mb-2"><i class="bi-arrow-clockwise"></i>&nbsp;Load dữ liệu</button>
-                            <button id="btn_add_DANGKYDOIMOINEOXICHNEO" class="btn btn-secondary mb-2" data-toggle="modal" data-target="#model-add-DANGKYDOIMOINEOXICHNEO" style="padding-top: 4px;"><i class="bi bi-plus-circle"></i>&nbsp; Thêm mới</button>
+                            <button id="btn_add_DANGKYDOIMOINEOXICHNEO" class="btn btn-secondary mb-2" data-toggle="modal" data-target="#model-add-DANGKYDOIMOINEOXICHNEO" style="padding-top: 4px;"><i class="bi bi-plus-circle"></i>&nbsp; Đăng ký thay đổi, mất, bổ sung</button>
                         </div>
                         <table id="table_DangKyDoiMatXichNeo" class="table table-bordered table-striped table-md" style="width: 100%">
                         </table>
@@ -188,7 +188,7 @@
                                         <div class="form-group row">
                                             <label style="text-align:inherit" class="col-sm-2 col-form-label">- Nội dung đăng ký: </label>
                                             <div class="col-sm-10">
-                                                <input type="text" id="add-DANGKYDOIMOINEOXICHNEO-DANGKY" class="form-control">
+                                                <input type="text" id="add-DANGKYDOIMOINEOXICHNEO-DANGKY" class="form-control" required>
                                             </div>
                                         </div>
                                     </div>

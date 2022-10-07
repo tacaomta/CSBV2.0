@@ -3103,6 +3103,14 @@
                                 <div class="row clearfix ">
                                     <div style="width: 100%; float: left; padding: 10px">
                                         <div class="form-group" style="display: flex">
+                                            <label class="col-md-5 control-label"><strong>Số hiệu   : </strong></label>
+                                            <div class="col-md-7">
+                                                <input type="text" class="form-control" id="add-BOMDAUNUOCTHONGGIO-SOHIEUTB" placeholder="Nhập số hiệu trang bị" required>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div style="width: 100%; float: left; padding: 10px">
+                                        <div class="form-group" style="display: flex">
                                             <label class="col-md-5 control-label"><strong>Tên trang bị   : </strong></label>
                                             <div class="col-md-7">
                                                 <input type="text" class="form-control" id="add-BOMDAUNUOCTHONGGIO-TENTB" placeholder="Nhập tên trang bị" required>
@@ -3163,6 +3171,14 @@
                             </div>
                             <div class="modal-body">
                                 <div class="row clearfix ">
+                                    <div style="width: 100%; float: left; padding: 10px">
+                                        <div class="form-group" style="display: flex">
+                                            <label class="col-md-5 control-label"><strong>Số hiệu trang bị   : </strong></label>
+                                            <div class="col-md-7">
+                                                <input type="text" class="form-control" id="edit-BOMDAUNUOCTHONGGIO-SOHIEUTB" placeholder="Nhập số hiệu trang bị" required>
+                                            </div>
+                                        </div>
+                                    </div>
                                     <div style="width: 100%; float: left; padding: 10px">
                                         <div class="form-group" style="display: flex">
                                             <label class="col-md-5 control-label"><strong>Tên trang bị   : </strong></label>
@@ -4101,7 +4117,7 @@
                 },
                 success: function (data) {
                     console.log(data);
-                    var tabletext = "<thead><tr><th>STT</th><th>KÝ HIỆU</th><th>Số hiệu</th><th>NĂM SẢN XUẤT</th><th>NƠI SẢN XUẤT</th><th>CÔNG SUẤT</th><th>HỆ THỐNG ĐIỀU KHIỂN</th><th>TÌNH TRẠNG HIỆN TẠI</th><th>TÁC VỤ</th></tr></thead><tbody>";
+                    var tabletext = "<thead><tr><th>STT</th><th>KÝ HIỆU</th><th>SỐ HIỆU</th><th>NĂM SẢN XUẤT</th><th>NƠI SẢN XUẤT</th><th>CÔNG SUẤT</th><th>HỆ THỐNG ĐIỀU KHIỂN</th><th>TÌNH TRẠNG HIỆN TẠI</th><th>TÁC VỤ</th></tr></thead><tbody>";
                     var i = 1;
                     $.each(data, function (key, item) {
                         tabletext += "<tr ";
@@ -4186,7 +4202,7 @@
                     "columns": [
                         { name: 'STT', width: 60 },
                         { name: 'KÝ HIỆU', width: 180 },
-                        { name: 'Số hiệu', width: 180 },
+                        { name: 'SỐ HIỆU', width: 180 },
                         { name: 'NĂM SẢN XUẤT', width: 180 },
                         { name: 'NƠI SẢN XUẤT', width: 180 },
                         { name: 'CÔNG SUẤT', width: 180 },
@@ -4478,7 +4494,7 @@
                     $('#loader').removeClass('hidden');
                 },
                 success: function (data) {
-                    var tabletext = "<thead><tr><th>STT</th><th>KÝ HIỆU</th><th>Số hiệu</th><th>NĂM SẢN XUẤT</th><th>NƠI SẢN XUẤT</th><th>CÔNG SUẤT</th><th>HỆ THỐNG ĐIỀU KHIỂN</th><th>TÌNH TRẠNG HIỆN TẠI</th><th>TÁC VỤ</th></tr></thead><tbody>";
+                    var tabletext = "<thead><tr><th>STT</th><th>KÝ HIỆU</th><th>SỐ HIỆU</th><th>NĂM SẢN XUẤT</th><th>NƠI SẢN XUẤT</th><th>CÔNG SUẤT</th><th>HỆ THỐNG ĐIỀU KHIỂN</th><th>TÌNH TRẠNG HIỆN TẠI</th><th>TÁC VỤ</th></tr></thead><tbody>";
                     var i = 1;
                     $.each(data, function (key, item) {
                         tabletext += "<tr ";
@@ -4515,7 +4531,7 @@
                     "columns": [
                         { name: 'STT', width: 60 },
                         { name: 'KÝ HIỆU', width: 180 },
-                        { name: 'Số hiệu', width: 180 },
+                        { name: 'SỐ HIỆU', width: 180 },
                         { name: 'NĂM SẢN XUẤT', width: 180 },
                         { name: 'NƠI SẢN XUẤT', width: 180 },
                         { name: 'CÔNG SUẤT', width: 180 },
@@ -4804,7 +4820,7 @@
                 },
                 success: function (data) {
                     console.log(data);
-                    var tabletext = "<thead><tr><th>STT</th><th>KÝ HIỆU</th><th>Số hiệu</th><th>NĂM SẢN XUẤT</th><th>NƠI SẢN XUẤT</th><th>CÔNG SUẤT</th><th>HỆ THỐNG ĐIỀU KHIỂN</th><th>TÌNH TRẠNG HIỆN TẠI</th><th>TÁC VỤ</th></tr></thead><tbody>";
+                    var tabletext = "<thead><tr><th>STT</th><th>KÝ HIỆU</th><th>SỐ HIỆU</th><th>NĂM SẢN XUẤT</th><th>NƠI SẢN XUẤT</th><th>CÔNG SUẤT</th><th>HỆ THỐNG ĐIỀU KHIỂN</th><th>TÌNH TRẠNG HIỆN TẠI</th><th>TÁC VỤ</th></tr></thead><tbody>";
                     var i = 1;
                     $.each(data, function (key, item) {
                         tabletext += "<tr ";
@@ -4841,7 +4857,7 @@
                     "columns": [
                         { name: 'STT', width: 60 },
                         { name: 'KÝ HIỆU', width: 180 },
-                        { name: 'Số hiệu', width: 180 },
+                        { name: 'SỐ HIỆU', width: 180 },
                         { name: 'NĂM SẢN XUẤT', width: 180 },
                         { name: 'NƠI SẢN XUẤT', width: 180 },
                         { name: 'CÔNG SUẤT', width: 180 },
@@ -5358,7 +5374,7 @@
                     var tabletext = "<thead><tr><th rowspan='2'>STT</th><th colspan='3'>NEO PHẢI</th><th colspan='3'>NEO TRÁI</th><th colspan='3'>NEO SAU</th><th rowspan='2'>TÁC VỤ</th></tr><tr><th>KÝ HIỆU</th><th>ĐƯỜNG KÍNH</th><th>ĐỘ DÀI</th><th>KÝ HIỆU</th><th>ĐƯỜNG KÍNH</th><th>ĐỘ DÀI</th><th>KÝ HIỆU</th><th>ĐƯỜNG KÍNH</th><th>ĐỘ DÀI</th></tr></thead><tbody>";
                     var i = 1;
                     $.each(data, function (key, item) {
-                        tabletext += "<tr><td style='text-align: center;'>" + i + "</td><td>" + item.NEOPHAI.KYHIEU + "</td><td>" + item.NEOPHAI.XICHNEO.DUONGKINH + "</td><td>" + item.NEOPHAI.XICHNEO.DODAI + "</td><td>" + item.NEOTRAI.KYHIEU + "</td><td>" + item.NEOTRAI.XICHNEO.DUONGKINH + "</td><td>" + item.NEOTRAI.XICHNEO.DODAI + "</td><td>" + item.NEOSAU.KYHIEU + "</td><td>" + item.NEOSAU.XICHNEO.DUONGKINH + "</td><td>" + item.NEOSAU.XICHNEO.DODAI + '</td><td><div style="display: flex; justify-content: space-around;"><a href="#" class="edit" title="Sửa" data-toggle="modal" data-target="#model-edit-NEOXICHNEO"  onclick="onclick_edit_NEOXICHNEO(`' + item.ID + '`,`' + item.NEOPHAI.KYHIEU + '`,`' + item.NEOPHAI.TRONGLUONGP + '`,`' + item.NEOPHAI.XICHNEO.DUONGKINH + '`,`' + item.NEOPHAI.XICHNEO.DODAI + '`,`' + item.NEOTRAI.KYHIEU + '`,`' + item.NEOTRAI.TRONGLUONGP + '`,`' + item.NEOTRAI.XICHNEO.DUONGKINH + '`,`' + item.NEOTRAI.XICHNEO.DODAI + '`,`' + item.NEOSAU.KYHIEU + '`,`' + item.NEOSAU.TRONGLUONGP + '`,`' + item.NEOSAU.XICHNEO.DUONGKINH + '`,`' + item.NEOSAU.XICHNEO.DODAI + '`)"><i class="material-icons">&#xE254;</i></a><a href="#"  class="register" title="Đăng ký đổi, mất" onclick="dangkydoimat_NEOXICHNEO(`' + item.ID + '`)"><i class="material-icons">&#xe85d;</i></a><a href="#" class="delete" title="Xóa" onclick="delete_NEOXICHNEO(`' + item.ID + '`)"><i class="material-icons">&#xE872;</i></a></div></td></tr>';
+                        tabletext += "<tr><td style='text-align: center;'>" + i + "</td><td>" + item.NEOPHAI.KYHIEU + "</td><td>" + item.NEOPHAI.XICHNEO.DUONGKINH + "</td><td>" + item.NEOPHAI.XICHNEO.DODAI + "</td><td>" + item.NEOTRAI.KYHIEU + "</td><td>" + item.NEOTRAI.XICHNEO.DUONGKINH + "</td><td>" + item.NEOTRAI.XICHNEO.DODAI + "</td><td>" + item.NEOSAU.KYHIEU + "</td><td>" + item.NEOSAU.XICHNEO.DUONGKINH + "</td><td>" + item.NEOSAU.XICHNEO.DODAI + '</td><td><div style="display: flex; justify-content: space-around;"><a href="#"  class="register" title="Đăng ký đổi, mất" onclick="dangkydoimat_NEOXICHNEO(`' + item.ID + '`)"><i class="material-icons">&#xe85d;</i></a><a href="#" class="edit" title="Sửa" data-toggle="modal" data-target="#model-edit-NEOXICHNEO"  onclick="onclick_edit_NEOXICHNEO(`' + item.ID + '`,`' + item.NEOPHAI.KYHIEU + '`,`' + item.NEOPHAI.TRONGLUONGP + '`,`' + item.NEOPHAI.XICHNEO.DUONGKINH + '`,`' + item.NEOPHAI.XICHNEO.DODAI + '`,`' + item.NEOTRAI.KYHIEU + '`,`' + item.NEOTRAI.TRONGLUONGP + '`,`' + item.NEOTRAI.XICHNEO.DUONGKINH + '`,`' + item.NEOTRAI.XICHNEO.DODAI + '`,`' + item.NEOSAU.KYHIEU + '`,`' + item.NEOSAU.TRONGLUONGP + '`,`' + item.NEOSAU.XICHNEO.DUONGKINH + '`,`' + item.NEOSAU.XICHNEO.DODAI + '`)"><i class="material-icons">&#xE254;</i></a><a href="#" class="delete" title="Xóa" onclick="delete_NEOXICHNEO(`' + item.ID + '`)"><i class="material-icons">&#xE872;</i></a></div></td></tr>';
                         i = i + 1;
                     });
                     tabletext += "</tbody>";
@@ -5573,10 +5589,10 @@
                     $('#loader').removeClass('hidden');
                 },
                 success: function (data) {
-                    var tabletext = "<thead><tr><th>STT</th><th>TÊN TRANG BỊ</th><th>KÝ HIỆU</th><th>NƯỚC SẢN XUẤT</th><th>LƯU LƯỢNG</th><th>SỐ LƯỢNG</th><th>TÁC VỤ</th></tr></thead><tbody>";
+                    var tabletext = "<thead><tr><th>STT</th><th>SỐ HIỆU</th><th>TÊN TRANG BỊ</th><th>KÝ HIỆU</th><th>NƯỚC SẢN XUẤT</th><th>LƯU LƯỢNG</th><th>SỐ LƯỢNG</th><th>TÁC VỤ</th></tr></thead><tbody>";
                     var i = 1;
                     $.each(data, function (key, item) {
-                        tabletext += "<tr><td style='text-align: center;'>" + i + "</td><td>" + item.TENTB + "</td><td>" + item.KYHIEU + "</td><td>" + item.NUOCSX + "</td><td>" + item.LUULUONG + "</td><td>" + item.SOLUONG + '</td><td><div style="display: flex; justify-content: space-around;"><a href="#" class="edit" title="Sửa" data-toggle="modal" data-target="#model-edit-BOMDAUNUOCTHONGGIO"  onclick="onclick_edit_BOMDAUNUOCTHONGGIO(`' + item.ID + '`,`' + item.TENTB + '`,`' + item.KYHIEU + '`,`' + item.NUOCSX + '`,`' + item.LUULUONG + '`,`' + item.SOLUONG + '`)"><i class="material-icons">&#xE254;</i></a><a href="#" class="delete" title="Xóa" onclick="delete_BOMDAUNUOCTHONGGIO(`' + item.ID + '`)"><i class="material-icons">&#xE872;</i></a></div></td></tr>';
+                        tabletext += "<tr><td style='text-align: center;'>" + i + "</td><td>" + item.SOHIEU + "</td><td>" + item.TENTB + "</td><td>" + item.KYHIEU  + "</td><td>" + item.NUOCSX + "</td><td>" + item.LUULUONG + "</td><td>" + item.SOLUONG + '</td><td><div style="display: flex; justify-content: space-around;"><a href="#" class="edit" title="Sửa" data-toggle="modal" data-target="#model-edit-BOMDAUNUOCTHONGGIO"  onclick="onclick_edit_BOMDAUNUOCTHONGGIO(`' + item.ID + '`,`' + item.SOHIEU + '`,`' + item.TENTB + '`,`' + item.KYHIEU + '`,`' + item.NUOCSX + '`,`' + item.LUULUONG + '`,`' + item.SOLUONG + '`)"><i class="material-icons">&#xE254;</i></a><a href="#" class="delete" title="Xóa" onclick="delete_BOMDAUNUOCTHONGGIO(`' + item.ID + '`)"><i class="material-icons">&#xE872;</i></a></div></td></tr>';
                         i = i + 1;
                     });
                     tabletext += "</tbody>";
@@ -5599,6 +5615,7 @@
                     stateSave: true,
                     "columns": [
                         { name: 'STT', width: 80 },
+                        { name: 'SỐ HIỆU', width: 200 },
                         { name: 'TÊN TRANG BỊ', width: 420 },
                         { name: 'KÝ HIỆU', width: 200 },
                         { name: 'NƯỚC SẢN XUẤT', width: 280 },
@@ -5632,6 +5649,7 @@
             console.log(form.checkValidity());
             if (form.checkValidity() == true) {
                 var BOMDAUNUOCTHONGGIO = {
+                    SOHIEU: $("#add-BOMDAUNUOCTHONGGIO-SOHIEUTB").val(),
                     TENTB: $("#add-BOMDAUNUOCTHONGGIO-TENTB").val(),
                     KYHIEU: $("#add-BOMDAUNUOCTHONGGIO-KYHIEU").val(),
                     NUOCSX: $("#add-BOMDAUNUOCTHONGGIO-NUOCSX").val(),
@@ -5651,6 +5669,7 @@
                         toastError("Thất bại", "");
                     },
                     complete: function () { // Set our complete callback, adding the .hidden class and hiding the spinner.
+                        $("#add-BOMDAUNUOCTHONGGIO-SOHIEUTB").val("");
                         $("#add-BOMDAUNUOCTHONGGIO-TENTB").val("");
                         $("#add-BOMDAUNUOCTHONGGIO-NUOCSX").val("");
                         $("#add-BOMDAUNUOCTHONGGIO-LUULUONG").val("");
@@ -5662,8 +5681,9 @@
             }
             return false;
         }
-        function onclick_edit_BOMDAUNUOCTHONGGIO(ID, TENTB, KYHIEU, NUOCSX, LUULUONG, SOLUONG) {
+        function onclick_edit_BOMDAUNUOCTHONGGIO(ID,SOHIEUTB , TENTB, KYHIEU, NUOCSX, LUULUONG, SOLUONG) {
             $('#edit-BOMDAUNUOCTHONGGIO-ID').val(ID);
+            $("#edit-BOMDAUNUOCTHONGGIO-SOHIEUTB").val(SOHIEUTB);
             $("#edit-BOMDAUNUOCTHONGGIO-TENTB").val(TENTB);
             $("#edit-BOMDAUNUOCTHONGGIO-KYHIEU").val(KYHIEU);
             $("#edit-BOMDAUNUOCTHONGGIO-NUOCSX").val(NUOCSX);
@@ -5676,6 +5696,7 @@
             if (form.checkValidity() == true) {
                 var BOMDAUNUOCTHONGGIO = {
                     ID: $("#edit-BOMDAUNUOCTHONGGIO-ID").val(),
+                    SOHIEU: $("#edit-BOMDAUNUOCTHONGGIO-SOHIEUTB").val(),
                     TENTB: $("#edit-BOMDAUNUOCTHONGGIO-TENTB").val(),
                     KYHIEU: $("#edit-BOMDAUNUOCTHONGGIO-KYHIEU").val(),
                     NUOCSX: $("#edit-BOMDAUNUOCTHONGGIO-NUOCSX").val(),
