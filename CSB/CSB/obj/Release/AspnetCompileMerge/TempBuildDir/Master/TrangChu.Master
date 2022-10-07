@@ -1,0 +1,1507 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="TrangChu.master.cs" Inherits="CSB.Master.TrangChu" %>
+
+<!DOCTYPE html>
+<html>
+<head runat="server">
+    <title></title>
+    <link href="../Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="../Content/bootstrap-icons.css" rel="stylesheet" />
+    <link href="../Content/dataTables.bootstrap4.min.css" rel="stylesheet" />
+    <link href="../Content/MaterialIcons.css" rel="stylesheet" />
+    <link href="../Content/font-awesome.min.css" rel="stylesheet" />
+    <%--<link href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css" rel="stylesheet" />--%>
+    <link href="../Content/jquery.dataTables.min.css" rel="stylesheet" />
+    <link href="../css/boxicons.min.css" rel="stylesheet" />
+
+    <style>
+        @font-face {
+            font-family: 'boxicons';
+            src: url(../fonts/boxicons.woff2) format('woff2');
+        }
+
+        /*     .dataTables_wrapper {
+            overflow-y: auto;
+        }
+*/
+        * {
+            padding: 0;
+            margin-right: 0;
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+
+        body {
+            background-color: #F6F9FF;
+            font-size: 17px;
+            overflow-x: hidden;
+            color: #455a64;
+            font-family: system-ui;
+            background-attachment: fixed;
+        }
+
+        .main-body .page-wrapper {
+            padding: 10px;
+            -webkit-transition: all ease-in 0.3s;
+            transition: all ease-in 0.3s;
+        }
+
+        button:focus {
+            outline: 0 !important;
+        }
+
+        .breadcrumb {
+            background-color: transparent;
+            margin-bottom: 0;
+        }
+
+        .card {
+            border-radius: 5px;
+            -webkit-box-shadow: 0 1px 20px 0 rgb(69 90 100 / 8%);
+            box-shadow: 0 1px 20px 0 rgb(69 90 100 / 8%);
+            border: none;
+            margin-bottom: 30px;
+            -webkit-transition: all 0.3s ease-in-out;
+            transition: all 0.3s ease-in-out;
+        }
+
+            .card .card-header {
+                background-color: transparent;
+                border-bottom: none;
+                padding: 10px 20px;
+                position: relative;
+                -webkit-box-shadow: 0px 1px 20px 0px rgb(69 90 100 / 8%);
+                box-shadow: 0px 1px 20px 0px rgb(69 90 100 / 8%);
+                display: flex;
+                align-items: center;
+            }
+
+                .card .card-header h5 {
+                    margin-bottom: 0;
+                    color: #000;
+                    font-size: 20px;
+                    font-weight: 600;
+                    display: inline-block;
+                    margin-right: 10px;
+                    line-height: 1.4;
+                    position: relative;
+                }
+
+                .card .card-header a {
+                    color: #01b5f9;
+                    font-weight: normal;
+                }
+
+            .card .card-block {
+                padding: 18px;
+            }
+
+                .card .card-block .sub-title {
+                    font-size: 16px;
+                    font-weight: 600;
+                    font-style: italic;
+                }
+
+        .sub-title {
+            border-bottom: 2px solid rgba(204, 204, 204, 0.85);
+            padding-bottom: 5px;
+            margin-bottom: 20px;
+            font-size: 18px;
+            font-weight: 600;
+            color: #000000;
+        }
+
+        .card .page-header-breadcrumb {
+            margin-left: auto;
+        }
+
+        .form-group.row {
+            align-items: center;
+        }
+
+        .form-group .table {
+            font-size: 17px;
+        }
+
+        .col-form-label {
+            font-size: 15px;
+            font-weight: 400;
+            text-align: right;
+            line-height: normal;
+        }
+
+        .form-control {
+            color: #000000;
+            font-weight: 400;
+            font-size: 15px;
+        }
+
+        .table-responsive {
+            display: inline-block;
+            width: 100%;
+            overflow-x: auto;
+        }
+
+        .table-border-style .table {
+            margin-bottom: 0;
+            color: #000000;
+        }
+
+        .table thead th {
+            border-bottom: 1px solid #d6dde1;
+        }
+
+        .dataTable-table {
+            max-width: 100%;
+            width: 100%;
+            border-spacing: 0;
+            border-collapse: separate;
+        }
+
+        .btn-group-right {
+            margin-left: auto;
+            float: right;
+        }
+
+        .right {
+            float: right;
+        }
+
+
+        #phuhieu {
+            text-align: center;
+        }
+
+            #phuhieu img {
+                width: 90%;
+                padding: 5% 10%;
+                height: 90%;
+            }
+
+        #banner img {
+            width: 100%;
+        }
+
+        #card #card-body {
+            padding: 0px 0px;
+        }
+
+        .btn-group-vertical {
+            width: 100%;
+        }
+
+        .card .card-header a {
+            color: #01b5f9;
+        }
+
+        .card_body .btn-group-vertical .btn-primary {
+            font-size: 13px;
+            text-align: left;
+            border-radius: unset;
+            border: unset;
+        }
+
+        #accordion {
+            font-size: 15px;
+        }
+
+        #rightContent .navbar {
+            justify-content: flex-end;
+            background-color: #ffffff !important;
+        }
+
+        #btn_Infor_Login {
+            text-align: right;
+            min-width: 200px;
+            background-color: transparent;
+            border: unset;
+            border-color: unset;
+            width: 100%;
+            color: #ffffff;
+        }
+
+        #li_infor_login {
+            float: right;
+        }
+
+        #menu_infor_login {
+        }
+
+            #menu_infor_login a {
+                padding: 0.25rem 1rem;
+                line-height: 35px;
+            }
+
+        .icon_account {
+            font-size: 17px;
+            color: #ffffff;
+            font-style: inherit;
+        }
+
+        .icon_menu_account {
+            font-size: 14px;
+            color: #798a78;
+            font-style: inherit;
+        }
+
+        .toast {
+            cursor: pointer;
+            position: fixed;
+            bottom: 10px;
+            right: 28px;
+            width: 280px;
+            z-index: 100;
+        }
+        /* Layout */
+
+        #wrapper {
+            padding: 0px;
+            margin: auto auto;
+        }
+
+        #masterContent {
+            overflow: hidden;
+            margin: auto;
+        }
+
+        #header {
+            margin: auto;
+        }
+
+        #rightContent {
+            float: right;
+            width: calc(100% - 250px);
+            color: black;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .narrowed {
+            width: calc(100% - 78px);
+        }
+
+
+        #header #banner {
+            overflow: hidden;
+        }
+
+        .mainMenu {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            background: #2070cc;
+            display: flex;
+            justify-content: space-between;
+            transition: all 0.5s;
+        }
+
+            .mainMenu ul {
+                list-style: none;
+                margin: 0;
+            }
+
+                .mainMenu ul li {
+                    font-size: 13px;
+                    display: inline-block;
+                }
+
+            .mainMenu .a_menu {
+                display: block;
+                height: 100%;
+                text-decoration: none;
+                text-align: center;
+                color: #ffffff;
+                font-weight: 600;
+                padding: 10px 15px;
+                padding: 10px 22px;
+                padding: 10px 22px;
+                line-height: 20px;
+            }
+
+                .mainMenu .a_menu:hover {
+                    background-color: #1862ad;
+                }
+
+        .subMenu {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            background: #f06137;
+            display: flex;
+            justify-content: space-between;
+            transition: all 0.5s;
+        }
+
+            .subMenu ul {
+                list-style: none;
+                margin: 0;
+            }
+
+                .subMenu ul li {
+                    font-size: 14px;
+                    display: inline-block;
+                }
+
+            .subMenu .a_menu {
+                display: block;
+                height: 100%;
+                text-decoration: none;
+                text-align: center;
+                color: #ffffff;
+                font-weight: bold;
+                padding: 10px 22px;
+                line-height: 20px;
+            }
+
+                .subMenu .a_menu:hover {
+                    background-color: #c44824;
+                }
+
+        .bullet, .slash {
+            display: inline;
+            margin: 0 4px;
+        }
+
+            .bullet:after {
+                content: '\2022';
+            }
+
+            .slash:after {
+                content: '/';
+            }
+
+        .footer-left {
+            float: left;
+        }
+
+        .main-footer {
+            padding: 20px;
+            color: #98a6ad;
+            display: inline-block;
+            width: 100%;
+        }
+
+            .main-footer a {
+                color: black;
+            }
+
+        /**/
+
+        .sidenav a, .dropdown-btn {
+            padding: 10px 10px 10px 20px;
+            text-decoration: none;
+            font-size: 15px;
+            color: #798a78;
+            display: block;
+            border: none;
+            background: none;
+            width: 100%;
+            text-align: left;
+            cursor: pointer;
+            outline: none;
+        }
+
+            .dropdown-btn i:first-child,
+            .sidenav > a i {
+                margin-right: 10px;
+            }
+
+            .sidenav a:hover, .dropdown-btn:hover {
+                background-color: #e9ecef;
+            }
+
+
+
+        .dropdown-container {
+            display: none;
+            background-color: #e9ecef;
+            -webkit-transition: display 0.5s ease;
+            transition: display 0.5s ease;
+        }
+
+            .dropdown-container a {
+                font-size: 14px;
+            }
+
+                .dropdown-container a:hover {
+                    color: blue;
+                }
+
+        .bi-caret-down-fill {
+            float: right;
+            padding-right: 8px;
+        }
+
+        /* dropdown bootstrap */
+
+        .dropdown-menu {
+            position: absolute;
+            right: 0;
+            min-width: 180px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            padding: 0;
+            border: none;
+            background-color: #f1f1f1;
+            font-size: 16px;
+        }
+
+            .dropdown-menu li {
+                padding: 12px 16px;
+                background-color: #f1f1f1;
+            }
+
+                .dropdown-menu li:hover {
+                    background-color: #ddd;
+                }
+
+                .dropdown-menu li a {
+                    color: #798a78;
+                    text-decoration: none;
+                }
+
+                    .dropdown-menu li a:hover {
+                        text-decoration: none;
+                    }
+
+        /* dropdown */
+
+        .dropbtn {
+            background-color: transparent;
+            color: white;
+            font-size: 16px;
+            border: none;
+            line-height: 40px;
+            padding: 0 10px;
+        }
+
+            .dropbtn:hover, .dropbtn:focus {
+                background-color: #1862ad;
+            }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            right: 0;
+            background-color: #f1f1f1;
+            min-width: 180px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 2;
+        }
+
+            .dropdown-content a {
+                padding: 12px 16px;
+                text-decoration: none;
+                display: block;
+            }
+
+                .dropdown-content a:hover {
+                    background-color: #ddd
+                }
+
+        .show {
+            display: block;
+        }
+
+        table.table td a.edit {
+            color: #FFC107;
+        }
+
+        table.table td a.register {
+            color: #5baac7;
+        }
+
+        table.table td a.delete {
+            color: #E34724;
+        }
+
+        /* section header */
+
+        .section {
+            position: relative;
+            z-index: 1;
+        }
+
+            .section .section-header {
+                background-color: #f6f9ff;
+                border-radius: 3px;
+                border: none;
+                position: relative;
+                padding: 15px 20px;
+                display: flex;
+                align-items: center;
+            }
+
+                .section .section-header h1 {
+                    margin-bottom: 0;
+                    font-weight: 700;
+                    display: inline-block;
+                    font-size: 24px;
+                    margin-top: 3px;
+                    color: #34395e;
+                }
+
+                .section .section-header .section-header-back {
+                    margin-right: 15px;
+                }
+
+                    .section .section-header .section-header-back .btn:hover {
+                        background-color: #6777ef;
+                        color: #fff;
+                    }
+
+                .section .section-header .section-header-button {
+                    margin-left: 20px;
+                }
+
+                .section .section-header .section-header-breadcrumb {
+                    margin-left: auto;
+                    display: flex;
+                    align-items: center;
+                    color: #01b5f9;
+                }
+
+                    .section .section-header .section-header-breadcrumb .breadcrumb-item {
+                        font-size: 14px;
+                        margin: 0 10px;
+                    }
+
+                .section .section-header .btn {
+                    font-size: 12px;
+                }
+
+            .section .section-content {
+                margin: 0 20px 20px 20px;
+                border-radius: 15px;
+            }
+
+            .section .section-title {
+                font-size: 18px;
+                color: #191d21;
+                font-weight: 600;
+                position: relative;
+                margin: 30px 0 25px 0;
+            }
+
+                .section .section-title:before {
+                    content: ' ';
+                    border-radius: 5px;
+                    height: 8px;
+                    width: 30px;
+                    background-color: #6777ef;
+                    display: inline-block;
+                    float: left;
+                    margin-top: 6px;
+                    margin-right: 15px;
+                }
+
+                .section .section-title + .section-lead {
+                    margin-top: -20px;
+                }
+
+            .section .section-lead {
+                margin-left: 45px;
+            }
+
+        .main-wrapper-1 .section .section-header {
+            margin-left: -30px;
+            margin-right: -30px;
+            margin-top: -10px;
+            border-radius: 0;
+            border-top: 1px solid #dbd1d1;
+            padding-left: 35px;
+            padding-right: 35px;
+        }
+
+
+        .section .section-header .section-header-breadcrumb {
+            margin-left: auto;
+            display: flex;
+            align-items: center;
+            color: #01b5f9;
+        }
+
+            .section .section-header .section-header-breadcrumb .breadcrumb-item {
+                font-size: 14px;
+                margin: 0;
+            }
+
+        .pagination li {
+            border: none !important;
+            margin: 0 !important;
+            padding: 0 !important;
+        }
+
+            .pagination li:hover {
+                border: none !important;
+                background: transparent !important;
+            }
+
+        .form-control.need-validated:valid {
+            border-color: #28a745;
+            padding-right: calc(1.5em + 0.75rem) !important;
+            background-image: url(../Image/icon/v.svg);
+            background-repeat: no-repeat;
+            background-position: right calc(0.375em + 0.1875rem) center;
+            background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
+        }
+
+        .form-control.need-validated:invalid {
+            border-color: #dc3545;
+            padding-right: calc(1.5em + 0.75rem) !important;
+            background-image: url(../Image/icon/i.svg);
+            background-repeat: no-repeat;
+            background-position: right calc(0.375em + 0.1875rem) center;
+            background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
+        }
+
+        .form-footer {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0.75rem;
+            border-top: 1px solid #dee2e6;
+            margin-top: 10px;
+        }
+
+        .breadcrumb {
+            background-color: #f9f9f9;
+        }
+
+            .breadcrumb .breadcrumb-item {
+                line-height: 1;
+            }
+
+        .breadcrumb-item::before {
+            color: #01b5f9 !important;
+        }
+
+        .breadcrumb .breadcrumb-item i {
+            margin-right: 5px;
+        }
+
+        .section .section-header .section-header-breadcrumb {
+            margin-left: auto;
+            display: flex;
+            align-items: center;
+            color: #01b5f9;
+        }
+
+            .section .section-header .section-header-breadcrumb .breadcrumb-item {
+                font-size: 14px;
+                margin: 0;
+            }
+
+        .pagination li {
+            border: none !important;
+            margin: 0 !important;
+            padding: 0 !important;
+        }
+
+        .breadcrumb {
+            background-color: #f9f9f9;
+        }
+
+            .breadcrumb .breadcrumb-item {
+                line-height: 1;
+            }
+
+        .breadcrumb-item::before {
+            color: #01b5f9 !important;
+        }
+
+        .breadcrumb .breadcrumb-item i {
+            margin-right: 5px;
+        }
+
+        .section .section-header .section-header-breadcrumb {
+            margin-left: auto;
+            display: flex;
+            align-items: center;
+            color: #01b5f9;
+        }
+
+            .section .section-header .section-header-breadcrumb .breadcrumb-item {
+                font-size: 14px;
+                margin: 0;
+            }
+
+        .pagination li {
+            border: none !important;
+            margin: 0 !important;
+            padding: 0 !important;
+        }
+
+            .pagination li:hover {
+                border: none !important;
+                background: transparent !important;
+            }
+
+        .row .form-group {
+            display: flex;
+        }
+
+        table.dataTable thead th, table.dataTable tfoot th {
+            font-weight: 500;
+            text-align: center;
+        }
+
+        .btn {
+            font-size: 14px;
+        }
+
+        .blue-hr {
+            width: 50px;
+            height: 4px;
+            margin-top: 5px;
+            background-color: #0086db;
+        }
+
+        .row .form-group {
+            display: flex;
+        }
+
+        th {
+            font-weight: 400;
+            text-align: center;
+        }
+
+        table.dataTable thead th, table.dataTable thead td {
+            font-weight: 400;
+            text-align: center;
+            vertical-align: middle;
+        }
+
+        .btn {
+            font-size: 12px;
+        }
+
+        .row .form-group {
+            display: flex;
+        }
+
+        table.dataTable thead th, table.dataTable tfoot th {
+            font-weight: 500;
+            text-align: center;
+        }
+
+        .btn {
+            font-size: 14px;
+        }
+
+
+
+
+
+        #loader {
+            z-index: 999;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+        }
+
+        .hidden {
+            display: none;
+        }
+        /* new */
+        .logo-details {
+            padding: 10px;
+        }
+
+        .sidebar.closee .sidebar-img {
+            width: 100%;
+            height: auto;
+        }
+
+        .sidebar .sidebar-img {
+            display: inline-block;
+            height: 150px;
+            background-image: url('../Image/logo_CSB.png');
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
+            align-items: center;
+            transition: all .5s;
+        }
+
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            border-radius: 100px;
+            background: #888;
+        }
+
+            ::-webkit-scrollbar-thumb:hover {
+                background: #555;
+            }
+        /* Google Fonts Import Link */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 250px;
+            background: #f6f9ff;
+            z-index: 100;
+            transition: all 0.5s ease;
+            overflow-y: overlay;
+            /**/
+        }
+
+            .sidebar.closee {
+                width: 78px;
+                overflow-y: visible;
+            }
+
+            .sidebar .logo-details {
+                display: flex;
+                justify-content: center;
+                /* height: 60px; */
+                width: 100%;
+                display: flex;
+                align-items: center;
+            }
+
+                .sidebar .logo-details i {
+                    font-size: 30px;
+                    color: #fff;
+                    height: 50px;
+                    min-width: 78px;
+                    text-align: center;
+                    line-height: 50px;
+                }
+
+                .sidebar .logo-details .logo_name {
+                    font-size: 22px;
+                    color: #fff;
+                    font-weight: 600;
+                    transition: 0.3s ease;
+                    transition-delay: 0.1s;
+                }
+
+            .sidebar.closee .logo-details .logo_name {
+                transition-delay: 0s;
+                opacity: 0;
+                pointer-events: none;
+            }
+
+            .sidebar .nav-links {
+                /* height: 100%; */
+                /* padding: 30px 0 150px 0; */
+                overflow: auto;
+            }
+
+            .sidebar.closee .nav-links {
+                overflow: visible;
+            }
+
+            .sidebar .nav-links::-webkit-scrollbar {
+                display: none;
+            }
+
+            .sidebar .nav-links li {
+                position: relative;
+                list-style: none;
+                transition: all 0.4s ease;
+            }
+                /*.sidebar .nav-links li:hover{
+  background: #e0e0e0;
+}*/
+                .sidebar .nav-links li .iocn-link {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    height: 50px;
+                    cursor: pointer;
+                }
+
+                .sidebar .nav-links li i {
+                    color: #798a78;
+                    font-size: 20px;
+                    cursor: pointer;
+                    transition: all 0.3s ease;
+                    padding: 12px;
+                }
+
+            .sidebar.closee .nav-links li i {
+                text-align: center;
+                color: #798a78;
+                font-size: 20px;
+                cursor: pointer;
+                transition: all 0.3s ease;
+                padding: 12px 29px;
+            }
+
+            .sidebar .nav-links li.showMenu i.arrow {
+                transform: rotate(-180deg);
+            }
+
+            .sidebar.closee .nav-links i.arrow {
+                display: none;
+            }
+
+            .sidebar .nav-links li a {
+                display: flex;
+                align-items: center;
+                text-decoration: none;
+            }
+
+                .sidebar .nav-links li a .link_name {
+                    font-size: 14px;
+                    font-weight: 400;
+                    color: #798a78;
+                    transition: all 0.4s ease;
+                }
+
+            .sidebar.closee .nav-links li a .link_name {
+                opacity: 0;
+                pointer-events: none;
+            }
+
+            .sidebar .nav-links li .sub-menu {
+                background: #f5f6fa;
+                display: none;
+            }
+
+            .sidebar .nav-links li.showMenu .sub-menu {
+                display: block;
+            }
+
+            .sidebar .nav-links li .sub-menu a {
+                color: #798a78;
+                font-size: 14px;
+                padding: 8px 15px;
+                white-space: normal;
+                opacity: 0.8;
+                transition: all 0.3s ease;
+            }
+
+                .sidebar .nav-links li .sub-menu a:hover {
+                    opacity: 1;
+                }
+
+            .sidebar.closee .nav-links li .sub-menu {
+                position: absolute;
+                left: 100%;
+                top: -10px;
+                margin-top: 0;
+                padding: 10px 20px;
+                border-radius: 0 6px 6px 0;
+                opacity: 0;
+                display: block;
+                pointer-events: none;
+                transition: 0s;
+                width: 350px;
+            }
+
+            .sidebar.closee .nav-links li:hover .sub-menu {
+                top: 0;
+                opacity: 1;
+                pointer-events: auto;
+                transition: all 0.4s ease;
+            }
+
+            .sidebar .nav-links li .sub-menu .link_name {
+                display: none;
+            }
+
+            .sidebar.closee .nav-links li .sub-menu .link_name {
+                font-size: 18px;
+                opacity: 1;
+                display: block;
+            }
+
+            .sidebar .nav-links li .sub-menu.blank {
+                opacity: 1;
+                pointer-events: auto;
+                padding: 3px 20px 6px 16px;
+                opacity: 0;
+                pointer-events: none;
+            }
+
+            .sidebar .nav-links li:hover .sub-menu.blank {
+                top: 50%;
+                transform: translateY(-50%);
+            }
+
+            .sidebar .profile-details {
+                position: fixed;
+                bottom: 0;
+                width: 250px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                background: #1d1b31;
+                padding: 12px 0;
+                transition: all 0.5s ease;
+            }
+
+            .sidebar.closee .profile-details {
+                background: none;
+            }
+
+            .sidebar.closee .profile-details {
+                width: 78px;
+            }
+
+            .sidebar .profile-details .profile-content {
+                display: flex;
+                align-items: center;
+            }
+
+            .sidebar .profile-details img {
+                height: 52px;
+                width: 52px;
+                object-fit: cover;
+                border-radius: 16px;
+                margin: 0 14px 0 12px;
+                background: #1d1b31;
+                transition: all 0.5s ease;
+            }
+
+            .sidebar.closee .profile-details img {
+                padding: 10px;
+            }
+
+            .sidebar .profile-details .profile_name,
+            .sidebar .profile-details .job {
+                color: #fff;
+                font-size: 18px;
+                font-weight: 500;
+                white-space: nowrap;
+            }
+
+            .sidebar.closee .profile-details i,
+            .sidebar.closee .profile-details .profile_name,
+            .sidebar.closee .profile-details .job {
+                display: none;
+            }
+
+            .sidebar .profile-details .job {
+                font-size: 12px;
+            }
+
+            .sidebar.closee ~ #rightContent {
+                left: 78px;
+                width: calc(100% - 78px);
+            }
+
+        .bx-menu {
+            position: absolute;
+            color: #2070cc;
+            font-size: 35px;
+            margin: 5px 10px;
+            cursor: pointer;
+        }
+
+        @media (max-width: 400px) {
+            .sidebar.closee .nav-links li .sub-menu {
+                display: none;
+            }
+
+            .sidebar {
+                width: 78px;
+            }
+
+                .sidebar.closee {
+                    width: 0;
+                }
+
+                    .sidebar.closee ~ .right-content {
+                        width: 100%;
+                        left: 0;
+                    }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="sidebar">
+        <div class="logo-details">
+            <img class="sidebar-img" src="../Image/logo_CSB.png" />
+            <!-- <div class="sidebar-brand">
+      </div> -->
+        </div>
+        <ul class="nav-links">
+            <li>
+                <div class="iocn-link arro">
+                    <a class="arrow" href="#">
+                        <i class='bi-ui-checks-grid arroww'></i>
+                        <span class="link_name arroww">Nghiệp vụ PQLKTT </span>
+                    </a>
+                    <i class='bi bi-caret-down-fill arrow'></i>
+                </div>
+                <ul class="sub-menu">
+                    <li><a class="link_name" href="#">Nghiệp vụ PQLKTT </a></li>
+                    <li><a href="../Page_Master/Null.aspx">Công văn, tài liệu cấp trên</a></li>
+                    <li><a href="../Page_Master/Null.aspx">Công văn, tài liệu các đơn vị</a></li>
+                    <li><a href="../Page_Master/Null.aspx">Kiểm tra, chỉ đạo, hướng dẫn các ĐV</a></li>
+                    <li><a href="../Page_Master/Null.aspx">NCKH, sáng kiến, cải tiến</a></li>
+                    <li><a href="../Page_Master/Null.aspx">Huấn luyện, hội thi, hội thao</a></li>
+                    <li><a href="../Page_Master/Null.aspx">Theo dõi thực hiện nhiệm vụ phòng</a></li>
+                    <li><a href="../Page_Master/Null.aspx">Thực hiện chế độ báo cáo</a></li>
+                </ul>
+            </li>
+            <li>
+                <div class="iocn-link arro">
+                    <a class="arrow" href="#">
+                        <i class='bi-gear-fill arroww'></i>
+                        <span class="link_name arroww">Sửa chữa tàu </span>
+                    </a>
+                    <i class='bi bi-caret-down-fill arrow'></i>
+                </div>
+                <ul class="sub-menu">
+                    <li><a class="link_name" href="#">Sửa chữa tàu </a></li>
+                    <li><a href="../Page_Master/Null.aspx">Tài liệu pháp quy</a></li>
+                    <li><a href="../Page_Master/Null.aspx">Thống kê sửa chữa tàu</a></li>
+                    <li><a href="../Page_Master/Null.aspx">Hồ sơ sửa chữa tàu</a></li>
+                    <li><a href="../Page_Master/Null.aspx">Tình trạng kỹ thuật trước và sau sửa chữa tàu</a></li>
+                    <li><a href="../Page_Master/Null.aspx">Ngân sách sửa chữa</a></li>
+                    <li><a href="../Page_Master/Null.aspx">Quản lý hạng mục sửa chữa</a></li>
+                    <li><a href="../Page_Master/Null.aspx">Phân cấp sửa chữa tàu, trang bị</a></li>
+                </ul>
+            </li>
+            <li>
+                <div class="iocn-link arro">
+                    <a class="arrow" href="#">
+                        <i class='bi-file-earmark-fill arroww'></i>
+                        <span class="link_name arroww">ĐBKT ngành tàu </span>
+                    </a>
+                    <i class='bi bi-caret-down-fill arrow'></i>
+                </div>
+                <ul class="sub-menu">
+                    <li><a class="link_name" href="#">ĐBKT ngành tàu </a></li>
+                    <li><a href="../Page_Master/Null.aspx">Thời gian làm việc của máy móc trang bị</a></li>
+                    <li><a href="../Page_Master/Null.aspx">Tiếp nhận tàu thuyền, trang bị mới</a></li>
+                    <li><a href="../Page_Master/Null.aspx">Cải hoán, cải tiến trang bị</a></li>
+                    <li><a href="../Page_Master/Null.aspx">Quản lý ngân sách bảo đảm kỹ thuật tại đơn vị</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="../Page_Master/Manage_Tau?vung=1#">
+                    <i class='bi-folder'></i>
+                    <span class="link_name">Hồ sơ tàu</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a class="link_name" href="../Page_Master/Manage_Tau?vung=1#">Quản lý tàu</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bi-folder'></i>
+                    <span class="link_name">Hồ sơ Xuất xưởng</span>
+                </a>
+            </li>
+            <li>
+                <div class="iocn-link arro">
+                    <a class="arrow" href="#">
+                        <i class='bi-cart3 arroww'></i>
+                        <span class="link_name arrowww">QL vật tư, mua sắm </span>
+                    </a>
+                    <i class='bi bi-caret-down-fill arrow'></i>
+                </div>
+                <ul class="sub-menu">
+                    <li><a class="link_name" href="#">QL vật tư, mua sắm </a></li>
+                    <li><a href="../Page_Master/Null.aspx">Ngân sách, hạng mục mua sắm</a></li>
+                    <li><a href="../Page_Master/Null.aspx">Quản lý gói thầu</a></li>
+                    <li><a href="../Page_Master/Null.aspx">Nhập xuất tồn kho BTL CSB</a></li>
+                    <li><a href="../Page_Master/Null.aspx">Phân cấp đảm bảo vật tư ngành tàu</a></li>
+                    <li><a href="../Page_Master/Null.aspx">Thống kê mật độ hư hỏng cụm chi tiết, hệ thống - nhu cầu vật tư</a></li>
+                    <li><a href="../Page_Master/Null.aspx">Quản lý khả năng tạo nguồn vật tư</a></li>
+                    <li><a href="../Page_Master/Null.aspx">Hiệu quả sử dụng vật tư</a></li>
+                </ul>
+            </li>
+            <li>
+                <div class="iocn-link arro">
+                    <a class="arrow" href="#">
+                        <i class='bi-person-fill arroww'></i>
+                        <span class="link_name arroww">QL danh mục </span>
+                    </a>
+                    <i class='bi bi-caret-down-fill arrow'></i>
+                </div>
+                <ul class="sub-menu">
+                    <li><a class="link_name" href="#">QL danh mục </a></li>
+                    <li><a href="../Page_Master/Manage_user">Quản lý người dùng</a></li>
+                    <li><a href="../Page_Master/Manage_ChuyenNganh.aspx">Quản lí chuyên ngành</a></li>
+                    <li><a href="../Page_Master/Manage_Position.aspx">Quản lí chức vụ</a></li>
+                    <li><a href="../Page_Master/Manage_Institution.aspx">Quản lí trường đào tạo</a></li>
+                    <li><a href="../Page_Master/Manage_Degree.aspx">Quản lí bằng cấp</a></li>
+                    <li><a href="../Page_Master/Manage_Ranking.aspx">Quản lí cấp bậc</a></li>
+                    <li><a href="../Page_Master/Manage_flotilla.aspx">Quản lí hải đội</a></li>
+                    <li><a href="../Page_Master/Manage_squadron.aspx">Quản lí hải đoàn</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+
+    <div id="rightContent">
+        <i class='bx bx-menu'></i>
+        <div id="header">
+            <div id="banner">
+                <img src="../Image/header.jpg" />
+            </div>
+        </div>
+        <div class="mainMenu">
+            <ul class="mainMenu-list" style="display: flex; justify-content: space-between;">
+                <li><a class="a_menu" href="../Page_Master/SearchPage.aspx" title="Trang chủ">TRANG CHỦ</a></li>
+                <li><a class="a_menu" href="../Page_Master/Null.aspx" title="Cập nhật thông tin dữ liệu">CẬP NHẬT TTDL</a></li>
+                <li><a class="a_menu" href="../Page_Master/Null.aspx" title="Truy xuất dữ liệu">TRUY XUẤT DL</a></li>
+                <li><a class="a_menu" href="../Page_Master/Null.aspx" title="Giới thiệu về Phòng quản lý kỹ thuật tàu">GIỚI THIỆU VỀ PQLKTT</a></li>
+                <li><a class="a_menu" href="../Page_Master/ThongKe?Ship_ID=0C7DEC67B2AE5AF01133B3C8E7E7A37B" title="Biểu đồ, thống kê, phân tích dữ liệu">BIỂU ĐỒ, THỐNG KÊ, PTDL</a></li>
+                <li><a class="a_menu" href="../Page_Master/Null.aspx" title="Đề xuất mới">ĐỀ XUẤT MỚI</a></li>
+            </ul>
+            <ul class="mainMenu-list">
+                <li id="li_infor_login">
+                    <button id="btnID" onclick="dropdownFunction()" class="dropbtn"><i id="user-login-fullname" class="bi bi-person-circle icon_account"></i><i class="bi-caret-down-fill" style="font-size: 10px; margin-left: 5px; padding: 0;"></i></button>
+                    <div id="myDropdown" class="dropdown-content">
+                        <a href="../Page_Master/Information_User"><i class="bi bi-info-circle icon_menu_account">Thông tin tài khoản</i></a>
+                        <a href="../Page_Master/Change_Password"><i class="bi bi-unlock-fill icon_menu_account">Đổi mật khẩu</i></a>
+                        <a href="#" onclick="clickDangXuat()"><i class="bi bi-box-arrow-in-left icon_menu_account" id="btnDangXuat">Đăng xuất</i></a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="mainContent">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server"></asp:ContentPlaceHolder>
+        </div>
+
+        <div class="toast hide" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header">
+                <i class="bi bi-square-fill " id="toast-icon"></i>
+                <strong class="mr-auto" id="toast-header" style="padding-left: 7px;">Bootstrap</strong>
+                <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="toast-body" id="toast-body">
+                Hello, world! This is a toast message.
+            </div>
+        </div>
+
+        <footer class="main-footer">
+            <div class="footer-left">
+                Copyright &copy; 2022
+                <div class="bullet"></div>
+                Thiết kế bởi <a href="../Page_Master/Null.aspx">Nhóm phát triển phần mềm HVKTQS</a>
+            </div>
+            <br />
+            <div class="footer-left">
+                236 Hoàng Quốc Việt, Bắc Từ Liêm, Hà Nội
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        let arro = document.querySelectorAll(".arro");
+        for (var i = 0; i < arro.length; i++) {
+            arro[i].addEventListener("click", (e) => {
+                let arroParent = e.target.parentElement;//selecting main parent of arrow
+                arroParent.classList.toggle("showMenu");
+            });
+        }
+        let arrow = document.querySelectorAll(".arrow");
+        for (var i = 0; i < arrow.length; i++) {
+            arrow[i].addEventListener("click", (e) => {
+                let arrowParent = e.target.parentElement.parentElement;//selecting main parent of arrow
+                arrowParent.classList.toggle("showMenu");
+            });
+        }
+        let arroww = document.querySelectorAll(".arroww");
+        for (var i = 0; i < arroww.length; i++) {
+            arroww[i].addEventListener("click", (e) => {
+                let arrowwParent = e.target.parentElement.parentElement.parentElement;//selecting main parent of arrow
+                arrowwParent.classList.toggle("showMenu");
+            });
+        }
+        let sidebar = document.querySelector(".sidebar");
+        let sidebarBtn = document.querySelector(".bx-menu");
+        let rightContent = document.querySelector("#rightContent");
+        console.log(sidebarBtn);
+        sidebarBtn.addEventListener("click", () => {
+            sidebar.classList.toggle("closee");
+        });
+    </script>
+    <script src="../Scripts/jquery-3.4.1.min.js"></script>
+    <script src="../Scripts/vendor/popper.min.js"></script>
+    <script src="../Scripts/bootstrap-4.6.1/bootstrap.bundle.min.js"></script>
+    <script src="../Scripts/vendor/jquery.dataTables.min.js"></script>
+    <script src="../Scripts/vendor/dataTables.bootstrap4.min.js"></script>
+    <script src="../Scripts/vendor/popper.min.js"></script>
+    <script src="../Scripts/vendor/jquery.dataTables.min.js"></script>
+    <script src="../Scripts/vendor/dataTables.bootstrap4.min.js"></script>
+    <script src="../Scripts/vendor/dataTables.buttons.min.js"></script>
+    <script src="../Scripts/vendor/html2pdf.bundle.js"></script>
+    <script src="../Scripts/vendor/buttons.html5.min.js"></script>
+    <script src="../Scripts/vendor/buttons.print.min.js"></script>
+    <script src="../Scripts/vendor/buttons.colVis.min.js"></script>
+    <script src="../Scripts/vendor/dataTables.responsive.min.js"></script>
+    <script src="../Scripts/vendor/responsive.bootstrap4.min.js"></script>
+    <script src="../Scripts/vendor/jquery.nicescroll.min.js"></script>
+    <script src="../value.js"></script>
+    <script>
+
+        $(document).ready(function () {
+            if (sessionStorage.getItem("userLoginUsername") != null) {
+                $('#user-login-fullname').text(" " + sessionStorage.getItem("userLoginFullname"));
+                $('#btnDangXuat').text(" Đăng xuất");
+            }
+            else {
+                $('#user-login-fullname').text(" Người dùng X");
+                $('#btnDangXuat').text(" Đăng nhập");
+                window.location = baseaddress + "Page_Master/Login";
+            }
+        });
+
+        function clickDangXuat() {
+            if (sessionStorage.getItem("userLoginUsername") != null) {
+                sessionStorage.removeItem("userLoginUsername");
+                sessionStorage.removeItem("userLoginFullname");
+                sessionStorage.removeItem("userLoginID");
+            }
+            window.location = baseaddress + "Page_Master/Login";
+        }
+        /* sidebar */
+        var dropdown = document.getElementsByClassName("dropdown-btn");
+        var i;
+
+        for (i = 0; i < dropdown.length; i++) {
+            dropdown[i].addEventListener("click", function () {
+                var dropdownContent = this.nextElementSibling;
+                if (dropdownContent.style.display === "block") {
+                    dropdownContent.style.display = "none";
+                    this.classList.remove("active");
+                } else {
+
+                    for (i = 0; i < dropdown.length; i++) {
+                        dropdown[i].nextElementSibling.style.display = "none";
+                        dropdown[i].classList.remove("active");
+                    }
+                    dropdownContent.style.display = "block";
+                    this.classList.add("active");
+                }
+            });
+        }
+
+        /* dropdown */
+
+        function dropdownFunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
+        };
+
+        window.addEventListener('click', function (e) {
+            if (!document.getElementById('btnID').contains(e.target)) {
+                if (!event.target.matches('.dropbtn')) {
+                    var dropdowns = document.getElementsByClassName("dropdown-content");
+                    var i;
+                    for (i = 0; i < dropdowns.length; i++) {
+                        var openDropdown = dropdowns[i];
+                        if (openDropdown.classList.contains('show')) {
+                            openDropdown.classList.remove('show');
+                        }
+                    }
+                }
+            }
+        });
+
+        function exportToWord(element, filename, orientation = 'landscape') {
+            if (!window.Blob) {
+                alert('Your legacy browser does not support this action.');
+                return;
+            }
+            var html, link, blob, url, css;
+            // EU A4 use: size: 841.95pt 595.35pt;
+            // US Letter use: size:11.0in 8.5in;
+            var size = "595.35pt 841.95pt";
+            if (orientation == 'landscape') size = "841.95pt 595.35pt ";
+            css = (
+                '<style>' +
+                '@page WordSection1{size: ' + size + ';}' +
+                'div.WordSection1 {page: WordSection1;}' +
+                /*'table{border-collapse:collapse;}td{border:1px gray solid;width:5em;padding:2px;}' +*/
+                '</style>'
+            );
+            var date = new Date();
+            var strdate = " " + date.getDate() + (Number(date.getMonth()) + 1) + date.getFullYear();
+            filename = filename ? filename + strdate + '.doc' : 'document.doc';
+            var html = document.getElementById(element).innerHTML;
+            blob = new Blob(['\ufeff', css + html], {
+                type: 'application/msword'
+            });
+            url = URL.createObjectURL(blob);
+            link = document.createElement('A');
+            link.href = url;
+            // Set default file name.
+            // Word will append file extension - do not add an extension here.
+            link.download = filename;
+            document.body.appendChild(link);
+            if (navigator.msSaveOrOpenBlob) navigator.msSaveOrOpenBlob(blob, filename); // IE10-11
+            else link.click();  // other browsers
+            document.body.removeChild(link);
+        };
+
+
+        function In_Content(strid) {
+            var prtContent = document.getElementById(strid);
+            var WinPrint = window.open('', '', 'letf=0,top=0,width=800,height=800');
+            WinPrint.document.write(prtContent.innerHTML);
+            WinPrint.document.close();
+            WinPrint.focus();
+            WinPrint.print();
+        }
+
+        function exportToPdf(element, filename) {
+            var ele = document.getElementById(element);
+            var date = new Date();
+            var strdate = " " + date.getDate() + (Number(date.getMonth()) + 1) + date.getFullYear();
+            filename = filename ? filename + strdate + '.pdf' : 'document.pdf';
+            var opt = {
+                margin: 0.9,
+                filename: filename,
+                image: { type: 'jpeg', quality: 0.98 },
+                html2canvas: { scale: 2 },
+                jsPDF: { unit: 'in', format: 'A4', orientation: 'landscape' }
+            };
+            html2pdf(ele, opt);
+        }
+
+        function btn_QuanLyTau() {
+            debugger
+            window.location = baseaddress + "Page_Master/Manage_Tau?vung=1";
+        }
+        function toastSuccess(_header, _body) {
+            $('#toast-header').text(" " + _header);
+            $('#toast-body').text(_body);
+            $("#toast-icon").css("color", "#198754");
+            $('.toast').toast({ delay: 2500 });
+            $('.toast').toast('show');
+        }
+
+        function toastError(_header, _body) {
+            $('#toast-header').text(" " + _header);
+            $('#toast-body').text(_body);
+            $("#toast-icon").css("color", "#DC3545");
+            $('.toast').toast({ delay: 2500 });
+            $('.toast').toast('show');
+        }
+        function closeToast() {
+            $('.toast').toast('hide');
+        }
+    </script>
+</body>
+</html>
