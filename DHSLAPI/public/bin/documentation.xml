@@ -3397,6 +3397,11 @@
             Trục
             </summary>
         </member>
+        <member name="P:DHSLAPI.Models.TRUC.VITRICHANVIT">
+            <summary>
+            Vị trí hệ trục chân vịt
+            </summary>
+        </member>
         <member name="P:DHSLAPI.Models.TRUC.TONGCHIEUDAI">
             <summary>
             Tổng chiều dài
