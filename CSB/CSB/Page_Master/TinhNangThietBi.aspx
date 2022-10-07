@@ -2737,7 +2737,7 @@
                                             <div class="form-group row">
                                                 <label class="col-sm-4 col-form-label">Vị trí hệ trục chân vịt: </label>
                                                 <div class="col-sm-8">
-                                                    <input type="number" min="0" step="any" id="edit-HETRUCCHANVIT-TRUC-VITRICHANVIT" class="form-control" required>
+                                                    <input type="text" id="edit-HETRUCCHANVIT-TRUC-VITRICHANVIT" class="form-control" required>
                                                 </div>
                                             </div>
                                         </div>
@@ -5293,11 +5293,11 @@
             }
             return false;
         }
-        function onclick_edit_HETRUCCHANVIT(ID, VITRICHANVIT,TONGCHIEUDAI, VATLIEU, TONGTRONGLUONG, DUONGKINHTRUCGHEPCHANVIT, DUONGKINHTRUCTRUNGGIAN, DUONGKINHTRUCXOAN, DUONGKINHTRUCCHAN, GOCNGIENGTRUC, LOAICHANVIT, DUONGKINH, SOCANH, VATLIEU, TRONGLUONG, CHIEUQUAY, VONGQUAYDINHMUC, SOLUONG, LOAI, MODAUBOITRON) {
+        function onclick_edit_HETRUCCHANVIT(ID, VITRICHANVIT,TONGCHIEUDAI, VATLIEU_TRUC, TONGTRONGLUONG, DUONGKINHTRUCGHEPCHANVIT, DUONGKINHTRUCTRUNGGIAN, DUONGKINHTRUCXOAN, DUONGKINHTRUCCHAN, GOCNGIENGTRUC, LOAICHANVIT, DUONGKINH, SOCANH, VATLIEU, TRONGLUONG, CHIEUQUAY, VONGQUAYDINHMUC, SOLUONG, LOAI, MODAUBOITRON) {
             $("#edit-HETRUCCHANVIT-ID").val(ID);
             $("#edit-HETRUCCHANVIT-TRUC-VITRICHANVIT").val(VITRICHANVIT);
             $("#edit-HETRUCCHANVIT-TRUC-TONGCHIEUDAI").val(TONGCHIEUDAI);
-            $("#edit-HETRUCCHANVIT-TRUC-VATLIEU").val(VATLIEU);
+            $("#edit-HETRUCCHANVIT-TRUC-VATLIEU").val(VATLIEU_TRUC);
             $("#edit-HETRUCCHANVIT-TRUC-TONGTRONGLUONG").val(TONGTRONGLUONG);
             $("#edit-HETRUCCHANVIT-TRUC-DUONGKINHTRUCGHEPCHANVIT").val(DUONGKINHTRUCGHEPCHANVIT);
             $("#edit-HETRUCCHANVIT-TRUC-DUONGKINHTRUCTRUNGGIAN").val(DUONGKINHTRUCTRUNGGIAN);

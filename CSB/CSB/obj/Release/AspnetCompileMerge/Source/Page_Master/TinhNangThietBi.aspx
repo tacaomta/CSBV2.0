@@ -2737,7 +2737,7 @@
                                             <div class="form-group row">
                                                 <label class="col-sm-4 col-form-label">Vị trí hệ trục chân vịt: </label>
                                                 <div class="col-sm-8">
-                                                    <input type="number" min="0" step="any" id="edit-HETRUCCHANVIT-TRUC-VITRICHANVIT" class="form-control" required>
+                                                    <input type="text" id="edit-HETRUCCHANVIT-TRUC-VITRICHANVIT" class="form-control" required>
                                                 </div>
                                             </div>
                                         </div>

@@ -658,9 +658,9 @@
                                     <div class="row">
                                     <div class="col-sm-4">
                                         <div class="form-group row">
-                                             <label class="col-sm-4 col-form-label">Ký hiệu hệ trục chân vịt:</label>
+                                             <label class="col-sm-4 col-form-label">Vị trí hệ trục chân vịt:</label>
                                              <div class="col-sm-8">
-                                                <select class="form-control" id="add-DANGKYCLHETRUCCHANVIT-IDHETRUCCHANVIT" required></select>
+                                                <select class="form-control" id="add-DANGKYCLHETRUCCHANVIT-VITRIHETRUCCHANVIT" required></select>
                                             </div>
                                         </div>
                                     </div>
@@ -681,7 +681,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <h4 class="sub-title">TRỤC</h4>
+<%--                                <h4 class="sub-title">TRỤC</h4>
                                 <div class="row">
                                     <div class="col-sm-4">
                                         <div class="form-group row">
@@ -841,7 +841,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                </div>                          
+                                </div>   --%>                       
                             </div>
                             <div class="modal-footer">
                                 <button type="submit" onclick="add_DANGKYCLHETRUCCHANVIT()" class="btn btn-info">Thêm</button>
@@ -1908,10 +1908,10 @@
                 success: function (data) {
                     console.log(data);
                     $.each(data, function (key, item) {
-                        textselect += "<option value=" + item.ID + ">" + item.ID + "</option>";
+                        textselect += "<option value=" + item.ID + ">" + item.TRUC.VITRICHANVIT + "</option>";
                     });
                     console.log("okGET");
-                    $("#add-DANGKYCLHETRUCCHANVIT-IDHETRUCCHANVIT").html(textselect);
+                    $("#add-DANGKYCLHETRUCCHANVIT-VITRIHETRUCCHANVIT").html(textselect);
                 }, error: function (ret) {
                     console.log('errorGET');
                 }
@@ -2094,11 +2094,11 @@
         function click_add_DANGKYCLHETRUCCHANVIT(id = null) {
             debugger
             if (id != null) {
-                $('#add-DANGKYCLHETRUCCHANVIT-IDHETRUCCHANVIT').attr('disabled', '');
-                $('#add-DANGKYCLHETRUCCHANVIT-IDHETRUCCHANVIT').val(id);
+                $('#add-DANGKYCLHETRUCCHANVIT-VITRIHETRUCCHANVIT').attr('disabled', '');
+                $('#add-DANGKYCLHETRUCCHANVIT-VITRIHETRUCCHANVIT').val(id);
             }
             else {
-                $('#add-DANGKYCLHETRUCCHANVIT-IDHETRUCCHANVIT').removeAttr('disabled', '');
+                $('#add-DANGKYCLHETRUCCHANVIT-VITRIHETRUCCHANVIT').removeAttr('disabled', '');
             }
             loadTrangThai('add-DANGKYCLHETRUCCHANVIT-DANGKYCHATLUONG-TRANGTHAI', '');
         };
@@ -2107,7 +2107,7 @@
             console.log(form.checkValidity());
             if (form.checkValidity() == true) {
                 var DANGKYCLHETRUCCHANVIT = {
-                    IDHTCV: $("#add-DANGKYCLHETRUCCHANVIT-IDHETRUCCHANVIT").val(),        
+                    IDHTCV: $("#add-DANGKYCLHETRUCCHANVIT-VITRIHETRUCCHANVIT").val(),        
                     DANGKYCHATLUONG_NAMDANGKY: $("#add-DANGKYCLHETRUCCHANVIT-DANGKYCHATLUONG-NAMDANGKY").val(),
                     DANGKYCHATLUONG_TRANGTHAI: $("#add-DANGKYCLHETRUCCHANVIT-DANGKYCHATLUONG-TRANGTHAI").val()
                 };
