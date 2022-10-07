@@ -181,6 +181,7 @@
                                         <div class="btn-group">
                                             <button onclick="loadDataList_HETRUCCHANVIT()" class="btn btn-secondary mb-2"><span class="bi-arrow-clockwise"></span>&nbsp;Load dữ liệu</button>
                                             <button id="btn_add_HETRUCCHANVIT" class="btn btn-secondary mb-2" data-toggle="modal" data-target="#model-add-HETRUCCHANVIT" style="padding-top: 4px;"><span class="bi bi-plus-circle"></span>Thêm hệ trục chân vịt</button>
+                                            <button onclick="DangKyChatLuong(4)" class="btn btn-secondary mb-2"><i class="bi bi-x-diamond-fill"></i>&nbsp; Thêm đăng ký chất lượng</button>
                                         </div>
                                         <table id="table-HETRUCCHANVIT" class="table table-bordered table-striped table-md" style="width: 100%">
                                         </table>
@@ -2541,6 +2542,14 @@
                                                 </div>
                                             </div>
                                         </div>
+                                        <div class="col-sm-4">
+                                            <div class="form-group row">
+                                                <label class="col-sm-4 col-form-label">Vị trí hệ trục chân vịt: </label>
+                                                <div class="col-sm-8">
+                                                    <input type="text" id="add-HETRUCCHANVIT-TRUC-VITRICHANVIT" required class="form-control">
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                     <h4 class="sub-title">Chân vịt</h4>
                                     <div class="row">
@@ -2721,6 +2730,14 @@
                                                 <label class="col-sm-4 col-form-label">Góc nghiêng trục (độ): </label>
                                                 <div class="col-sm-8">
                                                     <input type="number" min="0" step="any" id="edit-HETRUCCHANVIT-TRUC-GOCNGIENGTRUC" class="form-control">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <div class="form-group row">
+                                                <label class="col-sm-4 col-form-label">Vị trí hệ trục chân vịt: </label>
+                                                <div class="col-sm-8">
+                                                    <input type="number" min="0" step="any" id="edit-HETRUCCHANVIT-TRUC-VITRICHANVIT" class="form-control" required>
                                                 </div>
                                             </div>
                                         </div>
@@ -5147,10 +5164,10 @@
                     $('#loader').removeClass('hidden');
                 },
                 success: function (data) {
-                    var tabletext = "<thead><tr><th rowspan='2'>STT</th><th colspan='2'>TRỤC</th><th colspan='3'>CHÂN VỊT</th><th colspan='2'>Ổ ĐỠ</th><th rowspan='2'>TÁC VỤ</th></tr><tr><th>TỔNG CHIỀU DÀI</th><th>VẬT LIỆU</th><th>LOẠI VẬT LIỆU</th><th>ĐƯỜNG KÍNH (mm)</th><th>SỐ CÁNH</th><th>SỐ LƯỢNG</th><th>LOẠI</th></tr></thead><tbody>";
+                    var tabletext = "<thead><tr><th rowspan='2'>STT</th><th colspan='3'>TRỤC</th><th colspan='3'>CHÂN VỊT</th><th colspan='2'>Ổ ĐỠ</th><th rowspan='2'>TÁC VỤ</th></tr><tr><th>VỊ TRÍ CHÂN VỊT</th><th>TỔNG CHIỀU DÀI</th><th>VẬT LIỆU</th><th>LOẠI VẬT LIỆU</th><th>ĐƯỜNG KÍNH (mm)</th><th>SỐ CÁNH</th><th>SỐ LƯỢNG</th><th>LOẠI</th></tr></thead><tbody>";
                     var i = 1;
                     $.each(data, function (key, item) {
-                        tabletext += "<tr><td style='text-align: center;'>" + i + "</td><td>" + item.TRUC.TONGCHIEUDAI + "</td><td>" + item.TRUC.VATLIEU + "</td><td>" + item.CHANVIT.LOAICHANVIT + "</td><td>" + item.CHANVIT.DUONGKINH + "</td><td>" + item.CHANVIT.SOCANH + "</td><td>" + item.ODO.SOLUONG + "</td><td>" + item.ODO.LOAI + '</td><td><div style="display: flex; justify-content: space-around;"><a href="#" class="edit" title="Sửa" data-toggle="modal" data-target="#model-edit-HETRUCCHANVIT"  onclick="onclick_edit_HETRUCCHANVIT(`' + item.ID + '`,`' + item.TRUC.TONGCHIEUDAI + '`,`' + item.TRUC.VATLIEU + '`,`' + item.TRUC.TONGTRONGLUONG + '`,`' + item.TRUC.DUONGKINHTRUCGHEPCHANVIT + '`,`' + item.TRUC.DUONGKINHTRUCTRUNGGIAN + '`,`' + item.TRUC.DUONGKINHTRUCXOAN + '`,`' + item.TRUC.DUONGKINHTRUCCHAN + '`,`' + item.TRUC.GOCNGIENGTRUC + '`,`' + item.CHANVIT.LOAICHANVIT + '`,`' + item.CHANVIT.DUONGKINH + '`,`' + item.CHANVIT.SOCANH + '`,`' + item.CHANVIT.VATLIEU + '`,`' + item.CHANVIT.TRONGLUONG + '`,`' + item.CHANVIT.CHIEUQUAY + '`,`' + item.CHANVIT.VONGQUAYDINHMUC + '`,`' + item.ODO.SOLUONG + '`,`' + item.ODO.LOAI + '`,`' + item.ODO.MODAUBOITRON + '`)"><i class="material-icons">&#xE254;</i></a><a href="#" class="delete" title="Xóa" onclick="delete_HETRUCCHANVIT(`' + item.ID + '`)"><i class="material-icons">&#xE872;</i></a></div></td></tr>';
+                        tabletext += "<tr><td style='text-align: center;'>" + i + "</td><td>" + item.TRUC.VITRICHANVIT + "</td><td>" + item.TRUC.TONGCHIEUDAI + "</td><td>" + item.TRUC.VATLIEU + "</td><td>" + item.CHANVIT.LOAICHANVIT + "</td><td>" + item.CHANVIT.DUONGKINH + "</td><td>" + item.CHANVIT.SOCANH + "</td><td>" + item.ODO.SOLUONG + "</td><td>" + item.ODO.LOAI + '</td><td><div style="display: flex; justify-content: space-around;"><a href="#" class="edit" title="Sửa" data-toggle="modal" data-target="#model-edit-HETRUCCHANVIT"  onclick="onclick_edit_HETRUCCHANVIT(`' + item.ID + '`,`' + item.TRUC.VITRICHANVIT + '`,`' + item.TRUC.TONGCHIEUDAI + '`,`' + item.TRUC.VATLIEU + '`,`' + item.TRUC.TONGTRONGLUONG + '`,`' + item.TRUC.DUONGKINHTRUCGHEPCHANVIT + '`,`' + item.TRUC.DUONGKINHTRUCTRUNGGIAN + '`,`' + item.TRUC.DUONGKINHTRUCXOAN + '`,`' + item.TRUC.DUONGKINHTRUCCHAN + '`,`' + item.TRUC.GOCNGIENGTRUC + '`,`' + item.CHANVIT.LOAICHANVIT + '`,`' + item.CHANVIT.DUONGKINH + '`,`' + item.CHANVIT.SOCANH + '`,`' + item.CHANVIT.VATLIEU + '`,`' + item.CHANVIT.TRONGLUONG + '`,`' + item.CHANVIT.CHIEUQUAY + '`,`' + item.CHANVIT.VONGQUAYDINHMUC + '`,`' + item.ODO.SOLUONG + '`,`' + item.ODO.LOAI + '`,`' + item.ODO.MODAUBOITRON + '`)"><i class="material-icons">&#xE254;</i></a><a href="#" class="delete" title="Xóa" onclick="delete_HETRUCCHANVIT(`' + item.ID + '`)"><i class="material-icons">&#xE872;</i></a></div></td></tr>';
                         i = i + 1;
                     });
                     tabletext += "</tbody>";
@@ -5173,6 +5190,7 @@
                     stateSave: true,
                     "columns": [
                         { name: 'STT', width: 60 },
+                        { name: 'VỊ TRÍ CHÂN VỊT', width: 180 },
                         { name: 'TỔNG CHIỀU DÀI', width: 180 },
                         { name: 'VẬT LIỆU', width: 180 },
                         { name: 'LOẠI CHÂN VỊT', width: 180 },
@@ -5211,6 +5229,7 @@
                 var HETRUCCHANVIT = {
                     ID: "",
                     TRUC: {
+                        VITRICHANVIT: $("#add-HETRUCCHANVIT-TRUC-VITRICHANVIT").val(),
                         TONGCHIEUDAI: $("#add-HETRUCCHANVIT-TRUC-TONGCHIEUDAI").val(),
                         VATLIEU: $("#add-HETRUCCHANVIT-TRUC-VATLIEU").val(),
                         TONGTRONGLUONG: $("#add-HETRUCCHANVIT-TRUC-TONGTRONGLUONG").val(),
@@ -5249,32 +5268,34 @@
                         toastError("Thất bại", ret.responseJSON.Message);
                     },
                     complete: function () { // Set our complete callback, adding the .hidden class and hiding the spinner.
-                        $("#add-HETRUCCHANVIT-TRUC-TONGCHIEUDAI").val();
-                        $("#add-HETRUCCHANVIT-TRUC-VATLIEU").val();
-                        $("#add-HETRUCCHANVIT-TRUC-TONGTRONGLUONG").val();
-                        $("#add-HETRUCCHANVIT-TRUC-DUONGKINHTRUCGHEPCHANVIT").val();
-                        $("#add-HETRUCCHANVIT-TRUC-DUONGKINHTRUCTRUNGGIAN").val();
-                        $("#add-HETRUCCHANVIT-TRUC-DUONGKINHTRUCXOAN").val();
-                        $("#add-HETRUCCHANVIT-TRUC-DUONGKINHTRUCCHAN").val();
-                        $("#add-HETRUCCHANVIT-TRUC-GOCNGIENGTRUC").val();
-                        $("#add-HETRUCCHANVIT-CHANVIT-LOAICHANVIT").val();
-                        $("#add-HETRUCCHANVIT-CHANVIT-DUONGKINH").val();
-                        $("#add-HETRUCCHANVIT-CHANVIT-SOCANH").val();
-                        $("#add-HETRUCCHANVIT-CHANVIT-VATLIEU").val();
-                        $("#add-HETRUCCHANVIT-CHANVIT-TRONGLUONG").val();
-                        $("#add-HETRUCCHANVIT-CHANVIT-CHIEUQUAY").val();
-                        $("#add-HETRUCCHANVIT-CHANVIT-VONGQUAYDINHMUC").val();
-                        $("#add-HETRUCCHANVIT-ODO-SOLUONG").val();
-                        $("#add-HETRUCCHANVIT-ODO-LOAI").val();
-                        $("#add-HETRUCCHANVIT-ODO-MODAUBOITRON").val();
+                        $("#add-HETRUCCHANVIT-TRUC-VITRICHANVIT").val("");
+                        $("#add-HETRUCCHANVIT-TRUC-TONGCHIEUDAI").val("");
+                        $("#add-HETRUCCHANVIT-TRUC-VATLIEU").val("");
+                        $("#add-HETRUCCHANVIT-TRUC-TONGTRONGLUONG").val("");
+                        $("#add-HETRUCCHANVIT-TRUC-DUONGKINHTRUCGHEPCHANVIT").val("");
+                        $("#add-HETRUCCHANVIT-TRUC-DUONGKINHTRUCTRUNGGIAN").val("");
+                        $("#add-HETRUCCHANVIT-TRUC-DUONGKINHTRUCXOAN").val("");
+                        $("#add-HETRUCCHANVIT-TRUC-DUONGKINHTRUCCHAN").val("");
+                        $("#add-HETRUCCHANVIT-TRUC-GOCNGIENGTRUC").val("");
+                        $("#add-HETRUCCHANVIT-CHANVIT-LOAICHANVIT").val("");
+                        $("#add-HETRUCCHANVIT-CHANVIT-DUONGKINH").val("");
+                        $("#add-HETRUCCHANVIT-CHANVIT-SOCANH").val("");
+                        $("#add-HETRUCCHANVIT-CHANVIT-VATLIEU").val("");
+                        $("#add-HETRUCCHANVIT-CHANVIT-TRONGLUONG").val("");
+                        $("#add-HETRUCCHANVIT-CHANVIT-CHIEUQUAY").val("");
+                        $("#add-HETRUCCHANVIT-CHANVIT-VONGQUAYDINHMUC").val("");
+                        $("#add-HETRUCCHANVIT-ODO-SOLUONG").val("");
+                        $("#add-HETRUCCHANVIT-ODO-LOAI").val("");
+                        $("#add-HETRUCCHANVIT-ODO-MODAUBOITRON").val("");
                         $('#model-add-HETRUCCHANVIT').modal("hide");
                     },
                 });
             }
             return false;
         }
-        function onclick_edit_HETRUCCHANVIT(ID, TONGCHIEUDAI, VATLIEU, TONGTRONGLUONG, DUONGKINHTRUCGHEPCHANVIT, DUONGKINHTRUCTRUNGGIAN, DUONGKINHTRUCXOAN, DUONGKINHTRUCCHAN, GOCNGIENGTRUC, LOAICHANVIT, DUONGKINH, SOCANH, VATLIEU, TRONGLUONG, CHIEUQUAY, VONGQUAYDINHMUC, SOLUONG, LOAI, MODAUBOITRON) {
+        function onclick_edit_HETRUCCHANVIT(ID, VITRICHANVIT,TONGCHIEUDAI, VATLIEU, TONGTRONGLUONG, DUONGKINHTRUCGHEPCHANVIT, DUONGKINHTRUCTRUNGGIAN, DUONGKINHTRUCXOAN, DUONGKINHTRUCCHAN, GOCNGIENGTRUC, LOAICHANVIT, DUONGKINH, SOCANH, VATLIEU, TRONGLUONG, CHIEUQUAY, VONGQUAYDINHMUC, SOLUONG, LOAI, MODAUBOITRON) {
             $("#edit-HETRUCCHANVIT-ID").val(ID);
+            $("#edit-HETRUCCHANVIT-TRUC-VITRICHANVIT").val(VITRICHANVIT);
             $("#edit-HETRUCCHANVIT-TRUC-TONGCHIEUDAI").val(TONGCHIEUDAI);
             $("#edit-HETRUCCHANVIT-TRUC-VATLIEU").val(VATLIEU);
             $("#edit-HETRUCCHANVIT-TRUC-TONGTRONGLUONG").val(TONGTRONGLUONG);
@@ -5301,6 +5322,7 @@
                 var HETRUCCHANVIT = {
                     ID: $("#edit-HETRUCCHANVIT-ID").val(),
                     TRUC: {
+                        VITRICHANVIT: $("#edit-HETRUCCHANVIT-TRUC-VITRICHANVIT").val(),
                         TONGCHIEUDAI: $("#edit-HETRUCCHANVIT-TRUC-TONGCHIEUDAI").val(),
                         VATLIEU: $("#edit-HETRUCCHANVIT-TRUC-VATLIEU").val(),
                         TONGTRONGLUONG: $("#edit-HETRUCCHANVIT-TRUC-TONGTRONGLUONG").val(),
@@ -5592,7 +5614,7 @@
                     var tabletext = "<thead><tr><th>STT</th><th>SỐ HIỆU</th><th>TÊN TRANG BỊ</th><th>KÝ HIỆU</th><th>NƯỚC SẢN XUẤT</th><th>LƯU LƯỢNG</th><th>SỐ LƯỢNG</th><th>TÁC VỤ</th></tr></thead><tbody>";
                     var i = 1;
                     $.each(data, function (key, item) {
-                        tabletext += "<tr><td style='text-align: center;'>" + i + "</td><td>" + item.SOHIEU + "</td><td>" + item.TENTB + "</td><td>" + item.KYHIEU  + "</td><td>" + item.NUOCSX + "</td><td>" + item.LUULUONG + "</td><td>" + item.SOLUONG + '</td><td><div style="display: flex; justify-content: space-around;"><a href="#" class="edit" title="Sửa" data-toggle="modal" data-target="#model-edit-BOMDAUNUOCTHONGGIO"  onclick="onclick_edit_BOMDAUNUOCTHONGGIO(`' + item.ID + '`,`' + item.SOHIEU + '`,`' + item.TENTB + '`,`' + item.KYHIEU + '`,`' + item.NUOCSX + '`,`' + item.LUULUONG + '`,`' + item.SOLUONG + '`)"><i class="material-icons">&#xE254;</i></a><a href="#" class="delete" title="Xóa" onclick="delete_BOMDAUNUOCTHONGGIO(`' + item.ID + '`)"><i class="material-icons">&#xE872;</i></a></div></td></tr>';
+                        tabletext += "<tr><td style='text-align: center;'>" + i + "</td><td>" + item.SOHIEU + "</td><td>" + item.TENTB + "</td><td>" + item.KYHIEU + "</td><td>" + item.NUOCSX + "</td><td>" + item.LUULUONG + "</td><td>" + item.SOLUONG + '</td><td><div style="display: flex; justify-content: space-around;"><a href="#" class="edit" title="Sửa" data-toggle="modal" data-target="#model-edit-BOMDAUNUOCTHONGGIO"  onclick="onclick_edit_BOMDAUNUOCTHONGGIO(`' + item.ID + '`,`' + item.SOHIEU + '`,`' + item.TENTB + '`,`' + item.KYHIEU + '`,`' + item.NUOCSX + '`,`' + item.LUULUONG + '`,`' + item.SOLUONG + '`)"><i class="material-icons">&#xE254;</i></a><a href="#" class="delete" title="Xóa" onclick="delete_BOMDAUNUOCTHONGGIO(`' + item.ID + '`)"><i class="material-icons">&#xE872;</i></a></div></td></tr>';
                         i = i + 1;
                     });
                     tabletext += "</tbody>";
@@ -5681,7 +5703,7 @@
             }
             return false;
         }
-        function onclick_edit_BOMDAUNUOCTHONGGIO(ID,SOHIEUTB , TENTB, KYHIEU, NUOCSX, LUULUONG, SOLUONG) {
+        function onclick_edit_BOMDAUNUOCTHONGGIO(ID, SOHIEUTB, TENTB, KYHIEU, NUOCSX, LUULUONG, SOLUONG) {
             $('#edit-BOMDAUNUOCTHONGGIO-ID').val(ID);
             $("#edit-BOMDAUNUOCTHONGGIO-SOHIEUTB").val(SOHIEUTB);
             $("#edit-BOMDAUNUOCTHONGGIO-TENTB").val(TENTB);

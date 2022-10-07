@@ -475,78 +475,139 @@
 
             });
         };
+        function Check_Validity(string_a, string_b) {
+            if (string_a == '' && string_b == '') {
+                return 0;
+            }
+            else {
+                if (string_a == '') {
+                    return 1;
+                }
+                else if (string_b == '') {
+                    return 2;
+                }
+                else {
+                    return 3;
+                }
+            }
+        }
         function add_DANGKYNEOXICHNEO() {
             var form = document.getElementById("form-add-DANGKYDOIMOINEOXICHNEO");
             console.log(form.checkValidity());
+
             if (form.checkValidity() == true) {
-                var DANGKYNEOXICHNEO = {
-                    ID: "",
-                    DANGKY: $("#add-DANGKYDOIMOINEOXICHNEO-DANGKY").val(),
-                    PHAI: {
-                        NEO: {
-                            THANGNAM: $("#add-DANGKYDOIMOINEOXICHNEO-NEOPHAI-THANGNAM").val(),
-                            TRONGLUONG: $("#add-DANGKYDOIMOINEOXICHNEO-NEOPHAI-TRONGLUONGP").val()
-                        },
-                        XICH: {
-                            THANGNAM: $("#add-DANGKYDOIMOINEOXICHNEO-XICHNEOPHAI-THANGNAM").val(),
-                            DUONGKINH_DODAI: $("#add-DANGKYDOIMOINEOXICHNEO-XICHNEOPHAI-DUONGKINHTRENDODAI").val()
-                        }
-                    },
-                    TRAI: {
-                        NEO: {
-                            THANGNAM: $("#add-DANGKYDOIMOINEOXICHNEO-NEOTRAI-THANGNAM").val(),
-                            TRONGLUONG: $("#add-DANGKYDOIMOINEOXICHNEO-NEOTRAI-TRONGLUONGP").val()
-                        },
-                        XICH: {
-                            THANGNAM: $("#add-DANGKYDOIMOINEOXICHNEO-XICHNEOTRAI-THANGNAM").val(),
-                            DUONGKINH_DODAI: $("#add-DANGKYDOIMOINEOXICHNEO-XICHNEOTRAI-DUONGKINHTRENDODAI").val()
-                        }
-                    },
-                    SAU: {
-                        NEO: {
-                            THANGNAM: $("#add-DANGKYDOIMOINEOXICHNEO-NEOSAU-THANGNAM").val(),
-                            TRONGLUONG: $("#add-DANGKYDOIMOINEOXICHNEO-NEOSAU-TRONGLUONGP").val()
-                        },
-                        XICH: {
-                            THANGNAM: $("#add-DANGKYDOIMOINEOXICHNEO-XICHNEOSAU-THANGNAM").val(),
-                            DUONGKINH_DODAI: $("#add-DANGKYDOIMOINEOXICHNEO-XICHNEOSAU-DUONGKINHTRENDODAI").val()
-                        }
+                if (Check_Validity($("#add-DANGKYDOIMOINEOXICHNEO-NEOPHAI-THANGNAM").val(), $("#add-DANGKYDOIMOINEOXICHNEO-NEOPHAI-TRONGLUONGP").val()) == 0 && Check_Validity($("#add-DANGKYDOIMOINEOXICHNEO-XICHNEOPHAI-THANGNAM").val(), $("#add-DANGKYDOIMOINEOXICHNEO-XICHNEOPHAI-DUONGKINHTRENDODAI").val()) == 0 && Check_Validity($("#add-DANGKYDOIMOINEOXICHNEO-NEOTRAI-THANGNAM").val(), $("#add-DANGKYDOIMOINEOXICHNEO-NEOTRAI-TRONGLUONGP").val()) == 0 && Check_Validity($("#add-DANGKYDOIMOINEOXICHNEO-XICHNEOTRAI-THANGNAM").val(), $("#add-DANGKYDOIMOINEOXICHNEO-XICHNEOTRAI-DUONGKINHTRENDODAI").val()) == 0 && Check_Validity($("#add-DANGKYDOIMOINEOXICHNEO-NEOSAU-THANGNAM").val(), $("#add-DANGKYDOIMOINEOXICHNEO-NEOSAU-TRONGLUONGP").val()) == 0 && Check_Validity($("#add-DANGKYDOIMOINEOXICHNEO-XICHNEOSAU-THANGNAM").val(), $("#add-DANGKYDOIMOINEOXICHNEO-XICHNEOSAU-DUONGKINHTRENDODAI").val()) == 0) {
+                    alert("Chưa điền đủ dữ liệu!");
+                }
+                else {
+                    if (Check_Validity($("#add-DANGKYDOIMOINEOXICHNEO-NEOPHAI-THANGNAM").val(), $("#add-DANGKYDOIMOINEOXICHNEO-NEOPHAI-TRONGLUONGP").val()) == 1) {
+                        alert("Chưa điền tháng năm neo phải!");
                     }
+                    else if (Check_Validity($("#add-DANGKYDOIMOINEOXICHNEO-NEOPHAI-THANGNAM").val(), $("#add-DANGKYDOIMOINEOXICHNEO-NEOPHAI-TRONGLUONGP").val()) == 2) {
+                        alert("Chưa điền trọng lượng neo phải!");
+                    }
+                    else if (Check_Validity($("#add-DANGKYDOIMOINEOXICHNEO-XICHNEOPHAI-THANGNAM").val(), $("#add-DANGKYDOIMOINEOXICHNEO-XICHNEOPHAI-DUONGKINHTRENDODAI").val()) == 1) {
+                        alert("Chưa điền tháng năm xích neo phải!");
+                    }
+                    else if (Check_Validity($("#add-DANGKYDOIMOINEOXICHNEO-XICHNEOPHAI-THANGNAM").val(), $("#add-DANGKYDOIMOINEOXICHNEO-XICHNEOPHAI-DUONGKINHTRENDODAI").val()) == 2) {
+                        alert("Chưa điền đường kính / Độ dài xích neo phải!");
+                    }
+                    else if (Check_Validity($("#add-DANGKYDOIMOINEOXICHNEO-NEOTRAI-THANGNAM").val(), $("#add-DANGKYDOIMOINEOXICHNEO-NEOTRAI-TRONGLUONGP").val()) == 1) {
+                        alert("Chưa điền tháng năm neo trái!");
+                    }
+                    else if (Check_Validity($("#add-DANGKYDOIMOINEOXICHNEO-NEOTRAI-THANGNAM").val(), $("#add-DANGKYDOIMOINEOXICHNEO-NEOTRAI-TRONGLUONGP").val()) == 2) {
+                        alert("Chưa điền trọng lượng neo trái!");
+                    }
+                    else if (Check_Validity($("#add-DANGKYDOIMOINEOXICHNEO-XICHNEOTRAI-THANGNAM").val(), $("#add-DANGKYDOIMOINEOXICHNEO-XICHNEOTRAI-DUONGKINHTRENDODAI").val()) == 1) {
+                        alert("Chưa điền tháng năm xích neo trái!");
+                    }
+                    else if (Check_Validity($("#add-DANGKYDOIMOINEOXICHNEO-XICHNEOTRAI-THANGNAM").val(), $("#add-DANGKYDOIMOINEOXICHNEO-XICHNEOTRAI-DUONGKINHTRENDODAI").val()) == 2) {
+                        alert("Chưa điền đường kính / Độ dài xích neo trái!");
+                    }
+                    else if (Check_Validity($("#add-DANGKYDOIMOINEOXICHNEO-NEOSAU-THANGNAM").val(), $("#add-DANGKYDOIMOINEOXICHNEO-NEOSAU-TRONGLUONGP").val()) == 1) {
+                        alert("Chưa điền tháng năm neo sau!");
+                    }
+                    else if (Check_Validity($("#add-DANGKYDOIMOINEOXICHNEO-NEOSAU-THANGNAM").val(), $("#add-DANGKYDOIMOINEOXICHNEO-NEOSAU-TRONGLUONGP").val()) == 2) {
+                        alert("Chưa điền trọng lượng neo sau!");
+                    }
+                    else if (Check_Validity($("#add-DANGKYDOIMOINEOXICHNEO-XICHNEOSAU-THANGNAM").val(), $("#add-DANGKYDOIMOINEOXICHNEO-XICHNEOSAU-DUONGKINHTRENDODAI").val()) == 1) {
+                        alert("Chưa điền tháng năm xích neo sau!");
+                    }
+                    else if (Check_Validity($("#add-DANGKYDOIMOINEOXICHNEO-XICHNEOSAU-THANGNAM").val(), $("#add-DANGKYDOIMOINEOXICHNEO-XICHNEOSAU-DUONGKINHTRENDODAI").val()) == 2) {
+                        alert("Chưa điền đường kính / Độ dài xích neo sau!");
+                    }
+                    else {
+                        var DANGKYNEOXICHNEO = {
+                            ID: "",
+                            DANGKY: $("#add-DANGKYDOIMOINEOXICHNEO-DANGKY").val(),
+                            PHAI: {
+                                NEO: {
+                                    THANGNAM: $("#add-DANGKYDOIMOINEOXICHNEO-NEOPHAI-THANGNAM").val(),
+                                    TRONGLUONG: $("#add-DANGKYDOIMOINEOXICHNEO-NEOPHAI-TRONGLUONGP").val()
+                                },
+                                XICH: {
+                                    THANGNAM: $("#add-DANGKYDOIMOINEOXICHNEO-XICHNEOPHAI-THANGNAM").val(),
+                                    DUONGKINH_DODAI: $("#add-DANGKYDOIMOINEOXICHNEO-XICHNEOPHAI-DUONGKINHTRENDODAI").val()
+                                }
+                            },
+                            TRAI: {
+                                NEO: {
+                                    THANGNAM: $("#add-DANGKYDOIMOINEOXICHNEO-NEOTRAI-THANGNAM").val(),
+                                    TRONGLUONG: $("#add-DANGKYDOIMOINEOXICHNEO-NEOTRAI-TRONGLUONGP").val()
+                                },
+                                XICH: {
+                                    THANGNAM: $("#add-DANGKYDOIMOINEOXICHNEO-XICHNEOTRAI-THANGNAM").val(),
+                                    DUONGKINH_DODAI: $("#add-DANGKYDOIMOINEOXICHNEO-XICHNEOTRAI-DUONGKINHTRENDODAI").val()
+                                }
+                            },
+                            SAU: {
+                                NEO: {
+                                    THANGNAM: $("#add-DANGKYDOIMOINEOXICHNEO-NEOSAU-THANGNAM").val(),
+                                    TRONGLUONG: $("#add-DANGKYDOIMOINEOXICHNEO-NEOSAU-TRONGLUONGP").val()
+                                },
+                                XICH: {
+                                    THANGNAM: $("#add-DANGKYDOIMOINEOXICHNEO-XICHNEOSAU-THANGNAM").val(),
+                                    DUONGKINH_DODAI: $("#add-DANGKYDOIMOINEOXICHNEO-XICHNEOSAU-DUONGKINHTRENDODAI").val()
+                                }
+                            }
 
-                };
-                console.log(DANGKYNEOXICHNEO);
-                $.ajax({
-                    type: "POST",
-                    url: linkapi + "v2/insert_dangkyneoxichneo?id=" + getParameterByName("Xich_ID"),
-                    dataType: "json",
-                    data: JSON.stringify(DANGKYNEOXICHNEO),
-                    contentType: "application/json",
-                    success: function (data) {
-                        toastSuccess("Thành công", "Thêm đăng ký thay đổi, mất, bổ sung neo - xích neo thành công.");
-                        loadDataList_DangKy();
-                    }, error: function (ret) {
-                        toastError("Thất bại", ret.responseJSON.Message);
-                    },
-                    complete: function () { // Set our complete callback, adding the .hidden class and hiding the spinner.
-                        $("#add-DANGKYDOIMOINEOXICHNEO-NEOPHAI-THANGNAM").val("");
-                        $("#add-DANGKYDOIMOINEOXICHNEO-NEOPHAI-TRONGLUONGP").val("");
-                        $("#add-DANGKYDOIMOINEOXICHNEO-XICHNEOPHAI-THANGNAM").val("");
-                        $("#add-DANGKYDOIMOINEOXICHNEO-XICHNEOPHAI-DUONGKINHTRENDODAI").val("");
+                        };
+                        console.log(DANGKYNEOXICHNEO);
+                        $.ajax({
+                            type: "POST",
+                            url: linkapi + "v2/insert_dangkyneoxichneo?id=" + getParameterByName("Xich_ID"),
+                            dataType: "json",
+                            data: JSON.stringify(DANGKYNEOXICHNEO),
+                            contentType: "application/json",
+                            success: function (data) {
+                                toastSuccess("Thành công", "Thêm đăng ký thay đổi, mất, bổ sung neo - xích neo thành công.");
+                                loadDataList_DangKy();
+                            }, error: function (ret) {
+                                toastError("Thất bại", ret.responseJSON.Message);
+                            },
+                            complete: function () { // Set our complete callback, adding the .hidden class and hiding the spinner.
+                                $("#add-DANGKYDOIMOINEOXICHNEO-NEOPHAI-THANGNAM").val("");
+                                $("#add-DANGKYDOIMOINEOXICHNEO-NEOPHAI-TRONGLUONGP").val("");
+                                $("#add-DANGKYDOIMOINEOXICHNEO-XICHNEOPHAI-THANGNAM").val("");
+                                $("#add-DANGKYDOIMOINEOXICHNEO-XICHNEOPHAI-DUONGKINHTRENDODAI").val("");
 
-                        $("#add-DANGKYDOIMOINEOXICHNEO-NEOTRAI-THANGNAM").val("");
-                        $("#add-DANGKYDOIMOINEOXICHNEO-NEOTRAI-TRONGLUONGP").val("");
-                        $("#add-DANGKYDOIMOINEOXICHNEO-XICHNEOTRAI-THANGNAM").val("");
-                        $("#add-DANGKYDOIMOINEOXICHNEO-XICHNEOTRAI-DUONGKINHTRENDODAI").val("");
+                                $("#add-DANGKYDOIMOINEOXICHNEO-NEOTRAI-THANGNAM").val("");
+                                $("#add-DANGKYDOIMOINEOXICHNEO-NEOTRAI-TRONGLUONGP").val("");
+                                $("#add-DANGKYDOIMOINEOXICHNEO-XICHNEOTRAI-THANGNAM").val("");
+                                $("#add-DANGKYDOIMOINEOXICHNEO-XICHNEOTRAI-DUONGKINHTRENDODAI").val("");
 
-                        $("#add-DANGKYDOIMOINEOXICHNEO-NEOSAU-THANGNAM").val("");
-                        $("#add-DANGKYDOIMOINEOXICHNEO-NEOSAU-TRONGLUONGP").val("");
-                        $("#add-DANGKYDOIMOINEOXICHNEO-XICHNEOSAU-THANGNAM").val("");
-                        $("#add-DANGKYDOIMOINEOXICHNEO-XICHNEOSAU-DUONGKINHTRENDODAI").val("");
+                                $("#add-DANGKYDOIMOINEOXICHNEO-NEOSAU-THANGNAM").val("");
+                                $("#add-DANGKYDOIMOINEOXICHNEO-NEOSAU-TRONGLUONGP").val("");
+                                $("#add-DANGKYDOIMOINEOXICHNEO-XICHNEOSAU-THANGNAM").val("");
+                                $("#add-DANGKYDOIMOINEOXICHNEO-XICHNEOSAU-DUONGKINHTRENDODAI").val("");
 
-                        $("#add-DANGKYDOIMOINEOXICHNEO-DANGKY").val("")
-                        $('#model-add-DANGKYDOIMOINEOXICHNEO').modal("hide");
-                    },
-                });
+                                $("#add-DANGKYDOIMOINEOXICHNEO-DANGKY").val("")
+                                $('#model-add-DANGKYDOIMOINEOXICHNEO').modal("hide");
+                            },
+                        });
+                    }
+                }
+
             }
             return false;
         }
@@ -576,74 +637,118 @@
             var form = document.getElementById("form-edit-DANGKYDOIMOINEOXICHNEO");
             console.log(form.checkValidity());
             if (form.checkValidity() == true) {
-                var SUADANGKYNEOXICHNEO = {
-                    ID: $("#edit-DANGKYDOIMOINEOXICHNEO-ID").val(),
-                    DANGKY: $("#edit-DANGKYDOIMOINEOXICHNEO-DANGKY").val(),
-                    PHAI: {
-                        NEO: {
-                            THANGNAM: $("#edit-DANGKYDOIMOINEOXICHNEO-NEOPHAI-THANGNAM").val(),
-                            TRONGLUONG: $("#edit-DANGKYDOIMOINEOXICHNEO-NEOPHAI-TRONGLUONGP").val()
-                        },
-                        XICH: {
-                            THANGNAM: $("#edit-DANGKYDOIMOINEOXICHNEO-XICHNEOPHAI-THANGNAM").val(),
-                            DUONGKINH_DODAI: $("#edit-DANGKYDOIMOINEOXICHNEO-XICHNEOPHAI-DUONGKINHTRENDODAI").val()
-                        }
-                    },
-                    TRAI: {
-                        NEO: {
-                            THANGNAM: $("#edit-DANGKYDOIMOINEOXICHNEO-NEOTRAI-THANGNAM").val(),
-                            TRONGLUONG: $("#edit-DANGKYDOIMOINEOXICHNEO-NEOTRAI-TRONGLUONGP").val()
-                        },
-                        XICH: {
-                            THANGNAM: $("#edit-DANGKYDOIMOINEOXICHNEO-XICHNEOTRAI-THANGNAM").val(),
-                            DUONGKINH_DODAI: $("#edit-DANGKYDOIMOINEOXICHNEO-XICHNEOTRAI-DUONGKINHTRENDODAI").val()
-                        }
-                    },
-                    SAU: {
-                        NEO: {
-                            THANGNAM: $("#edit-DANGKYDOIMOINEOXICHNEO-NEOSAU-THANGNAM").val(),
-                            TRONGLUONG: $("#edit-DANGKYDOIMOINEOXICHNEO-NEOSAU-TRONGLUONGP").val()
-                        },
-                        XICH: {
-                            THANGNAM: $("#edit-DANGKYDOIMOINEOXICHNEO-XICHNEOSAU-THANGNAM").val(),
-                            DUONGKINH_DODAI: $("#edit-DANGKYDOIMOINEOXICHNEO-XICHNEOSAU-DUONGKINHTRENDODAI").val()
-                        }
+                if (Check_Validity($("#edit-DANGKYDOIMOINEOXICHNEO-NEOPHAI-THANGNAM").val(), $("#edit-DANGKYDOIMOINEOXICHNEO-NEOPHAI-TRONGLUONGP").val()) == 0 && Check_Validity($("#edit-DANGKYDOIMOINEOXICHNEO-XICHNEOPHAI-THANGNAM").val(), $("#edit-DANGKYDOIMOINEOXICHNEO-XICHNEOPHAI-DUONGKINHTRENDODAI").val()) == 0 && Check_Validity($("#edit-DANGKYDOIMOINEOXICHNEO-NEOTRAI-THANGNAM").val(), $("#edit-DANGKYDOIMOINEOXICHNEO-NEOTRAI-TRONGLUONGP").val()) == 0 && Check_Validity($("#edit-DANGKYDOIMOINEOXICHNEO-XICHNEOTRAI-THANGNAM").val(), $("#edit-DANGKYDOIMOINEOXICHNEO-XICHNEOTRAI-DUONGKINHTRENDODAI").val()) == 0 && Check_Validity($("#edit-DANGKYDOIMOINEOXICHNEO-NEOSAU-THANGNAM").val(), $("#edit-DANGKYDOIMOINEOXICHNEO-NEOSAU-TRONGLUONGP").val()) == 0 && Check_Validity($("#edit-DANGKYDOIMOINEOXICHNEO-XICHNEOSAU-THANGNAM").val(), $("#edit-DANGKYDOIMOINEOXICHNEO-XICHNEOSAU-DUONGKINHTRENDODAI").val()) == 0) {
+                    alert("Chưa điền đủ dữ liệu!");
+                }
+                else {
+                    if (Check_Validity($("#edit-DANGKYDOIMOINEOXICHNEO-NEOPHAI-THANGNAM").val(), $("#edit-DANGKYDOIMOINEOXICHNEO-NEOPHAI-TRONGLUONGP").val()) == 1) {
+                        alert("Chưa điền tháng năm neo phải!");
                     }
+                    else if (Check_Validity($("#edit-DANGKYDOIMOINEOXICHNEO-NEOPHAI-THANGNAM").val(), $("#edit-DANGKYDOIMOINEOXICHNEO-NEOPHAI-TRONGLUONGP").val()) == 2) {
+                        alert("Chưa điền trọng lượng neo phải!");
+                    }
+                    else if (Check_Validity($("#edit-DANGKYDOIMOINEOXICHNEO-XICHNEOPHAI-THANGNAM").val(), $("#edit-DANGKYDOIMOINEOXICHNEO-XICHNEOPHAI-DUONGKINHTRENDODAI").val()) == 1) {
+                        alert("Chưa điền tháng năm xích neo phải!");
+                    }
+                    else if (Check_Validity($("#edit-DANGKYDOIMOINEOXICHNEO-XICHNEOPHAI-THANGNAM").val(), $("#edit-DANGKYDOIMOINEOXICHNEO-XICHNEOPHAI-DUONGKINHTRENDODAI").val()) == 2) {
+                        alert("Chưa điền đường kính / Độ dài xích neo phải!");
+                    }
+                    else if (Check_Validity($("#edit-DANGKYDOIMOINEOXICHNEO-NEOTRAI-THANGNAM").val(), $("#edit-DANGKYDOIMOINEOXICHNEO-NEOTRAI-TRONGLUONGP").val()) == 1) {
+                        alert("Chưa điền tháng năm neo trái!");
+                    }
+                    else if (Check_Validity($("#edit-DANGKYDOIMOINEOXICHNEO-NEOTRAI-THANGNAM").val(), $("#edit-DANGKYDOIMOINEOXICHNEO-NEOTRAI-TRONGLUONGP").val()) == 2) {
+                        alert("Chưa điền trọng lượng neo trái!");
+                    }
+                    else if (Check_Validity($("#edit-DANGKYDOIMOINEOXICHNEO-XICHNEOTRAI-THANGNAM").val(), $("#edit-DANGKYDOIMOINEOXICHNEO-XICHNEOTRAI-DUONGKINHTRENDODAI").val()) == 1) {
+                        alert("Chưa điền tháng năm xích neo trái!");
+                    }
+                    else if (Check_Validity($("#edit-DANGKYDOIMOINEOXICHNEO-XICHNEOTRAI-THANGNAM").val(), $("#edit-DANGKYDOIMOINEOXICHNEO-XICHNEOTRAI-DUONGKINHTRENDODAI").val()) == 2) {
+                        alert("Chưa điền đường kính / Độ dài xích neo trái!");
+                    }
+                    else if (Check_Validity($("#edit-DANGKYDOIMOINEOXICHNEO-NEOSAU-THANGNAM").val(), $("#edit-DANGKYDOIMOINEOXICHNEO-NEOSAU-TRONGLUONGP").val()) == 1) {
+                        alert("Chưa điền tháng năm neo sau!");
+                    }
+                    else if (Check_Validity($("#edit-DANGKYDOIMOINEOXICHNEO-NEOSAU-THANGNAM").val(), $("#edit-DANGKYDOIMOINEOXICHNEO-NEOSAU-TRONGLUONGP").val()) == 2) {
+                        alert("Chưa điền trọng lượng neo sau!");
+                    }
+                    else if (Check_Validity($("#edit-DANGKYDOIMOINEOXICHNEO-XICHNEOSAU-THANGNAM").val(), $("#edit-DANGKYDOIMOINEOXICHNEO-XICHNEOSAU-DUONGKINHTRENDODAI").val()) == 1) {
+                        alert("Chưa điền tháng năm xích neo sau!");
+                    }
+                    else if (Check_Validity($("#edit-DANGKYDOIMOINEOXICHNEO-XICHNEOSAU-THANGNAM").val(), $("#edit-DANGKYDOIMOINEOXICHNEO-XICHNEOSAU-DUONGKINHTRENDODAI").val()) == 2) {
+                        alert("Chưa điền đường kính / Độ dài xích neo sau!");
+                    }
+                    else {
+                        var SUADANGKYNEOXICHNEO = {
+                            ID: $("#edit-DANGKYDOIMOINEOXICHNEO-ID").val(),
+                            DANGKY: $("#edit-DANGKYDOIMOINEOXICHNEO-DANGKY").val(),
+                            PHAI: {
+                                NEO: {
+                                    THANGNAM: $("#edit-DANGKYDOIMOINEOXICHNEO-NEOPHAI-THANGNAM").val(),
+                                    TRONGLUONG: $("#edit-DANGKYDOIMOINEOXICHNEO-NEOPHAI-TRONGLUONGP").val()
+                                },
+                                XICH: {
+                                    THANGNAM: $("#edit-DANGKYDOIMOINEOXICHNEO-XICHNEOPHAI-THANGNAM").val(),
+                                    DUONGKINH_DODAI: $("#edit-DANGKYDOIMOINEOXICHNEO-XICHNEOPHAI-DUONGKINHTRENDODAI").val()
+                                }
+                            },
+                            TRAI: {
+                                NEO: {
+                                    THANGNAM: $("#edit-DANGKYDOIMOINEOXICHNEO-NEOTRAI-THANGNAM").val(),
+                                    TRONGLUONG: $("#edit-DANGKYDOIMOINEOXICHNEO-NEOTRAI-TRONGLUONGP").val()
+                                },
+                                XICH: {
+                                    THANGNAM: $("#edit-DANGKYDOIMOINEOXICHNEO-XICHNEOTRAI-THANGNAM").val(),
+                                    DUONGKINH_DODAI: $("#edit-DANGKYDOIMOINEOXICHNEO-XICHNEOTRAI-DUONGKINHTRENDODAI").val()
+                                }
+                            },
+                            SAU: {
+                                NEO: {
+                                    THANGNAM: $("#edit-DANGKYDOIMOINEOXICHNEO-NEOSAU-THANGNAM").val(),
+                                    TRONGLUONG: $("#edit-DANGKYDOIMOINEOXICHNEO-NEOSAU-TRONGLUONGP").val()
+                                },
+                                XICH: {
+                                    THANGNAM: $("#edit-DANGKYDOIMOINEOXICHNEO-XICHNEOSAU-THANGNAM").val(),
+                                    DUONGKINH_DODAI: $("#edit-DANGKYDOIMOINEOXICHNEO-XICHNEOSAU-DUONGKINHTRENDODAI").val()
+                                }
+                            }
 
-                };
-                console.log(SUADANGKYNEOXICHNEO);
-                $.ajax({
-                    type: "PUT",
-                    url: linkapi + "v2/update_dangkyneoxichneo?id=" + $("#edit-DANGKYDOIMOINEOXICHNEO-ID").val(),
-                    dataType: "json",
-                    data: JSON.stringify(SUADANGKYNEOXICHNEO),
-                    contentType: "application/json",
-                    success: function (data) {
-                        toastSuccess("Thành công", "Cập nhập đăng ký thay đổi, mất, bổ sung neo - xích neo thành công.");
-                        loadDataList_DangKy();
-                    }, error: function (ret) {
-                        toastError("Thất bại", ret.responseJSON.Message);
-                    },
-                    complete: function () { // Set our complete callback, adding the .hidden class and hiding the spinner.
-                        //$("#add-DANGKYDOIMOINEOXICHNEO-NEOPHAI-THANGNAM").val("");
-                        //$("#add-DANGKYDOIMOINEOXICHNEO-NEOPHAI-TRONGLUONGP").val("");
-                        //$("#add-DANGKYDOIMOINEOXICHNEO-XICHNEOPHAI-THANGNAM").val("");
-                        //$("#add-DANGKYDOIMOINEOXICHNEO-XICHNEOPHAI-DUONGKINHTRENDODAI").val("");
+                        };
+                        console.log(SUADANGKYNEOXICHNEO);
+                        $.ajax({
+                            type: "PUT",
+                            url: linkapi + "v2/update_dangkyneoxichneo?id=" + $("#edit-DANGKYDOIMOINEOXICHNEO-ID").val(),
+                            dataType: "json",
+                            data: JSON.stringify(SUADANGKYNEOXICHNEO),
+                            contentType: "application/json",
+                            success: function (data) {
+                                toastSuccess("Thành công", "Cập nhập đăng ký thay đổi, mất, bổ sung neo - xích neo thành công.");
+                                loadDataList_DangKy();
+                            }, error: function (ret) {
+                                toastError("Thất bại", ret.responseJSON.Message);
+                            },
+                            complete: function () { // Set our complete callback, adding the .hidden class and hiding the spinner.
+                                //$("#add-DANGKYDOIMOINEOXICHNEO-NEOPHAI-THANGNAM").val("");
+                                //$("#add-DANGKYDOIMOINEOXICHNEO-NEOPHAI-TRONGLUONGP").val("");
+                                //$("#add-DANGKYDOIMOINEOXICHNEO-XICHNEOPHAI-THANGNAM").val("");
+                                //$("#add-DANGKYDOIMOINEOXICHNEO-XICHNEOPHAI-DUONGKINHTRENDODAI").val("");
 
-                        //$("#add-DANGKYDOIMOINEOXICHNEO-NEOTRAI-THANGNAM").val("");
-                        //$("#add-DANGKYDOIMOINEOXICHNEO-NEOTRAI-TRONGLUONGP").val("");
-                        //$("#add-DANGKYDOIMOINEOXICHNEO-XICHNEOTRAI-THANGNAM").val("");
-                        //$("#add-DANGKYDOIMOINEOXICHNEO-XICHNEOTRAI-DUONGKINHTRENDODAI").val("");
+                                //$("#add-DANGKYDOIMOINEOXICHNEO-NEOTRAI-THANGNAM").val("");
+                                //$("#add-DANGKYDOIMOINEOXICHNEO-NEOTRAI-TRONGLUONGP").val("");
+                                //$("#add-DANGKYDOIMOINEOXICHNEO-XICHNEOTRAI-THANGNAM").val("");
+                                //$("#add-DANGKYDOIMOINEOXICHNEO-XICHNEOTRAI-DUONGKINHTRENDODAI").val("");
 
-                        //$("#add-DANGKYDOIMOINEOXICHNEO-NEOSAU-THANGNAM").val("");
-                        //$("#add-DANGKYDOIMOINEOXICHNEO-NEOSAU-TRONGLUONGP").val("");
-                        //$("#add-DANGKYDOIMOINEOXICHNEO-XICHNEOSAU-THANGNAM").val("");
-                        //$("#add-DANGKYDOIMOINEOXICHNEO-XICHNEOSAU-DUONGKINHTRENDODAI").val("");
+                                //$("#add-DANGKYDOIMOINEOXICHNEO-NEOSAU-THANGNAM").val("");
+                                //$("#add-DANGKYDOIMOINEOXICHNEO-NEOSAU-TRONGLUONGP").val("");
+                                //$("#add-DANGKYDOIMOINEOXICHNEO-XICHNEOSAU-THANGNAM").val("");
+                                //$("#add-DANGKYDOIMOINEOXICHNEO-XICHNEOSAU-DUONGKINHTRENDODAI").val("");
 
-                        //$("#add-DANGKYDOIMOINEOXICHNEO-DANGKY").val("")
-                        $('#model-edit-DANGKYDOIMOINEOXICHNEO').modal("hide");
-                    },
-                });
+                                //$("#add-DANGKYDOIMOINEOXICHNEO-DANGKY").val("")
+                                $('#model-edit-DANGKYDOIMOINEOXICHNEO').modal("hide");
+                            },
+                        });
+                    }
+                }
+
             }
             return false;
         }

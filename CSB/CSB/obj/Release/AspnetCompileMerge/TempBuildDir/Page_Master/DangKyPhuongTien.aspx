@@ -935,10 +935,10 @@
                 $("#tabDANGKYCLRADA").tab('show');
                 loadDataList_DANGKYCLRADA();
             }
-            //else if (i == 4) {
-            //    $("#tabDANGKYCLHETRUCCHANVIT").tab('show');
-            ///*    loadDataList_DANGKYCLHETRUCCHANVIT();*/
-            //}
+            else if (i == 4) {
+                $("#tabDANGKYCLHETRUCCHANVIT").tab('show');
+                loadDataList_DANGKYCLHETRUCCHANVIT();
+            }
             //else if (i == 5)
             //    $("#tabHETRUCHANVIT").tab('show');
             //else if (i == 6)
@@ -1949,22 +1949,25 @@
                         listNam[i] = String(listNam[i]);
                     }
                     var listPt = new Array();
-                    //var listSL = new Array();
+                    var listVT = new Array();
                     var listIDPT = new Array();
                     $.each(data, function (key, item) {
                         var listlen = listPt.length;
                         var i = 0;
                         for (i = 0; i < listlen; i++) {
-                            if (item.IDHTCV == listPt[i]) break;
+                            if (item.HTCV.ID == listPt[i]) break;
                         }
                         if (i == listlen) {
-                            listPt.push(item.IDHTCV);
-                            listIDPT.push(item.IDHTCV);
+                            listPt.push(item.HTCV.ID);
+                            listIDPT.push(item.HTCV.ID);
+                            listVT.push(item.HTCV.TRUC.VITRICHANVIT);
                         }
                     });
                     console.log(listPt);
+                    console.log(listIDPT);
+                    console.log(listVT);
                     listlen = listNam.length;
-                    var tabletext = "<thead><tr><th rowspan='2'>STT</th><th colspan='" + listlen + "'>ĐĂNG KÝ CHẤT LƯỢNG HÀNG NĂM</th><th rowspan='2'>TÁC VỤ</th></tr><tr>";
+                    var tabletext = "<thead><tr><th rowspan='2'>STT</th><th rowspan='2'>VỊ TRÍ HỆ TRỤC CHÂN VỊT</th><th colspan='" + listlen + "'>ĐĂNG KÝ CHẤT LƯỢNG HÀNG NĂM</th><th rowspan='2'>TÁC VỤ</th></tr><tr>";
                     for (i = 0; i < listlen; i++) {
                         tabletext += "<th>" + listNam[i] + "</th>";
                     }
@@ -1974,11 +1977,11 @@
                     var TRANGTHAI;
                     var ID;
                     for (i = 0; i < lenPt; i++) {
-                        tabletext += "<tr><td style='text-align: center;'>" + (i + 1) +  "</td>";
+                        tabletext += "<tr><td style='text-align: center;'>" + (i + 1) + "</td><td>" + listVT[i] +  "</td>";
                         for (j = 0; j < listlen; j++) {
                             TRANGTHAI = '';
                             $.each(data, function (key, item) {
-                                if (item.IDHTCV == listPt[i] && item.DANGKYCHATLUONG_NAMDANGKY == listNam[j]) {
+                                if (item.HTCV.ID== listPt[i] && item.DANGKYCHATLUONG_NAMDANGKY == listNam[j]) {
                                     TRANGTHAI = item.DANGKYCHATLUONG_TRANGTHAI;
                                     ID = item.DANGKYCHATLUONG_ID;
                                 }
@@ -2035,22 +2038,23 @@
                         listNam[i] = String(listNam[i]);
                     }
                     var listPt = new Array();
-                    //var listSL = new Array();
+                    var listVT = new Array();
                     var listIDPT = new Array();
                     $.each(data, function (key, item) {
                         var listlen = listPt.length;
                         var i = 0;
                         for (i = 0; i < listlen; i++) {
-                            if (item.IDHTCV == listPt[i]) break;
+                            if (item.HTCV.ID == listPt[i]) break;
                         }
                         if (i == listlen) {
-                            listPt.push(item.IDHTCV);
-                            listIDPT.push(item.IDHTCV);
+                            listPt.push(item.HTCV.ID);
+                            listIDPT.push(item.HTCV.ID);
+                            listVT.push(item.HTCV.TRUC.VITRICHANVIT);
                         }
                     });
                     console.log(listPt);
                     listlen = listNam.length;
-                    var tabletext = "<thead><tr><th rowspan='2'>STT</th><th colspan='" + listlen + "'>ĐĂNG KÝ CHẤT LƯỢNG HÀNG NĂM</th><th rowspan='2'>TÁC VỤ</th></tr><tr>";
+                    var tabletext = "<thead><tr><th rowspan='2'>STT</th><th rowspan='2'>VỊ TRÍ HỆ TRỤC CHÂN VỊT</th><th colspan='" + listlen + "'>ĐĂNG KÝ CHẤT LƯỢNG HÀNG NĂM</th><th rowspan='2'>TÁC VỤ</th></tr><tr>";
                     for (i = 0; i < listlen; i++) {
                         tabletext += "<th>" + listNam[i] + "</th>";
                     }
@@ -2060,11 +2064,11 @@
                     var TRANGTHAI;
                     var ID;
                     for (i = 0; i < lenPt; i++) {
-                        tabletext += "<tr><td style='text-align: center;'>" + (i + 1) + "</td>";
+                        tabletext += "<tr><td style='text-align: center;'>" + (i + 1) + "</td><td>" + listVT[i] + "</td>";
                         for (j = 0; j < listlen; j++) {
                             TRANGTHAI = '';
                             $.each(data, function (key, item) {
-                                if (item.IDHTCV == listPt[i] && item.DANGKYCHATLUONG_NAMDANGKY == listNam[j]) {
+                                if (item.HTCV.ID == listPt[i] && item.DANGKYCHATLUONG_NAMDANGKY == listNam[j]) {
                                     TRANGTHAI = item.DANGKYCHATLUONG_TRANGTHAI;
                                     ID = item.DANGKYCHATLUONG_ID;
                                 }
