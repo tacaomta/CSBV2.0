@@ -75,9 +75,9 @@
                                 </div>
                                 <div style="width: 100%; float: left; padding: 10px">
                                     <div class="form-group" style="display: flex">
-                                        <label class="col-md-5 control-label"><strong>Kết luận : </strong></label>
+                                        <label class="col-md-5 control-label"><strong>Kết luận cho phép mức độ khai thác tàu: </strong></label>
                                         <div class="col-md-7">
-                                            <input type="text" class="form-control" id="KiemTraKT_addKetLuanKT" placeholder="Nhập kết luận kiểm tra " required>
+                                            <input type="text" class="form-control" id="KiemTraKT_addKetLuanKT" placeholder="Nhập Kết luận cho phép mức độ khai thác tàu " required>
                                         </div>
                                     </div>
                                 </div>
@@ -146,9 +146,9 @@
                                 </div>
                                 <div style="width: 100%; float: left; padding: 10px">
                                     <div class="form-group" style="display: flex">
-                                        <label class="col-md-5 control-label"><strong>Kết luận : </strong></label>
+                                        <label class="col-md-5 control-label"><strong>Kết luận cho phép mức độ khai thác tàu : </strong></label>
                                         <div class="col-md-7">
-                                            <input type="text" class="form-control" id="KiemTraKT_editKetLuanKT" placeholder="Nhập kết luận kiểm tra " required>
+                                            <input type="text" class="form-control" id="KiemTraKT_editKetLuanKT" placeholder="Nhập Kết luận cho phép mức độ khai thác tàu " required>
                                         </div>
                                     </div>
                                 </div>
@@ -235,7 +235,7 @@
                         //$('#loader').removeClass('hidden');
                     },
                     success: function (data) {
-                        var tabletext = "<thead><tr><th>STT</th><th>NGÀY, THÁNG, NĂM</th><th>CƠ QUAN, CẤP KT</th><th>TÌNH TRẠNG KT</th><th>CHẤT LƯỢNG CẤP KT TÀU</th><th>KẾT LUẬN</th><th>TRƯỞNG ĐOÀN</th><th>TÁC VỤ</th></tr></thead><tbody>";
+                        var tabletext = "<thead><tr><th>STT</th><th>NGÀY, THÁNG, NĂM</th><th>CƠ QUAN, CẤP KT</th><th>TÌNH TRẠNG KT</th><th>CHẤT LƯỢNG CẤP KT TÀU</th><th>KẾT LUẬN CHO PHÉP MỨC ĐỘ KHAI THÁC TÀU</th><th>TRƯỞNG ĐOÀN</th><th>TÁC VỤ</th></tr></thead><tbody>";
                         var i = 1;
                         $.each(data, function (key, item) {
                             tabletext += "<tr><td style='text-align: center;'>" + i + "</td><td>" + item.NGAYTHANG + "</td><td>" + item.CAPKIEMTRA + "</td><td>" + item.TOMTATTINHTRANG + "</td><td>" + item.CHATLUONG + "</td><td>" + item.KETLUAN + "</td><td>" + item.TRUONGDOAN + "</td>" + '<td><div style="display: flex; justify-content: space-around;"><a href="#" class="edit" title="Sửa" data-toggle="modal" data-target="#model-edit-KiemTraKT" onclick="editKiemTraKT(`' + item.ID + '`,`' + item.NGAYTHANG + '`,`' + item.CAPKIEMTRA + '`,`' + item.TOMTATTINHTRANG + '`,`' + item.CHATLUONG + '`,`' + item.KETLUAN + '`,`' + item.TRUONGDOAN + '`)"><i class="material-icons">&#xE254;</i></a><a href="#" class="delete" title="Xóa" onclick="delete_KiemTraKT(`' + item.ID + '`)"><i class="material-icons">&#xE872;</i></a></div></td></tr>';
@@ -266,10 +266,10 @@
                         { name: 'STT', width: 40 },
                         { name: 'NGÀY, THÁNG, NĂM', width: 120 },
                         { name: 'CƠ QUAN, CẤP KT', width: 100 },
-                        { name: 'TRÌNH TRẠNG KT', width: 120 },
-                        { name: 'CHẤT LƯỢNG CẤP KT TÀU', width: 140 },
-                        { name: 'KẾT LUẬN', width: 80 },
-                        { name: 'TRƯỞNG ĐOÀN', width: 120 },
+                        { name: 'TRÌNH TRẠNG KT', width: 100 },
+                        { name: 'CHẤT LƯỢNG CẤP KT TÀU', width: 100 },
+                        { name: 'KẾT LUẬN CHO PHÉP MỨC ĐỘ KHAI THÁC TÀU', width: 140 },
+                        { name: 'TRƯỞNG ĐOÀN', width: 100 },
                         { name: 'TÁC VỤ', width: 60 },
                     ],
                     lengthChange: false,

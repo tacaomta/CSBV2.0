@@ -121,7 +121,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <h4 class="sub-title">Đánh giá nội dung sửa chữa</h4>
+                                <h4 class="sub-title">Tóm tắt nội dung sửa chữa</h4>
                                 <div class="row">
                                     <div class="col-sm-6">
                                         <div class="form-group row">
@@ -279,7 +279,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                  <h4 class="sub-title">Đánh giá nội dung sửa chữa</h4>
+                                  <h4 class="sub-title">Tóm tắt nội dung sửa chữa</h4>
                                 <div class="row">
                                     <div class="col-sm-6">
                                         <div class="form-group row">
@@ -465,7 +465,7 @@
                         //$('#loader').removeClass('hidden');
                     },
                     success: function (data) {
-                        var tabletext = "<thead><tr><th rowspan='2'>STT</th><th colspan='2'>TG SỬA CHỮA</th><th rowspan='2'>NƠI SỬA CHỮA</th><th rowspan='2'>CẤP SỬA CHỮA</th><th rowspan='2'>GIÁ THÀNH(VNĐ)</th><th rowspan='2'>PHƯƠNG ÁN</th><th colspan='4'>ĐÁNH GIÁ N.DUNG SC</th><th colspan='3'>ĐÁNH GIÁ C.LƯỢNG SC</th><th rowspan='2'>TÁC VỤ</th></tr><tr><th>Bắt đầu</th><th>Kết thúc</th><th>Máy chính</th><th>Hệ trục</th><th>Thân vỏ</th><th>Trang bị khác</th><th>T.Độ max</th><th>Tổng thể</th><th>Tồn tại</th></tr></thead><tbody>";
+                        var tabletext = "<thead><tr><th rowspan='2'>STT</th><th colspan='2'>TG SỬA CHỮA</th><th rowspan='2'>NƠI SỬA CHỮA</th><th rowspan='2'>CẤP SỬA CHỮA</th><th rowspan='2'>GIÁ THÀNH(VNĐ)</th><th rowspan='2'>PHƯƠNG ÁN KÊ ĐÀ</th><th colspan='4'>TÓM TẮT N.DUNG SC</th><th colspan='3'>ĐÁNH GIÁ C.LƯỢNG SC</th><th rowspan='2'>TÁC VỤ</th></tr><tr><th>Bắt đầu</th><th>Kết thúc</th><th>Máy chính</th><th>Hệ trục</th><th>Thân vỏ</th><th>Trang bị khác</th><th>T.Độ max</th><th>Tổng thể</th><th>Tồn tại</th></tr></thead><tbody>";
                         var i = 1;
                         $.each(data, function (key, item) {
                             tabletext += "<tr><td style='text-align: center;'>" + i + "</td><td>" + item.THOIGIAN.BATDAU + "</td><td>" + item.THOIGIAN.KETTHUC + "</td><td>" + item.NOISUACHUA + "</td><td>" + item.CAPSUACHUA.CAP + "</td><td>" + item.GIATHANH + "</td><td>" + item.PHUONGANKEDA + "</td><td>" + item.TOMTATNOIDUNG.MAYCHINH + "</td><td>" + item.TOMTATNOIDUNG.HETRUC + "</td><td>" + item.TOMTATNOIDUNG.THANVO + "</td><td>" + item.TOMTATNOIDUNG.TRANGBIKHAC + "</td><td>" + item.DANHGIACHATLUONG.TOCDOTOIDA + "</td><td>" + item.DANHGIACHATLUONG.TONGTHE + "</td><td>" + item.DANHGIACHATLUONG.TONTAI + "</td>" + '<td><div style="display: flex; justify-content: space-around;"><a href="#" class="edit" title="Sửa" data-toggle="modal" data-target="#model-edit-SuaChuaTau" onclick="edit_suachuatau(`' + item.ID + '`,`' + item.THOIGIAN.BATDAU + '`,`' + item.THOIGIAN.KETTHUC + '`,`' + item.NOISUACHUA + '`,`' + item.CAPSUACHUA.ID + '`,`' + item.PHUONGANKEDA + '`,`' + item.GIATHANH + '`,`' + item.TOMTATNOIDUNG.MAYCHINH + '`,`' + item.TOMTATNOIDUNG.HETRUC + '`,`' + item.TOMTATNOIDUNG.THANVO + '`,`' + item.TOMTATNOIDUNG.TRANGBIKHAC + '`,`' + item.DANHGIACHATLUONG.TOCDOTOIDA + '`,`' + item.DANHGIACHATLUONG.TONGTHE + '`,`' + item.DANHGIACHATLUONG.TONTAI + '`,`' + item.GHICHU + '`)"><i class="material-icons">&#xE254;</i></a><a href="#" class="delete" title="Xóa" onclick="delete_suachuatau(`' + item.ID + '`)"><i class="material-icons">&#xE872;</i></a></div></td></tr>';
