@@ -646,7 +646,7 @@
             </div>
         </div>
         <div class="modal fade" id="model-add-DANGKYCLHETRUCCHANVIT" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog">
-            <div class="modal-dialog modal-xl" role="document">
+            <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <form id="form-add-DANGKYCLHETRUCCHANVIT" onsubmit="return false">
                         <div class="card auth_form" style="margin-bottom: 0px">
@@ -654,194 +654,57 @@
                                 <h4 class="title-modal-banve font-weight-bold">Thêm đăng ký chất lượng hệ trục chân vịt</h4>
                             </div>
                             <div class="modal-body">
-                                 <h4 class="sub-title">ĐĂNG KÝ</h4>
-                                    <div class="row">
-                                    <div class="col-sm-4">
-                                        <div class="form-group row">
-                                             <label class="col-sm-4 col-form-label">Vị trí hệ trục chân vịt:</label>
-                                             <div class="col-sm-8">
-                                                <select class="form-control" id="add-DANGKYCLHETRUCCHANVIT-VITRIHETRUCCHANVIT" required></select>
+                                <div class="row clearfix ">
+                                    <div style="width: 100%; float: left; padding: 10px">
+                                        <div class="form-group" style="display: flex">
+                                            <label class="col-md-5 control-label"><strong>Vị trí hệ trục chân vịt: </strong></label>
+                                            <div class="col-md-7">
+                                              <select class="form-control" id="add-DANGKYCLHETRUCCHANVIT-VITRIHETRUCCHANVIT" required></select>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-sm-4">
-                                        <div class="form-group row">
-                                             <label class="col-sm-4 col-form-label">Năm đăng ký:</label>
-                                            <div class="col-sm-8">
-                                                <input type="number" min="0" step="1" class="form-control" id="add-DANGKYCLHETRUCCHANVIT-DANGKYCHATLUONG-NAMDANGKY" required>
+                                    <div style="width: 100%; float: left; padding: 10px">
+                                        <div class="form-group" style="display: flex">
+                                            <label class="col-md-5 control-label"><strong>Năm đăng ký: </strong></label>
+                                            <div class="col-md-7">
+                                               <input type="number" min="0" step="1" class="form-control" id="add-DANGKYCLHETRUCCHANVIT-DANGKYCHATLUONG-NAMDANGKY" required>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-sm-4">
-                                        <div class="form-group row">
-                                             <label class="col-sm-4 col-form-label">Trạng thái:</label>
-                                            <div class="col-sm-8">
+                                    <div style="width: 100%; float: left; padding: 10px">
+                                        <div class="form-group" style="display: flex">
+                                            <label class="col-md-5 control-label"><strong>Trạng thái: </strong></label>
+                                            <div class="col-md-7">
                                                 <select class="form-control" id="add-DANGKYCLHETRUCCHANVIT-DANGKYCHATLUONG-TRANGTHAI" required></select>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-<%--                                <h4 class="sub-title">TRỤC</h4>
-                                <div class="row">
-                                    <div class="col-sm-4">
-                                        <div class="form-group row">
-                                            <label class="col-sm-4 col-form-label">Tổng chiều dài: </label>
-                                            <div class="col-sm-8">
-                                                <input type="text" id="show-add-DANGKYCLHETRUCCHANVIT-TRUC-TONGCHIEUDAI" readonly class="form-control">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-4">
-                                        <div class="form-group row">
-                                            <label class="col-sm-4 col-form-label">Vật kiệu: </label>
-                                            <div class="col-sm-8">
-                                                <input type="number" id="show-add-DANGKYCLHETRUCCHANVIT-TRUC-VATLIEU" readonly class="form-control">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-4">
-                                        <div class="form-group row">
-                                            <label class="col-sm-4 col-form-label">Tổng trọng lượng: </label>
-                                            <div class="col-sm-8">
-                                                <input type="text" id="show-add-DANGKYCLHETRUCCHANVIT-TRUC-TONGTRONGLUONG" readonly class="form-control">
-                                            </div>
+
+              <%--                  <div class="col-sm-4">
+                                    <div class="form-group row">
+                                        <label class="col-sm-4 col-form-label">Vị trí hệ trục chân vịt:</label>
+                                        <div class="col-sm-8">
+                                            <select class="form-control" id="add-DANGKYCLHETRUCCHANVIT-VITRIHETRUCCHANVIT" required></select>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="row">
-                                    <div class="col-sm-4">
-                                        <div class="form-group row">
-                                            <label class="col-sm-4 col-form-label">Đường kính trục ghép (mm): </label>
-                                            <div class="col-sm-8">
-                                                <input type="text" id="show-add-DANGKYCLHETRUCCHANVIT-TRUC-DUONGKINHTRUCGHEPCHANVIT" readonly class="form-control">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-4">
-                                        <div class="form-group row">
-                                            <label class="col-sm-4 col-form-label">Đường kính trục trung gian (mm): </label>
-                                            <div class="col-sm-8">
-                                                <input type="number" id="show-add-DANGKYCLHETRUCCHANVIT-TRUC-DUONGKINHTRUCTRUNGGIAN" readonly class="form-control">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-4">
-                                        <div class="form-group row">
-                                            <label class="col-sm-4 col-form-label">Đường kính trục xoắn (mm): </label>
-                                            <div class="col-sm-8">
-                                                <input type="text" id="show-add-DANGKYCLHETRUCCHANVIT-TRUC-DUONGKINHTRUCXOAN" readonly class="form-control">
-                                            </div>
+                                <div class="col-sm-4">
+                                    <div class="form-group row">
+                                        <label class="col-sm-4 col-form-label">Năm đăng ký:</label>
+                                        <div class="col-sm-8">
+                                            <input type="number" min="0" step="1" class="form-control" id="add-DANGKYCLHETRUCCHANVIT-DANGKYCHATLUONG-NAMDANGKY" required>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="row">
-                                    <div class="col-sm-4">
-                                        <div class="form-group row">
-                                            <label class="col-sm-4 col-form-label">Đường kính trục chặn (mm): </label>
-                                            <div class="col-sm-8">
-                                                <input type="text" id="show-add-DANGKYCLHETRUCCHANVIT-TRUC-DUONGKINHTRUCCHAN" readonly class="form-control">
-                                            </div>
+                                <div class="col-sm-4">
+                                    <div class="form-group row">
+                                        <label class="col-sm-4 col-form-label">Trạng thái:</label>
+                                        <div class="col-sm-8">
+                                            <select class="form-control" id="add-DANGKYCLHETRUCCHANVIT-DANGKYCHATLUONG-TRANGTHAI" required></select>
                                         </div>
                                     </div>
-                                    <div class="col-sm-4">
-                                        <div class="form-group row">
-                                            <label class="col-sm-4 col-form-label">Góc nghiêng trục (độ): </label>
-                                            <div class="col-sm-8">
-                                                <input type="number" id="show-add-DANGKYCLHETRUCCHANVIT-TRUC-GOCNGIENGTRUC" readonly class="form-control">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <h4 class="sub-title">CHÂN VỊT</h4>
-                                <div class="row">
-                                    <div class="col-sm-4">
-                                        <div class="form-group row">
-                                            <label class="col-sm-4 col-form-label">Loại chân vịt: </label>
-                                            <div class="col-sm-8">
-                                                <input type="text" id="show-add-DANGKYCLHETRUCCHANVIT-CHANVIT-LOAICHANVIT" readonly class="form-control">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-4">
-                                        <div class="form-group row">
-                                            <label class="col-sm-4 col-form-label">Đường kính (mm): </label>
-                                            <div class="col-sm-8">
-                                                <input type="number" id="show-add-DANGKYCLHETRUCCHANVIT-CHANVIT-DUONGKINH" readonly class="form-control">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-4">
-                                        <div class="form-group row">
-                                            <label class="col-sm-4 col-form-label">Số cánh: </label>
-                                            <div class="col-sm-8">
-                                                <input type="text" id="show-add-DANGKYCLHETRUCCHANVIT-CHANVIT-SOCANH" readonly class="form-control">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-sm-4">
-                                        <div class="form-group row">
-                                            <label class="col-sm-4 col-form-label">Vật liệu: </label>
-                                            <div class="col-sm-8">
-                                                <input type="text" id="show-add-DANGKYCLHETRUCCHANVIT-CHANVIT-VATLIEU" readonly class="form-control">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-4">
-                                        <div class="form-group row">
-                                            <label class="col-sm-4 col-form-label">Trọng lượng (kg): </label>
-                                            <div class="col-sm-8">
-                                                <input type="number" id="show-add-DANGKYCLHETRUCCHANVIT-CHANVIT-TRONGLUONG" readonly class="form-control">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-4">
-                                        <div class="form-group row">
-                                            <label class="col-sm-4 col-form-label">Chiều quay: </label>
-                                            <div class="col-sm-8">
-                                                <input type="text" id="show-add-DANGKYCLHETRUCCHANVIT-CHANVIT-CHIEUQUAY" readonly class="form-control">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-sm-4">
-                                        <div class="form-group row">
-                                            <label class="col-sm-4 col-form-label">Vòng quay định mức (vòng/ph): </label>
-                                            <div class="col-sm-8">
-                                                <input type="text" id="show-add-DANGKYCLHETRUCCHANVIT-CHANVIT-VONGQUAYDINHMUC" readonly class="form-control">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <h4 class="sub-title">Ổ ĐỠ</h4>
-                                <div class="row">
-                                    <div class="col-sm-4">
-                                        <div class="form-group row">
-                                            <label class="col-sm-4 col-form-label">Số lượng: </label>
-                                            <div class="col-sm-8">
-                                                <input type="text" id="show-add-DANGKYCLHETRUCCHANVIT-ODO-SOLUONG" readonly class="form-control">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-4">
-                                        <div class="form-group row">
-                                            <label class="col-sm-4 col-form-label">Loại: </label>
-                                            <div class="col-sm-8">
-                                                <input type="number" id="show-add-DANGKYCLHETRUCCHANVIT-ODO-LOAI" readonly class="form-control">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-4">
-                                        <div class="form-group row">
-                                            <label class="col-sm-4 col-form-label">Mỡ dầu bôi trơn: </label>
-                                            <div class="col-sm-8">
-                                                <input type="text" id="show-add-DANGKYCLHETRUCCHANVIT-ODO-MODAUBOITRON" readonly class="form-control">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>   --%>                       
+                                </div>--%>
                             </div>
                             <div class="modal-footer">
                                 <button type="submit" onclick="add_DANGKYCLHETRUCCHANVIT()" class="btn btn-info">Thêm</button>
@@ -1977,11 +1840,11 @@
                     var TRANGTHAI;
                     var ID;
                     for (i = 0; i < lenPt; i++) {
-                        tabletext += "<tr><td style='text-align: center;'>" + (i + 1) + "</td><td>" + listVT[i] +  "</td>";
+                        tabletext += "<tr><td style='text-align: center;'>" + (i + 1) + "</td><td>" + listVT[i] + "</td>";
                         for (j = 0; j < listlen; j++) {
                             TRANGTHAI = '';
                             $.each(data, function (key, item) {
-                                if (item.HTCV.ID== listPt[i] && item.DANGKYCHATLUONG_NAMDANGKY == listNam[j]) {
+                                if (item.HTCV.ID == listPt[i] && item.DANGKYCHATLUONG_NAMDANGKY == listNam[j]) {
                                     TRANGTHAI = item.DANGKYCHATLUONG_TRANGTHAI;
                                     ID = item.DANGKYCHATLUONG_ID;
                                 }
@@ -2107,7 +1970,7 @@
             console.log(form.checkValidity());
             if (form.checkValidity() == true) {
                 var DANGKYCLHETRUCCHANVIT = {
-                    IDHTCV: $("#add-DANGKYCLHETRUCCHANVIT-VITRIHETRUCCHANVIT").val(),        
+                    IDHTCV: $("#add-DANGKYCLHETRUCCHANVIT-VITRIHETRUCCHANVIT").val(),
                     DANGKYCHATLUONG_NAMDANGKY: $("#add-DANGKYCLHETRUCCHANVIT-DANGKYCHATLUONG-NAMDANGKY").val(),
                     DANGKYCHATLUONG_TRANGTHAI: $("#add-DANGKYCLHETRUCCHANVIT-DANGKYCHATLUONG-TRANGTHAI").val()
                 };
