@@ -3051,6 +3051,11 @@
             ID thiết bị bơm dầu, nước và thông gió
             </summary>
         </member>
+        <member name="P:DHSLAPI.Models.BOMDAUNUOCTHONGGIO.SOHIEU">
+            <summary>
+            Số hiệu của thiết bị bơm dầu, nước và thông gió
+            </summary>
+        </member>
         <member name="P:DHSLAPI.Models.BOMDAUNUOCTHONGGIO.TENTB">
             <summary>
             Tên thiết bị
