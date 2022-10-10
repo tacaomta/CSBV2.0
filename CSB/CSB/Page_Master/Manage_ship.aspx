@@ -38,6 +38,10 @@
             justify-content: space-around;
             flex-wrap: wrap-reverse;
         }
+                        tbody tr td {
+            vertical-align: middle;
+            text-align: center;
+        }
 
     </style>
 

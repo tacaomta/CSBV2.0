@@ -49,6 +49,10 @@ a.dropdown-item {
     .dropdown-toggle::after {
         visibility: hidden !important;
     }
+            tbody tr td {
+            vertical-align: middle;
+            text-align: center;
+        }
 
     </style>
 
