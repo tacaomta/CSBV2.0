@@ -5,6 +5,10 @@
         #table_NhatKyHoatDongCuaTau_wrapper {
             overflow-x: hidden;
         }
+        tbody tr td {
+            vertical-align: middle;
+            text-align: center;
+        }
     </style>
     <div id="form1">
         <div class="section" style="background-color: #fff; padding-bottom: 5px;">

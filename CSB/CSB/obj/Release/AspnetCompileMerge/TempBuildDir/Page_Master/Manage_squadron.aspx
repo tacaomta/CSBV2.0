@@ -1,9 +1,16 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Master/TrangChu.Master" AutoEventWireup="true" CodeBehind="Manage_squadron.aspx.cs" Inherits="CSB.Page_Master.Manage_squadron" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
+    <style>
+        tbody tr td {
+            vertical-align: middle;
+            text-align: center;
+        }
+    </style>
     <div id="form1">
         <div class="section" style="background-color: #fff; padding-bottom: 5px;">
             <div class="section-header" style="background-color: #fff;">
-                <h4 id="title_manage_staff" style="color: black; margin: 0; margin-left: 15px;">QUẢN LÝ HẢI ĐOÀN</h4>                        
+                <h4 id="title_manage_staff" style="color: black; margin: 0; margin-left: 15px;">QUẢN LÝ HẢI ĐOÀN</h4>
                 <div class="section-header-breadcrumb" style="margin-right: 15px;">
                     <div class="breadcrumb-item active"><a href="TrangChu.aspx" style="color: #01b5f9; font-size: 16px;">Trang chủ </a></div>
                     <div class="breadcrumb-item active"><a href="#" style="color: #01b5f9; font-size: 16px;">Quản lý hải đoàn</a></div>
@@ -58,12 +65,12 @@
             </div>
         </div>
     </div>
-            <div class="modal fade" id="model-edit-squadron" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog">
+    <div class="modal fade" id="model-edit-squadron" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="card auth_form" style="margin-bottom: 0px">
                     <div class="modal-header">
-                        <h4 class="title-modal-banve font-weight-bold" >Sửa thông tin hải đoàn</h4>
+                        <h4 class="title-modal-banve font-weight-bold">Sửa thông tin hải đoàn</h4>
                     </div>
                     <div class="modal-body">
 

@@ -1,11 +1,17 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Master/TrangChu.Master" AutoEventWireup="true" CodeBehind="TheoDoiSuaChuaTau.aspx.cs" Inherits="CSB.Page_Master.TheoDoiSuaChuaTau" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <style>
         #table_SuaChuaTau_wrapper {
             overflow-x: hidden;
         }
+
+        #table_SuaChuaTau tbody tr td {
+            vertical-align: middle;
+            text-align: center;
+        }
     </style>
-        <div id="form1">
+    <div id="form1">
         <div class="section" style="background-color: #fff; padding-bottom: 5px;">
             <div class="section-header" style="background-color: #fff;">
                 <h4 id="title_suachuatau" style="color: black; margin: 0; margin-left: 15px;">THEO DÕI SỬA CHỮA TÀU</h4>
@@ -24,19 +30,7 @@
                             <button id="btn_add_SuaChuaTau" onclick="btn_add_SuaChuaTau()" class="btn btn-secondary mb-2" data-toggle="modal" data-target="#model-add-SuaChuaTau" style="padding-top: 4px;"><i class="bi bi-plus-circle"></i>&nbsp; Thêm mới</button>
                         </div>
                         <table id="table_SuaChuaTau" class="table table-bordered table-striped table-md" style="width: 100%">
-                            <%--<thead><tr><th colspan='2'>TG SỬA CHỮA</th><th rowspan='2'>NƠI SỬA CHỮA</th><th rowspan='2'>CẤP SỬA CHỮA</th><th rowspan='2'>GIÁ THÀNH(VNĐ)</th><th rowspan='2'>NỘI DUNG SỬA CHỮA</th><th rowspan='2'>CHẤT LƯỢNG</th><th rowspan='2'>GHI CHÚ</th><th rowspan='2'>TÁC VỤ</th></tr><tr><th>Bắt đầu</th><th>Kết thúc</th></tr></thead><tbody>
-                                <tr>
-                                    <td>1</td>
-                                    <td>2</td>
-                                    <td>3</td>
-                                    <td>4</td>
-                                    <td>5</td>
-                                    <td>6</td>
-                                    <td>7</td>
-                                    <td>8</td>
-                                    <td>9</td>
-                                </tr>
-                            </tbody>--%>
+
                         </table>
                     </div>
                 </div>
@@ -67,12 +61,12 @@
                                         <div class="form-group row">
                                             <label class="col-sm-4 col-form-label">TG kết thúc: </label>
                                             <div class="col-sm-8">
-                                                <input type="date"  id="SuaChua_addTGketthuc" class="form-control" required>
+                                                <input type="date" id="SuaChua_addTGketthuc" class="form-control" required>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                             
+
                                 <h4 class="sub-title">Các thông tin khác</h4>
                                 <div class="row">
                                     <div class="col-sm-6">
@@ -98,7 +92,7 @@
                                         <div class="form-group row">
                                             <label class="col-sm-4 col-form-label">Phương án kê đà: </label>
                                             <div class="col-sm-8">
-                                                <input type="text" id="SuaChua_addPhuongAn" class="form-control" >
+                                                <input type="text" id="SuaChua_addPhuongAn" class="form-control">
                                             </div>
                                         </div>
                                     </div>
@@ -140,7 +134,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                 <div class="row">
+                                <div class="row">
                                     <div class="col-sm-6">
                                         <div class="form-group row">
                                             <label class="col-sm-4 col-form-label">Thân vỏ: </label>
@@ -159,8 +153,8 @@
                                     </div>
                                 </div>
                                 <h4 class="sub-title">Đánh giá chất lượng sửa chữa</h4>
-                                
-                                 <div class="row">
+
+                                <div class="row">
                                     <div class="col-sm-6">
                                         <div class="form-group row">
                                             <label class="col-sm-4 col-form-label">Tốc độ tối đa: </label>
@@ -200,11 +194,11 @@
         </div>
     </div>
 
-        <div class="modal fade" id="model-edit-SuaChuaTau" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog">
+    <div class="modal fade" id="model-edit-SuaChuaTau" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog">
         <div class="modal-dialog modal-xl" role="document">
             <div class="modal-content">
                 <form id="form-edit-SuaChuaTau" onsubmit="return false">
-                     <input type="hidden" id="SuaChua_editID" />
+                    <input type="hidden" id="SuaChua_editID" />
                     <div class="card auth_form" style="margin-bottom: 0px">
                         <div class="modal-header" style="padding: 10px 16px;">
                             <h4 class="title-modal-banve font-weight-bold">Thay đổi sửa chữa tàu</h4>
@@ -225,12 +219,12 @@
                                         <div class="form-group row">
                                             <label class="col-sm-4 col-form-label">TG kết thúc: </label>
                                             <div class="col-sm-8">
-                                                <input type="date"  id="SuaChua_editTGketthuc" class="form-control" required>
+                                                <input type="date" id="SuaChua_editTGketthuc" class="form-control" required>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                             
+
                                 <h4 class="sub-title">Các thông tin khác</h4>
                                 <div class="row">
                                     <div class="col-sm-6">
@@ -256,7 +250,7 @@
                                         <div class="form-group row">
                                             <label class="col-sm-4 col-form-label">Phương án kê đà: </label>
                                             <div class="col-sm-8">
-                                                <input type="text" id="SuaChua_editPhuongAn" class="form-control" >
+                                                <input type="text" id="SuaChua_editPhuongAn" class="form-control">
                                             </div>
                                         </div>
                                     </div>
@@ -269,7 +263,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                 <div class="row">
+                                <div class="row">
                                     <div class="col-sm-6">
                                         <div class="form-group row">
                                             <label class="col-sm-4 col-form-label">Ghi chú: </label>
@@ -279,7 +273,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                  <h4 class="sub-title">Tóm tắt nội dung sửa chữa</h4>
+                                <h4 class="sub-title">Tóm tắt nội dung sửa chữa</h4>
                                 <div class="row">
                                     <div class="col-sm-6">
                                         <div class="form-group row">
@@ -298,7 +292,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                 <div class="row">
+                                <div class="row">
                                     <div class="col-sm-6">
                                         <div class="form-group row">
                                             <label class="col-sm-4 col-form-label">Thân vỏ: </label>
@@ -317,7 +311,7 @@
                                     </div>
                                 </div>
                                 <h4 class="sub-title">Đánh giá chất lượng sửa chữa</h4>
-                                                                 <div class="row">
+                                <div class="row">
                                     <div class="col-sm-6">
                                         <div class="form-group row">
                                             <label class="col-sm-4 col-form-label">Tốc độ tối đa: </label>
@@ -383,7 +377,7 @@
             }
             else {
                 Load_Title(Ship_ID);
-                list_CapSuaChua('','SuaChua_addCapSuaChua');
+                list_CapSuaChua('', 'SuaChua_addCapSuaChua');
                 loadDataList_SuaChuaTau(Ship_ID);
             }
 
@@ -468,7 +462,7 @@
                         var tabletext = "<thead><tr><th rowspan='2'>STT</th><th colspan='2'>TG SỬA CHỮA</th><th rowspan='2'>NƠI SỬA CHỮA</th><th rowspan='2'>CẤP SỬA CHỮA</th><th rowspan='2'>GIÁ THÀNH(VNĐ)</th><th rowspan='2'>PHƯƠNG ÁN KÊ ĐÀ</th><th colspan='4'>TÓM TẮT N.DUNG SC</th><th colspan='3'>ĐÁNH GIÁ C.LƯỢNG SC</th><th rowspan='2'>TÁC VỤ</th></tr><tr><th>Bắt đầu</th><th>Kết thúc</th><th>Máy chính</th><th>Hệ trục</th><th>Thân vỏ</th><th>Trang bị khác</th><th>T.Độ max</th><th>Tổng thể</th><th>Tồn tại</th></tr></thead><tbody>";
                         var i = 1;
                         $.each(data, function (key, item) {
-                            tabletext += "<tr><td style='text-align: center;'>" + i + "</td><td>" + item.THOIGIAN.BATDAU + "</td><td>" + item.THOIGIAN.KETTHUC + "</td><td>" + item.NOISUACHUA + "</td><td>" + item.CAPSUACHUA.CAP + "</td><td>" + item.GIATHANH + "</td><td>" + item.PHUONGANKEDA + "</td><td>" + item.TOMTATNOIDUNG.MAYCHINH + "</td><td>" + item.TOMTATNOIDUNG.HETRUC + "</td><td>" + item.TOMTATNOIDUNG.THANVO + "</td><td>" + item.TOMTATNOIDUNG.TRANGBIKHAC + "</td><td>" + item.DANHGIACHATLUONG.TOCDOTOIDA + "</td><td>" + item.DANHGIACHATLUONG.TONGTHE + "</td><td>" + item.DANHGIACHATLUONG.TONTAI + "</td>" + '<td><div style="display: flex; justify-content: space-around;"><a href="#" class="edit" title="Sửa" data-toggle="modal" data-target="#model-edit-SuaChuaTau" onclick="edit_suachuatau(`' + item.ID + '`,`' + item.THOIGIAN.BATDAU + '`,`' + item.THOIGIAN.KETTHUC + '`,`' + item.NOISUACHUA + '`,`' + item.CAPSUACHUA.ID + '`,`' + item.PHUONGANKEDA + '`,`' + item.GIATHANH + '`,`' + item.TOMTATNOIDUNG.MAYCHINH + '`,`' + item.TOMTATNOIDUNG.HETRUC + '`,`' + item.TOMTATNOIDUNG.THANVO + '`,`' + item.TOMTATNOIDUNG.TRANGBIKHAC + '`,`' + item.DANHGIACHATLUONG.TOCDOTOIDA + '`,`' + item.DANHGIACHATLUONG.TONGTHE + '`,`' + item.DANHGIACHATLUONG.TONTAI + '`,`' + item.GHICHU + '`)"><i class="material-icons">&#xE254;</i></a><a href="#" class="delete" title="Xóa" onclick="delete_suachuatau(`' + item.ID + '`)"><i class="material-icons">&#xE872;</i></a></div></td></tr>';
+                            tabletext += "<tr><td >" + i + "</td><td>" + item.THOIGIAN.BATDAU + "</td><td>" + item.THOIGIAN.KETTHUC + "</td><td>" + item.NOISUACHUA + "</td><td>" + item.CAPSUACHUA.CAP + "</td><td>" + item.GIATHANH + "</td><td>" + item.PHUONGANKEDA + "</td><td>" + item.TOMTATNOIDUNG.MAYCHINH + "</td><td>" + item.TOMTATNOIDUNG.HETRUC + "</td><td>" + item.TOMTATNOIDUNG.THANVO + "</td><td>" + item.TOMTATNOIDUNG.TRANGBIKHAC + "</td><td>" + item.DANHGIACHATLUONG.TOCDOTOIDA + "</td><td>" + item.DANHGIACHATLUONG.TONGTHE + "</td><td>" + item.DANHGIACHATLUONG.TONTAI + "</td>" + '<td><div style="display: flex; justify-content: space-around;"><a href="#" class="edit" title="Sửa" data-toggle="modal" data-target="#model-edit-SuaChuaTau" onclick="edit_suachuatau(`' + item.ID + '`,`' + item.THOIGIAN.BATDAU + '`,`' + item.THOIGIAN.KETTHUC + '`,`' + item.NOISUACHUA + '`,`' + item.CAPSUACHUA.ID + '`,`' + item.PHUONGANKEDA + '`,`' + item.GIATHANH + '`,`' + item.TOMTATNOIDUNG.MAYCHINH + '`,`' + item.TOMTATNOIDUNG.HETRUC + '`,`' + item.TOMTATNOIDUNG.THANVO + '`,`' + item.TOMTATNOIDUNG.TRANGBIKHAC + '`,`' + item.DANHGIACHATLUONG.TOCDOTOIDA + '`,`' + item.DANHGIACHATLUONG.TONGTHE + '`,`' + item.DANHGIACHATLUONG.TONTAI + '`,`' + item.GHICHU + '`)"><i class="material-icons">&#xE254;</i></a><a href="#" class="delete" title="Xóa" onclick="delete_suachuatau(`' + item.ID + '`)"><i class="material-icons">&#xE872;</i></a></div></td></tr>';
                             i = i + 1;
                         });
                         tabletext += "</tbody>";
@@ -579,7 +573,7 @@
                 }
                 date_kt = day + '/' + month + '/' + year;
 
-                var SuaChuaTau= {
+                var SuaChuaTau = {
                     THOIGIAN: {
                         BATDAU: date_bd,
                         KETTHUC: date_kt
@@ -592,10 +586,10 @@
                     GIATHANH: $("#SuaChua_addGiaThanh").val(),
                     TOMTATNOIDUNG: {
                         MAYCHINH: $("#SuaChua_addNoiDungSC_MC").val(),
-                        HETRUC: $("#SuaChua_addNoiDungSC_HT").val() ,
+                        HETRUC: $("#SuaChua_addNoiDungSC_HT").val(),
                         THANVO: $("#SuaChua_addNoiDungSC_TV").val(),
                         TRANGBIKHAC: $("#SuaChua_addNoiDungSC_TBK").val()
-                    }, 
+                    },
                     DANHGIACHATLUONG: {
                         TOCDOTOIDA: $("#SuaChua_addChatLuongSC_TDTD").val(),
                         TONGTHE: $("#SuaChua_addChatLuongSC_TongThe").val(),
@@ -619,7 +613,7 @@
                     complete: function () { // Set our complete callback, adding the .hidden class and hiding the spinner.
                         $("#SuaChua_addTGbatdau").val("");
                         $("#SuaChua_addTGketthuc").val("");
-                          //Thiếu cấp bậc
+                        //Thiếu cấp bậc
                         $("#SuaChua_addNoiSuaChua").val("");
                         $("#SuaChua_addPhuongAn").val("");
                         $("#SuaChua_addGiaThanh").val("");
@@ -637,7 +631,7 @@
             }
         }
 
-        function edit_suachuatau(ID, THOIGIANBD, THOIGIANKT, NOISUACHUA, CAPSUACHUA_ID, PHUONGANKEDA, GIATHANH, MAYCHINH, HETRUC, THANVO, TRANGBIKHAC, TOCDOTOIDA, TONGTHE, TONTAI,GHICHU) {
+        function edit_suachuatau(ID, THOIGIANBD, THOIGIANKT, NOISUACHUA, CAPSUACHUA_ID, PHUONGANKEDA, GIATHANH, MAYCHINH, HETRUC, THANVO, TRANGBIKHAC, TOCDOTOIDA, TONGTHE, TONTAI, GHICHU) {
             var day = THOIGIANBD.substring(0, 2);
             var month = THOIGIANBD.substring(3, 5);
             var year = THOIGIANBD.substring(6, 10);
@@ -654,7 +648,7 @@
             $("#SuaChua_editPhuongAn").val(PHUONGANKEDA);
             $("#SuaChua_editGiaThanh").val(GIATHANH);
 
-            
+
             $("#SuaChua_editNoiDungSC_MC").val(MAYCHINH);
             $("#SuaChua_editNoiDungSC_HT").val(HETRUC);
             $("#SuaChua_editNoiDungSC_TV").val(THANVO);
@@ -662,7 +656,7 @@
             $("#SuaChua_editChatLuongSC_TDTD").val(TOCDOTOIDA);
             $("#SuaChua_editChatLuongSC_TongThe").val(TOCDOTOIDA);
             $("#SuaChua_editChatLuongSC_TonTai").val(TOCDOTOIDA);
-          
+
             $("#SuaChua_editGhiChu").val(GHICHU);
         }
 

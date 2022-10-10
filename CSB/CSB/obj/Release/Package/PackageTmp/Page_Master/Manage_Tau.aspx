@@ -1,6 +1,10 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Master/TrangChu.Master" AutoEventWireup="true" CodeBehind="Manage_Tau.aspx.cs" Inherits="CSB.Page_Master.Manage_Tau" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <style>
+                tbody tr td {
+            vertical-align: middle;
+            text-align: center;
+        }
         .a_selected {
             background-color: #c44824;
         }

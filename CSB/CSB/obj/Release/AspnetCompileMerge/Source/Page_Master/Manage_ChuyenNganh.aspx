@@ -1,6 +1,12 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Master/TrangChu.Master" AutoEventWireup="true" CodeBehind="Manage_ChuyenNganh.aspx.cs" Inherits="CSB.Page_Master.Manage_ChuyenNganh" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
+    <style>
+                tbody tr td {
+            vertical-align: middle;
+            text-align: center;
+        }
+    </style>
     <div id="form1">
         <div class="section" style="background-color: #fff; padding-bottom: 5px;">
             <div class="section-header" style="background-color: #fff;">

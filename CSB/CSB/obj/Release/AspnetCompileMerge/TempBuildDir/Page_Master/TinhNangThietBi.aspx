@@ -5,7 +5,10 @@
         #table_TinhNangThietBi_wrapper {
             overflow-x: hidden;
         }
-
+          tbody tr td {
+            vertical-align: middle;
+            text-align: center;
+        }
         .breadcrumb {
             background-color: #ffffff !important;
         }

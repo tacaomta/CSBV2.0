@@ -19,6 +19,10 @@
         .icon_unlock {
             font-size: 21px;
         }
+                tbody tr td {
+            vertical-align: middle;
+            text-align: center;
+        }
     </style>
     <div id="form1">
         <div class="section" style="background-color: #fff; padding-bottom: 5px;">

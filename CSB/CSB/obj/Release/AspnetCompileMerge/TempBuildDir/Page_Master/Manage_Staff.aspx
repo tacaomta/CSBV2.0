@@ -5,15 +5,20 @@
         #table_Staff_wrapper {
             overflow-x: hidden;
         }
+
+        tbody tr td {
+            vertical-align: middle;
+            text-align: center;
+        }
     </style>
     <div id="form1">
         <div class="section" style="background-color: #fff; padding-bottom: 5px;">
             <div class="section-header" style="background-color: #fff;">
-                <h4 id="title_manage_staff" style="color: black; margin: 0; margin-left: 15px;">QUẢN LÝ CÁN BỘ, NHÂN VIÊN TÀU</h4>                        
+                <h4 id="title_manage_staff" style="color: black; margin: 0; margin-left: 15px;">QUẢN LÝ CÁN BỘ, NHÂN VIÊN TÀU</h4>
                 <div class="section-header-breadcrumb" style="margin-right: 15px;">
                     <div class="breadcrumb-item active"><a href="TrangChu.aspx" style="color: #01b5f9; font-size: 14px;">Trang chủ </a></div>
                     <div class="breadcrumb-item active"><a href="Manage_Tau?vung=1" style="color: #01b5f9; font-size: 14px;">Quản lý tàu</a></div>
-                    <div class="breadcrumb-item active"><a  href="#" onclick="HoSoTau()" style="color: #01b5f9; font-size: 14px;">Hồ sơ tàu</a></div>
+                    <div class="breadcrumb-item active"><a href="#" onclick="HoSoTau()" style="color: #01b5f9; font-size: 14px;">Hồ sơ tàu</a></div>
                     <div class="breadcrumb-item active"><a href="#" style="color: #01b5f9; font-size: 14px;">Quản lí nhân viên</a></div>
                 </div>
             </div>
@@ -87,14 +92,14 @@
                         var tabletext = "<thead><tr><th>STT</th><th>HỌ VÀ TÊN</th><th>NĂM SINH</th><th>QUÊ QUÁN</th><th>GHI CHÚ</th><th>TÁC VỤ</th></tr></thead><tbody>";
                         var i = 1;
                         $.each(data, function (key, item) {
-                            tabletext += "<tr><td style='text-align: center;'>" + i + "</td><td>" + item.FullName + "</td><td>" + item.BirthYear + "</td><td>" + item.Residence + "</td><td>" + item.Note + "</td>"+'<td><div style="display: flex; justify-content: space-around;"><a href="#" class="edit" onclick="editstaff(`' + item.ID + '`)"><i class="material-icons">&#xE254;</i></a><a href="#" class="delete" title="Xóa" onclick="delete_staff(`' + item.ID + '`)"><i class="material-icons">&#xE872;</i></a></div></td></tr>';
+                            tabletext += "<tr><td style='text-align: center;'>" + i + "</td><td>" + item.FullName + "</td><td>" + item.BirthYear + "</td><td>" + item.Residence + "</td><td>" + item.Note + "</td>" + '<td><div style="display: flex; justify-content: space-around;"><a href="#" class="edit" onclick="editstaff(`' + item.ID + '`)"><i class="material-icons">&#xE254;</i></a><a href="#" class="delete" title="Xóa" onclick="delete_staff(`' + item.ID + '`)"><i class="material-icons">&#xE872;</i></a></div></td></tr>';
                             i = i + 1;
                         });
                         tabletext += "</tbody>";
                         $('#table_Staff').html(tabletext);
                         loadTableStaff();
                         //$('#tableship_wrapper .row .col-sm-12').first().html('<button onclick="btn_addship()" class="btn btn-info btn-lg col-md-6" /*data-toggle="modal" data-target="#model-add-ship"*/ style="height: 40px; margin-bottom: 8px; margin-top: -4px; font-size: 18px;"><span class="glyphicon glyphicon-plus"></span>Thêm tàu</button>');
-                        
+
                     }, error: function (ret) {
                         console.log('errorGET');
                     },

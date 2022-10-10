@@ -9,6 +9,10 @@
         .page-wrapper {
             padding-top: 0 !important;
         }
+        tbody tr td {
+            vertical-align: middle;
+            text-align: center;
+        }
     </style>
     <div class="main-body">
         <div class="page-wrapper">
