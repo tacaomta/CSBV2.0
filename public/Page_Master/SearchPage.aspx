@@ -6,6 +6,7 @@
             background-color: #92ddff;
             padding-top: 30px;
             height: 65vh;
+            position:relative;
         }
 
         .search-gif {
@@ -15,7 +16,7 @@
             background-repeat: no-repeat;
             background-position: center;
             background-color: #92ddff;
-            margin-bottom: 30px;
+        /*    margin-bottom: 30px;*/
         }
 
         .search-container {

@@ -859,7 +859,7 @@
             background: #f6f9ff;
             z-index: 100;
             transition: all 0.5s ease;
-            overflow-y: overlay;
+         /*   overflow-y: overlay;*/
             /**/
         }
 
