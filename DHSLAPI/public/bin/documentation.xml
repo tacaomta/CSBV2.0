@@ -1229,6 +1229,18 @@
             <param name="id">id của hệ trục chân vịt</param>
             <returns></returns>
         </member>
+        <member name="T:DHSLAPI.Controllers.ImportFromExcelController">
+            <summary>
+            Đọc dữ liệu từ file excel
+            </summary>
+        </member>
+        <member name="M:DHSLAPI.Controllers.ImportFromExcelController.ImportExcelFile(System.String)">
+            <summary>
+            Đọc dữ liệu từ file excel chứa hồ sơ tàu
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
         <member name="T:DHSLAPI.Controllers.InstitutionController">
             <summary>
             Cơ sở đào tạo
