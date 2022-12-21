@@ -1145,6 +1145,39 @@
             Test controller
             </summary>
         </member>
+        <member name="T:DHSLAPI.Controllers.ExportImportController">
+            <summary>
+            Export và import hồ sơ tàu ra file dữ liệu dta
+            </summary>
+        </member>
+        <member name="M:DHSLAPI.Controllers.ExportImportController.ExportHOSOTAU2SQL(System.String)">
+            <summary>
+            Export hồ sơ tàu ra file dữ liệu *.dta
+            </summary>
+            <param name="id">id tàu</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.ExportImportController.ExportHOSOTAU2SQLEncode(System.String)">
+            <summary>
+            Export hồ sơ tàu ra file dữ liệu *dta, nội dung được mã hoá
+            </summary>
+            <param name="id">id tàu</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.ExportImportController.Base64Encode(System.String)">
+            <summary>
+            Encode
+            </summary>
+            <param name="text"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.ExportImportController.Base64Decode(System.String)">
+            <summary>
+            Decode
+            </summary>
+            <param name="text"></param>
+            <returns></returns>
+        </member>
         <member name="T:DHSLAPI.Controllers.HANGHAIController">
             <summary>
             Hàng hải

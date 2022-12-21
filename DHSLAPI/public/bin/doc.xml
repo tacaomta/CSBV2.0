@@ -1145,6 +1145,39 @@
             Test controller
             </summary>
         </member>
+        <member name="T:DHSLAPI.Controllers.ExportImportController">
+            <summary>
+            Export và import hồ sơ tàu ra file dữ liệu dta
+            </summary>
+        </member>
+        <member name="M:DHSLAPI.Controllers.ExportImportController.ExportHOSOTAU2SQL(System.String)">
+            <summary>
+            Export hồ sơ tàu ra file dữ liệu *.dta
+            </summary>
+            <param name="id">id tàu</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.ExportImportController.ExportHOSOTAU2SQLEncode(System.String)">
+            <summary>
+            Export hồ sơ tàu ra file dữ liệu *dta, nội dung được mã hoá
+            </summary>
+            <param name="id">id tàu</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.ExportImportController.Base64Encode(System.String)">
+            <summary>
+            Encode
+            </summary>
+            <param name="text"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.ExportImportController.Base64Decode(System.String)">
+            <summary>
+            Decode
+            </summary>
+            <param name="text"></param>
+            <returns></returns>
+        </member>
         <member name="T:DHSLAPI.Controllers.HANGHAIController">
             <summary>
             Hàng hải
@@ -1227,6 +1260,18 @@
             Xoá thông tin hệ trục chân vịt
             </summary>
             <param name="id">id của hệ trục chân vịt</param>
+            <returns></returns>
+        </member>
+        <member name="T:DHSLAPI.Controllers.ImportFromExcelController">
+            <summary>
+            Đọc dữ liệu từ file excel
+            </summary>
+        </member>
+        <member name="M:DHSLAPI.Controllers.ImportFromExcelController.ImportExcelFile(System.String)">
+            <summary>
+            Đọc dữ liệu từ file excel chứa hồ sơ tàu
+            </summary>
+            <param name="id"></param>
             <returns></returns>
         </member>
         <member name="T:DHSLAPI.Controllers.InstitutionController">
