@@ -1164,6 +1164,20 @@
             <param name="id">id tàu</param>
             <returns></returns>
         </member>
+        <member name="M:DHSLAPI.Controllers.ExportImportController.ImportHST(System.String)">
+            <summary>
+            Import hồ sơ tàu từ file dữ liệu *.dta
+            </summary>
+            <param name="content">nội dung file</param>
+            <returns>message code: thành công: 200, ngược lại: 400</returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.ExportImportController.ImportHSTwithEncodeContent(System.String)">
+            <summary>
+            Import hồ sơ tàu từ file dữ liệu *.dta, nội dung được mã hoá
+            </summary>
+            <param name="content">nội dung file</param>
+            <returns>message code: thành công: 200, ngược lại: 400</returns>
+        </member>
         <member name="M:DHSLAPI.Controllers.ExportImportController.Base64Encode(System.String)">
             <summary>
             Encode
