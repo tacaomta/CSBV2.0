@@ -1205,6 +1205,13 @@
             Nhóm người dùng
             </summary>
         </member>
+        <member name="M:DHSLAPI.Controllers.GroupUsersController.GetAllPossibleGroupUsers">
+            <summary>
+            Lấy danh mục có thể có của nhóm người dùng,
+            phục vụ khi thêm hoặc cập nhật nhóm người dùng mới
+            </summary>
+            <returns></returns>
+        </member>
         <member name="M:DHSLAPI.Controllers.GroupUsersController.GetAllGroupUsers">
             <summary>
             Danh mục các nhóm người dùng
