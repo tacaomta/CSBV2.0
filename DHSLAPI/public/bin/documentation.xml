@@ -47,11 +47,19 @@
             <param name="user">thông tin người dùng mới</param>
             <returns></returns>
         </member>
-        <member name="M:CSBAPI.Controllers.UserController.UpdateUser(ShipyardInfo.classes.User)">
+        <member name="M:CSBAPI.Controllers.UserController.UpdateBasicUserInfo(ShipyardInfo.classes.User)">
             <summary>
-            Cập nhật thông tin người dùng
+            Cập nhật thông tin cơ bản của người dùng (không update quyền)
+            Nếu không cập nhật password thì để trống thông tin password
             </summary>
             <param name="user">thông tin người dùng</param>
+            <returns></returns>
+        </member>
+        <member name="M:CSBAPI.Controllers.UserController.UpdateUserRoles(ShipyardInfo.classes.User)">
+            <summary>
+            Cập nhật thông tin các quyền của người dùng (chỉ thông tin quyền, không bao gồm thông tin cơ bản)
+            </summary>
+            <param name="user">thông tin người dùng, chứa id user và list các quyền</param>
             <returns></returns>
         </member>
         <member name="M:CSBAPI.Controllers.UserController.UpdatePassword(ShipyardInfo.classes.User,System.String)">
@@ -1192,6 +1200,32 @@
             <param name="text"></param>
             <returns></returns>
         </member>
+        <member name="T:DHSLAPI.Controllers.GroupUsersController">
+            <summary>
+            Nhóm người dùng
+            </summary>
+        </member>
+        <member name="M:DHSLAPI.Controllers.GroupUsersController.GetAllGroupUsers">
+            <summary>
+            Danh mục các nhóm người dùng
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.GroupUsersController.InsertNewGroupUser(ShipyardInfo.classes.GroupUser)">
+            <summary>
+            Thêm mới nhóm người dùng, thông tin chọn theo đầu mối đơn vị
+            </summary>
+            <param name="gr_user">thông tin nhóm người dùng</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.GroupUsersController.UpdateNewGroupUser(System.String,ShipyardInfo.classes.GroupUser)">
+            <summary>
+            Cập nhật nhóm người dùng
+            </summary>
+            <param name="id">id nhóm cần cập nhật</param>
+            <param name="gr_user">thông tin mới</param>
+            <returns></returns>
+        </member>
         <member name="T:DHSLAPI.Controllers.HANGHAIController">
             <summary>
             Hàng hải
@@ -2105,6 +2139,15 @@
             <summary>
             Các hàm dịch vụ API của TÀU v2.0
             </summary>
+        </member>
+        <member name="M:DHSLAPI.Controllers.TAUController.GetShipsByUserGroupInfo(ShipyardInfo.classes.User)">
+            <summary>
+            Lấy toàn bộ danh mục tàu với thông tin cơ bản của tàu theo nhóm phân quyền của người dùng
+            Phân quyền này không phải là nhóm người dùng admin.
+            </summary>
+            <param name="user">Thông tin của người dùng đã đăng nhập có chứa id của đơn vị mà mình được 
+            phép xem dữ liệu</param>
+            <returns></returns>
         </member>
         <member name="M:DHSLAPI.Controllers.TAUController.GetShipDetailByShipId(System.String)">
             <summary>
@@ -5196,6 +5239,13 @@
             <param name="id"></param>
             <returns></returns>
         </member>
+        <member name="M:ShipyardInfo.classes.Connection.Login(ShipyardInfo.classes.User)">
+            <summary>
+            Login
+            </summary>
+            <param name="logingUser"></param>
+            <returns></returns>
+        </member>
         <member name="M:ShipyardInfo.classes.Connection.GetMarineWeaponsByIMO(System.String)">
             <summary>
             Lấy danh mục vũ khí hàng hải theo id tàu
@@ -5395,6 +5445,13 @@
             <summary>
             Lấy thông tin vùng theo ID
             </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ShipyardInfo.classes.Connection.GetShipsByUserGroupInfo(ShipyardInfo.classes.User)">
+            <summary>
+            Lấy thông tin tàu dựa theo thông tin của người dùng đăng nhập
+            </summary>
+            <param name="user">thông tin user chứa id của đơn vị mà mình quản lý</param>
             <returns></returns>
         </member>
         <member name="M:ShipyardInfo.classes.Connection.GetShipOverviewInfoInNavalRegion(System.String)">
@@ -6064,6 +6121,131 @@
         <member name="P:ShipyardInfo.classes.SecondaryEngine.State2">
             <summary>
             Trạng thái máy phát điện
+            </summary>
+        </member>
+        <member name="T:ShipyardInfo.classes.Role">
+            <summary>
+            Quyền
+            </summary>
+        </member>
+        <member name="P:ShipyardInfo.classes.Role.RoleId">
+            <summary>
+            Id
+            </summary>
+        </member>
+        <member name="P:ShipyardInfo.classes.Role.RoleName">
+            <summary>
+            Tên quyền
+            </summary>
+        </member>
+        <member name="T:ShipyardInfo.classes.UserRoles">
+            <summary>
+            Các quyền của người dùng
+            </summary>
+        </member>
+        <member name="P:ShipyardInfo.classes.UserRoles.Roles">
+            <summary>
+            Danh mục các quyền
+            </summary>
+        </member>
+        <member name="M:ShipyardInfo.classes.UserRoles.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:ShipyardInfo.classes.UserRoles.Show">
+            <summary>
+            Xem dữ liệu
+            </summary>
+        </member>
+        <member name="P:ShipyardInfo.classes.UserRoles.Insert">
+            <summary>
+            Thêm dữ liệu
+            </summary>
+        </member>
+        <member name="P:ShipyardInfo.classes.UserRoles.Update">
+            <summary>
+            Cập nhật dữ liệu
+            </summary>
+        </member>
+        <member name="P:ShipyardInfo.classes.UserRoles.Delete">
+            <summary>
+            Xoá dữ liệu
+            </summary>
+        </member>
+        <member name="P:ShipyardInfo.classes.UserRoles.Report">
+            <summary>
+            Xuất báo cáo
+            </summary>
+        </member>
+        <member name="T:ShipyardInfo.classes.User">
+            <summary>
+            Thông tin người dùng
+            </summary>
+        </member>
+        <member name="P:ShipyardInfo.classes.User.UserName">
+            <summary>
+            Tên đăng nhập
+            </summary>
+        </member>
+        <member name="P:ShipyardInfo.classes.User.Password">
+            <summary>
+            Password
+            </summary>
+        </member>
+        <member name="P:ShipyardInfo.classes.User.Fullname">
+            <summary>
+            Họ tên thường dùng
+            </summary>
+        </member>
+        <member name="P:ShipyardInfo.classes.User.UserRoles">
+            <summary>
+            Các quyền người dùng lên dữ liệu
+            </summary>
+        </member>
+        <member name="P:ShipyardInfo.classes.User.LastUpdate">
+            <summary>
+            Cập nhật lần cuối
+            </summary>
+        </member>
+        <member name="P:ShipyardInfo.classes.User.Created">
+            <summary>
+            Thời điểm tạo người dùng
+            </summary>
+        </member>
+        <member name="P:ShipyardInfo.classes.User.LOCKED">
+            <summary>
+            Trạng thái người dùng
+            </summary>
+        </member>
+        <member name="P:ShipyardInfo.classes.User.ID">
+            <summary>
+            ID
+            </summary>
+        </member>
+        <member name="P:ShipyardInfo.classes.User.GroupUser">
+            <summary>
+            Nhóm người dùng
+            </summary>
+        </member>
+        <member name="T:ShipyardInfo.classes.GroupUser">
+            <summary>
+            Nhóm người dùng
+            </summary>
+        </member>
+        <member name="P:ShipyardInfo.classes.GroupUser.OnUnitID">
+            <summary>
+            Id đơn vị mà người dùng có quyền truy cập data
+            </summary>
+        </member>
+        <member name="P:ShipyardInfo.classes.GroupUser.Name">
+            <summary>
+            Tên đơn vị
+            </summary>
+        </member>
+        <member name="P:ShipyardInfo.classes.GroupUser.gr_id">
+            <summary>
+            Id
             </summary>
         </member>
         <member name="T:ShipyardInfo.classes.Winch">
