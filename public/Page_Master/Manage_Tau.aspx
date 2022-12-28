@@ -1,10 +1,11 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Master/TrangChu.Master" AutoEventWireup="true" CodeBehind="Manage_Tau.aspx.cs" Inherits="CSB.Page_Master.Manage_Tau" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <style>
-                tbody tr td {
+        tbody tr td {
             vertical-align: middle;
             text-align: center;
         }
+
         .a_selected {
             background-color: #c44824;
         }
@@ -12,49 +13,55 @@
         .subMenu ul li {
             cursor: pointer;
         }
-        
+
         .blue-color {
             color: blue;
         }
+
             .blue-color:hover {
                 color: blue;
             }
-            
+
         .green-color {
             color: green;
         }
+
             .green-color:hover {
                 color: green;
             }
-        
+
         .orange-color {
             color: orange;
         }
+
             .orange-color:hover {
                 color: orange;
             }
-        
+
         .revert-color {
             color: #551A8B;
         }
+
             .revert-color:hover {
                 color: #551A8B;
             }
-        
+
         .edit-color {
             color: #FFC107;
         }
+
             .edit-color:hover {
                 color: #FFC107;
             }
-        
+
         .red-color {
             color: red;
         }
+
             .red-color:hover {
                 color: red;
             }
-/*
+        /*
         tbody tr:hover {
             background-color: #cfcfcf !important;
         }
@@ -63,20 +70,20 @@
            visibility: hidden;
         }*/
 
-    .dropdown-menu a {
-        padding: 10px 20px;
-        font-size: 14px;
-    }    
+        .dropdown-menu a {
+            padding: 10px 20px;
+            font-size: 14px;
+        }
 
-    .dropdown-menu a i {
-        vertical-align: bottom;
-        margin-right: .5rem;
-    }
-    .section .section-header table .btn{
-        font-size: 14px;
-        background: #75c1df;
-    }
+            .dropdown-menu a i {
+                vertical-align: bottom;
+                margin-right: .5rem;
+            }
 
+        .section .section-header table .btn {
+            font-size: 14px;
+            background: #75c1df;
+        }
     </style>
     <div id="form1">
         <div class="section" style="background-color: #fff; padding-bottom: 15px;">
@@ -1423,7 +1430,6 @@ TR&#7908;C CHÂN V&#7882;T</span></b></p>
 
         });
 
-
         function loadDataListShips(vung_id) {
             debugger
             $.ajax({
@@ -1438,14 +1444,14 @@ TR&#7908;C CHÂN V&#7882;T</span></b></p>
                     var i = 1;
                     $.each(data, function (key, item) {
                         //tabletext += "<tr><td style='text-align: center;'>" + i + "</td><td>" + item.TTCOBAN.SOHIEU + "</td><td>" + item.TTCOBAN.KYHIEU + "</td><td>" + item.TTCOBAN.NOISANXUAT + "</td><td>" + item.TTCOBAN.NAMTIEPNHAN + "</td><td>" + item.TTCOBAN.CHUCNANG + "</td>" + '<td style="text-align: center;"><a href="#" class="view"  title="Xem hồ sơ tàu" onclick="View_HoSoTau(`' + item.ID + '`)"><i class="material-icons">&#xE417;</i></a></td>' + '<td style="text-align: center;"><div class="dropdown"><button class="btn" style="white-space: nowrap;" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="bi bi-list"></i> Các tác vụ</button><div class="dropdown-menu" aria-labelledby="dropdownMenuButton"><a href="#" class="view dropdown-item" title="Xuất Word thông tin tàu ' + item.TTCOBAN.SOHIEU + '" onclick="xuatWordTau(`' + item.ID + '`)"><i class="material-icons blue-color">text_snippet</i>Xuất word thông tin tàu ' + item.TTCOBAN.SOHIEU + '</a><a href="#" class="view dropdown-item" title="Xuất file Excel" onclick="xuatExcelTau(`' + item.ID + '`)"><i class="material-icons green-color">description</i>Xuất excel thông tin tàu ' + item.TTCOBAN.SOHIEU + '</a><a href="#" class="view dropdown-item" title="Xuất file pdf" onclick="xuatPdfTau(`' + item.ID + '`)"><i class="material-icons orange-color">picture_as_pdf</i>Xuất pdf thông tin tàu ' + item.TTCOBAN.SOHIEU + '</a><a href="#" class="view dropdown-item" title="In báo cáo" onclick="inBCTau(`' + item.ID + '`)"><i class="material-icons revert-color">print</i>In báo cáo thông tin tàu ' + item.TTCOBAN.SOHIEU + '</a><a href="#" class="view dropdown-item" title="Sửa" onclick="ViewInforShip(`' + item.ID + '`)"><i class="material-icons edit-color ">&#xE254;</i>Sửa thông tin tàu ' + item.TTCOBAN.SOHIEU + '</a><a href="#" class="view dropdown-item" title="Xóa" onclick="delete_ship(`' + item.ID + '`)"><i class="material-icons red-color ">&#xE872;</i>Xóa thông tin tàu ' + item.TTCOBAN.SOHIEU + '</a></div></div></td></tr>';
-                        tabletext += "<tr><td style='text-align: center;'>" + i + "</td><td>" + item.TTCOBAN.SOHIEU + "</td><td>" + item.TTCOBAN.KYHIEU + "</td><td>" + item.TTCOBAN.NOISANXUAT + "</td><td>" + item.TTCOBAN.NAMTIEPNHAN + "</td><td>" + item.TTCOBAN.CHUCNANG + "</td>" + '<td style="text-align: center;"><a href="#" class="view"  title="Xem hồ sơ tàu" onclick="View_HoSoTau(`' + item.ID + '`)"><i class="material-icons">&#xE417;</i></a></td>' + '<td style="text-align: center;"><div class="dropdown"><button class="btn" style="white-space: nowrap;" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="bi bi-list"></i> Các tác vụ</button><div class="dropdown-menu" aria-labelledby="dropdownMenuButton"><a href="#" class="view dropdown-item" title="Xuất Word thông tin tàu ' + item.TTCOBAN.SOHIEU + '" onclick="xuatWordTau(`' + item.ID + '`)"><i class="material-icons blue-color">text_snippet</i>Xuất word thông tin tàu ' + item.TTCOBAN.SOHIEU + '</a><a href="#" class="view dropdown-item" title="Báo cáo kỹ thuật tàu ' + item.TTCOBAN.SOHIEU + '" onclick="baoCaoKyThuat(`' + item.ID + '`)"><i class="material-icons blue-color">text_snippet</i>Báo cáo kỹ thuật tàu ' + item.TTCOBAN.SOHIEU + '</a><a href="#" class="view dropdown-item" title="Sửa" onclick="ViewInforShip(`' + item.ID + '`)"><i class="material-icons edit-color ">&#xE254;</i>Sửa thông tin tàu ' + item.TTCOBAN.SOHIEU + '</a><a href="#" class="view dropdown-item" title="Xóa" onclick="delete_ship(`' + item.ID + '`)"><i class="material-icons red-color ">&#xE872;</i>Xóa thông tin tàu ' + item.TTCOBAN.SOHIEU + '</a></div></div></td></tr>';
+                        tabletext += "<tr><td style='text-align: center;'>" + i + "</td><td>" + item.TTCOBAN.SOHIEU + "</td><td>" + item.TTCOBAN.KYHIEU + "</td><td>" + item.TTCOBAN.NOISANXUAT + "</td><td>" + item.TTCOBAN.NAMTIEPNHAN + "</td><td>" + item.TTCOBAN.CHUCNANG + "</td>" + '<td style="text-align: center;"><a href="#" class="view"  title="Xem hồ sơ tàu" onclick="View_HoSoTau(`' + item.ID + '`)"><i class="material-icons">&#xE417;</i></a></td>' + '<td style="text-align: center;"><div class="dropdown"><button class="btn" style="white-space: nowrap;" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="bi bi-list"></i> Các tác vụ</button><div class="dropdown-menu" aria-labelledby="dropdownMenuButton"><a href="#" class="view dropdown-item" title="Xuất Word thông tin tàu ' + item.TTCOBAN.SOHIEU + '" onclick="xuatWordTau(`' + item.ID + '`)"><i class="material-icons blue-color">text_snippet</i>Xuất word thông tin tàu ' + item.TTCOBAN.SOHIEU + '</a><a href="#" class="view dropdown-item" title="Báo cáo kỹ thuật tàu ' + item.TTCOBAN.SOHIEU + '" onclick="baoCaoKyThuat(`' + item.ID + '`)"><i class="material-icons blue-color">text_snippet</i>Báo cáo kỹ thuật tàu ' + item.TTCOBAN.SOHIEU + '</a><a href="#" class="view dropdown-item" title="Chiết xuất dữ liệu ' + item.TTCOBAN.SOHIEU + '" onclick="ChietXuatDuLieu(`' + item.ID + '`,`' + item.TTCOBAN.SOHIEU + '`)"><i class="material-icons blue-color">text_snippet</i>Chiết xuất dữ liệu tàu ' + item.TTCOBAN.SOHIEU + '</a><a href="#" class="view dropdown-item" title="Sửa" onclick="ViewInforShip(`' + item.ID + '`)"><i class="material-icons edit-color ">&#xE254;</i>Sửa thông tin tàu ' + item.TTCOBAN.SOHIEU + '</a><a href="#" class="view dropdown-item" title="Xóa" onclick="delete_ship(`' + item.ID + '`)"><i class="material-icons red-color ">&#xE872;</i>Xóa thông tin tàu ' + item.TTCOBAN.SOHIEU + '</a></div></div></td></tr>';
                         i = i + 1;
                     });
                     tabletext += "</tbody>";
                     $('#tableship').html(tabletext);
                     loadTableShip();
                     //$('#tableship_wrapper .row .col-sm-12').first().html('<div class="btn-group"><button onclick="btn_Load_listship()" class="btn btn-lg btn-secondary mb-3"><span class="bi-arrow-clockwise"></span> &nbsp;Load dữ liệu</button> <button onclick="btn_addship()" class="btn btn-lg btn-secondary mb-3"><span class="bi-plus-circle-fill"></span> &nbsp;Thêm mới tàu</button><div class="btn-group"><button type="button" class="btn btn-lg btn-secondary mb-3 dropdown-toggle" data-toggle="dropdown"><span class="bi-file-earmark-text"></span> Xuất báo cáo </button><ul class="dropdown-menu" role="menu" style="width: max-content;"><li><a href="#"><i class="material-icons revert-color">print</i> In báo cáo</a></li><li><a href="#" ><i class="material-icons blue-color">text_snippet</i> Xuất file Word</a></li><li><a href="#"><i class="material-icons green-color">description</i> Xuất file Excel</a></li><li><a href="#"><i class="material-icons orange-color">picture_as_pdf</i> Xuất file PDF</a></li></ul></div></div>');
-                    $('#tableship_wrapper .row .col-sm-12').first().html('<div class="btn-group"><button onclick="btn_Load_listship()" class="btn btn-lg btn-secondary mb-3"><span class="bi-arrow-clockwise"></span> &nbsp;Load dữ liệu</button> <button onclick="btn_addship()" class="btn btn-lg btn-secondary mb-3"><span class="bi-plus-circle-fill"></span> &nbsp;Thêm mới tàu</button></div>');
+                    $('#tableship_wrapper .row .col-sm-12').first().html('<div class="btn-group"><button onclick="btn_Load_listship()" class="btn btn-lg btn-secondary mb-2"><span class="bi-arrow-clockwise"></span> &nbsp;Load dữ liệu</button> <button onclick="btn_addship()" class="btn btn-lg btn-secondary mb-2"><i class="bi bi-plus-circle"></i> &nbsp;Thêm mới tàu</button><input type="file" id="input_txt" class="btn btn-secondary mb-2"> <button id="btn_add_Tau_txt" class="btn btn-secondary mb-2"><i class="bi bi-plus-circle"></i>&nbsp;Thêm bằng file</button></div>');
                     $('#tableship_wrapper .row').first().next().children().css("overflow-x", "auto");
                     $('#tableship_wrapper').css("overflow-x", "hidden");
                     $('#tableship_wrapper').css("overflow-y", "inherit");
@@ -1454,11 +1460,30 @@ TR&#7908;C CHÂN V&#7882;T</span></b></p>
                 },
                 complete: function () { // Set our complete callback, adding the .hidden class and hiding the spinner.
                     $('#loader').addClass('hidden');
-                    /*$('tbody tr').hover(function () {
-                        $(this).children().last().children().first().removeClass('hidden-cell');
-                    }, function () {
-                        $(this).children().last().children().first().addClass('hidden-cell');
-                    })*/
+                    let selectedFile;
+                    let input = document.getElementById("input_txt");
+                    input.addEventListener("change", (event) => {
+                        selectedFile = event.target.files[0];
+                    });
+                    document.getElementById("btn_add_Tau_txt").addEventListener("click", () => {
+                        if (selectedFile) {
+                            let files = input.files;
+                            if (files.length == 0) return;
+                            const file = files[0];
+                            let reader = new FileReader();
+                            reader.onload = (e) => {
+                                const file = e.target.result;
+                                const lines = file.split(/\r\n|\n/);
+                                $.each(lines, function (key, item) {
+                                    alert(item);
+                                });
+                                debugger
+
+                            };
+                            reader.onerror = (e) => alert(e.target.error.name);
+                            reader.readAsText(file);
+                        }
+                    });
                 },
             });
         };
@@ -1514,6 +1539,434 @@ TR&#7908;C CHÂN V&#7882;T</span></b></p>
                     .appendTo('this_wrapper .col-md-6:eq(0)');
             });
         };
+        //var textFile = null;
+        //var makeTextFile = function (text) {
+        //    var data = new Blob([text], { type: 'application/json:utf-8' });
+
+        //    // If we are replacing a previously generated file we need to
+        //    // manually revoke the object URL to avoid memory leaks.
+        //    if (textFile !== null) {
+        //        window.URL.revokeObjectURL(textFile);
+        //    }
+
+        //    textFile = window.URL.createObjectURL(data);
+
+        //    // returns a URL you can use as a href
+        //    return textFile;
+        //};
+        function Text_ChietSuat(ShipID, Text) {
+            Text_ThemThongTinTau(ShipID, Text);
+        }
+        function Text_ThemThongTinTau(ShipID, Text) {
+            $.ajax({
+                async: false,
+                type: "GET",
+                url: linkapi + "v2/ship_detail?id=" + ShipID,
+                dataType: "json",
+                success: function (data) {
+                    Text = Text + `INSERT INTO THONGTINTAU VALUES(` + `'` + ShipID + `','` + data.TTCOBAN.SOHIEU + `','` + data.TTCOBAN.KYHIEU + `','` + data.TTCOBAN.NOISANXUAT + `','` + data.TTCOBAN.NAMHATHUY + `','` + data.TTCOBAN.NAMTIEPNHAN + `','` + data.TTCOBAN.CHUCNANG + `','` + data.GIANNUOC.Dmax + `','` + data.GIANNUOC.Dmin + `','` + data.KT.Lmax + `','` + data.KT.Ltk + `','` + data.KT.Bmax + `','`
+                        + data.KT.Htb + `','` + data.KT.Hmax + `','` + data.KT.Dmax + `','` + data.MN.Tm + `','` + data.MN.Ttb + `','` + data.MN.Td + `','` + data.MN.Tmax + `','` + data.VT.Vmax + `','` + data.VT.Vkt + `','` + data.KNHD.H1 + `','` + data.KNHD.Tm + `','` + data.KNHD.Wmax + `','` + data.LDT.DCKH + `','` + data.LDT.DCSL + `','` + data.LDT.DNKH + `','` + data.LDT.DNSL + `','`
+                        + data.LDT.MN + `','` + data.LDT.MNSL + `','` + data.BC.QS + `','` + data.BC.SQ + `','` + data.BC.VCQP + `','` + data.BC.QNCN + `','` + data.BC.HSQCS + `','` + data.Meta.Created + `','` + data.Meta.LastUpdated + `','` + data.KT.FlotId + `'` + `/n`;
+                    debugger;
+                    return Text_ThemCanBoNhanVien(ShipID, Text);
+                }, error: function (ret) {
+                    console.log('errorGET');
+                }
+            });
+        }
+
+        function Text_ThemCanBoNhanVien(ShipID, Text) {
+            $.ajax({
+                async: false,
+                type: "GET",
+                url: linkapi + "v2/ship_detail?id=" + ShipID,
+                dataType: "json",
+                success: function (data) {
+                    Text = Text + `INSERT INTO THONGTINTAU VALUES(` + `'` + ShipID + `','` + data.TTCOBAN.SOHIEU + `','` + data.TTCOBAN.KYHIEU + `','` + data.TTCOBAN.NOISANXUAT + `','` + data.TTCOBAN.NAMHATHUY + `','` + data.TTCOBAN.NAMTIEPNHAN + `','` + data.TTCOBAN.CHUCNANG + `','` + data.GIANNUOC.Dmax + `','` + data.GIANNUOC.Dmin + `','` + data.KT.Lmax + `','` + data.KT.Ltk + `','` + data.KT.Bmax + `','`
+                        + data.KT.Htb + `','` + data.KT.Hmax + `','` + data.KT.Dmax + `','` + data.MN.Tm + `','` + data.MN.Ttb + `','` + data.MN.Td + `','` + data.MN.Tmax + `','` + data.VT.Vmax + `','` + data.VT.Vkt + `','` + data.KNHD.H1 + `','` + data.KNHD.Tm + `','` + data.KNHD.Wmax + `','` + data.LDT.DCKH + `','` + data.LDT.DCSL + `','` + data.LDT.DNKH + `','` + data.LDT.DNSL + `','`
+                        + data.LDT.MN + `','` + data.LDT.MNSL + `','` + data.BC.QS + `','` + data.BC.SQ + `','` + data.BC.VCQP + `','` + data.BC.QNCN + `','` + data.BC.HSQCS + `','` + data.Meta.Created + `','` + data.Meta.LastUpdated + `','` + data.KT.FlotId + `'` + `/n`;
+                    debugger;
+                    return Text;
+                }, error: function (ret) {
+                    console.log('errorGET');
+                }
+            });
+        }
+
+        function ChietXuatDuLieu(ShipID, SoHieu) {
+            var Text = "";
+            //Tàu
+            //$.ajax({
+            //    async: false,
+            //    type: "GET",
+            //    url: linkapi + "v2/ship_detail?id=" + ShipID,
+            //    dataType: "json",
+            //    success: function (data) {
+            //        Text = Text + `INSERT INTO THONGTINTAU VALUES(` + `'` + ShipID + `','` + data.TTCOBAN.SOHIEU + `','` + data.TTCOBAN.KYHIEU + `',N'` + data.TTCOBAN.NOISANXUAT + `','` + data.TTCOBAN.NAMHATHUY + `','` + data.TTCOBAN.NAMTIEPNHAN + `',N'` + data.TTCOBAN.CHUCNANG + `','` + data.GIANNUOC.Dmax + `','` + data.GIANNUOC.Dmin + `','` + data.KT.Lmax + `','` + data.KT.Ltk + `','` + data.KT.Bmax + `','`
+            //            + data.KT.Htb + `','` + data.KT.Hmax + `','` + data.KT.Dmax + `','` + data.MN.Tm + `','` + data.MN.Ttb + `','` + data.MN.Td + `','` + data.MN.Tmax + `','` + data.VT.Vmax + `','` + data.VT.Vkt + `','` + data.KNHD.H1 + `','` + data.KNHD.Tm + `','` + data.KNHD.Wmax + `','` + data.LDT.DCKH + `','` + data.LDT.DCSL + `','` + data.LDT.DNKH + `','` + data.LDT.DNSL + `','`
+            //            + data.LDT.MN + `','` + data.LDT.MNSL + `','` + data.BC.QS + `','` + data.BC.SQ + `','` + data.BC.VCQP + `','` + data.BC.QNCN + `','` + data.BC.HSQCS + `','` + data.Meta.Created + `','` + data.Meta.LastUpdated + `','` + data.FlotId + `')` + `\n`;
+            //        //Cán bộ nhân viên
+            //        $.ajax({
+            //            async: false,
+            //            type: "GET",
+            //            url: linkapi + "personnels?id=" + ShipID,
+            //            dataType: "json",
+            //            success: function (data) {
+            //                $.each(data, function (key, item) {
+            //                    Text = Text + `INSERT INTO CANBO_NHANVIEN VALUES(` + `'` + item.ID + `',N'` + item.FullName + `',` + item.BirthYear + `,N'` + item.Residence + `','` + item.Enlist + `','` + item.Majoring.ID + `','` + item.Ranking.ID  + `','` + item.Position.ID + `','`
+            //                        + item.Institution.ID   + `','` + item.Graduation + `','` + item.Degree.ID +  `',N'` + item.From + `','` + item.FromDate + `',N'` + item.Leave + `','` + item.LeaveDate + `',N'` + item.Note + `','` + ShipID + `')` + `\n`;
+            //                });
+
+            //                 //Thân vỏ
+
+            //                $.ajax({
+            //                    async: false,
+            //                    type: "GET",
+            //                    url: linkapi + "v2/thanvo?id=" + ShipID,
+            //                    dataType: "json",
+            //                    success: function (data_TV) {
+            //                        $.each(data_TV, function (key, item) {
+            //                            Text = Text + `INSERT INTO THANVO VALUES(` + `'` + item.ID + `',N'` + item.KYHIEUVATLIEU + `','` + item.SOKHOANGKINNUOC + `','` + item.SOSUONTAU + `','` + item.SOKETDAUCHAY + `','` + item.SOKETDAUNHON + `','` + item.SOKETNUOC + `','` + ShipID + `')` + `\n`;
+            //                        });
+            //                        // Thay Đổi số hiệu
+            //                        $.ajax({
+            //                            async: false,
+            //                            type: "GET",
+            //                            url: linkapi + "dacdiemchung?id=" + ShipID,
+            //                            dataType: "json",
+            //                            success: function (data) {
+            //                                $.each(data.TDSOHIEU, function (key, item) {
+            //                                    Text = Text + `EXEC ChangeSerial ` + `'` + item.ID + `','` + item.THANGNAM + `','` + item.SOHIEU + `','` + item.CAPQUYDINH + `','` + item.Created + `','` + item.LastUpdated + `','` + ShipID + `'` + `\n`;
+            //                                });
+            //                                // Hàng Hải
+            //                                $.ajax({
+            //                                    async: false,
+            //                                    type: "GET",
+            //                                    url: linkapi + "v2/hanghai?id=" + ShipID,
+            //                                    dataType: "json",
+            //                                    success: function (data) {
+            //                                        $.each(data, function (key, item) {
+            //                                            Text = Text + `INSERT INTO HANGHAI VALUES(` + `'` + item.ID + `',N'` + item.KYHIEU + `','` + item.SOLUONG +`','`+ ShipID + `')` + `\n`;
+            //                                        });
+            //                                        // Vũ Khí
+            //                                        $.ajax({
+            //                                            async: false,
+            //                                            type: "GET",
+            //                                            url: linkapi + "v2/vukhi?id=" + ShipID,
+            //                                            dataType: "json",
+            //                                            success: function (data) {
+            //                                                $.each(data, function (key, item) {
+            //                                                    Text = Text + `INSERT INTO VUKHI VALUES(` + `'` + item.ID + `',N'` + item.KYHIEU + `','` + item.SOLUONG + `','` + ShipID + `')` + `\n`;
+            //                                                });
+            //                                            }, error: function (ret) {
+            //                                                console.log('errorGET');
+            //                                            },
+            //                                            complete: function () {
+            //                                                $('#loader').addClass('hidden');
+            //                                            },
+            //                                        });
+            //                                        // Rada
+            //                                        $.ajax({
+            //                                            async: false,
+            //                                            type: "GET",
+            //                                            url: linkapi + "v2/rada?id=" + ShipID,
+            //                                            dataType: "json",
+            //                                            success: function (data) {
+            //                                                $.each(data, function (key, item) {
+            //                                                    Text = Text + `INSERT INTO RADA VALUES(` + `'` + item.ID + `',N'` + item.KYHIEU + `','` + item.SOLUONG + `','` + ShipID + `')` + `\n`;
+            //                                                });
+            //                                                // CÁC TỔ MÁY
+            //                                                //Máy chính
+            //                                                $.ajax({
+            //                                                    async: false,
+            //                                                    type: "GET",
+            //                                                    url: linkapi + "v2_2/maychinh?id=" + ShipID,
+            //                                                    dataType: "json",
+            //                                                    success: function (data) {
+            //                                                        $.each(data, function (key, item) {
+            //                                                            Text = Text + `INSERT INTO THONGTINMAY VALUES(` + `'` + item.ID + `',N'` + item.THONGSOCOBAN.KYHIEU + `',N'` + item.THONGSOCOBAN.NAMSANXUAT + `',N'` + item.THONGSOCOBAN.NOISANXUAT + `','` + item.THONGSOCOBAN.NAMLAPRAP + `','` + item.THONGSOCOBAN.SOHIEUMAY
+            //                                                                + `','` + item.THONGSOCOBAN.CONGSUAT + `','` + item.THONGSOCOBAN.VONGQUAY + `',N'` + item.THONGSOCOBAN.CHIEUQUAY + `',N'` + item.THONGSOCOBAN.NGUONKHOIDONG + `',N'` + item.THONGSOCOBAN.HETHONGDIEUKHIEN + `','` + item.THONGSOCOBAN.KICHTHUOCMAY.DAI
+            //                                                                + `','` + item.THONGSOCOBAN.KICHTHUOCMAY.CAO + `','` + item.THONGSOCOBAN.KICHTHUOCMAY.RONG + `','` + item.THONGSOCOBAN.TRONGLUONG + `','` + item.THONGSOCOBAN.CHUKYSUACHUA.TIEUTU + `','` + item.THONGSOCOBAN.CHUKYSUACHUA.TRUNGTU + `','` + item.THONGSOCOBAN.CHUKYSUACHUA.DAITU
+            //                                                                + `','` + item.THONGSOCOBAN.LOAIDIEN.DIENAP + `','` + item.THONGSOCOBAN.LOAIDIEN.TANSO + `',N'` + item.PHUONGPHAPTRUYENTAI.KYHIEULYHOP_BOGIAMVONG + `',N'` + item.PHUONGPHAPTRUYENTAI.SOHIEULYHOP_BOGIAMVONG + `',N'` + item.PHUONGPHAPTRUYENTAI.TYSOTRUYEN
+            //                                                                + `',N'` + item.PHUONGPHAPTRUYENTAI.KHOPNOICUNG + `',N'` + item.PHUONGPHAPTRUYENTAI.KHOPNOIMEM + `',N'` + item.PHUONGPHAPTRUYENTAI.CUROA + `',N'` + item.PHUONGPHAPTRUYENTAI.KYHIEUVONGBI + `','` + 'MAYCHINH'
+            //                                                                + `','` + ShipID + `',N'` + item.THONGSOCOBAN.VITRILAPRAP + `','` + item.THONGBAODINHMUC.DINHMUCSUACHUA + `','` + item.THONGBAODINHMUC.DINHMUCTHONGBAO + `',N'` + item.TINHTRANGHIENTAI + `','` + item.THONGBAODINHMUC.LOAICANHBAO.ID + `')` + `\n`;
+            //                                                        });
+            //                                                        //Máy phụ phát điện
+            //                                                        $.ajax({
+            //                                                            async: false,
+            //                                                            type: "GET",
+            //                                                            url: linkapi + "v2_2/mayphuphatdien?id=" + ShipID,
+            //                                                            dataType: "json",
+            //                                                            success: function (data) {
+            //                                                                $.each(data, function (key, item) {
+            //                                                                    Text = Text + `INSERT INTO THONGTINMAY VALUES(` + `'` + item.ID + `',N'` + item.THONGSOCOBAN.KYHIEU + `',N'` + item.THONGSOCOBAN.NAMSANXUAT + `',N'` + item.THONGSOCOBAN.NOISANXUAT + `','` + item.THONGSOCOBAN.NAMLAPRAP + `','` + item.THONGSOCOBAN.SOHIEUMAY
+            //                                                                        + `','` + item.THONGSOCOBAN.CONGSUAT + `','` + item.THONGSOCOBAN.VONGQUAY + `',N'` + item.THONGSOCOBAN.CHIEUQUAY + `',N'` + item.THONGSOCOBAN.NGUONKHOIDONG + `',N'` + item.THONGSOCOBAN.HETHONGDIEUKHIEN + `','` + item.THONGSOCOBAN.KICHTHUOCMAY.DAI
+            //                                                                        + `','` + item.THONGSOCOBAN.KICHTHUOCMAY.CAO + `','` + item.THONGSOCOBAN.KICHTHUOCMAY.RONG + `','` + item.THONGSOCOBAN.TRONGLUONG + `','` + item.THONGSOCOBAN.CHUKYSUACHUA.TIEUTU + `','` + item.THONGSOCOBAN.CHUKYSUACHUA.TRUNGTU + `','` + item.THONGSOCOBAN.CHUKYSUACHUA.DAITU
+            //                                                                        + `','` + item.THONGSOCOBAN.LOAIDIEN.DIENAP + `','` + item.THONGSOCOBAN.LOAIDIEN.TANSO + `',N'` + item.PHUONGPHAPTRUYENTAI.KYHIEULYHOP_BOGIAMVONG + `',N'` + item.PHUONGPHAPTRUYENTAI.SOHIEULYHOP_BOGIAMVONG + `',N'` + item.PHUONGPHAPTRUYENTAI.TYSOTRUYEN
+            //                                                                        + `',N'` + item.PHUONGPHAPTRUYENTAI.KHOPNOICUNG + `',N'` + item.PHUONGPHAPTRUYENTAI.KHOPNOIMEM + `',N'` + item.PHUONGPHAPTRUYENTAI.CUROA + `',N'` + item.PHUONGPHAPTRUYENTAI.KYHIEUVONGBI + `','` + 'MAYPHUPHATDIEN'
+            //                                                                        + `','` + ShipID + `',N'` + item.THONGSOCOBAN.VITRILAPRAP + `','` + item.THONGBAODINHMUC.DINHMUCSUACHUA + `','` + item.THONGBAODINHMUC.DINHMUCTHONGBAO + `',N'` + item.TINHTRANGHIENTAI + `','` + item.THONGBAODINHMUC.LOAICANHBAO.ID + `')` + `\n`;
+            //                                                                });
+            //                                                                //Máy chuyên dụng
+            //                                                                $.ajax({
+            //                                                                    async: false,
+            //                                                                    type: "GET",
+            //                                                                    url: linkapi + "v2_2/maychuyendung?id=" + ShipID,
+            //                                                                    dataType: "json",
+            //                                                                    success: function (data) {
+            //                                                                        $.each(data, function (key, item) {
+            //                                                                            Text = Text + `INSERT INTO THONGTINMAY VALUES(` + `'` + item.ID + `',N'` + item.THONGSOCOBAN.KYHIEU + `',N'` + item.THONGSOCOBAN.NAMSANXUAT + `',N'` + item.THONGSOCOBAN.NOISANXUAT + `','` + item.THONGSOCOBAN.NAMLAPRAP + `','` + item.THONGSOCOBAN.SOHIEUMAY
+            //                                                                                + `','` + item.THONGSOCOBAN.CONGSUAT + `','` + item.THONGSOCOBAN.VONGQUAY + `',N'` + item.THONGSOCOBAN.CHIEUQUAY + `',N'` + item.THONGSOCOBAN.NGUONKHOIDONG + `',N'` + item.THONGSOCOBAN.HETHONGDIEUKHIEN + `','` + item.THONGSOCOBAN.KICHTHUOCMAY.DAI
+            //                                                                                + `','` + item.THONGSOCOBAN.KICHTHUOCMAY.CAO + `','` + item.THONGSOCOBAN.KICHTHUOCMAY.RONG + `','` + item.THONGSOCOBAN.TRONGLUONG + `','` + item.THONGSOCOBAN.CHUKYSUACHUA.TIEUTU + `','` + item.THONGSOCOBAN.CHUKYSUACHUA.TRUNGTU + `','` + item.THONGSOCOBAN.CHUKYSUACHUA.DAITU
+            //                                                                                + `','` + item.THONGSOCOBAN.LOAIDIEN.DIENAP + `','` + item.THONGSOCOBAN.LOAIDIEN.TANSO + `',N'` + item.PHUONGPHAPTRUYENTAI.KYHIEULYHOP_BOGIAMVONG + `',N'` + item.PHUONGPHAPTRUYENTAI.SOHIEULYHOP_BOGIAMVONG + `',N'` + item.PHUONGPHAPTRUYENTAI.TYSOTRUYEN
+            //                                                                                + `',N'` + item.PHUONGPHAPTRUYENTAI.KHOPNOICUNG + `',N'` + item.PHUONGPHAPTRUYENTAI.KHOPNOIMEM + `',N'` + item.PHUONGPHAPTRUYENTAI.CUROA + `',N'` + item.PHUONGPHAPTRUYENTAI.KYHIEUVONGBI + `','` + 'MAYCHUYENDUNG'
+            //                                                                                + `','` + ShipID + `',N'` + item.THONGSOCOBAN.VITRILAPRAP + `','` + item.THONGBAODINHMUC.DINHMUCSUACHUA + `','` + item.THONGBAODINHMUC.DINHMUCTHONGBAO + `',N'` + item.TINHTRANGHIENTAI + `','` + item.THONGBAODINHMUC.LOAICANHBAO.ID + `')` + `\n`;
+            //                                                                        });
+            //                                                                        //Hệ trục chân vịt
+            //                                                                        $.ajax({
+            //                                                                            async: false,
+            //                                                                            type: "GET",
+            //                                                                            url: linkapi + "v2/hetrucchanvit?id=" + ShipID,
+            //                                                                            dataType: "json",
+            //                                                                            success: function (data) {
+            //                                                                                $.each(data, function (key, item) {
+            //                                                                                    Text = Text + `INSERT INTO HETRUCCHANVIT VALUES(` + `'` + item.ID + `','` + item.TRUC.TONGCHIEUDAI + `',N'` + item.TRUC.VATLIEU + `','` + item.TRUC.TONGTRONGLUONG + `','` + item.TRUC.DUONGKINHTRUCGHEPCHANVIT + `','` + item.TRUC.DUONGKINHTRUCTRUNGGIAN + `','` + item.TRUC.DUONGKINHTRUCXOAN
+            //                                                                                        + `','` + item.TRUC.DUONGKINHTRUCCHAN + `','` + item.TRUC.GOCNGIENGTRUC + `',N'` + item.CHANVIT.LOAICHANVIT + `','` + item.CHANVIT.DUONGKINH + `','` + item.CHANVIT.SOCANH + `',N'` + item.CHANVIT.VATLIEU + `','` + item.CHANVIT.TRONGLUONG + `',N'` + item.CHANVIT.CHIEUQUAY
+            //                                                                                        + `','` + item.CHANVIT.VONGQUAYDINHMUC + `','` + item.ODO.SOLUONG + `',N'` + item.ODO.LOAI + `',N'` + item.ODO.MODAUBOITRON + `','` + ShipID + `',N'` + item.TRUC.VITRICHANVIT + `')` + `\n`;
+            //                                                                                });
+            //                                                                                //Xích neo
+            //                                                                                $.ajax({
+            //                                                                                    async: false,
+            //                                                                                    type: "GET",
+            //                                                                                    url: linkapi + "v2/neoxichneo?id=" + ShipID,
+            //                                                                                    dataType: "json",
+            //                                                                                    success: function (data) {
+            //                                                                                        $.each(data, function (key, item) {
+            //                                                                                            Text = Text + `INSERT INTO NEOXICHNEO VALUES(` + `'` + item.ID + `','` + item.NEOPHAI.KYHIEU + `','` + item.NEOPHAI.TRONGLUONGP + `','` + item.NEOPHAI.XICHNEO.DUONGKINH + `','` + item.NEOPHAI.XICHNEO.DODAI
+            //                                                                                                + `','` + item.NEOTRAI.KYHIEU + `','` + item.NEOTRAI.TRONGLUONGP + `','` + item.NEOTRAI.XICHNEO.DUONGKINH + `','` + item.NEOTRAI.XICHNEO.DODAI + `','` + item.NEOSAU.KYHIEU + `','` + item.NEOSAU.TRONGLUONGP + `','` + item.NEOSAU.XICHNEO.DUONGKINH + `','` + item.NEOSAU.XICHNEO.DODAI + `','` + ShipID + `')` + `\n`;
+            //                                                                                        });
+            //                                                                                        //Bơm dàu, nước, thông gió
+            //                                                                                        $.ajax({
+            //                                                                                            async: false,
+            //                                                                                            type: "GET",
+            //                                                                                            url: linkapi + "v2/bomnuocthonggio?id=" + ShipID,
+            //                                                                                            dataType: "json",
+            //                                                                                            success: function (data) {
+            //                                                                                                $.each(data, function (key, item) {
+            //                                                                                                    Text = Text + `INSERT INTO BOMDAUNUOCTHONGGIO VALUES(` + `'` + item.ID + `',N'` + item.TENTB + `','` + item.KYHIEU + `',N'` + item.NUOCSX + `','` + item.LUULUONG + `',N'` + item.SOLUONG + `','` + ShipID + `','` + item.SOHIEU + `')` + `\n`;
+            //                                                                                                });
+            //                                                                                                //Trang bị khác
+            //                                                                                                $.ajax({
+            //                                                                                                    async: false,
+            //                                                                                                    type: "GET",
+            //                                                                                                    url: linkapi + "v2/thietbikhac?id=" + ShipID,
+            //                                                                                                    dataType: "json",
+            //                                                                                                    success: function (data) {
+            //                                                                                                        $.each(data, function (key, item) {
+            //                                                                                                            Text = Text + `INSERT INTO THIETBIKHAC VALUES(` + `'` + item.ID + `',N'` + item.TENTB + `','` + item.KYHIEU + `',N'` + item.SOLUONG + `','` + ShipID + `','` + item.LOAITB.ID + `')` + `\n`;
+            //                                                                                                        });
+            //                                                                                                        //Máy nén khí
+            //                                                                                                        $.ajax({
+            //                                                                                                            async: false,
+            //                                                                                                            type: "GET",
+            //                                                                                                            url: linkapi + "v2/maynenkhi?id=" + ShipID,
+            //                                                                                                            dataType: "json",
+            //                                                                                                            success: function (data) {
+            //                                                                                                                $.each(data, function (key, item) {
+            //                                                                                                                    Text = Text + `INSERT INTO MAYNENKHI VALUES(` + `'` + item.ID + `',N'` + item.KYHIEU + `','` + item.SOLUONG + `','` + item.APSUAT + `','` + ShipID  + `')` + `\n`;
+            //                                                                                                                });
+            //                                                                                                                //Nhật ký hoạt động tàu
+            //                                                                                                                $.ajax({
+            //                                                                                                                    async: false,
+            //                                                                                                                    type: "GET",
+            //                                                                                                                    url: linkapi + "v2/nhatkyhoatdongtau?id=" + ShipID,
+            //                                                                                                                    dataType: "json",
+            //                                                                                                                    success: function (data) {
+            //                                                                                                                        $.each(data, function (key, item) {
+            //                                                                                                                            Text = Text + `INSERT INTO NHATKYHOATDONGTAU VALUES(` + `'` + item.ID + `','` + item.NGAYTHANG + `',N'` + item.NOIXUATPHAT + `',N'` + item.NOIDEN + `','` + item.SONGAYHD + `','` + item.HAILY + `',N'` + item.GHICHU + `','` + ShipID + `')` + `\n`;
+            //                                                                                                                        });
+            //                                                                                                                        //Đăng ký tai nạn
+            //                                                                                                                        $.ajax({
+            //                                                                                                                            async: false,
+            //                                                                                                                            type: "GET",
+            //                                                                                                                            url: linkapi + "v2/xemdanhmuctainanhuhong?id=" + ShipID,
+            //                                                                                                                            dataType: "json",
+            //                                                                                                                            success: function (data) {
+            //                                                                                                                                $.each(data, function (key, item) {
+            //                                                                                                                                    Text = Text + `INSERT INTO DANGKYTAINANHUHONG VALUES(` + `'` + item.ID + `','` + item.THOIGIAN + `',N'` + item.DIADIEM + `',N'` + item.LOAI + `',N'` + item.MUCDO + `','` + item.NGUYENNHAN.KHACHQUAN + `','` + item.NGUYENNHAN.CHUQUAN + `','` + item.NGUYENNHAN.TRINHDO + `',N'` + item.GHICHU + `','` + ShipID + `')` + `\n`;
+            //                                                                                                                                });
+            //                                                                                                                                //Theo dõi sửa chữa tàu
+            //                                                                                                                                $.ajax({
+            //                                                                                                                                    async: false,
+            //                                                                                                                                    type: "GET",
+            //                                                                                                                                    url: linkapi + "v2/xemdanhmucsuachuatau?id=" + ShipID,
+            //                                                                                                                                    dataType: "json",
+            //                                                                                                                                    success: function (data) {
+            //                                                                                                                                        $.each(data, function (key, item) {
+            //                                                                                                                                            Text = Text + `EXEC THEMTHEODOISUACHUATAU ` + `'` + item.ID + `','` + item.THOIGIAN.BATDAU + `','` + item.THOIGIAN.KETTHUC + `',N'` + item.NOISUACHUA + `','` + item.CAPSUACHUA.ID + `',N'` + item.PHUONGANKEDA + `',` + item.GIATHANH + `,N'` + item.DANHGIACHATLUONG.TOCDOTOIDA + `',N'` + item.DANHGIACHATLUONG.TONGTHE + `',N'` + item.DANHGIACHATLUONG.TONTAI + `',N'` + item.TOMTATNOIDUNG.MAYCHINH + `',N'` + item.TOMTATNOIDUNG.HETRUC + `',N'` + item.TOMTATNOIDUNG.THANVO
+            //                                                                                                                                                + `',N'` + item.TOMTATNOIDUNG.TRANGBIKHAC + `',N'` + item.GHICHU + `','` + ShipID  + `'` + `\n`;
+            //                                                                                                                                        });
+            //                                                                                                                                        //Kiểm tra kỹ thuật
+            //                                                                                                                                        $.ajax({
+            //                                                                                                                                            async: false,
+            //                                                                                                                                            type: "GET",
+            //                                                                                                                                            url: linkapi + "v2/xemdanhmuckiemtrakythuattau?id=" + ShipID,
+            //                                                                                                                                            dataType: "json",
+            //                                                                                                                                            success: function (data) {
+            //                                                                                                                                                $.each(data, function (key, item) {
+            //                                                                                                                                                    Text = Text + `INSERT INTO KIEMTRAKYTHUAT VALUES(` + `'` + item.ID + `','` + item.NGAYTHANG + `',N'` + item.CAPKIEMTRA + `',N'` + item.TOMTATTINHTRANG + `',N'` + item.CHATLUONG + `',N'` + item.KETLUAN + `',N'` + item.TRUONGDOAN + `','` + ShipID + `')` + `\n`;
+            //                                                                                                                                                });
+
+            //                                                                                                                                            }, error: function (ret) {
+            //                                                                                                                                                console.log('errorGET');
+            //                                                                                                                                            },
+            //                                                                                                                                            complete: function () {
+            //                                                                                                                                                $('#loader').addClass('hidden');
+            //                                                                                                                                            },
+            //                                                                                                                                        });
+            //                                                                                                                                    }, error: function (ret) {
+            //                                                                                                                                        console.log('errorGET');
+            //                                                                                                                                    },
+            //                                                                                                                                    complete: function () {
+            //                                                                                                                                        $('#loader').addClass('hidden');
+            //                                                                                                                                    },
+            //                                                                                                                                });
+            //                                                                                                                            }, error: function (ret) {
+            //                                                                                                                                console.log('errorGET');
+            //                                                                                                                            },
+            //                                                                                                                            complete: function () {
+            //                                                                                                                                $('#loader').addClass('hidden');
+            //                                                                                                                            },
+            //                                                                                                                        });
+            //                                                                                                                    }, error: function (ret) {
+            //                                                                                                                        console.log('errorGET');
+            //                                                                                                                    },
+            //                                                                                                                    complete: function () {
+            //                                                                                                                        $('#loader').addClass('hidden');
+            //                                                                                                                    },
+            //                                                                                                                });
+            //                                                                                                            }, error: function (ret) {
+            //                                                                                                                console.log('errorGET');
+            //                                                                                                            },
+            //                                                                                                            complete: function () {
+            //                                                                                                                $('#loader').addClass('hidden');
+            //                                                                                                            },
+            //                                                                                                        });
+            //                                                                                                    }, error: function (ret) {
+            //                                                                                                        console.log('errorGET');
+            //                                                                                                    },
+            //                                                                                                    complete: function () {
+            //                                                                                                        $('#loader').addClass('hidden');
+            //                                                                                                    },
+            //                                                                                                });
+            //                                                                                            }, error: function (ret) {
+            //                                                                                                console.log('errorGET');
+            //                                                                                            },
+            //                                                                                            complete: function () {
+            //                                                                                                $('#loader').addClass('hidden');
+            //                                                                                            },
+            //                                                                                        });
+            //                                                                                    }, error: function (ret) {
+            //                                                                                        console.log('errorGET');
+            //                                                                                    },
+            //                                                                                    complete: function () {
+            //                                                                                        $('#loader').addClass('hidden');
+            //                                                                                    },
+            //                                                                                });
+            //                                                                            }, error: function (ret) {
+            //                                                                                console.log('errorGET');
+            //                                                                            },
+            //                                                                            complete: function () {
+            //                                                                                $('#loader').addClass('hidden');
+            //                                                                            },
+            //                                                                        });
+            //                                                                    }, error: function (ret) {
+            //                                                                        console.log('errorGET');
+            //                                                                    },
+            //                                                                    complete: function () {
+            //                                                                        $('#loader').addClass('hidden');
+            //                                                                    },
+            //                                                                });
+
+            //                                                            }, error: function (ret) {
+            //                                                                console.log('errorGET');
+            //                                                            },
+            //                                                            complete: function () {
+            //                                                                $('#loader').addClass('hidden');
+            //                                                            },
+            //                                                        });
+            //                                                    }, error: function (ret) {
+            //                                                        console.log('errorGET');
+            //                                                    },
+            //                                                    complete: function () {
+            //                                                        $('#loader').addClass('hidden');
+            //                                                    },
+            //                                                });
+            //                                            }, error: function (ret) {
+            //                                                console.log('errorGET');
+            //                                            },
+            //                                            complete: function () {
+            //                                                $('#loader').addClass('hidden');
+            //                                            },
+            //                                        });
+            //                                    }, error: function (ret) {
+            //                                        console.log('errorGET');
+            //                                    },
+            //                                    complete: function () {
+            //                                        $('#loader').addClass('hidden');
+            //                                    },
+            //                                });
+            //                            }, error: function (ret) {
+            //                                console.log('errorGET');
+            //                            },
+            //                        });
+            //                    }, error: function (ret) {
+            //                        console.log('errorGET');
+            //                    }
+            //                });
+            //            }, error: function (ret) {
+            //                console.log('errorGET');
+            //            }
+            //        });
+
+            //    }, error: function (ret) {
+            //        console.log('errorGET');
+            //    }
+            //});
+            $.ajax({
+                async: false,
+                type: "GET",
+                url: linkapi + "exportHST?id=" + ShipID,
+                dataType: "json",
+                success: function (data) {
+                    Text = data;
+                }, error: function (ret) {
+
+                },
+                complete: function () {
+
+                },
+            });
+            console.log(Text);
+            var blob = new Blob([Text],
+                {
+                    type: "application/json:utf-8"
+                }
+            )
+            var userlink = document.createElement('a');
+            userlink.setAttribute("download", SoHieu + ".txt");
+            userlink.setAttribute('href', window.URL.createObjectURL(blob));
+            userlink.click();
+
+
+            //userlink.href = makeTextFile(name);
+            //document.body.appendChild(userlink);
+            //window.requestAnimationFrame(function () {
+            //    var event = new MouseEvent('click');
+            //    userlink.dispatchEvent(event);
+            //    document.body.removeChild(userlink);
+            //});
+        }
+
         function btn_addship() {
             sessionStorage.setItem("vung", getParameterByName('vung'));
             window.location = baseaddress + "Page_Master/DacDiemChung";

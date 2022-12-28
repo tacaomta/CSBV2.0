@@ -280,7 +280,7 @@
             var textselect = '';
             $.ajax({
                 type: "GET",
-                url: linkapi + "v2/maychinh?id=" + getParameterByName("Ship_ID"),
+                url: linkapi + "v2_2/maychinh?id=" + getParameterByName("Ship_ID"),
                 dataType: "json",
                 success: function (data) {
                     textselect += '<optgroup label="Máy chính">';
@@ -295,7 +295,7 @@
                 complete: function () {
                     $.ajax({
                         type: "GET",
-                        url: linkapi + "v2/mayphuphatdien?id=" + getParameterByName("Ship_ID"),
+                        url: linkapi + "v2_2/mayphuphatdien?id=" + getParameterByName("Ship_ID"),
                         dataType: "json",
                         success: function (data) {
                             textselect += '<optgroup label="Máy phụ">';
@@ -310,7 +310,7 @@
                         complete: function () {
                             $.ajax({
                                 type: "GET",
-                                url: linkapi + "v2/maychuyendung?id=" + getParameterByName("Ship_ID"),
+                                url: linkapi + "v2_2/maychuyendung?id=" + getParameterByName("Ship_ID"),
                                 dataType: "json",
                                 success: function (data) {
                                     textselect += '<optgroup label="Máy chuyên dụng">';

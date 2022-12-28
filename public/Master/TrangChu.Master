@@ -1237,6 +1237,7 @@
                 <ul class="sub-menu">
                     <li><a class="link_name" href="#">QL danh mục </a></li>
                     <li><a href="../Page_Master/Manage_user">Quản lý người dùng</a></li>
+                    <li><a href="../Page_Master/Manage_GroupUser.aspx">Quản lí nhóm người dùng</a></li>
                     <li><a href="../Page_Master/Manage_ChuyenNganh.aspx">Quản lí chuyên ngành</a></li>
                     <li><a href="../Page_Master/Manage_Position.aspx">Quản lí chức vụ</a></li>
                     <li><a href="../Page_Master/Manage_Institution.aspx">Quản lí trường đào tạo</a></li>
@@ -1332,7 +1333,6 @@
         let sidebar = document.querySelector(".sidebar");
         let sidebarBtn = document.querySelector(".bx-menu");
         let rightContent = document.querySelector("#rightContent");
-        console.log(sidebarBtn);
         sidebarBtn.addEventListener("click", () => {
             sidebar.classList.toggle("closee");
         });

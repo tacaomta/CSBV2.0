@@ -484,6 +484,7 @@
                     GHICHU: $("#add-THEODOICAIHOANTHAYTHE-GHICHU").val(),
                     IDTHIETBI: $("#add-THEODOICAIHOANTHAYTHE-TENTHIETBI").val(),
                 };
+                debugger
                 console.log(THEODOICAIHOANTHAYTHE);
                 var url = linkapi + "v2/themtheodoicaihoanthaythehanghai?id=" + THEODOICAIHOANTHAYTHE.IDTHIETBI;
                 if (label == "Thiết bị hàng hải") {

@@ -25,6 +25,12 @@
             <div class="section-content">
                 <div class="section">
                     <div class="col-md-12">
+                        <div class="btn-group">
+                            <button onclick="btn_Load_liststaff()" class="btn btn-secondary mb-2"><i class="bi-arrow-clockwise"></i>Load dữ liệu</button>
+                            <button id="btn_addstaff" onclick="btn_addstaff()" class="btn btn-secondary mb-2"><i class="bi bi-plus-circle"></i>Thêm mới</button>
+                            <input type="file" id="input_excel" accept=".xls,.xlsx" class="btn btn-secondary mb-2">
+                            <button id="btn_LoadExcel" class="btn btn-secondary mb-2">Convert Excel</button>
+                        </div>
                         <table id="table_Staff" class="table table-bordered table-striped table-md" style="width: 100%">
                         </table>
                     </div>
@@ -33,7 +39,8 @@
         </div>
     </div>
     <div id="loader" class="spinner-border text-primary" role="status"></div>
-    <script src="../Scripts/jquery-3.4.1.slim.min.js"></script>
+    <script src="../Scripts/jquery-3.4.1.min.js"></script>
+<%--    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>--%>
     <script>
         var Ship_ID;
         var shipName;
@@ -113,6 +120,7 @@
             $('table[id=table_Staff]').each(function () {
                 var table1 = $(this).DataTable({
                     destroy: true,
+                    searching: false,
                     stateSave: true,
                     "columns": [
                         { name: 'STT', width: 40 },
@@ -136,7 +144,7 @@
                             "orderable": true
                         }
                     ],
-                    lengthChange: true,
+                    lengthChange: false,
                     "language": {
                         "sProcessing": "Đang xử lý...",
                         "sLengthMenu": "Xem _MENU_ mục",
@@ -155,10 +163,6 @@
                         }
                     }
                 });
-                table1.buttons().container()
-                    .appendTo('this_wrapper .col-md-6:eq(0)');
-                $('.col-sm-12').first().html('<div class="btn-group"><button onclick="btn_Load_liststaff()" class="btn btn-secondary mb-2"><i class="bi-arrow-clockwise"></i> Load dữ liệu</button><button id="btn_addstaff" onclick="btn_addstaff()" class="btn btn-secondary mb-2"><i class="bi bi-plus-circle"></i> Thêm mới</button></div>');
-
             });
         };
         function editstaff(Staff_ID) {
@@ -171,6 +175,10 @@
         function btn_Load_liststaff() {
             Load_Title(Ship_ID);
             loadDataList_Staff(Ship_ID);
+        }
+
+        function btn_Load_Excel() {
+
         }
         function delete_staff(Staff_ID) {
             let text = "Bạn có chắc muốn xóa cán bộ, nhân viên này?";
@@ -190,5 +198,294 @@
 
             }
         }
+
+        let selectedFile;
+        document.getElementById("input_excel").addEventListener("change", (event) => {
+            selectedFile = event.target.files[0];
+        });
+
+       
+        function Load_Data_Staff_CB(staff) {
+            Return_Ranking(staff);
+        }
+        //function Return_Ranking(string_value) {
+        function Return_Ranking(staff) {
+            debugger
+            $.ajax({
+                async: false,
+                type: "GET",
+                url: linkapi + "ranks",
+                dataType: "json",
+            }).done(function (data) {
+                var tmt = 0;
+                $.each(data, function (key, item) {
+                    if (item.Name == staff.Ranking.ID) {
+                        staff.Ranking.ID = item.ID;
+                        return Return_Position(staff);
+                        tmt = 1;
+                    }
+
+                });
+                if (tmt == 0) {
+                    return Return_Position(staff);
+                }
+                
+            }).fail(function (jqXHR, textStatus, errorThrown) {
+            })
+        }
+        function Return_Position(staff) {
+            debugger
+            $.ajax({
+                async: false,
+                type: "GET",
+                url: linkapi + "positions",
+                dataType: "json",
+                success: function (data) {
+                    var tmt = 0;
+                    $.each(data, function (key, item) {
+                        if (item.Name == staff.Position.ID) {
+                            staff.Position.ID = item.ID;
+                            return Return_Institution(staff);
+                            tmt = 1;
+                        }
+
+                    });
+                    if (tmt == 0) {
+                        return Return_Institution(staff);
+
+                    }
+                }, error: function (ret) {
+                    console.log('errorGET');
+                },
+                complete: function () {
+
+                },
+            });
+
+        }
+        function Return_Institution(staff) {
+            debugger
+            $.ajax({
+                async: false,
+                type: "GET",
+                url: linkapi + "institutions",
+                dataType: "json",
+                success: function (data) {
+                    var tmt = 0;
+                    $.each(data, function (key, item) {
+                        if (item.Name == staff.Institution.ID) {
+                            staff.Institution.ID = item.ID;
+                            return Return_Majoring(staff);
+                            tmt = 1;
+                        }
+
+                    });
+                    if (tmt == 0) {
+                        return Return_Majoring(staff);
+
+                    }
+                }, error: function (ret) {
+                    console.log('errorGET');
+                },
+                complete: function () {
+
+                },
+            });
+
+        }
+        function Return_Majoring(staff) {
+            debugger
+            $.ajax({
+                async: false,
+                type: "GET",
+                url: linkapi + "majors",
+                dataType: "json",
+                success: function (data) {
+                    debugger
+                    var tmt = 0;
+                    $.each(data, function (key, item) {
+
+                        if (item.Name == staff.Majoring.ID) {
+                            staff.Majoring.ID = item.ID;
+                            return Return_Degree(staff);
+                            tmt = 1;
+                        }
+
+                    });
+                    if (tmt==0) {
+                        return Return_Degree(staff);
+                    }
+
+                }, error: function (ret) {
+                    console.log('errorGET');
+                },
+                complete: function () {
+                },
+            });
+
+        }
+        function Return_Degree(staff) {
+            debugger
+            $.ajax({
+                async: false,
+                type: "GET",
+                url: linkapi + "degrees",
+                dataType: "json",
+                success: function (data) {
+                    var tmt = 0;
+                    $.each(data, function (key, item) {
+                        if (item.Name == staff.Degree.ID) {
+                            staff.Degree.ID = item.ID;
+                           
+                            return staff;
+                            tmt = 1;
+                        }
+
+                    });
+                    if (tmt == 0) {
+
+                        return staff;
+                    }
+                }, error: function (ret) {
+                    console.log('errorGET');
+                },
+                complete: function () {
+
+                },
+            });
+
+        }
+        document.getElementById("btn_LoadExcel").addEventListener("click", () => {
+            if (selectedFile) {
+                let fileReader = new FileReader();
+                fileReader.readAsBinaryString(selectedFile);
+                fileReader.onload = (event) => {
+                    let data = event.target.result;
+                    let workbook = XLSX.read(data, { type: "binary" });
+                    console.log(workbook);
+                    let rowObject_CB = XLSX.utils.sheet_to_row_object_array(workbook.Sheets["Cán bộ, nhân viên"]);
+                   
+                    let rowObject_TV = XLSX.utils.sheet_to_row_object_array(workbook.Sheets["Thân vỏ"]);
+                    console.log("row: ", rowObject_TV);
+                    var data_CB = JSON.parse(JSON.stringify(rowObject_CB, undefined, 4));
+                    var data_TV = JSON.parse(JSON.stringify(rowObject_TV, undefined, 4));
+                    console.log(data_TV);
+                    $.each(data_CB, function (i, item) {
+                        var FullName;
+                        var BirthYear;
+                        var Residence;
+                        var Enlist;
+                        var Ranking;
+                        var Position;
+                        var Degree;
+                        var Institution;
+                        var Graduation;
+                        var From;
+                        var FromDate;
+                        var Leave;
+                        var LeaveDate;
+                        var Note;
+                     
+                        $.each(item, function (key, value) {
+                            if (key == "HỌ VÀ TÊN (*)") {
+                                FullName = value;
+                                debugger
+                            }
+                            else if (key == "NĂM SINH (*)") {
+                                BirthYear = value;
+                                debugger
+                            }
+                            else if (key == "QUÊ QUÁN (*)") {
+                                Residence = value;
+                                debugger
+                            }
+                            else if (key == "NHẬP NGŨ (*)") {
+                                Enlist = value;
+                                debugger
+                            }
+                            else if (key == "CẤP BẬC") {
+                                Ranking = value;
+                            }
+                            else if (key == "CHỨC VỤ") {
+                                Position = value;
+                            }
+                            else if (key == "CHUYÊN NGÀNH") {
+                                Majoring = value;
+                            }
+                            else if (key == "TRÌNH ĐỘ") {
+                                Degree = value;
+                            }
+                            else if (key == "TRƯỜNG ĐÀO TẠO") {
+                                Institution = value;
+                            }
+                            else if (key == "NĂM TỐT NGHIỆP") {
+                                Graduation = value;
+                            }
+                            else if (key == "CHUYỂN ĐẾN TỪ ĐÂU") {
+                                From = value;
+                            }
+                            else if (key == "NGÀY THÁNG ĐẾN") {
+                                FromDate = value;
+                            }
+                            else if (key == "CHUYỂN ĐI ĐÂU") {
+                                Leave = value;
+                            }
+                            else if (key == "NGÀY THÁNG ĐI") {
+                                LeaveDate = value;
+                            }
+                            else if (key == "GHI CHÚ") {
+                                Note = value;
+                            }
+                        });
+                        var Staff = {
+                            FullName: FullName,
+                            BirthYear: BirthYear,
+                            Residence: Residence,
+                            Enlist: Enlist,
+                            Majoring: {
+                                ID: Majoring,
+                            },
+                            Ranking: {
+                                ID: Ranking,
+                            },
+                            Position: {
+                                ID: Position,
+                            },
+                            Institution: {
+                                ID: Institution,
+                            },
+                            Graduation: Graduation,
+                            Degree: {
+                                ID: Degree,
+                            },
+                            From: From,
+                            FromDate: FromDate,
+                            Leave: Leave,
+                            LeaveDate: LeaveDate,
+                            Note: Note,
+                            ShipID: Ship_ID,
+                        };
+                        Load_Data_Staff_CB(Staff);
+                        console.log("st: ", Staff);
+                        debugger
+                        $.ajax({
+                            type: "POST",
+                            url: linkapi + "insert_personnel",
+                            dataType: "json",
+                            data: JSON.stringify(Staff),
+                            contentType: "application/json",
+                            beforeSend: function () {
+                            },
+                            success: function (data) {
+                                loadDataList_Staff(Ship_ID);
+                            }, error: function (ret) {
+                            },
+                            complete: function () {
+                            },
+                        });
+                    });
+                }
+            }
+        });
     </script>
 </asp:Content>

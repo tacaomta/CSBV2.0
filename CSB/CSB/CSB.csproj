@@ -299,6 +299,7 @@
     <Content Include="Page_Master\Manage_ChuyenNganh.aspx" />
     <Content Include="Page_Master\Manage_Degree.aspx" />
     <Content Include="Page_Master\Manage_flotilla.aspx" />
+    <Content Include="Page_Master\Manage_GroupUser.aspx" />
     <Content Include="Page_Master\Manage_Institution.aspx" />
     <Content Include="Page_Master\Manage_Position.aspx" />
     <Content Include="Page_Master\Manage_Ranking.aspx" />
@@ -556,6 +557,13 @@
     </Compile>
     <Compile Include="Page_Master\Manage_flotilla.aspx.designer.cs">
       <DependentUpon>Manage_flotilla.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Page_Master\Manage_GroupUser.aspx.cs">
+      <DependentUpon>Manage_GroupUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page_Master\Manage_GroupUser.aspx.designer.cs">
+      <DependentUpon>Manage_GroupUser.aspx</DependentUpon>
     </Compile>
     <Compile Include="Page_Master\Manage_Institution.aspx.cs">
       <DependentUpon>Manage_Institution.aspx</DependentUpon>
