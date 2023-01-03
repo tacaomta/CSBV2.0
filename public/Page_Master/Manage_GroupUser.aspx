@@ -9,10 +9,10 @@
     <div id="form1">
         <div class="section" style="background-color: #fff; padding-bottom: 5px;">
             <div class="section-header" style="background-color: #fff;">
-                <h4 id="title_manage_staff" style="color: black; margin: 0; margin-left: 15px;">QUẢN LÝ NHÓM NGƯỜI DÙNG</h4>
+                <h4 id="title_manage_staff" style="color: black; margin: 0; margin-left: 15px;">NHÓM NGƯỜI DÙNG CÓ THỂ THÊM VÀO HỆ THỐNG</h4>
                 <div class="section-header-breadcrumb" style="margin-right: 15px;">
                     <div class="breadcrumb-item active"><a href="TrangChu.aspx" style="color: #01b5f9; font-size: 16px;">Trang chủ </a></div>
-                    <div class="breadcrumb-item active"><a href="#" style="color: #01b5f9; font-size: 16px;">Quản lý nhóm người dùng</a></div>
+                    <div class="breadcrumb-item active"><a href="#" style="color: #01b5f9; font-size: 16px;">Nhóm người dùng</a></div>
                 </div>
             </div>
             <div class="section-content">
@@ -114,7 +114,7 @@
                     var tabletext = "<thead><tr><th>STT</th><th>Tên nhóm người dùng</th><th>Tác vụ</th></tr></thead><tbody>";
                     var i = 1;
                     $.each(data, function (key, item) {
-                        tabletext += "<tr><td style='text-align: center;'>" + i + "</td><td>" + item.Name + '</td><td><div style="display: flex; justify-content: space-around;"><a href="#" class="edit" title="Sửa" data-toggle="modal" data-target="#model-edit-squadron"  onclick="editgroupuser(`' + item.OnUnitID + '`,`' + item.Name + '`)"><i class="material-icons">&#xE254;</i></a><a href="#" class="add" title="thêm" onclick="add_groupuser(`' + item.OnUnitID + '`,`' + item.Name + '`)"><i class="material-icons">&#xE146;</i></a></div></td></tr>';
+                        tabletext += "<tr><td style='text-align: center;'>" + i + "</td><td>" + item.Name + '</td><td><div style="display: flex; justify-content: space-around;"><a href="#" class="add" title="Thêm vào hệ thống" onclick="add_groupuser(`' + item.OnUnitID + '`,`' + item.Name  +'`)"><i class="material-icons">&#xE146;</i></a></div></td></tr>';
                         i = i + 1;
                     });
                     tabletext += "</tbody>";
@@ -178,158 +178,38 @@
                 $('.col-sm-12').first().html('<div class="btn-group"><button onclick="btn_Load_listgroupuser()" class="btn btn-lg btn-secondary mb-3"><span class="bi-arrow-repeat"></span> &nbsp;Load dữ liệu</button>');
             });
         };
-        function list_Region(id_Region, string_Region) {
-            debugger
+    
+
+        function btn_Load_listgroupuser() {
+            location.reload(true);
+        }
+
+
+        function add_groupuser(OnUnitID, Name) {
+            var group = {
+                OnUnitID: OnUnitID,
+                Name: Name,
+                gr_id:""
+            };
+            console.log(group);
             $.ajax({
-                type: "GET",
-                url: linkapi + "naval_region",
+                type: "POST",
+                url: linkapi + "insert_group_user",
                 dataType: "json",
+                data: JSON.stringify(group),
+                contentType: "application/json",
+                beforeSend: function () { // Before we send the request, remove the .hidden class from the spinner and default to inline-block.
+
+                },
                 success: function (data) {
-                    console.log(data);
-                    $('#' + string_Region).empty();
-                    $.each(data, function (key, item) {
-
-                        if (item.ID == id_Region) {
-                            $('#' + string_Region).append($('<option>', {
-                                selected: true,
-                                value: item.ID,
-                                text: item.ShortName
-                            }));
-                        }
-                        else {
-                            $('#' + string_Region).append($('<option>', {
-                                selected: false,
-                                value: item.ID,
-                                text: item.ShortName
-                            }));
-                        }
-
-                    });
-                    if (id_Region == '') {
-                        $('#' + string_Region + 'select').val(data[0].ID);
-
-                    }
+                    toastSuccess("Thành công", "Thêm nhóm người dùng thành công.");
                 }, error: function (ret) {
-                    console.log('errorGET');
+                    toastError("Nhóm người dùng này đã tồn tại");
                 },
                 complete: function () { // Set our complete callback, adding the .hidden class and hiding the spinner.
 
                 },
             });
-
-        }
-
-        function btn_Load_listgroupuser() {
-            location.reload(true);
-        }
-        function btn_addsquadron() {
-            $('#Error_AddSquadron').attr('hidden', '');
-            $("#TenHaiDoan_addsquadron").val("");
-            list_Region('', 'TT_Vung_addsquadron');
-        }
-        function Add_Squadron() {
-            if ($("#TenHaiDoan_addsquadron").val() == "") {
-                $("#Error_AddSquadron").text("Chưa nhập tên hải đoàn!");
-                $("#Error_AddSquadron").removeAttr('hidden');
-            }
-            else {
-                var id_region = $("#TT_Vung_addsquadron").val();
-                var squadron = {
-                    Name: $("#TenHaiDoan_addsquadron").val(),
-                    NavalRegion: {
-                        ID: id_region
-                    }
-                };
-                console.log(squadron);
-                $.ajax({
-                    type: "POST",
-                    url: linkapi + "squadron_insert",
-                    dataType: "json",
-                    data: JSON.stringify(squadron),
-                    contentType: "application/json",
-
-                    beforeSend: function () { // Before we send the request, remove the .hidden class from the spinner and default to inline-block.
-
-                    },
-                    success: function (data) {
-                        toastSuccess("Thành công", "Thêm hải đoàn mới thành công.");
-                        loadDataList_GroupUser();
-                    }, error: function (ret) {
-                        console.log(ret.responseJSON.Message);
-                        toastError("Thất bại", ret.responseJSON.Message);
-                    },
-                    complete: function () { // Set our complete callback, adding the .hidden class and hiding the spinner.
-                        $('#model-add-groupuser').modal("hide");
-
-                    },
-                });
-            }
-        }
-
-        function editgroupuser(squadron_id, squadron_name, id_region) {
-            $('#Error_editgroupuser').attr('hidden', '');
-            $("#TenHaiDoan_editgroupuser").val(squadron_name);
-            $("#id_editgroupuser").val(squadron_id);
-            list_Region(id_region, 'TT_Vung_editgroupuser');
-        }
-
-        function Edit_Squadron() {
-            if ($("#TenHaiDoan_editgroupuser").val() == "") {
-                $("#Error_editgroupuser").text("Chưa nhập tên hải đoàn!");
-                $("#Error_editgroupuser").removeAttr('hidden');
-            }
-            else {
-                var id_region = $("#TT_Vung_editgroupuser").val();
-                var squadron = {
-                    Id: $("#id_editgroupuser").val(),
-                    Name: $("#TenHaiDoan_editgroupuser").val(),
-                    NavalRegion: {
-                        ID: id_region
-                    }
-                };
-                console.log(squadron);
-                $.ajax({
-                    type: "PUT",
-                    url: linkapi + "squadron_update?id=" + $("#id_editgroupuser").val(),
-                    dataType: "json",
-                    data: JSON.stringify(squadron),
-                    contentType: "application/json",
-
-                    beforeSend: function () { // Before we send the request, remove the .hidden class from the spinner and default to inline-block.
-
-                    },
-                    success: function (data) {
-                        toastSuccess("Thành công", "Sửa hải đoàn mới thành công.");
-                        loadDataList_GroupUser();
-                    }, error: function (ret) {
-                        console.log(ret.responseJSON.Message);
-                        toastError("Thất bại", ret.responseJSON.Message);
-                    },
-                    complete: function () { // Set our complete callback, adding the .hidden class and hiding the spinner.
-                        $('#model-edit-squadron').modal("hide");
-
-                    },
-                });
-            }
-        }
-
-        function add_groupuser(squadron_id) {
-            debugger;
-            let text = "Bạn có chắc muốn xóa hải đoàn này?";
-            if (confirm(text) == true) {
-                $.ajax({
-                    url: linkapi + "squadron_delete?id=" + squadron_id,
-                    type: "DELETE",
-
-                }).done(function (res) {
-                    loadDataList_GroupUser();
-                    toastSuccess("Thành công", "Xóa hải đaonf thành công!");
-                }).fail(function (res) {
-                    toastError("Lỗi", "Xóa hải đoàn không thành công!");
-                })
-            } else {
-
-            }
         }
     </script>
 </asp:Content>

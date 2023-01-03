@@ -1473,11 +1473,29 @@ TR&#7908;C CHÂN V&#7882;T</span></b></p>
                             let reader = new FileReader();
                             reader.onload = (e) => {
                                 const file = e.target.result;
-                                const lines = file.split(/\r\n|\n/);
-                                $.each(lines, function (key, item) {
-                                    alert(item);
+                                console.log(file);
+                               
+                                $.ajax({
+                                    type: "POST",
+                                    url: linkapi + "importHST",
+                                    dataType: "json",
+                                    data: JSON.stringify(file),
+                                    contentType: "application/json",
+
+                                    beforeSend: function () { // Before we send the request, remove the .hidden class from the spinner and default to inline-block.
+
+                                    },
+                                    success: function (data) {
+                                        toastSuccess("Thành công");
+                                        loadDataListShips(vung_id);
+                                    }, error: function (ret) {
+                                        console.log(ret.responseJSON.Message);
+                                        toastError("Thất bại", ret.responseJSON.Message);
+                                    },
+                                    complete: function () { // Set our complete callback, adding the .hidden class and hiding the spinner.
+
+                                    },
                                 });
-                                debugger
 
                             };
                             reader.onerror = (e) => alert(e.target.error.name);

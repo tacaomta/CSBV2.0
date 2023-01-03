@@ -5,7 +5,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
 <Project>
   <PropertyGroup>
     <_PublishTargetUrl>D:\Code Visual 2019\CanhSatBien\CSBV2.0\public</_PublishTargetUrl>
-    <History>True|2022-12-28T17:42:29.3566005Z;</History>
+    <History>True|2023-01-03T10:14:33.4828919Z;True|2023-01-03T17:14:07.8474435+07:00;True|2022-12-29T00:42:29.3566005+07:00;</History>
     <LastFailureDetails />
   </PropertyGroup>
   <ItemGroup>
@@ -19,10 +19,10 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>09/30/2022 16:35:19</publishTime>
     </File>
     <File Include="bin/App_global.asax.compiled">
-      <publishTime>12/29/2022 00:42:25</publishTime>
+      <publishTime>01/03/2023 17:14:31</publishTime>
     </File>
     <File Include="bin/App_global.asax.dll">
-      <publishTime>12/29/2022 00:42:25</publishTime>
+      <publishTime>01/03/2023 17:14:31</publishTime>
     </File>
     <File Include="bin/AspNet.ScriptManager.bootstrap.dll">
       <publishTime>09/30/2022 16:35:19</publishTime>
@@ -91,10 +91,10 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>09/30/2022 16:35:16</publishTime>
     </File>
     <File Include="bin/CSB.dll">
-      <publishTime>12/29/2022 00:42:09</publishTime>
+      <publishTime>01/03/2023 17:14:24</publishTime>
     </File>
     <File Include="bin/CSB.pdb">
-      <publishTime>12/29/2022 00:42:09</publishTime>
+      <publishTime>01/03/2023 17:14:24</publishTime>
     </File>
     <File Include="bin/Microsoft.AspNet.FriendlyUrls.dll">
       <publishTime>09/30/2022 16:35:19</publishTime>
@@ -523,7 +523,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>09/30/2022 16:35:16</publishTime>
     </File>
     <File Include="Master/TrangChu.Master">
-      <publishTime>12/29/2022 00:02:14</publishTime>
+      <publishTime>01/03/2023 16:21:41</publishTime>
     </File>
     <File Include="Page_Master/Add_Ship.aspx">
       <publishTime>09/30/2022 16:35:16</publishTime>
@@ -556,7 +556,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>10/10/2022 10:51:04</publishTime>
     </File>
     <File Include="Page_Master/Login.aspx">
-      <publishTime>09/30/2022 16:35:16</publishTime>
+      <publishTime>01/03/2023 15:13:19</publishTime>
     </File>
     <File Include="Page_Master/Manage_ChuyenNganh.aspx">
       <publishTime>10/10/2022 10:51:28</publishTime>
@@ -568,7 +568,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>10/10/2022 10:52:13</publishTime>
     </File>
     <File Include="Page_Master/Manage_GroupUser.aspx">
-      <publishTime>12/29/2022 00:37:01</publishTime>
+      <publishTime>12/30/2022 14:54:13</publishTime>
     </File>
     <File Include="Page_Master/Manage_Institution.aspx">
       <publishTime>10/10/2022 10:52:44</publishTime>
@@ -589,7 +589,10 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>12/18/2022 20:35:22</publishTime>
     </File>
     <File Include="Page_Master/Manage_Tau.aspx">
-      <publishTime>12/22/2022 23:06:30</publishTime>
+      <publishTime>12/30/2022 14:23:58</publishTime>
+    </File>
+    <File Include="Page_Master/Manage_Tau_TheoTungVung.aspx">
+      <publishTime>01/03/2023 17:13:42</publishTime>
     </File>
     <File Include="Page_Master/Manage_user.aspx">
       <publishTime>12/28/2022 23:47:32</publishTime>
@@ -649,7 +652,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>09/30/2022 16:35:16</publishTime>
     </File>
     <File Include="PrecompiledApp.config">
-      <publishTime>12/29/2022 00:42:13</publishTime>
+      <publishTime>01/03/2023 17:14:25</publishTime>
     </File>
     <File Include="reports/MayChinh.xsc">
       <publishTime>09/30/2022 16:35:19</publishTime>
@@ -868,7 +871,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>09/30/2022 16:35:19</publishTime>
     </File>
     <File Include="value.js">
-      <publishTime>12/29/2022 00:40:40</publishTime>
+      <publishTime>01/03/2023 17:14:19</publishTime>
     </File>
     <File Include="ViewSwitcher.ascx">
       <publishTime>09/30/2022 16:35:16</publishTime>

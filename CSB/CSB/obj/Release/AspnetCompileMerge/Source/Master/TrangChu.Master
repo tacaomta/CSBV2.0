@@ -1131,7 +1131,8 @@
 </head>
 
 <body>
-    <div class="sidebar">
+
+    <div class="sidebar" id="leftContent">
         <div class="logo-details">
             <img class="sidebar-img" src="../Image/logo_CSB.png" />
             <!-- <div class="sidebar-brand">
@@ -1192,7 +1193,7 @@
                     <li><a href="../Page_Master/Null.aspx">Quản lý ngân sách bảo đảm kỹ thuật tại đơn vị</a></li>
                 </ul>
             </li>
-            <li>
+            <li id="li_hosotau">
                 <a href="../Page_Master/Manage_Tau?vung=1#">
                     <i class='bi-folder'></i>
                     <span class="link_name">Hồ sơ tàu</span>
@@ -1358,6 +1359,11 @@
 
         $(document).ready(function () {
             if (sessionStorage.getItem("userLoginUsername") != null) {
+                var Group_user = sessionStorage.getItem("Group_Name");
+                if (Group_user.includes("Vùng")) {
+                    $("#li_hosotau").empty();
+                    $("#li_hosotau").append(`<a href="../Page_Master/Manage_Tau_TheoTungVung?"><i class= 'bi-folder' ></i><span class="link_name">Hồ sơ tàu</span></a ><ul class="sub-menu blank"><li><a class="link_name" href="../Page_Master/Manage_Tau_TheoTungVung">Quản lý tàu</a></li></ul>`)
+                }
                 $('#user-login-fullname').text(" " + sessionStorage.getItem("userLoginFullname"));
                 $('#btnDangXuat').text(" Đăng xuất");
             }

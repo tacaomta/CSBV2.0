@@ -165,6 +165,8 @@
                     sessionStorage.setItem("userLoginUsername", data.UserName);
                     sessionStorage.setItem("userLoginFullname", data.Fullname);
                     sessionStorage.setItem("userLoginID", data.ID);
+                    sessionStorage.setItem("Group_OnUnitID", data.GroupUser.OnUnitID);
+                    sessionStorage.setItem("Group_Name", data.GroupUser.Name);
                     window.location = baseaddress + "Page_Master/SearchPage";
                 }, error: function (ret) {
                     console.log(ret);
