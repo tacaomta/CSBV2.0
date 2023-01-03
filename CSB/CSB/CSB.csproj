@@ -307,6 +307,7 @@
     <Content Include="Page_Master\Manage_squadron.aspx" />
     <Content Include="Page_Master\Manage_Staff.aspx" />
     <Content Include="Page_Master\Manage_Tau.aspx" />
+    <Content Include="Page_Master\Manage_Tau_TheoTungVung.aspx" />
     <Content Include="Page_Master\Manage_user.aspx" />
     <Content Include="Page_Master\Null.aspx" />
     <Content Include="Page_Master\SearchPage.aspx" />
@@ -613,6 +614,13 @@
     </Compile>
     <Compile Include="Page_Master\Manage_Tau.aspx.designer.cs">
       <DependentUpon>Manage_Tau.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Page_Master\Manage_Tau_TheoTungVung.aspx.cs">
+      <DependentUpon>Manage_Tau_TheoTungVung.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page_Master\Manage_Tau_TheoTungVung.aspx.designer.cs">
+      <DependentUpon>Manage_Tau_TheoTungVung.aspx</DependentUpon>
     </Compile>
     <Compile Include="Page_Master\Manage_user.aspx.cs">
       <DependentUpon>Manage_user.aspx</DependentUpon>
