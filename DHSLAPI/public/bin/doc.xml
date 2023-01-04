@@ -1205,6 +1205,13 @@
             Nhóm người dùng
             </summary>
         </member>
+        <member name="M:DHSLAPI.Controllers.GroupUsersController.GetAllPossibleGroupUsers">
+            <summary>
+            Lấy danh mục có thể có của nhóm người dùng,
+            phục vụ khi thêm hoặc cập nhật nhóm người dùng mới
+            </summary>
+            <returns></returns>
+        </member>
         <member name="M:DHSLAPI.Controllers.GroupUsersController.GetAllGroupUsers">
             <summary>
             Danh mục các nhóm người dùng
@@ -2012,6 +2019,17 @@
             Xoá thông tin cấp bậc
             </summary>
             <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="T:DHSLAPI.Controllers.RolesController">
+            <summary>
+            Danh mục các quyền người dùng
+            </summary>
+        </member>
+        <member name="M:DHSLAPI.Controllers.RolesController.GetAllRoles">
+            <summary>
+            Lấy danh mục các quyền có thể có của người dùng
+            </summary>
             <returns></returns>
         </member>
         <member name="T:DHSLAPI.Controllers.SearchController">
