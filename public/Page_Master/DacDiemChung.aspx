@@ -461,14 +461,7 @@
             if (!results[2]) return '';
             return decodeURIComponent(results[2].replace(/\+/g, ' '));
         }
-        function quayLai() {
-            if (getParameterByName("Ship_ID") != null) {
-                window.location = baseaddress + "Page_Master/Ship_Profile?Ship_ID=" + getParameterByName("Ship_ID");
-            }
-            else {
-                window.location = baseaddress + "Page_Master/Manage_Tau?vung=1";
-            }
-        }
+        
         $(document).ready(function () {
             var themtau = true;
             var Ship_ID = "";
@@ -484,7 +477,30 @@
                 $("#text-save").text(" Lưu thông tin");
                 $("#divSoHieu").css("display", "none");
                 $("#xemThanVo").css("display", "none");
-                loadVung();
+                var donvi_id = sessionStorage.getItem("donvi_id"); 
+                var Group_user = sessionStorage.getItem("Group_Name");
+                debugger
+                if (Group_user.includes("Vùng")) {
+                    $("#addTTC-VUNG").attr('disabled', '');
+                    $("#addTTC-HAIDOAN").attr('disabled', '');
+                    var selFlotilla = '<option selected="" disabled="" value="">Chưa chọn...</option>';
+                    $.ajax({
+                        type: "GET",
+                        url: linkapi + "flotilla_by_squadron?id=" + donvi_id,
+                        dataType: "json",
+                        success: function (data) {
+                            $.each(data, function (key, item) {
+                                selFlotilla += "<option value=" + item.Id + ">" + item.Name + "</option>";
+                            });
+                            $('#addTTC-HAIDOI').html(selFlotilla);
+                        }, error: function (ret) {
+                            console.log('errorGet flotilla_by_navalregion');
+                        },
+                    });
+                }
+                else {
+                    loadVung();
+                }
             }
             else {
                 $("#name").text("ĐẶC ĐIỂM CHUNG - TÀU ");

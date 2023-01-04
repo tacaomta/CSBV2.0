@@ -1387,7 +1387,8 @@ TR&#7908;C CHÂN V&#7882;T</span></b></p>
         var strDate = '' + date.getDate() + '/' + (Number(date.getMonth()) + 1) + '/' + date.getFullYear() + ' ' + date.getHours() + ':' + date.getMinutes() + ':' + date.getSeconds();
         var vung = getParameterByName('vung');
         var vung_id;
-        var donvi = getParameterByName('donvi');;
+        var user_id = sessionStorage.getItem('userLoginID'); 
+        var donvi = getParameterByName('donvi');
         var donvi_id;
         var group_name = sessionStorage.getItem("Group_Name");
         var Group_OnUnitID = sessionStorage.getItem("Group_OnUnitID");
@@ -1402,6 +1403,7 @@ TR&#7908;C CHÂN V&#7882;T</span></b></p>
 
         $(document).ready(function () {
             Load_DonVi(Group_OnUnitID);
+          
             if (donvi == null) {
                 $.ajax({
                     async: false,
@@ -1411,13 +1413,16 @@ TR&#7908;C CHÂN V&#7882;T</span></b></p>
                     success: function (data) {
                         donvi_id = data[0].Id;
                         donvi = data[0].Name;
+                        $('#title').text('QUẢN LÝ TÀU - ' + donvi);
                     }, error: function (ret) {
                         console.log('errorGET');
                     }
                 });
+                $('#title').text('QUẢN LÝ TÀU - ' + donvi);
+                document.getElementById(donvi_id).classList.add("a_selected");
             }
             else {
-                $('#title').text('QUẢN LÝ TÀU - ' + donvi);
+              
                 $.ajax({
                     async: false,
                     type: "GET",
@@ -1435,40 +1440,57 @@ TR&#7908;C CHÂN V&#7882;T</span></b></p>
                         console.log('errorGET');
                     }
                 });
+                $('#title').text('QUẢN LÝ TÀU - ' + donvi);
                 document.getElementById(donvi_id).classList.add("a_selected");
             }
-            //if (vung == null || vung == 1) {
-            //    vung_id = '5AEBB23FF45F3C235AFD86B510BF9E8C';
-            //    document.getElementById("Vung1").classList.add("a_selected");
-            //    document.getElementById("Vung2").classList.remove("a_selected");
-            //    document.getElementById("Vung3").classList.remove("a_selected");
-            //    document.getElementById("Vung4").classList.remove("a_selected");
-            //}
-            //else if (vung == 2) {
-            //    vung_id = '5AEBB23FF45F3C235AFD86B510BF9E8B';
-            //    document.getElementById("Vung2").classList.add("a_selected");
-            //    document.getElementById("Vung1").classList.remove("a_selected");
-            //    document.getElementById("Vung3").classList.remove("a_selected");
-            //    document.getElementById("Vung4").classList.remove("a_selected");
-            //}
-            //else if (vung == 3) {
-            //    vung_id = '5AEBB23FF45F3C235AFD86B510BF9E8D';
-            //    document.getElementById("Vung3").classList.add("a_selected");
-            //    document.getElementById("Vung2").classList.remove("a_selected");
-            //    document.getElementById("Vung1").classList.remove("a_selected");
-            //    document.getElementById("Vung4").classList.remove("a_selected");
-            //}
-            //else if (vung == 4) {
-            //    vung_id = '5AEBB23FF45F3C235AFD86B510BF9E8E';
-            //    document.getElementById("Vung4").classList.add("a_selected");
-            //    document.getElementById("Vung2").classList.remove("a_selected");
-            //    document.getElementById("Vung3").classList.remove("a_selected");
-            ////    document.getElementById("Vung1").classList.remove("a_selected");
-            //}
-            
             loadDataListShips(donvi_id);
+            Load_Quyen(user_id);
 
         });
+
+        function Load_Quyen(user_id) {
+            debugger
+            $.ajax({
+                async: false,
+                type: "GET",
+                url: linkapi + "user?id=" + user_id,
+                dataType: "json",
+                success: function (data) {
+                    if (data.UserRoles.Show == true) {
+                        $("#drd_xuatWordTau").css("pointer-events", 'auto');
+                    }
+                    else if (data.UserRoles.Show == false) {
+                        $("#drd_xuatWordTau").css("pointer-events", 'none');
+                    }
+                    if (data.UserRoles.Insert == true) {
+                        $("#btn_addShip").attr('enabled', 'enabled')
+                    }
+                    else if (data.UserRoles.Insert == false) {
+                        $("#btn_addShip").attr('disabled', 'disabled')
+                    }
+                    if (data.UserRoles.Update == true) {
+                        $("#drd_Suathongtintau").css("pointer-events", 'auto');
+                    }
+                    else if (data.UserRoles.Update == false) {
+                        $("#drd_Suathongtintau").css("pointer-events", 'none');
+                    }
+                    if (data.UserRoles.Delete == true) {
+                        $("#drd_Xoathongtintau").css("pointer-events", 'auto');
+                    }
+                    else if (data.UserRoles.Delete == false) {
+                        $("#drd_Xoathongtintau").css("pointer-events", 'none');
+                    }
+                    if (data.UserRoles.Report == true) {
+                        $("#drd_Baocaokythuat").css("pointer-events", 'auto');
+                    }
+                    else if (data.UserRoles.Report == false) {
+                        $("#drd_Baocaokythuat").css("pointer-events", 'none');
+                    }
+                }, error: function (ret) {
+                    console.log('errorGET');
+                }
+            });
+        }
         function Load_DonVi(OnUnitID) {
             $.ajax({
                 async: false,
@@ -1488,6 +1510,7 @@ TR&#7908;C CHÂN V&#7882;T</span></b></p>
         function loadDataListShips(donvi_id) {
             debugger
             $.ajax({
+                async: false,
                 type: "GET",
                 url: linkapi + "ships_in_squadron?id=" + donvi_id,
                 dataType: "json",
@@ -1499,15 +1522,16 @@ TR&#7908;C CHÂN V&#7882;T</span></b></p>
                     var i = 1;
                     $.each(data, function (key, item) {
                         //tabletext += "<tr><td style='text-align: center;'>" + i + "</td><td>" + item.TTCOBAN.SOHIEU + "</td><td>" + item.TTCOBAN.KYHIEU + "</td><td>" + item.TTCOBAN.NOISANXUAT + "</td><td>" + item.TTCOBAN.NAMTIEPNHAN + "</td><td>" + item.TTCOBAN.CHUCNANG + "</td>" + '<td style="text-align: center;"><a href="#" class="view"  title="Xem hồ sơ tàu" onclick="View_HoSoTau(`' + item.ID + '`)"><i class="material-icons">&#xE417;</i></a></td>' + '<td style="text-align: center;"><div class="dropdown"><button class="btn" style="white-space: nowrap;" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="bi bi-list"></i> Các tác vụ</button><div class="dropdown-menu" aria-labelledby="dropdownMenuButton"><a href="#" class="view dropdown-item" title="Xuất Word thông tin tàu ' + item.TTCOBAN.SOHIEU + '" onclick="xuatWordTau(`' + item.ID + '`)"><i class="material-icons blue-color">text_snippet</i>Xuất word thông tin tàu ' + item.TTCOBAN.SOHIEU + '</a><a href="#" class="view dropdown-item" title="Xuất file Excel" onclick="xuatExcelTau(`' + item.ID + '`)"><i class="material-icons green-color">description</i>Xuất excel thông tin tàu ' + item.TTCOBAN.SOHIEU + '</a><a href="#" class="view dropdown-item" title="Xuất file pdf" onclick="xuatPdfTau(`' + item.ID + '`)"><i class="material-icons orange-color">picture_as_pdf</i>Xuất pdf thông tin tàu ' + item.TTCOBAN.SOHIEU + '</a><a href="#" class="view dropdown-item" title="In báo cáo" onclick="inBCTau(`' + item.ID + '`)"><i class="material-icons revert-color">print</i>In báo cáo thông tin tàu ' + item.TTCOBAN.SOHIEU + '</a><a href="#" class="view dropdown-item" title="Sửa" onclick="ViewInforShip(`' + item.ID + '`)"><i class="material-icons edit-color ">&#xE254;</i>Sửa thông tin tàu ' + item.TTCOBAN.SOHIEU + '</a><a href="#" class="view dropdown-item" title="Xóa" onclick="delete_ship(`' + item.ID + '`)"><i class="material-icons red-color ">&#xE872;</i>Xóa thông tin tàu ' + item.TTCOBAN.SOHIEU + '</a></div></div></td></tr>';
-                        tabletext += "<tr><td style='text-align: center;'>" + i + "</td><td>" + item.TTCOBAN.SOHIEU + "</td><td>" + item.TTCOBAN.KYHIEU + "</td><td>" + item.TTCOBAN.NOISANXUAT + "</td><td>" + item.TTCOBAN.NAMTIEPNHAN + "</td><td>" + item.TTCOBAN.CHUCNANG + "</td>" + '<td style="text-align: center;"><a href="#" class="view"  title="Xem hồ sơ tàu" onclick="View_HoSoTau(`' + item.ID + '`)"><i class="material-icons">&#xE417;</i></a></td>' + '<td style="text-align: center;"><div class="dropdown"><button class="btn" style="white-space: nowrap;" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="bi bi-list"></i> Các tác vụ</button><div class="dropdown-menu" aria-labelledby="dropdownMenuButton"><a href="#" class="view dropdown-item" title="Xuất Word thông tin tàu ' + item.TTCOBAN.SOHIEU + '" onclick="xuatWordTau(`' + item.ID + '`)"><i class="material-icons blue-color">text_snippet</i>Xuất word thông tin tàu ' + item.TTCOBAN.SOHIEU + '</a><a href="#" class="view dropdown-item" title="Báo cáo kỹ thuật tàu ' + item.TTCOBAN.SOHIEU + '" onclick="baoCaoKyThuat(`' + item.ID + '`)"><i class="material-icons blue-color">text_snippet</i>Báo cáo kỹ thuật tàu ' + item.TTCOBAN.SOHIEU + '</a><a href="#" class="view dropdown-item" title="Chiết xuất dữ liệu ' + item.TTCOBAN.SOHIEU + '" onclick="ChietXuatDuLieu(`' + item.ID + '`,`' + item.TTCOBAN.SOHIEU + '`)"><i class="material-icons blue-color">text_snippet</i>Chiết xuất dữ liệu tàu ' + item.TTCOBAN.SOHIEU + '</a><a href="#" class="view dropdown-item" title="Sửa" onclick="ViewInforShip(`' + item.ID + '`)"><i class="material-icons edit-color ">&#xE254;</i>Sửa thông tin tàu ' + item.TTCOBAN.SOHIEU + '</a><a href="#" class="view dropdown-item" title="Xóa" onclick="delete_ship(`' + item.ID + '`)"><i class="material-icons red-color ">&#xE872;</i>Xóa thông tin tàu ' + item.TTCOBAN.SOHIEU + '</a></div></div></td></tr>';
+                        tabletext += "<tr><td style='text-align: center;'>" + i + "</td><td>" + item.TTCOBAN.SOHIEU + "</td><td>" + item.TTCOBAN.KYHIEU + "</td><td>" + item.TTCOBAN.NOISANXUAT + "</td><td>" + item.TTCOBAN.NAMTIEPNHAN + "</td><td>" + item.TTCOBAN.CHUCNANG + "</td>" + '<td style="text-align: center;"><a href="#" class="view"  title="Xem hồ sơ tàu" onclick="View_HoSoTau(`' + item.ID + '`)"><i class="material-icons">&#xE417;</i></a></td>' + '<td style="text-align: center;"><div class="dropdown"><button class="btn" style="white-space: nowrap;" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="bi bi-list"></i> Các tác vụ</button><div class="dropdown-menu" aria-labelledby="dropdownMenuButton"><a href="#" id="drd_xuatWordTau" class="view dropdown-item" title="Xuất Word thông tin tàu ' + item.TTCOBAN.SOHIEU + '" onclick="xuatWordTau(`' + item.ID + '`)"><i class="material-icons blue-color">text_snippet</i>Xuất word thông tin tàu ' + item.TTCOBAN.SOHIEU + '</a><a href="#" id="drd_Baocaokythuat" class="view dropdown-item" title="Báo cáo kỹ thuật tàu ' + item.TTCOBAN.SOHIEU + '" onclick="baoCaoKyThuat(`' + item.ID + '`)"><i class="material-icons blue-color">text_snippet</i>Báo cáo kỹ thuật tàu ' + item.TTCOBAN.SOHIEU + '</a><a href="#" id="drd_Chietxuatdulieu" class="view dropdown-item" title="Chiết xuất dữ liệu ' + item.TTCOBAN.SOHIEU + '" onclick="ChietXuatDuLieu(`' + item.ID + '`,`' + item.TTCOBAN.SOHIEU + '`)"><i class="material-icons blue-color">text_snippet</i>Chiết xuất dữ liệu tàu ' + item.TTCOBAN.SOHIEU + '</a><a href="#" id="drd_Suathongtintau" class="view dropdown-item" title="Sửa" onclick="ViewInforShip(`' + item.ID + '`)"><i class="material-icons edit-color ">&#xE254;</i>Sửa thông tin tàu ' + item.TTCOBAN.SOHIEU + '</a><a href="#" id="drd_Xoathongtintau" class="view dropdown-item" title="Xóa" onclick="delete_ship(`' + item.ID + '`)"><i class="material-icons red-color ">&#xE872;</i>Xóa thông tin tàu ' + item.TTCOBAN.SOHIEU + '</a></div></div></td></tr>';
                         i = i + 1;
                     });
                     tabletext += "</tbody>";
                     $('#tableship').html(tabletext);
                     loadTableShip();
                     //$('#tableship_wrapper .row .col-sm-12').first().html('<div class="btn-group"><button onclick="btn_Load_listship()" class="btn btn-lg btn-secondary mb-3"><span class="bi-arrow-clockwise"></span> &nbsp;Load dữ liệu</button> <button onclick="btn_addship()" class="btn btn-lg btn-secondary mb-3"><span class="bi-plus-circle-fill"></span> &nbsp;Thêm mới tàu</button><div class="btn-group"><button type="button" class="btn btn-lg btn-secondary mb-3 dropdown-toggle" data-toggle="dropdown"><span class="bi-file-earmark-text"></span> Xuất báo cáo </button><ul class="dropdown-menu" role="menu" style="width: max-content;"><li><a href="#"><i class="material-icons revert-color">print</i> In báo cáo</a></li><li><a href="#" ><i class="material-icons blue-color">text_snippet</i> Xuất file Word</a></li><li><a href="#"><i class="material-icons green-color">description</i> Xuất file Excel</a></li><li><a href="#"><i class="material-icons orange-color">picture_as_pdf</i> Xuất file PDF</a></li></ul></div></div>');
-                    $('#tableship_wrapper .row .col-sm-12').first().html('<div class="btn-group"><button onclick="btn_Load_listship()" class="btn btn-lg btn-secondary mb-2"><span class="bi-arrow-clockwise"></span> &nbsp;Load dữ liệu</button> <button onclick="btn_addship()" class="btn btn-lg btn-secondary mb-2"><i class="bi bi-plus-circle"></i> &nbsp;Thêm mới tàu</button><input type="file" id="input_txt" class="btn btn-secondary mb-2"> <button id="btn_add_Tau_txt" class="btn btn-secondary mb-2"><i class="bi bi-plus-circle"></i>&nbsp;Thêm bằng file</button></div>');
+                    $('#tableship_wrapper .row .col-sm-12').first().html('<div class="btn-group"><button onclick="btn_Load_listship()" class="btn btn-lg btn-secondary mb-2"><span class="bi-arrow-clockwise"></span> &nbsp;Load dữ liệu</button> <button id=btn_addShip onclick="btn_addship()" class="btn btn-lg btn-secondary mb-2"><i class="bi bi-plus-circle"></i> &nbsp;Thêm mới tàu</button><input type="file" id="input_txt" class="btn btn-secondary mb-2"> <button id="btn_add_Tau_txt" class="btn btn-secondary mb-2"><i class="bi bi-plus-circle"></i>&nbsp;Thêm bằng file</button></div>');
                     $('#tableship_wrapper .row').first().next().children().css("overflow-x", "auto");
+                    $('#tableship_wrapper .row').first().next().css("min-height", "500px");
                     $('#tableship_wrapper').css("overflow-x", "hidden");
                     $('#tableship_wrapper').css("overflow-y", "inherit");
                 }, error: function (ret) {
@@ -1542,7 +1566,7 @@ TR&#7908;C CHÂN V&#7882;T</span></b></p>
                                     },
                                     success: function (data) {
                                         toastSuccess("Thành công");
-                                        loadDataListShips(vung_id);
+                                        loadDataListShips(donvi_id);
                                     }, error: function (ret) {
                                         console.log(ret.responseJSON.Message);
                                         toastError("Thất bại", ret.responseJSON.Message);
@@ -1677,19 +1701,12 @@ TR&#7908;C CHÂN V&#7882;T</span></b></p>
             userlink.setAttribute("download", SoHieu + ".txt");
             userlink.setAttribute('href', window.URL.createObjectURL(blob));
             userlink.click();
-
-
-            //userlink.href = makeTextFile(name);
-            //document.body.appendChild(userlink);
-            //window.requestAnimationFrame(function () {
-            //    var event = new MouseEvent('click');
-            //    userlink.dispatchEvent(event);
-            //    document.body.removeChild(userlink);
-            //});
         }
 
         function btn_addship() {
-            sessionStorage.setItem("vung", getParameterByName('vung'));
+         //   sessionStorage.setItem("vung", getParameterByName('vung'));
+            sessionStorage.setItem("donvi", getParameterByName('donvi'));
+            sessionStorage.setItem("donvi_id", donvi_id);
             window.location = baseaddress + "Page_Master/DacDiemChung";
         }
         function View_HoSoTau(Ship_ID) {
@@ -1703,22 +1720,48 @@ TR&#7908;C CHÂN V&#7882;T</span></b></p>
                     url: linkapi + "v2/delete_ship?id=" + id,
                     type: "DELETE",
                 }).done(function (res) {
-                    var vung = getParameterByName("vung");
-                    var vung_id = "";
-                    if (vung == null || vung == 1) {
-                        vung_id = '5AEBB23FF45F3C235AFD86B510BF9E8C';
+                    var donvi = getParameterByName("donvi");
+                    var donvi_id = "";
+                    if (donvi == null) {
+                        $.ajax({
+                            async: false,
+                            type: "GET",
+                            url: linkapi + "squadrons_by_region?id=" + Group_OnUnitID,
+                            dataType: "json",
+                            success: function (data) {
+                                donvi_id = data[0].Id;
+                                donvi = data[0].Name;
+                            }, error: function (ret) {
+                                console.log('errorGET');
+                            }
+                        });
+                        $('#title').text('QUẢN LÝ TÀU - ' + donvi);
+                        document.getElementById(donvi_id).classList.add("a_selected");
                     }
-                    else if (vung == 2) {
-                        vung_id = '5AEBB23FF45F3C235AFD86B510BF9E8B';
+                    else {
+                        $('#title').text('QUẢN LÝ TÀU - ' + donvi);
+                        $.ajax({
+                            async: false,
+                            type: "GET",
+                            url: linkapi + "squadrons_by_region?id=" + Group_OnUnitID,
+                            dataType: "json",
+                            success: function (data) {
+                                $.each(data, function (key, item) {
+                                    if (item.Name == donvi) {
+                                        donvi_id = item.Id;
+                                        donvi = item.Name;
+                                    }
+                                });
+
+                            }, error: function (ret) {
+                                console.log('errorGET');
+                            }
+                        });
+                        $('#title').text('QUẢN LÝ TÀU - ' + donvi);
+                        document.getElementById(donvi_id).classList.add("a_selected");
                     }
-                    else if (vung == 3) {
-                        vung_id = '5AEBB23FF45F3C235AFD86B510BF9E8D';
-                    }
-                    else if (vung == 4) {
-                        vung_id = '5AEBB23FF45F3C235AFD86B510BF9E8E';
-                    }
-                    loadDataListShips(vung_id);
-                    toastSuccess("Thành công", "Xóa thông tin tàu thành công!");
+                        loadDataListShips(donvi_id);
+                        toastSuccess("Thành công", "Xóa thông tin tàu thành công!");
                 }).fail(function (res) {
                     toastError("Lỗi", "Xóa thông tin tàu không thành công!");
                 })
@@ -1733,37 +1776,7 @@ TR&#7908;C CHÂN V&#7882;T</span></b></p>
         }
 
         function btn_Load_listship() {
-            if (vung == null || vung == 1) {
-                vung_id = '5AEBB23FF45F3C235AFD86B510BF9E8C';
-                document.getElementById("Vung1").classList.add("a_selected");
-                document.getElementById("Vung2").classList.remove("a_selected");
-                document.getElementById("Vung3").classList.remove("a_selected");
-                document.getElementById("Vung4").classList.remove("a_selected");
-            }
-            else if (vung == 2) {
-                vung_id = '5AEBB23FF45F3C235AFD86B510BF9E8B';
-                document.getElementById("Vung2").classList.add("a_selected");
-                document.getElementById("Vung1").classList.remove("a_selected");
-                document.getElementById("Vung3").classList.remove("a_selected");
-                document.getElementById("Vung4").classList.remove("a_selected");
-            }
-            else if (vung == 3) {
-                vung_id = '5AEBB23FF45F3C235AFD86B510BF9E8D';
-                document.getElementById("Vung3").classList.add("a_selected");
-                document.getElementById("Vung2").classList.remove("a_selected");
-                document.getElementById("Vung1").classList.remove("a_selected");
-                document.getElementById("Vung4").classList.remove("a_selected");
-            }
-            else if (vung == 4) {
-                vung_id = '5AEBB23FF45F3C235AFD86B510BF9E8E';
-                document.getElementById("Vung4").classList.add("a_selected");
-                document.getElementById("Vung2").classList.remove("a_selected");
-                document.getElementById("Vung3").classList.remove("a_selected");
-                document.getElementById("Vung1").classList.remove("a_selected");
-            }
-            $('#title').text('QUẢN LÝ TÀU - VÙNG ' + vung);
-            loadDataListShips(vung_id);
-
+            loadDataListShips(donvi_id);
         }
         function xuatWordTau(idTau) {
             loadBaoCao(idTau);
