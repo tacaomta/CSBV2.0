@@ -2225,6 +2225,16 @@
             <param name="keyword">từ khoá tìm kiếm</param>
             <returns></returns>
         </member>
+        <member name="M:DHSLAPI.Controllers.TAUController.GetShipsbyKeywordsOfUser(System.String,System.String)">
+            <summary>
+            Tìm kiếm thông tin tàu theo các trường thông tin của tàu:
+            * Số hiệu, ký hiệu, nơi sản xuất, năm hạ thuỷ, năm tiếp nhận
+            * chức năng, hải đội, hải đoàn và vùng cảnh sát biển
+            </summary>
+            <param name="keyword">từ khoá tìm kiếm</param>
+            <param name="onUnitId">Id của đơn vị mà người dùng phụ trách</param>
+            <returns></returns>
+        </member>
         <member name="T:DHSLAPI.Controllers.THANVOController">
             <summary>
             Thân vỏ
@@ -5707,6 +5717,21 @@
             <param name="loaitb">loại thiết bị: 1 - hàng hải, 2 - vũ khí
             3 - ra đa, 4 - các lại máy, 5 - hệ trục chân vịt, 6 - neo xích neo
             7 - bơm dầu, 8 - các thiết bị khác</param>
+            <returns></returns>
+        </member>
+        <member name="M:ShipyardInfo.classes.Connection.GetShipsbyKeywords(System.String)">
+            <summary>
+            TÌm kiếm thông tin tàu với quyền admin
+            </summary>
+            <param name="keyword"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ShipyardInfo.classes.Connection.GetShipsbyKeywordsOfUser(System.String,System.String)">
+            <summary>
+            Tìm hiếm thông tin tàu bởi user
+            </summary>
+            <param name="keyword"></param>
+            <param name="onUnitId"></param>
             <returns></returns>
         </member>
         <member name="M:ShipyardInfo.classes.Connection.TIMKIEMTHEOCANBOKT(System.String)">
