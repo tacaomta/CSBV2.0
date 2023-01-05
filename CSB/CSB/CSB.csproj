@@ -307,6 +307,8 @@
     <Content Include="Page_Master\Manage_squadron.aspx" />
     <Content Include="Page_Master\Manage_Staff.aspx" />
     <Content Include="Page_Master\Manage_Tau.aspx" />
+    <Content Include="Page_Master\Manage_Tau_TheoTungHaiDoan.aspx" />
+    <Content Include="Page_Master\Manage_Tau_TheoTungHaiDoi.aspx" />
     <Content Include="Page_Master\Manage_Tau_TheoTungVung.aspx" />
     <Content Include="Page_Master\Manage_user.aspx" />
     <Content Include="Page_Master\Null.aspx" />
@@ -614,6 +616,20 @@
     </Compile>
     <Compile Include="Page_Master\Manage_Tau.aspx.designer.cs">
       <DependentUpon>Manage_Tau.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Page_Master\Manage_Tau_TheoTungHaiDoan.aspx.cs">
+      <DependentUpon>Manage_Tau_TheoTungHaiDoan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page_Master\Manage_Tau_TheoTungHaiDoan.aspx.designer.cs">
+      <DependentUpon>Manage_Tau_TheoTungHaiDoan.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Page_Master\Manage_Tau_TheoTungHaiDoi.aspx.cs">
+      <DependentUpon>Manage_Tau_TheoTungHaiDoi.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page_Master\Manage_Tau_TheoTungHaiDoi.aspx.designer.cs">
+      <DependentUpon>Manage_Tau_TheoTungHaiDoi.aspx</DependentUpon>
     </Compile>
     <Compile Include="Page_Master\Manage_Tau_TheoTungVung.aspx.cs">
       <DependentUpon>Manage_Tau_TheoTungVung.aspx</DependentUpon>

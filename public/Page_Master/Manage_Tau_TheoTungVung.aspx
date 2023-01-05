@@ -88,7 +88,7 @@
     <div id="form1">
         <div class="section" style="background-color: #fff; padding-bottom: 15px;">
             <div class="section-header" style="background-color: #fff;">
-                <h4 id="title" style="color: black; margin: 0">QUẢN LÝ TÀU - VÙNG 1</h4>
+                <h4 id="title" style="color: black; margin: 0"><%--QUẢN LÝ TÀU - VÙNG 1--%></h4>
                 <div class="section-header-breadcrumb">
                     <div class="breadcrumb-item"><a href="Null.aspx" style="color: #01b5f9; font-size: 18px;">Trang chủ</a></div>
                     <div class="breadcrumb-item"><a href="Manage_Tau?vung=1" style="color: #01b5f9; font-size: 18px;">Quản lý tàu</a></div>
@@ -1457,10 +1457,10 @@ TR&#7908;C CHÂN V&#7882;T</span></b></p>
                 dataType: "json",
                 success: function (data) {
                     if (data.UserRoles.Show == true) {
-                        $("#drd_xuatWordTau").css("pointer-events", 'auto');
+                        $(".drd_xuatWordTau").css("pointer-events", 'auto');
                     }
                     else if (data.UserRoles.Show == false) {
-                        $("#drd_xuatWordTau").css("pointer-events", 'none');
+                        $(".drd_xuatWordTau").css("pointer-events", 'none');
                     }
                     if (data.UserRoles.Insert == true) {
                         $("#btn_addShip").attr('enabled', 'enabled')
@@ -1469,22 +1469,22 @@ TR&#7908;C CHÂN V&#7882;T</span></b></p>
                         $("#btn_addShip").attr('disabled', 'disabled')
                     }
                     if (data.UserRoles.Update == true) {
-                        $("#drd_Suathongtintau").css("pointer-events", 'auto');
+                        $(".drd_Suathongtintau").css("pointer-events", 'auto');
                     }
                     else if (data.UserRoles.Update == false) {
-                        $("#drd_Suathongtintau").css("pointer-events", 'none');
+                        $(".drd_Suathongtintau").css("pointer-events", 'none');
                     }
                     if (data.UserRoles.Delete == true) {
-                        $("#drd_Xoathongtintau").css("pointer-events", 'auto');
+                        $(".drd_Xoathongtintau").css("pointer-events", 'auto');
                     }
                     else if (data.UserRoles.Delete == false) {
-                        $("#drd_Xoathongtintau").css("pointer-events", 'none');
+                        $(".drd_Xoathongtintau").css("pointer-events", 'none');
                     }
                     if (data.UserRoles.Report == true) {
-                        $("#drd_Baocaokythuat").css("pointer-events", 'auto');
+                        $(".drd_Baocaokythuat").css("pointer-events", 'auto');
                     }
                     else if (data.UserRoles.Report == false) {
-                        $("#drd_Baocaokythuat").css("pointer-events", 'none');
+                        $(".drd_Baocaokythuat").css("pointer-events", 'none');
                     }
                 }, error: function (ret) {
                     console.log('errorGET');
@@ -1522,7 +1522,7 @@ TR&#7908;C CHÂN V&#7882;T</span></b></p>
                     var i = 1;
                     $.each(data, function (key, item) {
                         //tabletext += "<tr><td style='text-align: center;'>" + i + "</td><td>" + item.TTCOBAN.SOHIEU + "</td><td>" + item.TTCOBAN.KYHIEU + "</td><td>" + item.TTCOBAN.NOISANXUAT + "</td><td>" + item.TTCOBAN.NAMTIEPNHAN + "</td><td>" + item.TTCOBAN.CHUCNANG + "</td>" + '<td style="text-align: center;"><a href="#" class="view"  title="Xem hồ sơ tàu" onclick="View_HoSoTau(`' + item.ID + '`)"><i class="material-icons">&#xE417;</i></a></td>' + '<td style="text-align: center;"><div class="dropdown"><button class="btn" style="white-space: nowrap;" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="bi bi-list"></i> Các tác vụ</button><div class="dropdown-menu" aria-labelledby="dropdownMenuButton"><a href="#" class="view dropdown-item" title="Xuất Word thông tin tàu ' + item.TTCOBAN.SOHIEU + '" onclick="xuatWordTau(`' + item.ID + '`)"><i class="material-icons blue-color">text_snippet</i>Xuất word thông tin tàu ' + item.TTCOBAN.SOHIEU + '</a><a href="#" class="view dropdown-item" title="Xuất file Excel" onclick="xuatExcelTau(`' + item.ID + '`)"><i class="material-icons green-color">description</i>Xuất excel thông tin tàu ' + item.TTCOBAN.SOHIEU + '</a><a href="#" class="view dropdown-item" title="Xuất file pdf" onclick="xuatPdfTau(`' + item.ID + '`)"><i class="material-icons orange-color">picture_as_pdf</i>Xuất pdf thông tin tàu ' + item.TTCOBAN.SOHIEU + '</a><a href="#" class="view dropdown-item" title="In báo cáo" onclick="inBCTau(`' + item.ID + '`)"><i class="material-icons revert-color">print</i>In báo cáo thông tin tàu ' + item.TTCOBAN.SOHIEU + '</a><a href="#" class="view dropdown-item" title="Sửa" onclick="ViewInforShip(`' + item.ID + '`)"><i class="material-icons edit-color ">&#xE254;</i>Sửa thông tin tàu ' + item.TTCOBAN.SOHIEU + '</a><a href="#" class="view dropdown-item" title="Xóa" onclick="delete_ship(`' + item.ID + '`)"><i class="material-icons red-color ">&#xE872;</i>Xóa thông tin tàu ' + item.TTCOBAN.SOHIEU + '</a></div></div></td></tr>';
-                        tabletext += "<tr><td style='text-align: center;'>" + i + "</td><td>" + item.TTCOBAN.SOHIEU + "</td><td>" + item.TTCOBAN.KYHIEU + "</td><td>" + item.TTCOBAN.NOISANXUAT + "</td><td>" + item.TTCOBAN.NAMTIEPNHAN + "</td><td>" + item.TTCOBAN.CHUCNANG + "</td>" + '<td style="text-align: center;"><a href="#" class="view"  title="Xem hồ sơ tàu" onclick="View_HoSoTau(`' + item.ID + '`)"><i class="material-icons">&#xE417;</i></a></td>' + '<td style="text-align: center;"><div class="dropdown"><button class="btn" style="white-space: nowrap;" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="bi bi-list"></i> Các tác vụ</button><div class="dropdown-menu" aria-labelledby="dropdownMenuButton"><a href="#" id="drd_xuatWordTau" class="view dropdown-item" title="Xuất Word thông tin tàu ' + item.TTCOBAN.SOHIEU + '" onclick="xuatWordTau(`' + item.ID + '`)"><i class="material-icons blue-color">text_snippet</i>Xuất word thông tin tàu ' + item.TTCOBAN.SOHIEU + '</a><a href="#" id="drd_Baocaokythuat" class="view dropdown-item" title="Báo cáo kỹ thuật tàu ' + item.TTCOBAN.SOHIEU + '" onclick="baoCaoKyThuat(`' + item.ID + '`)"><i class="material-icons blue-color">text_snippet</i>Báo cáo kỹ thuật tàu ' + item.TTCOBAN.SOHIEU + '</a><a href="#" id="drd_Chietxuatdulieu" class="view dropdown-item" title="Chiết xuất dữ liệu ' + item.TTCOBAN.SOHIEU + '" onclick="ChietXuatDuLieu(`' + item.ID + '`,`' + item.TTCOBAN.SOHIEU + '`)"><i class="material-icons blue-color">text_snippet</i>Chiết xuất dữ liệu tàu ' + item.TTCOBAN.SOHIEU + '</a><a href="#" id="drd_Suathongtintau" class="view dropdown-item" title="Sửa" onclick="ViewInforShip(`' + item.ID + '`)"><i class="material-icons edit-color ">&#xE254;</i>Sửa thông tin tàu ' + item.TTCOBAN.SOHIEU + '</a><a href="#" id="drd_Xoathongtintau" class="view dropdown-item" title="Xóa" onclick="delete_ship(`' + item.ID + '`)"><i class="material-icons red-color ">&#xE872;</i>Xóa thông tin tàu ' + item.TTCOBAN.SOHIEU + '</a></div></div></td></tr>';
+                        tabletext += "<tr><td style='text-align: center;'>" + i + "</td><td>" + item.TTCOBAN.SOHIEU + "</td><td>" + item.TTCOBAN.KYHIEU + "</td><td>" + item.TTCOBAN.NOISANXUAT + "</td><td>" + item.TTCOBAN.NAMTIEPNHAN + "</td><td>" + item.TTCOBAN.CHUCNANG + "</td>" + '<td style="text-align: center;"><a href="#" class="view"  title="Xem hồ sơ tàu" onclick="View_HoSoTau(`' + item.ID + '`)"><i class="material-icons">&#xE417;</i></a></td>' + '<td style="text-align: center;"><div class="dropdown"><button class="btn" style="white-space: nowrap;" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="bi bi-list"></i> Các tác vụ</button><div class="dropdown-menu" aria-labelledby="dropdownMenuButton"><a href="#" class="view dropdown-item drd_xuatWordTau" title="Xuất Word thông tin tàu ' + item.TTCOBAN.SOHIEU + '" onclick="xuatWordTau(`' + item.ID + '`)"><i class="material-icons blue-color">text_snippet</i>Xuất word thông tin tàu ' + item.TTCOBAN.SOHIEU + '</a><a href="#"  class="view dropdown-item drd_Baocaokythuat" title="Báo cáo kỹ thuật tàu ' + item.TTCOBAN.SOHIEU + '" onclick="baoCaoKyThuat(`' + item.ID + '`)"><i class="material-icons blue-color">text_snippet</i>Báo cáo kỹ thuật tàu ' + item.TTCOBAN.SOHIEU + '</a><a href="#" class="view dropdown-item drd_Chietxuatdulieu" title="Chiết xuất dữ liệu ' + item.TTCOBAN.SOHIEU + '" onclick="ChietXuatDuLieu(`' + item.ID + '`,`' + item.TTCOBAN.SOHIEU + '`)"><i class="material-icons blue-color">text_snippet</i>Chiết xuất dữ liệu tàu ' + item.TTCOBAN.SOHIEU + '</a><a href="#"  class="view dropdown-item drd_Suathongtintau" title="Sửa" onclick="ViewInforShip(`' + item.ID + '`)"><i class="material-icons edit-color ">&#xE254;</i>Sửa thông tin tàu ' + item.TTCOBAN.SOHIEU + '</a><a href="#"  class="view dropdown-item drd_Xoathongtintau" title="Xóa" onclick="delete_ship(`' + item.ID + '`)"><i class="material-icons red-color ">&#xE872;</i>Xóa thông tin tàu ' + item.TTCOBAN.SOHIEU + '</a></div></div></td></tr>';
                         i = i + 1;
                     });
                     tabletext += "</tbody>";

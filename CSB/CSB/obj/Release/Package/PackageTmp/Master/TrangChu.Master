@@ -1364,6 +1364,14 @@
                     $("#li_hosotau").empty();
                     $("#li_hosotau").append(`<a href="../Page_Master/Manage_Tau_TheoTungVung?"><i class= 'bi-folder' ></i><span class="link_name">Hồ sơ tàu</span></a ><ul class="sub-menu blank"><li><a class="link_name" href="../Page_Master/Manage_Tau_TheoTungVung">Quản lý tàu</a></li></ul>`)
                 }
+                else if (Group_user.includes("Hải đoàn")) {
+                    $("#li_hosotau").empty();
+                    $("#li_hosotau").append(`<a href="../Page_Master/Manage_Tau_TheoTungHaiDoan?"><i class= 'bi-folder' ></i><span class="link_name">Hồ sơ tàu</span></a ><ul class="sub-menu blank"><li><a class="link_name" href="../Page_Master/Manage_Tau_TheoTungHaiDoan">Quản lý tàu</a></li></ul>`)
+                }
+                else if (Group_user.includes("Hải đội")) {
+                    $("#li_hosotau").empty();
+                    $("#li_hosotau").append(`<a href="../Page_Master/Manage_Tau_TheoTungHaiDoi"><i class= 'bi-folder' ></i><span class="link_name">Hồ sơ tàu</span></a ><ul class="sub-menu blank"><li><a class="link_name" href="../Page_Master/Manage_Tau_TheoTungHaiDoi">Quản lý tàu</a></li></ul>`)
+                }
                 $('#user-login-fullname').text(" " + sessionStorage.getItem("userLoginFullname"));
                 $('#btnDangXuat').text(" Đăng xuất");
             }

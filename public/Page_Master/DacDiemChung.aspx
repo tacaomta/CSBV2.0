@@ -477,26 +477,28 @@
                 $("#text-save").text(" Lưu thông tin");
                 $("#divSoHieu").css("display", "none");
                 $("#xemThanVo").css("display", "none");
-                var donvi_id = sessionStorage.getItem("donvi_id"); 
                 var Group_user = sessionStorage.getItem("Group_Name");
                 debugger
+                var Group_OnUnitID = sessionStorage.getItem("Group_OnUnitID");
                 if (Group_user.includes("Vùng")) {
                     $("#addTTC-VUNG").attr('disabled', '');
+                    var selFlotilla = "<option value=" + Group_OnUnitID + ">" + Group_user + "</option>";
+                    $('#addTTC-VUNG').html(selFlotilla);
+                    onchangeVung(Group_OnUnitID)
+                }
+                else if (Group_user.includes("Hải đoàn")) {
+                    $("#addTTC-VUNG").attr('disabled', '');
                     $("#addTTC-HAIDOAN").attr('disabled', '');
-                    var selFlotilla = '<option selected="" disabled="" value="">Chưa chọn...</option>';
-                    $.ajax({
-                        type: "GET",
-                        url: linkapi + "flotilla_by_squadron?id=" + donvi_id,
-                        dataType: "json",
-                        success: function (data) {
-                            $.each(data, function (key, item) {
-                                selFlotilla += "<option value=" + item.Id + ">" + item.Name + "</option>";
-                            });
-                            $('#addTTC-HAIDOI').html(selFlotilla);
-                        }, error: function (ret) {
-                            console.log('errorGet flotilla_by_navalregion');
-                        },
-                    });
+                    var selFlotilla = "<option value=" + Group_OnUnitID + ">" + Group_user + "</option>";
+                    $('#addTTC-HAIDOAN').html(selFlotilla);
+                    onchangeHaiDoan(Group_OnUnitID);
+                }
+                else if (Group_user.includes("Hải đội")) {
+                    $("#addTTC-VUNG").attr('disabled', '');
+                    $("#addTTC-HAIDOAN").attr('disabled', '');
+                    $("#addTTC-HAIDOI").attr('disabled', '');
+                    var selFlotilla = "<option value=" + Group_OnUnitID + ">" + Group_user + "</option>";
+                    $('#addTTC-HAIDOI').html(selFlotilla);
                 }
                 else {
                     loadVung();
