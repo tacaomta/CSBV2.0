@@ -477,26 +477,49 @@
                 $("#text-save").text(" Lưu thông tin");
                 $("#divSoHieu").css("display", "none");
                 $("#xemThanVo").css("display", "none");
-                var Group_user = sessionStorage.getItem("Group_Name");
+                var Group_user = sessionStorage.getItem("Group_Name").toLowerCase();
                 debugger
                 var Group_OnUnitID = sessionStorage.getItem("Group_OnUnitID");
-                if (Group_user.includes("Vùng")) {
+                if (Group_user.includes("vùng")) {
                     $("#addTTC-VUNG").attr('disabled', '');
                     var selFlotilla = "<option value=" + Group_OnUnitID + ">" + Group_user + "</option>";
                     $('#addTTC-VUNG').html(selFlotilla);
                     onchangeVung(Group_OnUnitID)
                 }
-                else if (Group_user.includes("Hải đoàn")) {
+                else if (Group_user.includes("hải đoàn")) {
                     $("#addTTC-VUNG").attr('disabled', '');
                     $("#addTTC-HAIDOAN").attr('disabled', '');
+                    $.ajax({
+                        async: false,
+                        type: "GET",
+                        url: linkapi + "squadron?id=" + Group_OnUnitID,
+                        dataType: "json",
+                        success: function (data) {
+                            $("#addTTC-VUNG").html("<option selected>" + data.NavalRegion.ShortName + '</option>');
+                        }, error: function (ret) {
+                            console.log('errorGetnaval_region');
+                        },
+                    });
                     var selFlotilla = "<option value=" + Group_OnUnitID + ">" + Group_user + "</option>";
                     $('#addTTC-HAIDOAN').html(selFlotilla);
                     onchangeHaiDoan(Group_OnUnitID);
                 }
-                else if (Group_user.includes("Hải đội")) {
+                else if (Group_user.includes("hải đội")) {
                     $("#addTTC-VUNG").attr('disabled', '');
                     $("#addTTC-HAIDOAN").attr('disabled', '');
                     $("#addTTC-HAIDOI").attr('disabled', '');
+                    $.ajax({
+                        async: false,
+                        type: "GET",
+                        url: linkapi + "flotilla?id=" + Group_OnUnitID,
+                        dataType: "json",
+                        success: function (data) {
+                            $("#addTTC-HAIDOAN").html("<option selected>" + data.Squadron.Name + '</option>');
+                            $("#addTTC-VUNG").html("<option selected>" + data.NavalRegion.ShortName + '</option>');
+                        }, error: function (ret) {
+                            console.log('errorGetnaval_region');
+                        },
+                    });
                     var selFlotilla = "<option value=" + Group_OnUnitID + ">" + Group_user + "</option>";
                     $('#addTTC-HAIDOI').html(selFlotilla);
                 }
