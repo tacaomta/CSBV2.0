@@ -277,6 +277,7 @@
     <Content Include="Image\ic-login.png" />
     <Content Include="Image\logo_CSB.png" />
     <Content Include="Image\phuhieu.jpg" />
+    <Content Include="Image\search.jpeg" />
     <Content Include="Image\ship1.gif" />
     <Content Include="Image\ship2.gif" />
     <Content Include="Image\ship3.gif" />

@@ -1373,6 +1373,8 @@
                     $("#li_hosotau").append(`<a href="../Page_Master/Manage_Tau_TheoTungHaiDoi"><i class= 'bi-folder' ></i><span class="link_name">Hồ sơ tàu</span></a ><ul class="sub-menu blank"><li><a class="link_name" href="../Page_Master/Manage_Tau_TheoTungHaiDoi">Quản lý tàu</a></li></ul>`)
                 }
                 else if (Group_user.includes("admin")) {
+                    $("#li_hosotau").empty();
+                    $("#li_hosotau").append(`<a href="../Page_Master/Manage_Tau?vung=1#"><i class='bi-folder'></i><span class="link_name">Hồ sơ tàu</span></a><ul class="sub-menu blank"><li><a class="link_name" href="../Page_Master/Manage_Tau?vung=1#">Quản lý tàu</a></li></ul>`);
                     $("#ul_quanlynguoidung").empty();
                     $("#ul_quanlynguoidung").append(` <li><a class="link_name" href="#">QL danh mục </a></li><li><a href="../Page_Master/Manage_user">Quản lý người dùng</a></li><li><a href="../Page_Master/Manage_GroupUser.aspx">Quản lí nhóm người dùng</a></li><li><a href="../Page_Master/Manage_ChuyenNganh.aspx">Quản lí chuyên ngành</a></li><li><a href="../Page_Master/Manage_Position.aspx">Quản lí chức vụ</a></li><li><a href="../Page_Master/Manage_Institution.aspx">Quản lí trường đào tạo</a></li><li><a href="../Page_Master/Manage_Degree.aspx">Quản lí bằng cấp</a></li><li><a href="../Page_Master/Manage_Ranking.aspx">Quản lí cấp bậc</a></li><li><a href="../Page_Master/Manage_flotilla.aspx">Quản lí hải đội</a></li><li><a href="../Page_Master/Manage_squadron.aspx">Quản lí hải đoàn</a></li>`);
                 }
