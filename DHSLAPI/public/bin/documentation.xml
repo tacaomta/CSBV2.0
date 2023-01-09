@@ -2716,6 +2716,13 @@
             <param name="id">id vùng</param>
             <returns></returns>
         </member>
+        <member name="M:DHSLAPI.Controllers.NavalRegionController.GetShipsUnderbyNavalRegion(System.String)">
+            <summary>
+            Lấy toàn bộ danh mục tàu trực thuộc vùng theo ID của vùng
+            </summary>
+            <param name="id">id vùng</param>
+            <returns></returns>
+        </member>
         <member name="T:DHSLAPI.Controllers.OtherEquipmentController">
             <summary>
             Trang bị khác API
