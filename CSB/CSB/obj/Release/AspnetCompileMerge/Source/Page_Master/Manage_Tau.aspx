@@ -1473,13 +1473,16 @@ TR&#7908;C CHÂN V&#7882;T</span></b></p>
                             let reader = new FileReader();
                             reader.onload = (e) => {
                                 const file = e.target.result;
-                                console.log(file);
-                               
+
+                                var text_content = {
+                                    data: file,
+                                };
+                                console.log(text_content);
                                 $.ajax({
                                     type: "POST",
                                     url: linkapi + "importHST",
                                     dataType: "json",
-                                    data: JSON.stringify(file),
+                                    data: JSON.stringify(text_content),
                                     contentType: "application/json",
 
                                     beforeSend: function () { // Before we send the request, remove the .hidden class from the spinner and default to inline-block.

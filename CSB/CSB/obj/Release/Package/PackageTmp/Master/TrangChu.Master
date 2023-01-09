@@ -1194,13 +1194,13 @@
                 </ul>
             </li>
             <li id="li_hosotau">
-                <a href="../Page_Master/Manage_Tau?vung=1#">
+<%--                <a href="../Page_Master/Manage_Tau?vung=1#">
                     <i class='bi-folder'></i>
                     <span class="link_name">Hồ sơ tàu</span>
                 </a>
                 <ul class="sub-menu blank">
                     <li><a class="link_name" href="../Page_Master/Manage_Tau?vung=1#">Quản lý tàu</a></li>
-                </ul>
+                </ul>--%>
             </li>
             <li>
                 <a href="#">
@@ -1227,7 +1227,7 @@
                     <li><a href="../Page_Master/Null.aspx">Hiệu quả sử dụng vật tư</a></li>
                 </ul>
             </li>
-            <li>
+            <li >
                 <div class="iocn-link arro">
                     <a class="arrow" href="#">
                         <i class='bi-person-fill arroww'></i>
@@ -1235,8 +1235,8 @@
                     </a>
                     <i class='bi bi-caret-down-fill arrow'></i>
                 </div>
-                <ul class="sub-menu">
-                    <li><a class="link_name" href="#">QL danh mục </a></li>
+                <ul id="ul_quanlynguoidung" class="sub-menu">
+                    <%--<li><a class="link_name" href="#">QL danh mục </a></li>
                     <li><a href="../Page_Master/Manage_user">Quản lý người dùng</a></li>
                     <li><a href="../Page_Master/Manage_GroupUser.aspx">Quản lí nhóm người dùng</a></li>
                     <li><a href="../Page_Master/Manage_ChuyenNganh.aspx">Quản lí chuyên ngành</a></li>
@@ -1245,7 +1245,7 @@
                     <li><a href="../Page_Master/Manage_Degree.aspx">Quản lí bằng cấp</a></li>
                     <li><a href="../Page_Master/Manage_Ranking.aspx">Quản lí cấp bậc</a></li>
                     <li><a href="../Page_Master/Manage_flotilla.aspx">Quản lí hải đội</a></li>
-                    <li><a href="../Page_Master/Manage_squadron.aspx">Quản lí hải đoàn</a></li>
+                    <li><a href="../Page_Master/Manage_squadron.aspx">Quản lí hải đoàn</a></li>--%>
                 </ul>
             </li>
         </ul>
@@ -1359,18 +1359,22 @@
 
         $(document).ready(function () {
             if (sessionStorage.getItem("userLoginUsername") != null) {
-                var Group_user = sessionStorage.getItem("Group_Name");
-                if (Group_user.includes("Vùng")) {
+                var Group_user = sessionStorage.getItem("Group_Name").toLowerCase();
+                if (Group_user.includes("vùng")) {
                     $("#li_hosotau").empty();
                     $("#li_hosotau").append(`<a href="../Page_Master/Manage_Tau_TheoTungVung?"><i class= 'bi-folder' ></i><span class="link_name">Hồ sơ tàu</span></a ><ul class="sub-menu blank"><li><a class="link_name" href="../Page_Master/Manage_Tau_TheoTungVung">Quản lý tàu</a></li></ul>`)
                 }
-                else if (Group_user.includes("Hải đoàn")) {
+                else if (Group_user.includes("hải đoàn")) {
                     $("#li_hosotau").empty();
                     $("#li_hosotau").append(`<a href="../Page_Master/Manage_Tau_TheoTungHaiDoan?"><i class= 'bi-folder' ></i><span class="link_name">Hồ sơ tàu</span></a ><ul class="sub-menu blank"><li><a class="link_name" href="../Page_Master/Manage_Tau_TheoTungHaiDoan">Quản lý tàu</a></li></ul>`)
                 }
-                else if (Group_user.includes("Hải đội")) {
+                else if (Group_user.includes("hải đội")) {
                     $("#li_hosotau").empty();
                     $("#li_hosotau").append(`<a href="../Page_Master/Manage_Tau_TheoTungHaiDoi"><i class= 'bi-folder' ></i><span class="link_name">Hồ sơ tàu</span></a ><ul class="sub-menu blank"><li><a class="link_name" href="../Page_Master/Manage_Tau_TheoTungHaiDoi">Quản lý tàu</a></li></ul>`)
+                }
+                else if (Group_user.includes("admin")) {
+                    $("#ul_quanlynguoidung").empty();
+                    $("#ul_quanlynguoidung").append(` <li><a class="link_name" href="#">QL danh mục </a></li><li><a href="../Page_Master/Manage_user">Quản lý người dùng</a></li><li><a href="../Page_Master/Manage_GroupUser.aspx">Quản lí nhóm người dùng</a></li><li><a href="../Page_Master/Manage_ChuyenNganh.aspx">Quản lí chuyên ngành</a></li><li><a href="../Page_Master/Manage_Position.aspx">Quản lí chức vụ</a></li><li><a href="../Page_Master/Manage_Institution.aspx">Quản lí trường đào tạo</a></li><li><a href="../Page_Master/Manage_Degree.aspx">Quản lí bằng cấp</a></li><li><a href="../Page_Master/Manage_Ranking.aspx">Quản lí cấp bậc</a></li><li><a href="../Page_Master/Manage_flotilla.aspx">Quản lí hải đội</a></li><li><a href="../Page_Master/Manage_squadron.aspx">Quản lí hải đoàn</a></li>`);
                 }
                 $('#user-login-fullname').text(" " + sessionStorage.getItem("userLoginFullname"));
                 $('#btnDangXuat').text(" Đăng xuất");

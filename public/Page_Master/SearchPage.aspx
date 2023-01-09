@@ -10,7 +10,7 @@
         }
 
         .search-gif {
-            background-image: url(../Image/ship5.gif);
+            background-image: url(../Image/search.jpeg);
             background-size: contain;
             height: 250px;
             background-repeat: no-repeat;
