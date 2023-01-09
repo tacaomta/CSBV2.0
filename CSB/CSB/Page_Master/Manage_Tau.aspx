@@ -101,7 +101,6 @@
                         <li><a id="Vung2" class="a_menu" href="../Page_Master/Manage_Tau?vung=2">BTL VÙNG 2</a></li>
                         <li><a id="Vung3" class="a_menu" href="../Page_Master/Manage_Tau?vung=3">BTL VÙNG 3</a></li>
                         <li><a id="Vung4" class="a_menu" href="../Page_Master/Manage_Tau?vung=4">BTL VÙNG 4</a></li>
-                        <li><a class="a_menu" href="../Page_Master/Null.aspx">CÁC ĐƠN VỊ TRỰC THUỘC</a></li>
                     </ul>
                 </div>
                 <div class="section-header" style="padding-bottom: 15px;">

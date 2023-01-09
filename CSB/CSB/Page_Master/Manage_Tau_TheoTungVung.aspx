@@ -1422,24 +1422,29 @@ TR&#7908;C CHÂN V&#7882;T</span></b></p>
                 document.getElementById(donvi_id).classList.add("a_selected");
             }
             else {
-              
-                $.ajax({
-                    async: false,
-                    type: "GET",
-                    url: linkapi + "squadrons_by_region?id=" + Group_OnUnitID,
-                    dataType: "json",
-                    success: function (data) {
-                        $.each(data, function (key, item) {
-                            if (item.Name == donvi) {
-                                donvi_id = item.Id;
-                                donvi = item.Name;
-                            }
-                        });
-                      
-                    }, error: function (ret) {
-                        console.log('errorGET');
-                    }
-                });
+                if (donvi.toLowerCase() == "đơn vị trực thuộc") {
+                    donvi_id = Group_OnUnitID;
+                }
+                else {
+                    $.ajax({
+                        async: false,
+                        type: "GET",
+                        url: linkapi + "squadrons_by_region?id=" + Group_OnUnitID,
+                        dataType: "json",
+                        success: function (data) {
+                            $.each(data, function (key, item) {
+                                if (item.Name == donvi) {
+                                    donvi_id = item.Id;
+                                    donvi = item.Name;
+                                }
+                            });
+
+                        }, error: function (ret) {
+                            console.log('errorGET');
+                        }
+                    });
+                }
+             
                 $('#title').text('QUẢN LÝ TÀU - ' + donvi);
                 document.getElementById(donvi_id).classList.add("a_selected");
             }
@@ -1502,6 +1507,7 @@ TR&#7908;C CHÂN V&#7882;T</span></b></p>
                     $.each(data, function (key, item) {
                         $("#mainMenu_list").append(` <li><a id="` + item.Id + `" class="a_menu" href="../Page_Master/Manage_Tau_TheoTungVung?donvi=` + item.Name + `">` + item.Name + `</a></li>`);
                     });
+                    $("#mainMenu_list").append(` <li><a id="` + OnUnitID + `" class="a_menu" href="../Page_Master/Manage_Tau_TheoTungVung?donvi=` + 'Đơn vị trực thuộc' + `">` + 'Đơn vị trực thuộc' + `</a></li>`);
                 }, error: function (ret) {
                     console.log('errorGET');
                 }
@@ -1509,10 +1515,16 @@ TR&#7908;C CHÂN V&#7882;T</span></b></p>
         }
         function loadDataListShips(donvi_id) {
             debugger
+            if (donvi.toLowerCase() == "đơn vị trực thuộc") {
+                link_donvi_api = "v2/ships_under_region?id=" + donvi_id;
+            }
+            else {
+                link_donvi_api = "ships_in_squadron?id=" + donvi_id;
+            }
             $.ajax({
                 async: false,
                 type: "GET",
-                url: linkapi + "ships_in_squadron?id=" + donvi_id,
+                url: linkapi + link_donvi_api,
                 dataType: "json",
                 beforeSend: function () { // Before we send the request, remove the .hidden class from the spinner and default to inline-block.
                     $('#loader').removeClass('hidden');
@@ -1739,6 +1751,9 @@ TR&#7908;C CHÂN V&#7882;T</span></b></p>
                         document.getElementById(donvi_id).classList.add("a_selected");
                     }
                     else {
+                        if (donvi.toLowerCase() == "đơn vị trực thuộc") {
+                            donvi_id = Group_OnUnitID;
+                        }
                         $('#title').text('QUẢN LÝ TÀU - ' + donvi);
                         $.ajax({
                             async: false,

@@ -477,16 +477,16 @@
                 $("#text-save").text(" Lưu thông tin");
                 $("#divSoHieu").css("display", "none");
                 $("#xemThanVo").css("display", "none");
-                var Group_user = sessionStorage.getItem("Group_Name").toLowerCase();
+                var Group_user = sessionStorage.getItem("Group_Name");
                 debugger
                 var Group_OnUnitID = sessionStorage.getItem("Group_OnUnitID");
-                if (Group_user.includes("vùng")) {
+                if (Group_user.toLowerCase().includes("vùng")) {
                     $("#addTTC-VUNG").attr('disabled', '');
                     var selFlotilla = "<option value=" + Group_OnUnitID + ">" + Group_user + "</option>";
                     $('#addTTC-VUNG').html(selFlotilla);
                     onchangeVung(Group_OnUnitID)
                 }
-                else if (Group_user.includes("hải đoàn")) {
+                else if (Group_user.toLowerCase().includes("hải đoàn")) {
                     $("#addTTC-VUNG").attr('disabled', '');
                     $("#addTTC-HAIDOAN").attr('disabled', '');
                     $.ajax({
@@ -504,7 +504,7 @@
                     $('#addTTC-HAIDOAN').html(selFlotilla);
                     onchangeHaiDoan(Group_OnUnitID);
                 }
-                else if (Group_user.includes("hải đội")) {
+                else if (Group_user.toLowerCase().includes("hải đội")) {
                     $("#addTTC-VUNG").attr('disabled', '');
                     $("#addTTC-HAIDOAN").attr('disabled', '');
                     $("#addTTC-HAIDOI").attr('disabled', '');
@@ -874,7 +874,12 @@
                         $("#addTTC-NAMTIEPNHAN").val(data.THONGTIN.TTCOBAN.NAMTIEPNHAN);
                         $("#addTTC-CHUCNANG").val(data.THONGTIN.TTCOBAN.CHUCNANG);
                         $("#addTTC-HAIDOI").html("<option selected>" + data.HAIDOI.Name + '</option>');
-                        $("#addTTC-HAIDOAN").html("<option selected>" + data.HAIDOI.Squadron.Name + '</option>');
+                        if (data.HAIDOI.Squadron == null) {
+                            $("#addTTC-HAIDOAN").html("<option selected>" + 'Trực thuộc vùng' + '</option>');
+                        }
+                        else {
+                            $("#addTTC-HAIDOAN").html("<option selected>" + data.HAIDOI.Squadron.Name + '</option>');
+                        }
                         $("#addTTC-VUNG").html("<option selected>" + data.HAIDOI.NavalRegion.ShortName + '</option>');
                         // thông tin thay đổi số hiệu
                         var tabletext = "<thead><tr><th>Tháng, năm</th><th>Số hiệu</th><th>Cấp quy định</th></thead><tbody>";
