@@ -229,6 +229,8 @@
     <script src="../Scripts/jquery-3.4.1.slim.min.js"></script>
     <script>
         var type_search = "res-all";
+        var Group_user = sessionStorage.getItem("Group_Name");
+        var Group_OnUnitID = sessionStorage.getItem("Group_OnUnitID");
         function getParameterByName(name, url = window.location.href) {
             name = name.replace(/[\[\]]/g, '\\$&');
             var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
@@ -238,6 +240,7 @@
             return decodeURIComponent(results[2].replace(/\+/g, ' '));
         }
         $(document).ready(function () {
+           
             Keyword_Search = getParameterByName('keyword');
             if (Keyword_Search == null) {
                 history.back();
@@ -288,29 +291,34 @@
             }
         })
         function Result_Search(Keyword) {
-            if (type_search == "res-all") {
-                LinkApi = linkapi + "v3/search?keyword=" + Keyword;
+            if (Group_user.toLowerCase() == "admin") {
+                if (type_search == "res-all") {
+                    LinkApi = linkapi + "v3/search?keyword=" + Keyword;
+                }
+                else if (type_search == "res-canbo") {
+                    LinkApi = linkapi + "v3/searchbycb?keyword=" + Keyword;
+                }
+                else if (type_search == "res-hosotau") {
+                    LinkApi = linkapi + "v3/searchbyhs?keyword=" + Keyword;
+                }
+                else if (type_search == "res-thongtinmay") {
+                    LinkApi = linkapi + "v3/searchbythongtinmay?keyword=" + Keyword;
+                }
+                else if (type_search == "res-thongtinrada") {
+                    LinkApi = linkapi + "v3/searchbythongtinrada?keyword=" + Keyword;
+                }
+                else if (type_search == "res-thongtinhanghai") {
+                    LinkApi = linkapi + "v3/searchbyhanghai?keyword=" + Keyword;
+                }
+                else if (type_search == "res-thongtinthanvo") {
+                    LinkApi = linkapi + "v3/searchbythongtinthanvo?keyword=" + Keyword;
+                }
+                else if (type_search == "res-thongtinneo") {
+                    LinkApi = linkapi + "v3/searchbythongtinneoxichneo?keyword=" + Keyword;
+                }
             }
-            else if (type_search == "res-canbo") {
-                LinkApi = linkapi + "v3/searchbycb?keyword=" + Keyword;
-            }
-            else if (type_search == "res-hosotau") {
-                LinkApi = linkapi + "v3/searchbyhs?keyword=" + Keyword;
-            }
-            else if (type_search == "res-thongtinmay") {
-                LinkApi = linkapi + "v3/searchbythongtinmay?keyword=" + Keyword;
-            }
-            else if (type_search == "res-thongtinrada") {
-                LinkApi = linkapi + "v3/searchbythongtinrada?keyword=" + Keyword;
-            }
-            else if (type_search == "res-thongtinhanghai") {
-                LinkApi = linkapi + "v3/searchbyhanghai?keyword=" + Keyword;
-            }
-            else if (type_search == "res-thongtinthanvo") {
-                LinkApi = linkapi + "v3/searchbythongtinthanvo?keyword=" + Keyword;
-            }
-            else if (type_search == "res-thongtinneo") {
-                LinkApi = linkapi + "v3/searchbythongtinneoxichneo?keyword=" + Keyword;
+            else {
+                LinkApi = linkapi + "v2/user_search?keyword=" + Keyword + "&onUnitId=" + Group_OnUnitID;
             }
             $.ajax({
                 type: "GET",
@@ -329,29 +337,34 @@
                         var tabletext = '';
                         var i = 0;
                         $.each(data, function (key, item) {
-                            if (type_search == "res-all") {
+                            if (Group_user.toLowerCase() == "admin") {
+                                if (type_search == "res-all") {
+                                    tabletext += '<div class="result-card"><p style="font-size: 30px; color: #2070cc; font-weight: bold;">Tàu CSB số hiệu: ' + item.TTCOBAN.SOHIEU + '</p><p>- Ký hiệu: ' + item.TTCOBAN.KYHIEU + '</p><p>- Nơi sản xuất: ' + item.TTCOBAN.NOISANXUAT + '</p><p>- Năm hạ thủy: ' + item.TTCOBAN.NAMHATHUY + '</p> <p>- Chức năng: ' + item.TTCOBAN.CHUCNANG + '</p><button class="res-button"  onclick="View_HoSoTau(`' + item.ID + '`)">Xem hồ sơ tàu</button></div>';
+                                }
+                                else if (type_search == "res-canbo") {
+                                    tabletext += '<div class="result-card"><p style="font-size: 30px; color: #2070cc; font-weight: bold;">Cán bộ: ' + item.CB.FullName + '</p><p>- Năm sinh: ' + item.CB.BirthYear + '</p><p>- Cấp bậc: ' + item.CB.Ranking.Name + '</p><p>- Chức vụ: ' + item.CB.Position.Name + '</p> <p>- Số hiệu tàu: ' + item.TAU.TTCOBAN.SOHIEU + '</p><button class="res-button"  onclick="View_HoSoTau(`' + item.TAU.ID + '`)">Xem hồ sơ tàu</button></div>';
+                                }
+                                else if (type_search == "res-hosotau") {
+                                    tabletext += '<div class="result-card"><p style="font-size: 30px; color: #2070cc; font-weight: bold;">Tàu CSB số hiệu: ' + item.TTCOBAN.SOHIEU + '</p><p>- Ký hiệu: ' + item.TTCOBAN.KYHIEU + '</p><p>- Nơi sản xuất: ' + item.TTCOBAN.NOISANXUAT + '</p><p>- Năm hạ thủy: ' + item.TTCOBAN.NAMHATHUY + '</p> <p>- Chức năng: ' + item.TTCOBAN.CHUCNANG + '</p><button class="res-button"  onclick="View_HoSoTau(`' + item.ID + '`)">Xem hồ sơ tàu</button></div>';
+                                }
+                                else if (type_search == "res-thongtinmay") {
+                                    tabletext += '<div class="result-card"><p style="font-size: 30px; color: #2070cc; font-weight: bold;">Ký hiệu máy: ' + item.HTM.THONGSOCOBAN.KYHIEU + '</p><p>- Số hiệu máy: ' + item.HTM.THONGSOCOBAN.SOHIEUMAY + '</p><p>- Năm sản xuất: ' + item.HTM.THONGSOCOBAN.NAMSANXUAT + '</p><p>- Công suất: ' + item.HTM.THONGSOCOBAN.CONGSUAT + ' (Kw)' + '</p> <p>- Số hiệu tàu: ' + item.TAU.TTCOBAN.SOHIEU + '</p><button class="res-button"  onclick="View_HoSoTau(`' + item.TAU.ID + '`)">Xem hồ sơ tàu</button></div>';
+                                }
+                                else if (type_search == "res-thongtinrada") {
+                                    tabletext += '<div class="result-card"><p style="font-size: 30px; color: #2070cc; font-weight: bold;">Ký hiệu rada: ' + item.RD.KYHIEU + '</p><p>- Số lượng: ' + item.RD.SOLUONG + '</p><p>- Số hiệu tàu: ' + item.TAU.TTCOBAN.SOHIEU + '</p><p>- ký hiệu tàu: ' + item.TAU.TTCOBAN.KYHIEU + '</p> <p>- Chức năng tàu: ' + item.TAU.TTCOBAN.CHUCNANG + '</p><button class="res-button"  onclick="View_HoSoTau(`' + item.TAU.ID + '`)">Xem hồ sơ tàu</button></div>';
+                                }
+                                else if (type_search == "res-thongtinhanghai") {
+                                    tabletext += '<div class="result-card"><p style="font-size: 30px; color: #2070cc; font-weight: bold;">Ký hiệu hàng hải: ' + item.HH.KYHIEU + '</p><p>- Số lượng: ' + item.HH.SOLUONG + '</p><p>- Số hiệu tàu: ' + item.TAU.TTCOBAN.SOHIEU + '</p><p>- ký hiệu tàu: ' + item.TAU.TTCOBAN.KYHIEU + '</p> <p>- Chức năng tàu: ' + item.TAU.TTCOBAN.CHUCNANG + '</p><button class="res-button"  onclick="View_HoSoTau(`' + item.TAU.ID + '`)">Xem hồ sơ tàu</button></div>';
+                                }
+                                else if (type_search == "res-searchbythongtinthanvo") {
+                                    tabletext += '<div class="result-card"><p style="font-size: 30px; color: #2070cc; font-weight: bold;">Ký hiệu vật liệu: ' + item.TV.KYHIEUVATLIEU + '</p><p>- Số khoang kín nước: ' + item.TV.SOKHOANGKINNUOC + '</p><p>- Số sườn tàu: ' + item.TV.SOSUONTAU + '</p><p>- Số két dàu cháy: ' + item.TV.SOKETDAUCHAY + '</p> <p>- Số hiệu tàu: ' + item.TAU.TTCOBAN.SOHIEU + '</p><button class="res-button"  onclick="View_HoSoTau(`' + item.TAU.ID + '`)">Xem hồ sơ tàu</button></div>';
+                                }
+                                else if (type_search == "res-thongtinneo") {
+                                    tabletext += '<div class="result-card"><p style="font-size: 30px; color: #2070cc; font-weight: bold;">Tàu CSB số hiệu: ' + item.TAU.TTCOBAN.SOHIEU + '</p><p>- Ký hiệu neo phải: ' + item.NXN.NEOPHAI.KYHIEU + '</p><p>- Ký hiệu neo trái: ' + item.NXN.NEOTRAI.KYHIEU + '</p><p>- Ký hiệu neo sau: ' + item.NXN.NEOSAU.KYHIEU + '</p><button class="res-button"  onclick="View_HoSoTau(`' + item.TAU.ID + '`)">Xem hồ sơ tàu</button></div>';
+                                }
+                            }
+                            else {
                                 tabletext += '<div class="result-card"><p style="font-size: 30px; color: #2070cc; font-weight: bold;">Tàu CSB số hiệu: ' + item.TTCOBAN.SOHIEU + '</p><p>- Ký hiệu: ' + item.TTCOBAN.KYHIEU + '</p><p>- Nơi sản xuất: ' + item.TTCOBAN.NOISANXUAT + '</p><p>- Năm hạ thủy: ' + item.TTCOBAN.NAMHATHUY + '</p> <p>- Chức năng: ' + item.TTCOBAN.CHUCNANG + '</p><button class="res-button"  onclick="View_HoSoTau(`' + item.ID + '`)">Xem hồ sơ tàu</button></div>';
-                            }
-                            else if (type_search == "res-canbo") {
-                                tabletext += '<div class="result-card"><p style="font-size: 30px; color: #2070cc; font-weight: bold;">Cán bộ: ' + item.CB.FullName + '</p><p>- Năm sinh: ' + item.CB.BirthYear + '</p><p>- Cấp bậc: ' + item.CB.Ranking.Name + '</p><p>- Chức vụ: ' + item.CB.Position.Name + '</p> <p>- Số hiệu tàu: ' + item.TAU.TTCOBAN.SOHIEU + '</p><button class="res-button"  onclick="View_HoSoTau(`' + item.TAU.ID + '`)">Xem hồ sơ tàu</button></div>';
-                            }
-                            else if (type_search == "res-hosotau") {
-                                tabletext += '<div class="result-card"><p style="font-size: 30px; color: #2070cc; font-weight: bold;">Tàu CSB số hiệu: ' + item.TTCOBAN.SOHIEU + '</p><p>- Ký hiệu: ' + item.TTCOBAN.KYHIEU + '</p><p>- Nơi sản xuất: ' + item.TTCOBAN.NOISANXUAT + '</p><p>- Năm hạ thủy: ' + item.TTCOBAN.NAMHATHUY + '</p> <p>- Chức năng: ' + item.TTCOBAN.CHUCNANG + '</p><button class="res-button"  onclick="View_HoSoTau(`' + item.ID + '`)">Xem hồ sơ tàu</button></div>';
-                            }
-                            else if (type_search == "res-thongtinmay") {
-                                tabletext += '<div class="result-card"><p style="font-size: 30px; color: #2070cc; font-weight: bold;">Ký hiệu máy: ' + item.HTM.THONGSOCOBAN.KYHIEU + '</p><p>- Số hiệu máy: ' + item.HTM.THONGSOCOBAN.SOHIEUMAY + '</p><p>- Năm sản xuất: ' + item.HTM.THONGSOCOBAN.NAMSANXUAT + '</p><p>- Công suất: ' + item.HTM.THONGSOCOBAN.CONGSUAT +' (Kw)' + '</p> <p>- Số hiệu tàu: ' + item.TAU.TTCOBAN.SOHIEU + '</p><button class="res-button"  onclick="View_HoSoTau(`' + item.TAU.ID + '`)">Xem hồ sơ tàu</button></div>';
-                            }
-                            else if (type_search == "res-thongtinrada") {
-                                tabletext += '<div class="result-card"><p style="font-size: 30px; color: #2070cc; font-weight: bold;">Ký hiệu rada: ' + item.RD.KYHIEU + '</p><p>- Số lượng: ' + item.RD.SOLUONG + '</p><p>- Số hiệu tàu: ' + item.TAU.TTCOBAN.SOHIEU + '</p><p>- ký hiệu tàu: ' + item.TAU.TTCOBAN.KYHIEU + '</p> <p>- Chức năng tàu: ' + item.TAU.TTCOBAN.CHUCNANG + '</p><button class="res-button"  onclick="View_HoSoTau(`' + item.TAU.ID + '`)">Xem hồ sơ tàu</button></div>';
-                            }
-                            else if (type_search == "res-thongtinhanghai") {
-                                tabletext += '<div class="result-card"><p style="font-size: 30px; color: #2070cc; font-weight: bold;">Ký hiệu hàng hải: ' + item.HH.KYHIEU + '</p><p>- Số lượng: ' + item.HH.SOLUONG + '</p><p>- Số hiệu tàu: ' + item.TAU.TTCOBAN.SOHIEU + '</p><p>- ký hiệu tàu: ' + item.TAU.TTCOBAN.KYHIEU + '</p> <p>- Chức năng tàu: ' + item.TAU.TTCOBAN.CHUCNANG + '</p><button class="res-button"  onclick="View_HoSoTau(`' + item.TAU.ID + '`)">Xem hồ sơ tàu</button></div>';
-                            }
-                            else if (type_search == "res-searchbythongtinthanvo") {
-                                tabletext += '<div class="result-card"><p style="font-size: 30px; color: #2070cc; font-weight: bold;">Ký hiệu vật liệu: ' + item.TV.KYHIEUVATLIEU + '</p><p>- Số khoang kín nước: ' + item.TV.SOKHOANGKINNUOC + '</p><p>- Số sườn tàu: ' + item.TV.SOSUONTAU + '</p><p>- Số két dàu cháy: ' + item.TV.SOKETDAUCHAY + '</p> <p>- Số hiệu tàu: ' + item.TAU.TTCOBAN.SOHIEU + '</p><button class="res-button"  onclick="View_HoSoTau(`' + item.TAU.ID + '`)">Xem hồ sơ tàu</button></div>';
-                            }
-                            else if (type_search == "res-thongtinneo") {
-                                tabletext += '<div class="result-card"><p style="font-size: 30px; color: #2070cc; font-weight: bold;">Tàu CSB số hiệu: ' + item.TAU.TTCOBAN.SOHIEU + '</p><p>- Ký hiệu neo phải: ' + item.NXN.NEOPHAI.KYHIEU + '</p><p>- Ký hiệu neo trái: ' + item.NXN.NEOTRAI.KYHIEU + '</p><p>- Ký hiệu neo sau: ' + item.NXN.NEOSAU.KYHIEU + '</p><button class="res-button"  onclick="View_HoSoTau(`' + item.TAU.ID + '`)">Xem hồ sơ tàu</button></div>';
                             }
                             i++;
                         });

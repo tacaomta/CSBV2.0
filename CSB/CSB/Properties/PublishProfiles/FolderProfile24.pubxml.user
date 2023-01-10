@@ -5,7 +5,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
 <Project>
   <PropertyGroup>
     <_PublishTargetUrl>D:\Code Visual 2019\CanhSatBien\CSBV2.0\public</_PublishTargetUrl>
-    <History>True|2023-01-05T16:13:53.0272627Z;True|2023-01-05T23:13:34.4712153+07:00;True|2023-01-04T23:48:05.4430460+07:00;True|2023-01-03T17:14:33.4828919+07:00;True|2023-01-03T17:14:07.8474435+07:00;True|2022-12-29T00:42:29.3566005+07:00;</History>
+    <History>True|2023-01-10T04:15:19.9957470Z;True|2023-01-05T23:13:53.0272627+07:00;True|2023-01-05T23:13:34.4712153+07:00;True|2023-01-04T23:48:05.4430460+07:00;True|2023-01-03T17:14:33.4828919+07:00;True|2023-01-03T17:14:07.8474435+07:00;True|2022-12-29T00:42:29.3566005+07:00;</History>
     <LastFailureDetails />
   </PropertyGroup>
   <ItemGroup>
@@ -19,10 +19,10 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>09/30/2022 16:35:19</publishTime>
     </File>
     <File Include="bin/App_global.asax.compiled">
-      <publishTime>01/09/2023 15:57:13</publishTime>
+      <publishTime>01/10/2023 11:15:10</publishTime>
     </File>
     <File Include="bin/App_global.asax.dll">
-      <publishTime>01/09/2023 15:57:13</publishTime>
+      <publishTime>01/10/2023 11:15:10</publishTime>
     </File>
     <File Include="bin/AspNet.ScriptManager.bootstrap.dll">
       <publishTime>09/30/2022 16:35:19</publishTime>
@@ -91,10 +91,10 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>09/30/2022 16:35:16</publishTime>
     </File>
     <File Include="bin/CSB.dll">
-      <publishTime>01/09/2023 15:29:12</publishTime>
+      <publishTime>01/10/2023 11:14:56</publishTime>
     </File>
     <File Include="bin/CSB.pdb">
-      <publishTime>01/09/2023 15:29:12</publishTime>
+      <publishTime>01/10/2023 11:14:56</publishTime>
     </File>
     <File Include="bin/Microsoft.AspNet.FriendlyUrls.dll">
       <publishTime>09/30/2022 16:35:19</publishTime>
@@ -592,16 +592,16 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>12/18/2022 20:35:22</publishTime>
     </File>
     <File Include="Page_Master/Manage_Tau.aspx">
-      <publishTime>01/09/2023 15:56:29</publishTime>
+      <publishTime>01/10/2023 11:09:55</publishTime>
     </File>
     <File Include="Page_Master/Manage_Tau_TheoTungHaiDoan.aspx">
-      <publishTime>01/05/2023 22:48:13</publishTime>
+      <publishTime>01/10/2023 11:13:27</publishTime>
     </File>
     <File Include="Page_Master/Manage_Tau_TheoTungHaiDoi.aspx">
-      <publishTime>01/05/2023 22:58:10</publishTime>
+      <publishTime>01/10/2023 11:12:56</publishTime>
     </File>
     <File Include="Page_Master/Manage_Tau_TheoTungVung.aspx">
-      <publishTime>01/09/2023 15:45:16</publishTime>
+      <publishTime>01/10/2023 11:13:11</publishTime>
     </File>
     <File Include="Page_Master/Manage_user.aspx">
       <publishTime>12/28/2022 23:47:32</publishTime>
@@ -613,7 +613,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>01/08/2023 11:25:41</publishTime>
     </File>
     <File Include="Page_Master/SearchResult.aspx">
-      <publishTime>10/02/2022 23:42:07</publishTime>
+      <publishTime>01/09/2023 16:39:50</publishTime>
     </File>
     <File Include="Page_Master/ShipActivity.aspx">
       <publishTime>10/10/2022 10:57:49</publishTime>
@@ -661,7 +661,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>09/30/2022 16:35:16</publishTime>
     </File>
     <File Include="PrecompiledApp.config">
-      <publishTime>01/09/2023 15:57:01</publishTime>
+      <publishTime>01/10/2023 11:14:59</publishTime>
     </File>
     <File Include="reports/MayChinh.xsc">
       <publishTime>09/30/2022 16:35:19</publishTime>
@@ -880,7 +880,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>09/30/2022 16:35:19</publishTime>
     </File>
     <File Include="value.js">
-      <publishTime>01/09/2023 15:56:55</publishTime>
+      <publishTime>01/10/2023 11:14:41</publishTime>
     </File>
     <File Include="ViewSwitcher.ascx">
       <publishTime>09/30/2022 16:35:16</publishTime>

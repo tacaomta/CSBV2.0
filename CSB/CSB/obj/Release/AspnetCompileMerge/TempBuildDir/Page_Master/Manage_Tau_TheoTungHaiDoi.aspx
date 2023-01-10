@@ -1479,7 +1479,7 @@ TR&#7908;C CHÂN V&#7882;T</span></b></p>
                     $('#tableship').html(tabletext);
                     loadTableShip();
                     //$('#tableship_wrapper .row .col-sm-12').first().html('<div class="btn-group"><button onclick="btn_Load_listship()" class="btn btn-lg btn-secondary mb-3"><span class="bi-arrow-clockwise"></span> &nbsp;Load dữ liệu</button> <button onclick="btn_addship()" class="btn btn-lg btn-secondary mb-3"><span class="bi-plus-circle-fill"></span> &nbsp;Thêm mới tàu</button><div class="btn-group"><button type="button" class="btn btn-lg btn-secondary mb-3 dropdown-toggle" data-toggle="dropdown"><span class="bi-file-earmark-text"></span> Xuất báo cáo </button><ul class="dropdown-menu" role="menu" style="width: max-content;"><li><a href="#"><i class="material-icons revert-color">print</i> In báo cáo</a></li><li><a href="#" ><i class="material-icons blue-color">text_snippet</i> Xuất file Word</a></li><li><a href="#"><i class="material-icons green-color">description</i> Xuất file Excel</a></li><li><a href="#"><i class="material-icons orange-color">picture_as_pdf</i> Xuất file PDF</a></li></ul></div></div>');
-                    $('#tableship_wrapper .row .col-sm-12').first().html('<div class="btn-group"><button onclick="btn_Load_listship()" class="btn btn-lg btn-secondary mb-2"><span class="bi-arrow-clockwise"></span> &nbsp;Load dữ liệu</button> <button id=btn_addShip onclick="btn_addship()" class="btn btn-lg btn-secondary mb-2"><i class="bi bi-plus-circle"></i> &nbsp;Thêm mới tàu</button><input type="file" id="input_txt" class="btn btn-secondary mb-2"> <button id="btn_add_Tau_txt" class="btn btn-secondary mb-2"><i class="bi bi-plus-circle"></i>&nbsp;Thêm bằng file</button></div>');
+                    $('#tableship_wrapper .row .col-sm-12').first().html('<div class="btn-group"><button onclick="btn_Load_listship()" class="btn btn-lg btn-secondary mb-2"><span class="bi-arrow-clockwise"></span> &nbsp;Load dữ liệu</button> <button id=btn_addShip onclick="btn_addship()" class="btn btn-lg btn-secondary mb-2"><i class="bi bi-plus-circle"></i> &nbsp;Thêm mới tàu</button></div>');
                     $('#tableship_wrapper .row').first().next().children().css("overflow-x", "auto");
                     $('#tableship_wrapper .row').first().next().css("min-height", "500px");
                     $('#tableship_wrapper').css("overflow-x", "hidden");
@@ -1489,48 +1489,48 @@ TR&#7908;C CHÂN V&#7882;T</span></b></p>
                 },
                 complete: function () { // Set our complete callback, adding the .hidden class and hiding the spinner.
                     $('#loader').addClass('hidden');
-                    let selectedFile;
-                    let input = document.getElementById("input_txt");
-                    input.addEventListener("change", (event) => {
-                        selectedFile = event.target.files[0];
-                    });
-                    document.getElementById("btn_add_Tau_txt").addEventListener("click", () => {
-                        if (selectedFile) {
-                            let files = input.files;
-                            if (files.length == 0) return;
-                            const file = files[0];
-                            let reader = new FileReader();
-                            reader.onload = (e) => {
-                                const file = e.target.result;
-                                console.log(file);
+                    //let selectedFile;
+                    //let input = document.getElementById("input_txt");
+                    //input.addEventListener("change", (event) => {
+                    //    selectedFile = event.target.files[0];
+                    //});
+                    //document.getElementById("btn_add_Tau_txt").addEventListener("click", () => {
+                    //    if (selectedFile) {
+                    //        let files = input.files;
+                    //        if (files.length == 0) return;
+                    //        const file = files[0];
+                    //        let reader = new FileReader();
+                    //        reader.onload = (e) => {
+                    //            const file = e.target.result;
+                    //            console.log(file);
 
-                                $.ajax({
-                                    type: "POST",
-                                    url: linkapi + "importHST",
-                                    dataType: "json",
-                                    data: JSON.stringify(file),
-                                    contentType: "application/json",
+                    //            $.ajax({
+                    //                type: "POST",
+                    //                url: linkapi + "importHST",
+                    //                dataType: "json",
+                    //                data: JSON.stringify(file),
+                    //                contentType: "application/json",
 
-                                    beforeSend: function () { // Before we send the request, remove the .hidden class from the spinner and default to inline-block.
+                    //                beforeSend: function () { // Before we send the request, remove the .hidden class from the spinner and default to inline-block.
 
-                                    },
-                                    success: function (data) {
-                                        toastSuccess("Thành công");
-                                        loadDataListShips(donvi_id);
-                                    }, error: function (ret) {
-                                        console.log(ret.responseJSON.Message);
-                                        toastError("Thất bại", ret.responseJSON.Message);
-                                    },
-                                    complete: function () { // Set our complete callback, adding the .hidden class and hiding the spinner.
+                    //                },
+                    //                success: function (data) {
+                    //                    toastSuccess("Thành công");
+                    //                    loadDataListShips(donvi_id);
+                    //                }, error: function (ret) {
+                    //                    console.log(ret.responseJSON.Message);
+                    //                    toastError("Thất bại", ret.responseJSON.Message);
+                    //                },
+                    //                complete: function () { // Set our complete callback, adding the .hidden class and hiding the spinner.
 
-                                    },
-                                });
+                    //                },
+                    //            });
 
-                            };
-                            reader.onerror = (e) => alert(e.target.error.name);
-                            reader.readAsText(file);
-                        }
-                    });
+                    //        };
+                    //        reader.onerror = (e) => alert(e.target.error.name);
+                    //        reader.readAsText(file);
+                    //    }
+                    //});
                 },
             });
         };
@@ -1630,7 +1630,7 @@ TR&#7908;C CHÂN V&#7882;T</span></b></p>
             $.ajax({
                 async: false,
                 type: "GET",
-                url: linkapi + "exportHST?id=" + ShipID,
+                url: linkapi + "exportHSTwithEncode?id=" + ShipID,
                 dataType: "json",
                 success: function (data) {
                     Text = data;
@@ -1648,7 +1648,7 @@ TR&#7908;C CHÂN V&#7882;T</span></b></p>
                 }
             )
             var userlink = document.createElement('a');
-            userlink.setAttribute("download", SoHieu + ".txt");
+            userlink.setAttribute("download", SoHieu + ".dta");
             userlink.setAttribute('href', window.URL.createObjectURL(blob));
             userlink.click();
         }

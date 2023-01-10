@@ -1474,28 +1474,27 @@ TR&#7908;C CHÂN V&#7882;T</span></b></p>
                                 const file = e.target.result;
 
                                 var text_content = {
-                                    data: file,
+                                    Content: file,
                                 };
                                 console.log(text_content);
                                 $.ajax({
+                                    async: false,
                                     type: "POST",
                                     url: linkapi + "importHST",
                                     dataType: "json",
                                     data: JSON.stringify(text_content),
                                     contentType: "application/json",
-
                                     beforeSend: function () { // Before we send the request, remove the .hidden class from the spinner and default to inline-block.
 
                                     },
                                     success: function (data) {
                                         toastSuccess("Thành công");
-                                        loadDataListShips(vung_id);
+                                      
                                     }, error: function (ret) {
-                                        console.log(ret.responseJSON.Message);
-                                        toastError("Thất bại", ret.responseJSON.Message);
+                                        toastError("Thất bại");
                                     },
                                     complete: function () { // Set our complete callback, adding the .hidden class and hiding the spinner.
-
+                                       // loadDataListShips(vung_id);
                                     },
                                 });
 
@@ -1955,7 +1954,7 @@ TR&#7908;C CHÂN V&#7882;T</span></b></p>
             $.ajax({
                 async: false,
                 type: "GET",
-                url: linkapi + "exportHST?id=" + ShipID,
+                url: linkapi + "exportHSTwithEncode?id=" + ShipID,
                 dataType: "json",
                 success: function (data) {
                     Text = data;
@@ -1973,7 +1972,7 @@ TR&#7908;C CHÂN V&#7882;T</span></b></p>
                 }
             )
             var userlink = document.createElement('a');
-            userlink.setAttribute("download", SoHieu + ".txt");
+            userlink.setAttribute("download", SoHieu + ".dta");
             userlink.setAttribute('href', window.URL.createObjectURL(blob));
             userlink.click();
 
