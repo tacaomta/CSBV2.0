@@ -859,7 +859,7 @@
             background: #f6f9ff;
             z-index: 100;
             transition: all 0.5s ease;
-         /*   overflow-y: overlay;*/
+            /*   overflow-y: overlay;*/
             /**/
         }
 
@@ -1194,7 +1194,7 @@
                 </ul>
             </li>
             <li id="li_hosotau">
-<%--                <a href="../Page_Master/Manage_Tau?vung=1#">
+                <%--                <a href="../Page_Master/Manage_Tau?vung=1#">
                     <i class='bi-folder'></i>
                     <span class="link_name">Hồ sơ tàu</span>
                 </a>
@@ -1227,7 +1227,7 @@
                     <li><a href="../Page_Master/Null.aspx">Hiệu quả sử dụng vật tư</a></li>
                 </ul>
             </li>
-            <li id="li_quanlynguoidung" >
+            <li id="li_quanlynguoidung">
                 <div class="iocn-link arro">
                     <a class="arrow" href="#">
                         <i class='bi-person-fill arroww'></i>
@@ -1358,6 +1358,8 @@
     <script>
 
         $(document).ready(function () {
+            //var ip_url = $(location).attr("href").substring(7,).substring(0, $(location).attr("href").substring(7,).indexOf(":"));
+            //baseaddress = "http://"+ip_url+":8080/";
             if (sessionStorage.getItem("userLoginUsername") != null) {
                 var Group_user = sessionStorage.getItem("Group_Name").toLowerCase();
                 if (Group_user.includes("vùng")) {
