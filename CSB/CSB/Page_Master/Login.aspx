@@ -115,8 +115,8 @@
     <script src="../value.js"></script>
     <script>
 
-        //var ip_url = $(location).attr("href").substring(7,).substring(0, $(location).attr("href").substring(7,).indexOf(":"));
-        //baseaddress = "http://" + ip_url + ":8080/";
+        var ip_url = $(location).attr("href").substring(7,).substring(0, $(location).attr("href").substring(7,).indexOf(":"));
+        baseaddress = "http://" + ip_url + ":8080/";
         // Add event press Enter in an input tag
         $('#username').keypress(function (event) {
             var keycode = (event.keyCode ? event.keyCode : event.which);
