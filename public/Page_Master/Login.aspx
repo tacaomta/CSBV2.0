@@ -146,7 +146,7 @@
                 UserName: $("#username").val(),
                 Password: $("#password").val()
             };
-            console.log(user);
+            console.log(linkapi);
             $.ajax({
                 type: "POST",
                 url: linkapi + "user_login",
