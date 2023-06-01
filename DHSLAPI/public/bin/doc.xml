@@ -2271,7 +2271,7 @@
         </member>
         <member name="M:DHSLAPI.Controllers.SCTAU.YeuCauHangMucSCController.DeleteYeuCauSuaChua(System.String)">
             <summary>
-            
+            Xóa yêu cầu hạng mục sửa chữa
             </summary>
             <param name="id"></param>
             <returns></returns>
