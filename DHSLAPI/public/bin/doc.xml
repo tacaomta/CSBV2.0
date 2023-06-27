@@ -2113,6 +2113,91 @@
             <param name="id">id hạng mục sửa chữa</param>
             <returns></returns>
         </member>
+        <member name="T:DHSLAPI.Controllers.SCTAU.HoSoSuaChuaTauController">
+            <summary>
+            Hồ sơ sửa chữa tàu
+            </summary>
+        </member>
+        <member name="M:DHSLAPI.Controllers.SCTAU.HoSoSuaChuaTauController.GetDanhMucHoSoSuaChuaTau(System.String)">
+            <summary>
+            Lấy danh mục hồ sơ sửa chữa của tàu
+            </summary>
+            <param name="id">id của tàu</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.SCTAU.HoSoSuaChuaTauController.GetDanhMucHoSoSuaChuaHaiDoi(System.String)">
+            <summary>
+            Lấy danh mục hồ sơ sửa chữa tàu trong hải đội
+            </summary>
+            <param name="id">Id hải đội</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.SCTAU.HoSoSuaChuaTauController.GetDanhMucHoSoSuaChuaTauHaiDoan(System.String)">
+            <summary>
+            Lấy danh mục hồ sơ sửa chữa tàu của hải đoàn
+            </summary>
+            <param name="id">Id hải đoàn</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.SCTAU.HoSoSuaChuaTauController.GetDanhMucHoSoSuaChuaTauCuaVung(System.String)">
+            <summary>
+            Lấy danh mục hồ sơ sửa chữa tàu của vùng
+            </summary>
+            <param name="id">Id vùng</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.SCTAU.HoSoSuaChuaTauController.GetHoSoSuaChuaTheoNam(System.String)">
+            <summary>
+            Lấy danh mục hồ sơ sửa chữa tàu theo năm
+            </summary>
+            <param name="year">năm lập hồ sơ sửa chữa</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.SCTAU.HoSoSuaChuaTauController.GetHoSoSuaChuaTheoQuy(System.Int32,System.Int32)">
+            <summary>
+            Lấy danh mục hồ sơ sửa chữa tàu theo quý của năm
+            </summary>
+            <param name="quarter">quý: 1, 2, 3, 4</param>
+            <param name="year">năm lập hồ sơ sửa chữa</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.SCTAU.HoSoSuaChuaTauController.GetYeuCauSuaChuaTheoThang(System.Int32,System.Int32)">
+            <summary>
+            Lấy danh mục hồ sơ sửa chữa tàu theo tháng của năm
+            </summary>
+            <param name="month">tháng: 1, 2...12</param>
+            <param name="year">năm lập hồ sơ sửa chữa</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.SCTAU.HoSoSuaChuaTauController.GetHoSoSuaChuaTheoCSC(System.String)">
+            <summary>
+            Lấy danh mục hồ sơ sửa chữa tàu theo cấp sửa chữa
+            </summary>
+            <param name="csc">Id của cấp sửa chữa</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.SCTAU.HoSoSuaChuaTauController.GetHoSoSuaChuaTheoHangMuc(System.String)">
+            <summary>
+            Lấy danh mục hồ sơ sửa chữa tàu theo hạng mục sửa chữa (cột nội dung)
+            </summary>
+            <param name="hangmuc">Từ khóa tìm kiếm ở trường nội dung, trang bị</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.SCTAU.HoSoSuaChuaTauController.GetHoSoSuaChuaTheoTenHoSo(System.String)">
+            <summary>
+            Lấy danh mục hồ sơ sữa chữa tàu theo tên của hồ sơ
+            Tìm kiếm theo tên hồ sơ
+            </summary>
+            <param name="keyword">Từ khóa tìm kiếm</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.SCTAU.HoSoSuaChuaTauController.GetHoSoSuaChuaById(System.String)">
+            <summary>
+            Lấy thông tin hồ sơ sửa chữa theo ID
+            </summary>
+            <param name="id">Id của hồ sơ</param>
+            <returns></returns>
+        </member>
         <member name="T:DHSLAPI.Controllers.SCTAU.NhomTaiLieuController">
             <summary>
             Nhóm tài liệu
@@ -2214,37 +2299,16 @@
         </member>
         <member name="M:DHSLAPI.Controllers.SCTAU.YeuCauHangMucSCController.GetDanhMucYeuCauSuaChua(System.String)">
             <summary>
-            Lấy danh mục yêu cầu sửa chữa tàu theo Id tàu
+            Lấy danh mục yêu cầu sửa chữa tàu theo Id hồ sơ sửa chữa
             </summary>
             <param name="id">Id tàu</param>
-            <returns></returns>
-        </member>
-        <member name="M:DHSLAPI.Controllers.SCTAU.YeuCauHangMucSCController.GetDanhMucYeuCauSuaChuaHaiDoi(System.String)">
-            <summary>
-            Lấy danh mục yêu cầu sửa chữa tàu trong hải đội
-            </summary>
-            <param name="id">Id hải đội</param>
-            <returns></returns>
-        </member>
-        <member name="M:DHSLAPI.Controllers.SCTAU.YeuCauHangMucSCController.GetDanhMucYeuCauSuaChuaHaiDoan(System.String)">
-            <summary>
-            Lấy danh mục yêu cầu sửa chữa tàu của hải đoàn
-            </summary>
-            <param name="id">Id tàu</param>
-            <returns></returns>
-        </member>
-        <member name="M:DHSLAPI.Controllers.SCTAU.YeuCauHangMucSCController.GetDanhMucYeuCauSuaChuaVung(System.String)">
-            <summary>
-            Lấy danh mục yêu cầu sửa chữa tàu của vùng
-            </summary>
-            <param name="id">Id vùng</param>
             <returns></returns>
         </member>
         <member name="M:DHSLAPI.Controllers.SCTAU.YeuCauHangMucSCController.GetYeuCauSuaChua(System.String)">
             <summary>
-            Lấy thông tin yêu cầu sửa chữa theo id
+            Lấy thông tin yêu cầu sửa chữa theo Id của nó
             </summary>
-            <param name="id">id yêu cầu</param>
+            <param name="id">Id của yêu cầu sửa chữa</param>
             <returns></returns>
         </member>
         <member name="M:DHSLAPI.Controllers.SCTAU.YeuCauHangMucSCController.InsertYeuCauSuaChua(DHSLAPI.Models.SCTAU.YEUCAUHMSC)">
@@ -3407,6 +3471,11 @@
             Hạng mục sửa chữa
             </summary>
         </member>
+        <member name="T:DHSLAPI.DataContext.SCTAU.HOSOSUACHUATAUDataContext">
+            <summary>
+            
+            </summary>
+        </member>
         <member name="T:DHSLAPI.DataContext.SCTAU.NHOMTAILIEUDATACONTEXT">
             <summary>
             
@@ -3443,9 +3512,9 @@
         </member>
         <member name="M:DHSLAPI.DataContext.SCTAU.YEUCAUHMSCDataContext.GetDanhMucYeuCauSuaChua(System.String)">
             <summary>
-            Lấy tất cả danh mục yêu cầu sửa chữa của tàu
+            Lấy tất cả danh mục yêu cầu sửa chữa tàu theo Id của hồ sơ sửa chữa
             </summary>
-            <param name="id">id tàu</param>
+            <param name="id">id hồ sơ sửa chữa</param>
             <returns></returns>
         </member>
         <member name="T:DHSLAPI.Models.BIEUDOTOCDOTOIDA">
@@ -4389,6 +4458,51 @@
             Ghi chú
             </summary>
         </member>
+        <member name="T:DHSLAPI.Models.SCTAU.HOSOSUACHUATAU">
+            <summary>
+            Hồ sơ sửa chữa tàu, 1 bộ hồ sơ gồm rất nhiều mục con
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.SCTAU.HOSOSUACHUATAU.Id">
+            <summary>
+            Id của hồ sơ
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.SCTAU.HOSOSUACHUATAU.TenHoSo">
+            <summary>
+            Tên hồ sơ
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.SCTAU.HOSOSUACHUATAU.NgayThang">
+            <summary>
+            Ngày tháng năm của năm sửa chữa
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.SCTAU.HOSOSUACHUATAU.GhiChu">
+            <summary>
+            Ghi chú
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.SCTAU.HOSOSUACHUATAU.IdTau">
+            <summary>
+            Id tàu
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.SCTAU.HOSOSUACHUATAU.NgayTao">
+            <summary>
+            Ngày tạo hồ sơ
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.SCTAU.HOSOSUACHUATAU.CapNhat">
+            <summary>
+            Cập nhật lần cuối của bộ hồ sơ
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.SCTAU.HOSOSUACHUATAU.CapSuaChua">
+            <summary>
+            Cấp sửa chữa
+            </summary>
+        </member>
         <member name="T:DHSLAPI.Models.SCTAU.NHOMTAILIEU">
             <summary>
             Nhóm tài liệu
@@ -4474,6 +4588,12 @@
             Id yêu cầu, sinh tự động
             </summary>
         </member>
+        <member name="P:DHSLAPI.Models.SCTAU.YEUCAUHMSC.Thoigian">
+            <summary>
+            Thời gian của yêu cầu hạng mục sửa chữa
+            Ngày tháng năm trên hồ sơ được lập
+            </summary>
+        </member>
         <member name="P:DHSLAPI.Models.SCTAU.YEUCAUHMSC.NoiDung">
             <summary>
             Nội dung, trang bị sửa chữa
@@ -4509,9 +4629,9 @@
             Ngày cập nhật, tự động sinh
             </summary>
         </member>
-        <member name="P:DHSLAPI.Models.SCTAU.YEUCAUHMSC.IdTau">
+        <member name="P:DHSLAPI.Models.SCTAU.YEUCAUHMSC.IdHS">
             <summary>
-            Id tàu
+            Id Hồ sơ
             </summary>
         </member>
         <member name="P:DHSLAPI.Models.SCTAU.YEUCAUHMSC.File">
@@ -4519,27 +4639,22 @@
             File yêu cầu hạng mục sửa chữa tàu, (mẫu số 1)
             </summary>
         </member>
-        <member name="P:DHSLAPI.Models.SCTAU.YEUCAUHMSC.CapSuaChua">
-            <summary>
-            Cấp sửa chữa
-            </summary>
-        </member>
-        <member name="T:DHSLAPI.Models.SCTAU.YEUCAUHMSC_DONVI">
+        <member name="T:DHSLAPI.Models.SCTAU.HOSOSUACHUA_DONVI">
             <summary>
             Yêu cầu hạng mục sửa chữa + thông tin đơn vị (hải đội+hải đoàn, vùng)
             </summary>
         </member>
-        <member name="P:DHSLAPI.Models.SCTAU.YEUCAUHMSC_DONVI.YeuCauHMSC">
+        <member name="P:DHSLAPI.Models.SCTAU.HOSOSUACHUA_DONVI.HSSC">
             <summary>
             Thông tin yêu cầu hạng mục sửa chữa
             </summary>
         </member>
-        <member name="P:DHSLAPI.Models.SCTAU.YEUCAUHMSC_DONVI.Tau">
+        <member name="P:DHSLAPI.Models.SCTAU.HOSOSUACHUA_DONVI.Tau">
             <summary>
             Thông tin tàu
             </summary>
         </member>
-        <member name="P:DHSLAPI.Models.SCTAU.YEUCAUHMSC_DONVI.HaiDoi">
+        <member name="P:DHSLAPI.Models.SCTAU.HOSOSUACHUA_DONVI.HaiDoi">
             <summary>
             thông tin hải đội
             </summary>
