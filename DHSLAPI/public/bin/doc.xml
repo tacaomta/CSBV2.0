@@ -2136,14 +2136,14 @@
             <summary>
             Lấy danh mục hồ sơ sửa chữa tàu của hải đoàn
             </summary>
-            <param name="id">Id hải đoàn</param>
+            <param name="id">Id của hải đoàn</param>
             <returns></returns>
         </member>
         <member name="M:DHSLAPI.Controllers.SCTAU.HoSoSuaChuaTauController.GetDanhMucHoSoSuaChuaTauCuaVung(System.String)">
             <summary>
             Lấy danh mục hồ sơ sửa chữa tàu của vùng
             </summary>
-            <param name="id">Id vùng</param>
+            <param name="id">Id của vùng</param>
             <returns></returns>
         </member>
         <member name="M:DHSLAPI.Controllers.SCTAU.HoSoSuaChuaTauController.GetHoSoSuaChuaTheoNam(System.String)">
@@ -2194,6 +2194,28 @@
         <member name="M:DHSLAPI.Controllers.SCTAU.HoSoSuaChuaTauController.GetHoSoSuaChuaById(System.String)">
             <summary>
             Lấy thông tin hồ sơ sửa chữa theo ID
+            </summary>
+            <param name="id">Id của hồ sơ</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.SCTAU.HoSoSuaChuaTauController.InsertHoSoSuaChuaTau(DHSLAPI.Models.SCTAU.HOSOSUACHUATAU)">
+            <summary>
+            Thêm mới hồ sơ sửa chữa tàu
+            </summary>
+            <param name="hs">thông tin hồ sơ mới</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.SCTAU.HoSoSuaChuaTauController.UpdateHoSoSuaChuaTau(System.String,DHSLAPI.Models.SCTAU.HOSOSUACHUATAU)">
+            <summary>
+            Cập nhật hồ sơ sửa chữa tàu
+            </summary>
+            <param name="id">Id của hồ sơ</param>
+            <param name="hs">thông tin hồ sơ mới</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.SCTAU.HoSoSuaChuaTauController.DeleteHoSoSuaChua(System.String)">
+            <summary>
+            Xóa hồ sơ sửa chữa của tàu
             </summary>
             <param name="id">Id của hồ sơ</param>
             <returns></returns>
@@ -2290,6 +2312,91 @@
             Update file Pdf hoặc Word cho tài liệu pháp quy
             </summary>
             <param name="id">Id của tài liệu</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.SCTAU.VatTuTrenCapController.GetDanhMucVatTuTrenCapTheoHoSoSuaChua(System.String)">
+            <summary>
+            Lấy phụ lục danh mục vật tư trên cấp phục vụ cho việc sửa chữa tàu
+            </summary>
+            <param name="id">id của hồ sơ sửa chữa. Một hồ sơ sữa chữa có ít nhất một phụ lục vật tư trên cấp</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.SCTAU.VatTuTrenCapController.GetVatTuTrenCapTheoId(System.String)">
+            <summary>
+            Lấy thông tin chi tiết của phụ lục vật tư trên cấp phục
+            vụ việc sửa chữa tàu
+            </summary>
+            <param name="id">id của phụ lục vật tư</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.SCTAU.VatTuTrenCapController.InsertVatTuTrenCap(System.String,DHSLAPI.Models.SCTAU.VATTUTRENCAP)">
+            <summary>
+            Thêm phụ lục vật tư trên cấp phục vụ việc sửa chữa tàu
+            vào hồ sơ sửa chữa
+            </summary>
+            <param name="id">id của hồ sơ sửa chữa</param>
+            <param name="vttc">thông tin phụ lục</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.SCTAU.VatTuTrenCapController.UpdateVatTuTrenCap(System.String,DHSLAPI.Models.SCTAU.VATTUTRENCAP)">
+            <summary>
+            Cập nhật thông tin phụ lục vật tư trên cấp phục vụ việc sửa chữa tàu
+            </summary>
+            <param name="id">id của phụ lục</param>
+            <param name="vttc">Thông tin cập nhật</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.SCTAU.VatTuTrenCapController.DeleteVatTuTrenCap(System.String)">
+            <summary>
+            Xóa thông tin phụ lục vật tư trên cấp
+            </summary>
+            <param name="id">id phụ lục</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.SCTAU.VatTuTrenCapController.UpdateFile(System.String)">
+            <summary>
+            Upload file phụ lục tổng hợp vật tư trên cấp
+            phục vụ việc sửa chữa tàu
+            </summary>
+            <param name="id">id của phụ lục</param>
+            <returns></returns>
+        </member>
+        <member name="T:DHSLAPI.Controllers.SCTAU.VATTUTRENCAP_CHITIETController">
+            <summary>
+            Các hàm dịch vụ để hiển thị, thêm, cập nhật, xóa danh mục
+            vật tư cụ thể trong hồ sơ tổng hợp vật tư trên cấp phục
+            vụ sửa chữa tàu
+            </summary>
+        </member>
+        <member name="M:DHSLAPI.Controllers.SCTAU.VATTUTRENCAP_CHITIETController.GetDanhMucVatTuChiTietTrenCap(System.String)">
+            <summary>
+            Lấy danh mục vật tư trên cấp chi tiết theo id của mẫu tổng hợp
+            vật tư trên cấp phục vụ sửa chữa tàu
+            </summary>
+            <param name="id">id của hồ sơ tổng hợp vật tư</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.SCTAU.VATTUTRENCAP_CHITIETController.InsertVatTuTrenCapChiTiet(System.String,DHSLAPI.Models.SCTAU.VATTUTRENCAP_CHITIET)">
+            <summary>
+            Thêm vật tư trên cấp vào hồ sơ
+            </summary>
+            <param name="id">id của hồ sơ tổng hợp vật tư</param>
+            <param name="vtct">thông tin vật tư trên cấp chi tiết</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.SCTAU.VATTUTRENCAP_CHITIETController.UpdateVatTuTrenCapChiTiet(System.String,DHSLAPI.Models.SCTAU.VATTUTRENCAP_CHITIET)">
+            <summary>
+            Cập nhật vật tư trên cấp vào hồ sơ
+            </summary>
+            <param name="id">id của vật tư chi tiết</param>
+            <param name="vtct">thông tin vật tư trên cấp chi tiết</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.SCTAU.VATTUTRENCAP_CHITIETController.DeleteVatTuTrenCapChiTiet(System.String)">
+            <summary>
+            Xóa thông tin vật tư chi tiết
+            </summary>
+            <param name="id">id vật tư chi tiết</param>
             <returns></returns>
         </member>
         <member name="T:DHSLAPI.Controllers.SCTAU.YeuCauHangMucSCController">
@@ -2775,6 +2882,65 @@
             Thấy danh mục trạng thái
             </summary>
             <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.VATTU.PHIEUXUATKHOController.Get(System.String)">
+            <summary>
+            Get thông tin chi tiết 1 phiếu xuat hàng
+            </summary>
+            <param name="id"></param>
+            <returns>Get thông tin chi tiết 1 phiếu xuat hàng</returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.VATTU.PHIEUXUATKHOController.Delete(System.String)">
+            <summary>
+            Xóa phiếu xuat kho theo id
+            </summary>
+            <param name="id"></param>
+            <returns>Xóa phiếu xuat khotheo id</returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.VATTU.PHIEUXUATKHOController.GetAll">
+            <summary>
+            Lấy tất cả Danh mục phiếu xuat kho
+            </summary>
+            <returns>Lấy tất cả Danh mục phiếu xuat kho</returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.VATTU.PHIEUNHAPKHOController.Get(System.String)">
+            <summary>
+            Get thông tin chi tiết 1 phiếu nhập hàng
+            </summary>
+            <param name="id"></param>
+            <returns>Get thông tin chi tiết 1 phiếu nhập hàng</returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.VATTU.PHIEUNHAPKHOController.Delete(System.String)">
+            <summary>
+            Xóa phiếu nhập kho theo id
+            </summary>
+            <param name="id"></param>
+            <returns>Xóa phiếu nhập khotheo id</returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.VATTU.PHIEUNHAPKHOController.GetAll">
+            <summary>
+            Lấy tất cả Danh mục phiếu nhập kho
+            </summary>
+            <returns>Lấy tất cả Danh mục phiếu nhập kho</returns>
+        </member>
+        <member name="T:DHSLAPI.Controllers.VATTU.VATTUController">
+            <summary>
+            Lấy danh mục  vật tư
+            </summary>
+            <returns>danh mục  vật tư</returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.VATTU.VATTUController.Delete(System.String)">
+            <summary>
+            Xóa vật tư theo id
+            </summary>
+            <param name="id"></param>
+            <returns>Xóa vật tư theo id</returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.VATTU.VATTUController.GetTHUCLUCVATTUGets(DHSLAPI.Controllers.VATTU.Paging)">
+            <summary>
+            Lấy tất cả Danh mục thuc luc vat tu
+            </summary>
+            <returns>Lấy tất cả Danh mục thuc luc vat tu </returns>
         </member>
         <member name="T:DHSLAPI.Controllers.VUKHIController">
             <summary>
@@ -3504,6 +3670,11 @@
             </summary>
             <param name="id">id nhóm tài liệu</param>
             <returns></returns>
+        </member>
+        <member name="T:DHSLAPI.DataContext.SCTAU.VATTUTRENCAPDataContext">
+            <summary>
+            
+            </summary>
         </member>
         <member name="T:DHSLAPI.DataContext.SCTAU.YEUCAUHMSCDataContext">
             <summary>
@@ -4576,6 +4747,91 @@
         <member name="P:DHSLAPI.Models.SCTAU.TAILIEUPHAPQUY.CapNhat">
             <summary>
             Ngày cập nhật cuối cùng: tự động cập nhật trên server
+            </summary>
+        </member>
+        <member name="T:DHSLAPI.Models.SCTAU.VATTUTRENCAP">
+            <summary>
+            Vật tư trên cấp phục vụ cho sửa chữa tàu
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.SCTAU.VATTUTRENCAP.Id">
+            <summary>
+            Id
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.SCTAU.VATTUTRENCAP.SoQD">
+            <summary>
+            Số quyết định
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.SCTAU.VATTUTRENCAP.NhaMay">
+            <summary>
+            Nhà máy cấp vật tư
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.SCTAU.VATTUTRENCAP.NgayThang">
+            <summary>
+            Ngày tháng trên giấy tờ
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.SCTAU.VATTUTRENCAP.IdHoSo">
+            <summary>
+            Id hồ sơ
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.SCTAU.VATTUTRENCAP.PhongKTKy">
+            <summary>
+            Cán bộ phòng ký thuật ký
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.SCTAU.VATTUTRENCAP.TauKy">
+            <summary>
+            Cán bộ Tàu được sửa chữa ký
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.SCTAU.VATTUTRENCAP.GiamDocKy">
+            <summary>    
+            Giám đốc nhà máy ký
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.SCTAU.VATTUTRENCAP.File">
+            <summary>
+            Đường dẫn lưu file
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.SCTAU.VATTUTRENCAP.ChiTiet">
+            <summary>
+            Danh mục vật tư, số lượng cụ thể
+            </summary>
+        </member>
+        <member name="T:DHSLAPI.Models.SCTAU.VATTUTRENCAP_CHITIET">
+            <summary>
+            Thông tin chi tiết từng danh mục vật tư trên cấp
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.SCTAU.VATTUTRENCAP_CHITIET.Id">
+            <summary>
+            Id
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.SCTAU.VATTUTRENCAP_CHITIET.VatTu">
+            <summary>
+            Thông tin vật tư
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.SCTAU.VATTUTRENCAP_CHITIET.Soluong">
+            <summary>
+            Số lượng
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.SCTAU.VATTUTRENCAP_CHITIET.CapKy">
+            <summary>
+            Đơn vị phát hành lệnh xuất kho (CKT/Vùng/HĐ...)
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.SCTAU.VATTUTRENCAP_CHITIET.GhiChu">
+            <summary>
+            Ghi chú
             </summary>
         </member>
         <member name="T:DHSLAPI.Models.SCTAU.YEUCAUHMSC">
