@@ -2298,6 +2298,36 @@
             <param name="id"></param>
             <returns></returns>
         </member>
+        <member name="M:DHSLAPI.Controllers.SCTAU.NhanCongController.GetDMNHANCONG(System.String)">
+            <summary>
+            Danh mục nhân công phụ trách sửa chữa
+            </summary>
+            <param name="id">id hồ sơ</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.SCTAU.NhanCongController.InsertNganSachSuaChuaCT(System.String,DHSLAPI.Models.SCTAU.NHANCONG)">
+            <summary>
+            Thêm thông tin nhân công vào hồ sơ sửa chữa tàu
+            </summary>
+            <param name="id">id hồ sơ</param>
+            <param name="nc">Thông tin nhân công</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.SCTAU.NhanCongController.UpdateNganSachSuaChuaCT(System.String,DHSLAPI.Models.SCTAU.NHANCONG)">
+            <summary>
+            Cập nhật thông tin nhân công
+            </summary>
+            <param name="id">Id của nhân công</param>
+            <param name="nc">Thông tin của nhân công</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHSLAPI.Controllers.SCTAU.NhanCongController.DeleteNhanCongSC(System.String)">
+            <summary>
+            Xóa nhân công
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
         <member name="T:DHSLAPI.Controllers.SCTAU.NhomTaiLieuController">
             <summary>
             Nhóm tài liệu
@@ -3561,6 +3591,11 @@
             <param name="id">Id của tời neo</param>
             <returns></returns>
         </member>
+        <member name="T:DHSLAPI.DataContext.NHANCONGDataContext">
+            <summary>
+            
+            </summary>
+        </member>
         <member name="T:DHSLAPI.DataContext.SCTAU.CHITIETHMSCDataContext">
             <summary>
             Chi tiết hạng mục sửa chữa
@@ -4682,6 +4717,36 @@
         <member name="P:DHSLAPI.Models.SCTAU.NGANSACHSUACHUACHITIET.IdNganSach">
             <summary>
             Id của Ngân sách, mang thông tin nguồn tiền...
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.SCTAU.NHANCONG.Id">
+            <summary>
+            Id
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.SCTAU.NHANCONG.HoTen">
+            <summary>
+            Họ tên
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.SCTAU.NHANCONG.NgaySinh">
+            <summary>
+            Ngày sinh, định dạng dd/MM/yyyy
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.SCTAU.NHANCONG.GioiTinh">
+            <summary>
+            Giới tính, 1-nam, 0-Nữ
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.SCTAU.NHANCONG.QueQuan">
+            <summary>
+            Quê quán
+            </summary>
+        </member>
+        <member name="P:DHSLAPI.Models.SCTAU.NHANCONG.GhiChu">
+            <summary>
+            Ghi chú
             </summary>
         </member>
         <member name="T:DHSLAPI.Models.SCTAU.NHOMTAILIEU">
